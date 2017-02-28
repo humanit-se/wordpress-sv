@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/1.0-alpha-1000\n"
+"X-Generator: GlotPress/1.0-alpha-1100\n"
 "Project-Id-Version: 4.0.x\n"
 
 #: wp-signup.php:731
@@ -1161,7 +1161,7 @@ msgstr "http://codex.wordpress.org/Function_Reference/is_main_query"
 msgid "In <code>%1$s</code>, use the <code>%2$s</code> method, not the <code>%3$s</code> function. See %4$s."
 msgstr "I <code>%1$s</code>, använd metoden <code>%2$s</code>, inte funktionen <code>%3$s</code>. Se %4$s."
 
-#: wp-includes/post.php:3855 wp-includes/script-loader.php:458
+#: wp-includes/post.php:3856 wp-includes/script-loader.php:458
 #: wp-includes/script-loader.php:484
 msgctxt "tag delimiter"
 msgid ","
@@ -1183,27 +1183,27 @@ msgstr ","
 msgid "Conditional query tags do not work before the query is run. Before then, they always return false."
 msgstr "Villkorstyrda query-taggar fungerar inte innan en query körs. Innan det återger de alltid false."
 
-#: wp-includes/post.php:3422
+#: wp-includes/post.php:3423
 msgid "The page template is invalid."
 msgstr "Sidmallen är felaktig."
 
-#: wp-includes/post.php:3358
+#: wp-includes/post.php:3359
 msgid "Could not insert post into the database"
 msgstr "Kunde inte infoga inlägget i databasen"
 
-#: wp-includes/post.php:3210
+#: wp-includes/post.php:3211
 msgid "Whoops, the provided date is invalid."
 msgstr "Oops, angiven data är ogiltig."
 
-#: wp-includes/post.php:3343
+#: wp-includes/post.php:3344
 msgid "Could not update post in the database"
 msgstr "Kunde inte uppdatera inlägget i databasen"
 
-#: wp-includes/post.php:2999
+#: wp-includes/post.php:3000
 msgid "Passing an integer number of posts is deprecated. Pass an array of arguments instead."
 msgstr "Att passerar antalet poster är föråldrat. Passera en array av argument istället."
 
-#: wp-includes/post.php:3142
+#: wp-includes/post.php:3143
 msgid "Content, title, and excerpt are empty."
 msgstr "Innehåll, titel och utdrag är tomma."
 
@@ -3590,17 +3590,17 @@ msgid "Empty filename"
 msgstr "Tomt filnamn"
 
 #. translators: used to join items in a list with only 2 items
-#: wp-includes/formatting.php:3621
+#: wp-includes/formatting.php:3724
 msgid "%s and %s"
 msgstr "%s och %s"
 
 #. translators: used to join last two items in a list with more than 2 times
-#: wp-includes/formatting.php:3619
+#: wp-includes/formatting.php:3722
 msgid "%s, and %s"
 msgstr "%s, och %s"
 
 #. translators: used to join items in a list with more than 2 items
-#: wp-includes/formatting.php:3617
+#: wp-includes/formatting.php:3720
 msgid "%s, %s"
 msgstr "%s, %s"
 
@@ -3610,7 +3610,7 @@ msgstr "%s, %s"
 #. translators: If your word count is based on single characters (East Asian
 #. characters), 		   enter 'characters'. Otherwise, enter 'words'. Do not
 #. translate into your own language.
-#: wp-includes/formatting.php:2604 wp-includes/script-loader.php:370
+#: wp-includes/formatting.php:2707 wp-includes/script-loader.php:370
 msgctxt "word count: words or characters?"
 msgid "words"
 msgstr "ord"
@@ -3624,58 +3624,58 @@ msgstr "ord"
 msgid "Title:"
 msgstr "Titel:"
 
-#: wp-includes/formatting.php:3276
+#: wp-includes/formatting.php:3379
 msgid "The email address entered did not appear to be a valid email address. Please enter a valid email address."
 msgstr "E-postadressen angiven verkar inte vara en giltig e-postadress. Var vänlig ange en giltig adress."
 
-#: wp-includes/formatting.php:3363
+#: wp-includes/formatting.php:3466
 msgid "The WordPress address you entered did not appear to be a valid URL. Please enter a valid URL."
 msgstr "WordPressadressen angiven verkar inte vara en giltig URL. Var vänlig ange en giltig URL."
 
-#: wp-includes/formatting.php:3418
+#: wp-includes/formatting.php:3521
 msgid "The timezone you have entered is not valid. Please select a valid timezone."
 msgstr "Tidszonen du har angett är inte giltigt. Välj en giltig tidszon."
 
-#: wp-includes/formatting.php:3373
+#: wp-includes/formatting.php:3476
 msgid "The Site address you entered did not appear to be a valid URL. Please enter a valid URL."
 msgstr "Webbplatsadressen angiven verkar inte vara en giltig URL. Var vänlig ange en giltig URL."
 
-#: wp-includes/formatting.php:2512
+#: wp-includes/formatting.php:2615
 msgid "%s year"
 msgid_plural "%s years"
 msgstr[0] "%s år"
 msgstr[1] "%s år"
 
-#: wp-includes/formatting.php:2599 wp-includes/general-template.php:2547
+#: wp-includes/formatting.php:2702 wp-includes/general-template.php:2547
 msgid "&hellip;"
 msgstr "&hellip;"
 
-#: wp-includes/formatting.php:2502
+#: wp-includes/formatting.php:2605
 msgid "%s week"
 msgid_plural "%s weeks"
 msgstr[0] "%s vecka"
 msgstr[1] "%s veckor"
 
-#: wp-includes/formatting.php:2507
+#: wp-includes/formatting.php:2610
 msgid "%s month"
 msgid_plural "%s months"
 msgstr[0] "%s månad"
 msgstr[1] "%s månader"
 
-#: wp-includes/formatting.php:2492
+#: wp-includes/formatting.php:2595
 msgid "%s hour"
 msgid_plural "%s hours"
 msgstr[0] "%s timme"
 msgstr[1] "%s timmar"
 
-#: wp-includes/formatting.php:2497
+#: wp-includes/formatting.php:2600
 msgid "%s day"
 msgid_plural "%s days"
 msgstr[0] "%s dag"
 msgstr[1] "%s dagar"
 
 #. translators: min=minute
-#: wp-includes/formatting.php:2487
+#: wp-includes/formatting.php:2590
 msgid "%s min"
 msgid_plural "%s mins"
 msgstr[0] "%s minut"
@@ -3756,7 +3756,7 @@ msgid "Are you sure you want to do this?"
 msgstr "Är du säker på att du vill göra det här?"
 
 #. translators: opening curly double quote
-#: wp-includes/formatting.php:62 wp-includes/formatting.php:3857
+#: wp-includes/formatting.php:62 wp-includes/formatting.php:3960
 msgctxt "opening curly double quote"
 msgid "&#8220;"
 msgstr "&#8221;"
@@ -6097,7 +6097,7 @@ msgstr "RTF-området. Tryck Alt-F9 för meny. Tryck Alt-F10 för verktygsfält. 
 
 #: wp-includes/class-wp-editor.php:925 wp-includes/script-loader.php:386
 #: wp-includes/script-loader.php:459 wp-includes/script-loader.php:539
-#: wp-includes/theme.php:1934
+#: wp-includes/theme.php:1913
 msgid "The changes you made will be lost if you navigate away from this page."
 msgstr "Ändringarna du gjort kommer att förloras om du går i från sidan utan att spara."
 
@@ -6446,8 +6446,8 @@ msgstr "Ogiltig posttyp"
 #: wp-includes/class-wp-xmlrpc-server.php:5014
 #: wp-includes/class-wp-xmlrpc-server.php:5520
 #: wp-includes/class-wp-xmlrpc-server.php:5568
-#: wp-includes/class-wp-xmlrpc-server.php:5692 wp-includes/post.php:3098
-#: wp-includes/post.php:3545
+#: wp-includes/class-wp-xmlrpc-server.php:5692 wp-includes/post.php:3099
+#: wp-includes/post.php:3546
 msgid "Invalid post ID."
 msgstr "Ogiltigt inläggs ID."
 
