@@ -10,10 +10,6 @@
  * @since 3.0.0
  */
 
-// $base sanity check.
-if ( 'BASE' == $base )
-	die( /*WP_I18N_BASE_ERROR*/'Fel i konfigurationen, <code>wp-config.php</code>.  <code>$base</code> är satt till <code>BASE</code> när det i egentligen bör vara en sökväg, så som <code>/</code> eller <code>/bloggar/</code>.'/*/WP_I18N_BASE_ERROR*/ );
-
 /** Include Multisite initialization functions */
 require( ABSPATH . WPINC . '/ms-load.php' );
 require( ABSPATH . WPINC . '/ms-default-constants.php' );

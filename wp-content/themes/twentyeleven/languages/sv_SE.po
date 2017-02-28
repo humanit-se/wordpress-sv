@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Twenty Eleven package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2011-07-01 07:12+0100\n"
+"PO-Revision-Date: 2011-12-11 09:44+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -16,11 +16,29 @@ msgstr ""
 "X-Poedit-Country: SWEDEN\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
+#: image.php:30
+msgid "<span class=\"meta-prep meta-prep-entry-date\">Published </span> <span class=\"entry-date\"><abbr class=\"published\" title=\"%1$s\">%2$s</abbr></span> at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%8$s</a>"
+msgstr "<span class=\"meta-prep meta-prep-entry-date\">Publicerad </span> <span class=\"entry-date\"><abbr class=\"published\" title=\"%1$s\">%2$s</abbr></span> i storleken <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a> i <a href=\"%6$s\" title=\"Gå tillbaka till %7$s\" rel=\"gallery\">%8$s</a>"
+
+#: inc/theme-options.php:133
+msgid "Overview"
+msgstr "Översikt"
+
+#: archive.php:29
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: archive.php:27
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
 #: content-single.php:39
 msgid "This entry was posted by <a href=\"%6$s\">%5$s</a>. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
 msgstr "Detta inlägg postades av <a href=\"%6$s\">%5$s</a>. Bokmärk <a href=\"%3$s\" title=\"Permalänk till %4$s\" rel=\"bookmark\">permalänken</a>."
 
-#: functions.php:544
+#: functions.php:546
 msgid "Reply <span>&darr;</span>"
 msgstr "Svara <span>&darr;</span>"
 
@@ -31,10 +49,6 @@ msgstr "Nästa <span class=\"meta-nav\">&rarr;</span>"
 #: single.php:19
 msgid "<span class=\"meta-nav\">&larr;</span> Previous"
 msgstr "<span class=\"meta-nav\">&larr;</span> Föregående"
-
-#: content-image.php:64
-msgid "<strong>1</strong> Reply"
-msgstr "<strong>1</strong> kommentar"
 
 #: content-quote.php:24
 #: content.php:30
@@ -56,33 +70,24 @@ msgctxt "comments number"
 msgid "1"
 msgstr "1"
 
-#: content-gallery.php:87
-msgid "Leave a Reply"
-msgstr "Lämna en kommentar"
-
 #: content-quote.php:24
 #: content.php:30
 #: content-image.php:21
-#: content-image.php:64
 #: content-aside.php:22
 #: content-status.php:21
 #: content-link.php:22
 msgid "Reply"
 msgstr "Svara"
 
-#: content-image.php:64
-msgid "<strong>%</strong> Replies"
-msgstr "<strong>%</strong> svar"
-
 #: image.php:18
 msgid "Image navigation"
 msgstr "Bildnavigering"
 
-#: functions.php:526
+#: functions.php:528
 msgid "%1$s at %2$s"
 msgstr "%1$s kl. %2$s"
 
-#: functions.php:520
+#: functions.php:522
 msgid "%1$s on %2$s <span class=\"says\">said:</span>"
 msgstr "%1$s den %2$s <span class=\"says\">skrev:</span>"
 
@@ -98,27 +103,27 @@ msgstr "Inga resultat hittades för det efterfrågade arkivet. Kanske en söknin
 msgid "<a href=\"%1$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%2$s\" pubdate>%3$s</time></a><span class=\"by-author\"> <span class=\"sep\"> by </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" title=\"%5$s\" rel=\"author\">%6$s</a></span></span>"
 msgstr "<a href=\"%1$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%2$s\" pubdate>%3$s</time></a><span class=\"by-author\"> <span class=\"sep\"> av </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" title=\"%5$s\" rel=\"author\">%6$s</a></span></span>"
 
-#: functions.php:562
+#: functions.php:564
 msgid "<span class=\"sep\">Posted on </span><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"by-author\"> <span class=\"sep\"> by </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
 msgstr "<span class=\"sep\">Postat </span><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"by-author\"> <span class=\"sep\"> av </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
 
-#: inc/theme-options.php:261
+#: inc/theme-options.php:68
 msgid "Default Layout"
 msgstr "Standardlayout"
 
-#: inc/theme-options.php:98
+#: inc/theme-options.php:125
 msgid "<a href=\"http://codex.wordpress.org/Appearance_Theme_Options_Screen\" target=\"_blank\">Documentation on Theme Options</a>"
 msgstr "<a href=\"http://codex.wordpress.org/Appearance_Theme_Options_Screen\" target=\"_blank\">Dokumentation för temainställningar</a>"
 
-#: inc/theme-options.php:99
+#: inc/theme-options.php:126
 msgid "<a href=\"http://wordpress.org/support/\" target=\"_blank\">Support Forums</a>"
 msgstr "<a href=\"http://wordpress.org/support/\" target=\"_blank\">Supportforum</a>"
 
-#: inc/theme-options.php:97
+#: inc/theme-options.php:124
 msgid "For more information:"
 msgstr "För mer information:"
 
-#: inc/theme-options.php:96
+#: inc/theme-options.php:122
 msgid "Remember to click \"Save Changes\" to save any changes you have made to the theme options."
 msgstr "Kom ihåg att klicka på \"Spara ändringar\" för att spara eventuella ändringar du har gjort i inställningar för temat."
 
@@ -130,23 +135,23 @@ msgstr "Hoppa till huvudinnehåll"
 msgid "Skip to secondary content"
 msgstr "Hoppa till sekundärt innehåll"
 
-#: inc/theme-options.php:148
+#: inc/theme-options.php:189
 msgid "One-column, no sidebar"
 msgstr "En kolumn, inget sidofält"
 
-#: inc/theme-options.php:90
+#: inc/theme-options.php:116
 msgid "Some themes provide customization options that are grouped together on a Theme Options screen. If you change themes, options may change or disappear, as they are theme-specific. Your current theme, Twenty Eleven, provides the following Theme Options:"
 msgstr "Vissa teman ger anpassningsalternativ som är grupperade tillsammans på en inställningssida för temat. Om du byter tema kan dessa inställningar komma att ändras eller försvinna eftersom de är tema-specifika. Ditt aktuella tema, Twenty Eleven, har följande inställningsalternativ:"
 
-#: inc/theme-options.php:92
+#: inc/theme-options.php:118
 msgid "<strong>Color Scheme</strong>: You can choose a color palette of \"Light\" (light background with dark text) or \"Dark\" (dark background with light text) for your site."
 msgstr "<strong>Färgschema</strong>: Du kan välja en färgpalett av \"Ljus\" (ljus bakgrund med mörk text) eller \"Mörk\" (mörk bakgrund med ljus text) för din webbplats."
 
-#: inc/theme-options.php:93
+#: inc/theme-options.php:119
 msgid "<strong>Link Color</strong>: You can choose the color used for text links on your site. You can enter the HTML color or hex code, or you can choose visually by clicking the \"Select a Color\" button to pick from a color wheel."
 msgstr "<strong>Länkfärg</strong>: Du kan välja den färg som används för textlänkar på din webbplats. Du kan ange HTML- eller hex-färgkod eller så kan du välja visuellt genom att klicka på \"Välj en färg\"-knappen för att välja från ett färghjul."
 
-#: inc/theme-options.php:94
+#: inc/theme-options.php:120
 msgid "<strong>Default Layout</strong>: You can choose if you want your site&#8217;s default layout to have a sidebar on the left, the right, or not at all."
 msgstr "<strong>Standardlayout</strong>: Du kan välja om du vill att din webbplats standardlayout ska ha ett sidofält till vänster, höger eller inte alls."
 
@@ -179,11 +184,11 @@ msgstr "<span class=\"%1$s\">Publicerat i</span> %2$s"
 msgid "<span class=\"%1$s\">Tagged</span> %2$s"
 msgstr "<span class=\"%1$s\">Märkt</span> %2$s"
 
-#: footer.php:26
+#: footer.php:27
 msgid "Semantic Personal Publishing Platform"
 msgstr "Semantisk plattform för personlig publicering"
 
-#: footer.php:26
+#: footer.php:27
 msgid "Proudly powered by %s"
 msgstr "Drivs med %s"
 
@@ -225,8 +230,7 @@ msgstr "dark, light, white, black, gray, one-column, two-columns, left-sidebar, 
 msgid "Daily Archives: %s"
 msgstr "Dagsarkiv: %s"
 
-#: inc/theme-options.php:248
-#: inc/theme-options.php:250
+#: inc/theme-options.php:67
 msgid "Link Color"
 msgstr "Länkfärg"
 
@@ -238,11 +242,11 @@ msgstr "månadsarkiv: %s"
 msgid "Use this widget to list your recent Aside, Status, Quote, and Link posts"
 msgstr "Använd denna widget för att lista senaste inläggen från inläggsformaten noteringar, statusar, citat och länkar "
 
-#: inc/theme-options.php:253
+#: inc/theme-options.php:279
 msgid "Select a Color"
 msgstr "Välj en färg"
 
-#: inc/theme-options.php:256
+#: inc/theme-options.php:282
 msgid "Default color: %s"
 msgstr "Standardfärg: %s"
 
@@ -254,34 +258,32 @@ msgstr "Årsarkiv: %s"
 msgid "Hanoi Plant"
 msgstr "Hanoi-blom"
 
-#: inc/theme-options.php:143
+#: inc/theme-options.php:184
 msgid "Content on right"
 msgstr "Innehåll till höger"
 
-#: inc/theme-options.php:138
+#: inc/theme-options.php:179
 msgid "Content on left"
 msgstr "Innehåll till vänster"
 
-#: inc/theme-options.php:120
+#: inc/theme-options.php:161
 msgid "Dark"
 msgstr "Mörk"
 
-#: inc/theme-options.php:114
+#: inc/theme-options.php:155
 msgid "Light"
 msgstr "Ljus"
 
-#: inc/theme-options.php:213
+#: inc/theme-options.php:317
 msgid "%s Theme Options"
 msgstr "Temainställningar för %s"
 
-#: inc/theme-options.php:80
-#: inc/theme-options.php:81
+#: inc/theme-options.php:100
+#: inc/theme-options.php:101
 msgid "Theme Options"
 msgstr "Inställningar för tema"
 
-#: inc/theme-options.php:225
-#: inc/theme-options.php:227
-#: inc/theme-options.php:263
+#: inc/theme-options.php:61
 msgid "Color Scheme"
 msgstr "Färgschema"
 
@@ -305,7 +307,7 @@ msgstr "Tallkotte"
 msgid "Wheel"
 msgstr "Hjul"
 
-#: showcase.php:143
+#: showcase.php:145
 msgid "Featuring: %s"
 msgstr "Innehåller: %s"
 
@@ -317,8 +319,8 @@ msgstr "Strand"
 msgid "Trolley"
 msgstr "Kärra"
 
-#: inc/widgets.php:93
-#: inc/widgets.php:109
+#: inc/widgets.php:91
+#: inc/widgets.php:107
 msgid "1 <span class=\"reply\">comment &rarr;</span>"
 msgstr "1 <span class=\"reply\">kommentar &rarr;</span>"
 
@@ -327,8 +329,8 @@ msgstr "1 <span class=\"reply\">kommentar &rarr;</span>"
 msgid "About %s"
 msgstr "Om %s"
 
-#: inc/widgets.php:93
-#: inc/widgets.php:109
+#: inc/widgets.php:91
+#: inc/widgets.php:107
 msgid "0 <span class=\"reply\">comments &rarr;</span>"
 msgstr "0 <span class=\"reply\">kommentarer &rarr;</span>"
 
@@ -336,7 +338,7 @@ msgstr "0 <span class=\"reply\">kommentarer &rarr;</span>"
 msgid "Ephemera"
 msgstr "Ephemera"
 
-#: footer.php:26
+#: footer.php:27
 msgid "http://wordpress.org/"
 msgstr "http://wordpress.org/"
 
@@ -362,8 +364,8 @@ msgid "Comments are closed."
 msgstr "Kommentarer inaktiverade."
 
 #: content-quote.php:14
-#: showcase.php:113
-#: showcase.php:192
+#: showcase.php:115
+#: showcase.php:194
 #: content.php:15
 #: content.php:19
 #: content-image.php:15
@@ -371,17 +373,17 @@ msgstr "Kommentarer inaktiverade."
 #: content-gallery.php:48
 #: content-aside.php:16
 #: content-status.php:15
-#: inc/widgets.php:91
+#: inc/widgets.php:89
 #: content-link.php:16
 #: content-featured.php:14
 msgid "Permalink to %s"
 msgstr "Permanent länk till %s"
 
-#: inc/widgets.php:107
+#: inc/widgets.php:105
 msgid "Link to %s"
 msgstr "Länk till %s"
 
-#: inc/widgets.php:159
+#: inc/widgets.php:157
 msgid "Title:"
 msgstr "Titel:"
 
@@ -443,11 +445,11 @@ msgstr "Inget kunde hittas"
 msgid "Search"
 msgstr "Sök"
 
-#: showcase.php:70
+#: showcase.php:72
 msgid "Featured Post"
 msgstr "Utvalt inlägg"
 
-#: showcase.php:153
+#: showcase.php:155
 msgid "Recent Posts"
 msgstr "Senaste inläggen"
 
@@ -471,7 +473,7 @@ msgstr "Prova att leta i månadsarkiven. %1$s"
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help."
 msgstr "Det verkar som om vi inte hittar det du letar efter. Kanske en sökning eller någon av länkarna nedan kan vara till hjälp."
 
-#: inc/widgets.php:162
+#: inc/widgets.php:160
 msgid "Number of posts to show:"
 msgstr "Antal inlägg att visa:"
 
@@ -481,8 +483,8 @@ msgstr "Twenty Eleven"
 msgid "http://wordpress.org/extend/themes/twentyeleven"
 msgstr "http://wordpress.org/extend/themes/twentyeleven"
 
-#: inc/widgets.php:93
-#: inc/widgets.php:109
+#: inc/widgets.php:91
+#: inc/widgets.php:107
 msgid "% <span class=\"reply\">comments &rarr;</span>"
 msgstr "%s <span class=\"reply\">kommentarer &rarr;</span>"
 
@@ -504,7 +506,7 @@ msgstr "Läs mer <span class=\"meta-nav\">&rarr;</span>"
 #: content-intro.php:18
 #: content-gallery.php:54
 #: content-aside.php:34
-#: image.php:89
+#: image.php:90
 #: content-status.php:35
 #: content-page.php:18
 #: content-link.php:34
@@ -513,13 +515,14 @@ msgid "Pages:"
 msgstr "Sidor:"
 
 #: content-image.php:39
-#: functions.php:568
+#: functions.php:570
 msgid "View all posts by %s"
 msgstr "Visa alla inlägg av %s"
 
 #: content-quote.php:69
-#: showcase.php:194
+#: showcase.php:196
 #: content.php:77
+#: content-image.php:64
 #: content-gallery.php:87
 #: content-aside.php:42
 #: content-status.php:43
@@ -528,8 +531,9 @@ msgid "<b>%</b> Replies"
 msgstr "<b>%</b> Kommentarer"
 
 #: content-quote.php:69
-#: showcase.php:194
+#: showcase.php:196
 #: content.php:77
+#: content-image.php:64
 #: content-gallery.php:87
 #: content-aside.php:42
 #: content-status.php:43
@@ -544,9 +548,9 @@ msgstr "<b>1</b> Kommentar"
 #: content-intro.php:19
 #: content-gallery.php:90
 #: content-aside.php:44
-#: image.php:40
-#: functions.php:503
-#: functions.php:531
+#: image.php:41
+#: functions.php:505
+#: functions.php:533
 #: content-status.php:45
 #: content-page.php:21
 #: content-link.php:44
@@ -563,8 +567,10 @@ msgid "This entry was posted in %1$s and tagged %2$s by <a href=\"%6$s\">%5$s</a
 msgstr "Det här inlägget postades i %1$s och märktes %2$s av <a href=\"%6$s\">%5$s</a>. Bokmärk <a href=\"%3$s\" title=\"Permalänk till %4$s\" rel=\"bookmark\">permalänken</a>."
 
 #: content-quote.php:69
-#: showcase.php:194
+#: showcase.php:196
 #: content.php:77
+#: content-image.php:64
+#: content-gallery.php:87
 #: content-aside.php:42
 #: content-status.php:43
 #: content-link.php:42
@@ -580,10 +586,6 @@ msgid "This gallery contains <a %1$s>%2$s photo</a>."
 msgid_plural "This gallery contains <a %1$s>%2$s photos</a>."
 msgstr[0] "Detta galleri innehåller <a %1$s>%2$s bild</a>."
 msgstr[1] "Detta galleri innehåller <a %1$s>%2$s bilder</a>."
-
-#: image.php:30
-msgid "<span class=\"meta-prep meta-prep-entry-date\">Published </span> <span class=\"entry-date\"><abbr class=\"published\" title=\"%1$s\">%2$s</abbr></span> at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%7$s</a>"
-msgstr "<span class=\"meta-prep meta-prep-entry-date\">Publicerat </span> <span class=\"entry-date\"><abbr class=\"published\" title=\"%1$s\">%2$s</abbr></span> kl <a href=\"%3$s\" title=\"Länk till fullskalig bild\">%4$s &times; %5$s</a> i <a href=\"%6$s\" title=\"Tillbaka till %7$s\" rel=\"gallery\">%7$s</a>"
 
 #: image.php:20
 msgid "Next &rarr;"
@@ -601,23 +603,23 @@ msgstr "Huvudmeny"
 msgid "Page %s"
 msgstr "Sida %s"
 
-#: functions.php:503
+#: functions.php:505
 msgid "Pingback:"
 msgstr "Pingback: "
 
-#: functions.php:535
+#: functions.php:537
 msgid "Your comment is awaiting moderation."
 msgstr "Din kommentar inväntar granskning."
 
-#: functions.php:434
+#: functions.php:435
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Nyare inlägg <span class=\"meta-nav\">&rarr;</span>"
 
-#: functions.php:433
+#: functions.php:434
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr "<span class=\"meta-nav\">&larr;</span> Äldre inlägg"
 
-#: functions.php:432
+#: functions.php:433
 #: single.php:18
 msgid "Post navigation"
 msgstr "Inläggsnavigering"
