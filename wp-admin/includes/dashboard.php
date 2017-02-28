@@ -488,10 +488,6 @@ function wp_dashboard_quick_press() {
 		$_REQUEST = array(); // hack for get_default_post_to_edit()
 	}
 
-	if ( ! current_user_can( 'edit_posts' ) ) {
-		return;
-	}
-
 	/* Check if a new auto-draft (= no new post_ID) is needed or if the old can be used */
 	$last_post_id = (int) get_user_option( 'dashboard_quick_press_last_post_id' ); // Get the last post_ID
 	if ( $last_post_id ) {
@@ -662,7 +658,7 @@ function _wp_dashboard_recent_comments_row( &$comment, $show_date = true ) {
 	$GLOBALS['comment'] =& $comment;
 
 	$comment_post_url = get_edit_post_link( $comment->comment_post_ID );
-	$comment_post_title = _draft_or_post_title( $comment->comment_post_ID );
+	$comment_post_title = strip_tags(get_the_title( $comment->comment_post_ID ));
 	$comment_post_link = "<a href='$comment_post_url'>$comment_post_title</a>";
 	$comment_link = '<a class="comment-link" href="' . esc_url(get_comment_link()) . '">#</a>';
 
