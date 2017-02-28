@@ -743,14 +743,14 @@ class wpdb {
 		if ( !@mysql_select_db( $db, $dbh ) ) {
 			$this->ready = false;
 			$this->bail( sprintf( /*WP_I18N_DB_SELECT_DB*/'
-<h1>Kan inte välja databasen</h1>
-<p>Vi kunde ansluta mot databasservern (vilket betyder att ditt användarnamn och lösenord är korrekt angivna) men vi kunde inte välja databasen <code>%1$s</code>.</p>
+<h1>Can&#8217;t select database</h1>
+<p>We were able to connect to the database server (which means your username and password is okay) but not able to select the <code>%1$s</code> database.</p>
 <ul>
-<li>Är du säker på att den finns?</li>
-<li>Har användaren <code>%2$s</code> rättigheter att använda <code>%1$s</code> databasen?</li>
-<li>På vissa system så används ditt användarnamn som databasprefix, så att det skulle bli t.ex <code>användarnamn_%1$s</code>. Kan det vara problemet?</li>
+<li>Are you sure it exists?</li>
+<li>Does the user <code>%2$s</code> have permission to use the <code>%1$s</code> database?</li>
+<li>On some systems the name of your database is prefixed with your username, so it would be like <code>username_%1$s</code>. Could that be the problem?</li>
 </ul>
-<p>Om du inte vet hur du skapar en databas så bör du <strong>kontakta ditt webbhotell</strong>. Om allt annat misslyckas så kan du hitta hjälp på <a href="http://wp-support.se/forum/">WP-Support Sveriges forum</a> eller <a href="http://wordpress.org/support/">WordPress Support Forums</a> (engelska).</p>'/*/WP_I18N_DB_SELECT_DB*/, $db, $this->dbuser ), 'db_select_fail' );
+<p>If you don\'t know how to set up a database you should <strong>contact your host</strong>. If all else fails you may find help at the <a href="http://wordpress.org/support/">WordPress Support Forums</a>.</p>'/*/WP_I18N_DB_SELECT_DB*/, $db, $this->dbuser ), 'db_select_fail' );
 			return;
 		}
 	}
@@ -1402,7 +1402,7 @@ class wpdb {
 			// Return an array of row objects with keys from column 1
 			// (Duplicates are discarded)
 			foreach ( $this->last_result as $row ) {
-				$key = array_shift( get_object_vars( $row ) );
+				$key = array_shift( $var_by_ref = get_object_vars( $row ) );
 				if ( ! isset( $new_array[ $key ] ) )
 					$new_array[ $key ] = $row;
 			}
