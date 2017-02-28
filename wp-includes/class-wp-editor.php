@@ -59,6 +59,12 @@ final class _WP_Editors {
 			// A cookie (set when a user resizes the editor) overrides the height.
 			$cookie = (int) get_user_setting( 'ed_size' );
 
+			// Upgrade an old TinyMCE cookie if it is still around, and the new one isn't.
+			if ( ! $cookie && isset( $_COOKIE['TinyMCE_content_size'] ) ) {
+				parse_str( $_COOKIE['TinyMCE_content_size'], $cookie );
+ 				$cookie = $cookie['ch'];
+			}
+
 			if ( $cookie )
 				$set['editor_height'] = $cookie;
 		}
@@ -121,7 +127,6 @@ final class _WP_Editors {
 
 		if ( !empty($buttons) || $set['media_buttons'] ) {
 			echo '<div id="wp-' . $editor_id . '-editor-tools" class="wp-editor-tools hide-if-no-js">';
-			echo $buttons;
 
 			if ( $set['media_buttons'] ) {
 				self::$has_medialib = true;
@@ -133,6 +138,8 @@ final class _WP_Editors {
 				do_action('media_buttons', $editor_id);
 				echo "</div>\n";
 			}
+
+			echo '<div class="wp-editor-tabs">' . $buttons . "</div>\n";
 			echo "</div>\n";
 		}
 
@@ -780,8 +787,6 @@ final class _WP_Editors {
 			'update_post_term_cache' => false,
 			'update_post_meta_cache' => false,
 			'post_status' => 'publish',
-			'order' => 'DESC',
-			'orderby' => 'post_date',
 			'posts_per_page' => 20,
 		);
 

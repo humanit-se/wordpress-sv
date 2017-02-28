@@ -562,6 +562,47 @@ $_old_files = array(
 'wp-admin/js/cat.js',
 'wp-admin/js/cat.min.js',
 'wp-includes/js/tinymce/plugins/wpeditimage/js/editimage.min.js',
+// 3.8
+'wp-includes/js/tinymce/themes/advanced/skins/wp_theme/img/page_bug.gif',
+'wp-includes/js/tinymce/themes/advanced/skins/wp_theme/img/more_bug.gif',
+'wp-includes/js/thickbox/tb-close-2x.png',
+'wp-includes/js/thickbox/tb-close.png',
+'wp-includes/images/wpmini-blue-2x.png',
+'wp-includes/images/wpmini-blue.png',
+'wp-admin/css/colors-fresh.css',
+'wp-admin/css/colors-classic.css',
+'wp-admin/css/colors-fresh.min.css',
+'wp-admin/css/colors-classic.min.css',
+'wp-admin/js/about.min.js',
+'wp-admin/js/about.js',
+'wp-admin/images/arrows-dark-vs-2x.png',
+'wp-admin/images/wp-logo-vs.png',
+'wp-admin/images/arrows-dark-vs.png',
+'wp-admin/images/wp-logo.png',
+'wp-admin/images/arrows-pr.png',
+'wp-admin/images/arrows-dark.png',
+'wp-admin/images/press-this.png',
+'wp-admin/images/press-this-2x.png',
+'wp-admin/images/arrows-vs-2x.png',
+'wp-admin/images/welcome-icons.png',
+'wp-admin/images/wp-logo-2x.png',
+'wp-admin/images/stars-rtl-2x.png',
+'wp-admin/images/arrows-dark-2x.png',
+'wp-admin/images/arrows-pr-2x.png',
+'wp-admin/images/menu-shadow-rtl.png',
+'wp-admin/images/arrows-vs.png',
+'wp-admin/images/about-search-2x.png',
+'wp-admin/images/bubble_bg-rtl-2x.gif',
+'wp-admin/images/wp-badge-2x.png',
+'wp-admin/images/wordpress-logo-2x.png',
+'wp-admin/images/bubble_bg-rtl.gif',
+'wp-admin/images/wp-badge.png',
+'wp-admin/images/menu-shadow.png',
+'wp-admin/images/about-globe-2x.png',
+'wp-admin/images/welcome-icons-2x.png',
+'wp-admin/images/stars-rtl.png',
+'wp-admin/images/wp-logo-vs-2x.png',
+'wp-admin/images/about-updates-2x.png',
 );
 
 /**
@@ -589,6 +630,7 @@ $_new_bundled_files = array(
 	'themes/twentyeleven/'   => '3.2',
 	'themes/twentytwelve/'   => '3.5',
 	'themes/twentythirteen/' => '3.6',
+	'themes/twentyfourteen/' => '3.8',
 );
 
 /**
@@ -881,9 +923,6 @@ function update_core($from, $to) {
 		$wp_filesystem->delete($old_file, true);
 	}
 
-	// Remove any Genericons example.html's from the filesystem
-	_upgrade_422_remove_genericons();
-
 	// Upgrade DB with separate request
 	apply_filters('update_feedback', __('Upgrading database&#8230;'));
 	$db_upgrade_url = admin_url('upgrade.php?step=upgrade_db');
@@ -1012,67 +1051,3 @@ window.location = 'about.php?updated';
 	exit();
 }
 add_action( '_core_updated_successfully', '_redirect_to_about_wordpress' );
-
-/**
- * Cleans up Genericons example files.
- *
- * @since 4.2.2
- */
-function _upgrade_422_remove_genericons() {
-	global $wp_theme_directories, $wp_filesystem;
-
-	// A list of the affected files using the filesystem absolute paths.
-	$affected_files = array();
-
-	// Themes
-	foreach ( $wp_theme_directories as $directory ) {
-		$affected_theme_files = _upgrade_422_find_genericons_files_in_folder( $directory );
-		$affected_files       = array_merge( $affected_files, $affected_theme_files );
-	}
-
-	// Plugins
-	$affected_plugin_files = _upgrade_422_find_genericons_files_in_folder( WP_PLUGIN_DIR );
-	$affected_files        = array_merge( $affected_files, $affected_plugin_files );
-
-	foreach ( $affected_files as $file ) {
-		$gen_dir = $wp_filesystem->find_folder( trailingslashit( dirname( $file ) ) );
-		if ( empty( $gen_dir ) ) {
-			continue;
-		}
-
-		// The path when the file is accessed via WP_Filesystem may differ in the case of FTP
-		$remote_file = $gen_dir . basename( $file );
-
-		if ( ! $wp_filesystem->exists( $remote_file ) ) {
-			continue;
-		}
-
-		if ( ! $wp_filesystem->delete( $remote_file, false, 'f' ) ) {
-			$wp_filesystem->put_contents( $remote_file, '' );
-		}
-	}
-}
-
-/**
- * Recursively find Genericons example files in a given folder.
- *
- * @ignore
- * @since 4.2.2
- *
- * @param string $directory Directory path. Expects trailingslashed.
- * @return array
- */
-function _upgrade_422_find_genericons_files_in_folder( $directory ) {
-	$directory = trailingslashit( $directory );
-	$files     = array();
-
-	if ( file_exists( "{$directory}example.html" ) && false !== strpos( file_get_contents( "{$directory}example.html" ), '<title>Genericons</title>' ) ) {
-		$files[] = "{$directory}example.html";
-	}
-
-	foreach ( glob( $directory . '*', GLOB_ONLYDIR ) as $dir ) {
-		$files = array_merge( $files, _upgrade_422_find_genericons_files_in_folder( $dir ) );
-	}
-
-	return $files;
-}
