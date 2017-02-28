@@ -7,22 +7,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/1.0-alpha-1000\n"
+"X-Generator: GlotPress/1.0-alpha-1100\n"
 "Project-Id-Version: 3.9.x\n"
 
-#: wp-includes/post.php:3129
+#: wp-includes/post.php:3130
 msgid "Could not update post in the database"
 msgstr "Kunde inte uppdatera inlägget i databasen"
 
-#: wp-includes/post.php:3145
+#: wp-includes/post.php:3146
 msgid "Could not insert post into the database"
 msgstr "Kunde inte infoga inlägget i databasen"
 
-#: wp-includes/post.php:3192
+#: wp-includes/post.php:3193
 msgid "The page template is invalid."
 msgstr "Sidmallen är felaktig."
 
-#: wp-includes/post.php:3584 wp-includes/script-loader.php:461
+#: wp-includes/post.php:3585 wp-includes/script-loader.php:461
 #: wp-includes/script-loader.php:485
 msgctxt "tag delimiter"
 msgid ","
@@ -2473,7 +2473,7 @@ msgid "Protected Comments: Please enter your password to view comments."
 msgstr "Lösenordsskyddade kommentarer: ange ditt lösenord för att visa kommentarerna."
 
 #. translators: opening curly double quote
-#: wp-includes/formatting.php:37 wp-includes/formatting.php:3719
+#: wp-includes/formatting.php:37 wp-includes/formatting.php:3822
 msgctxt "opening curly double quote"
 msgid "&#8220;"
 msgstr "&#8221;"
@@ -2527,43 +2527,43 @@ msgid "&#8212;"
 msgstr "&#8212;"
 
 #. translators: min=minute
-#: wp-includes/formatting.php:2359
+#: wp-includes/formatting.php:2462
 msgid "%s min"
 msgid_plural "%s mins"
 msgstr[0] "%s minut"
 msgstr[1] "%s minuter"
 
-#: wp-includes/formatting.php:2364
+#: wp-includes/formatting.php:2467
 msgid "%s hour"
 msgid_plural "%s hours"
 msgstr[0] "%s timme"
 msgstr[1] "%s timmar"
 
-#: wp-includes/formatting.php:2369
+#: wp-includes/formatting.php:2472
 msgid "%s day"
 msgid_plural "%s days"
 msgstr[0] "%s dag"
 msgstr[1] "%s dagar"
 
-#: wp-includes/formatting.php:2374
+#: wp-includes/formatting.php:2477
 msgid "%s week"
 msgid_plural "%s weeks"
 msgstr[0] "%s vecka"
 msgstr[1] "%s veckor"
 
-#: wp-includes/formatting.php:2379
+#: wp-includes/formatting.php:2482
 msgid "%s month"
 msgid_plural "%s months"
 msgstr[0] "%s månad"
 msgstr[1] "%s månader"
 
-#: wp-includes/formatting.php:2384
+#: wp-includes/formatting.php:2487
 msgid "%s year"
 msgid_plural "%s years"
 msgstr[0] "%s år"
 msgstr[1] "%s år"
 
-#: wp-includes/formatting.php:2461 wp-includes/general-template.php:2490
+#: wp-includes/formatting.php:2564 wp-includes/general-template.php:2490
 msgid "&hellip;"
 msgstr "&hellip;"
 
@@ -2573,39 +2573,39 @@ msgstr "&hellip;"
 #. translators: If your word count is based on single characters (East Asian
 #. characters), 		   enter 'characters'. Otherwise, enter 'words'. Do not
 #. translate into your own language.
-#: wp-includes/formatting.php:2466 wp-includes/script-loader.php:374
+#: wp-includes/formatting.php:2569 wp-includes/script-loader.php:374
 msgctxt "word count: words or characters?"
 msgid "words"
 msgstr "ord"
 
-#: wp-includes/formatting.php:3150
+#: wp-includes/formatting.php:3253
 msgid "The email address entered did not appear to be a valid email address. Please enter a valid email address."
 msgstr "E-postadressen angiven verkar inte vara en giltig e-postadress. Var vänlig ange en giltig adress."
 
-#: wp-includes/formatting.php:3237
+#: wp-includes/formatting.php:3340
 msgid "The WordPress address you entered did not appear to be a valid URL. Please enter a valid URL."
 msgstr "WordPressadressen angiven verkar inte vara en giltig URL. Var vänlig ange en giltig URL."
 
-#: wp-includes/formatting.php:3247
+#: wp-includes/formatting.php:3350
 msgid "The Site address you entered did not appear to be a valid URL. Please enter a valid URL."
 msgstr "Webbplatsadressen angiven verkar inte vara en giltig URL. Var vänlig ange en giltig URL."
 
-#: wp-includes/formatting.php:3288
+#: wp-includes/formatting.php:3391
 msgid "The timezone you have entered is not valid. Please select a valid timezone."
 msgstr "Tidszonen du har angett är inte giltigt. Välj en giltig tidszon."
 
 #. translators: used to join items in a list with more than 2 items
-#: wp-includes/formatting.php:3479
+#: wp-includes/formatting.php:3582
 msgid "%s, %s"
 msgstr "%s, %s"
 
 #. translators: used to join last two items in a list with more than 2 times
-#: wp-includes/formatting.php:3481
+#: wp-includes/formatting.php:3584
 msgid "%s, and %s"
 msgstr "%s, och %s"
 
 #. translators: used to join items in a list with only 2 items
-#: wp-includes/formatting.php:3483
+#: wp-includes/formatting.php:3586
 msgid "%s and %s"
 msgstr "%s och %s"
 
@@ -4865,15 +4865,15 @@ msgid_plural "Video <span class=\"count\">(%s)</span>"
 msgstr[0] "Video <span class=\"count\">(%s)</span>"
 msgstr[1] "Videos <span class=\"count\">(%s)</span>"
 
-#: wp-includes/post.php:2844
+#: wp-includes/post.php:2845
 msgid "Passing an integer number of posts is deprecated. Pass an array of arguments instead."
 msgstr "Att passerar antalet poster är föråldrat. Passera en array av argument istället."
 
-#: wp-includes/post.php:2971
+#: wp-includes/post.php:2972
 msgid "Content, title, and excerpt are empty."
 msgstr "Innehåll, titel och utdrag är tomma."
 
-#: wp-includes/post.php:3028
+#: wp-includes/post.php:3029
 msgid "Whoops, the provided date is invalid."
 msgstr "Oops, angiven data är ogiltig."
 
@@ -6657,8 +6657,8 @@ msgstr "Ogiltig posttyp"
 #: wp-includes/class-wp-xmlrpc-server.php:4974
 #: wp-includes/class-wp-xmlrpc-server.php:5480
 #: wp-includes/class-wp-xmlrpc-server.php:5528
-#: wp-includes/class-wp-xmlrpc-server.php:5652 wp-includes/post.php:2940
-#: wp-includes/post.php:3288
+#: wp-includes/class-wp-xmlrpc-server.php:5652 wp-includes/post.php:2941
+#: wp-includes/post.php:3289
 msgid "Invalid post ID."
 msgstr "Ogiltigt inläggs ID."
 
