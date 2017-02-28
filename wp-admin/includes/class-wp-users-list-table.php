@@ -331,7 +331,7 @@ class WP_Users_List_Table extends WP_List_Table {
 	 * @access public
 	 *
 	 * @param object $user_object The current user object.
-	 * @param string $style       Optional. Style attributes added to the <tr> element.
+	 * @param string $style       Optional. Style attributes added to the `<tr>` element.
 	 *                            Must be sanitized. Default empty.
 	 * @param string $role        Optional. Key for the $wp_roles array. Default empty.
 	 * @param int    $numposts    Optional. Post count to display for this user. Defaults
@@ -419,7 +419,7 @@ class WP_Users_List_Table extends WP_List_Table {
 					$r .= "<td $attributes>$user_object->first_name $user_object->last_name</td>";
 					break;
 				case 'email':
-					$r .= "<td $attributes><a href='" . esc_url( "mailto:$email" ) . "' title='" . esc_attr( sprintf( __( 'E-mail: %s' ), $email ) ) . "'>$email</a></td>";
+					$r .= "<td $attributes><a href='mailto:$email' title='" . esc_attr( sprintf( __( 'E-mail: %s' ), $email ) ) . "'>$email</a></td>";
 					break;
 				case 'role':
 					$r .= "<td $attributes>$role_name</td>";

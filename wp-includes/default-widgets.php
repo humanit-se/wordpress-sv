@@ -287,7 +287,7 @@ class WP_Widget_Archives extends WP_Widget {
 		if ( $d ) {
 ?>
 		<select name="archive-dropdown" onchange='document.location.href=this.options[this.selectedIndex].value;'>
-			<option value=""><?php echo esc_attr( __( 'Select Month' ) ); ?></option>
+			<option value=""><?php esc_attr_e( 'Select Month' ); ?></option>
 
 			<?php
 			/**
@@ -849,7 +849,7 @@ class WP_Widget_Recent_Comments extends WP_Widget {
 		 *
 		 * @since 3.4.0
 		 *
-		 * @see get_comments()
+		 * @see WP_Comment_Query::query() for information on accepted arguments.
 		 *
 		 * @param array $comment_args An array of arguments used to retrieve the recent comments.
 		 */
@@ -1344,7 +1344,7 @@ class WP_Widget_Tag_Cloud extends WP_Widget {
 		$nav_menu = isset( $instance['nav_menu'] ) ? $instance['nav_menu'] : '';
 
 		// Get menus
-		$menus = wp_get_nav_menus( array( 'orderby' => 'name' ) );
+		$menus = wp_get_nav_menus();
 
 		// If no menus exists, direct the user to go and create some.
 		if ( !$menus ) {
@@ -1354,7 +1354,7 @@ class WP_Widget_Tag_Cloud extends WP_Widget {
 		?>
 		<p>
 			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:') ?></label>
-			<input type="text" class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo esc_attr( $title ); ?>" />
+			<input type="text" class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo $title; ?>" />
 		</p>
 		<p>
 			<label for="<?php echo $this->get_field_id('nav_menu'); ?>"><?php _e('Select Menu:'); ?></label>
