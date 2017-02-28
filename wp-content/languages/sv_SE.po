@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/1.0-alpha-1100\n"
+"X-Generator: GlotPress/2.1.0-alpha\n"
 "Project-Id-Version: 4.0.x\n"
 
 #: wp-signup.php:731
@@ -2014,7 +2014,7 @@ msgctxt "post revision title"
 msgid "%1$s %2$s, %3$s ago (%4$s)"
 msgstr "%1$s %2$s, %3$s sedan (%4$s)"
 
-#. translators: revision date format, see http:php.net/date
+#. translators: revision date format, see http://php.net/date
 #: wp-includes/post-template.php:1691
 msgctxt "revision date format"
 msgid "j F, Y @ G:i:s"
@@ -2032,7 +2032,7 @@ msgctxt "post revision title extra"
 msgid "%1$s [Autosave]"
 msgstr "%1$s [Autospar]"
 
-#. translators: revision date format, see http:php.net/date
+#. translators: revision date format, see http://php.net/date
 #: wp-includes/post-template.php:1653
 msgctxt "revision date format"
 msgid "j F, Y @ G:i"
@@ -2733,17 +2733,17 @@ msgstr "Släpp filer för att ladda upp"
 msgid "Close media panel"
 msgstr "Stäng mediapanel"
 
-#. translators: localized date and time format, see http:php.net/date
+#. translators: localized date and time format, see http://php.net/date
 #: wp-includes/locale.php:355
 msgid "F j, Y g:i a"
 msgstr "j F, Y H:i"
 
-#. translators: localized time format, see http:php.net/date
+#. translators: localized time format, see http://php.net/date
 #: wp-includes/locale.php:353
 msgid "g:i a"
 msgstr "H:i"
 
-#. translators: localized date format, see http:php.net/date
+#. translators: localized date format, see http://php.net/date
 #: wp-includes/locale.php:351
 msgid "F j, Y"
 msgstr "j F, Y"
@@ -2754,8 +2754,8 @@ msgctxt "text direction"
 msgid "ltr"
 msgstr "ltr"
 
-#. translators: $dec_point argument for http:php.net/number_format, default is
-#. .
+#. translators: $dec_point argument for http://php.net/number_format, default
+#. is .
 #: wp-includes/locale.php:177
 msgid "number_format_decimal_point"
 msgstr ","
@@ -2764,8 +2764,8 @@ msgstr ","
 msgid "PM"
 msgstr "e m"
 
-#. translators: $thousands_sep argument for http:php.net/number_format, default
-#. is ,
+#. translators: $thousands_sep argument for http://php.net/number_format,
+#. default is ,
 #: wp-includes/locale.php:173
 msgid "number_format_thousands_sep"
 msgstr " "
