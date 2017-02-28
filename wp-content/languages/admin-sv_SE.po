@@ -3149,67 +3149,67 @@ msgstr "Du har inte tillräcklig behörighet för att redigera sidor som den hä
 msgid "You are not allowed to edit posts as this user."
 msgstr "Du har inte tillräcklig behörighet för att redigera inlägg som den här användaren."
 
-#: wp-admin/includes/post.php:352
+#: wp-admin/includes/post.php:359
 msgid "You are not allowed to edit pages."
 msgstr "Du har inte tillräcklig behörighet för att redigera sidor."
 
-#: wp-admin/includes/post.php:354
+#: wp-admin/includes/post.php:361
 msgid "You are not allowed to edit posts."
 msgstr "Du har inte tillräcklig behörighet för att redigera inlägg."
 
-#: wp-admin/includes/post.php:527 wp-admin/includes/upgrade.php:1278
+#: wp-admin/includes/post.php:534 wp-admin/includes/upgrade.php:1278
 msgid "Auto Draft"
 msgstr "Automatiskt utkast"
 
-#: wp-admin/includes/post.php:616
+#: wp-admin/includes/post.php:623
 msgid "You are not allowed to create pages on this site."
 msgstr "Du har inte tillräcklig behörighet för att skapa sidor på den här webbplatsen."
 
-#: wp-admin/includes/post.php:618
+#: wp-admin/includes/post.php:625
 msgid "You are not allowed to create posts or drafts on this site."
 msgstr "Du har inte tillräcklig behörighet för att skapa inlägg eller utkast på den här webbplatsen."
 
-#: wp-admin/includes/post.php:1144
+#: wp-admin/includes/post.php:1151
 msgid "Click to edit this part of the permalink"
 msgstr "Klicka för att redigera denna del av permalänken"
 
-#: wp-admin/includes/post.php:1146
+#: wp-admin/includes/post.php:1153
 msgid "Temporary permalink. Click to edit this part."
 msgstr "Temporär permalänk. Klicka för att redigera denna del."
 
-#: wp-admin/includes/post.php:1150 wp-admin/includes/post.php:1178
+#: wp-admin/includes/post.php:1157 wp-admin/includes/post.php:1185
 msgid "Permalink:"
 msgstr "Permalänk:"
 
-#: wp-admin/includes/post.php:1152
+#: wp-admin/includes/post.php:1159
 msgid "Change Permalinks"
 msgstr "Ändra permalänkar"
 
-#: wp-admin/includes/post.php:1219
+#: wp-admin/includes/post.php:1226
 msgid "Remove featured image"
 msgstr "Ta bort utvald bild"
 
-#: wp-admin/includes/post.php:1341
+#: wp-admin/includes/post.php:1348
 msgid "This content is currently locked."
 msgstr "Detta innehåll är för närvarande låst."
 
-#: wp-admin/includes/post.php:1343
+#: wp-admin/includes/post.php:1350
 msgid "If you take over, %s will be blocked from continuing to edit."
 msgstr "Om du tar över kommer %s att låsas ut från att fortsätta redigeringen."
 
-#: wp-admin/includes/post.php:1357
+#: wp-admin/includes/post.php:1364
 msgid "Take over"
 msgstr "Ta över"
 
-#: wp-admin/includes/post.php:1371
+#: wp-admin/includes/post.php:1378
 msgid "Saving revision..."
 msgstr "Sparar version..."
 
-#: wp-admin/includes/post.php:1372
+#: wp-admin/includes/post.php:1379
 msgid "Your latest changes were saved as a revision."
 msgstr "Din senaste ändring sparades som en egen version."
 
-#: wp-admin/includes/post.php:1458
+#: wp-admin/includes/post.php:1465
 msgid "Preview not available. Please save as a draft first."
 msgstr "Förhandsgranskning ej tillgänglig. Var vänlig spara som utkast först."
 
@@ -5455,15 +5455,15 @@ msgid "User <a href=\"#%s\">%s</a> added"
 msgstr "Användaren <a href=\"#%s\">%s</a> skapad"
 
 #: wp-admin/includes/ajax-actions.php:1110
-#: wp-admin/includes/ajax-actions.php:1352 wp-admin/includes/post.php:195
-#: wp-admin/includes/post.php:1477 wp-admin/press-this.php:35
+#: wp-admin/includes/ajax-actions.php:1352 wp-admin/includes/post.php:202
+#: wp-admin/includes/post.php:1484 wp-admin/press-this.php:35
 #: wp-admin/upload.php:62
 msgid "You are not allowed to edit this post."
 msgstr "Du har inte tillräcklig behörighet för att redigera det här inlägget."
 
 #: wp-admin/includes/ajax-actions.php:1113
-#: wp-admin/includes/ajax-actions.php:1349 wp-admin/includes/post.php:193
-#: wp-admin/includes/post.php:1474
+#: wp-admin/includes/ajax-actions.php:1349 wp-admin/includes/post.php:200
+#: wp-admin/includes/post.php:1481
 msgid "You are not allowed to edit this page."
 msgstr "Du har inte tillräcklig behörighet för att redigera den här sidan."
 
@@ -8513,15 +8513,15 @@ msgstr "Erkännande"
 msgid "Freedoms"
 msgstr "Friheterna"
 
-#: wp-admin/about.php:210
+#: wp-admin/about.php:218
 msgid "Maintenance Release"
 msgid_plural "Maintenance Releases"
 msgstr[0] "Underhållsrelease"
 msgstr[1] "Underhållsreleaser"
 
 #. translators: 1: WordPress version number, 2: plural number of bugs.
-#: wp-admin/about.php:67 wp-admin/about.php:83 wp-admin/about.php:91
-#: wp-admin/about.php:219
+#: wp-admin/about.php:75 wp-admin/about.php:91 wp-admin/about.php:99
+#: wp-admin/about.php:227
 msgid "<strong>Version %1$s</strong> addressed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed %2$s bugs."
 msgstr[0] "<strong>Version %1$s</strong> åtgärdar %2$s bugg."
@@ -8531,134 +8531,135 @@ msgstr[1] "<strong>Version %1$s</strong> åtgärdar %2$s buggar."
 #: wp-admin/about.php:57 wp-admin/about.php:61 wp-admin/about.php:65
 #: wp-admin/about.php:69 wp-admin/about.php:73 wp-admin/about.php:77
 #: wp-admin/about.php:81 wp-admin/about.php:85 wp-admin/about.php:89
-#: wp-admin/about.php:93 wp-admin/about.php:230
+#: wp-admin/about.php:93 wp-admin/about.php:97 wp-admin/about.php:101
+#: wp-admin/about.php:238
 msgid "For more information, see <a href=\"%s\">the release notes</a>."
 msgstr "För mer information, se <a href=\"%s\">detaljer för releasen</a>."
 
-#: wp-admin/about.php:98
+#: wp-admin/about.php:106
 msgid "Introducing a modern new&nbsp;design"
 msgstr "Vi introducerar en ny modern design"
 
-#: wp-admin/about.php:103
+#: wp-admin/about.php:111
 msgid "Modern aesthetic"
 msgstr "Estetiskt modernt"
 
-#: wp-admin/about.php:104
+#: wp-admin/about.php:112
 msgid "The new WordPress dashboard has a fresh, uncluttered design that embraces clarity and simplicity."
 msgstr "Den nya adminpanelen för WordPress har en fräsch, stilren design som omfamnar tydlighet och enkelhet."
 
-#: wp-admin/about.php:108
+#: wp-admin/about.php:116
 msgid "Clean typography"
 msgstr "Stilren typografi"
 
-#: wp-admin/about.php:109
+#: wp-admin/about.php:117
 msgid "The Open Sans typeface provides simple, friendly text that is optimized for both desktop and mobile viewing. It&#8217;s even open source, just like WordPress."
 msgstr "Open Sans typsnittet ger enkel, vänlig text som är optimerad för både stationär och mobil visning. Det är till och med öppen källkod, precis som WordPress."
 
-#: wp-admin/about.php:113
+#: wp-admin/about.php:121
 msgid "Refined contrast"
 msgstr "Förfinad kontrast"
 
-#: wp-admin/about.php:114
+#: wp-admin/about.php:122
 msgid "We think beautiful design should never sacrifice legibility. With superior contrast and large, comfortable type, the new design is easy to read and a pleasure to navigate."
 msgstr "Vi tycker aldrig att vacker design ska göra avkall på läsbarhet. Med överlägsen kontrast och stor, bekväm typografi så är den nya designen lätt att läsa och ett nöje att utforska."
 
-#: wp-admin/about.php:124
+#: wp-admin/about.php:132
 msgid "WordPress on every&nbsp;device"
 msgstr "WordPress för alla enheter"
 
-#: wp-admin/about.php:125
+#: wp-admin/about.php:133
 msgid "We all access the internet in different ways. Smartphone, tablet, notebook, desktop &mdash; no matter what you use, WordPress will adapt and you&#8217;ll feel right at home."
 msgstr "Vi ansluter alla till Internet på olika sätt. Smarta mobiler, surfplattor, bärbara datorer, stationära datorer &mdash; oavsett vad du använder så kommer WordPress att anpassa sig för att du ska känna dig som hemma."
 
-#: wp-admin/about.php:126
+#: wp-admin/about.php:134
 msgid "High definition at high&nbsp;speed"
 msgstr "HD i hög hastighet"
 
-#: wp-admin/about.php:127
+#: wp-admin/about.php:135
 msgid "WordPress is sharper than ever with new vector-based icons that scale to your screen. By ditching pixels, pages load significantly faster, too."
 msgstr "WordPress är skarpare än någonsin tidigare med nya vektorbaserade ikoner som anpassar sig till din skärm. Genom att trimma bort massor av pixlar så laddar även sidor mycket snabbare."
 
-#: wp-admin/about.php:146
+#: wp-admin/about.php:154
 msgid "Pick a color"
 msgstr "Välj en färg"
 
-#: wp-admin/about.php:147
+#: wp-admin/about.php:155
 msgid "We&#8217;ve included eight color schemes so you can pick your favorite. Choose from any of them below to change it instantly."
 msgstr "Vi har inkluderat åtta olika färgscheman så att du kan välja just din favorit. Välj något av dessa nedan för att direkt använda det."
 
-#: wp-admin/about.php:152
+#: wp-admin/about.php:160
 msgid "To change your color scheme later, just <a href=\"%1$s\">visit your profile</a>."
 msgstr "För att ändra ditt färgschema senare, <a href=\"%1$s\">besök din profil</a>."
 
-#: wp-admin/about.php:163
+#: wp-admin/about.php:171
 msgid "Refined theme management"
 msgstr "Förfinad hantering av teman"
 
-#: wp-admin/about.php:164
+#: wp-admin/about.php:172
 msgid "The new themes screen lets you survey your themes at a glance. Or want more information? Click to discover more. Then sit back and use your keyboard&#8217;s navigation arrows to flip through every theme you&#8217;ve got."
 msgstr "Den nya sektionen för teman ger dig en bra översikt. Eller vill du ha mer information? Klicka för att ta reda på mer. Luta dig sedan tillbaka och använd piltangenterna på tangentbordet för att bläddra dig igenom alla teman du har."
 
-#: wp-admin/about.php:165
+#: wp-admin/about.php:173
 msgid "Smoother widget experience"
 msgstr "Smidigare widgetupplevelse"
 
-#: wp-admin/about.php:166
+#: wp-admin/about.php:174
 msgid "Drag-drag-drag. Scroll-scroll-scroll. Widget management can be complicated. With the new design, we&#8217;ve worked to streamline the widgets&nbsp;screen."
 msgstr "Dra-dra-dra. Skrolla-skrolla-skrolla. Att hantera widgets kan bli komplicerat. Med den nya designen så har vi arbetat med att effektivisera hanteringen av widgets."
 
-#: wp-admin/about.php:167
+#: wp-admin/about.php:175
 msgid "Have a large monitor? Multiple widget areas stack side-by-side to use the available space. Using a tablet? Just tap a widget to add it."
 msgstr "Har du en stor skärm? Flera widgetfält kommer att placera sig sida vid sida för att använda all tillgänglig plats. Använder du en surfplatta? Knacka bara på en widget för att lägga till den."
 
-#: wp-admin/about.php:178
+#: wp-admin/about.php:186
 msgid "Twenty Fourteen, a sleek new magazine&nbsp;theme"
 msgstr "Twenty Fourteen, ett elegant nytt magasin-tema"
 
-#: wp-admin/about.php:183
+#: wp-admin/about.php:191
 msgid "Turn your blog into a&nbsp;magazine"
 msgstr "Förvandla din blogg till ett magasin"
 
-#: wp-admin/about.php:184
+#: wp-admin/about.php:192
 msgid "Create a beautiful magazine-style site with WordPress and Twenty Fourteen. Choose a grid or a slider to display featured content on your homepage. Customize your site with three widget areas or change your layout with two page templates."
 msgstr "Skapa en vacker webbplats i magasinstil med WordPress och Twenty Fourteen. Välj mellan ett rutnät eller en slider för att visa ditt utvalda innehåll på startsidan. Anpassa din webbplats med tre  widgetfält eller ändra din layout med två olika sidmallar."
 
-#: wp-admin/about.php:185
+#: wp-admin/about.php:193
 msgid "With a striking design that does not compromise our trademark simplicity, Twenty Fourteen is our most intrepid default theme yet."
 msgstr "Med en slående design som inte äventyrar vårt varumärkes enkelhet, Twenty Fourteen är vårt mest orädda standardtema hittills."
 
-#: wp-admin/about.php:195
+#: wp-admin/about.php:203
 msgid "Return to Updates"
 msgstr "Återgå till uppdateringar"
 
-#: wp-admin/about.php:195
+#: wp-admin/about.php:203
 msgid "Return to Dashboard &rarr; Updates"
 msgstr "Återgå till Adminpanel &rarr; Uppdateringar"
 
-#: wp-admin/about.php:199
+#: wp-admin/about.php:207
 msgid "Go to Dashboard &rarr; Home"
 msgstr "Gå till Adminpanel &rarr; Hem"
 
-#: wp-admin/about.php:199
+#: wp-admin/about.php:207
 msgid "Go to Dashboard"
 msgstr "Gå till adminpanelen"
 
-#: wp-admin/about.php:211
+#: wp-admin/about.php:219
 msgid "Security Release"
 msgid_plural "Security Releases"
 msgstr[0] "Säkerhetsrelease"
 msgstr[1] "Säkerhetsreleaser"
 
-#: wp-admin/about.php:42 wp-admin/about.php:212
+#: wp-admin/about.php:42 wp-admin/about.php:220
 msgid "Maintenance and Security Release"
 msgid_plural "Maintenance and Security Releases"
 msgstr[0] "Underhålls och säkerhetsrelease"
 msgstr[1] "Underhålls och säkerhetsreleaser"
 
 #. translators: 1: WordPress version number.
-#: wp-admin/about.php:43 wp-admin/about.php:47 wp-admin/about.php:59
-#: wp-admin/about.php:71 wp-admin/about.php:75 wp-admin/about.php:79
-#: wp-admin/about.php:215
+#: wp-admin/about.php:43 wp-admin/about.php:47 wp-admin/about.php:51
+#: wp-admin/about.php:55 wp-admin/about.php:67 wp-admin/about.php:79
+#: wp-admin/about.php:83 wp-admin/about.php:87 wp-admin/about.php:223
 msgid "<strong>Version %1$s</strong> addressed a security issue."
 msgid_plural "<strong>Version %1$s</strong> addressed some security issues."
 msgstr[0] "<strong>Version %1$s</strong> åtgärdar en säkerhetsrisk."
@@ -8666,7 +8667,7 @@ msgstr[1] "<strong>Version %1$s</strong> åtgärdar säkerhetsrisker."
 
 #. translators: 1: WordPress version number, 2: plural number of bugs. Singular
 #. security issue.
-#: wp-admin/about.php:223
+#: wp-admin/about.php:231
 msgid "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bugs."
 msgstr[0] "<strong>Version %1$s</strong> åtgärdar en säkerhetsrisk och %2$s bugg."
@@ -8674,8 +8675,8 @@ msgstr[1] "<strong>Version %1$s</strong> åtgärdar en säkerhetsrisk och %2$s b
 
 #. translators: 1: WordPress version number, 2: plural number of bugs. More
 #. than one security issue.
-#: wp-admin/about.php:51 wp-admin/about.php:55 wp-admin/about.php:63
-#: wp-admin/about.php:87 wp-admin/about.php:227
+#: wp-admin/about.php:59 wp-admin/about.php:63 wp-admin/about.php:71
+#: wp-admin/about.php:95 wp-admin/about.php:235
 msgid "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bugs."
 msgstr[0] "<strong>Version %1$s</strong> åtgärdar ett par säkerhetsrisker och %2$s bugg."
@@ -8685,7 +8686,7 @@ msgstr[1] "<strong>Version %1$s</strong> åtgärdar ett par säkerhetsrisker och
 msgid "Thank you for creating with <a href=\"http://wordpress.org/\">WordPress</a>."
 msgstr "Tack för att du använder <a href=\"http://wordpress.org/\">WordPress</a> | Svensk support <a href=\"http://wpsv.se/\">WordPress Sverige</a>"
 
-#: wp-admin/admin-header.php:32 wp-admin/customize.php:76
+#: wp-admin/admin-header.php:32 wp-admin/customize.php:77
 msgid "%1$s &#8212; WordPress"
 msgstr "%1$s &#8212; WordPress"
 
@@ -8819,7 +8820,7 @@ msgid "Oops, no comment with this ID."
 msgstr "Oops, ingen kommentarer med den här ID:n."
 
 #: wp-admin/comment.php:68 wp-admin/comment.php:221
-#: wp-admin/includes/post.php:1301
+#: wp-admin/includes/post.php:1308
 msgid "Go back"
 msgstr "Gå tillbaka"
 
@@ -9267,25 +9268,25 @@ msgstr "Fel vid uppladdning av bild"
 msgid "You do not have permission to customize headers."
 msgstr "Du har inte tillräcklig behörighet för att modifiera sidhuvden."
 
-#: wp-admin/customize.php:76
+#: wp-admin/customize.php:77
 msgid "Customize %s"
 msgstr "Anpassa %s"
 
-#: wp-admin/customize.php:121
+#: wp-admin/customize.php:122
 msgid "Theme Customizer Options"
 msgstr "Inställningar för temaanpassaren"
 
 #. translators: %s is the theme name in the Customize/Live Preview pane
-#: wp-admin/customize.php:124
+#: wp-admin/customize.php:125
 msgid "You are previewing %s"
 msgstr "Du förhandsgranskar %s"
 
-#: wp-admin/customize.php:149
+#: wp-admin/customize.php:150
 #: wp-admin/includes/class-wp-theme-install-list-table.php:265
 msgid "Collapse Sidebar"
 msgstr "Minimera sidopanel"
 
-#: wp-admin/customize.php:151
+#: wp-admin/customize.php:152
 #: wp-admin/includes/class-wp-theme-install-list-table.php:266
 msgid "Collapse"
 msgstr "Minimera"
