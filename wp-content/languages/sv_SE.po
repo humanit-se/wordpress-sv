@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/1.0-alpha-1100\n"
+"X-Generator: GlotPress/2.1.0-alpha\n"
 "Project-Id-Version: 4.1.x\n"
 
 #: wp-includes/script-loader.php:457
@@ -1421,8 +1421,8 @@ msgstr "%1$s %2$s flöde"
 msgid "Align Center"
 msgstr "Centrerat"
 
-#. translators: $dec_point argument for http:php.net/number_format, default is
-#. .
+#. translators: $dec_point argument for http://php.net/number_format, default
+#. is .
 #: wp-includes/locale.php:182
 msgid "number_format_decimal_point"
 msgstr ","
@@ -1649,7 +1649,7 @@ msgstr "%1$s [Nuvarande version]"
 msgid "Home"
 msgstr "Hem"
 
-#. translators: revision date format, see http:php.net/date
+#. translators: revision date format, see http://php.net/date
 #: wp-includes/post-template.php:1660
 msgctxt "revision date format"
 msgid "j F, Y @ G:i"
@@ -1864,8 +1864,8 @@ msgstr "Användaren existerar inte."
 msgid "PM"
 msgstr "e m"
 
-#. translators: $thousands_sep argument for http:php.net/number_format, default
-#. is ,
+#. translators: $thousands_sep argument for http://php.net/number_format,
+#. default is ,
 #: wp-includes/locale.php:178
 msgid "number_format_thousands_sep"
 msgstr " "
@@ -3229,7 +3229,7 @@ msgstr "Slumpvis ordning"
 msgid "Do not deregister the %1$s script in the administration area. To target the frontend theme, use the %2$s hook."
 msgstr "Avregistrera inte skriptet %1$s i adminpanelen. För att rikta sig mot temat på sidan, använd hooken %2$s."
 
-#. translators: revision date format, see http:php.net/date
+#. translators: revision date format, see http://php.net/date
 #: wp-includes/post-template.php:1696
 msgctxt "revision date format"
 msgid "j F, Y @ G:i:s"
@@ -3282,7 +3282,7 @@ msgctxt "post revision title extra"
 msgid "%1$s [Autosave]"
 msgstr "%1$s [Autospar]"
 
-#. translators: localized date and time format, see http:php.net/date
+#. translators: localized date and time format, see http://php.net/date
 #: wp-includes/locale.php:360
 msgid "F j, Y g:i a"
 msgstr "j F, Y H:i"
@@ -3304,12 +3304,12 @@ msgstr "#%d (ingen titel)"
 msgid "JavaScript must be enabled to use this feature."
 msgstr "JavaScript måste vara aktiverat för att använda denna funktion."
 
-#. translators: localized date format, see http:php.net/date
+#. translators: localized date format, see http://php.net/date
 #: wp-includes/locale.php:356
 msgid "F j, Y"
 msgstr "j F, Y"
 
-#. translators: localized time format, see http:php.net/date
+#. translators: localized time format, see http://php.net/date
 #: wp-includes/locale.php:358
 msgid "g:i a"
 msgstr "H:i"
