@@ -1,7 +1,6 @@
 /* global tinymce */
 tinymce.PluginManager.add( 'wpeditimage', function( editor ) {
-	var serializer,
-		toolbarActive = false;
+	var toolbarActive = false;
 
 	function parseShortcode( content ) {
 		return content.replace( /(?:<p>)?\[(?:wp_)?caption([^\]]+)\]([\s\S]+?)\[\/(?:wp_)?caption\](?:<\/p>)?/g, function( a, b, c ) {
@@ -209,19 +208,6 @@ tinymce.PluginManager.add( 'wpeditimage', function( editor ) {
 		return node && !! ( node.textContent || node.innerText );
 	}
 
-	// Verify HTML in captions
-	function verifyHTML( caption ) {
-		if ( ! caption || ( caption.indexOf( '<' ) === -1 && caption.indexOf( '>' ) === -1 ) ) {
-			return caption;
-		}
-
-		if ( ! serializer ) {
-			serializer = new tinymce.html.Serializer( {}, editor.schema );
-		}
-
-		return serializer.serialize( editor.parser.parse( caption, { forced_root_block: false } ) );
-	}
-
 	function updateImage( imageNode, imageData ) {
 		var classes, className, node, html, parent, wrap, linkNode,
 			captionNode, dd, dl, id, attrs, linkAttrs, width, height,
@@ -299,7 +285,6 @@ tinymce.PluginManager.add( 'wpeditimage', function( editor ) {
 		}
 
 		if ( imageData.caption ) {
-			imageData.caption = verifyHTML( imageData.caption );
 
 			id = imageData.attachment_id ? 'attachment_' + imageData.attachment_id : null;
 			className = 'wp-caption align' + ( imageData.align || 'none' );
@@ -578,7 +563,6 @@ tinymce.PluginManager.add( 'wpeditimage', function( editor ) {
 
 				// Convert remaining line breaks to <br>
 				caption = caption.replace( /(<br[^>]*>)\s*\n\s*/g, '$1' ).replace( /\s*\n\s*/g, '<br />' );
-				caption = verifyHTML( caption );
 			}
 
 			if ( ! imgNode ) {

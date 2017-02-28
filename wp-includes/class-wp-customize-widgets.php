@@ -1163,7 +1163,7 @@ final class WP_Customize_Widgets {
 			return null;
 		}
 
-		if ( ! hash_equals( $this->get_instance_hash_key( $decoded ), $value['instance_hash_key'] ) ) {
+		if ( $this->get_instance_hash_key( $decoded ) !== $value['instance_hash_key'] ) {
 			return null;
 		}
 
