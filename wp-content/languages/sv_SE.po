@@ -1,5 +1,5 @@
-# Translation of 4.2.x in Swedish
-# This file is distributed under the same license as the 4.2.x package.
+# Translation of WordPress - 4.2.x in Swedish
+# This file is distributed under the same license as the WordPress - 4.2.x package.
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2015-08-03 18:34:59+0000\n"
@@ -7,8 +7,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/2.1.0-alpha\n"
-"Project-Id-Version: 4.2.x\n"
+"X-Generator: GlotPress/2.3.0-alpha\n"
+"Language: sv_SE\n"
+"Project-Id-Version: WordPress - 4.2.x\n"
 
 #: wp-signup.php:716
 msgid "The site you were looking for, <strong>%s</strong>, does not exist."
@@ -222,35 +223,35 @@ msgstr "Webbplatsdomän:"
 msgid "Site Name:"
 msgstr "Webbplatsnamn:"
 
-#: wp-mail.php:255
+#: wp-mail.php:261
 msgid "Mission complete. Message <strong>%s</strong> deleted."
 msgstr "Klart. Meddelande <strong>%s</strong> raderat."
 
-#: wp-mail.php:251
+#: wp-mail.php:257
 msgid "Oops: %s"
 msgstr "Oops: %s"
 
-#: wp-mail.php:248
+#: wp-mail.php:254
 msgid "<strong>Posted title:</strong> %s"
 msgstr "<strong>Postad titel:</strong> %s"
 
-#: wp-mail.php:247
+#: wp-mail.php:253
 msgid "<strong>Author:</strong> %s"
 msgstr "<strong>Författare:</strong> %s"
 
-#: wp-mail.php:122
+#: wp-mail.php:128
 msgid "Author is %s"
 msgstr "Författare är %s"
 
-#: wp-mail.php:54
+#: wp-mail.php:60
 msgid "There doesn&#8217;t seem to be any new mail."
 msgstr "Det verkar inte finnas någon ny e-post."
 
-#: wp-mail.php:34
+#: wp-mail.php:40
 msgid "Slow down cowboy, no need to check for new mails so often!"
 msgstr "Ta det lite lungt, du behöver inte kolla efter nya mail så ofta!"
 
-#: wp-mail.php:15
+#: wp-mail.php:15 wp-mail.php:20
 msgid "This action has been disabled by the administrator."
 msgstr "Den här åtgärden har inaktiverats av administratören."
 
@@ -4019,87 +4020,87 @@ msgstr "Avregistrera inte skriptet %1$s i adminpanelen. För att rikta sig mot t
 msgid "Scripts and styles should not be registered or enqueued until the %1$s, %2$s, or %3$s hooks."
 msgstr "Skript och stilmallar bör inte registreras eller laddade förrän hooksen %1$s, %2$s, eller %3$s."
 
-#: wp-includes/functions.php:4680
+#: wp-includes/functions.php:4725
 msgid "The login page will open in a new window. After logging in you can close it and return to this page."
 msgstr "Inloggningssidan kommer att öppnas i ett nytt fönster. Efter att du loggat in kan du stänga det och återgå till denna sida."
 
-#: wp-includes/functions.php:4679 wp-includes/user.php:187
+#: wp-includes/functions.php:4724 wp-includes/user.php:187
 msgid "Please log in again."
 msgstr "Var vänlig logga in igen."
 
-#: wp-includes/functions.php:4678 wp-includes/script-loader.php:401
+#: wp-includes/functions.php:4723 wp-includes/script-loader.php:401
 msgid "Session expired"
 msgstr "Sessionen har gått ut"
 
-#: wp-includes/functions.php:4089
+#: wp-includes/functions.php:4134
 msgid "Manual Offsets"
 msgstr "Manuella kompensationer"
 
-#: wp-includes/functions.php:4081 wp-includes/functions.php:4085
+#: wp-includes/functions.php:4126 wp-includes/functions.php:4130
 msgid "UTC"
 msgstr "UTC"
 
-#: wp-includes/functions.php:4036
+#: wp-includes/functions.php:4081
 msgid "Select a city"
 msgstr "Välj en stad"
 
-#: wp-includes/functions.php:3560
+#: wp-includes/functions.php:3605
 msgid "%1$s was called <strong>incorrectly</strong>. %2$s %3$s"
 msgstr "%1$s kallades <strong>felaktigt</strong>. %2$s %3$s"
 
-#: wp-includes/functions.php:3559
+#: wp-includes/functions.php:3604
 msgid "Please see <a href=\"https://codex.wordpress.org/Debugging_in_WordPress\">Debugging in WordPress</a> for more information."
 msgstr "Se <a href=\"https://codex.wordpress.org/Debugging_in_WordPress\">Felsökning i WordPress</a> för mer information."
 
-#: wp-includes/functions.php:3558
+#: wp-includes/functions.php:3603
 msgid "(This message was added in version %s.)"
 msgstr "(Detta meddelande lades till i version %s.)"
 
-#: wp-includes/functions.php:3510
+#: wp-includes/functions.php:3555
 msgid "%1$s was called with an argument that is <strong>deprecated</strong> since version %2$s with no alternative available."
 msgstr "%1$s kallades med ett argument som har <strong>upphört</strong> sedan version %2$s utan alternativ tillgängliga."
 
-#: wp-includes/functions.php:3508
+#: wp-includes/functions.php:3553
 msgid "%1$s was called with an argument that is <strong>deprecated</strong> since version %2$s! %3$s"
 msgstr "%1$s kallades med ett argument som har <strong>upphört</strong> sedan version %2$s! %3$s"
 
-#: wp-includes/functions.php:3393 wp-includes/functions.php:3450
+#: wp-includes/functions.php:3438 wp-includes/functions.php:3495
 msgid "%1$s is <strong>deprecated</strong> since version %2$s with no alternative available."
 msgstr "%1$s har <strong>upphört</strong> sedan version %2$s utan alternativ tillgängliga."
 
-#: wp-includes/functions.php:3391 wp-includes/functions.php:3448
+#: wp-includes/functions.php:3436 wp-includes/functions.php:3493
 msgid "%1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead."
 msgstr "%1$s har <strong>upphört</strong> sedan version %2$s! Använd %3$s istället."
 
-#: wp-includes/functions.php:3331 wp-includes/ms-load.php:404
+#: wp-includes/functions.php:3376 wp-includes/ms-load.php:404
 msgid "Error establishing a database connection"
 msgstr "Ett fel uppstod vid anslutning till databasen"
 
-#: wp-includes/functions.php:3327
+#: wp-includes/functions.php:3372
 msgid "Database Error"
 msgstr "Databasfel"
 
-#: wp-includes/functions.php:2462 wp-load.php:80
+#: wp-includes/functions.php:2507 wp-load.php:80
 msgid "WordPress &rsaquo; Error"
 msgstr "WordPress &rsaquo; Fel"
 
-#: wp-includes/functions.php:2450
+#: wp-includes/functions.php:2495
 msgid "&laquo; Back"
 msgstr "&laquo; Tillbaka"
 
-#: wp-includes/functions.php:2331
+#: wp-includes/functions.php:2376
 msgid "WordPress Failure Notice"
 msgstr "WordPress felmeddelande"
 
-#: wp-includes/functions.php:2328 wp-includes/ms-functions.php:1883
+#: wp-includes/functions.php:2373 wp-includes/ms-functions.php:1883
 msgid "Please try again."
 msgstr "Var vänlig försök igen."
 
-#: wp-includes/functions.php:2324
+#: wp-includes/functions.php:2369
 msgid "Do you really want to <a href='%s'>log out</a>?"
 msgstr "Vill du verkligen <a href='%s'>logga ut</a>?"
 
-#: wp-includes/functions.php:2322
+#: wp-includes/functions.php:2367
 msgid "You are attempting to log out of %s"
 msgstr "Du försöker att logga ut ifrån %s"
 
@@ -4304,7 +4305,7 @@ msgstr "GD-grafikbiblioteket är inte installerat."
 msgid "File &#8220;%s&#8221; doesn&#8217;t exist?"
 msgstr "Saknas filen &#8221;%s&#8221;?"
 
-#: wp-includes/deprecated.php:3172 wp-includes/functions.php:2326
+#: wp-includes/deprecated.php:3172 wp-includes/functions.php:2371
 msgid "Are you sure you want to do this?"
 msgstr "Är du säker på att du vill göra det här?"
 
@@ -5485,11 +5486,11 @@ msgid "XML-RPC services are disabled on this site."
 msgstr "Tjänsten för XML-RPC är inaktiverad för denna webbplats."
 
 #. translators: used between list items, there is a space after the comma
-#: wp-includes/class-wp-theme.php:678
+#: wp-includes/class-wp-theme.php:679
 msgid ", "
 msgstr ", "
 
-#: wp-includes/class-wp-theme.php:671 wp-includes/comment-template.php:29
+#: wp-includes/class-wp-theme.php:672 wp-includes/comment-template.php:29
 msgid "Anonymous"
 msgstr "Anonym"
 
@@ -6317,7 +6318,7 @@ msgid "Visual aids"
 msgstr "Visuella hjälpmedel"
 
 #: wp-includes/class-wp-editor.php:819 wp-includes/class-wp-editor.php:1438
-#: wp-includes/functions.php:4667 wp-includes/script-loader.php:236
+#: wp-includes/functions.php:4712 wp-includes/script-loader.php:236
 #: wp-includes/script-loader.php:317 wp-includes/script-loader.php:398
 msgid "Close"
 msgstr "Stäng"
@@ -7047,7 +7048,7 @@ msgstr "Menyer"
 
 #: wp-includes/admin-bar.php:707 wp-includes/admin-bar.php:718
 #: wp-includes/class-wp-customize-widgets.php:345
-#: wp-includes/functions.php:3268
+#: wp-includes/functions.php:3313
 msgid "Widgets"
 msgstr "Widgets"
 
