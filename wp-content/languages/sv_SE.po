@@ -411,28 +411,28 @@ msgstr "XHTML Friends Network"
 msgid "XFN"
 msgstr "XFN"
 
-#: wp-includes/update.php:120 wp-includes/update.php:272
-#: wp-includes/update.php:417
+#: wp-includes/update.php:120 wp-includes/update.php:289
+#: wp-includes/update.php:438
 msgid "An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href=\"http://wordpress.org/support/\">support forums</a>."
 msgstr "Ett oväntat fel uppstod. Något kan vara fel på WordPress.org eller den här serverns konfiguration. Om du fortsätter ha problem, vänligen besök <a href=\"http://wordpress.org/support/\">det officiella forumet</a> för support."
 
-#: wp-includes/update.php:507
+#: wp-includes/update.php:528
 msgid "%d WordPress Update"
 msgstr "%d Uppdatering för WordPress"
 
-#: wp-includes/update.php:509
+#: wp-includes/update.php:530
 msgid "%d Plugin Update"
 msgid_plural "%d Plugin Updates"
 msgstr[0] "%d uppdatering för tillägg"
 msgstr[1] "%d uppdateringar för tillägg"
 
-#: wp-includes/update.php:511
+#: wp-includes/update.php:532
 msgid "%d Theme Update"
 msgid_plural "%d Theme Updates"
 msgstr[0] "%d uppdatering för tema"
 msgstr[1] "%d uppdateringar för teman"
 
-#: wp-includes/update.php:513
+#: wp-includes/update.php:534
 msgid "Translation Updates"
 msgstr "Uppdateringar för översättningar"
 
@@ -7117,8 +7117,8 @@ msgstr "Din hemadress angiven för WordPress: %s är ogiltig. Korrigera inställ
 
 #: wp-content/plugins/akismet/admin.php:195
 #: wp-content/plugins/akismet/admin.php:503
-#: wp-content/plugins/akismet/admin.php:937
-#: wp-content/plugins/akismet/admin.php:940
+#: wp-content/plugins/akismet/admin.php:921
+#: wp-content/plugins/akismet/admin.php:924
 msgid "Akismet"
 msgstr "Akismet"
 
@@ -7338,56 +7338,56 @@ msgstr[1] "%s godkända"
 msgid "%s ago"
 msgstr "%s sedan"
 
-#: wp-content/plugins/akismet/admin.php:559
+#: wp-content/plugins/akismet/admin.php:543
 msgid "<a href=\"%1$s\">Akismet</a> has protected your site from %2$s spam comment already. "
 msgid_plural "<a href=\"%1$s\">Akismet</a> has protected your site from %2$s spam comments already. "
 msgstr[0] "<a href=\"%1$s\">Akismet</a> har redan skyddat din webbplats från %2$s skräpkommentar. "
 msgstr[1] "<a href=\"%1$s\">Akismet</a> har redan skyddat din webbplats från %2$s skräpkommentarer. "
 
-#: wp-content/plugins/akismet/admin.php:565
+#: wp-content/plugins/akismet/admin.php:549
 msgid "<a href=\"%1$s\">Akismet</a> blocks spam from getting to your blog. "
 msgstr "<a href=\"%1$s\">Akismet</a> motverkar att skräppost postas på din webbplats."
 
-#: wp-content/plugins/akismet/admin.php:570
+#: wp-content/plugins/akismet/admin.php:554
 msgid "There's <a href=\"%2$s\">%1$s comment</a> in your spam queue right now."
 msgid_plural "There are <a href=\"%2$s\">%1$s comments</a> in your spam queue right now."
 msgstr[0] "Det finns <a href=\"%2$s\">%1$s kommentar</a> markerad som skräp just nu."
 msgstr[1] "Det finns <a href=\"%2$s\">%1$s kommentarer</a> markerade som skräp just nu."
 
-#: wp-content/plugins/akismet/admin.php:576
+#: wp-content/plugins/akismet/admin.php:560
 msgid "There's nothing in your <a href='%1$s'>spam queue</a> at the moment."
 msgstr "Det finns inga poster markerade som <a href='%1$s'>skräppost</a> för tillfället."
 
-#: wp-content/plugins/akismet/admin.php:596
+#: wp-content/plugins/akismet/admin.php:580
 msgid "Check for Spam"
 msgstr "Kolla efter skräppost"
 
-#: wp-content/plugins/akismet/admin.php:642
+#: wp-content/plugins/akismet/admin.php:626
 msgid "%s reported this comment as not spam"
 msgstr "%s rapporterade den här kommentaren som, inte skräppost"
 
-#: wp-content/plugins/akismet/admin.php:693
+#: wp-content/plugins/akismet/admin.php:677
 msgid "%s reported this comment as spam"
 msgstr "%s rapporterade den här kommentaren som skräppost"
 
-#: wp-content/plugins/akismet/admin.php:741
+#: wp-content/plugins/akismet/admin.php:725
 msgid "%s changed the comment status to %s"
 msgstr "%s ändrade kommentarsstatus till %s"
 
-#: wp-content/plugins/akismet/admin.php:814
+#: wp-content/plugins/akismet/admin.php:798
 msgid "Akismet re-checked and caught this comment as spam"
 msgstr "Akismet kördes igen och markerade den här kommentaren som skräppost"
 
-#: wp-content/plugins/akismet/admin.php:819
+#: wp-content/plugins/akismet/admin.php:803
 msgid "Akismet re-checked and cleared this comment"
 msgstr "Akismet kördes igen och avmarkerade den här kommentaren"
 
-#: wp-content/plugins/akismet/admin.php:823
+#: wp-content/plugins/akismet/admin.php:807
 msgid "Akismet was unable to re-check this comment (response: %s)"
 msgstr "Akismet kunde inte kontrollera den här kommentaren på nytt (svar:%s)"
 
-#: wp-content/plugins/akismet/admin.php:938
-#: wp-content/plugins/akismet/admin.php:941
+#: wp-content/plugins/akismet/admin.php:922
+#: wp-content/plugins/akismet/admin.php:925
 msgid "Akismet Stats"
 msgstr "Akismet statistik"
 
