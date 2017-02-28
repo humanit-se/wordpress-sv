@@ -43,10 +43,10 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY', 'ange en unik fras här');
-define('SECURE_AUTH_KEY', 'ange en unik fras här');
-define('LOGGED_IN_KEY', 'ange en unik fras här');
-define('NONCE_KEY', 'ange en unik fras här');
+define('AUTH_KEY', 'ange en unik fras');
+define('SECURE_AUTH_KEY', 'ange en unik fras');
+define('LOGGED_IN_KEY', 'ange en unik fras');
+define('NONCE_KEY', 'ange en unik fras');
 /**#@-*/
 
 /**

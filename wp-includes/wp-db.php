@@ -342,7 +342,7 @@ class wpdb {
 		if (!$this->dbh) {
 			$this->bail(sprintf(/*WP_I18N_DB_CONN_ERROR*/'
 <h1>Problem med att skapa en databasanslutning</h1>
-<p>Detta betyder att användarnamnet och/eller lösenordet i din <code>wp-config.php</code> fil är felaktigt eller att vi inte kommer in kontakt med servern på <code>%s</code>. Detta kan betyda att din databasserver är nere.</p>
+<p>Detta tyder på att användarnamnet och/eller lösenordet i din <code>wp-config.php</code>-fil är felaktigt eller att vi inte kan ansluta mot servern på <code>%s</code>. Detta kan bero på att din databasserver är nere.</p>
 <ul>
 	<li>Är du säker på att du har rätt användarnamn och lösenord?</li>
 	<li>Är du säker på att du angivit rätt adress till databasservern?</li>
