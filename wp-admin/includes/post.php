@@ -154,13 +154,6 @@ function _wp_translate_postdata( $update = false, $post_data = null ) {
 		$post_data['post_date_gmt'] = get_gmt_from_date( $post_data['post_date'] );
 	}
 
-	if ( isset( $post_data['post_category'] ) ) {
-		$category_object = get_taxonomy( 'category' );
-		if ( ! current_user_can( $category_object->cap->assign_terms ) ) {
-			unset( $post_data['post_category'] );
-		}
-	}
-
 	return $post_data;
 }
 
@@ -173,7 +166,6 @@ function _wp_translate_postdata( $update = false, $post_data = null ) {
  * @return int Post ID.
  */
 function edit_post( $post_data = null ) {
-	global $wpdb;
 
 	if ( empty($post_data) )
 		$post_data = &$_POST;
@@ -211,6 +203,10 @@ function edit_post( $post_data = null ) {
 			_wp_upgrade_revisions_of_post( $post, wp_get_post_revisions( $post_ID ) );
 	}
 
+	if ( ( empty( $post_data['action'] ) || 'autosave' != $post_data['action'] ) && 'auto-draft' == $post_data['post_status'] ) {
+		$post_data['post_status'] = 'draft';
+	}
+
 	if ( isset($post_data['visibility']) ) {
 		switch ( $post_data['visibility'] ) {
 			case 'public' :
@@ -230,10 +226,6 @@ function edit_post( $post_data = null ) {
 	$post_data = _wp_translate_postdata( true, $post_data );
 	if ( is_wp_error($post_data) )
 		wp_die( $post_data->get_error_message() );
-
-	if ( ( empty( $post_data['action'] ) || 'autosave' != $post_data['action'] ) && 'auto-draft' == $post_data['post_status'] ) {
-		$post_data['post_status'] = 'draft';
-	}
 
 	// Post Formats
 	if ( isset( $post_data['post_format'] ) )
@@ -303,19 +295,7 @@ function edit_post( $post_data = null ) {
 
 	update_post_meta( $post_ID, '_edit_last', get_current_user_id() );
 
-	$success = wp_update_post( $post_data );
-	// If the save failed, see if we can sanity check the main fields and try again
-	if ( ! $success && is_callable( array( $wpdb, 'strip_invalid_text_for_column' ) ) ) {
-		$fields = array( 'post_title', 'post_content', 'post_excerpt' );
-
-		foreach( $fields as $field ) {
-			if ( isset( $post_data[ $field ] ) ) {
-				$post_data[ $field ] = $wpdb->strip_invalid_text_for_column( $wpdb->posts, $field, $post_data[ $field ] );
-			}
-		}
-
-		wp_update_post( $post_data );
-	}
+	wp_update_post( $post_data );
 
 	// Now that we have an ID we can fix any attachment anchor hrefs
 	_fix_attachment_links( $post_ID );
@@ -431,12 +411,7 @@ function bulk_edit_posts( $post_data = null ) {
 	}
 
 	$updated = $skipped = $locked = array();
-	$shared_post_data = $post_data;
-
 	foreach ( $post_IDs as $post_ID ) {
-		// Start with fresh post data with each iteration.
-		$post_data = $shared_post_data;
-
 		$post_type_object = get_post_type_object( get_post_type( $post_ID ) );
 
 		if ( !isset( $post_type_object ) || ( isset($children) && in_array($post_ID, $children) ) || !current_user_can( 'edit_post', $post_ID ) ) {
@@ -485,13 +460,13 @@ function bulk_edit_posts( $post_data = null ) {
 		$post_data['ID'] = $post_ID;
 		$post_data['post_ID'] = $post_ID;
 
-		$post_data = _wp_translate_postdata( true, $post_data );
-		if ( is_wp_error( $post_data ) ) {
+		$translated_post_data = _wp_translate_postdata( true, $post_data );
+		if ( is_wp_error( $translated_post_data ) ) {
 			$skipped[] = $post_ID;
 			continue;
 		}
 
-		$updated[] = wp_update_post( $post_data );
+		$updated[] = wp_update_post( $translated_post_data );
 
 		if ( isset( $post_data['sticky'] ) && current_user_can( $ptype->cap->edit_others_posts ) ) {
 			if ( 'sticky' == $post_data['sticky'] )
@@ -1154,11 +1129,11 @@ function get_sample_permalink_html( $id, $new_title = null, $new_slug = null ) {
 	}
 
 	if ( false === strpos($permalink, '%postname%') && false === strpos($permalink, '%pagename%') ) {
-		$return = '<strong>' . __('Permalink:') . "</strong>\n" . '<span id="sample-permalink" tabindex="-1">' . esc_html( $permalink ) . "</span>\n";
+		$return = '<strong>' . __('Permalink:') . "</strong>\n" . '<span id="sample-permalink" tabindex="-1">' . $permalink . "</span>\n";
 		if ( '' == get_option( 'permalink_structure' ) && current_user_can( 'manage_options' ) && !( 'page' == get_option('show_on_front') && $id == get_option('page_on_front') ) )
 			$return .= '<span id="change-permalinks"><a href="options-permalink.php" class="button button-small" target="_blank">' . __('Change Permalinks') . "</a></span>\n";
 		if ( isset( $view_post ) )
-			$return .= "<span id='view-post-btn'><a href='" . esc_url( $permalink ) . "' class='button button-small'>$view_post</a></span>\n";
+			$return .= "<span id='view-post-btn'><a href='$permalink' class='button button-small'>$view_post</a></span>\n";
 
 		$return = apply_filters('get_sample_permalink_html', $return, $id, $new_title, $new_slug);
 
@@ -1179,16 +1154,16 @@ function get_sample_permalink_html( $id, $new_title = null, $new_slug = null ) {
 		}
 	}
 
-	$post_name_html = '<span id="editable-post-name" title="' . $title . '">' . esc_html( $post_name_abridged ) . '</span>';
-	$display_link = str_replace(array('%pagename%','%postname%'), $post_name_html, esc_html( $permalink ) );
+	$post_name_html = '<span id="editable-post-name" title="' . $title . '">' . $post_name_abridged . '</span>';
+	$display_link = str_replace(array('%pagename%','%postname%'), $post_name_html, $permalink);
 	$view_link = str_replace(array('%pagename%','%postname%'), $post_name, $permalink);
 	$return =  '<strong>' . __('Permalink:') . "</strong>\n";
 	$return .= '<span id="sample-permalink" tabindex="-1">' . $display_link . "</span>\n";
 	$return .= '&lrm;'; // Fix bi-directional text display defect in RTL languages.
 	$return .= '<span id="edit-slug-buttons"><a href="#post_name" class="edit-slug button button-small hide-if-no-js" onclick="editPermalink(' . $id . '); return false;">' . __('Edit') . "</a></span>\n";
-	$return .= '<span id="editable-post-name-full">' . esc_html( $post_name ) . "</span>\n";
+	$return .= '<span id="editable-post-name-full">' . $post_name . "</span>\n";
 	if ( isset($view_post) )
-		$return .= "<span id='view-post-btn'><a href='" . esc_url( $view_link ) . "' class='button button-small'>$view_post</a></span>\n";
+		$return .= "<span id='view-post-btn'><a href='$view_link' class='button button-small'>$view_post</a></span>\n";
 
 	$return = apply_filters('get_sample_permalink_html', $return, $id, $new_title, $new_slug);
 
@@ -1361,7 +1336,7 @@ function _admin_notice_post_locked() {
 		// Allow plugins to prevent some users overriding the post lock
 		if ( $override ) {
 			?>
-			<a class="button button-primary wp-tab-last" href="<?php echo esc_url( add_query_arg( 'get-post-lock', '1', wp_nonce_url( get_edit_post_link( $post->ID, 'url' ), 'lock-post_' . $post->ID ) ) ); ?>"><?php _e('Take over'); ?></a>
+			<a class="button button-primary wp-tab-last" href="<?php echo esc_url( add_query_arg( 'get-post-lock', '1', get_edit_post_link( $post->ID, 'url' ) ) ); ?>"><?php _e('Take over'); ?></a>
 			<?php
 		}
 

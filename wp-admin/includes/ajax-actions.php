@@ -1373,13 +1373,11 @@ function wp_ajax_inline_save() {
 	if ( isset($data['post_parent']) )
 		$data['parent_id'] = $data['post_parent'];
 
-	// Status.
-	if ( isset( $data['keep_private'] ) && 'private' == $data['keep_private'] ) {
-		$data['visibility']  = 'private';
+	// status
+	if ( isset($data['keep_private']) && 'private' == $data['keep_private'] )
 		$data['post_status'] = 'private';
-	} else {
+	else
 		$data['post_status'] = $data['_status'];
-	}
 
 	if ( empty($data['comment_status']) )
 		$data['comment_status'] = 'closed';
@@ -2222,7 +2220,7 @@ function wp_ajax_get_revision_diffs() {
 	if ( ! $post = get_post( (int) $_REQUEST['post_id'] ) )
 		wp_send_json_error();
 
-	if ( ! current_user_can( 'edit_post', $post->ID ) )
+	if ( ! current_user_can( 'read_post', $post->ID ) )
 		wp_send_json_error();
 
 	// Really just pre-loading the cache here.

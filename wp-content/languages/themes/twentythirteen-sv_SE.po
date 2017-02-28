@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/2.1.0-alpha\n"
+"X-Generator: GlotPress/0.1\n"
 "Project-Id-Version: Twenty Thirteen\n"
 
 #: comments.php:46
@@ -73,8 +73,6 @@ msgstr "Beklagar, inget som matchade dina söktermer kunde hittas. Vänligen fö
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr "Det verkar inte som om vi kan hitta det du letar efter. Kanske kan en sökning hjälpa."
 
-#. #-#-#-#-#  twentythirteen.pot (Twenty Thirteen 1.1)  #-#-#-#-#
-#. Author URI of the plugin/theme
 #: footer.php:19
 msgid "http://wordpress.org/"
 msgstr "http://wordpress.org/"
@@ -91,16 +89,11 @@ msgstr "Drivs med %s"
 msgid "Navigation Menu"
 msgstr "Navigationsmeny"
 
-#. Translators: If there are characters in your language that are not supported
-#. by Source Sans Pro, translate this to 'off'. Do not translate into your own
-#. language.
 #: functions.php:128
 msgctxt "Source Sans Pro font: on or off"
 msgid "on"
 msgstr "på"
 
-#. Translators: If there are characters in your language that are not supported
-#. by Bitter, translate this to 'off'. Do not translate into your own language.
 #: functions.php:134
 msgctxt "Bitter font: on or off"
 msgid "on"
@@ -156,7 +149,6 @@ msgstr "%title <span class=\"meta-nav\">&rarr;</span>"
 msgid "Sticky"
 msgstr "Klistrad"
 
-#. Translators: used between list items, there is a space after the comma.
 #: functions.php:338 functions.php:344
 msgid ", "
 msgstr ", "
@@ -233,19 +225,15 @@ msgstr "Etikettarkiv: %s"
 msgid "%s Archives"
 msgstr "Arkiv för %s"
 
-#. Theme Name of the plugin/theme
 msgid "Twenty Thirteen"
 msgstr "Twenty Thirteen"
 
-#. Theme URI of the plugin/theme
 msgid "http://wordpress.org/themes/twentythirteen"
 msgstr "http://wordpress.org/themes/twentythirteen"
 
-#. Description of the plugin/theme
 msgid "The 2013 theme for WordPress takes us back to the blog, featuring a full range of post formats, each displayed beautifully in their own unique way. Design details abound, starting with a vibrant color scheme and matching header images, beautiful typography and icons, and a flexible layout that looks great on any device, big or small."
 msgstr "2013 års standardtema för WordPress tar oss tillbaka till bloggen, med funktioner som en fulladdad lista med inläggsformat som var och ett visas på sitt eget vackra och unika sätt. Designdetaljer i överflöd, som börjar med en vibrerande färgschema och matchande bilder för sidhuvudet, vacker typografi och ikoner och en flexibel layout som ser bra ut på alla enheter, stora som små."
 
-#. Author of the plugin/theme
 msgid "the WordPress team"
 msgstr "the WordPress team"
 
