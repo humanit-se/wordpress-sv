@@ -47,7 +47,7 @@ if ( file_exists( ABSPATH . 'wp-config.php') ) {
 	require_once( ABSPATH . '/wp-includes/functions.php' );
 	require_once( ABSPATH . '/wp-includes/plugin.php' );
 	$text_direction = /*WP_I18N_TEXT_DIRECTION*/'ltr'/*/WP_I18N_TEXT_DIRECTION*/;
-	wp_die(sprintf(/*WP_I18N_NO_CONFIG*/'Det verkar inte finnas en <code>wp-config.php</code> fil. Denna behövs innan vi kan starta. Behöver du mer hjälp? <a href=\'http://codex.wordpress.org/Editing_wp-config.php\'>Den finns här</a>. Du kan skapa en <code>wp-config.php</code> fil via webbläsaren, men detta funkar inte på alla servrar. Det säkraste sättet är att skapade den manuellt. </p><p><a href=\'%ssetup-config.php\' class=\'button\'>Skapa en konfigurationsfil</a> '/*/WP_I18N_NO_CONFIG*/, $path), /*WP_I18N_ERROR_TITLE*/'WordPress &rsaquo; Fel'/*/WP_I18N_ERROR_TITLE*/, array('text_direction' => $text_direction));
+	wp_die(sprintf(/*WP_I18N_NO_CONFIG*/'Det verkar inte finnas en <code>wp-config.php</code> fil. Denna behövs innan vi kan starta. Behöver du mer hjälp? <a href=\'http://codex.wordpress.org/Editing_wp-config.php\'>Den finns här</a>. Du kan skapa en <code>wp-config.php</code> fil via webbläsaren, men detta fungerar inte på alla servrar. Det säkraste sättet är att skapade den manuellt. </p><p><a href=\'%ssetup-config.php\' class=\'button\'>Skapa en konfigurationsfil</a> '/*/WP_I18N_NO_CONFIG*/, $path), /*WP_I18N_ERROR_TITLE*/'WordPress &rsaquo; Fel'/*/WP_I18N_ERROR_TITLE*/, array('text_direction' => $text_direction));
 
 }
 
