@@ -15,6 +15,8 @@ if ( !defined('WP_MEMORY_LIMIT') )
 if ( function_exists('memory_get_usage') && ( (int) @ini_get('memory_limit') < abs(intval(WP_MEMORY_LIMIT)) ) )
 	@ini_set('memory_limit', WP_MEMORY_LIMIT);
 
+set_magic_quotes_runtime(0);
+@ini_set('magic_quotes_sybase', 0);
 
 /**
  * Turn register globals off.
@@ -199,7 +201,13 @@ timer_start();
 if (defined('WP_DEBUG') and WP_DEBUG == true) {
 	error_reporting(E_ALL);
 } else {
-	error_reporting(E_ALL ^ E_NOTICE ^ E_USER_NOTICE);
+	// Unicode Extension is in PHP 6.0 only or do version check when this changes.
+	if ( function_exists('unicode_decode') ) 
+		error_reporting( E_ALL ^ E_DEPRECATED ^ E_NOTICE ^ E_USER_NOTICE ^ E_STRICT );
+	else if ( defined( 'E_DEPRECATED' ) ) // Introduced in PHP 5.3
+		error_reporting( E_ALL ^ E_DEPRECATED ^ E_NOTICE ^ E_USER_NOTICE );
+	else
+		error_reporting(E_ALL ^ E_NOTICE ^ E_USER_NOTICE);
 }
 
 // For an advanced caching plugin to use, static because you would only want one
@@ -247,7 +255,7 @@ if ( !empty($wpdb->error) )
 $prefix = $wpdb->set_prefix($table_prefix);
 
 if ( is_wp_error($prefix) )
-	wp_die(/*WP_I18N_BAD_PREFIX*/'<strong>FEL</strong>: <code>$table_prefix</code> i <code>wp-config.php</code> kan endast innehålla nummer, bokstäver och understreck.'/*/WP_I18N_BAD_PREFIX*/);
+	wp_die(/*WP_I18N_BAD_PREFIX*/'<strong>FEL</strong>: <code>$table_prefix</code> i <code>wp-config.php</code> kan endast innehålla siffror, bokstäver och understreck.'/*/WP_I18N_BAD_PREFIX*/);
 
 if ( file_exists(WP_CONTENT_DIR . '/object-cache.php') )
 	require_once (WP_CONTENT_DIR . '/object-cache.php');
