@@ -236,36 +236,36 @@ msgid "Site Name:"
 msgstr "Webbplatsnamn:"
 
 #. translators: %s: the message ID
-#: wp-mail.php:239
+#: wp-mail.php:245
 msgid "Mission complete. Message %s deleted."
 msgstr "Åtgärd genomförd. Meddelande %s raderat."
 
 #. translators: %s: POP3 error
-#: wp-mail.php:231
+#: wp-mail.php:237
 msgid "Oops: %s"
 msgstr "Oops: %s"
 
-#: wp-mail.php:226
+#: wp-mail.php:232
 msgid "Posted title:"
 msgstr "Inläggstitel:"
 
-#: wp-mail.php:225
+#: wp-mail.php:231
 msgid "Author:"
 msgstr "Författare:"
 
-#: wp-mail.php:121
+#: wp-mail.php:127
 msgid "Author is %s"
 msgstr "Författare är %s"
 
-#: wp-mail.php:54
+#: wp-mail.php:60
 msgid "There doesn&#8217;t seem to be any new mail."
 msgstr "Det verkar inte finnas någon ny e-post."
 
-#: wp-mail.php:34
+#: wp-mail.php:40
 msgid "Slow down cowboy, no need to check for new mails so often!"
 msgstr "Ta det lite lungt, du behöver inte kolla efter nya mail så ofta!"
 
-#: wp-mail.php:15
+#: wp-mail.php:15 wp-mail.php:20
 msgid "This action has been disabled by the administrator."
 msgstr "Den här åtgärden har inaktiverats av administratören."
 
@@ -4606,110 +4606,110 @@ msgstr "Använd inte %1$s-taggar i %2$s."
 msgid "Scripts and styles should not be registered or enqueued until the %1$s, %2$s, or %3$s hooks."
 msgstr "Skript och stilmallar bör inte registreras eller laddade förrän hooksen %1$s, %2$s, eller %3$s."
 
-#: wp-includes/functions.php:5136
+#: wp-includes/functions.php:5181
 msgid "The login page will open in a new window. After logging in you can close it and return to this page."
 msgstr "Inloggningssidan kommer att öppnas i ett nytt fönster. Efter att du loggat in kan du stänga det och återgå till denna sida."
 
-#: wp-includes/functions.php:5135 wp-includes/user.php:280
+#: wp-includes/functions.php:5180 wp-includes/user.php:280
 msgid "Please log in again."
 msgstr "Var vänlig logga in igen."
 
-#: wp-includes/functions.php:5134 wp-includes/script-loader.php:461
+#: wp-includes/functions.php:5179 wp-includes/script-loader.php:461
 msgid "Session expired"
 msgstr "Sessionen har gått ut"
 
-#: wp-includes/functions.php:5123
+#: wp-includes/functions.php:5168
 msgid "Close dialog"
 msgstr "Stäng dialogruta"
 
-#: wp-includes/functions.php:4538
+#: wp-includes/functions.php:4583
 msgid "Manual Offsets"
 msgstr "Manuella kompensationer"
 
-#: wp-includes/functions.php:4530 wp-includes/functions.php:4534
+#: wp-includes/functions.php:4575 wp-includes/functions.php:4579
 msgid "UTC"
 msgstr "UTC"
 
-#: wp-includes/functions.php:4485
+#: wp-includes/functions.php:4530
 msgid "Select a city"
 msgstr "Välj en stad"
 
-#: wp-includes/functions.php:3996
+#: wp-includes/functions.php:4041
 msgid "%1$s was called <strong>incorrectly</strong>. %2$s %3$s"
 msgstr "%1$s kallades <strong>felaktigt</strong>. %2$s %3$s"
 
-#: wp-includes/functions.php:3994
+#: wp-includes/functions.php:4039
 msgid "https://codex.wordpress.org/Debugging_in_WordPress"
 msgstr "https://codex.wordpress.org/Debugging_in_WordPress"
 
 #. translators: %s: Codex URL
-#: wp-includes/functions.php:3993
+#: wp-includes/functions.php:4038
 msgid "Please see <a href=\"%s\">Debugging in WordPress</a> for more information."
 msgstr "Vänligen se <a href=\"%s\">Felsökning i WordPress</a> för mer information."
 
-#: wp-includes/functions.php:3991
+#: wp-includes/functions.php:4036
 msgid "(This message was added in version %s.)"
 msgstr "(Detta meddelande lades till i version %s.)"
 
-#: wp-includes/functions.php:3893
+#: wp-includes/functions.php:3938
 msgid "%1$s was called with an argument that is <strong>deprecated</strong> since version %2$s with no alternative available."
 msgstr "%1$s kallades med ett argument som har <strong>upphört</strong> sedan version %2$s utan alternativ tillgängliga."
 
-#: wp-includes/functions.php:3891
+#: wp-includes/functions.php:3936
 msgid "%1$s was called with an argument that is <strong>deprecated</strong> since version %2$s! %3$s"
 msgstr "%1$s kallades med ett argument som har <strong>upphört</strong> sedan version %2$s! %3$s"
 
 #. translators: 1: PHP class name, 2: version number, 3: __construct() method
-#: wp-includes/functions.php:3770
+#: wp-includes/functions.php:3815
 msgid "The called constructor method for %1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead."
 msgstr "Den anropade konstruktormetoden för %1$s har <strong>fasats ut</strong> sedan version %2$s! Använd istället %3$s."
 
 #. translators: 1: PHP class name, 2: PHP parent class name, 3: version number,
 #. 4: __construct() method
-#: wp-includes/functions.php:3766
+#: wp-includes/functions.php:3811
 msgid "The called constructor method for %1$s in %2$s is <strong>deprecated</strong> since version %3$s! Use %4$s instead."
 msgstr "Konstruktörsmetoden för %1$s i %2$s har <strong>fasats ut</strong> sedan version %3$s! Använd %4$s istället."
 
-#: wp-includes/functions.php:3709 wp-includes/functions.php:3833
-#: wp-includes/functions.php:3948
+#: wp-includes/functions.php:3754 wp-includes/functions.php:3878
+#: wp-includes/functions.php:3993
 msgid "%1$s is <strong>deprecated</strong> since version %2$s with no alternative available."
 msgstr "%1$s har <strong>upphört</strong> sedan version %2$s utan alternativ tillgängliga."
 
-#: wp-includes/functions.php:3707 wp-includes/functions.php:3831
-#: wp-includes/functions.php:3946
+#: wp-includes/functions.php:3752 wp-includes/functions.php:3876
+#: wp-includes/functions.php:3991
 msgid "%1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead."
 msgstr "%1$s har <strong>upphört</strong> sedan version %2$s! Använd %3$s istället."
 
-#: wp-includes/functions.php:3647 wp-includes/ms-load.php:471
+#: wp-includes/functions.php:3692 wp-includes/ms-load.php:471
 #: wp-includes/wp-db.php:1579
 msgid "Error establishing a database connection"
 msgstr "Ett fel uppstod vid anslutning till databasen"
 
-#: wp-includes/functions.php:3643
+#: wp-includes/functions.php:3688
 msgid "Database Error"
 msgstr "Databasfel"
 
-#: wp-includes/functions.php:2656 wp-load.php:94
+#: wp-includes/functions.php:2701 wp-load.php:94
 msgid "WordPress &rsaquo; Error"
 msgstr "WordPress &rsaquo; Fel"
 
-#: wp-includes/functions.php:2644
+#: wp-includes/functions.php:2689
 msgid "&laquo; Back"
 msgstr "&laquo; Tillbaka"
 
-#: wp-includes/functions.php:2525
+#: wp-includes/functions.php:2570
 msgid "WordPress Failure Notice"
 msgstr "WordPress felmeddelande"
 
-#: wp-includes/functions.php:2522 wp-includes/ms-functions.php:1926
+#: wp-includes/functions.php:2567 wp-includes/ms-functions.php:1926
 msgid "Please try again."
 msgstr "Var vänlig försök igen."
 
-#: wp-includes/functions.php:2518
+#: wp-includes/functions.php:2563
 msgid "Do you really want to <a href='%s'>log out</a>?"
 msgstr "Vill du verkligen <a href='%s'>logga ut</a>?"
 
-#: wp-includes/functions.php:2516
+#: wp-includes/functions.php:2561
 msgid "You are attempting to log out of %s"
 msgstr "Du försöker att logga ut ifrån %s"
 
@@ -4991,7 +4991,7 @@ msgstr "GD-grafikbiblioteket är inte installerat."
 msgid "File &#8220;%s&#8221; doesn&#8217;t exist?"
 msgstr "Saknas filen &#8221;%s&#8221;?"
 
-#: wp-includes/deprecated.php:3122 wp-includes/functions.php:2520
+#: wp-includes/deprecated.php:3122 wp-includes/functions.php:2565
 msgid "Are you sure you want to do this?"
 msgstr "Är du säker på att du vill göra det här?"
 
@@ -6130,96 +6130,96 @@ msgstr "Användning av användarnivåer via tillägg och teman har upphört. Anv
 msgid "Use %s instead."
 msgstr "Använd %s istället."
 
-#: wp-includes/class-wp-theme.php:789
+#: wp-includes/class-wp-theme.php:790
 msgid "Seasonal"
 msgstr "Säsongsbetonat"
 
-#: wp-includes/class-wp-theme.php:789
+#: wp-includes/class-wp-theme.php:790
 msgid "Photoblogging"
 msgstr "Fotobloggande"
 
-#: wp-includes/class-wp-theme.php:788
+#: wp-includes/class-wp-theme.php:789
 msgid "Blavatar"
 msgstr "Blavatar"
 
-#: wp-includes/class-wp-theme.php:788
+#: wp-includes/class-wp-theme.php:789
 msgid "Responsive Layout"
 msgstr "Responsiv layout"
 
-#: wp-includes/class-wp-theme.php:787
+#: wp-includes/class-wp-theme.php:788
 msgid "Fluid Layout"
 msgstr "Flytande layout"
 
-#: wp-includes/class-wp-theme.php:787
+#: wp-includes/class-wp-theme.php:788
 msgid "Fixed Layout"
 msgstr "Fixerad layout"
 
-#: wp-includes/class-wp-theme.php:786
+#: wp-includes/class-wp-theme.php:787
 msgid "Light"
 msgstr "Ljus"
 
-#: wp-includes/class-wp-theme.php:786
+#: wp-includes/class-wp-theme.php:787
 msgid "Dark"
 msgstr "Mörkt"
 
-#: wp-includes/class-wp-theme.php:786
+#: wp-includes/class-wp-theme.php:787
 msgid "Yellow"
 msgstr "Gult"
 
-#: wp-includes/class-wp-theme.php:785
+#: wp-includes/class-wp-theme.php:786
 msgid "White"
 msgstr "Vitt"
 
-#: wp-includes/class-wp-theme.php:785
+#: wp-includes/class-wp-theme.php:786
 msgid "Tan"
 msgstr "Ljusbrunt"
 
-#: wp-includes/class-wp-theme.php:785
+#: wp-includes/class-wp-theme.php:786
 msgid "Silver"
 msgstr "Silver"
 
-#: wp-includes/class-wp-theme.php:784
+#: wp-includes/class-wp-theme.php:785
 msgid "Red"
 msgstr "Rött"
 
-#: wp-includes/class-wp-theme.php:784
+#: wp-includes/class-wp-theme.php:785
 msgid "Purple"
 msgstr "Lila"
 
-#: wp-includes/class-wp-theme.php:784
+#: wp-includes/class-wp-theme.php:785
 msgid "Pink"
 msgstr "Rosa"
 
-#: wp-includes/class-wp-theme.php:783
+#: wp-includes/class-wp-theme.php:784
 msgid "Orange"
 msgstr "Orange"
 
-#: wp-includes/class-wp-theme.php:783
+#: wp-includes/class-wp-theme.php:784
 msgid "Green"
 msgstr "Grönt"
 
-#: wp-includes/class-wp-theme.php:783
+#: wp-includes/class-wp-theme.php:784
 msgid "Gray"
 msgstr "Grå"
 
-#: wp-includes/class-wp-theme.php:782
+#: wp-includes/class-wp-theme.php:783
 msgid "Brown"
 msgstr "Brunt"
 
-#: wp-includes/class-wp-theme.php:782
+#: wp-includes/class-wp-theme.php:783
 msgid "Blue"
 msgstr "Blå"
 
-#: wp-includes/class-wp-theme.php:782
+#: wp-includes/class-wp-theme.php:783
 msgid "Black"
 msgstr "Svart"
 
 #. translators: used between list items, there is a space after the comma
-#: wp-includes/class-wp-theme.php:740
+#: wp-includes/class-wp-theme.php:741
 msgid ", "
 msgstr ", "
 
-#: wp-includes/class-wp-theme.php:733 wp-includes/comment-template.php:31
+#: wp-includes/class-wp-theme.php:734 wp-includes/comment-template.php:31
 msgid "Anonymous"
 msgstr "Anonym"
 
@@ -8468,7 +8468,7 @@ msgid "Menus"
 msgstr "Menyer"
 
 #: wp-includes/admin-bar.php:736 wp-includes/class-wp-customize-widgets.php:418
-#: wp-includes/functions.php:3584
+#: wp-includes/functions.php:3629
 msgid "Widgets"
 msgstr "Widgets"
 
