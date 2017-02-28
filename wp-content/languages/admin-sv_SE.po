@@ -4545,63 +4545,63 @@ msgctxt "revision date short format"
 msgid "j M @ H:i"
 msgstr "j M @ H:i"
 
-#: wp-admin/includes/post.php:1560
+#: wp-admin/includes/post.php:1567
 msgid "Your latest changes were saved as a revision."
 msgstr "Din senaste ändring sparades som en egen version."
 
-#: wp-admin/includes/post.php:1559
+#: wp-admin/includes/post.php:1566
 msgid "Saving revision..."
 msgstr "Sparar version..."
 
-#: wp-admin/includes/post.php:1545
+#: wp-admin/includes/post.php:1552
 msgid "Take over"
 msgstr "Ta över"
 
-#: wp-admin/includes/post.php:1522
+#: wp-admin/includes/post.php:1529
 msgid "If you take over, %s will be blocked from continuing to edit."
 msgstr "Om du tar över kommer %s att låsas ut från att fortsätta redigeringen."
 
-#: wp-admin/includes/post.php:1520
+#: wp-admin/includes/post.php:1527
 msgid "This content is currently locked."
 msgstr "Detta innehåll är för närvarande låst."
 
-#: wp-admin/includes/post.php:1364
+#: wp-admin/includes/post.php:1371
 msgid "Remove featured image"
 msgstr "Ta bort utvald bild"
 
-#: wp-admin/includes/post.php:1278
+#: wp-admin/includes/post.php:1285
 msgid "Change Permalinks"
 msgstr "Ändra permalänkar"
 
-#: wp-admin/includes/post.php:1276 wp-admin/includes/post.php:1299
+#: wp-admin/includes/post.php:1283 wp-admin/includes/post.php:1306
 msgid "Permalink:"
 msgstr "Permalänk:"
 
-#: wp-admin/includes/post.php:1272
+#: wp-admin/includes/post.php:1279
 msgid "Temporary permalink. Click to edit this part."
 msgstr "Temporär permalänk. Klicka för att redigera denna del."
 
-#: wp-admin/includes/post.php:1270
+#: wp-admin/includes/post.php:1277
 msgid "Click to edit this part of the permalink"
 msgstr "Klicka för att redigera denna del av permalänken"
 
-#: wp-admin/includes/post.php:710
+#: wp-admin/includes/post.php:717
 msgid "You are not allowed to create posts or drafts on this site."
 msgstr "Du har inte tillräcklig behörighet för att skapa inlägg eller utkast på den här webbplatsen."
 
-#: wp-admin/includes/post.php:708
+#: wp-admin/includes/post.php:715
 msgid "You are not allowed to create pages on this site."
 msgstr "Du har inte tillräcklig behörighet för att skapa sidor på den här webbplatsen."
 
-#: wp-admin/includes/post.php:593
+#: wp-admin/includes/post.php:600
 msgid "Auto Draft"
 msgstr "Automatiskt utkast"
 
-#: wp-admin/includes/post.php:422
+#: wp-admin/includes/post.php:429
 msgid "You are not allowed to edit posts."
 msgstr "Du har inte tillräcklig behörighet för att redigera inlägg."
 
-#: wp-admin/includes/post.php:420
+#: wp-admin/includes/post.php:427
 msgid "You are not allowed to edit pages."
 msgstr "Du har inte tillräcklig behörighet för att redigera sidor."
 
@@ -5167,7 +5167,7 @@ msgstr "Utkast sparat kl. %s."
 msgid "g:i:s a"
 msgstr "H:i:s"
 
-#: wp-admin/includes/misc.php:816 wp-admin/includes/post.php:1720
+#: wp-admin/includes/misc.php:816 wp-admin/includes/post.php:1727
 #: wp-admin/widgets.php:306
 msgid "Error while saving."
 msgstr "Fel vid sparande."
@@ -8673,12 +8673,12 @@ msgid "Someone"
 msgstr "Någon"
 
 #: wp-admin/includes/ajax-actions.php:1516 wp-admin/includes/media.php:3044
-#: wp-admin/includes/post.php:206 wp-admin/includes/post.php:1661
-#: wp-admin/includes/post.php:1665
+#: wp-admin/includes/post.php:213 wp-admin/includes/post.php:1668
+#: wp-admin/includes/post.php:1672
 msgid "You are not allowed to edit this post."
 msgstr "Du har inte tillräcklig behörighet för att redigera det här inlägget."
 
-#: wp-admin/includes/ajax-actions.php:1513 wp-admin/includes/post.php:204
+#: wp-admin/includes/ajax-actions.php:1513 wp-admin/includes/post.php:211
 msgid "You are not allowed to edit this page."
 msgstr "Du har inte tillräcklig behörighet för att redigera den här sidan."
 
@@ -9791,40 +9791,40 @@ msgstr "Du kan hantera kommentarer på din webbplats på samma sätt som du hant
 msgid "Comments on &#8220;%s&#8221;"
 msgstr "Kommentarer till &#8221;%s&#8221;"
 
-#: wp-admin/customize.php:166
+#: wp-admin/customize.php:168
 #: wp-admin/includes/class-wp-theme-install-list-table.php:303
 #: wp-admin/theme-install.php:260
 msgid "Collapse"
 msgstr "Minimera"
 
-#: wp-admin/customize.php:164
+#: wp-admin/customize.php:166
 #: wp-admin/includes/class-wp-theme-install-list-table.php:302
 #: wp-admin/theme-install.php:259
 msgid "Collapse Sidebar"
 msgstr "Minimera sidopanel"
 
-#: wp-admin/customize.php:153
+#: wp-admin/customize.php:155
 msgid "The Customizer allows you to preview changes to your site before publishing them. You can also navigate to different pages on your site to preview them."
 msgstr "Anpassaren tillåter dig att förhandsgranska ändringar innan du publicerar dom. Du kan också bläddra mellan olika sidor på din webbplats och förhandsgranska dessa."
 
-#: wp-admin/customize.php:147
+#: wp-admin/customize.php:149
 msgid "Customizer Options"
 msgstr "Inställningar för temaanpassaren"
 
-#: wp-admin/customize.php:139 wp-admin/themes.php:366
+#: wp-admin/customize.php:141 wp-admin/themes.php:366
 msgid "Close overlay"
 msgstr "Stäng popup"
 
-#: wp-admin/customize.php:94
+#: wp-admin/customize.php:96
 msgid "Loading&hellip;"
 msgstr "Laddar&hellip;"
 
-#: wp-admin/customize.php:91
+#: wp-admin/customize.php:93
 msgctxt "Placeholder is the document title from the preview"
 msgid "Live Preview: %s"
 msgstr "Förhandsgranskning live: %s"
 
-#: wp-admin/customize.php:89
+#: wp-admin/customize.php:91
 msgctxt "Placeholder is the document title from the preview"
 msgid "Customize: %s"
 msgstr "Anpassa %s"
@@ -10310,7 +10310,7 @@ msgid "You are not allowed to edit this comment."
 msgstr "Du har inte behörighet att redigera den här kommentaren."
 
 #: wp-admin/comment.php:69 wp-admin/comment.php:252
-#: wp-admin/includes/post.php:1466
+#: wp-admin/includes/post.php:1473
 msgid "Go back"
 msgstr "Gå tillbaka"
 
@@ -10406,7 +10406,7 @@ msgid "Edit"
 msgstr "Redigera"
 
 #: wp-admin/async-upload.php:57 wp-admin/edit-tags.php:252
-#: wp-admin/includes/post.php:1726 wp-admin/post.php:157
+#: wp-admin/includes/post.php:1733 wp-admin/post.php:157
 msgid "You are not allowed to edit this item."
 msgstr "Du har inte tillräcklig behörighet för att redigera den här posten."
 
@@ -10449,148 +10449,148 @@ msgstr "Tack för att du skapar med <a href=\"%s\">WordPress</a>. <a href=\"http
 
 #. translators: 1: WordPress version number, 2: plural number of bugs. Singular
 #. security issue.
-#: wp-admin/about.php:195
+#: wp-admin/about.php:199
 msgid "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bugs."
 msgstr[0] "<strong>Version %1$s</strong> åtgärdar en säkerhetsrisk och %2$s bugg."
 msgstr[1] "<strong>Version %1$s</strong> åtgärdar en säkerhetsrisk och %2$s buggar."
 
 #. translators: 1: WordPress version number, 2: plural number of bugs.
-#: wp-admin/about.php:191
+#: wp-admin/about.php:195
 msgid "<strong>Version %1$s</strong> addressed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed %2$s bugs."
 msgstr[0] "<strong>Version %1$s</strong> åtgärdar %2$s bugg."
 msgstr[1] "<strong>Version %1$s</strong> åtgärdar %2$s buggar."
 
-#: wp-admin/about.php:183
+#: wp-admin/about.php:187
 msgid "Security Release"
 msgid_plural "Security Releases"
 msgstr[0] "Säkerhetsrelease"
 msgstr[1] "Säkerhetsreleaser"
 
-#: wp-admin/about.php:182
+#: wp-admin/about.php:186
 msgid "Maintenance Release"
 msgid_plural "Maintenance Releases"
 msgstr[0] "Underhållsrelease"
 msgstr[1] "Underhållsreleaser"
 
-#: wp-admin/about.php:170
+#: wp-admin/about.php:174
 msgid "Go to Dashboard"
 msgstr "Gå till adminpanelen"
 
-#: wp-admin/about.php:170
+#: wp-admin/about.php:174
 msgid "Go to Dashboard &rarr; Home"
 msgstr "Gå till Adminpanel &rarr; Hem"
 
-#: wp-admin/about.php:166
+#: wp-admin/about.php:170
 msgid "Return to Dashboard &rarr; Updates"
 msgstr "Återgå till Adminpanel &rarr; Uppdateringar"
 
-#: wp-admin/about.php:166
+#: wp-admin/about.php:170
 msgid "Return to Updates"
 msgstr "Återgå till uppdateringar"
 
 #. translators: 1: WP_Query, 2: WP_Comment_Query, 3: WP_User_Query
-#: wp-admin/about.php:157
+#: wp-admin/about.php:161
 msgid "%1$s, %2$s, and %3$s now support complex ordering with named meta query clauses."
 msgstr "%1$s, %2$s och %3$s har nu stöd för komplex ordning med namngivna meta query klassuler."
 
-#: wp-admin/about.php:154
+#: wp-admin/about.php:158
 msgid "Complex query ordering"
 msgstr "Komplex ordning i query"
 
 #. translators: 1: Term splitting guide link
-#: wp-admin/about.php:151
+#: wp-admin/about.php:155
 msgid "Terms shared across multiple taxonomies will be split when one of them is updated. Find out more in the <a href=\"%1$s\">Plugin Developer Handbook</a>."
 msgstr "Termer delade över flera taxanomier kommer att delas upp när en av dom uppdateras. Ta reda på mer i <a href=\"%1$s\">Handboken för tilläggsutvecklare</a>."
 
-#: wp-admin/about.php:148
+#: wp-admin/about.php:152
 msgid "Shared term splitting"
 msgstr "Delad termdelning"
 
 #. translators: %s wp.a11y.speak()
-#: wp-admin/about.php:144
+#: wp-admin/about.php:148
 msgid "You can now send audible notifications to screen readers in JavaScript with %s. Pass it a string, and an update will be sent to a dedicated ARIA live notifications area."
 msgstr "Du kan nu skicka hörbara meddelanden till skärmläsare i JavaScript med %s. Ange det som en sträng och en uppdatering kommer att skickas till ett dedikerat ARIA-meddelandefältet."
 
-#: wp-admin/about.php:141
+#: wp-admin/about.php:145
 msgid "JavaScript accessibility"
 msgstr "Tillgänglighet med JavaScript"
 
-#: wp-admin/about.php:139
+#: wp-admin/about.php:143
 msgid "Database character encoding has changed from utf8 to utf8mb4, which adds support for a whole range of new 4-byte characters."
 msgstr "Teckenkodningen för databasen har ändrats från utf8 till utf8mb4, vilket lägger till stöd för en hel rad nya 4-bytestecken."
 
-#: wp-admin/about.php:138
+#: wp-admin/about.php:142
 msgid "utf8mb4 support"
 msgstr "utf8mb4-stöd"
 
-#: wp-admin/about.php:134
+#: wp-admin/about.php:138
 msgid "Under the Hood"
 msgstr "Under huven"
 
-#: wp-admin/about.php:129
+#: wp-admin/about.php:133
 msgid "Goodbye boring loading screen, hello smooth and simple plugin updates. Click <em>Update&nbsp;Now</em> and watch the magic happen."
 msgstr "Hej då tråkiga laddningssidor, hej smidiga och enkla tilläggsuppdateringar. Klicka på <em>Uppdatera nu</em> och se det magiska hända."
 
-#: wp-admin/about.php:128
+#: wp-admin/about.php:132
 msgid "Streamlined plugin updates"
 msgstr "Effektiviserade tilläggsuppdateringar "
 
-#: wp-admin/about.php:124
+#: wp-admin/about.php:128
 msgid "Paste links from Tumblr.com and Kickstarter and watch them magically appear right in the editor. With every release, your publishing and editing experience get closer together."
 msgstr "Klistra in länkar från Tumblr.com eller Kickstarter och se dom magiskt komma fram direkt i redigeraren. Med varje release kommer dina publicerings- och redigeringsupplevelser närmare varandra."
 
-#: wp-admin/about.php:123
+#: wp-admin/about.php:127
 msgid "Even more embeds"
 msgstr "Ännu fler inbäddningsmöjligheter"
 
-#: wp-admin/about.php:119
+#: wp-admin/about.php:123
 msgid "Browse and preview your installed themes from the Customizer. Make sure the theme looks great with <em>your</em> content, before it debuts on your site. "
 msgstr "Bläddra bland och förhandsgranska installerade teman i anpassaren. Kolla så att temat ser bra ut tillsammans med <em>ditt</em> innehåll, innan det gör debut på din webbplats."
 
-#: wp-admin/about.php:118
+#: wp-admin/about.php:122
 msgid "Switch themes in the Customizer"
 msgstr "Byt tema i anpassaren"
 
-#: wp-admin/about.php:110
+#: wp-admin/about.php:114
 msgid "https://codex.wordpress.org/Emoji"
 msgstr "https://codex.wordpress.org/Emoji"
 
 #. translators: 1: heart emoji, 2: frog face emoji, 3, monkey emoji, 4: pizza
 #. emoji, 5: Emoji Codex link
-#: wp-admin/about.php:110
+#: wp-admin/about.php:114
 msgid "Don&#8217;t use any of those characters? You can still have fun &mdash; emoji are now available in WordPress! Get creative and decorate your content with %1$s, %2$s, %3$s, %4$s, and all the many other <a href=\"%5$s\">emoji</a>."
 msgstr "Använder du inte någon av dessa teckenuppsättningar? Du kan fortfarande ha kul &mdash; emoji är nu tillgängligt i WordPress! Var kreativ och dekorera ditt innehåll med %1$s, %2$s, %3$s, %4$s och alla dom många andra <a href=\"%5$s\">emojis</a>."
 
-#: wp-admin/about.php:107
+#: wp-admin/about.php:111
 msgid "Writing in WordPress, whatever your language, just got better. WordPress 4.2 supports a host of new characters out-of-the-box, including native Chinese, Japanese, and Korean characters, musical and mathematical symbols, and hieroglyphs."
 msgstr "Att skriva i WordPress, oavsett språk, har blivit ännu bättre. WordPress 4.2 har stöd för en mängd nya tecken direkt ur boxen, inklusive inhemska kinesiska, japanska och koreanska tecken, musikaliska och matematiska symboler och hieroglyfer."
 
-#: wp-admin/about.php:106
+#: wp-admin/about.php:110
 msgid "Extended character support"
 msgstr "Utökat teckenstöd"
 
-#: wp-admin/about.php:92 wp-admin/tools.php:16 wp-admin/tools.php:40
+#: wp-admin/about.php:96 wp-admin/tools.php:16 wp-admin/tools.php:40
 #: wp-admin/tools.php:51
 msgid "Press This"
 msgstr "Blogga det här"
 
-#: wp-admin/about.php:89 wp-admin/tools.php:48
+#: wp-admin/about.php:93 wp-admin/tools.php:48
 msgid "Drag the bookmarklet below to your bookmarks bar. Then, when you&#8217;re on a page you want to share, simply &#8220;press&#8221; it."
 msgstr "Dra bokmärkesskriptet nedan till ditt bokmärkesfält. När du sedan är på en sida du vill dela med andra, klicka helt enkelt på bokmärket."
 
-#: wp-admin/about.php:88
+#: wp-admin/about.php:92
 msgid "Clip it, edit it, publish it. Get familiar with the new and improved Press This. From the <a href=\"%s\">Tools</a> menu, add Press This to your browser bookmark bar or your mobile device home screen. Once installed you can share your content with lightning speed. Sharing your favorite videos, images, and content has never been this fast or this easy."
 msgstr "Klipp ut det, redigera det, publicera det. Gör dig bekant med det nya och förbättrade Blogga det här. Via menyn <a href=\"%s\">Verktyg</a>, lägg till Blogga det här i din webbläsares bokmärkesfält eller din mobils hemskärm. När du skapat din genväg kan du dela innehåll med ljusets hastighet. Att dela dina favoritvideos, bilder och innehåll har aldrig tidigare varit så snabbt och enkelt."
 
-#: wp-admin/about.php:87
+#: wp-admin/about.php:91
 msgid "An easier way to share content"
 msgstr "Ett enklare sätt att dela innehåll"
 
 #. translators: 1: WordPress version number.
 #: wp-admin/about.php:45 wp-admin/about.php:49 wp-admin/about.php:53
-#: wp-admin/about.php:73 wp-admin/about.php:187
+#: wp-admin/about.php:57 wp-admin/about.php:77 wp-admin/about.php:191
 msgid "<strong>Version %1$s</strong> addressed a security issue."
 msgid_plural "<strong>Version %1$s</strong> addressed some security issues."
 msgstr[0] "<strong>Version %1$s</strong> åtgärdar en sårbarhet."
@@ -10598,20 +10598,21 @@ msgstr[1] "<strong>Version %1$s</strong> åtgärdar sårbarheter."
 
 #: wp-admin/about.php:47 wp-admin/about.php:51 wp-admin/about.php:55
 #: wp-admin/about.php:59 wp-admin/about.php:63 wp-admin/about.php:67
-#: wp-admin/about.php:71 wp-admin/about.php:75 wp-admin/about.php:202
+#: wp-admin/about.php:71 wp-admin/about.php:75 wp-admin/about.php:79
+#: wp-admin/about.php:206
 msgid "For more information, see <a href=\"%s\">the release notes</a>."
 msgstr "För mer information, se <a href=\"%s\">detaljer för releasen</a>."
 
 #. translators: 1: WordPress version number, 2: plural number of bugs. More
 #. than one security issue.
-#: wp-admin/about.php:57 wp-admin/about.php:61 wp-admin/about.php:65
-#: wp-admin/about.php:69 wp-admin/about.php:199
+#: wp-admin/about.php:61 wp-admin/about.php:65 wp-admin/about.php:69
+#: wp-admin/about.php:73 wp-admin/about.php:203
 msgid "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bugs."
 msgstr[0] "<strong>Version %1$s</strong> åtgärdar ett par sårbarheter och %2$s bugg."
 msgstr[1] "<strong>Version %1$s</strong> åtgärdar ett par sårbarheter och %2$s buggar."
 
-#: wp-admin/about.php:44 wp-admin/about.php:184
+#: wp-admin/about.php:44 wp-admin/about.php:188
 msgid "Maintenance and Security Release"
 msgid_plural "Maintenance and Security Releases"
 msgstr[0] "Underhålls och säkerhetsrelease"
