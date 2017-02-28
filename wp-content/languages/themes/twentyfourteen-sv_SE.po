@@ -173,7 +173,7 @@ msgstr "Piffa upp din designen av din webbplats med hjälp av <a href=\"%s\">Utv
 msgid "The home page features your choice of up to 6 posts prominently displayed in a grid or slider, controlled by a <a href=\"%1$s\">tag</a>; you can change the tag and layout in <a href=\"%2$s\">Appearance &rarr; Customize</a>. If no posts match the tag, <a href=\"%3$s\">sticky posts</a> will be displayed instead."
 msgstr "Startsidan innehåller ditt val av upp till 6 framhävda inlägg visade i ett rutnät eller i ett bildspel, kontrollerat av en <a href=\"%1$s\">tagg</a>; du kan ändra den utvalda taggen under <a href=\"%2$s\">Utseende &rarr; Anpassa</a>. Om inga inlägg matchar taggen så används istället <a href=\"%3$s\">klistrade inlägg</a>."
 
-#. #-#-#-#-#  twentyfourteen.pot (Twenty Fourteen 1.7)  #-#-#-#-#
+#. #-#-#-#-#  twentyfourteen.pot (Twenty Fourteen 1.8)  #-#-#-#-#
 #. Theme Name of the plugin/theme
 #: inc/customizer.php:142
 msgid "Twenty Fourteen"
@@ -431,7 +431,7 @@ msgstr "Det verkar som inget kunde hittas för denna plats. Vill du kanske förs
 msgid "Not Found"
 msgstr "Kunde inte hittas"
 
-#. #-#-#-#-#  twentyfourteen.pot (Twenty Fourteen 1.7)  #-#-#-#-#
+#. #-#-#-#-#  twentyfourteen.pot (Twenty Fourteen 1.8)  #-#-#-#-#
 #. Author URI of the plugin/theme
 #: footer.php:21
 msgid "https://wordpress.org/"

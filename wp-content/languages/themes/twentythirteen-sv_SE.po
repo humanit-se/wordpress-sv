@@ -298,7 +298,7 @@ msgstr "Det här var ju lite pinsamt, eller hur?"
 msgid "Not Found"
 msgstr "Kunde inte hittas"
 
-#. #-#-#-#-#  twentythirteen.pot (Twenty Thirteen 1.9)  #-#-#-#-#
+#. #-#-#-#-#  twentythirteen.pot (Twenty Thirteen 2.0)  #-#-#-#-#
 #. Author URI of the plugin/theme
 #: footer.php:19
 msgid "https://wordpress.org/"
