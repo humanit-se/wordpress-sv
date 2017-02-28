@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/1.0-alpha-1100\n"
+"X-Generator: GlotPress/2.1.0-alpha\n"
 "Project-Id-Version: Administration\n"
 
 #: wp-admin/user-new.php:313 wp-admin/user-new.php:450
@@ -543,84 +543,84 @@ msgstr "Använd https"
 msgid "Always use https when visiting the admin"
 msgstr "Använd alltid https vid besök till adminpanelen"
 
-#: wp-admin/user-edit.php:96 wp-admin/user-edit.php:125
-#: wp-admin/user-edit.php:178
+#: wp-admin/user-edit.php:96 wp-admin/user-edit.php:126
+#: wp-admin/user-edit.php:179
 msgid "You do not have permission to edit this user."
 msgstr "Du saknar rättigheter för att redigera den här användaren."
 
-#: wp-admin/user-edit.php:193
+#: wp-admin/user-edit.php:194
 msgid "User updated."
 msgstr "Användaren uppdaterad."
 
-#: wp-admin/user-edit.php:233
+#: wp-admin/user-edit.php:234
 msgid "Personal Options"
 msgstr "Personliga inställningar"
 
-#: wp-admin/user-edit.php:238
+#: wp-admin/user-edit.php:239
 msgid "Visual Editor"
 msgstr "Visuell redigerare"
 
-#: wp-admin/user-edit.php:239
+#: wp-admin/user-edit.php:240
 msgid "Disable the visual editor when writing"
 msgstr "Stäng av den visuella redigeraren när du skriver"
 
-#: wp-admin/user-edit.php:265
+#: wp-admin/user-edit.php:266
 msgid "Enable keyboard shortcuts for comment moderation."
 msgstr "Aktivera kortkommandon för kommentarsmoderering. "
 
-#: wp-admin/user-edit.php:344 wp-admin/user-new.php:373
+#: wp-admin/user-edit.php:345 wp-admin/user-new.php:373
 msgid "First Name"
 msgstr "Förnamn"
 
-#: wp-admin/user-edit.php:349 wp-admin/user-new.php:377
+#: wp-admin/user-edit.php:350 wp-admin/user-new.php:377
 msgid "Last Name"
 msgstr "Efternamn"
 
-#: wp-admin/user-edit.php:354
+#: wp-admin/user-edit.php:355
 msgid "Nickname"
 msgstr "Smeknamn"
 
-#: wp-admin/user-edit.php:359
+#: wp-admin/user-edit.php:360
 msgid "Display name publicly as"
 msgstr "Visa namn offentligt som"
 
-#: wp-admin/user-edit.php:395
+#: wp-admin/user-edit.php:396
 msgid "Contact Info"
 msgstr "Kontaktinformation"
 
-#: wp-admin/user-edit.php:447
+#: wp-admin/user-edit.php:448
 msgid "About Yourself"
 msgstr "Om dig själv"
 
-#: wp-admin/user-edit.php:447
+#: wp-admin/user-edit.php:448
 msgid "About the user"
 msgstr "Om användaren"
 
-#: wp-admin/user-edit.php:451
+#: wp-admin/user-edit.php:452
 msgid "Biographical Info"
 msgstr "Biografi"
 
-#: wp-admin/user-edit.php:453
+#: wp-admin/user-edit.php:454
 msgid "Share a little biographical information to fill out your profile. This may be shown publicly."
 msgstr "Skriv ner några rader om dig själv. Det här visas eventuellt offentligt om ditt tema har stöd för det."
 
-#: wp-admin/user-edit.php:466
+#: wp-admin/user-edit.php:467
 msgid "New Password"
 msgstr "Nytt lösenord"
 
-#: wp-admin/user-edit.php:489
+#: wp-admin/user-edit.php:490
 msgid "Type your new password again."
 msgstr "Skriv ditt nya lösenord igen."
 
-#: wp-admin/user-edit.php:581
+#: wp-admin/user-edit.php:582
 msgid "Additional Capabilities"
 msgstr "Ytterligare egenskaper"
 
-#: wp-admin/user-edit.php:605
+#: wp-admin/user-edit.php:606
 msgid "Update Profile"
 msgstr "Uppdatera profil"
 
-#: wp-admin/user-edit.php:605
+#: wp-admin/user-edit.php:606
 msgid "Update User"
 msgstr "Uppdatera användare"
 
@@ -632,15 +632,15 @@ msgstr "[%s] Medlemsverifiering"
 msgid "Invitation email sent to new user. A confirmation link must be clicked before their account is created."
 msgstr "E-postinbjudan skickad till den nya användaren. En bekräftelselänk måste besökas innan kontot skapas."
 
-#: wp-admin/user-edit.php:186
+#: wp-admin/user-edit.php:187
 msgid "This user has super admin privileges."
 msgstr "Den här användaren har superadminbehörigheter."
 
-#: wp-admin/user-edit.php:309
+#: wp-admin/user-edit.php:310
 msgid "Usernames cannot be changed."
 msgstr "Användarnamn kan inte ändras."
 
-#: wp-admin/user-edit.php:336
+#: wp-admin/user-edit.php:337
 msgid "Grant this user super admin privileges for the Network."
 msgstr "Ge den här användaren superadminbehörigheter för nätverket."
 
@@ -661,7 +661,7 @@ msgstr "Använd Blogga det här för att klippa in text, bilder och videoklipp f
 msgid "You do not have sufficient permissions to update themes for this site."
 msgstr "Du har inte tillräcklig behörighet för att kunna uppdatera teman på den här webbplatsen."
 
-#: wp-admin/user-edit.php:325 wp-admin/user-edit.php:327
+#: wp-admin/user-edit.php:326 wp-admin/user-edit.php:328
 msgid "&mdash; No role for this site &mdash;"
 msgstr "&mdash; Ingen roll för den här webbplatsen &mdash;"
 
@@ -674,7 +674,7 @@ msgctxt "Theme stylesheets in theme editor"
 msgid "Styles"
 msgstr "Stilmallar"
 
-#: wp-admin/user-edit.php:407
+#: wp-admin/user-edit.php:408
 msgid "There is a pending change of your e-mail to %1$s. <a href=\"%2$s\">Cancel</a>"
 msgstr "En ändring av din e-postadress till <code>%1$s</code> står som väntande. <a href=\"%2$s\">Avbryt</a>"
 
@@ -859,7 +859,7 @@ msgstr "Detta är en fil i ditt nuvarande modertema."
 msgid "This child theme inherits templates from a parent theme, %s."
 msgstr "Detta barntema ärver mallar från ett modertema, %s."
 
-#: wp-admin/user-edit.php:338
+#: wp-admin/user-edit.php:339
 msgid "Super admin privileges cannot be removed because this user has the network admin email."
 msgstr "Superadmin privilegier kan inte tas bort eftersom den här användaren har e-postadressen för nätverketsadmin."
 
@@ -873,7 +873,7 @@ msgstr "Blogga det här är en snabbgenväg som gör det enkelt att blogga om n�
 msgid "You do not have sufficient permissions to update this site."
 msgstr "Du har inte tillräcklig behörighet för att uppdatera denna webbplats."
 
-#: wp-admin/user-edit.php:212 wp-admin/users.php:458
+#: wp-admin/user-edit.php:213 wp-admin/users.php:458
 msgctxt "user"
 msgid "Add Existing"
 msgstr "Lägg till befintlig"
@@ -883,7 +883,7 @@ msgstr "Lägg till befintlig"
 msgid "Last checked on %1$s at %2$s."
 msgstr "Senast kontrollerat den %1$s kl. %2$s."
 
-#: wp-admin/user-edit.php:196
+#: wp-admin/user-edit.php:197
 msgid "&larr; Back to Users"
 msgstr "&larr; Tillbaka till användare"
 
@@ -944,7 +944,7 @@ msgstr ""
 "Klicka på följande länk för att bekräfta inbjudan:\n"
 "%4$s"
 
-#: wp-admin/user-edit.php:191
+#: wp-admin/user-edit.php:192
 msgid "Profile updated."
 msgstr "Profil uppdaterad."
 
@@ -1012,7 +1012,7 @@ msgstr "Installera teman i ett nätverk kan endast göras från sektionen för n
 msgid "Here is a basic overview of the different user roles and the permissions associated with each one:"
 msgstr "Här är en grundläggande översikt över de olika användarroller och behörigheter associerade med dessa:"
 
-#: wp-admin/user-edit.php:273
+#: wp-admin/user-edit.php:274
 msgid "Show Toolbar when viewing site"
 msgstr "Visa verktygsrad på framsidan"
 
@@ -1122,15 +1122,15 @@ msgstr "För PHP-filer så kan du använda dokumentationsmenyn för att välja m
 msgid "All right, sparky! You&#8217;ve made it through this part of the installation. WordPress can now communicate with your database. If you are ready, time now to&hellip;"
 msgstr "Kalas! Du har klarat dig igenom denna del av installationen. WordPress kan nu kommunicera med din databas. Om du är redo, så fortsätter vi&hellip;"
 
-#: wp-admin/user-edit.php:584
+#: wp-admin/user-edit.php:585
 msgid "Capabilities"
 msgstr "Behörigheter"
 
-#: wp-admin/user-edit.php:592
+#: wp-admin/user-edit.php:593
 msgid "Denied: %s"
 msgstr "Nekad: %s"
 
-#: wp-admin/user-edit.php:486
+#: wp-admin/user-edit.php:487
 msgid "Repeat New Password"
 msgstr "Upprepa nytt lösenord"
 
@@ -1329,7 +1329,7 @@ msgstr "<a href=\"https://codex.wordpress.org/Tools_Screen\" target=\"_blank\">D
 msgid "<a href=\"https://codex.wordpress.org/Media_Library_Screen\" target=\"_blank\">Documentation on Media Library</a>"
 msgstr "<a href=\"https://codex.wordpress.org/Media_Library_Screen\" target=\"_blank\">Dokumentation för mediabibliotek</a>"
 
-#: wp-admin/user-edit.php:265
+#: wp-admin/user-edit.php:266
 msgid "<a href=\"https://codex.wordpress.org/Keyboard_Shortcuts\" target=\"_blank\">More information</a>"
 msgstr "<a href=\"https://codex.wordpress.org/Keyboard_Shortcuts\" target=\"_blank\">Mer information</a>"
 
@@ -1500,16 +1500,16 @@ msgstr "Använd navigeringsknapparna i den övre delen av dialogrutan eller pilt
 msgid "You cannot delete a theme while it has an active child theme."
 msgstr "Du kan inte radera ett tema när det har ett aktivt barntema."
 
-#: wp-admin/user-edit.php:528
+#: wp-admin/user-edit.php:529
 msgid "Log Out Everywhere"
 msgstr "Logga ut överallt"
 
-#: wp-admin/user-edit.php:510
+#: wp-admin/user-edit.php:511
 msgid "You are only logged in at this location."
 msgstr "Du är endast inloggad från denna plats."
 
-#: wp-admin/user-edit.php:506 wp-admin/user-edit.php:516
-#: wp-admin/user-edit.php:526
+#: wp-admin/user-edit.php:507 wp-admin/user-edit.php:517
+#: wp-admin/user-edit.php:527
 msgid "Sessions"
 msgstr "Sessioner"
 
@@ -1517,28 +1517,28 @@ msgstr "Sessioner"
 msgid "You can log out of other devices, such as your phone or a public computer, by clicking the Log Out Everywhere Else button."
 msgstr "Du kan logga ut från andra enheter, så som din mobiltelefon eller en offentlig dator genom att klicka på knappen Logga ut från alla enheter."
 
-#: wp-admin/user-edit.php:520
+#: wp-admin/user-edit.php:521
 msgid "Did you lose your phone or leave your account logged in at a public computer? You can log out everywhere else, and stay logged in here."
 msgstr "Har du förlorat din telefon eller har du lämnat en offentlig dator fortfarande inloggad? Du kan logga ut från alla andra platser, men förbli inloggad här."
 
 #. translators: 1: User's display name.
-#: wp-admin/user-edit.php:532
+#: wp-admin/user-edit.php:533
 msgid "Log %s out of all locations."
 msgstr "Logga ut %s från alla enheter."
 
-#: wp-admin/user-edit.php:469
+#: wp-admin/user-edit.php:470
 msgid "Generate Password"
 msgstr "Generera lösenord"
 
-#: wp-admin/user-edit.php:463
+#: wp-admin/user-edit.php:464
 msgid "Account Management"
 msgstr "Kontoadministration"
 
-#: wp-admin/user-edit.php:478 wp-admin/user-new.php:412
+#: wp-admin/user-edit.php:479 wp-admin/user-new.php:412
 msgid "Cancel password change"
 msgstr "Avbryt ändring av lösenord"
 
-#: wp-admin/user-edit.php:508 wp-admin/user-edit.php:518
+#: wp-admin/user-edit.php:509 wp-admin/user-edit.php:519
 msgid "Log Out Everywhere Else"
 msgstr "Logga ut på alla andra enheter"
 
@@ -2528,22 +2528,22 @@ msgstr "Visa avatarer"
 msgid "Maximum Rating"
 msgstr "Rekommendation"
 
-#. translators: Content suitability rating: http:bit.ly/89QxZA
+#. translators: Content suitability rating: http://bit.ly/89QxZA
 #: wp-admin/options-discussion.php:218
 msgid "G &#8212; Suitable for all audiences"
 msgstr "Barntillåtet"
 
-#. translators: Content suitability rating: http:bit.ly/89QxZA
+#. translators: Content suitability rating: http://bit.ly/89QxZA
 #: wp-admin/options-discussion.php:220
 msgid "PG &#8212; Possibly offensive, usually for audiences 13 and above"
 msgstr "från 7år"
 
-#. translators: Content suitability rating: http:bit.ly/89QxZA
+#. translators: Content suitability rating: http://bit.ly/89QxZA
 #: wp-admin/options-discussion.php:222
 msgid "R &#8212; Intended for adult audiences above 17"
 msgstr "från 15år"
 
-#. translators: Content suitability rating: http:bit.ly/89QxZA
+#. translators: Content suitability rating: http://bit.ly/89QxZA
 #: wp-admin/options-discussion.php:224
 msgid "X &#8212; Even more mature than above"
 msgstr "från 18år"
@@ -3015,7 +3015,7 @@ msgstr "Globala inställningar"
 msgid "You do not have sufficient permissions to manage options for this site."
 msgstr "Du har inte tillräcklig behörighet för att hantera inställningar för den här webbplatsen."
 
-#: wp-admin/menu.php:212 wp-admin/menu.php:214 wp-admin/user-edit.php:210
+#: wp-admin/menu.php:212 wp-admin/menu.php:214 wp-admin/user-edit.php:211
 #: wp-admin/users.php:456
 msgctxt "user"
 msgid "Add New"
@@ -3395,7 +3395,7 @@ msgid "Edit selected menu"
 msgstr "Redigera vald meny"
 
 #. translators: date and time format for exact current time, mainly about
-#. timezones, see http:php.net/date
+#. timezones, see http://php.net/date
 #: wp-admin/options-general.php:21
 msgctxt "timezone date format"
 msgid "Y-m-d H:i:s"
@@ -3643,7 +3643,7 @@ msgstr "Lösenordet du valde under installationen."
 msgid "Notice:"
 msgstr "Notera:"
 
-#: wp-admin/install.php:149 wp-admin/user-edit.php:186
+#: wp-admin/install.php:149 wp-admin/user-edit.php:187
 msgid "Important:"
 msgstr "Viktigt:"
 
@@ -3978,7 +3978,7 @@ msgstr ""
 "\n"
 "Som ny WordPress-användare bör du gå till <a href=\"%s\">din adminpanel</a> för att ta bort denna sida och sedan skapa nya sidor för ditt innehåll. Ha det så kul!"
 
-#: wp-admin/install.php:169 wp-admin/user-edit.php:497
+#: wp-admin/install.php:169 wp-admin/user-edit.php:498
 #: wp-admin/user-new.php:431
 msgid "Confirm use of weak password"
 msgstr "Bekräfta användning av svagt lösenord"
@@ -3987,7 +3987,7 @@ msgstr "Bekräfta användning av svagt lösenord"
 msgid "Welcome to WordPress. This is your first post. Edit or delete it, then start writing!"
 msgstr "Välkommen till WordPress. Det här är ditt första inlägg. Redigera eller radera det. Sedan kan du börja skriva!"
 
-#: wp-admin/install.php:165 wp-admin/user-edit.php:493
+#: wp-admin/install.php:165 wp-admin/user-edit.php:494
 #: wp-admin/user-new.php:427
 msgid "Confirm Password"
 msgstr "Bekräfta lösenord"
@@ -4485,7 +4485,7 @@ msgstr "1"
 
 #. translators: default GMT offset or timezone string. Must be either a valid
 #. offset (-12 to 14) 	   or a valid timezone string (America/New_York). See
-#. http:us3.php.net/manual/en/timezones.php 	   for all timezone strings
+#. http://us3.php.net/manual/en/timezones.php 	   for all timezone strings
 #. supported by PHP.
 #: wp-admin/includes/schema.php:374
 msgctxt "default GMT offset or timezone string"
@@ -5018,12 +5018,12 @@ msgstr "<code>_none</code> &mdash; samma fönster eller flik."
 msgid "Choose the target frame for your link."
 msgstr "Välj hur din länk ska öppnas."
 
-#. translators: xfn: http:gmpg.org/xfn/
+#. translators: xfn: http://gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:964
 msgid "rel:"
 msgstr "rel:"
 
-#. translators: xfn: http:gmpg.org/xfn/
+#. translators: xfn: http://gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:968 wp-admin/includes/meta-boxes.php:969
 msgid "identity"
 msgstr "identitet"
@@ -5032,113 +5032,113 @@ msgstr "identitet"
 msgid "another web address of mine"
 msgstr "en annan webbsida jag skapat"
 
-#. translators: xfn: http:gmpg.org/xfn/
+#. translators: xfn: http://gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:976 wp-admin/includes/meta-boxes.php:977
 msgid "friendship"
 msgstr "vänskap"
 
-#. translators: xfn: http:gmpg.org/xfn/
+#. translators: xfn: http://gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:979
 msgid "contact"
 msgstr "kontakt"
 
-#. translators: xfn: http:gmpg.org/xfn/
+#. translators: xfn: http://gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:982
 msgid "acquaintance"
 msgstr "bekant"
 
-#. translators: xfn: http:gmpg.org/xfn/
+#. translators: xfn: http://gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:985
 msgid "friend"
 msgstr "vän"
 
-#. translators: xfn: http:gmpg.org/xfn/
+#. translators: xfn: http://gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:988 wp-admin/includes/meta-boxes.php:1021
 #: wp-admin/includes/meta-boxes.php:1044
 msgid "none"
 msgstr "inget"
 
-#. translators: xfn: http:gmpg.org/xfn/
+#. translators: xfn: http://gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:993 wp-admin/includes/meta-boxes.php:994
 msgid "physical"
 msgstr "fysisk"
 
-#. translators: xfn: http:gmpg.org/xfn/
+#. translators: xfn: http://gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:996
 msgid "met"
 msgstr "träffats"
 
-#. translators: xfn: http:gmpg.org/xfn/
+#. translators: xfn: http://gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:1001 wp-admin/includes/meta-boxes.php:1002
 msgid "professional"
 msgstr "arbete"
 
-#. translators: xfn: http:gmpg.org/xfn/
+#. translators: xfn: http://gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:1004
 msgid "co-worker"
 msgstr "arbetskamrat"
 
-#. translators: xfn: http:gmpg.org/xfn/
+#. translators: xfn: http://gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:1007
 msgid "colleague"
 msgstr "kollega"
 
-#. translators: xfn: http:gmpg.org/xfn/
+#. translators: xfn: http://gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:1012 wp-admin/includes/meta-boxes.php:1013
 msgid "geographical"
 msgstr "geografisk"
 
-#. translators: xfn: http:gmpg.org/xfn/
+#. translators: xfn: http://gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:1015
 msgid "co-resident"
 msgstr "samboende"
 
-#. translators: xfn: http:gmpg.org/xfn/
+#. translators: xfn: http://gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:1018
 msgid "neighbor"
 msgstr "granne"
 
-#. translators: xfn: http:gmpg.org/xfn/
+#. translators: xfn: http://gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:1026 wp-admin/includes/meta-boxes.php:1027
 msgid "family"
 msgstr "familj"
 
-#. translators: xfn: http:gmpg.org/xfn/
+#. translators: xfn: http://gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:1032
 msgid "kin"
 msgstr "släkt"
 
-#. translators: xfn: http:gmpg.org/xfn/
+#. translators: xfn: http://gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:1038
 msgid "sibling"
 msgstr "syskon"
 
-#. translators: xfn: http:gmpg.org/xfn/
+#. translators: xfn: http://gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:1041
 msgid "spouse"
 msgstr "make/maka"
 
-#. translators: xfn: http:gmpg.org/xfn/
+#. translators: xfn: http://gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:1049 wp-admin/includes/meta-boxes.php:1050
 msgid "romantic"
 msgstr "romantisk"
 
-#. translators: xfn: http:gmpg.org/xfn/
+#. translators: xfn: http://gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:1052
 msgid "muse"
 msgstr "inspiration"
 
-#. translators: xfn: http:gmpg.org/xfn/
+#. translators: xfn: http://gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:1055
 msgid "crush"
 msgstr "förälskelse"
 
-#. translators: xfn: http:gmpg.org/xfn/
+#. translators: xfn: http://gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:1058
 msgid "date"
 msgstr "träff"
 
-#. translators: xfn: http:gmpg.org/xfn/
+#. translators: xfn: http://gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:1061
 msgid "sweetheart"
 msgstr "älskling"
@@ -5177,7 +5177,7 @@ msgstr "Om du har ett tillägg i .zip-format så kan du installera det genom att
 msgid "Plugin zip file"
 msgstr "Tillägg - ziparkivsfil"
 
-#: wp-admin/includes/misc.php:625 wp-admin/user-edit.php:244
+#: wp-admin/includes/misc.php:625 wp-admin/user-edit.php:245
 msgid "Admin Color Scheme"
 msgstr "Färgschema för adminpanel"
 
@@ -5559,7 +5559,7 @@ msgstr "Ljudformat:"
 msgid "Audio Codec:"
 msgstr "Ljud-codec:"
 
-#. translators: draft saved date format, see http:php.net/date
+#. translators: draft saved date format, see http://php.net/date
 #: wp-admin/includes/misc.php:832
 msgid "g:i:s a"
 msgstr "H:i:s"
@@ -5628,12 +5628,12 @@ msgstr "Ange en länkadress eller klicka för förinställningar ovan."
 msgid "Displayed on attachment pages."
 msgstr "Visas på bilagssidan."
 
-#. translators: xfn: http:gmpg.org/xfn/
+#. translators: xfn: http://gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:1029
 msgid "child"
 msgstr "underordnad"
 
-#. translators: xfn: http:gmpg.org/xfn/
+#. translators: xfn: http://gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:1035
 msgid "parent"
 msgstr "överordnad"
@@ -6203,7 +6203,7 @@ msgid "It looks like you're using an old version of <a href='%s'>%s</a>. For the
 msgstr "Det ser ut som du använder en gammal version av <a href='%s'>%s</a>. För bästa upplevels med WordPress, vänligen uppdatera din webbläsare."
 
 #: wp-admin/includes/class-wp-users-list-table.php:274
-#: wp-admin/user-edit.php:313 wp-admin/user-new.php:305
+#: wp-admin/user-edit.php:314 wp-admin/user-new.php:305
 #: wp-admin/user-new.php:438
 msgid "Role"
 msgstr "Roll"
@@ -6391,7 +6391,7 @@ msgstr[0] "%s inväntar granskning"
 msgstr[1] "%s inväntar granskning"
 
 #. translators: date and time format for recent posts on the dashboard, see
-#. http:php.net/date
+#. http://php.net/date
 #: wp-admin/includes/dashboard.php:762
 msgid "M jS"
 msgstr "j M"
@@ -7499,7 +7499,7 @@ msgid "Deactivate"
 msgstr "Inaktivera"
 
 #: wp-admin/includes/class-wp-ms-users-list-table.php:209
-#: wp-admin/user-edit.php:333
+#: wp-admin/user-edit.php:334
 msgid "Super Admin"
 msgstr "Superadmin"
 
@@ -9989,7 +9989,7 @@ msgstr "Postat"
 msgid "In Response To"
 msgstr "Som svar till"
 
-#. translators: Publish box date format, see http:php.net/date
+#. translators: Publish box date format, see http://php.net/date
 #: wp-admin/edit-form-advanced.php:100 wp-admin/edit-form-advanced.php:117
 #: wp-admin/edit-form-comment.php:89
 #: wp-admin/includes/class-wp-plugin-install-list-table.php:489
@@ -10210,33 +10210,33 @@ msgstr "För mer information:"
 msgid "Overview"
 msgstr "Översikt"
 
-#: wp-admin/about.php:192
+#: wp-admin/about.php:196
 msgid "Go to Dashboard"
 msgstr "Gå till adminpanelen"
 
-#: wp-admin/about.php:175
+#: wp-admin/about.php:179
 msgid "Under the Hood"
 msgstr "Under huven"
 
-#: wp-admin/about.php:189
+#: wp-admin/about.php:193
 msgid "Return to Dashboard &rarr; Updates"
 msgstr "Återgå till Adminpanel &rarr; Uppdateringar"
 
-#: wp-admin/about.php:192
+#: wp-admin/about.php:196
 msgid "Go to Dashboard &rarr; Home"
 msgstr "Gå till Adminpanel &rarr; Hem"
 
-#: wp-admin/about.php:189
+#: wp-admin/about.php:193
 msgid "Return to Updates"
 msgstr "Återgå till uppdateringar"
 
-#: wp-admin/about.php:204
+#: wp-admin/about.php:208
 msgid "Maintenance Release"
 msgid_plural "Maintenance Releases"
 msgstr[0] "Underhållsrelease"
 msgstr[1] "Underhållsreleaser"
 
-#: wp-admin/about.php:205
+#: wp-admin/about.php:209
 msgid "Security Release"
 msgid_plural "Security Releases"
 msgstr[0] "Säkerhetsrelease"
@@ -10246,7 +10246,7 @@ msgstr[1] "Säkerhetsreleaser"
 msgid "What&#8217;s New"
 msgstr "Vad är nytt"
 
-#: wp-admin/about.php:111 wp-admin/about.php:206
+#: wp-admin/about.php:111 wp-admin/about.php:210
 msgid "Maintenance and Security Release"
 msgid_plural "Maintenance and Security Releases"
 msgstr[0] "Underhålls och säkerhetsrelease"
@@ -10254,19 +10254,19 @@ msgstr[1] "Underhålls och säkerhetsreleaser"
 
 #. translators: 1: WordPress version number, 2: plural number of bugs. Singular
 #. security issue.
-#: wp-admin/about.php:116 wp-admin/about.php:217
+#: wp-admin/about.php:120 wp-admin/about.php:221
 msgid "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bugs."
 msgstr[0] "<strong>Version %1$s</strong> åtgärdar en säkerhetsrisk och %2$s bugg."
 msgstr[1] "<strong>Version %1$s</strong> åtgärdar en säkerhetsrisk och %2$s buggar."
 
 #: wp-admin/about.php:114 wp-admin/about.php:118 wp-admin/about.php:122
-#: wp-admin/about.php:224
+#: wp-admin/about.php:126 wp-admin/about.php:228
 msgid "For more information, see <a href=\"%s\">the release notes</a>."
 msgstr "För mer information, se <a href=\"%s\">detaljer för releasen</a>."
 
 #. translators: 1: WordPress version number, 2: plural number of bugs.
-#: wp-admin/about.php:213
+#: wp-admin/about.php:217
 msgid "<strong>Version %1$s</strong> addressed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed %2$s bugs."
 msgstr[0] "<strong>Version %1$s</strong> åtgärdar %2$s bugg."
@@ -10307,14 +10307,14 @@ msgstr "<a href=\"https://wordpress.org/support/\" target=\"_blank\">Supportforu
 
 #. translators: 1: WordPress version number, 2: plural number of bugs. More
 #. than one security issue.
-#: wp-admin/about.php:120 wp-admin/about.php:221
+#: wp-admin/about.php:124 wp-admin/about.php:225
 msgid "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bugs."
 msgstr[0] "<strong>Version %1$s</strong> åtgärdar ett par sårbarheter och %2$s bugg."
 msgstr[1] "<strong>Version %1$s</strong> åtgärdar ett par sårbarheter och %2$s buggar."
 
 #. translators: 1: WordPress version number.
-#: wp-admin/about.php:112 wp-admin/about.php:209
+#: wp-admin/about.php:112 wp-admin/about.php:116 wp-admin/about.php:213
 msgid "<strong>Version %1$s</strong> addressed a security issue."
 msgid_plural "<strong>Version %1$s</strong> addressed some security issues."
 msgstr[0] "<strong>Version %1$s</strong> åtgärdar en sårbarhet."

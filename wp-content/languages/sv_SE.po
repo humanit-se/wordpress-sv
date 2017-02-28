@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/1.0-alpha-1100\n"
+"X-Generator: GlotPress/2.1.0-alpha\n"
 "Project-Id-Version: 4.3.x\n"
 
 #: wp-signup.php:135
@@ -2463,7 +2463,7 @@ msgstr "Föreslagen inbäddning #%d"
 msgid "Suggested image #%d"
 msgstr "Föreslagen bild #%d"
 
-#. translators: revision date format, see http:php.net/date
+#. translators: revision date format, see http://php.net/date
 #: wp-includes/post-template.php:1757 wp-includes/post-template.php:1793
 msgctxt "revision date format"
 msgid "F j, Y @ H:i:s"
@@ -3767,8 +3767,8 @@ msgstr "f m"
 msgid "PM"
 msgstr "e m"
 
-#. translators: $thousands_sep argument for http:php.net/number_format, default
-#. is ,
+#. translators: $thousands_sep argument for http://php.net/number_format,
+#. default is ,
 #: wp-includes/locale.php:174
 msgid "number_format_thousands_sep"
 msgstr " "
@@ -3793,8 +3793,8 @@ msgstr "Underhåll"
 msgid "Briefly unavailable for scheduled maintenance. Check back in a minute."
 msgstr "Otillgänglig temporärt pga planerat underhållsarbete. Titta tillbaka om någon minut."
 
-#. translators: $dec_point argument for http:php.net/number_format, default is
-#. .
+#. translators: $dec_point argument for http://php.net/number_format, default
+#. is .
 #: wp-includes/locale.php:178
 msgid "number_format_decimal_point"
 msgstr ","
@@ -3836,17 +3836,17 @@ msgstr "Flöde för %1$s %2$s %3$s"
 msgid "Drop files to upload"
 msgstr "Släpp filer för att ladda upp"
 
-#. translators: localized date format, see http:php.net/date
+#. translators: localized date format, see http://php.net/date
 #: wp-includes/locale.php:358
 msgid "F j, Y"
 msgstr "j F, Y"
 
-#. translators: localized time format, see http:php.net/date
+#. translators: localized time format, see http://php.net/date
 #: wp-includes/locale.php:360
 msgid "g:i a"
 msgstr "H:i"
 
-#. translators: localized date and time format, see http:php.net/date
+#. translators: localized date and time format, see http://php.net/date
 #: wp-includes/locale.php:362
 msgid "F j, Y g:i a"
 msgstr "j F, Y H:i"
