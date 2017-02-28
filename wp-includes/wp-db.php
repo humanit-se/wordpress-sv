@@ -1050,12 +1050,7 @@ class wpdb {
 <p>Är du osäker på vad dessa termer betyder så bör du kanske kontakta ditt webbhotell. Behöver du fortfarande hjälp så kan du besöka <a href=\'http://wp-support.se/forum/\'>WP-Support Sveriges forum</a>.</p>
 '/*/WP_I18N_DB_CONN_ERROR*/, $this->dbhost ), 'db_connect_fail' );
 
-			// If show errors is disabled then we need to die anyway as we don't have a working DB connection
-			// unless we're trying to test the initial connection, in which case setup-config.php will handle.
-			if ( defined( 'WP_SETUP_CONFIG' ) )
-				return;
-
-			die();
+			return;
 		}
 
 		$this->set_charset( $this->dbh );
