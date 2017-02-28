@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/0.1\n"
+"X-Generator: GlotPress/1.0-alpha-1000\n"
 "Project-Id-Version: Twenty Fourteen\n"
 
 #: 404.php:17
@@ -134,6 +134,8 @@ msgstr "Ledsen, inget matchade dina sökkriterier. Vänligen försök igen med a
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr "Det verkar inte som om vi kan hitta det du letar efter. Kanske kan en sökning hjälpa."
 
+#. #-#-#-#-#  twentyfourteen.pot (Twenty Fourteen 1.0)  #-#-#-#-#
+#. Author URI of the plugin/theme
 #: footer.php:21
 msgid "http://wordpress.org/"
 msgstr "http://wordpress.org/"
@@ -174,6 +176,8 @@ msgstr "Widgetfält, sidfot"
 msgid "Appears in the footer section of the site."
 msgstr "Visas i sidfoten för webbplatsen."
 
+#. Translators: If there are characters in your language that are not supported
+#. by Lato, translate this to 'off'. Do not translate into your own language.
 #: functions.php:217
 msgctxt "Lato font: on or off"
 msgid "on"
@@ -253,6 +257,8 @@ msgstr "Rutnät"
 msgid "Slider"
 msgstr "Slider"
 
+#. #-#-#-#-#  twentyfourteen.pot (Twenty Fourteen 1.0)  #-#-#-#-#
+#. Theme Name of the plugin/theme
 #: inc/customizer.php:98
 msgid "Twenty Fourteen"
 msgstr "Twenty Fourteen"
@@ -379,17 +385,22 @@ msgstr "Sökresultat för: %s"
 msgid "Tag Archives: %s"
 msgstr "Etikettarkiv: %s"
 
+#. Theme URI of the plugin/theme
 msgid "http://wordpress.org/themes/twentyfourteen"
 msgstr "http://wordpress.org/themes/twentyfourteen"
 
+#. Description of the plugin/theme
 msgid "In 2014, our default theme lets you create a responsive magazine website with a sleek, modern design. Feature your favorite homepage content in either a grid or a slider. Use the three widget areas to customize your website, and change your content's layout with a full-width page template and a contributor page to show off your authors. Creating a magazine website with WordPress has never been easier."
 msgstr "2014 låter vårt standardtema dig att skapa en webbplats med en layout av ett responsivt magasintema med elegant och modern design. Visa dina favoriter som utvald sektion i format av  ett rutnät eller en slider. Använd widgetfälten för att anpassa din webbplats och ändra innehållslayouten med en fullbreddsmall och en författarmall för att visa upp dina medarbetare. Att skapa en webbplats i formatet som magasin har aldrig varit enklare."
 
+#. Author of the plugin/theme
 msgid "the WordPress team"
 msgstr "the WordPress team"
 
+#. Template Name of the plugin/theme
 msgid "Contributor Page"
 msgstr "Sida med inlägg"
 
+#. Template Name of the plugin/theme
 msgid "Full Width Page"
 msgstr "Sida, fullbredd"

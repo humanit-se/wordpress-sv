@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/0.1\n"
+"X-Generator: GlotPress/1.0-alpha-1000\n"
 "Project-Id-Version: 3.8.x\n"
 
 #: wp-content/plugins/akismet/admin.php:50
@@ -268,7 +268,7 @@ msgstr "Automatiska rad- och styckebrytningar, e-postadressen visas aldrig. Till
 msgid "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this account\">Log out &raquo;</a>"
 msgstr "Inloggad som <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Logga ut från det här kontot\">Logga ut &raquo;</a>"
 
-#: wp-includes/theme-compat/comments-popup.php:80 wp-login.php:688
+#: wp-includes/theme-compat/comments-popup.php:80 wp-login.php:708
 msgid "E-mail"
 msgstr "E-postadress"
 
@@ -460,58 +460,59 @@ msgstr "<strong>FEL</strong>: Ditt konto har fått anmärkning för skräppostni
 msgid "Cannot create a user with an empty login name."
 msgstr "Kan inte skapa en användare med ett tomt inloggningsnamn."
 
+#. translators: 1: first name, 2: last name
 #: wp-includes/user.php:1363
 msgctxt "Display name based on first name and last name"
 msgid "%1$s %2$s"
 msgstr "%1$s %2$s"
 
-#: wp-includes/user.php:1468
+#: wp-includes/user.php:1471
 msgid "Invalid user ID."
 msgstr "Ogiltigt användar-ID"
 
-#: wp-includes/user.php:1555
+#: wp-includes/user.php:1558
 msgid "AIM"
 msgstr "AIM"
 
-#: wp-includes/user.php:1556
+#: wp-includes/user.php:1559
 msgid "Yahoo IM"
 msgstr "Yahoo IM"
 
-#: wp-includes/user.php:1557
+#: wp-includes/user.php:1560
 msgid "Jabber / Google Talk"
 msgstr "Jabber / Google Talk"
 
-#: wp-includes/user.php:1602 wp-includes/user.php:1605
-#: wp-includes/user.php:1609 wp-includes/user.php:1620
-#: wp-includes/user.php:1636
+#: wp-includes/user.php:1605 wp-includes/user.php:1608
+#: wp-includes/user.php:1612 wp-includes/user.php:1623
+#: wp-includes/user.php:1639
 msgid "Invalid key"
 msgstr "Ogiltig nyckel"
 
-#: wp-includes/user.php:1669
+#: wp-includes/user.php:1672
 msgid "<strong>ERROR</strong>: Please enter a username."
 msgstr "<strong>FEL</strong>: Var vänlig och ange ett användarnamn."
 
-#: wp-includes/user.php:1671
+#: wp-includes/user.php:1674
 msgid "<strong>ERROR</strong>: This username is invalid because it uses illegal characters. Please enter a valid username."
 msgstr "<strong>FEL</strong>: Användarnamnet är ogiltigt eftersom det innehåller icke tillåtna tecken. Var vänlig och ange ett riktigt användarnamn."
 
-#: wp-includes/user.php:1674
+#: wp-includes/user.php:1677
 msgid "<strong>ERROR</strong>: This username is already registered. Please choose another one."
 msgstr "<strong>FEL</strong>: Det här användarnamnet finns redan registrerat. Vänligen välj ett annat."
 
-#: wp-includes/user.php:1679
+#: wp-includes/user.php:1682
 msgid "<strong>ERROR</strong>: Please type your e-mail address."
 msgstr "<strong>FEL</strong>: Var vänlig och ange din e-postadress."
 
-#: wp-includes/user.php:1681
+#: wp-includes/user.php:1684
 msgid "<strong>ERROR</strong>: The email address isn&#8217;t correct."
 msgstr "<strong>FEL</strong>: E-postadressen är inte riktig."
 
-#: wp-includes/user.php:1684
+#: wp-includes/user.php:1687
 msgid "<strong>ERROR</strong>: This email is already registered, please choose another one."
 msgstr "<strong>FEL</strong>: Den här e-postadressen är redan registrerad, var vänlig och välj en annan."
 
-#: wp-includes/user.php:1697
+#: wp-includes/user.php:1700
 msgid "<strong>ERROR</strong>: Couldn&#8217;t register you&hellip; please contact the <a href=\"mailto:%s\">webmaster</a> !"
 msgstr "<strong>FEL</strong>: Kunde inte registrera dig&hellip; vänligen kontakta <a href=\"mailto:%s\">webmastern</a> !"
 
@@ -527,7 +528,7 @@ msgstr "Sidopanel %d"
 msgid "Sidebar"
 msgstr "Sidopanel"
 
-#: wp-includes/wp-db.php:836
+#: wp-includes/wp-db.php:881
 msgid ""
 "<h1>Can&#8217;t select database</h1>\n"
 "<p>We were able to connect to the database server (which means your username and password is okay) but not able to select the <code>%1$s</code> database.</p>\n"
@@ -547,15 +548,15 @@ msgstr ""
 "</ul>\n"
 "<p>Om du inte vet hur du skapar en databas så bör du <strong>kontakta ditt webbhotell</strong>. Om allt annat misslyckas så kan du hitta hjälp på <a href=\"http://wpsv.se/forum/\">WordPress Sveriges forum</a> eller <a href=\"http://wordpress.org/support/\">WordPress Support Forums</a> (engelska).</p>"
 
-#: wp-includes/wp-db.php:1031
+#: wp-includes/wp-db.php:1076
 msgid "WordPress database error %1$s for query %2$s made by %3$s"
 msgstr "WordPress databasfel för %1$s förfrågan %2$s skapat av %3$s"
 
-#: wp-includes/wp-db.php:1033
+#: wp-includes/wp-db.php:1078
 msgid "WordPress database error %1$s for query %2$s"
 msgstr "WordPress databasfel för %1$s förfrågan %2$s"
 
-#: wp-includes/wp-db.php:1157
+#: wp-includes/wp-db.php:1202
 msgid ""
 "\n"
 "<h1>Error establishing a database connection</h1>\n"
@@ -567,6 +568,7 @@ msgid ""
 "</ul>\n"
 "<p>If you're unsure what these terms mean you should probably contact your host. If you still need help you can always visit the <a href='http://wordpress.org/support/'>WordPress Support Forums</a>.</p>\n"
 msgstr ""
+"\n"
 "<h1>Problem med att skapa en databasanslutning</h1>\n"
 "<p>Detta tyder på att användarnamnet och/eller lösenordet i din <code>wp-config.php</code>-fil är felaktigt eller att vi inte kan ansluta mot servern på <code>%s</code>. Detta kan bero på att din databasserver är nere.</p>\n"
 "<ul>\n"
@@ -576,7 +578,7 @@ msgstr ""
 "</ul>\n"
 "<p>Är du osäker på vad dessa termer betyder så bör du kanske kontakta ditt webbhotell. Behöver du fortfarande hjälp så kan du besöka <a href='http://wpsv.se/forum/'>WordPress Sveriges forum</a>.</p>\n"
 
-#: wp-includes/wp-db.php:1675
+#: wp-includes/wp-db.php:2389
 msgid "<strong>ERROR</strong>: WordPress %1$s requires MySQL %2$s or higher"
 msgstr "<strong>FEL</strong>: WordPress %1$s kräver MySQL %2$s eller senare"
 
@@ -676,91 +678,91 @@ msgstr "Användarnamn eller E-post:"
 msgid "Get New Password"
 msgstr "Få ett nytt lösenord"
 
-#: wp-login.php:579
+#: wp-login.php:597
 msgid "The passwords do not match."
 msgstr "Lösenorden matchar inte."
 
-#: wp-login.php:593
+#: wp-login.php:612
 msgid "Password Reset"
 msgstr "Återställning av lösenord"
 
-#: wp-login.php:593
+#: wp-login.php:612
 msgid "Your password has been reset."
 msgstr "Ditt lösenord har återställts."
 
-#: wp-login.php:601 wp-login.php:620
+#: wp-login.php:620 wp-login.php:640
 msgid "Reset Password"
 msgstr "Återställ lösenord"
 
-#: wp-login.php:601
+#: wp-login.php:620
 msgid "Enter your new password below."
 msgstr "Ange ditt nya lösenord nedan."
 
-#: wp-login.php:608
+#: wp-login.php:627
 msgid "New password"
 msgstr "Nytt lösenord"
 
-#: wp-login.php:612
+#: wp-login.php:631
 msgid "Confirm new password"
 msgstr "Bekräfta nytt lösenord"
 
-#: wp-login.php:617
+#: wp-login.php:636
 msgid "Hint: The password should be at least seven characters long. To make it stronger, use upper and lower case letters, numbers and symbols like ! \" ? $ % ^ &amp; )."
 msgstr "Tips: Ditt lösenord bör innehålla minst sju tecken. För att göra det säkrare använd stora som små bokstäver, siffror och symboler så som ! \" ? $ % ^ &amp; )."
 
-#: wp-login.php:679
+#: wp-login.php:699
 msgid "Registration Form"
 msgstr "Registreringsformulär"
 
-#: wp-login.php:679
+#: wp-login.php:699
 msgid "Register For This Site"
 msgstr "Registrera dig på den här webbplatsen"
 
-#: wp-login.php:699
+#: wp-login.php:719
 msgid "A password will be e-mailed to you."
 msgstr "Ett lösenord kommer att skickas till dig per e-post."
 
-#: wp-login.php:707 wp-login.php:882
+#: wp-login.php:727 wp-login.php:902
 msgid "Password Lost and Found"
 msgstr "Ändra lösenord"
 
-#: wp-login.php:707 wp-login.php:882
+#: wp-login.php:727 wp-login.php:902
 msgid "Lost your password?"
 msgstr "Glömt lösenordet?"
 
-#: wp-login.php:751
+#: wp-login.php:771
 msgid "<strong>ERROR</strong>: Cookies are blocked or not supported by your browser. You must <a href='http://www.google.com/cookies.html'>enable cookies</a> to use WordPress."
 msgstr "<strong>FEL</strong>: Cookies är blockerade eller så kan inte din webbläsare hantera dom. Du måste <a href='http://www.google.com/cookies.html'>aktivera cookies</a> för att använda WordPress."
 
-#: wp-login.php:769
+#: wp-login.php:789
 msgid "You have logged in successfully."
 msgstr "Du har loggats in."
 
-#: wp-login.php:803
+#: wp-login.php:823
 msgid "Session expired. Please log in again. You will not move away from this page."
 msgstr "Sessionen har gått ut. Vänligen logga in igen. Du kommer inte att förflyttas från denna sida."
 
-#: wp-login.php:807
+#: wp-login.php:827
 msgid "You are now logged out."
 msgstr "Du är nu utloggad."
 
-#: wp-login.php:809
+#: wp-login.php:829
 msgid "User registration is currently not allowed."
 msgstr "Registreringsfunktionen är avstängd just nu."
 
-#: wp-login.php:811
+#: wp-login.php:831
 msgid "Check your e-mail for the confirmation link."
 msgstr "Kolla efter bekräftelselänken i din inkorg."
 
-#: wp-login.php:813
+#: wp-login.php:833
 msgid "Check your e-mail for your new password."
 msgstr "Kolla efter ditt nya lösenord i din e-post."
 
-#: wp-login.php:815
+#: wp-login.php:835
 msgid "Registration complete. Please check your e-mail."
 msgstr "Registreringen är slutförd. Kontrollera nu din e-post."
 
-#: wp-login.php:817
+#: wp-login.php:837
 msgid "<strong>You have successfully updated WordPress!</strong> Please log back in to experience the awesomeness."
 msgstr "<strong>WordPress har uppdaterats!</strong> Logga in igen för att ta del av allt grymt som erbjuds."
 
@@ -2213,30 +2215,37 @@ msgstr "<strong>FEL</strong>: <code>$table_prefix</code> i <code>wp-config.php</
 msgid "The site you have requested is not installed properly. Please contact the system administrator."
 msgstr "webbplatsen du har efterfrågat är inte installerad korrekt. Var vänlig kontakta systemadministratören."
 
+#. translators: one-letter abbreviation of the weekday
 #: wp-includes/locale.php:109
 msgid "S_Sunday_initial"
 msgstr "s"
 
+#. translators: one-letter abbreviation of the weekday
 #: wp-includes/locale.php:110
 msgid "M_Monday_initial"
 msgstr "m"
 
+#. translators: one-letter abbreviation of the weekday
 #: wp-includes/locale.php:111
 msgid "T_Tuesday_initial"
 msgstr "ti"
 
+#. translators: one-letter abbreviation of the weekday
 #: wp-includes/locale.php:112
 msgid "W_Wednesday_initial"
 msgstr "o"
 
+#. translators: one-letter abbreviation of the weekday
 #: wp-includes/locale.php:113
 msgid "T_Thursday_initial"
 msgstr "to"
 
+#. translators: one-letter abbreviation of the weekday
 #: wp-includes/locale.php:114
 msgid "F_Friday_initial"
 msgstr "f"
 
+#. translators: one-letter abbreviation of the weekday
 #: wp-includes/locale.php:115
 msgid "S_Saturday_initial"
 msgstr "l"
@@ -2257,27 +2266,35 @@ msgstr "f m"
 msgid "PM"
 msgstr "e m"
 
+#. translators: $thousands_sep argument for http:php.net/number_format, default
+#. is ,
 #: wp-includes/locale.php:173
 msgid "number_format_thousands_sep"
 msgstr " "
 
+#. translators: $dec_point argument for http:php.net/number_format, default is
+#. .
 #: wp-includes/locale.php:177
 msgid "number_format_decimal_point"
 msgstr ","
 
+#. translators: 'rtl' or 'ltr'. This sets the text direction for WordPress.
 #: wp-includes/locale.php:184
 msgctxt "text direction"
 msgid "ltr"
 msgstr "ltr"
 
+#. translators: localized date format, see http:php.net/date
 #: wp-includes/locale.php:351
 msgid "F j, Y"
 msgstr "j F, Y"
 
+#. translators: localized time format, see http:php.net/date
 #: wp-includes/locale.php:353
 msgid "g:i a"
 msgstr "H:i"
 
+#. translators: localized date and time format, see http:php.net/date
 #: wp-includes/locale.php:355
 msgid "F j, Y g:i a"
 msgstr "j F, Y H:i"
@@ -2431,6 +2448,10 @@ msgstr "Tillåtna filer"
 msgid "Select"
 msgstr "Välj"
 
+#. translators: This is a would-be plural string used in the media manager.
+#. If there is not a word you can use in your language to avoid issues with
+#. the 		   lack of plural support here, turn it into "selected: %d" then
+#. translate it.
 #: wp-includes/media.php:1895
 msgid "%d selected"
 msgstr "%d valda"
@@ -2931,6 +2952,8 @@ msgstr "Du bör ange en &#8217;nonce&#8217; åtgärd som skall verifieras med hj
 msgid "New trackback on your post \"%s\""
 msgstr "En ny trackback till ditt inlägg \\\"%s\\\""
 
+#. translators: 1: website name, 2: author IP, 3: author domain
+#. translators: 1: comment author, 2: author IP, 3: author domain
 #: wp-includes/pluggable.php:1093 wp-includes/pluggable.php:1103
 msgid "Website: %1$s (IP: %2$s , %3$s)"
 msgstr "Webbplats: %1$s (IP: %2$s, %3$s)"
@@ -2949,6 +2972,7 @@ msgstr "Utdrag:"
 msgid "You can see all trackbacks on this post here: "
 msgstr "Alla trackbacks till det här inlägget:"
 
+#. translators: 1: blog name, 2: post title
 #: wp-includes/pluggable.php:1098
 msgid "[%1$s] Trackback: \"%2$s\""
 msgstr "[%1$s] Trackback: \"%2$s\""
@@ -2961,6 +2985,7 @@ msgstr "En ny ping till ditt inlägg \"%s\""
 msgid "You can see all pingbacks on this post here: "
 msgstr "Alla pingbackar till det här inlägget:"
 
+#. translators: 1: blog name, 2: post title
 #: wp-includes/pluggable.php:1108
 msgid "[%1$s] Pingback: \"%2$s\""
 msgstr "[%1$s] Pingback: \"%2$s\""
@@ -2969,6 +2994,7 @@ msgstr "[%1$s] Pingback: \"%2$s\""
 msgid "New comment on your post \"%s\""
 msgstr "En ny kommentar till ditt inlägg \"%s\""
 
+#. translators: 1: comment author, 2: author IP, 3: author domain
 #: wp-includes/pluggable.php:1113 wp-includes/pluggable.php:1215
 msgid "Author : %1$s (IP: %2$s , %3$s)"
 msgstr "Författare: %1$s (IP: %2$s, %3$s)"
@@ -2989,6 +3015,7 @@ msgstr "Kommentar:"
 msgid "You can see all comments on this post here: "
 msgstr "Alla kommentarer till det här inlägget:"
 
+#. translators: 1: blog name, 2: post title
 #: wp-includes/pluggable.php:1120
 msgid "[%1$s] Comment: \"%2$s\""
 msgstr "[%1$s] Kommentar: \"%2$s\""
@@ -3178,26 +3205,32 @@ msgstr "Det här innehållet är lösenordsskyddat. Vänligen ange ditt lösenor
 msgid "Submit"
 msgstr "Skicka"
 
+#. translators: revision date format, see http:php.net/date
 #: wp-includes/post-template.php:1327
 msgctxt "revision date format"
 msgid "j F, Y @ G:i"
 msgstr "j F, Y @ H:i"
 
+#. translators: 1: date
 #: wp-includes/post-template.php:1329
 msgctxt "post revision title extra"
 msgid "%1$s [Autosave]"
 msgstr "%1$s [Autospar]"
 
+#. translators: 1: date
 #: wp-includes/post-template.php:1331
 msgctxt "post revision title extra"
 msgid "%1$s [Current Revision]"
 msgstr "%1$s [Nuvarande version]"
 
+#. translators: revision date format, see http:php.net/date
 #: wp-includes/post-template.php:1367
 msgctxt "revision date format"
 msgid "j F, Y @ G:i:s"
 msgstr "j F, Y @ H:i:s"
 
+#. translators: post revision title: 1: author avatar, 2: author name, 3: time
+#. ago, 4: date
 #: wp-includes/post-template.php:1377
 msgctxt "post revision title"
 msgid "%1$s %2$s, %3$s ago (%4$s)"
@@ -3538,6 +3571,11 @@ msgstr "I <code>%1$s</code>, använd metoden <code>%2$s</code>, inte funktionen 
 msgid "http://codex.wordpress.org/Function_Reference/is_main_query"
 msgstr "http://codex.wordpress.org/Function_Reference/is_main_query"
 
+#. translators: This is a comma-separated list of very common words that should
+#. be excluded from a search, like a, an, and the. These are usually called
+#. "stopwords". You should not simply translate these individual words into
+#. your language. Instead, look for and provide commonly accepted stopwords in
+#. your language.
 #: wp-includes/query.php:2034
 msgctxt "Comma-separated list of search stopwords in your language"
 msgid "about,an,are,as,at,be,by,com,for,from,how,in,is,it,of,on,or,that,the,this,to,was,what,when,where,who,will,with,www"
@@ -3767,7 +3805,7 @@ msgstr "Sätt på ljud"
 msgid "Captions/Subtitles"
 msgstr "Textning"
 
-#: wp-includes/script-loader.php:321 wp-login.php:616
+#: wp-includes/script-loader.php:321 wp-login.php:635
 msgid "Strength indicator"
 msgstr "Indikator för styrka"
 
@@ -3779,6 +3817,7 @@ msgstr "Väldigt svagt"
 msgid "Weak"
 msgstr "Svagt"
 
+#. translators: password strength
 #: wp-includes/script-loader.php:325
 msgctxt "password strength"
 msgid "Medium"
@@ -3832,6 +3871,7 @@ msgstr "Tidsinställ för:"
 msgid "Published on:"
 msgstr "Publicerat den:"
 
+#. translators: 1: month, 2: day, 3: year, 4: hour, 5: minute
 #: wp-includes/script-loader.php:420
 msgid "%1$s %2$s, %3$s @ %4$s : %5$s"
 msgstr "%1$s %2$s, %3$s @ %4$s : %5$s"
@@ -3937,11 +3977,17 @@ msgstr ""
 "Vill du radera den här menyn permanent? \n"
 " 'Avbryt' för att avbryta, 'OK' för att radera."
 
+#. translators: If there are characters in your language that are not supported
+#. by Open Sans, translate this to 'off'. Do not translate into your own
+#. language.
 #: wp-includes/script-loader.php:564
 msgctxt "Open Sans font: on or off"
 msgid "on"
 msgstr "on"
 
+#. translators: To add an additional Open Sans character subset specific to
+#. your language, translate this to 'greek', 'cyrillic' or 'vietnamese'. Do not
+#. translate into your own language.
 #: wp-includes/script-loader.php:570
 msgctxt "Open Sans font: add new subset (greek, cyrillic, vietnamese)"
 msgid "no-subset"
@@ -4050,79 +4096,6 @@ msgstr "Kunde inte öppna hantering för fopen() till %s"
 #: wp-includes/class-http.php:887 wp-includes/class-http.php:1262
 msgid "Failed to write request to temporary file."
 msgstr "Misslyckades att skriva förfrågning till temporär fil."
-
-#: wp-includes/class-pop3.php:82
-msgid "No server specified"
-msgstr "Ingen server angiven"
-
-#: wp-includes/class-pop3.php:90 wp-includes/class-pop3.php:102
-#: wp-includes/class-pop3.php:123 wp-includes/class-pop3.php:246
-#: wp-includes/class-pop3.php:300 wp-includes/class-pop3.php:311
-#: wp-includes/class-pop3.php:359 wp-includes/class-pop3.php:393
-#: wp-includes/class-pop3.php:426 wp-includes/class-pop3.php:525
-#: wp-includes/class-pop3.php:548
-msgid "Error "
-msgstr "Fel "
-
-#: wp-includes/class-pop3.php:115
-msgid "no login ID submitted"
-msgstr "Inget användarnamn angivet"
-
-#: wp-includes/class-pop3.php:118 wp-includes/class-pop3.php:138
-msgid "connection not established"
-msgstr "anslutningen är inte upprättad"
-
-#: wp-includes/class-pop3.php:135 wp-includes/class-pop3.php:171
-msgid "No password submitted"
-msgstr "Inget lösenord angivet"
-
-#: wp-includes/class-pop3.php:143
-msgid "Authentication failed"
-msgstr "Autentisering misslyckades"
-
-#: wp-includes/class-pop3.php:162 wp-includes/class-pop3.php:205
-#: wp-includes/class-pop3.php:230 wp-includes/class-pop3.php:272
-#: wp-includes/class-pop3.php:346 wp-includes/class-pop3.php:386
-#: wp-includes/class-pop3.php:416 wp-includes/class-pop3.php:450
-#: wp-includes/class-pop3.php:513 wp-includes/class-pop3.php:578
-msgid "No connection to server"
-msgstr "Ingen förbindelse med servern"
-
-#: wp-includes/class-pop3.php:168
-msgid "No login ID submitted"
-msgstr "Inget användarnamn angivet"
-
-#: wp-includes/class-pop3.php:176
-msgid "No server banner"
-msgstr "Inget serverbanner"
-
-#: wp-includes/class-pop3.php:176 wp-includes/class-pop3.php:186
-msgid "abort"
-msgstr "avbryt"
-
-#: wp-includes/class-pop3.php:186
-msgid "apop authentication failed"
-msgstr "apop-inloggning misslyckades"
-
-#: wp-includes/class-pop3.php:323
-msgid "Premature end of list"
-msgstr "För tidigt slut på lista"
-
-#: wp-includes/class-pop3.php:456
-msgid "Empty command string"
-msgstr "Tomt kommando"
-
-#: wp-includes/class-pop3.php:476
-msgid "connection does not exist"
-msgstr "Ingen förbindelse"
-
-#: wp-includes/class-pop3.php:583
-msgid "No msg number submitted"
-msgstr "Inget meddelandenummer angivet"
-
-#: wp-includes/class-pop3.php:589
-msgid "Command failed "
-msgstr "Kommandot misslyckades "
 
 #: wp-includes/class-wp-admin-bar.php:105
 msgid "The menu ID should not be empty."
@@ -4264,6 +4237,7 @@ msgstr "Repetera vertikalt"
 msgid "Background Position"
 msgstr "Position för bakgrund"
 
+#. translators: alignment
 #: wp-includes/class-wp-customize-manager.php:856
 #: wp-includes/js/tinymce/langs/wp-langs.php:82
 #: wp-includes/js/tinymce/langs/wp-langs.php:375
@@ -4272,6 +4246,7 @@ msgstr "Position för bakgrund"
 msgid "Left"
 msgstr "Vänster"
 
+#. translators: alignment
 #: wp-includes/class-wp-customize-manager.php:857
 #: wp-includes/js/tinymce/langs/wp-langs.php:83
 #: wp-includes/js/tinymce/langs/wp-langs.php:454
@@ -4280,6 +4255,7 @@ msgstr "Vänster"
 msgid "Center"
 msgstr "Centrerat"
 
+#. translators: alignment
 #: wp-includes/class-wp-customize-manager.php:858
 #: wp-includes/js/tinymce/langs/wp-langs.php:84
 #: wp-includes/js/tinymce/langs/wp-langs.php:376
@@ -4342,112 +4318,118 @@ msgstr "Startsida"
 msgid "Posts page"
 msgstr "Inläggssida"
 
-#: wp-includes/class-wp-editor.php:114 wp-includes/class-wp-editor.php:699
+#: wp-includes/class-wp-editor.php:108 wp-includes/class-wp-editor.php:693
 msgctxt "Name for the Text editor tab (formerly HTML)"
 msgid "Text"
 msgstr "Text"
 
-#: wp-includes/class-wp-editor.php:115 wp-includes/class-wp-editor.php:698
+#: wp-includes/class-wp-editor.php:109 wp-includes/class-wp-editor.php:692
 msgid "Visual"
 msgstr "Visuell"
 
-#: wp-includes/class-wp-editor.php:296
+#. translators: These languages show up in the spellchecker drop-down menu, in
+#. the order specified, and with the first 					language listed being the
+#. default language. They must be comma-separated and take the format of
+#. name=code, where name 					is the language name (which you may
+#. internationalize), and code is a valid ISO 639 language code. Please test
+#. the 					spellchecker with your values.
+#: wp-includes/class-wp-editor.php:290
 msgid "English=en,Danish=da,Dutch=nl,Finnish=fi,French=fr,German=de,Italian=it,Polish=pl,Portuguese=pt,Spanish=es,Swedish=sv"
 msgstr "Svenska=sv,Engelska=en,Danska=da,Holländska=nl,Finska=fi,Franska=fr,Tyska=de,Italienska=it,Polska=pl,Portugisiska=pt,Spanska=es"
 
-#: wp-includes/class-wp-editor.php:689
+#: wp-includes/class-wp-editor.php:683
 #: wp-includes/js/tinymce/langs/wp-langs.php:21
 #: wp-includes/script-loader.php:339 wp-includes/script-loader.php:425
 msgid "Update"
 msgstr "Uppdatera"
 
-#: wp-includes/class-wp-editor.php:689
+#: wp-includes/class-wp-editor.php:683
 #: wp-includes/js/tinymce/langs/wp-langs.php:121
 msgid "Save"
 msgstr "Spara"
 
-#: wp-includes/class-wp-editor.php:694
+#: wp-includes/class-wp-editor.php:688
 msgid "Exit fullscreen"
 msgstr "Avsluta fullskärmsläge"
 
-#: wp-includes/class-wp-editor.php:707
+#: wp-includes/class-wp-editor.php:701
 #: wp-includes/js/tinymce/langs/wp-langs.php:289
 msgid "Bold (Ctrl + B)"
 msgstr "Fet (Ctrl + B)"
 
-#: wp-includes/class-wp-editor.php:708
+#: wp-includes/class-wp-editor.php:702
 #: wp-includes/js/tinymce/langs/wp-langs.php:290
 msgid "Italic (Ctrl + I)"
 msgstr "Kursiv (Ctrl + I)"
 
-#: wp-includes/class-wp-editor.php:710
+#: wp-includes/class-wp-editor.php:704
 #: wp-includes/js/tinymce/langs/wp-langs.php:297
 msgid "Unordered list (Alt + Shift + U)"
 msgstr "Oordnad lista (Alt + Skift + U)"
 
-#: wp-includes/class-wp-editor.php:711
+#: wp-includes/class-wp-editor.php:705
 #: wp-includes/js/tinymce/langs/wp-langs.php:298
 msgid "Ordered list (Alt + Shift + O)"
 msgstr "Numrerad lista (Alt + Shift + O)"
 
-#: wp-includes/class-wp-editor.php:713
+#: wp-includes/class-wp-editor.php:707
 #: wp-includes/js/tinymce/langs/wp-langs.php:323
 msgid "Blockquote (Alt + Shift + Q)"
 msgstr "Citat (Alt + Skift + Q)"
 
-#: wp-includes/class-wp-editor.php:714
+#: wp-includes/class-wp-editor.php:708
 #: wp-includes/js/tinymce/langs/wp-langs.php:305
 msgid "Insert/edit image (Alt + Shift + M)"
 msgstr "Infoga/redigera bild (Alt + Skift + M)"
 
-#: wp-includes/class-wp-editor.php:716
+#: wp-includes/class-wp-editor.php:710
 #: wp-includes/js/tinymce/langs/wp-langs.php:303
 msgid "Insert/edit link (Alt + Shift + A)"
 msgstr "Infoga/redigera länk (Alt + Skift + A)"
 
-#: wp-includes/class-wp-editor.php:717
+#: wp-includes/class-wp-editor.php:711
 #: wp-includes/js/tinymce/langs/wp-langs.php:304
 msgid "Unlink (Alt + Shift + S)"
 msgstr "Ta bort länkning (Alt + Skift + S)"
 
-#: wp-includes/class-wp-editor.php:719
+#: wp-includes/class-wp-editor.php:713
 #: wp-includes/js/tinymce/langs/wp-langs.php:504
 msgid "Help (Alt + Shift + H)"
 msgstr "Hjälp (Alt + Shift + H)"
 
-#: wp-includes/class-wp-editor.php:743
+#: wp-includes/class-wp-editor.php:737
 msgid "Updated."
 msgstr "Uppdaterat."
 
-#: wp-includes/class-wp-editor.php:743 wp-includes/media-template.php:188
+#: wp-includes/class-wp-editor.php:737 wp-includes/media-template.php:188
 msgid "Saved."
 msgstr "Sparat."
 
-#: wp-includes/class-wp-editor.php:752
+#: wp-includes/class-wp-editor.php:746
 msgid "Enter title here"
 msgstr "Ange rubrik här"
 
-#: wp-includes/class-wp-editor.php:761
+#: wp-includes/class-wp-editor.php:755
 msgid "Word count: %s"
 msgstr "Antal ord: %s"
 
-#: wp-includes/class-wp-editor.php:762
+#: wp-includes/class-wp-editor.php:756
 msgid "Just write."
 msgstr "Bara skriv."
 
-#: wp-includes/class-wp-editor.php:824
+#: wp-includes/class-wp-editor.php:818
 msgid "Y/m/d"
 msgstr "Y/m/d"
 
-#: wp-includes/class-wp-editor.php:870
+#: wp-includes/class-wp-editor.php:864
 msgid "Enter the destination URL"
 msgstr "Ange destinationsadress"
 
-#: wp-includes/class-wp-editor.php:872 wp-includes/media.php:1886
+#: wp-includes/class-wp-editor.php:866 wp-includes/media.php:1886
 msgid "URL"
 msgstr "URL"
 
-#: wp-includes/class-wp-editor.php:875
+#: wp-includes/class-wp-editor.php:869
 #: wp-includes/js/tinymce/langs/wp-langs.php:382
 #: wp-includes/js/tinymce/langs/wp-langs.php:547
 #: wp-includes/media-template.php:234 wp-includes/media-template.php:416
@@ -4455,23 +4437,23 @@ msgstr "URL"
 msgid "Title"
 msgstr "Titel"
 
-#: wp-includes/class-wp-editor.php:878
+#: wp-includes/class-wp-editor.php:872
 msgid "Open link in a new window/tab"
 msgstr "Öppna länken i ett nytt fönster/flik"
 
-#: wp-includes/class-wp-editor.php:882
+#: wp-includes/class-wp-editor.php:876
 msgid "Or link to existing content"
 msgstr "Eller länka till befintligt innehåll"
 
-#: wp-includes/class-wp-editor.php:898
+#: wp-includes/class-wp-editor.php:892
 msgid "No search term specified. Showing recent items."
 msgstr "Inga sökord angivna. Visar senaste objekten."
 
-#: wp-includes/class-wp-editor.php:908 wp-includes/script-loader.php:340
+#: wp-includes/class-wp-editor.php:902 wp-includes/script-loader.php:340
 msgid "Add Link"
 msgstr "Lägg till länk"
 
-#: wp-includes/class-wp-editor.php:911
+#: wp-includes/class-wp-editor.php:905
 #: wp-includes/js/tinymce/langs/wp-langs.php:22 wp-includes/media.php:1890
 #: wp-includes/script-loader.php:368 wp-includes/script-loader.php:415
 msgid "Cancel"
@@ -4564,7 +4546,8 @@ msgstr "Besök författarens webbplats"
 msgid "Anonymous"
 msgstr "Anonym"
 
-#: wp-includes/class-wp-theme.php:673 wp-includes/formatting.php:3427
+#. translators: used between list items, there is a space after the comma
+#: wp-includes/class-wp-theme.php:673 wp-includes/formatting.php:3438
 msgid ", "
 msgstr ", "
 
@@ -5263,6 +5246,7 @@ msgstr "<cite class=\"fn\">%s</cite> <span class=\"says\">skriver:</span>"
 msgid "Your comment is awaiting moderation."
 msgstr "Din kommentar inväntar granskning."
 
+#. translators: 1: date, 2: time
 #: wp-includes/comment-template.php:1727
 msgid "%1$s at %2$s"
 msgstr "%1$s kl. %2$s"
@@ -5328,11 +5312,13 @@ msgstr "Skicka kommentar"
 msgid "Unapproved"
 msgstr "Förkastad"
 
+#. translators: comment status
 #: wp-includes/comment.php:475
 msgctxt "adjective"
 msgid "Approved"
 msgstr "Godkänd"
 
+#. translators: comment status
 #: wp-includes/comment.php:477
 msgctxt "adjective"
 msgid "Spam"
@@ -5568,6 +5554,7 @@ msgstr "Din webbplats senaste kommentarer."
 msgid "Recent Comments"
 msgstr "Senaste kommentarer"
 
+#. translators: comments widget: 1: comment author, 2: post link
 #: wp-includes/default-widgets.php:700
 msgctxt "widgets"
 msgid "%1$s on %2$s"
@@ -5736,117 +5723,136 @@ msgstr "Kommentarer till %s"
 msgid "Protected Comments: Please enter your password to view comments."
 msgstr "Lösenordsskyddade kommentarer: ange ditt lösenord för att visa kommentarerna."
 
-#: wp-includes/formatting.php:37 wp-includes/formatting.php:3663
+#. translators: opening curly double quote
+#: wp-includes/formatting.php:37 wp-includes/formatting.php:3674
 msgctxt "opening curly double quote"
 msgid "&#8220;"
 msgstr "&#8221;"
 
+#. translators: closing curly double quote
 #: wp-includes/formatting.php:39
 msgctxt "closing curly double quote"
 msgid "&#8221;"
 msgstr "&#8221;"
 
+#. translators: apostrophe, for example in 'cause or can't
 #: wp-includes/formatting.php:42
 msgctxt "apostrophe"
 msgid "&#8217;"
 msgstr "&#8217;"
 
+#. translators: prime, for example in 9' (nine feet)
 #: wp-includes/formatting.php:45
 msgctxt "prime"
 msgid "&#8242;"
 msgstr "&#8242;"
 
+#. translators: double prime, for example in 9" (nine inches)
 #: wp-includes/formatting.php:47
 msgctxt "double prime"
 msgid "&#8243;"
 msgstr "&#8243;"
 
+#. translators: opening curly single quote
 #: wp-includes/formatting.php:50
 msgctxt "opening curly single quote"
 msgid "&#8216;"
 msgstr "&#8216;"
 
+#. translators: closing curly single quote
 #: wp-includes/formatting.php:52
 msgctxt "closing curly single quote"
 msgid "&#8217;"
 msgstr "&#8217;"
 
+#. translators: en dash
 #: wp-includes/formatting.php:55
 msgctxt "en dash"
 msgid "&#8211;"
 msgstr "&#8211;"
 
+#. translators: em dash
 #: wp-includes/formatting.php:57
 msgctxt "em dash"
 msgid "&#8212;"
 msgstr "&#8212;"
 
-#: wp-includes/formatting.php:2309
+#. translators: min=minute
+#: wp-includes/formatting.php:2320
 msgid "%s min"
 msgid_plural "%s mins"
 msgstr[0] "%s minut"
 msgstr[1] "%s minuter"
 
-#: wp-includes/formatting.php:2314
+#: wp-includes/formatting.php:2325
 msgid "%s hour"
 msgid_plural "%s hours"
 msgstr[0] "%s timme"
 msgstr[1] "%s timmar"
 
-#: wp-includes/formatting.php:2319
+#: wp-includes/formatting.php:2330
 msgid "%s day"
 msgid_plural "%s days"
 msgstr[0] "%s dag"
 msgstr[1] "%s dagar"
 
-#: wp-includes/formatting.php:2324
+#: wp-includes/formatting.php:2335
 msgid "%s week"
 msgid_plural "%s weeks"
 msgstr[0] "%s vecka"
 msgstr[1] "%s veckor"
 
-#: wp-includes/formatting.php:2329
+#: wp-includes/formatting.php:2340
 msgid "%s month"
 msgid_plural "%s months"
 msgstr[0] "%s månad"
 msgstr[1] "%s månader"
 
-#: wp-includes/formatting.php:2334
+#: wp-includes/formatting.php:2345
 msgid "%s year"
 msgid_plural "%s years"
 msgstr[0] "%s år"
 msgstr[1] "%s år"
 
-#: wp-includes/formatting.php:2411 wp-includes/general-template.php:2052
+#: wp-includes/formatting.php:2422 wp-includes/general-template.php:2052
 msgid "&hellip;"
 msgstr "&hellip;"
 
-#: wp-includes/formatting.php:2416 wp-includes/script-loader.php:353
+#. translators: If your word count is based on single characters (East Asian
+#. characters), 	   enter 'characters'. Otherwise, enter 'words'. Do not
+#. translate into your own language.
+#. translators: If your word count is based on single characters (East Asian
+#. characters), 		   enter 'characters'. Otherwise, enter 'words'. Do not
+#. translate into your own language.
+#: wp-includes/formatting.php:2427 wp-includes/script-loader.php:353
 msgctxt "word count: words or characters?"
 msgid "words"
 msgstr "ord"
 
-#: wp-includes/formatting.php:3100
+#: wp-includes/formatting.php:3111
 msgid "The email address entered did not appear to be a valid email address. Please enter a valid email address."
 msgstr "E-postadressen angiven verkar inte vara en giltig e-postadress. Var vänlig ange en giltig adress."
 
-#: wp-includes/formatting.php:3187
+#: wp-includes/formatting.php:3198
 msgid "The WordPress address you entered did not appear to be a valid URL. Please enter a valid URL."
 msgstr "WordPressadressen angiven verkar inte vara en giltig URL. Var vänlig ange en giltig URL."
 
-#: wp-includes/formatting.php:3197
+#: wp-includes/formatting.php:3208
 msgid "The Site address you entered did not appear to be a valid URL. Please enter a valid URL."
 msgstr "Webbplatsadressen angiven verkar inte vara en giltig URL. Var vänlig ange en giltig URL."
 
-#: wp-includes/formatting.php:3238
+#: wp-includes/formatting.php:3249
 msgid "The timezone you have entered is not valid. Please select a valid timezone."
 msgstr "Tidszonen du har angett är inte giltigt. Välj en giltig tidszon."
 
-#: wp-includes/formatting.php:3429
+#. translators: used between list items, there is a space after the and
+#: wp-includes/formatting.php:3440
 msgid ", and "
 msgstr " och "
 
-#: wp-includes/formatting.php:3431
+#. translators: used between only two list items, there is a space after the
+#. and
+#: wp-includes/formatting.php:3442
 msgid " and "
 msgstr " och "
 
@@ -6002,8 +6008,8 @@ msgctxt "submit button"
 msgid "Search"
 msgstr "Sök"
 
-#: wp-includes/general-template.php:215 wp-login.php:544 wp-login.php:593
-#: wp-login.php:624 wp-login.php:706
+#: wp-includes/general-template.php:215 wp-login.php:544 wp-login.php:612
+#: wp-login.php:644 wp-login.php:726
 msgid "Log in"
 msgstr "Logga in"
 
@@ -6011,24 +6017,24 @@ msgstr "Logga in"
 msgid "Log out"
 msgstr "Logga ut"
 
-#: wp-includes/general-template.php:303 wp-login.php:684 wp-login.php:843
+#: wp-includes/general-template.php:303 wp-login.php:704 wp-login.php:863
 msgid "Username"
 msgstr "Användarnamn"
 
-#: wp-includes/general-template.php:304 wp-login.php:847
+#: wp-includes/general-template.php:304 wp-login.php:867
 msgid "Password"
 msgstr "Lösenord"
 
-#: wp-includes/general-template.php:305 wp-login.php:858
+#: wp-includes/general-template.php:305 wp-login.php:878
 msgid "Remember Me"
 msgstr "Kom ihåg mig"
 
-#: wp-includes/general-template.php:306 wp-login.php:834 wp-login.php:860
+#: wp-includes/general-template.php:306 wp-login.php:854 wp-login.php:880
 msgid "Log In"
 msgstr "Logga in"
 
-#: wp-includes/general-template.php:383 wp-login.php:547 wp-login.php:627
-#: wp-login.php:702 wp-login.php:877
+#: wp-includes/general-template.php:383 wp-login.php:547 wp-login.php:647
+#: wp-login.php:722 wp-login.php:897
 msgid "Register"
 msgstr "Registrera"
 
@@ -6044,6 +6050,7 @@ msgstr "Funktionen <code>%s</code> har upphört i förmån till funktionsfamilje
 msgid "Use the <code>%s</code> option instead."
 msgstr "Använd istället <code>%s</code>."
 
+#. translators: 1: separator, 2: search phrase
 #: wp-includes/general-template.php:635
 msgid "Search Results %1$s %2$s"
 msgstr "Sökresultat %1$s %2$s"
@@ -6052,10 +6059,12 @@ msgstr "Sökresultat %1$s %2$s"
 msgid "Page not found"
 msgstr "Sidan kunde inte hittas"
 
+#. translators: 1: month name, 2: 4-digit year
 #: wp-includes/general-template.php:1005
 msgid "%1$s %2$d"
 msgstr "%1$s %2$d"
 
+#. translators: Calendar caption: 1: month name, 2: 4-digit year
 #: wp-includes/general-template.php:1205
 msgctxt "calendar caption"
 msgid "%1$s %2$s"
@@ -6065,39 +6074,48 @@ msgstr "%1$s %2$s"
 msgid "View posts for %1$s %2$s"
 msgstr "Se inlägg för %1$s %2$s"
 
+#. translators: Separator between blog name and feed type in feed links
 #: wp-includes/general-template.php:1660 wp-includes/general-template.php:1683
 msgctxt "feed link"
 msgid "&raquo;"
 msgstr "&raquo;"
 
+#. translators: 1: blog title, 2: separator (raquo)
 #: wp-includes/general-template.php:1662
 msgid "%1$s %2$s Feed"
 msgstr "%1$s %2$s flöde"
 
+#. translators: 1: blog title, 2: separator (raquo)
 #: wp-includes/general-template.php:1664
 msgid "%1$s %2$s Comments Feed"
 msgstr "%1$s %2$s kommentarsflöde"
 
+#. translators: 1: blog name, 2: separator(raquo), 3: post title
 #: wp-includes/general-template.php:1685
 msgid "%1$s %2$s %3$s Comments Feed"
 msgstr "%1$s %2$s %3$s kommentarsflöde"
 
+#. translators: 1: blog name, 2: separator(raquo), 3: category name
 #: wp-includes/general-template.php:1687
 msgid "%1$s %2$s %3$s Category Feed"
 msgstr "%1$s %2$s %3$s kategoriflöde"
 
+#. translators: 1: blog name, 2: separator(raquo), 3: tag name
 #: wp-includes/general-template.php:1689
 msgid "%1$s %2$s %3$s Tag Feed"
 msgstr "%1$s %2$s %3$s etikettflöde"
 
+#. translators: 1: blog name, 2: separator(raquo), 3: author name
 #: wp-includes/general-template.php:1691
 msgid "%1$s %2$s Posts by %3$s Feed"
 msgstr "%1$s %2$s Inlägg av %3$s -flöde"
 
+#. translators: 1: blog name, 2: separator(raquo), 3: search phrase
 #: wp-includes/general-template.php:1693
 msgid "%1$s %2$s Search Results for &#8220;%3$s&#8221; Feed"
 msgstr "%1$s %2$s Sökresultat för &#8221;%3$s&#8221; -flöde"
 
+#. translators: 1: blog name, 2: separator(raquo), 3: post type name
 #: wp-includes/general-template.php:1695
 msgid "%1$s %2$s %3$s Feed"
 msgstr "Flöde för %1$s %2$s %3$s"
@@ -6375,18 +6393,22 @@ msgstr "Vitt"
 msgid "Alignment"
 msgstr "Justering"
 
+#. translators: alignment
 #: wp-includes/js/tinymce/langs/wp-langs.php:85
 msgid "Full"
 msgstr "Hel"
 
+#. translators: alignment
 #: wp-includes/js/tinymce/langs/wp-langs.php:89
 msgid "%Y-%m-%d"
 msgstr "%Y-%m-%d"
 
+#. translators: year, month, date
 #: wp-includes/js/tinymce/langs/wp-langs.php:90
 msgid "%H:%M:%S"
 msgstr "%H:%M:%S"
 
+#. translators: hours, minutes, seconds
 #: wp-includes/js/tinymce/langs/wp-langs.php:91
 msgid "Insert date"
 msgstr "Infoga datum"
@@ -6395,173 +6417,211 @@ msgstr "Infoga datum"
 msgid "Insert time"
 msgstr "Infoga tid"
 
+#. translators: month name
 #: wp-includes/js/tinymce/langs/wp-langs.php:93 wp-includes/locale.php:131
 #: wp-includes/locale.php:146
 msgid "January"
 msgstr "januari"
 
+#. translators: month name
 #: wp-includes/js/tinymce/langs/wp-langs.php:93 wp-includes/locale.php:132
 #: wp-includes/locale.php:147
 msgid "February"
 msgstr "februari"
 
+#. translators: month name
 #: wp-includes/js/tinymce/langs/wp-langs.php:93 wp-includes/locale.php:133
 #: wp-includes/locale.php:148
 msgid "March"
 msgstr "mars"
 
+#. translators: month name
 #: wp-includes/js/tinymce/langs/wp-langs.php:93 wp-includes/locale.php:134
 #: wp-includes/locale.php:149
 msgid "April"
 msgstr "april"
 
+#. translators: month name
 #: wp-includes/js/tinymce/langs/wp-langs.php:93 wp-includes/locale.php:135
 #: wp-includes/locale.php:150
 msgid "May"
 msgstr "maj"
 
+#. translators: month name
 #: wp-includes/js/tinymce/langs/wp-langs.php:93 wp-includes/locale.php:136
 #: wp-includes/locale.php:151
 msgid "June"
 msgstr "juni"
 
+#. translators: month name
 #: wp-includes/js/tinymce/langs/wp-langs.php:93 wp-includes/locale.php:137
 #: wp-includes/locale.php:152
 msgid "July"
 msgstr "juli"
 
+#. translators: month name
 #: wp-includes/js/tinymce/langs/wp-langs.php:93 wp-includes/locale.php:138
 #: wp-includes/locale.php:153
 msgid "August"
 msgstr "augusti"
 
+#. translators: month name
 #: wp-includes/js/tinymce/langs/wp-langs.php:93 wp-includes/locale.php:139
 #: wp-includes/locale.php:154
 msgid "September"
 msgstr "september"
 
+#. translators: month name
 #: wp-includes/js/tinymce/langs/wp-langs.php:93 wp-includes/locale.php:140
 #: wp-includes/locale.php:155
 msgid "October"
 msgstr "oktober"
 
+#. translators: month name
 #: wp-includes/js/tinymce/langs/wp-langs.php:93 wp-includes/locale.php:141
 #: wp-includes/locale.php:156
 msgid "November"
 msgstr "november"
 
+#. translators: month name
 #: wp-includes/js/tinymce/langs/wp-langs.php:93 wp-includes/locale.php:142
 #: wp-includes/locale.php:157
 msgid "December"
 msgstr "december"
 
+#. translators: three-letter abbreviation of the month
 #: wp-includes/js/tinymce/langs/wp-langs.php:94 wp-includes/locale.php:146
 msgid "Jan_January_abbreviation"
 msgstr "Jan"
 
+#. translators: three-letter abbreviation of the month
 #: wp-includes/js/tinymce/langs/wp-langs.php:94 wp-includes/locale.php:147
 msgid "Feb_February_abbreviation"
 msgstr "Feb"
 
+#. translators: three-letter abbreviation of the month
 #: wp-includes/js/tinymce/langs/wp-langs.php:94 wp-includes/locale.php:148
 msgid "Mar_March_abbreviation"
 msgstr "Mar"
 
+#. translators: three-letter abbreviation of the month
 #: wp-includes/js/tinymce/langs/wp-langs.php:94 wp-includes/locale.php:149
 msgid "Apr_April_abbreviation"
 msgstr "Apr"
 
+#. translators: three-letter abbreviation of the month
 #: wp-includes/js/tinymce/langs/wp-langs.php:94 wp-includes/locale.php:150
 msgid "May_May_abbreviation"
 msgstr "Maj"
 
+#. translators: three-letter abbreviation of the month
 #: wp-includes/js/tinymce/langs/wp-langs.php:94 wp-includes/locale.php:151
 msgid "Jun_June_abbreviation"
 msgstr "Jun"
 
+#. translators: three-letter abbreviation of the month
 #: wp-includes/js/tinymce/langs/wp-langs.php:94 wp-includes/locale.php:152
 msgid "Jul_July_abbreviation"
 msgstr "Jul"
 
+#. translators: three-letter abbreviation of the month
 #: wp-includes/js/tinymce/langs/wp-langs.php:94 wp-includes/locale.php:153
 msgid "Aug_August_abbreviation"
 msgstr "Aug"
 
+#. translators: three-letter abbreviation of the month
 #: wp-includes/js/tinymce/langs/wp-langs.php:94 wp-includes/locale.php:154
 msgid "Sep_September_abbreviation"
 msgstr "Sep"
 
+#. translators: three-letter abbreviation of the month
 #: wp-includes/js/tinymce/langs/wp-langs.php:94 wp-includes/locale.php:155
 msgid "Oct_October_abbreviation"
 msgstr "Okt"
 
+#. translators: three-letter abbreviation of the month
 #: wp-includes/js/tinymce/langs/wp-langs.php:94 wp-includes/locale.php:156
 msgid "Nov_November_abbreviation"
 msgstr "Nov"
 
+#. translators: three-letter abbreviation of the month
 #: wp-includes/js/tinymce/langs/wp-langs.php:94 wp-includes/locale.php:157
 msgid "Dec_December_abbreviation"
 msgstr "Dec"
 
+#. translators: weekday
 #: wp-includes/js/tinymce/langs/wp-langs.php:95 wp-includes/locale.php:99
 #: wp-includes/locale.php:109 wp-includes/locale.php:122
 msgid "Sunday"
 msgstr "söndag"
 
+#. translators: weekday
 #: wp-includes/js/tinymce/langs/wp-langs.php:95 wp-includes/locale.php:100
 #: wp-includes/locale.php:110 wp-includes/locale.php:123
 msgid "Monday"
 msgstr "måndag"
 
+#. translators: weekday
 #: wp-includes/js/tinymce/langs/wp-langs.php:95 wp-includes/locale.php:101
 #: wp-includes/locale.php:111 wp-includes/locale.php:124
 msgid "Tuesday"
 msgstr "tisdag"
 
+#. translators: weekday
 #: wp-includes/js/tinymce/langs/wp-langs.php:95 wp-includes/locale.php:102
 #: wp-includes/locale.php:112 wp-includes/locale.php:125
 msgid "Wednesday"
 msgstr "onsdag"
 
+#. translators: weekday
 #: wp-includes/js/tinymce/langs/wp-langs.php:95 wp-includes/locale.php:103
 #: wp-includes/locale.php:113 wp-includes/locale.php:126
 msgid "Thursday"
 msgstr "torsdag"
 
+#. translators: weekday
 #: wp-includes/js/tinymce/langs/wp-langs.php:95 wp-includes/locale.php:104
 #: wp-includes/locale.php:114 wp-includes/locale.php:127
 msgid "Friday"
 msgstr "fredag"
 
+#. translators: weekday
 #: wp-includes/js/tinymce/langs/wp-langs.php:95 wp-includes/locale.php:105
 #: wp-includes/locale.php:115 wp-includes/locale.php:128
 msgid "Saturday"
 msgstr "lördag"
 
+#. translators: three-letter abbreviation of the weekday
 #: wp-includes/js/tinymce/langs/wp-langs.php:96 wp-includes/locale.php:122
 msgid "Sun"
 msgstr "sön"
 
+#. translators: three-letter abbreviation of the weekday
 #: wp-includes/js/tinymce/langs/wp-langs.php:96 wp-includes/locale.php:123
 msgid "Mon"
 msgstr "mån"
 
+#. translators: three-letter abbreviation of the weekday
 #: wp-includes/js/tinymce/langs/wp-langs.php:96 wp-includes/locale.php:124
 msgid "Tue"
 msgstr "tis"
 
+#. translators: three-letter abbreviation of the weekday
 #: wp-includes/js/tinymce/langs/wp-langs.php:96 wp-includes/locale.php:125
 msgid "Wed"
 msgstr "ons"
 
+#. translators: three-letter abbreviation of the weekday
 #: wp-includes/js/tinymce/langs/wp-langs.php:96 wp-includes/locale.php:126
 msgid "Thu"
 msgstr "tor"
 
+#. translators: three-letter abbreviation of the weekday
 #: wp-includes/js/tinymce/langs/wp-langs.php:96 wp-includes/locale.php:127
 msgid "Fri"
 msgstr "fre"
 
+#. translators: three-letter abbreviation of the weekday
 #: wp-includes/js/tinymce/langs/wp-langs.php:96 wp-includes/locale.php:128
 msgid "Sat"
 msgstr "lör"
@@ -6906,6 +6966,7 @@ msgstr "Ord:"
 msgid "Styles"
 msgstr "Stilar"
 
+#. translators: TinyMCE inline styles
 #: wp-includes/js/tinymce/langs/wp-langs.php:271
 msgid "Font size"
 msgstr "Textstorlek"
@@ -7408,7 +7469,7 @@ msgid "Delete all"
 msgstr "Radera alla"
 
 #: wp-content/plugins/akismet/legacy.php:176 wp-includes/admin-bar.php:716
-#: wp-includes/class-wp-editor.php:886 wp-includes/default-widgets.php:194
+#: wp-includes/class-wp-editor.php:880 wp-includes/default-widgets.php:194
 #: wp-includes/media.php:1888
 msgid "Search"
 msgstr "Sök"

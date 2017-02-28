@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/0.1\n"
+"X-Generator: GlotPress/1.0-alpha-1000\n"
 "Project-Id-Version: Network Admin\n"
 
 #: wp-admin/network/index.php:20 wp-admin/network/settings.php:17
@@ -681,6 +681,7 @@ msgid_plural "You are about to remove the following themes:"
 msgstr[0] "Du är på väg att ta bort följande tema:"
 msgstr[1] "Du är på väg att ta bort följande teman:"
 
+#. translators: 1: theme name, 2: theme author
 #: wp-admin/network/themes.php:147
 msgid "Are you sure you wish to delete these themes?"
 msgstr "Är du säker på att du vill ta bort dessa teman?"

@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/0.1\n"
+"X-Generator: GlotPress/1.0-alpha-1000\n"
 "Project-Id-Version: Administration\n"
 
 #: wp-admin/options-permalink.php:154
@@ -62,10 +62,13 @@ msgstr "Anpassad struktur"
 msgid "Optional"
 msgstr "Valfritt"
 
+#. translators: %s is a placeholder that must come at the start of the URL
+#. path.
 #: wp-admin/options-permalink.php:238
 msgid "If you like, you may enter custom structures for your category and tag <abbr title=\"Universal Resource Locator\">URL</abbr>s here. For example, using <code>topics</code> as your category base would make your category links like <code>http://example.org/%stopics/uncategorized/</code>. If you leave these blank the defaults will be used."
 msgstr "Om du vill så kan du ange en anpassad struktur för dina kategori och etikett-<abbr title=\"Universal Resource Locator\">URL</abbr>er här. Exempel, att använda <code>amnen</code> som din kategoribas skulle ge länkar enligt modellen <code>http://example.org/%samnen/okategoriserade/</code>. Om du lämnar detta tomt används standardstrukturen."
 
+#. translators: prefix for category permalinks
 #: wp-admin/options-permalink.php:242
 msgid "Category base"
 msgstr "Kategoribas"
@@ -516,10 +519,12 @@ msgid_plural "You are about to remove the following plugins:"
 msgstr[0] "Du är på väg att ta bort följande tillägg:"
 msgstr[1] "Du är på väg att ta bort följande tillägg:"
 
+#. translators: 1: plugin name, 2: plugin author
 #: wp-admin/plugins.php:274
 msgid "<strong>%1$s</strong> by <em>%2$s</em> (will also <strong>delete its data</strong>)"
 msgstr "<strong>%1$s</strong> av <em>%2$s</em> (kommer även att <strong>raderas dess data</strong>)"
 
+#. translators: 1: plugin name, 2: plugin author
 #: wp-admin/plugins.php:278
 msgid "<strong>%1$s</strong> by <em>%2$s</em>"
 msgstr "<strong>%1$s</strong> av <em>%2$s</em>"
@@ -1413,6 +1418,7 @@ msgstr "Välj ett eller flera teman att uppdatera."
 msgid "Please select one or more plugins to update."
 msgstr "Välj ett eller flera tillägg att uppdatera."
 
+#. translators: %1 date, %2 time.
 #: wp-admin/update-core.php:511
 msgid "Last checked on %1$s at %2$s."
 msgstr "Senast kontrollerat den %1$s kl. %2$s."
@@ -1788,6 +1794,7 @@ msgstr "Uppdatera profil"
 msgid "Update User"
 msgstr "Uppdatera användare"
 
+#. translators: 1: Site name, 2: site URL, 3: role
 #: wp-admin/user-new.php:24
 msgid ""
 "Hi,\n"
@@ -1812,6 +1819,7 @@ msgstr ""
 msgid "[%s] Your site invite"
 msgstr "[%s] Din webbplatsinbjudan"
 
+#. translators: 1: Site name, 2: site URL, 3: role, 4: activation URL
 #: wp-admin/user-new.php:81
 msgid ""
 "Hi,\n"
@@ -2261,30 +2269,39 @@ msgstr "För att aktivera en widget, dra den till ett widgetfält eller klicka p
 msgid "Add Widget"
 msgstr "Lägg till widget"
 
+#. Plugin URI of the plugin/theme
 msgid "http://akismet.com/?return=true"
 msgstr "http://akismet.com/?return=true"
 
+#. Description of the plugin/theme
 msgid "Used by millions, Akismet is quite possibly the best way in the world to <strong>protect your blog from comment and trackback spam</strong>. It keeps your site protected from spam even while you sleep. To get started: 1) Click the \"Activate\" link to the left of this description, 2) <a href=\"http://akismet.com/get/?return=true\">Sign up for an Akismet API key</a>, and 3) Go to your Akismet configuration page, and save your API key."
 msgstr "Använt av miljoner, Akismet är troligen det absolut bästa sättet att <strong>skydda din webbplats från skräppost i kommentars och trackbacks</strong>. Det skyddar din webbplats från skräppost även när du sover. För att komma igång: 1) Klicka på länken \"Aktivera\" till vänster om beskrivningen, 2) <a href=\"http://akismet.com/get/?return=true\">Registrera dig för en Akismet API-nyckel</a>, och 3) Gå till sidan för <a href=\"admin.php?page=akismet-key-config\">Konfiguration av Akismet</a>, och spara din API-nyckel."
 
+#. Author of the plugin/theme
 msgid "Automattic"
 msgstr "Automattic"
 
+#. Author URI of the plugin/theme
 msgid "http://automattic.com/wordpress-plugins/"
 msgstr "http://automattic.com/wordpress-plugins/"
 
+#. Plugin Name of the plugin/theme
 msgid "Hello Dolly"
 msgstr "Hello Dolly"
 
+#. Plugin URI of the plugin/theme
 msgid "http://wordpress.org/plugins/hello-dolly/"
 msgstr "http://wordpress.org/plugins/hello-dolly/"
 
+#. Description of the plugin/theme
 msgid "This is not just a plugin, it symbolizes the hope and enthusiasm of an entire generation summed up in two words sung most famously by Louis Armstrong: Hello, Dolly. When activated you will randomly see a lyric from <cite>Hello, Dolly</cite> in the upper right of your admin screen on every page."
 msgstr "Detta är inte bara ett tillägg, det symboliserar hopp och entusiasm för en hel generation summerat i två ord, mest känt vokaliserat av Louis Armstrong: Hello, Dolly. När aktiverat så visas slumpvalda delar av texten från <cite>Hello, Dolly</cite> uppe i det högra hörnet av din adminpanel."
 
+#. Author of the plugin/theme
 msgid "Matt Mullenweg"
 msgstr "Matt Mullenweg"
 
+#. Author URI of the plugin/theme
 msgid "http://ma.tt/"
 msgstr "http://ma.tt/"
 
@@ -2328,6 +2345,7 @@ msgstr "Lägg till"
 msgid "Most Used"
 msgstr "Mest använda"
 
+#. translators: %s: add new taxonomy label
 #: wp-admin/includes/meta-boxes.php:430 wp-admin/press-this.php:543
 msgid "+ %s"
 msgstr "+ %s"
@@ -2424,10 +2442,12 @@ msgstr "<code>_none</code> &mdash; samma fönster eller flik."
 msgid "Choose the target frame for your link."
 msgstr "Välj hur din länk ska öppnas."
 
+#. translators: xfn: http:gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:846
 msgid "rel:"
 msgstr "rel:"
 
+#. translators: xfn: http:gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:850 wp-admin/includes/meta-boxes.php:851
 msgid "identity"
 msgstr "identitet"
@@ -2436,99 +2456,123 @@ msgstr "identitet"
 msgid "another web address of mine"
 msgstr "en annan webbsida jag skapat"
 
+#. translators: xfn: http:gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:858 wp-admin/includes/meta-boxes.php:859
 msgid "friendship"
 msgstr "vänskap"
 
+#. translators: xfn: http:gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:861
 msgid "contact"
 msgstr "kontakt"
 
+#. translators: xfn: http:gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:864
 msgid "acquaintance"
 msgstr "bekant"
 
+#. translators: xfn: http:gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:867
 msgid "friend"
 msgstr "vän"
 
+#. translators: xfn: http:gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:870 wp-admin/includes/meta-boxes.php:903
 #: wp-admin/includes/meta-boxes.php:926
 msgid "none"
 msgstr "inget"
 
+#. translators: xfn: http:gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:875 wp-admin/includes/meta-boxes.php:876
 msgid "physical"
 msgstr "fysisk"
 
+#. translators: xfn: http:gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:878
 msgid "met"
 msgstr "träffats"
 
+#. translators: xfn: http:gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:883 wp-admin/includes/meta-boxes.php:884
 msgid "professional"
 msgstr "arbete"
 
+#. translators: xfn: http:gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:886
 msgid "co-worker"
 msgstr "arbetskamrat"
 
+#. translators: xfn: http:gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:889
 msgid "colleague"
 msgstr "kollega"
 
+#. translators: xfn: http:gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:894 wp-admin/includes/meta-boxes.php:895
 msgid "geographical"
 msgstr "geografisk"
 
+#. translators: xfn: http:gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:897
 msgid "co-resident"
 msgstr "samboende"
 
+#. translators: xfn: http:gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:900
 msgid "neighbor"
 msgstr "granne"
 
+#. translators: xfn: http:gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:908 wp-admin/includes/meta-boxes.php:909
 msgid "family"
 msgstr "familj"
 
+#. translators: xfn: http:gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:911
 msgid "child"
 msgstr "barn"
 
+#. translators: xfn: http:gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:914
 msgid "kin"
 msgstr "släkt"
 
+#. translators: xfn: http:gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:917
 msgid "parent"
 msgstr "förälder"
 
+#. translators: xfn: http:gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:920
 msgid "sibling"
 msgstr "syskon"
 
+#. translators: xfn: http:gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:923
 msgid "spouse"
 msgstr "make/maka"
 
+#. translators: xfn: http:gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:931 wp-admin/includes/meta-boxes.php:932
 msgid "romantic"
 msgstr "romantisk"
 
+#. translators: xfn: http:gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:934
 msgid "muse"
 msgstr "inspiration"
 
+#. translators: xfn: http:gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:937
 msgid "crush"
 msgstr "förälskelse"
 
+#. translators: xfn: http:gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:940
 msgid "date"
 msgstr "träff"
 
+#. translators: xfn: http:gmpg.org/xfn/
 #: wp-admin/includes/meta-boxes.php:943
 msgid "sweetheart"
 msgstr "älskling"
@@ -2667,10 +2711,12 @@ msgstr "Din e-postadress har inte uppdaterats än. Var vänlig kolla i din inkor
 msgid "Sorry, you have used your space allocation. Please delete some files to upload more files."
 msgstr "Du har använt allt tilldelat utrymme. Var vänlig radera några filer för att kunna ladda upp nya."
 
+#. translators: Gigabytes
 #: wp-admin/includes/ms.php:384
 msgid "GB"
 msgstr "GB"
 
+#. translators: Megabytes
 #: wp-admin/includes/ms.php:388
 msgid "MB"
 msgstr "MB"
@@ -2723,14 +2769,17 @@ msgstr "Engelska"
 msgid "Thank you for Updating! Please visit the <a href=\"%s\">Upgrade Network</a> page to update all your sites."
 msgstr "Tack för att du uppdaterar! Vänligen besök sidan för <a href=\"%s\">nätverksuppdatering</a> för att uppdatera alla dina webbplatser."
 
+#. translators: My sites label
 #: wp-admin/includes/ms.php:640
 msgid "Primary Site"
 msgstr "Primär webbplats"
 
+#. translators: %s: title of menu item which is invalid
 #: wp-admin/includes/nav-menu.php:85
 msgid "%s (Invalid)"
 msgstr "%s (ogiltig)"
 
+#. translators: %s: title of menu item in draft status
 #: wp-admin/includes/nav-menu.php:89
 msgid "%s (Pending)"
 msgstr "%s (Väntande)"
@@ -2959,6 +3008,7 @@ msgstr "Nyare version (%s) installerad"
 msgid "Latest Version Installed"
 msgstr "Senaste versionen installerad"
 
+#. translators: For Your Information
 #: wp-admin/includes/plugin-install.php:393
 msgid "FYI"
 msgstr "För information"
@@ -3103,67 +3153,67 @@ msgstr "Du har inte tillräcklig behörighet för att redigera sidor som den hä
 msgid "You are not allowed to edit posts as this user."
 msgstr "Du har inte tillräcklig behörighet för att redigera inlägg som den här användaren."
 
-#: wp-admin/includes/post.php:339
+#: wp-admin/includes/post.php:352
 msgid "You are not allowed to edit pages."
 msgstr "Du har inte tillräcklig behörighet för att redigera sidor."
 
-#: wp-admin/includes/post.php:341
+#: wp-admin/includes/post.php:354
 msgid "You are not allowed to edit posts."
 msgstr "Du har inte tillräcklig behörighet för att redigera inlägg."
 
-#: wp-admin/includes/post.php:514 wp-admin/includes/upgrade.php:1275
+#: wp-admin/includes/post.php:527 wp-admin/includes/upgrade.php:1275
 msgid "Auto Draft"
 msgstr "Automatiskt utkast"
 
-#: wp-admin/includes/post.php:603
+#: wp-admin/includes/post.php:616
 msgid "You are not allowed to create pages on this site."
 msgstr "Du har inte tillräcklig behörighet för att skapa sidor på den här webbplatsen."
 
-#: wp-admin/includes/post.php:605
+#: wp-admin/includes/post.php:618
 msgid "You are not allowed to create posts or drafts on this site."
 msgstr "Du har inte tillräcklig behörighet för att skapa inlägg eller utkast på den här webbplatsen."
 
-#: wp-admin/includes/post.php:1131
+#: wp-admin/includes/post.php:1144
 msgid "Click to edit this part of the permalink"
 msgstr "Klicka för att redigera denna del av permalänken"
 
-#: wp-admin/includes/post.php:1133
+#: wp-admin/includes/post.php:1146
 msgid "Temporary permalink. Click to edit this part."
 msgstr "Temporär permalänk. Klicka för att redigera denna del."
 
-#: wp-admin/includes/post.php:1137 wp-admin/includes/post.php:1165
+#: wp-admin/includes/post.php:1150 wp-admin/includes/post.php:1178
 msgid "Permalink:"
 msgstr "Permalänk:"
 
-#: wp-admin/includes/post.php:1139
+#: wp-admin/includes/post.php:1152
 msgid "Change Permalinks"
 msgstr "Ändra permalänkar"
 
-#: wp-admin/includes/post.php:1206
+#: wp-admin/includes/post.php:1219
 msgid "Remove featured image"
 msgstr "Ta bort utvald bild"
 
-#: wp-admin/includes/post.php:1328
+#: wp-admin/includes/post.php:1341
 msgid "This content is currently locked."
 msgstr "Detta innehåll är för närvarande låst."
 
-#: wp-admin/includes/post.php:1330
+#: wp-admin/includes/post.php:1343
 msgid "If you take over, %s will be blocked from continuing to edit."
 msgstr "Om du tar över kommer %s att låsas ut från att fortsätta redigeringen."
 
-#: wp-admin/includes/post.php:1344
+#: wp-admin/includes/post.php:1357
 msgid "Take over"
 msgstr "Ta över"
 
-#: wp-admin/includes/post.php:1358
+#: wp-admin/includes/post.php:1371
 msgid "Saving revision..."
 msgstr "Sparar version..."
 
-#: wp-admin/includes/post.php:1359
+#: wp-admin/includes/post.php:1372
 msgid "Your latest changes were saved as a revision."
 msgstr "Din senaste ändring sparades som en egen version."
 
-#: wp-admin/includes/post.php:1445
+#: wp-admin/includes/post.php:1458
 msgid "Preview not available. Please save as a draft first."
 msgstr "Förhandsgranskning ej tillgänglig. Var vänlig spara som utkast först."
 
@@ -3172,6 +3222,10 @@ msgctxt "revision date short format"
 msgid "j M @ G:i"
 msgstr "j M @ H:i"
 
+#. translators: default GMT offset or timezone string. Must be either a valid
+#. offset (-12 to 14) 	   or a valid timezone string (America/New_York). See
+#. http:us3.php.net/manual/en/timezones.php 	   for all timezone strings
+#. supported by PHP.
 #: wp-admin/includes/schema.php:359
 msgctxt "default GMT offset or timezone string"
 msgid "0"
@@ -3181,39 +3235,47 @@ msgstr "Europe/Stockholm"
 msgid "My Site"
 msgstr "Min webbplats"
 
+#. translators: blog tagline
 #: wp-admin/includes/schema.php:369
 msgid "Just another WordPress site"
 msgstr "En till WordPress-webbplats"
 
+#. translators: default start of the week. 0 = Sunday, 1 = Monday
 #: wp-admin/includes/schema.php:373
 msgctxt "start of week"
 msgid "1"
 msgstr "1"
 
+#. translators: blog tagline
 #: wp-admin/includes/schema.php:498
 msgid "Just another %s site"
 msgstr "En till %s webbplats"
 
+#. translators: user role
 #: wp-admin/includes/schema.php:599
 msgctxt "User role"
 msgid "Administrator"
 msgstr "Administratör"
 
+#. translators: user role
 #: wp-admin/includes/schema.php:601
 msgctxt "User role"
 msgid "Editor"
 msgstr "Redaktör"
 
+#. translators: user role
 #: wp-admin/includes/schema.php:603
 msgctxt "User role"
 msgid "Author"
 msgstr "Författare"
 
+#. translators: user role
 #: wp-admin/includes/schema.php:605
 msgctxt "User role"
 msgid "Contributor"
 msgstr "Medarbetare"
 
+#. translators: user role
 #: wp-admin/includes/schema.php:607
 msgctxt "User role"
 msgid "Subscriber"
@@ -3355,6 +3417,7 @@ msgstr "Ange nytt"
 msgid "Add Custom Field"
 msgstr "Lägg till eget fält"
 
+#. translators: 1: month number (01, 02, etc.), 2: month abbreviation
 #: wp-admin/includes/template.php:662
 msgid "%1$s-%2$s"
 msgstr "%1$s-%2$s"
@@ -3392,6 +3455,7 @@ msgstr "Gruppen för integritetsinställningar har tagits bort. Använd en annan
 msgid "Find Posts or Pages"
 msgstr "Hitta inlägg eller sidor"
 
+#. translators: post state
 #: wp-admin/includes/template.php:1491
 msgctxt "post state"
 msgid "Pending"
@@ -3481,12 +3545,14 @@ msgstr "Inlägget har återställts."
 msgid "Undo."
 msgstr "Ångra."
 
+#. translators: 1: The rating, 2: The number of ratings
 #: wp-admin/includes/template.php:2012
 msgid "%1$s rating based on %2$s rating"
 msgid_plural "%1$s rating based on %2$s ratings"
 msgstr[0] "%1$s betyg baserat på %2$s röst"
 msgstr[1] "%1$s betyg baserat på %2$s röster"
 
+#. translators: 1: The rating
 #: wp-admin/includes/template.php:2016
 msgid "%s rating"
 msgstr "%s betyg"
@@ -3818,6 +3884,7 @@ msgstr "Användaren finns redan. Lösenordet ärvdes."
 msgid "The password you chose during the install."
 msgstr "Lösenordet du valde under installationen."
 
+#. translators: Default category slug
 #: wp-admin/includes/upgrade.php:109
 msgctxt "Default category slug"
 msgid "Uncategorized"
@@ -3831,6 +3898,7 @@ msgstr "Välkommen till WordPress. Det här är ditt första inlägg. Redigera d
 msgid "Hello world!"
 msgstr "Hej världen!"
 
+#. translators: Default post slug
 #: wp-admin/includes/upgrade.php:151
 msgctxt "Default post slug"
 msgid "hello-world"
@@ -3874,6 +3942,7 @@ msgstr ""
 msgid "Sample Page"
 msgstr "Exempelsida"
 
+#. translators: Default page slug
 #: wp-admin/includes/upgrade.php:203
 msgid "sample-page"
 msgstr "exempelsida"
@@ -4193,30 +4262,37 @@ msgstr "WordPress &rsaquo; Databasreparation"
 msgid "To allow use of this page to automatically repair database problems, please add the following line to your <code>wp-config.php</code> file. Once this line is added to your config, reload this page."
 msgstr "För att tillåta denna sida att automatiskt reparera databasproblem, lägg till följande rad i din <code>wp-config.php</code>. När du lagt till denna rad i din konfigurationsfil, ladda om denna sida."
 
+#. translators: %s: table name
 #: wp-admin/maint/repair.php:58
 msgid "The %s table is okay."
 msgstr "Tabellen %s är okej."
 
+#. translators: 1: table name, 2: error message,
 #: wp-admin/maint/repair.php:61
 msgid "The %1$s table is not okay. It is reporting the following error: %2$s. WordPress will attempt to repair this table&hellip;"
 msgstr "Tabellen %1$s är inte okej. Följande fel rapporteras: %2$s. WordPress kommer att försöka reparera denna tabell&hellip;"
 
+#. translators: %s: table name
 #: wp-admin/maint/repair.php:68
 msgid "Successfully repaired the %s table."
 msgstr "Tabellen %s har reparerats."
 
+#. translators: 1: table name, 2: error message,
 #: wp-admin/maint/repair.php:71
 msgid "Failed to repair the %1$s table. Error: %2$s"
 msgstr "Det gick inte att reparera tabellen %1$s. Fel: %2$s"
 
+#. translators: %s: table name
 #: wp-admin/maint/repair.php:83
 msgid "The %s table is already optimized."
 msgstr "Tabellen %s är redan optimerad."
 
+#. translators: %s: table name
 #: wp-admin/maint/repair.php:90
 msgid "Successfully optimized the %s table."
 msgstr "Tabellen %s har optimerats."
 
+#. translators: 1: table name, 2: error message,
 #: wp-admin/maint/repair.php:93
 msgid "Failed to optimize the %1$s table. Error: %2$s"
 msgstr "Det gick inte att optimera tabellen %1$s. Fel: %2$s"
@@ -4297,6 +4373,7 @@ msgstr "Du kan inte redigera denna bilaga eftersom den ligger i papperskorgen. �
 msgid "This screen allows you to edit five fields for metadata in a file within the media library."
 msgstr "Den här sidan tillåter dig att redigera fem fält för metadata för en fil i mediebiblioteket."
 
+#. translators: add new file
 #: wp-admin/media.php:110 wp-admin/menu.php:66 wp-admin/upload.php:184
 msgctxt "file"
 msgid "Add New"
@@ -4348,6 +4425,7 @@ msgstr "Tillägg %s"
 msgid "Installed Plugins"
 msgstr "Installerade tillägg"
 
+#. translators: add new plugin
 #: wp-admin/menu.php:176 wp-admin/plugins.php:411
 msgctxt "plugin"
 msgid "Add New"
@@ -4550,26 +4628,32 @@ msgstr "Flytta ner ett steg"
 msgid "Move to the top"
 msgstr "Flytta till toppen"
 
+#. translators: %s: previous item name
 #: wp-admin/nav-menus.php:393
 msgid "Move under %s"
 msgstr "Flytta under %s"
 
+#. translators: %s: previous item name
 #: wp-admin/nav-menus.php:395
 msgid "Move out from under %s"
 msgstr "Flytta ut från under %s"
 
+#. translators: %s: previous item name
 #: wp-admin/nav-menus.php:397
 msgid "Under %s"
 msgstr "Under %s"
 
+#. translators: %s: previous item name
 #: wp-admin/nav-menus.php:399
 msgid "Out from under %s"
 msgstr "Ut från under %s"
 
+#. translators: 1: item name, 2: item position, 3: total number of items
 #: wp-admin/nav-menus.php:401
 msgid "%1$s. Menu item %2$d of %3$d."
 msgstr "%1$s. Menyval %2$d av %3$d."
 
+#. translators: 1: item name, 2: item position, 3: parent item name
 #: wp-admin/nav-menus.php:403
 msgid "%1$s. Sub item number %2$d under %3$s."
 msgstr "%1$s. Undervalsnummer %2$d under %3$s."
@@ -4917,18 +5001,22 @@ msgstr "Visa avatarer"
 msgid "Maximum Rating"
 msgstr "Rekommendation"
 
+#. translators: Content suitability rating: http:bit.ly/89QxZA
 #: wp-admin/options-discussion.php:194
 msgid "G &#8212; Suitable for all audiences"
 msgstr "Barntillåtet"
 
+#. translators: Content suitability rating: http:bit.ly/89QxZA
 #: wp-admin/options-discussion.php:196
 msgid "PG &#8212; Possibly offensive, usually for audiences 13 and above"
 msgstr "från 7år"
 
+#. translators: Content suitability rating: http:bit.ly/89QxZA
 #: wp-admin/options-discussion.php:198
 msgid "R &#8212; Intended for adult audiences above 17"
 msgstr "från 15år"
 
+#. translators: Content suitability rating: http:bit.ly/89QxZA
 #: wp-admin/options-discussion.php:200
 msgid "X &#8212; Even more mature than above"
 msgstr "från 18år"
@@ -4973,6 +5061,8 @@ msgstr "Retro (Genererad)"
 msgid "General Settings"
 msgstr "Allmänna inställningar"
 
+#. translators: date and time format for exact current time, mainly about
+#. timezones, see http:php.net/date
 #: wp-admin/options-general.php:18
 msgctxt "timezone date format"
 msgid "Y-m-d G:i:s"
@@ -5315,6 +5405,7 @@ msgstr "Denna importör har inte installerats. Installera importörer från <a h
 msgid "If the importer you need is not listed, <a href=\"%s\">search the plugin directory</a> to see if an importer is available."
 msgstr "Om importören du behöver inte är listad, <a href=\"%s\">sök i tilläggskatalogen</a> för att se om en importör finns tillgänglig."
 
+#. translators: 1: user_login, 2: user_email
 #: wp-admin/includes/ajax-actions.php:225
 msgid "%1$s (%2$s)"
 msgstr "%1$s (%2$s)"
@@ -5368,22 +5459,24 @@ msgid "User <a href=\"#%s\">%s</a> added"
 msgstr "Användaren <a href=\"#%s\">%s</a> skapad"
 
 #: wp-admin/includes/ajax-actions.php:1110
-#: wp-admin/includes/ajax-actions.php:1352 wp-admin/includes/post.php:194
-#: wp-admin/includes/post.php:1464 wp-admin/press-this.php:35
+#: wp-admin/includes/ajax-actions.php:1352 wp-admin/includes/post.php:195
+#: wp-admin/includes/post.php:1477 wp-admin/press-this.php:35
 #: wp-admin/upload.php:62
 msgid "You are not allowed to edit this post."
 msgstr "Du har inte tillräcklig behörighet för att redigera det här inlägget."
 
 #: wp-admin/includes/ajax-actions.php:1113
-#: wp-admin/includes/ajax-actions.php:1349 wp-admin/includes/post.php:192
-#: wp-admin/includes/post.php:1461
+#: wp-admin/includes/ajax-actions.php:1349 wp-admin/includes/post.php:193
+#: wp-admin/includes/post.php:1474
 msgid "You are not allowed to edit this page."
 msgstr "Du har inte tillräcklig behörighet för att redigera den här sidan."
 
+#. translators: draft saved date format, see http:php.net/date
 #: wp-admin/includes/ajax-actions.php:1133
 msgid "g:i:s a"
 msgstr "H:i:s"
 
+#. translators: %s: date and time
 #: wp-admin/includes/ajax-actions.php:1135
 msgid "Draft saved at %s."
 msgstr "Utkast sparat kl. %s."
@@ -5547,6 +5640,7 @@ msgstr "Som svar till"
 msgid "Select comment"
 msgstr "Välj kommentar"
 
+#. translators: 2: comment date, 3: comment time
 #: wp-admin/includes/class-wp-comments-list-table.php:399
 msgid "Submitted on <a href=\"%1$s\">%2$s at %3$s</a>"
 msgstr "Postat den <a href=\"%1$s\">%2$s kl. %3$s</a>"
@@ -5572,6 +5666,7 @@ msgstr "Godkänn denna kommentar"
 msgid "Mark this comment as spam"
 msgstr "Markera denna kommentar som skräp"
 
+#. translators: mark as spam link
 #: wp-admin/includes/class-wp-comments-list-table.php:450
 #: wp-admin/includes/dashboard.php:461
 msgctxt "verb"
@@ -5837,16 +5932,19 @@ msgstr "Skanna efter tappade bilagor"
 msgid "No media attachments found."
 msgstr "Inga mediabilagor hittade."
 
+#. translators: column name
 #: wp-admin/includes/class-wp-media-list-table.php:132
 msgctxt "column name"
 msgid "File"
 msgstr "Fil"
 
+#. translators: column name
 #: wp-admin/includes/class-wp-media-list-table.php:156
 msgctxt "column name"
 msgid "Uploaded to"
 msgstr "Uppladdad till"
 
+#. translators: column name
 #: wp-admin/includes/class-wp-media-list-table.php:161
 msgctxt "column name"
 msgid "Date"
@@ -6359,6 +6457,7 @@ msgid_plural "Sticky <span class=\"count\">(%s)</span>"
 msgstr[0] "Klistrad <span class=\"count\">(%s)</span>"
 msgstr[1] "Klistrade <span class=\"count\">(%s)</span>"
 
+#. translators: manage posts column name
 #: wp-admin/includes/class-wp-posts-list-table.php:258
 msgctxt "column name"
 msgid "Title"
@@ -6426,6 +6525,8 @@ msgstr "Massredigera"
 msgid "&mdash; No Change &mdash;"
 msgstr "&mdash; Ingen ändring &mdash;"
 
+#. translators: Between password field and private checkbox on post quick edit
+#. interface
 #: wp-admin/includes/class-wp-posts-list-table.php:854
 msgid "&ndash;OR&ndash;"
 msgstr "&mdash;ELLER&mdash;"
@@ -6739,6 +6840,7 @@ msgstr "Oförmögen att lokalisera WordPress tilläggskatalog."
 msgid "Unable to locate WordPress Theme directory."
 msgstr "Oförmögen att lokalisera WordPress temakatalog."
 
+#. translators: %s: directory name
 #: wp-admin/includes/class-wp-upgrader.php:49
 msgid "Unable to locate needed folder (%s)."
 msgstr "Oförmögen att lokalisera efterfrågad katalog (%s)."
@@ -6890,6 +6992,7 @@ msgstr "Installationen av temat misslyckades."
 msgid "Theme installed successfully."
 msgstr "Temat har installerats."
 
+#. translators: 1: theme name, 2: version
 #: wp-admin/includes/class-wp-upgrader.php:740
 msgid "Successfully installed the theme <strong>%1$s %2$s</strong>."
 msgstr "Temat <strong>%1$s %2$s</strong> har installerats."
@@ -6898,14 +7001,17 @@ msgstr "Temat <strong>%1$s %2$s</strong> har installerats."
 msgid "This theme requires a parent theme. Checking if it is installed&#8230;"
 msgstr "Detta tema kräver ett modertema. Kontrollerar om det finns installerat&#8230;"
 
+#. translators: 1: theme name, 2: version
 #: wp-admin/includes/class-wp-upgrader.php:743
 msgid "Preparing to install <strong>%1$s %2$s</strong>&#8230;"
 msgstr "Förbereder installation av <strong>%1$s %2$s</strong>&#8230;"
 
+#. translators: 1: theme name, 2: version
 #: wp-admin/includes/class-wp-upgrader.php:745
 msgid "The parent theme, <strong>%1$s %2$s</strong>, is currently installed."
 msgstr "Modertemat, <strong>%1$s %2$s</strong>, är installerat."
 
+#. translators: 1: theme name, 2: version
 #: wp-admin/includes/class-wp-upgrader.php:747
 msgid "Successfully installed the parent theme, <strong>%1$s %2$s</strong>."
 msgstr "Modertemat har installerats, <strong>%1$s %2$s</strong>."
@@ -7010,14 +7116,17 @@ msgstr "Installationen misslyckades"
 msgid "WordPress updated successfully"
 msgstr "WordPress uppdaterades utan problem"
 
+#. translators: 1: Site name, 2: WordPress version number.
 #: wp-admin/includes/class-wp-upgrader.php:2189
 msgid "[%1$s] Your site has updated to WordPress %2$s"
 msgstr "[%1$s] Din webbplats har uppdaterats till WordPress %2$s"
 
+#. translators: 1: Site name, 2: WordPress version number.
 #: wp-admin/includes/class-wp-upgrader.php:2195
 msgid "[%1$s] WordPress %2$s is available. Please update!"
 msgstr "[%1$s] WordPress %2$s finns tillgängligt. Vänligen uppdatera!"
 
+#. translators: 1: Site name.
 #: wp-admin/includes/class-wp-upgrader.php:2200
 msgid "[%1$s] URGENT: Your site may be down due to a failed update"
 msgstr "[%1$s] BRÅDSKANDE: Din webbplats kan ligga nera pga en misslyckad uppdatering"
@@ -7181,10 +7290,12 @@ msgstr "[%s] Bakgrundsuppdateringar har genomförts"
 msgid "UPDATE LOG"
 msgstr "UPPDATERA LOGG"
 
+#. translators: 1: Error code, 2: Error message.
 #: wp-admin/includes/class-wp-upgrader.php:2437
 msgid "Rollback Error: [%1$s] %2$s"
 msgstr "Fel vid återställning: [%1$s] %2$s"
 
+#. translators: 1: Error code, 2: Error message.
 #: wp-admin/includes/class-wp-upgrader.php:2440
 msgid "Error: [%1$s] %2$s"
 msgstr "Fel: [%1$s] %2$s"
@@ -7193,6 +7304,7 @@ msgstr "Fel: [%1$s] %2$s"
 msgid "No matching users were found."
 msgstr "Hittade inga matchande användare."
 
+#. translators: User role name with count
 #: wp-admin/includes/class-wp-users-list-table.php:115
 msgid "%1$s <span class=\"count\">(%2$s)</span>"
 msgstr "%1$s <span class=\"count\">(%2$s)</span>"
@@ -7274,6 +7386,7 @@ msgid_plural "%s Comments"
 msgstr[0] "%s kommentar"
 msgstr[1] "%s kommentarer"
 
+#. translators: Number of comments in moderation
 #: wp-admin/includes/dashboard.php:215
 msgctxt "comments"
 msgid "%s in moderation"
@@ -7334,6 +7447,8 @@ msgctxt "drafts"
 msgid "View all"
 msgstr "Visa alla"
 
+#. translators: 1: comment author, 2: post link, 3: notification if the comment
+#. is pending
 #: wp-admin/includes/dashboard.php:491
 msgid "From %1$s on %2$s%3$s"
 msgstr "Av %1$s till %2$s%3$s"
@@ -7342,6 +7457,7 @@ msgstr "Av %1$s till %2$s%3$s"
 msgid "[Pending]"
 msgstr "[Väntande]"
 
+#. translators: %1$s is type of comment, %2$s is link to the post
 #: wp-admin/includes/dashboard.php:511
 msgctxt "dashboard"
 msgid "%1$s on %2$s"
@@ -7371,10 +7487,13 @@ msgstr "Idag"
 msgid "Tomorrow"
 msgstr "Imorgon"
 
+#. translators: date and time format for recent posts on the dashboard, see
+#. http:php.net/date
 #: wp-admin/includes/dashboard.php:615
 msgid "M jS"
 msgstr "j M"
 
+#. translators: 1: relative date, 2: time, 4: post title
 #: wp-admin/includes/dashboard.php:620
 msgid "<span>%1$s, %2$s</span> <a href=\"%3$s\">%4$s</a>"
 msgstr "<span>%1$s, %2$s</span> <a href=\"%3$s\">%4$s</a>"
@@ -7419,6 +7538,7 @@ msgstr "Populärt tillägg"
 msgid "Storage Space"
 msgstr "Utrymmeskvot"
 
+#. translators: number of megabytes
 #: wp-admin/includes/dashboard.php:1002
 msgid "%s MB Space Allowed"
 msgstr "%s MB tillgängligt utrymme"
@@ -7427,6 +7547,7 @@ msgstr "%s MB tillgängligt utrymme"
 msgid "Manage Uploads"
 msgstr "Hantera uppladdningar"
 
+#. translators: 1: number of megabytes, 2: percentage
 #: wp-admin/includes/dashboard.php:1014
 msgid "%1$s MB (%2$s%%) Space Used"
 msgstr "%1$s MB (%2$s%%) utrymme använt"
@@ -8046,14 +8167,17 @@ msgstr "Galleri"
 msgid "Gallery (%s)"
 msgstr "Galleri (%s)"
 
+#. translators: 1: audio track title, 2: album title, 3: artist name
 #: wp-admin/includes/media.php:239
 msgid "\"%1$s\" from %2$s by %3$s."
 msgstr "\"%1$s\" från %2$s av %3$s."
 
+#. translators: 1: audio track title, 2: album title
 #: wp-admin/includes/media.php:242
 msgid "\"%1$s\" from %2$s."
 msgstr "\"%1$s\" från %2$s."
 
+#. translators: 1: audio track title, 2: artist name
 #: wp-admin/includes/media.php:245
 msgid "\"%1$s\" by %2$s."
 msgstr "\"%1$s\" av %2$s."
@@ -8062,6 +8186,7 @@ msgstr "\"%1$s\" av %2$s."
 msgid "\"%s\"."
 msgstr "\"%s\"."
 
+#. translators: 1: audio album title, 2: artist name
 #: wp-admin/includes/media.php:254
 msgid "%1$s by %2$s."
 msgstr "%1$s av %2$s."
@@ -8288,6 +8413,8 @@ msgstr "Du använder multifilsuppladdaren. Problem? Försök med <a href=\"%1$s\
 msgid "You are using the browser&#8217;s built-in file uploader. The WordPress uploader includes multiple file selection and drag and drop capability. <a href=\"#\">Switch to the multi-file uploader</a>."
 msgstr "Du använder den webbläsarbaserade uppladdaren. WordPress uppladdare inkluderar funktioner för att välja flera filer åt gången och dra och släpp. <a href=\"#\">Växla till multifilsuppladdaren</a>."
 
+#. translators: %1$s is link start tag, %2$s is link end tag, %3$d is width,
+#. %4$d is height
 #: wp-admin/includes/media.php:2305
 msgid "Scale images to match the large size selected in %1$simage options%2$s (%3$d &times; %4$d)."
 msgstr "Skala bilder för att matcha den storlek valts under %1$sbildinställningar%2​​$s (%3$d &times; %4$d)."
@@ -8390,156 +8517,164 @@ msgstr "Erkännande"
 msgid "Freedoms"
 msgstr "Friheterna"
 
-#: wp-admin/about.php:170
+#: wp-admin/about.php:182
 msgid "Maintenance Release"
 msgid_plural "Maintenance Releases"
 msgstr[0] "Underhållsrelease"
 msgstr[1] "Underhållsreleaser"
 
-#: wp-admin/about.php:43 wp-admin/about.php:51 wp-admin/about.php:179
+#. translators: 1: WordPress version number, 2: plural number of bugs.
+#: wp-admin/about.php:55 wp-admin/about.php:63 wp-admin/about.php:191
 msgid "<strong>Version %1$s</strong> addressed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed %2$s bugs."
 msgstr[0] "<strong>Version %1$s</strong> åtgärdar %2$s bugg."
 msgstr[1] "<strong>Version %1$s</strong> åtgärdar %2$s buggar."
 
 #: wp-admin/about.php:45 wp-admin/about.php:49 wp-admin/about.php:53
-#: wp-admin/about.php:190
+#: wp-admin/about.php:57 wp-admin/about.php:61 wp-admin/about.php:65
+#: wp-admin/about.php:202
 msgid "For more information, see <a href=\"%s\">the release notes</a>."
 msgstr "För mer information, se <a href=\"%s\">detaljer för releasen</a>."
 
-#: wp-admin/about.php:58
+#: wp-admin/about.php:70
 msgid "Introducing a modern new&nbsp;design"
 msgstr "Vi introducerar en ny modern design"
 
-#: wp-admin/about.php:63
+#: wp-admin/about.php:75
 msgid "Modern aesthetic"
 msgstr "Estetiskt modernt"
 
-#: wp-admin/about.php:64
+#: wp-admin/about.php:76
 msgid "The new WordPress dashboard has a fresh, uncluttered design that embraces clarity and simplicity."
 msgstr "Den nya adminpanelen för WordPress har en fräsch, stilren design som omfamnar tydlighet och enkelhet."
 
-#: wp-admin/about.php:68
+#: wp-admin/about.php:80
 msgid "Clean typography"
 msgstr "Stilren typografi"
 
-#: wp-admin/about.php:69
+#: wp-admin/about.php:81
 msgid "The Open Sans typeface provides simple, friendly text that is optimized for both desktop and mobile viewing. It&#8217;s even open source, just like WordPress."
 msgstr "Open Sans typsnittet ger enkel, vänlig text som är optimerad för både stationär och mobil visning. Det är till och med öppen källkod, precis som WordPress."
 
-#: wp-admin/about.php:73
+#: wp-admin/about.php:85
 msgid "Refined contrast"
 msgstr "Förfinad kontrast"
 
-#: wp-admin/about.php:74
+#: wp-admin/about.php:86
 msgid "We think beautiful design should never sacrifice legibility. With superior contrast and large, comfortable type, the new design is easy to read and a pleasure to navigate."
 msgstr "Vi tycker aldrig att vacker design ska göra avkall på läsbarhet. Med överlägsen kontrast och stor, bekväm typografi så är den nya designen lätt att läsa och ett nöje att utforska."
 
-#: wp-admin/about.php:84
+#: wp-admin/about.php:96
 msgid "WordPress on every&nbsp;device"
 msgstr "WordPress för alla enheter"
 
-#: wp-admin/about.php:85
+#: wp-admin/about.php:97
 msgid "We all access the internet in different ways. Smartphone, tablet, notebook, desktop &mdash; no matter what you use, WordPress will adapt and you&#8217;ll feel right at home."
 msgstr "Vi ansluter alla till Internet på olika sätt. Smarta mobiler, surfplattor, bärbara datorer, stationära datorer &mdash; oavsett vad du använder så kommer WordPress att anpassa sig för att du ska känna dig som hemma."
 
-#: wp-admin/about.php:86
+#: wp-admin/about.php:98
 msgid "High definition at high&nbsp;speed"
 msgstr "HD i hög hastighet"
 
-#: wp-admin/about.php:87
+#: wp-admin/about.php:99
 msgid "WordPress is sharper than ever with new vector-based icons that scale to your screen. By ditching pixels, pages load significantly faster, too."
 msgstr "WordPress är skarpare än någonsin tidigare med nya vektorbaserade ikoner som anpassar sig till din skärm. Genom att trimma bort massor av pixlar så laddar även sidor mycket snabbare."
 
-#: wp-admin/about.php:106
+#: wp-admin/about.php:118
 msgid "Pick a color"
 msgstr "Välj en färg"
 
-#: wp-admin/about.php:107
+#: wp-admin/about.php:119
 msgid "We&#8217;ve included eight color schemes so you can pick your favorite. Choose from any of them below to change it instantly."
 msgstr "Vi har inkluderat åtta olika färgscheman så att du kan välja just din favorit. Välj något av dessa nedan för att direkt använda det."
 
-#: wp-admin/about.php:112
+#: wp-admin/about.php:124
 msgid "To change your color scheme later, just <a href=\"%1$s\">visit your profile</a>."
 msgstr "För att ändra ditt färgschema senare, <a href=\"%1$s\">besök din profil</a>."
 
-#: wp-admin/about.php:123
+#: wp-admin/about.php:135
 msgid "Refined theme management"
 msgstr "Förfinad hantering av teman"
 
-#: wp-admin/about.php:124
+#: wp-admin/about.php:136
 msgid "The new themes screen lets you survey your themes at a glance. Or want more information? Click to discover more. Then sit back and use your keyboard&#8217;s navigation arrows to flip through every theme you&#8217;ve got."
 msgstr "Den nya sektionen för teman ger dig en bra översikt. Eller vill du ha mer information? Klicka för att ta reda på mer. Luta dig sedan tillbaka och använd piltangenterna på tangentbordet för att bläddra dig igenom alla teman du har."
 
-#: wp-admin/about.php:125
+#: wp-admin/about.php:137
 msgid "Smoother widget experience"
 msgstr "Smidigare widgetupplevelse"
 
-#: wp-admin/about.php:126
+#: wp-admin/about.php:138
 msgid "Drag-drag-drag. Scroll-scroll-scroll. Widget management can be complicated. With the new design, we&#8217;ve worked to streamline the widgets&nbsp;screen."
 msgstr "Dra-dra-dra. Skrolla-skrolla-skrolla. Att hantera widgets kan bli komplicerat. Med den nya designen så har vi arbetat med att effektivisera hanteringen av widgets."
 
-#: wp-admin/about.php:127
+#: wp-admin/about.php:139
 msgid "Have a large monitor? Multiple widget areas stack side-by-side to use the available space. Using a tablet? Just tap a widget to add it."
 msgstr "Har du en stor skärm? Flera widgetfält kommer att placera sig sida vid sida för att använda all tillgänglig plats. Använder du en surfplatta? Knacka bara på en widget för att lägga till den."
 
-#: wp-admin/about.php:138
+#: wp-admin/about.php:150
 msgid "Twenty Fourteen, a sleek new magazine&nbsp;theme"
 msgstr "Twenty Fourteen, ett elegant nytt magasin-tema"
 
-#: wp-admin/about.php:143
+#: wp-admin/about.php:155
 msgid "Turn your blog into a&nbsp;magazine"
 msgstr "Förvandla din blogg till ett magasin"
 
-#: wp-admin/about.php:144
+#: wp-admin/about.php:156
 msgid "Create a beautiful magazine-style site with WordPress and Twenty Fourteen. Choose a grid or a slider to display featured content on your homepage. Customize your site with three widget areas or change your layout with two page templates."
 msgstr "Skapa en vacker webbplats i magasinstil med WordPress och Twenty Fourteen. Välj mellan ett rutnät eller en slider för att visa ditt utvalda innehåll på startsidan. Anpassa din webbplats med tre  widgetfält eller ändra din layout med två olika sidmallar."
 
-#: wp-admin/about.php:145
+#: wp-admin/about.php:157
 msgid "With a striking design that does not compromise our trademark simplicity, Twenty Fourteen is our most intrepid default theme yet."
 msgstr "Med en slående design som inte äventyrar vårt varumärkes enkelhet, Twenty Fourteen är vårt mest orädda standardtema hittills."
 
-#: wp-admin/about.php:155
+#: wp-admin/about.php:167
 msgid "Return to Updates"
 msgstr "Återgå till uppdateringar"
 
-#: wp-admin/about.php:155
+#: wp-admin/about.php:167
 msgid "Return to Dashboard &rarr; Updates"
 msgstr "Återgå till Adminpanel &rarr; Uppdateringar"
 
-#: wp-admin/about.php:159
+#: wp-admin/about.php:171
 msgid "Go to Dashboard &rarr; Home"
 msgstr "Gå till Adminpanel &rarr; Hem"
 
-#: wp-admin/about.php:159
+#: wp-admin/about.php:171
 msgid "Go to Dashboard"
 msgstr "Gå till adminpanelen"
 
-#: wp-admin/about.php:171
+#: wp-admin/about.php:183
 msgid "Security Release"
 msgid_plural "Security Releases"
 msgstr[0] "Säkerhetsrelease"
 msgstr[1] "Säkerhetsreleaser"
 
-#: wp-admin/about.php:42 wp-admin/about.php:172
+#: wp-admin/about.php:42 wp-admin/about.php:184
 msgid "Maintenance and Security Release"
 msgid_plural "Maintenance and Security Releases"
 msgstr[0] "Underhålls och säkerhetsrelease"
 msgstr[1] "Underhålls och säkerhetsreleaser"
 
-#: wp-admin/about.php:175
+#. translators: 1: WordPress version number.
+#: wp-admin/about.php:43 wp-admin/about.php:47 wp-admin/about.php:51
+#: wp-admin/about.php:187
 msgid "<strong>Version %1$s</strong> addressed a security issue."
 msgid_plural "<strong>Version %1$s</strong> addressed some security issues."
 msgstr[0] "<strong>Version %1$s</strong> åtgärdar en säkerhetsrisk."
 msgstr[1] "<strong>Version %1$s</strong> åtgärdar säkerhetsrisker."
 
-#: wp-admin/about.php:183
+#. translators: 1: WordPress version number, 2: plural number of bugs. Singular
+#. security issue.
+#: wp-admin/about.php:195
 msgid "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bugs."
 msgstr[0] "<strong>Version %1$s</strong> åtgärdar en säkerhetsrisk och %2$s bugg."
 msgstr[1] "<strong>Version %1$s</strong> åtgärdar en säkerhetsrisk och %2$s buggar."
 
-#: wp-admin/about.php:47 wp-admin/about.php:187
+#. translators: 1: WordPress version number, 2: plural number of bugs. More
+#. than one security issue.
+#: wp-admin/about.php:59 wp-admin/about.php:199
 msgid "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bugs."
 msgstr[0] "<strong>Version %1$s</strong> åtgärdar ett par säkerhetsrisker och %2$s bugg."
@@ -8683,7 +8818,7 @@ msgid "Oops, no comment with this ID."
 msgstr "Oops, ingen kommentarer med den här ID:n."
 
 #: wp-admin/comment.php:68 wp-admin/comment.php:221
-#: wp-admin/includes/post.php:1288
+#: wp-admin/includes/post.php:1301
 msgid "Go back"
 msgstr "Gå tillbaka"
 
@@ -8765,6 +8900,8 @@ msgstr "Välkommen till WordPress %s"
 msgid "WordPress is created by a <a href=\"%1$s\">worldwide team</a> of passionate individuals. <a href=\"%2$s\">Get involved in WordPress</a>."
 msgstr "WordPress är skapat av ett <a href=\"%1$s\">globalt team</a> av passionerade individer. <a href=\"%2$s\">Engagera dig i WordPress</a>."
 
+#. translators: Url to the codex documentation on contributing to WordPress
+#. used on the credits page
 #: wp-admin/credits.php:106
 msgid "http://codex.wordpress.org/Contributing_to_WordPress"
 msgstr "http://codex.wordpress.org/Contributing_to_WordPress"
@@ -8782,6 +8919,8 @@ msgstr "Svenska översättare"
 msgid "Want to see your name in lights on this page? <a href=\"%s\">Get involved in WordPress</a>."
 msgstr "Vill du se ditt namn i neon på denna sida? <a href=\"%s\">Engagera dig i WordPress</a>."
 
+#. translators: URL to the Make WordPress 'Get Involved' landing page used on
+#. the credits page
 #: wp-admin/credits.php:163
 msgid "http://make.wordpress.org/"
 msgstr "http://make.wordpress.org/"
@@ -9135,6 +9274,7 @@ msgstr "Anpassa %s"
 msgid "Theme Customizer Options"
 msgstr "Inställningar för temaanpassaren"
 
+#. translators: %s is the theme name in the Customize/Live Preview pane
 #: wp-admin/customize.php:124
 msgid "You are previewing %s"
 msgstr "Du förhandsgranskar %s"
@@ -9278,6 +9418,7 @@ msgstr "Eget fält raderat."
 msgid "Post updated."
 msgstr "Inlägg uppdaterat."
 
+#. translators: %s: date and time of the revision
 #: wp-admin/edit-form-advanced.php:46
 msgid "Post restored to revision from %s"
 msgstr "Inlägg återställt till version från %s"
@@ -9298,6 +9439,7 @@ msgstr "Inlägg sparat. <a target=\"_blank\" href=\"%s\">Förhandsgranska inläg
 msgid "Post scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s\">Preview post</a>"
 msgstr "Inlägg schemalagt till: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s\">Förhandsgranska inlägg</a>"
 
+#. translators: Publish box date format, see http:php.net/date
 #: wp-admin/edit-form-advanced.php:52 wp-admin/edit-form-advanced.php:65
 #: wp-admin/edit-form-comment.php:103 wp-admin/includes/meta-boxes.php:155
 #: wp-admin/includes/meta-boxes.php:277 wp-admin/includes/revision.php:170
@@ -9562,6 +9704,7 @@ msgstr "Status"
 msgid "View Comment"
 msgstr "Visa kommentar"
 
+#. translators: comment type radio button
 #: wp-admin/edit-form-comment.php:90
 msgctxt "adjective"
 msgid "Pending"
@@ -9615,6 +9758,7 @@ msgstr "XFN står för <a href=\"http://gmpg.org/xfn/\" target=\"_blank\">XHTML 
 msgid "<a href=\"http://codex.wordpress.org/Links_Add_New_Screen\" target=\"_blank\">Documentation on Creating Links</a>"
 msgstr "<a href=\"http://codex.wordpress.org/Links_Add_New_Screen\" target=\"_blank\">Dokumentation för hur man skapa länkar</a>"
 
+#. translators: add new links
 #: wp-admin/edit-link-form.php:73 wp-admin/link-manager.php:72
 #: wp-admin/menu.php:78
 msgctxt "link"

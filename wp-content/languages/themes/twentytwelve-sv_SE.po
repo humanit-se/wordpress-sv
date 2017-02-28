@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/0.1\n"
+"X-Generator: GlotPress/1.0-alpha-1000\n"
 "Project-Id-Version: Twenty Twelve\n"
 
 #: 404.php:17
@@ -133,6 +133,8 @@ msgstr "Utvalt inlägg"
 msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Visa alla inlägg av %s <span class=\"meta-nav\">&rarr;</span>"
 
+#. #-#-#-#-#  twentytwelve.pot (Twenty Twelve 1.3)  #-#-#-#-#
+#. Author URI of the plugin/theme
 #: footer.php:16
 msgid "http://wordpress.org/"
 msgstr "http://wordpress.org/"
@@ -149,11 +151,17 @@ msgstr "Drivs med %s"
 msgid "Primary Menu"
 msgstr "Primär meny"
 
+#. translators: If there are characters in your language that are not supported
+#. by Open Sans, translate this to 'off'. Do not translate into your own
+#. language.
 #: functions.php:101
 msgctxt "Open Sans font: on or off"
 msgid "on"
 msgstr "on"
 
+#. translators: To add an additional Open Sans character subset specific to
+#. your language, translate this to 'greek', 'cyrillic' or 'vietnamese'. Do not
+#. translate into your own language.
 #: functions.php:107
 msgctxt "Open Sans font: add new subset (greek, cyrillic, vietnamese)"
 msgid "no-subset"
@@ -207,6 +215,7 @@ msgstr "(Redigera)"
 msgid "Post author"
 msgstr "Inläggsförfattare"
 
+#. translators: 1: date, 2: time
 #: functions.php:338
 msgid "%1$s at %2$s"
 msgstr "%1$s kl. %2$s"
@@ -219,6 +228,7 @@ msgstr "Din kommentar inväntar granskning."
 msgid "Reply"
 msgstr "Svara"
 
+#. Translators: used between list items, there is a space after the comma.
 #: functions.php:376 functions.php:379
 msgid ", "
 msgstr ", "
@@ -227,6 +237,8 @@ msgstr ", "
 msgid "View all posts by %s"
 msgstr "Visa alla inlägg av %s"
 
+#. Translators: 1 is category, 2 is tag, 3 is the date and 4 is the author's
+#. name.
 #: functions.php:396
 msgid "This entry was posted in %1$s and tagged %2$s on %3$s<span class=\"by-author\"> by %4$s</span>."
 msgstr "Detta inlägg postades i %1$s och märktes %2$s den %3$s<span class=\"by-author\"> av %4$s</span>."
@@ -289,20 +301,26 @@ msgstr "&rarr;"
 msgid "Tag Archives: %s"
 msgstr "Etikettarkiv: %s"
 
+#. Theme Name of the plugin/theme
 msgid "Twenty Twelve"
 msgstr "Twenty Twelve"
 
+#. Theme URI of the plugin/theme
 msgid "http://wordpress.org/themes/twentytwelve"
 msgstr "http://wordpress.org/themes/twentytwelve"
 
+#. Description of the plugin/theme
 msgid "The 2012 theme for WordPress is a fully responsive theme that looks great on any device. Features include a front page template with its own widgets, an optional display font, styling for post formats on both index and single views, and an optional no-sidebar page template. Make it yours with a custom menu, header image, and background."
 msgstr "The 2012 theme for WordPress is a fully responsive theme that looks great on any device. Features include a front page template with its own widgets, an optional display font, styling for post formats on both index and single views, and an optional no-sidebar page template. Make it yours with a custom menu, header image, and background."
 
+#. Author of the plugin/theme
 msgid "the WordPress team"
 msgstr "WordPress teamet"
 
+#. Template Name of the plugin/theme
 msgid "Front Page Template"
 msgstr "Mall för startsida"
 
+#. Template Name of the plugin/theme
 msgid "Full-width Page Template, No Sidebar"
 msgstr "Fullbreddsmall, utan sidofält"
