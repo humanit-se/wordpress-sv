@@ -13,8 +13,8 @@
 			</li>
 
 			<!-- Author information is disabled per default. Uncomment and fill in your details if you want to use it.
-			<li><h2>F&ouml;rfattare</h2>
-			<p>N&aring;gon liten text om dig sj&auml;lv.</p>
+			<li><h2><?php _e('Author', 'kubrick'); ?></h2>
+			<p>A little something about you, the author. Nothing lengthy, just an overview.</p>
 			</li>
 			-->
 
@@ -24,58 +24,50 @@
 
 			<?php /* If this is a 404 page */ if (is_404()) { ?>
 			<?php /* If this is a category archive */ } elseif (is_category()) { ?>
-			<p>Du bl&auml;ddrar just nu i arkivet f&ouml;r kategori <?php single_cat_title(''); ?>.</p>
+			<p><?php printf(__('You are currently browsing the archives for the %s category.', 'kubrick'), single_cat_title('', false)); ?></p>
 
 			<?php /* If this is a yearly archive */ } elseif (is_day()) { ?>
-			<p>Du bl&auml;ddrar just nu i arkivet p&aring; <a href="<?php bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a>  
-			f&ouml;r <?php the_time('l, j F, Y'); ?>.</p>
+			<p><?php printf(__('You are currently browsing the <a href="%1$s/">%2$s</a> blog archives for the day %3$s.', 'kubrick'), get_bloginfo('url'), get_bloginfo('name'), get_the_time(__('l, F jS, Y', 'kubrick'))); ?></p>
 
 			<?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
-			<p>Du bl&auml;ddrar just nu i arkivet p&aring; <a href="<?php bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a> 
-			f&ouml;r <?php the_time('F, Y'); ?>.</p>
+			<p><?php printf(__('You are currently browsing the <a href="%1$s/">%2$s</a> blog archives for %3$s.', 'kubrick'), get_bloginfo('url'), get_bloginfo('name'), get_the_time(__('F, Y', 'kubrick'))); ?></p>
 
 			<?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
-			<p>Du bl&auml;ddrar just nu i arkivet p&aring; <a href="<?php bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a> 
-			f&ouml;r &aring;ret <?php the_time('Y'); ?>.</p>
+			<p><?php printf(__('You are currently browsing the <a href="%1$s/">%2$s</a> blog archives for the year %3$s.', 'kubrick'), get_bloginfo('url'), get_bloginfo('name'), get_the_time('Y')); ?></p>
 
 			<?php /* If this is a monthly archive */ } elseif (is_search()) { ?>
-			<p>Du har s&ouml;kt i arkivet p&aring; <a href="<?php echo bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a> 
-			efter <strong>'<?php the_search_query(); ?>'</strong>. Om du inte hittar det du s&ouml;ker i dessa resultat, f&ouml;rs&ouml;k med n&aring;gon av dessa l&auml;nkar.</p>
+			<p><?php printf(__('You have searched the <a href="%1$s/">%2$s</a> blog archives for <strong>&#8216;%3$s&#8217;</strong>. If you are unable to find anything in these search results, you can try one of these links.', 'kubrick'), get_bloginfo('url'), get_bloginfo('name'), wp_specialchars(get_search_query(), true)); ?></p>
 
 			<?php /* If this is a monthly archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-			<p>Du bl&auml;ddrar just nu i arkivet p&aring; <a href="<?php bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a>.</p>
+			<p><?php printf(__('You are currently browsing the <a href="%1$s/">%2$s</a> blog archives.', 'kubrick'), get_bloginfo('url'), get_bloginfo('name')); ?></p>
 
 			<?php } ?>
 
-			</li> 
-	        <?php }?> 
-	        </ul> 
-            </ul> 
-	        <ul role="navigation">
+			</li>
+		<?php }?>
+		</ul>
+		<ul role="navigation">
+			<?php wp_list_pages('title_li=<h2>' . __('Pages', 'kubrick') . '</h2>' ); ?>
 
-			<?php wp_list_pages('title_li=<h2>Sidor</h2>' ); ?>
-
-			<li><h2>Arkiv</h2>
+			<li><h2><?php _e('Archives', 'kubrick'); ?></h2>
 				<ul>
 				<?php wp_get_archives('type=monthly'); ?>
 				</ul>
 			</li>
 
-			<?php wp_list_categories('show_count=1&title_li=<h2>Kategorier</h2>'); ?>
-            
-            </ul> 
-	        <ul> 
-
+			<?php wp_list_categories('show_count=1&title_li=<h2>' . __('Categories', 'kubrick') . '</h2>'); ?>
+		</ul>
+		<ul>
 			<?php /* If this is the frontpage */ if ( is_home() || is_page() ) { ?>
 				<?php wp_list_bookmarks(); ?>
 
-				<li><h2>Meta</h2>
+				<li><h2><?php _e('Meta', 'kubrick'); ?></h2>
 				<ul>
 					<?php wp_register(); ?>
 					<li><?php wp_loginout(); ?></li>
-					<li><a href="http://validator.w3.org/check/referer" title="Denna sida validerar som XHTML 1.0 Transitional">Validerande <abbr title="eXtensible HyperText Markup Language">XHTML</abbr></a></li>
-					<li><a href="http://gmpg.org/xfn/"><abbr title="XHTML Friends Network">XFN</abbr></a></li>
-					<li><a href="http://wordpress.org/" title="Drivs med WordPress, state-of-the-art semantic personal publishing platform.">WordPress</a></li>
+					<li><a href="http://validator.w3.org/check/referer" title="<?php _e('This page validates as XHTML 1.0 Transitional', 'kubrick'); ?>"><?php _e('Valid <abbr title="eXtensible HyperText Markup Language">XHTML</abbr>', 'kubrick'); ?></a></li>
+					<li><a href="http://gmpg.org/xfn/"><abbr title="<?php _e('XHTML Friends Network', 'kubrick'); ?>"><?php _e('XFN', 'kubrick'); ?></abbr></a></li>
+					<li><a href="http://wordpress.org/" title="<?php _e('Powered by WordPress, state-of-the-art semantic personal publishing platform.', 'kubrick'); ?>">WordPress</a></li>
 					<?php wp_meta(); ?>
 				</ul>
 				</li>

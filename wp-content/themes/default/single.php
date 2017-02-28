@@ -16,43 +16,41 @@ get_header();
 			<div class="alignright"><?php next_post_link('%link &raquo;') ?></div>
 		</div>
 
-		<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
+		<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 			<h2><?php the_title(); ?></h2>
 
 			<div class="entry">
-				<?php the_content('<p class="serif">L&auml;s mer &raquo;</p>'); ?>
+				<?php the_content('<p class="serif">' . __('Read the rest of this entry &raquo;', 'kubrick') . '</p>'); ?>
 
-				<?php wp_link_pages(array('before' => '<p><strong>Sidor:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
-				<?php the_tags( '<p>Etiketter: ', ', ', '</p>'); ?>
+				<?php wp_link_pages(array('before' => '<p><strong>' . __('Pages:', 'kubrick') . '</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
+				<?php the_tags( '<p>' . __('Tags:', 'kubrick') . ' ', ', ', '</p>'); ?>
 
 				<p class="postmetadata alt">
 					<small>
-						Detta inl&auml;gg postades
 						<?php /* This is commented, because it requires a little adjusting sometimes.
 							You'll need to download this plugin, and follow the instructions:
 							http://binarybonsai.com/wordpress/time-since/ */
-							/* $entry_datetime = abs(strtotime($post->post_date) - (60*120)); echo time_since($entry_datetime); echo ' ago'; */ ?>
-						<?php the_time('l, j F, Y') ?> kl <?php the_time() ?>
-						i <?php the_category(', ') ?>.
-						Du kan f&ouml;lja svar via <?php post_comments_feed_link('RSS 2.0'); ?> fl&ouml;det.
+							/* $entry_datetime = abs(strtotime($post->post_date) - (60*120)); $time_since = sprintf(__('%s ago', 'kubrick'), time_since($entry_datetime)); */ ?>
+						<?php printf(__('This entry was posted %1$s on %2$s at %3$s and is filed under %4$s.', 'kubrick'), $time_since, get_the_time(__('l, F jS, Y', 'kubrick')), get_the_time(), get_the_category_list(', ')); ?>
+						<?php printf(__("You can follow any responses to this entry through the <a href='%s'>RSS 2.0</a> feed.", "kubrick"), get_post_comments_feed_link()); ?> 
 
 						<?php if ( comments_open() && pings_open() ) {
 							// Both Comments and Pings are open ?>
-							Du kan <a href="#respond">l&auml;mna en kommentar</a>, eller en <a href="<?php trackback_url(); ?>" rel="trackback">trackback</a> fr&aring;n din egen sida.
+							<?php printf(__('You can <a href="#respond">leave a response</a>, or <a href="%s" rel="trackback">trackback</a> from your own site.', 'kubrick'), trackback_url(false)); ?>
 
 						<?php } elseif ( !comments_open() && pings_open() ) {
 							// Only Pings are Open ?>
-							Kommentering &auml;r avst&auml;ngd, men du kan l&auml;mna en <a href="<?php trackback_url(); ?> " rel="trackback">trackback</a> fr&aring;n din egen sida.
+							<?php printf(__('Responses are currently closed, but you can <a href="%s" rel="trackback">trackback</a> from your own site.', 'kubrick'), trackback_url(false)); ?>
 
 						<?php } elseif ( comments_open() && !pings_open() ) {
 							// Comments are open, Pings are not ?>
-							Du kan hoppa till slutet f&ouml;r att kommentera. Pingning &auml;r inte till&aring;ten.
+							<?php _e('You can skip to the end and leave a response. Pinging is currently not allowed.', 'kubrick'); ?>
 
 						<?php } elseif ( !comments_open() && !pings_open() ) {
 							// Neither Comments, nor Pings are open ?>
-							B&aring;de pingning och kommentering &auml;r avst&auml;ngt.
+							<?php _e('Both comments and pings are currently closed.', 'kubrick'); ?>
 
-						<?php } edit_post_link('Redigera.','',''); ?>
+						<?php } edit_post_link(__('Edit this entry', 'kubrick'),'','.'); ?>
 
 					</small>
 				</p>
@@ -64,7 +62,7 @@ get_header();
 
 	<?php endwhile; else: ?>
 
-		<p>Beklagar, inga inl&auml;gg matchade dina kriterier.</p>
+		<p><?php _e('Sorry, no posts matched your criteria.', 'kubrick'); ?></p>
 
 <?php endif; ?>
 

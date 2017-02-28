@@ -14,12 +14,12 @@ Template Name: Archives
 
 <?php get_search_form(); ?>
 
-<h2>M&aring;nadsarkiv:</h2>
+<h2><?php _e('Archives by Month:', 'kubrick'); ?></h2>
 	<ul>
 		<?php wp_get_archives('type=monthly'); ?>
 	</ul>
 
-<h2>&Auml;mnesarkiv:</h2>
+<h2><?php _e('Archives by Subject:', 'kubrick'); ?></h2>
 	<ul>
 		 <?php wp_list_categories(); ?>
 	</ul>
