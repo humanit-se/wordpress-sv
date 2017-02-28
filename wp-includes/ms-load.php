@@ -208,9 +208,9 @@ function wpmu_current_site() {
 
 	// Still no dice.
 	if ( 1 == count( $sites ) )
-		wp_die( sprintf( /*WP_I18N_BLOG_DOESNT_EXIST*/'That site does not exist. Please try <a href="%s">%s</a>.'/*/WP_I18N_BLOG_DOESNT_EXIST*/, $sites[0]->domain . $sites[0]->path ) );
+		wp_die( sprintf( /*WP_I18N_BLOG_DOESNT_EXIST*/'Den webbplatsen finns inte. Var vänlig försök med <a href="%s">%s</a>.'/*/WP_I18N_BLOG_DOESNT_EXIST*/, $sites[0]->domain . $sites[0]->path ) );
 	else
-		wp_die( /*WP_I18N_NO_SITE_DEFINED*/'No site defined on this host. If you are the owner of this site, please check <a href="http://codex.wordpress.org/Debugging_a_WordPress_Network">Debugging a WordPress Network</a> for help.'/*/WP_I18N_NO_SITE_DEFINED*/ );
+		wp_die( /*WP_I18N_NO_SITE_DEFINED*/'Ingen webbplats definierad för denna host. Om du äger den här webbplatsen, se dokumentationen  <a href="http://codex.wordpress.org/Debugging_a_WordPress_Network">Debugging a WordPress Network</a> för vidare assistans.'/*/WP_I18N_NO_SITE_DEFINED*/ );
 }
 
 /**
@@ -224,19 +224,19 @@ function wpmu_current_site() {
 function ms_not_installed() {
 	global $wpdb, $domain, $path;
 
-	$title = /*WP_I18N_FATAL_ERROR*/'Error establishing database connection'/*/WP_I18N_FATAL_ERROR*/;
+	$title = /*WP_I18N_FATAL_ERROR*/'Problem med att skapa en databasanslutning'/*/WP_I18N_FATAL_ERROR*/;
 	$msg  = '<h1>' . $title . '</h1>';
 	if ( ! is_admin() )
 		die( $msg );
-	$msg .= '<p>' . /*WP_I18N_CONTACT_OWNER*/'If your site does not display, please contact the owner of this network.'/*/WP_I18N_CONTACT_OWNER*/ . '';
-	$msg .= ' ' . /*WP_I18N_CHECK_MYSQL*/'If you are the owner of this network please check that MySQL is running properly and all tables are error free.'/*/WP_I18N_CHECK_MYSQL*/ . '</p>';
+	$msg .= '<p>' . /*WP_I18N_CONTACT_OWNER*/'Om din webbplats inte visas, var vänlig kontakta ägaren av det här nätverket.'/*/WP_I18N_CONTACT_OWNER*/ . '';
+	$msg .= ' ' . /*WP_I18N_CHECK_MYSQL*/'Om du är ägaren av det här nätverket, vänligen kontrollera att MySQL är igång och fungerar som det ska och att inga tabeller innehåller fel.'/*/WP_I18N_CHECK_MYSQL*/ . '</p>';
 	if ( false && !$wpdb->get_var( "SHOW TABLES LIKE '$wpdb->site'" ) )
-		$msg .= '<p>' . sprintf( /*WP_I18N_TABLES_MISSING_LONG*/'<strong>Database tables are missing.</strong> This means that MySQL is not running, WordPress was not installed properly, or someone deleted <code>%s</code>. You really should look at your database now.'/*/WP_I18N_TABLES_MISSING_LONG*/, $wpdb->site ) . '</p>';
+		$msg .= '<p>' . sprintf( /*WP_I18N_TABLES_MISSING_LONG*/'<strong>Databastabeller saknas.</strong> Det betyder att MySQL inte körs, WordPress har inte installerats korrekt eller så har någon raderat <code>%s</code>. Du bör verkligen kontrollera din databas nu.'/*/WP_I18N_TABLES_MISSING_LONG*/, $wpdb->site ) . '</p>';
 	else
-		$msg .= '<p>' . sprintf( /*WP_I18N_NO_SITE_FOUND*/'<strong>Could not find site <code>%1$s</code>.</strong> Searched for table <code>%2$s</code> in database <code>%3$s</code>. Is that right?'/*/WP_I18N_NO_SITE_FOUND*/, rtrim( $domain . $path, '/' ), $wpdb->blogs, DB_NAME ) . '</p>';
+		$msg .= '<p>' . sprintf( /*WP_I18N_NO_SITE_FOUND*/'<strong>Kunde inte hitta webbplatsen <code>%1$s</code>.</strong> Sökte efter tabell <code>%2$s</code> i databas <code>%3$s</code>. Är det korrekt?'/*/WP_I18N_NO_SITE_FOUND*/, rtrim( $domain . $path, '/' ), $wpdb->blogs, DB_NAME ) . '</p>';
 	$msg .= '<p><strong>' . /*WP_I18N_WHAT_DO_I_DO*/'What do I do now?'/*WP_I18N_WHAT_DO_I_DO*/ . '</strong> ';
-	$msg .= /*WP_I18N_RTFM*/'Read the <a target="_blank" href="http://codex.wordpress.org/Debugging_a_WordPress_Network">bug report</a> page. Some of the guidelines there may help you figure out what went wrong.'/*/WP_I18N_RTFM*/;
-	$msg .= ' ' . /*WP_I18N_STUCK*/'If you&#8217;re still stuck with this message, then check that your database contains the following tables:'/*/WP_I18N_STUCK*/ . '</p><ul>';
+	$msg .= /*WP_I18N_RTFM*/'Läs dokumentationen <a target="_blank" href="http://codex.wordpress.org/Debugging_a_WordPress_Network">bug report</a>. Några av dessa riktlinjer kanske kan hjälpa dig att lista ut vad som gick fel.'/*/WP_I18N_RTFM*/;
+	$msg .= ' ' . /*WP_I18N_STUCK*/'Om du fortfarande får upp det här meddelandet, kontrollera så att databasen innehåller följande tabeller:'/*/WP_I18N_STUCK*/ . '</p><ul>';
 	foreach ( $wpdb->tables('global') as $t => $table ) {
 		if ( 'sitecategories' == $t )
 			continue;
