@@ -4292,162 +4292,162 @@ msgstr "<strong>FEL</strong>: Felaktigt användarnamn eller e-postadress."
 msgid "You should specify a nonce action to be verified by using the first parameter."
 msgstr "Du bör ange en &#8217;nonce&#8217; åtgärd som skall verifieras med hjälp av den första parametern."
 
-#: wp-includes/pluggable.php:1327
+#: wp-includes/pluggable.php:1336
 msgid "New trackback on your post \"%s\""
 msgstr "En ny trackback till ditt inlägg \\\"%s\\\""
 
 #. translators: 1: website name, 2: author IP, 3: author domain
 #. translators: 1: comment author, 2: author IP, 3: author domain
-#: wp-includes/pluggable.php:1329 wp-includes/pluggable.php:1339
+#: wp-includes/pluggable.php:1338 wp-includes/pluggable.php:1348
 msgid "Website: %1$s (IP: %2$s , %3$s)"
 msgstr "Webbplats: %1$s (IP: %2$s, %3$s)"
 
-#: wp-includes/pluggable.php:1330 wp-includes/pluggable.php:1340
-#: wp-includes/pluggable.php:1351 wp-includes/pluggable.php:1465
-#: wp-includes/pluggable.php:1472 wp-includes/pluggable.php:1480
+#: wp-includes/pluggable.php:1339 wp-includes/pluggable.php:1349
+#: wp-includes/pluggable.php:1360 wp-includes/pluggable.php:1474
+#: wp-includes/pluggable.php:1481 wp-includes/pluggable.php:1489
 msgid "URL    : %s"
 msgstr "URL    : %s"
 
-#: wp-includes/pluggable.php:1331 wp-includes/pluggable.php:1341
+#: wp-includes/pluggable.php:1340 wp-includes/pluggable.php:1350
 msgid "Excerpt: "
 msgstr "Utdrag:"
 
-#: wp-includes/pluggable.php:1332
+#: wp-includes/pluggable.php:1341
 msgid "You can see all trackbacks on this post here: "
 msgstr "Alla trackbacks till det här inlägget:"
 
 #. translators: 1: blog name, 2: post title
-#: wp-includes/pluggable.php:1334
+#: wp-includes/pluggable.php:1343
 msgid "[%1$s] Trackback: \"%2$s\""
 msgstr "[%1$s] Trackback: \"%2$s\""
 
-#: wp-includes/pluggable.php:1337
+#: wp-includes/pluggable.php:1346
 msgid "New pingback on your post \"%s\""
 msgstr "En ny ping till ditt inlägg \"%s\""
 
-#: wp-includes/pluggable.php:1342
+#: wp-includes/pluggable.php:1351
 msgid "You can see all pingbacks on this post here: "
 msgstr "Alla pingbackar till det här inlägget:"
 
 #. translators: 1: blog name, 2: post title
-#: wp-includes/pluggable.php:1344
+#: wp-includes/pluggable.php:1353
 msgid "[%1$s] Pingback: \"%2$s\""
 msgstr "[%1$s] Pingback: \"%2$s\""
 
-#: wp-includes/pluggable.php:1347
+#: wp-includes/pluggable.php:1356
 msgid "New comment on your post \"%s\""
 msgstr "En ny kommentar till ditt inlägg \"%s\""
 
 #. translators: 1: comment author, 2: author IP, 3: author domain
-#: wp-includes/pluggable.php:1349 wp-includes/pluggable.php:1478
+#: wp-includes/pluggable.php:1358 wp-includes/pluggable.php:1487
 msgid "Author : %1$s (IP: %2$s , %3$s)"
 msgstr "Författare: %1$s (IP: %2$s, %3$s)"
 
-#: wp-includes/pluggable.php:1350 wp-includes/pluggable.php:1479
+#: wp-includes/pluggable.php:1359 wp-includes/pluggable.php:1488
 msgid "E-mail : %s"
 msgstr "E-post: %s"
 
-#: wp-includes/pluggable.php:1352 wp-includes/pluggable.php:1481
+#: wp-includes/pluggable.php:1361 wp-includes/pluggable.php:1490
 msgid "Whois  : http://whois.arin.net/rest/ip/%s"
 msgstr "Whois  : http://whois.arin.net/rest/ip/%s"
 
-#: wp-includes/pluggable.php:1353 wp-includes/pluggable.php:1482
+#: wp-includes/pluggable.php:1362 wp-includes/pluggable.php:1491
 msgid "Comment: "
 msgstr "Kommentar:"
 
-#: wp-includes/pluggable.php:1354
+#: wp-includes/pluggable.php:1363
 msgid "You can see all comments on this post here: "
 msgstr "Alla kommentarer till det här inlägget:"
 
 #. translators: 1: blog name, 2: post title
-#: wp-includes/pluggable.php:1356
+#: wp-includes/pluggable.php:1365
 msgid "[%1$s] Comment: \"%2$s\""
 msgstr "[%1$s] Kommentar: \"%2$s\""
 
-#: wp-includes/pluggable.php:1360
+#: wp-includes/pluggable.php:1369
 msgid "Permalink: %s"
 msgstr "Permalänk: %s"
 
-#: wp-includes/pluggable.php:1364 wp-includes/pluggable.php:1488
+#: wp-includes/pluggable.php:1373 wp-includes/pluggable.php:1497
 msgid "Trash it: %s"
 msgstr "Kasta i papperskorgen: %s"
 
-#: wp-includes/pluggable.php:1366 wp-includes/pluggable.php:1490
+#: wp-includes/pluggable.php:1375 wp-includes/pluggable.php:1499
 msgid "Delete it: %s"
 msgstr "Radera den: %s"
 
-#: wp-includes/pluggable.php:1367 wp-includes/pluggable.php:1491
+#: wp-includes/pluggable.php:1376 wp-includes/pluggable.php:1500
 msgid "Spam it: %s"
 msgstr "Märk som skräp: %s"
 
-#: wp-includes/pluggable.php:1462
+#: wp-includes/pluggable.php:1471
 msgid "A new trackback on the post \"%s\" is waiting for your approval"
 msgstr "En ny trackback till inlägget \"%s\" väntar på ditt godkännande "
 
-#: wp-includes/pluggable.php:1464 wp-includes/pluggable.php:1471
+#: wp-includes/pluggable.php:1473 wp-includes/pluggable.php:1480
 msgid "Website : %1$s (IP: %2$s , %3$s)"
 msgstr "Webbplats : %1$s (IP: %2$s , %3$s)"
 
-#: wp-includes/pluggable.php:1466
+#: wp-includes/pluggable.php:1475
 msgid "Trackback excerpt: "
 msgstr "Trackback utdrag:"
 
-#: wp-includes/pluggable.php:1469
+#: wp-includes/pluggable.php:1478
 msgid "A new pingback on the post \"%s\" is waiting for your approval"
 msgstr "En ny pingning till inlägget \"%s\" inväntar din granskning"
 
-#: wp-includes/pluggable.php:1473
+#: wp-includes/pluggable.php:1482
 msgid "Pingback excerpt: "
 msgstr "Pingback utdrag:"
 
-#: wp-includes/pluggable.php:1476
+#: wp-includes/pluggable.php:1485
 msgid "A new comment on the post \"%s\" is waiting for your approval"
 msgstr "En ny kommentar till inlägget \"%s\" inväntar din granskning"
 
-#: wp-includes/pluggable.php:1486
+#: wp-includes/pluggable.php:1495
 msgid "Approve it: %s"
 msgstr "Godkänn den: %s"
 
-#: wp-includes/pluggable.php:1493
+#: wp-includes/pluggable.php:1502
 msgid "Currently %s comment is waiting for approval. Please visit the moderation panel:"
 msgid_plural "Currently %s comments are waiting for approval. Please visit the moderation panel:"
 msgstr[0] "För närvarande väntar %s kommentar på ditt godkännande. Vänligen besök granskningspanelen:"
 msgstr[1] "För närvarande väntar %s kommentarer på ditt godkännande. Vänligen besök granskningspanelen:"
 
-#: wp-includes/pluggable.php:1497
+#: wp-includes/pluggable.php:1506
 msgid "[%1$s] Please moderate: \"%2$s\""
 msgstr "[%1$s] Vänligen moderera: \"%2$s\""
 
-#: wp-includes/pluggable.php:1560
+#: wp-includes/pluggable.php:1569
 msgid "Password Lost and Changed for user: %s"
 msgstr "Användaren %s har glömt sitt lösenord. Lösenordet har ändrats."
 
-#: wp-includes/pluggable.php:1564
+#: wp-includes/pluggable.php:1573
 msgid "[%s] Password Lost/Changed"
 msgstr "[%s] Lösenordet glömt/ändrat"
 
-#: wp-includes/pluggable.php:1587
+#: wp-includes/pluggable.php:1596
 msgid "New user registration on your site %s:"
 msgstr "En ny användare har registrerat sig på din webbplats %s:"
 
-#: wp-includes/pluggable.php:1588 wp-includes/pluggable.php:1596
+#: wp-includes/pluggable.php:1597 wp-includes/pluggable.php:1605
 #: wp-login.php:360
 msgid "Username: %s"
 msgstr "Användarnamn: %s"
 
-#: wp-includes/pluggable.php:1589
+#: wp-includes/pluggable.php:1598
 msgid "E-mail: %s"
 msgstr "E-post: %s"
 
-#: wp-includes/pluggable.php:1591
+#: wp-includes/pluggable.php:1600
 msgid "[%s] New User Registration"
 msgstr "[%s] Registrering av ny användare"
 
-#: wp-includes/pluggable.php:1597
+#: wp-includes/pluggable.php:1606
 msgid "Password: %s"
 msgstr "Lösenord: %s"
 
-#: wp-includes/pluggable.php:1600
+#: wp-includes/pluggable.php:1609
 msgid "[%s] Your username and password"
 msgstr "[%s] Ditt användarnamn och lösenord"
 
