@@ -19,16 +19,19 @@
 /** Define ABSPATH as this files directory */
 define( 'ABSPATH', dirname(__FILE__) . '/' );
 
-error_reporting(E_ALL ^ E_NOTICE ^ E_USER_NOTICE);
+if ( defined('E_RECOVERABLE_ERROR') )
+	error_reporting(E_ERROR | E_WARNING | E_PARSE | E_USER_ERROR | E_USER_WARNING | E_RECOVERABLE_ERROR);
+else
+	error_reporting(E_ERROR | E_WARNING | E_PARSE | E_USER_ERROR | E_USER_WARNING);
 
 if ( file_exists( ABSPATH . 'wp-config.php') ) {
 
 	/** The config file resides in ABSPATH */
 	require_once( ABSPATH . 'wp-config.php' );
 
-} elseif ( file_exists( dirname(ABSPATH) . '/wp-config.php' ) && ! file_exists( dirname(ABSPATH) . '/wp-load.php' ) ) {
+} elseif ( file_exists( dirname(ABSPATH) . '/wp-config.php' ) && ! file_exists( dirname(ABSPATH) . '/wp-settings.php' ) ) {
 
-	/** The config file resides one level below ABSPATH */
+	/** The config file resides one level above ABSPATH but is not part of another install*/
 	require_once( dirname(ABSPATH) . '/wp-config.php' );
 
 } else {
@@ -43,7 +46,8 @@ if ( file_exists( ABSPATH . 'wp-config.php') ) {
 	require_once( ABSPATH . '/wp-includes/classes.php' );
 	require_once( ABSPATH . '/wp-includes/functions.php' );
 	require_once( ABSPATH . '/wp-includes/plugin.php' );
-	wp_die(sprintf(/*WP_I18N_NO_CONFIG*/'Det verkar inte finnas en <code>wp-config.php</code> fil. Denna behövs innan vi kan starta. Behöver du mer hjälp? <a href=\'http://codex.wordpress.org/Editing_wp-config.php\'>Den finns här</a>. Du kan skapa en <code>wp-config.php</code> fil via webbläsaren, men detta funkar inte på alla servrar. Det säkraste sättet är att skapade den manuellt. </p><p><a href=\'%ssetup-config.php\' class=\'button\'>Skapa en konfigurationsfil</a> '/*/WP_I18N_NO_CONFIG*/, $path), /*WP_I18N_ERROR_TITLE*/'WordPress &rsaquo; Fel'/*/WP_I18N_ERROR_TITLE*/);
+	$text_direction = /*WP_I18N_TEXT_DIRECTION*/'ltr'/*/WP_I18N_TEXT_DIRECTION*/;
+	wp_die(sprintf(/*WP_I18N_NO_CONFIG*/'Det verkar inte finnas en <code>wp-config.php</code> fil. Denna behövs innan vi kan starta. Behöver du mer hjälp? <a href=\'http://codex.wordpress.org/Editing_wp-config.php\'>Den finns här</a>. Du kan skapa en <code>wp-config.php</code> fil via webbläsaren, men detta funkar inte på alla servrar. Det säkraste sättet är att skapade den manuellt. </p><p><a href=\'%ssetup-config.php\' class=\'button\'>Skapa en konfigurationsfil</a> '/*/WP_I18N_NO_CONFIG*/, $path), /*WP_I18N_ERROR_TITLE*/'WordPress &rsaquo; Fel'/*/WP_I18N_ERROR_TITLE*/, array('text_direction' => $text_direction));
 
 }
 

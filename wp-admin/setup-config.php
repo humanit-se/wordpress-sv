@@ -26,24 +26,24 @@ define('WPINC', 'wp-includes');
 define('WP_CONTENT_DIR', ABSPATH . 'wp-content');
 /**#@-*/
 
-require_once('../wp-includes/compat.php');
-require_once('../wp-includes/functions.php');
-require_once('../wp-includes/classes.php');
+require_once(ABSPATH . WPINC . '/compat.php');
+require_once(ABSPATH . WPINC . '/functions.php');
+require_once(ABSPATH . WPINC . '/classes.php');
 
-if (!file_exists('../wp-config-sample.php'))
+if (!file_exists(ABSPATH . 'wp-config-sample.php'))
 	wp_die('Beklagar, vi behöver en wp-config-sample.php fil att arbeta utifrån. Var vänlig ladda upp denna fil från dina WordPress filer.');
 
-$configFile = file('../wp-config-sample.php');
+$configFile = file(ABSPATH . 'wp-config-sample.php');
 
-if ( !is_writable('../'))
+if ( !is_writable(ABSPATH))
 	wp_die("Beklagar, vi måste kunna skriva till katalogen. Du måste antingen ändra rättigheterna för din WordPress katalog eller skapa din wp-config.php manuellt.");
 
 // Check if wp-config.php has been created
-if (file_exists('../wp-config.php'))
+if (file_exists(ABSPATH . 'wp-config.php'))
 	wp_die("<p>Filen 'wp-config.php' finns redan. Om du behöver återställa något värde i filen, var vänlig readera den först. Du kan försöka att <a href='install.php'>installera nu</a>.</p>");
 
-// Check if wp-config.php exists above the root directory
-if (file_exists('../../wp-config.php') && ! file_exists('../../wp-load.php'))
+// Check if wp-config.php exists above the root directory but is not part of another install
+if (file_exists(ABSPATH . '../wp-config.php') && ! file_exists(ABSPATH . '../wp-settings.php'))
 	wp_die("<p>Filen 'wp-config.php' finns redan en nivå ovanför din WordPress installation.  Om du behöver återställa något värde i filen, var vänlig readera den först. Du kan försöka att <a href='install.php'>installera nu</a>.</p>");
 
 if (isset($_GET['step']))
@@ -66,7 +66,7 @@ function display_header() {
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>WordPress &rsaquo; Inställning Konfigurationsfil</title>
+<title>WordPress &rsaquo; Inställningar konfigurationsfil</title>
 <link rel="stylesheet" href="css/install.css" type="text/css" />
 
 </head>
@@ -88,8 +88,8 @@ switch($step) {
 	<li>Serveradress för databasen</li>
 	<li>Tabellprefix (om du vill köra flera installationer av WordPress i samma databas) </li>
 </ol>
-<p><strong>Om av någon anledning denna automatiska konfigurationsfil kan skapas så behöver du inte oroa dig. Allt detta göra är att fylla i databasinformationen i en konfigurationsfil. Du kan helt enkelt bara öppna <code>wp-config-sample.php</code> i en textredigerare, fylla i uppgifterna själv och spara den som <code>wp-config.php</code>. </strong></p>
-<p>Det mest troliga är att du fått dessa uppgifter från ditt webbhotell, eller när du skapat en databas. Om du saknar uppgifterna så behöver du kontakta webbhotellet innan du kan fortsätta. Du är helt redo&hellip;</p>
+<p><strong>Om det inte av någon anledning går att skapa denna automatiska konfigurationsfil så behöver du inte oroa dig. Allt du behöver göra är att fylla i databasinformationen i en konfigurationsfil. Du kan helt enkelt bara öppna <code>wp-config-sample.php</code> i en textredigerare, fylla i uppgifterna själv och spara den som <code>wp-config.php</code>. </strong></p>
+<p>Det mest troliga är att du fått dessa uppgifter från ditt webbhotell, eller när du skapat en databas. Om du saknar uppgifterna så behöver du kontakta webbhotellet innan du kan fortsätta. Är du redo&hellip;</p>
 
 <p class="step"><a href="setup-config.php?step=1" class="button">Då kör vi!</a></p>
 <?php
@@ -114,12 +114,12 @@ switch($step) {
 		<tr>
 			<th scope="row"><label for="pwd">Lösenord</label></th>
 			<td><input name="pwd" id="pwd" type="text" size="25" value="password" /></td>
-			<td>...och MySQL lösenord.</td>
+			<td>...och MySQL-lösenord.</td>
 		</tr>
 		<tr>
 			<th scope="row"><label for="dbhost">Databasserver</label></th>
 			<td><input name="dbhost" id="dbhost" type="text" size="25" value="localhost" /></td>
-			<td>Det är 99% chans att du inte behöver ändra detta värde.</td>
+			<td>9 gånger av 10 så behöver inte detta ändras.</td>
 		</tr>
 		<tr>
 			<th scope="row"><label for="prefix">Tabellprefix</label></th>
@@ -127,7 +127,7 @@ switch($step) {
 			<td>Om du vill köra flera installationer av WordPress i samma databas, ändra detta.</td>
 		</tr>
 	</table>
-	<p class="step"><input name="submit" type="submit" value="Skicka" class="button" /></p>
+	<p class="step"><input name="submit" type="submit" value="Vidare" class="button" /></p>
 </form>
 <?php
 	break;
@@ -155,7 +155,7 @@ switch($step) {
 	if ( !empty($wpdb->error) )
 		wp_die($wpdb->error->get_error_message());
 
-	$handle = fopen('../wp-config.php', 'w');
+	$handle = fopen(ABSPATH . 'wp-config.php', 'w');
 
 	foreach ($configFile as $line_num => $line) {
 		switch (substr($line,0,16)) {
@@ -163,10 +163,10 @@ switch($step) {
 				fwrite($handle, str_replace("ange-databasnamn", $dbname, $line));
 				break;
 			case "define('DB_USER'":
-				fwrite($handle, str_replace("'ange-databasanvändare'", "'$uname'", $line));
+				fwrite($handle, str_replace("'ange-databasanvandare'", "'$uname'", $line));
 				break;
 			case "define('DB_PASSW":
-				fwrite($handle, str_replace("'ange-ditt-databaslösenord'", "'$passwrd'", $line));
+				fwrite($handle, str_replace("'ange-ditt-databaslosenord'", "'$passwrd'", $line));
 				break;
 			case "define('DB_HOST'":
 				fwrite($handle, str_replace("localhost", $dbhost, $line));
@@ -179,11 +179,11 @@ switch($step) {
 		}
 	}
 	fclose($handle);
-	chmod('../wp-config.php', 0666);
+	chmod(ABSPATH . 'wp-config.php', 0666);
 
 	display_header();
 ?>
-<p>Ok! Du har fixat det så här långt av installationen. WordPress kan nu kommunicer med din databas. Om du är redo så är det dags att&hellip;</p>
+<p>OK! Du har klarat av installationen så här långt. WordPress kan nu kommunicera med din databas. Om du är redo så är det dags att&hellip;</p>
 
 <p class="step"><a href="install.php" class="button">Köra installationen</a></p>
 <?php

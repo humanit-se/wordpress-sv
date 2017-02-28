@@ -4,7 +4,7 @@
  * @subpackage Default_Theme
  */
 ?>
-	<div id="sidebar">
+	<div id="sidebar" role="complementary">
 		<ul>
 			<?php 	/* Widgetized sidebar, if you have the plugin installed. */
 					if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
@@ -27,27 +27,31 @@
 			<p>Du bl&auml;ddrar just nu i arkivet f&ouml;r kategori <?php single_cat_title(''); ?>.</p>
 
 			<?php /* If this is a yearly archive */ } elseif (is_day()) { ?>
-			<p>Du bl&auml;ddrar just nu i <a href="<?php bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a>s bloggarkiv 
+			<p>Du bl&auml;ddrar just nu i arkivet p&aring; <a href="<?php bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a>  
 			f&ouml;r <?php the_time('l, j F, Y'); ?>.</p>
 
 			<?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
-			<p>Du bl&auml;ddrar just nu i <a href="<?php bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a>s bloggarkiv 
+			<p>Du bl&auml;ddrar just nu i arkivet p&aring; <a href="<?php bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a> 
 			f&ouml;r <?php the_time('F, Y'); ?>.</p>
 
 			<?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
-			<p>Du bl&auml;ddrar just nu i <a href="<?php bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a>s bloggarkiv 
+			<p>Du bl&auml;ddrar just nu i arkivet p&aring; <a href="<?php bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a> 
 			f&ouml;r &aring;ret <?php the_time('Y'); ?>.</p>
 
 			<?php /* If this is a monthly archive */ } elseif (is_search()) { ?>
-			<p>Du har s&ouml;kt i <a href="<?php echo bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a>s bloggarkiv
+			<p>Du har s&ouml;kt i arkivet p&aring; <a href="<?php echo bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a> 
 			efter <strong>'<?php the_search_query(); ?>'</strong>. Om du inte hittar det du s&ouml;ker i dessa resultat, f&ouml;rs&ouml;k med n&aring;gon av dessa l&auml;nkar.</p>
 
 			<?php /* If this is a monthly archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-			<p>Du bl&auml;ddrar just nu i <a href="<?php bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a>s bloggarkiv.</p>
+			<p>Du bl&auml;ddrar just nu i arkivet p&aring; <a href="<?php bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a>.</p>
 
 			<?php } ?>
 
-			</li> <?php }?>
+			</li> 
+	        <?php }?> 
+	        </ul> 
+            </ul> 
+	        <ul role="navigation">
 
 			<?php wp_list_pages('title_li=<h2>Sidor</h2>' ); ?>
 
@@ -58,6 +62,9 @@
 			</li>
 
 			<?php wp_list_categories('show_count=1&title_li=<h2>Kategorier</h2>'); ?>
+            
+            </ul> 
+	        <ul> 
 
 			<?php /* If this is the frontpage */ if ( is_home() || is_page() ) { ?>
 				<?php wp_list_bookmarks(); ?>

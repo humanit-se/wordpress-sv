@@ -19,10 +19,10 @@
 define('DB_NAME', 'ange-databasnamn');
 
 /** MySQL databasens användarnamn */
-define('DB_USER', 'ange-databasanvändare');
+define('DB_USER', 'ange-databasanvandare');
 
 /** MySQL databasens lösenord */
-define('DB_PASSWORD', 'ange-ditt-databaslösenord');
+define('DB_PASSWORD', 'ange-ditt-databaslosenord');
 
 /** MySQL server */
 define('DB_HOST', 'localhost');
@@ -38,6 +38,8 @@ define('DB_COLLATE', '');
  *
  * Ändra dessa till unika fraser!
  * Du kan generera nycklar med {@link http://api.wordpress.org/secret-key/1.1/ WordPress.org secret-key service}
+ * Du kan när som helst ändra dessa nycklar för att göra aktiva cookies obrukbara, 
+ * vilket tvingar alla användare att logga in på nytt.
  *
  * @since 2.6.0
  */
@@ -73,4 +75,3 @@ if ( !defined('ABSPATH') )
 
 /** Anger WordPress värden och inkluderade filer. */
 require_once(ABSPATH . 'wp-settings.php');
-?>
