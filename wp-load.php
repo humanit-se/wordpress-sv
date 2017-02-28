@@ -43,7 +43,7 @@ if ( file_exists( ABSPATH . 'wp-config.php') ) {
 	require_once( ABSPATH . '/wp-includes/classes.php' );
 	require_once( ABSPATH . '/wp-includes/functions.php' );
 	require_once( ABSPATH . '/wp-includes/plugin.php' );
-	wp_die(sprintf(/*WP_I18N_NO_CONFIG*/'There doesn\'t seem to be a <code>wp-config.php</code> file. I need this before we can get started. Need more help? <a href=\'http://codex.wordpress.org/Editing_wp-config.php\'>We got it</a>. You can create a <code>wp-config.php</code> file through a web interface, but this doesn\'t work for all server setups. The safest way is to manually create the file.</p><p><a href=\'%ssetup-config.php\' class=\'button\'>Create a Configuration File</a>'/*/WP_I18N_NO_CONFIG*/, $path), /*WP_I18N_ERROR_TITLE*/'WordPress &rsaquo; Fel'/*/WP_I18N_ERROR_TITLE*/);
+	wp_die(sprintf(/*WP_I18N_NO_CONFIG*/'Det verkar inte finnas någon <code>wp-config.php</code> fil. Denna behövs innan vi kan börja. Behöver du mer hjälp? <a href=http://wp-support.se/dokumentation/Installation:Installera_WordPress#Att_skapa_wp-config\'>Kolla här</a>. Du kan skapa en <code>wp-config.php</code> via webbläsaren, men detta funkar inte i alla serverkonfigurationer. Det säkraste sättet är att skapa filen manuellt. </p><p><a href=\'%ssetup-config.php\' class=\'button\'>Skapa en konfigurationsfil</a>'/*/WP_I18N_NO_CONFIG*/, $path), /*WP_I18N_ERROR_TITLE*/'WordPress &rsaquo; Fel'/*/WP_I18N_ERROR_TITLE*/);
 
 }
 

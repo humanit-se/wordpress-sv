@@ -318,14 +318,14 @@ class wpdb {
 		$this->dbh = @mysql_connect($dbhost, $dbuser, $dbpassword, true);
 		if (!$this->dbh) {
 			$this->bail(sprintf(/*WP_I18N_DB_CONN_ERROR*/'
-<h1>Error establishing a database connection</h1>
-<p>This either means that the username and password information in your <code>wp-config.php</code> file is incorrect or we can\'t contact the database server at <code>%s</code>. This could mean your host\'s database server is down.</p>
+<h1>Ingen anslutning till databasen kunde skapas</h1>
+<p>Detta betyder att antingen lösenord eller användarnamn i din <code>wp-config.php</code> fil är felaktigt eller så går inte databasservern på <code>%s</code> att nå. Detta kan betyda att servern är tillfälligt nere.</p>
 <ul>
-	<li>Are you sure you have the correct username and password?</li>
-	<li>Are you sure that you have typed the correct hostname?</li>
-	<li>Are you sure that the database server is running?</li>
+	<li>Är du säker på att du angett rätt användarnamn och lösenord?</li>
+	<li>Har du angett rätt adress till databasservern?</li>
+	<li>Är databasservern igång?</li>
 </ul>
-<p>If you\'re unsure what these terms mean you should probably contact your host. If you still need help you can always visit the <a href=\'http://wordpress.org/support/\'>WordPress Support Forums</a>.</p>
+<p>Om du inte vet vad som menas med dessa termer så bör du kontakta ditt webbhotell. Behöver du fortfarande hjälp så kan du alltid besöka <a href=\'http://wordpress.org/support/\'>WordPress Support Forum</a> eller <a href="http://wp-support.se/">WP-Support Sverige</a>.</p>
 '/*/WP_I18N_DB_CONN_ERROR*/, $dbhost));
 			return;
 		}
@@ -373,7 +373,7 @@ class wpdb {
 	function set_prefix($prefix) {
 
 		if ( preg_match('|[^a-z0-9_]|i', $prefix) )
-			return new WP_Error('invalid_db_prefix', /*WP_I18N_DB_BAD_PREFIX*/'Invalid database prefix'/*/WP_I18N_DB_BAD_PREFIX*/);
+			return new WP_Error('invalid_db_prefix', /*WP_I18N_DB_BAD_PREFIX*/'Ogiltigt databasprefix'/*/WP_I18N_DB_BAD_PREFIX*/);
 
 		$old_prefix = $this->prefix;
 		$this->prefix = $prefix;
@@ -405,14 +405,14 @@ class wpdb {
 		if (!@mysql_select_db($db, $this->dbh)) {
 			$this->ready = false;
 			$this->bail(sprintf(/*WP_I18N_DB_SELECT_DB*/'
-<h1>Can&#8217;t select database</h1>
-<p>We were able to connect to the database server (which means your username and password is okay) but not able to select the <code>%1$s</code> database.</p>
+<h1>Kan inte välja databas</h1>
+<p>Vi kunde ansluta till databasservern (vilket betyder att användarnamn och lösenord är riktigt) men <code>%1$s</code> databasen kunde inte väljas.</p>
 <ul>
-<li>Are you sure it exists?</li>
-<li>Does the user <code>%2$s</code> have permission to use the <code>%1$s</code> database?</li>
-<li>On some systems the name of your database is prefixed with your username, so it would be like username_wordpress. Could that be the problem?</li>
+<li>Är du säker på att den finns?</li>
+<li>Har användaren <code>%2$s</code> rättigheter för att använda <code>%1$s</code> databasen?</li>
+<li>På vissa system så är namnet på databasen satt med användarnamn som prefix, användarnamn_wordpress. Kan det vara problemet?</li>
 </ul>
-<p>If you don\'t know how to setup a database you should <strong>contact your host</strong>. If all else fails you may find help at the <a href="http://wordpress.org/support/">WordPress Support Forums</a>.</p>'/*/WP_I18N_DB_SELECT_DB*/, $db, DB_USER));
+<p>Om du inte vet hur man skapar en databas <strong>kontakta ditt webbhotell</strong>. Om allt annat misslyckas så kanske du hittar hjälp på <a href="http://wordpress.org/support/">WordPress Support Forum</a> eller <a href="http://wp-support.se/">WP-Support Sverige</a>.</p>'/*/WP_I18N_DB_SELECT_DB*/, $db, DB_USER));
 			return;
 		}
 	}
@@ -488,9 +488,9 @@ class wpdb {
 			return false;
 
 		if ( $caller = $this->get_caller() )
-			$error_str = sprintf(/*WP_I18N_DB_QUERY_ERROR_FULL*/'WordPress database error %1$s for query %2$s made by %3$s'/*/WP_I18N_DB_QUERY_ERROR_FULL*/, $str, $this->last_query, $caller);
+			$error_str = sprintf(/*WP_I18N_DB_QUERY_ERROR_FULL*/'WordPress databasfel %1$s för fråga %2$s skapad av %3$s'/*/WP_I18N_DB_QUERY_ERROR_FULL*/, $str, $this->last_query, $caller);
 		else
-			$error_str = sprintf(/*WP_I18N_DB_QUERY_ERROR*/'WordPress database error %1$s for query %2$s'/*/WP_I18N_DB_QUERY_ERROR*/, $str, $this->last_query);
+			$error_str = sprintf(/*WP_I18N_DB_QUERY_ERROR*/'WordPress databasfel %1$s för fråga %2$s'/*/WP_I18N_DB_QUERY_ERROR*/, $str, $this->last_query);
 
 		$log_error = true;
 		if ( ! function_exists('error_log') )
@@ -747,7 +747,7 @@ class wpdb {
 		} elseif ( $output == ARRAY_N ) {
 			return $this->last_result[$y] ? array_values(get_object_vars($this->last_result[$y])) : null;
 		} else {
-			$this->print_error(/*WP_I18N_DB_GETROW_ERROR*/' $db->get_row(string query, output type, int offset) -- Output type must be one of: OBJECT, ARRAY_A, ARRAY_N'/*/WP_I18N_DB_GETROW_ERROR*/);
+			$this->print_error(/*WP_I18N_DB_GETROW_ERROR*/' $db->get_row(string query, output type, int offset) -- Utskiftstypen måste vara en av: OBJECT, ARRAY_A, ARRAY_N'/*/WP_I18N_DB_GETROW_ERROR*/);
 		}
 	}
 
