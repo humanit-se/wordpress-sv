@@ -2,7 +2,7 @@
 
 	<div id="content" class="narrowcolumn">
 
-		<h2 class="center">Error 404 - Not Found</h2>
+		<h2 class="center">Error 404 - Kunde inte hittas</h2>
 
 	</div>
 

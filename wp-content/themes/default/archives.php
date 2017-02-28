@@ -10,12 +10,12 @@ Template Name: Archives
 
 <?php include (TEMPLATEPATH . '/searchform.php'); ?>
 
-<h2>Archives by Month:</h2>
+<h2>Arkiv m&aring;nadsvis:</h2>
 	<ul>
 		<?php wp_get_archives('type=monthly'); ?>
 	</ul>
 
-<h2>Archives by Subject:</h2>
+<h2>Arkiv efter kategori:</h2>
 	<ul>
 		 <?php wp_list_categories(); ?>
 	</ul>

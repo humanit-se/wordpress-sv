@@ -1,23 +1,29 @@
 <?php
-// ** MySQL settings ** //
-define('DB_NAME', 'putyourdbnamehere');    // The name of the database
-define('DB_USER', 'usernamehere');     // Your MySQL username
-define('DB_PASSWORD', 'yourpasswordhere'); // ...and password
-define('DB_HOST', 'localhost');    // 99% chance you won't need to change this value
-define('DB_CHARSET', 'utf8');
+// ** MySQL inställningar ** //
+define('DB_NAME', 'dittdbnamnhär');    // Namnet på databsen
+define('DB_USER', 'användarehär');     // Ditt användarnamn för MySQL
+define('DB_PASSWORD', 'lösenordhär'); // ...och lösenord
+define('DB_HOST', 'localhost');    // 99% chans att du inte behöver ändra detta
+define('DB_CHARSET', 'utf8');	// Detta kan behöva ändras beroende på vad du använt för teckenkodning tidigare
 define('DB_COLLATE', '');
 
-// You can have multiple installations in one database if you give each a unique prefix
-$table_prefix  = 'wp_';   // Only numbers, letters, and underscores please!
+// Ändra SECRET_KEY till en unik fras.  Du behöver inte komma ihåg den senare,
+// så gör den lång och komplicerad.  Du kan besöka http://api.wordpress.org/secret-key/1.0/
+// för att få en hemlig nyckel genererad till dig, eller hitta helt enklet bara på något.
+define('SECRET_KEY', 'ange din hemliga fras här'); // Ändra detta till en unik fras.
 
-// Change this to localize WordPress.  A corresponding MO file for the
-// chosen language must be installed to wp-content/languages.
-// For example, install de.mo to wp-content/languages and set WPLANG to 'de'
-// to enable German language support.
-define ('WPLANG', '');
+// Du kan ha flera installationer under samma databas om du ger varje installation ett unikt prefix
+$table_prefix  = 'wp_';   // Endast nummer, bokstäver och understreck tack!
 
-/* That's all, stop editing! Happy blogging. */
+// Detta används för att lokalisera WordPress till motsvarande MO-fil.
+// Vald språkfil måste installeras under wp-content/languages.
+// I den svenska versionen så finns sv_SE.mo installerat under wp-content/languages
+// och som du ser så har WPLANG värdet "sv_SE".
+define ('WPLANG', 'sv_SE');
 
-define('ABSPATH', dirname(__FILE__).'/');
-require_once(ABSPATH.'wp-settings.php');
+/* Det var allt, sluta redigera här! Lycka till med din blogg. */
+
+if ( !defined('ABSPATH') )
+	define('ABSPATH', dirname(__FILE__) . '/');
+require_once(ABSPATH . 'wp-settings.php');
 ?>

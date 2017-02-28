@@ -8,9 +8,9 @@ Template Name: Links
 
 <div id="content" class="widecolumn">
 
-<h2>Links:</h2>
+<h2>L&auml;nkar:</h2>
 <ul>
-<?php get_links_list(); ?>
+<?php wp_list_bookmarks(); ?>
 </ul>
 
 </div>

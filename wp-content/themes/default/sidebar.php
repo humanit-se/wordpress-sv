@@ -7,8 +7,8 @@
 			</li>
 
 			<!-- Author information is disabled per default. Uncomment and fill in your details if you want to use it.
-			<li><h2>Author</h2>
-			<p>A little something about you, the author. Nothing lengthy, just an overview.</p>
+			<li><h2>Författare</h2>
+			<p>Din information.</p>
 			</li>
 			-->
 
@@ -18,40 +18,40 @@
 
 			<?php /* If this is a 404 page */ if (is_404()) { ?>
 			<?php /* If this is a category archive */ } elseif (is_category()) { ?>
-			<p>You are currently browsing the archives for the <?php single_cat_title(''); ?> category.</p>
+			<p>Du bl&auml;ddrar f&ouml;r n&auml;rvarande i arkivet f&ouml;r <?php single_cat_title(''); ?>.</p>
 
 			<?php /* If this is a yearly archive */ } elseif (is_day()) { ?>
-			<p>You are currently browsing the <a href="<?php bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a> blog archives
-			for the day <?php the_time('l, F jS, Y'); ?>.</p>
+			<p>Du bl&auml;ddrar f&ouml;r n&auml;rvarande i <a href="<?php bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?>s</a> arkiv
+			f&ouml;r datum <?php the_time('l, j F, Y'); ?>.</p>
 
 			<?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
-			<p>You are currently browsing the <a href="<?php bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a> blog archives
-			for <?php the_time('F, Y'); ?>.</p>
+			<p>Du bl&auml;ddrar f&ouml;r n&auml;rvarande i <a href="<?php bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?>s</a> arkiv
+			f&ouml;r <?php the_time('F, Y'); ?>.</p>
 
 			<?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
-			<p>You are currently browsing the <a href="<?php bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a> blog archives
-			for the year <?php the_time('Y'); ?>.</p>
+			<p>Du bl&auml;ddrar f&ouml;r n&auml;rvarande i <a href="<?php bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?>s</a> arkiv
+			f&ouml;r &aring;ret <?php the_time('Y'); ?>.</p>
 
 			<?php /* If this is a monthly archive */ } elseif (is_search()) { ?>
-			<p>You have searched the <a href="<?php echo bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a> blog archives
-			for <strong>'<?php the_search_query(); ?>'</strong>. If you are unable to find anything in these search results, you can try one of these links.</p>
+			<p>Du s&ouml;kte i <a href="<?php echo bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?>s</a> arkiv
+			efter <strong>'<?php the_search_query(); ?>'</strong>. Om du inte hittade vad du s&ouml;kte kan du anv&auml;nda n&aring;gon av dessa l&auml;nkar.</p>
 
 			<?php /* If this is a monthly archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-			<p>You are currently browsing the <a href="<?php echo bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a> blog archives.</p>
+			<p>Du bl&auml;ddrar f&ouml;r n&auml;rvarande i arkivet f&ouml;r <a href="<?php echo bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a>.</p>
 
 			<?php } ?>
 
 			</li> <?php }?>
 
-			<?php wp_list_pages('title_li=<h2>Pages</h2>' ); ?>
+			<?php wp_list_pages('title_li=<h2>Sidor</h2>' ); ?>
 
-			<li><h2>Archives</h2>
+			<li><h2>Arkiv</h2>
 				<ul>
 				<?php wp_get_archives('type=monthly'); ?>
 				</ul>
 			</li>
 
-			<?php wp_list_categories('show_count=1&title_li=<h2>Categories</h2>'); ?>
+			<?php wp_list_categories('show_count=1&title_li=<h2>Kategorier</h2>'); ?>
 
 			<?php /* If this is the frontpage */ if ( is_home() || is_page() ) { ?>
 				<?php wp_list_bookmarks(); ?>
