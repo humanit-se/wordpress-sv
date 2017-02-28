@@ -26,7 +26,7 @@ if ( file_exists( ABSPATH . 'wp-config.php') ) {
 	/** The config file resides in ABSPATH */
 	require_once( ABSPATH . 'wp-config.php' );
 
-} elseif ( file_exists( dirname(ABSPATH) . '/wp-config.php' ) ) {
+} elseif ( file_exists( dirname(ABSPATH) . '/wp-config.php' ) && ! file_exists( dirname(ABSPATH) . '/wp-load.php' ) ) {
 
 	/** The config file resides one level below ABSPATH */
 	require_once( dirname(ABSPATH) . '/wp-config.php' );
@@ -43,7 +43,7 @@ if ( file_exists( ABSPATH . 'wp-config.php') ) {
 	require_once( ABSPATH . '/wp-includes/classes.php' );
 	require_once( ABSPATH . '/wp-includes/functions.php' );
 	require_once( ABSPATH . '/wp-includes/plugin.php' );
-	wp_die(sprintf(/*WP_I18N_NO_CONFIG*/'Det verkar inte finnas någon <code>wp-config.php</code> fil. Denna behövs innan vi kan börja. Behöver du mer hjälp? <a href=http://wp-support.se/dokumentation/Installation:Installera_WordPress#Att_skapa_wp-config\'>Kolla här</a>. Du kan skapa en <code>wp-config.php</code> via webbläsaren, men detta funkar inte i alla serverkonfigurationer. Det säkraste sättet är att skapa filen manuellt. </p><p><a href=\'%ssetup-config.php\' class=\'button\'>Skapa en konfigurationsfil</a>'/*/WP_I18N_NO_CONFIG*/, $path), /*WP_I18N_ERROR_TITLE*/'WordPress &rsaquo; Fel'/*/WP_I18N_ERROR_TITLE*/);
+	wp_die(sprintf(/*WP_I18N_NO_CONFIG*/'Det verkar inte finnas en <code>wp-config.php</code> fil. Denna behövs innan vi kan starta. Behöver du mer hjälp? <a href=\'http://codex.wordpress.org/Editing_wp-config.php\'>Den finns här</a>. Du kan skapa en <code>wp-config.php</code> fil via webbläsaren, men detta funkar inte på alla servrar. Det säkraste sättet är att skapade den manuellt. </p><p><a href=\'%ssetup-config.php\' class=\'button\'>Skapa en konfigurationsfil</a> '/*/WP_I18N_NO_CONFIG*/, $path), /*WP_I18N_ERROR_TITLE*/'WordPress &rsaquo; Fel'/*/WP_I18N_ERROR_TITLE*/);
 
 }
 

@@ -3,7 +3,7 @@
 Plugin Name: Akismet
 Plugin URI: http://akismet.com/
 Description: Akismet checks your comments against the Akismet web service to see if they look like spam or not. You need a <a href="http://wordpress.com/api-keys/">WordPress.com API key</a> to use it. You can review the spam it catches under "Comments." To show off your Akismet stats just put <code>&lt;?php akismet_counter(); ?&gt;</code> in your template. See also: <a href="http://wordpress.org/extend/plugins/stats/">WP Stats plugin</a>.
-Version: 2.2.1
+Version: 2.2.3
 Author: Matt Mullenweg
 Author URI: http://ma.tt/
 */
@@ -24,6 +24,15 @@ function akismet_init() {
 	add_action('admin_menu', 'akismet_stats_page');
 }
 add_action('init', 'akismet_init');
+
+function akismet_admin_init() {
+	if ( function_exists( 'get_plugin_page_hook' ) )
+		$hook = get_plugin_page_hook( 'akismet-stats-display', 'index.php' );
+	else
+		$hook = 'dashboard_page_akismet-stats-display';
+	add_action('admin_head-'.$hook, 'akismet_stats_script');
+}
+add_action('admin_init', 'akismet_admin_init');
 
 if ( !function_exists('wp_nonce_field') ) {
 	function akismet_nonce_field($action = -1) { return; }
@@ -163,17 +172,23 @@ addLoadEvent(resizeIframeInit);
 </script><?php
 }
 
-add_action('admin_head-dashboard_page_akismet-stats-display', 'akismet_stats_script');
 
 function akismet_stats_display() {
 	global $akismet_api_host, $akismet_api_port, $wpcom_api_key;
 	$blog = urlencode( get_option('home') );
-	$url = "http://".get_option('wordpress_api_key').".web.akismet.com/1.0/user-stats.php?blog={$blog}";
+	$url = "http://".akismet_get_key().".web.akismet.com/1.0/user-stats.php?blog={$blog}";
 	?>
 	<div class="wrap">
 	<iframe src="<?php echo $url; ?>" width="100%" height="100%" frameborder="0" id="akismet-stats-frame"></iframe>
 	</div>
 	<?php
+}
+
+function akismet_get_key() {
+	global $wpcom_api_key;
+	if ( !empty($wpcom_api_key) )
+		return $wpcom_api_key;
+	return get_option('wordpress_api_key');
 }
 
 function akismet_verify_key( $key ) {

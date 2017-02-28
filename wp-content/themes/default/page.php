@@ -1,4 +1,10 @@
-<?php get_header(); ?>
+<?php
+/**
+ * @package WordPress
+ * @subpackage Default_Theme
+ */
+
+get_header(); ?>
 
 	<div id="content" class="narrowcolumn">
 
@@ -13,7 +19,7 @@
 			</div>
 		</div>
 		<?php endwhile; endif; ?>
-	<?php edit_post_link('Redigera', '<p>', '</p>'); ?>
+	<?php edit_post_link('Redigera.', '<p>', '</p>'); ?>
 	</div>
 
 <?php get_sidebar(); ?>

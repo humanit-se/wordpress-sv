@@ -1,8 +1,15 @@
-<?php get_header(); ?>
+<?php
+/**
+ * @package WordPress
+ * @subpackage Default_Theme
+ */
+
+get_header();
+?>
 
 	<div id="content" class="narrowcolumn">
 
-		<h2 class="center">Error 404 - Kunde inte hittas</h2>
+		<h2 class="center">404 - Kunde inte hittas</h2>
 
 	</div>
 

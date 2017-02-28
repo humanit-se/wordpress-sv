@@ -1,4 +1,11 @@
-<?php get_header(); ?>
+<?php
+/**
+ * @package WordPress
+ * @subpackage Default_Theme
+ */
+
+get_header();
+?>
 
 	<div id="content" class="widecolumn">
 
@@ -9,7 +16,7 @@
 			<div class="alignright"><?php next_post_link('%link &raquo;') ?></div>
 		</div>
 
-		<div class="post" id="post-<?php the_ID(); ?>">
+		<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<h2><?php the_title(); ?></h2>
 
 			<div class="entry">
@@ -26,24 +33,24 @@
 							http://binarybonsai.com/archives/2004/08/17/time-since-plugin/ */
 							/* $entry_datetime = abs(strtotime($post->post_date) - (60*120)); echo time_since($entry_datetime); echo ' ago'; */ ?>
 						<?php the_time('l, j F, Y') ?> kl <?php the_time() ?>
-						under <?php the_category(', ') ?>.
-						Du kan f&ouml;lja alla svar p&aring; detta inl&auml;gg via <?php post_comments_feed_link('RSS 2.0'); ?>.
+						i <?php the_category(', ') ?>.
+						Du kan f&ouml;lja svar via <?php post_comments_feed_link('RSS 2.0'); ?> fl&ouml;det.
 
 						<?php if (('open' == $post-> comment_status) && ('open' == $post->ping_status)) {
 							// Both Comments and Pings are open ?>
-							Du kan <a href="#respond">l&auml;mna en kommentar</a>, eller <a href="<?php trackback_url(); ?>" rel="trackback">trackback</a> fr&aring;n din egen webbplats.
+							Du kan <a href="#respond">l&auml;mna en kommentar</a>, eller en <a href="<?php trackback_url(); ?>" rel="trackback">trackback</a> fr&aring;n din egen sida.
 
 						<?php } elseif (!('open' == $post-> comment_status) && ('open' == $post->ping_status)) {
 							// Only Pings are Open ?>
-							Kommenteringen &auml;r avst&auml;ngd just nu, men du kan l&auml;mna en <a href="<?php trackback_url(); ?> " rel="trackback">trackback</a> fr&aring;n din egen webbplats.
+							Kommentering &auml;r avst&auml;ngd, men du kan l&auml;mna en <a href="<?php trackback_url(); ?> " rel="trackback">trackback</a> fr&aring;n din egen sida.
 
 						<?php } elseif (('open' == $post-> comment_status) && !('open' == $post->ping_status)) {
 							// Comments are open, Pings are not ?>
-							Du kan hoppa till slutet f&ouml;r att l&auml;mna en kommentar. Pinging &auml;r avst&auml;ngt just nu.
+							Du kan hoppa till slutet f&ouml;r att kommentera. Pingning &auml;r inte till&aring;ten.
 
 						<?php } elseif (!('open' == $post-> comment_status) && !('open' == $post->ping_status)) {
 							// Neither Comments, nor Pings are open ?>
-							B&aring;de kommentering och pingning &auml;r avst&auml;ngt.
+							B&aring;de pingning och kommentering &auml;r avst&auml;ngt.
 
 						<?php } edit_post_link('Redigera.','',''); ?>
 

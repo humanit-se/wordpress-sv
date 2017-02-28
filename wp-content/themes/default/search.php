@@ -1,4 +1,10 @@
-<?php get_header(); ?>
+<?php
+/**
+ * @package WordPress
+ * @subpackage Default_Theme
+ */
+
+get_header(); ?>
 
 	<div id="content" class="narrowcolumn">
 
@@ -14,11 +20,11 @@
 
 		<?php while (have_posts()) : the_post(); ?>
 
-			<div class="post">
-				<h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent L&auml;nk till <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+			<div <?php post_class() ?>>
+				<h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent l&auml;nk till <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 				<small><?php the_time('l, j F, Y') ?></small>
 
-				<p class="postmetadata"><?php the_tags('Etiketter: ', ', ', '<br />'); ?> Postat i <?php the_category(', ') ?> | <?php edit_post_link('Redigera', '', ' | '); ?>  <?php comments_popup_link('0 Kommentarer &#187;', '1 Kommentar &#187;', '% Kommentarer &#187;'); ?></p>
+				<p class="postmetadata"><?php the_tags('Etiketter: ', ', ', '<br />'); ?> Postat i <?php the_category(', ') ?> | <?php edit_post_link('Redigera', '', ' | '); ?>  <?php comments_popup_link('Inga kommentarer &#187;', '1 kommentar &#187;', '% kommentarer &#187;'); ?></p>
 			</div>
 
 		<?php endwhile; ?>
@@ -30,8 +36,8 @@
 
 	<?php else : ?>
 
-		<h2 class="center">Inga poster funna. F&ouml;rs&ouml;k med ett nytt s&ouml;kord?</h2>
-		<?php include (TEMPLATEPATH . '/searchform.php'); ?>
+		<h2 class="center">Inget funnet, testa nya s&ouml;kord?</h2>
+		<?php get_search_form(); ?>
 
 	<?php endif; ?>
 

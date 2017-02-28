@@ -1,4 +1,8 @@
 <?php
+/**
+ * @package WordPress
+ * @subpackage Default_Theme
+ */
 /*
 Template Name: Archives
 */
@@ -8,14 +12,14 @@ Template Name: Archives
 
 <div id="content" class="widecolumn">
 
-<?php include (TEMPLATEPATH . '/searchform.php'); ?>
+<?php get_search_form(); ?>
 
-<h2>Arkiv m&aring;nadsvis:</h2>
+<h2>M&aring;nadsarkiv:</h2>
 	<ul>
 		<?php wp_get_archives('type=monthly'); ?>
 	</ul>
 
-<h2>Arkiv efter kategori:</h2>
+<h2>&Auml;mnesarkiv:</h2>
 	<ul>
 		 <?php wp_list_categories(); ?>
 	</ul>

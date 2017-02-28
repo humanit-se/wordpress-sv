@@ -1,12 +1,12 @@
 <?php
-/* Don't remove these lines. */
-add_filter('comment_text', 'popuplinks');
-while ( have_posts()) : the_post();
-?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+/**
+ * @package WordPress
+ * @subpackage Default_Theme
+ */
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-     <title><?php echo get_option('blogname'); ?> - Comments on <?php the_title(); ?></title>
+     <title><?php echo get_option('blogname'); ?> - Kommentarer till <?php the_title(); ?></title>
 
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php echo get_option('blog_charset'); ?>" />
 	<style type="text/css" media="screen">
@@ -19,12 +19,18 @@ while ( have_posts()) : the_post();
 
 <h1 id="header"><a href="" title="<?php echo get_option('blogname'); ?>"><?php echo get_option('blogname'); ?></a></h1>
 
+<?php
+/* Don't remove these lines. */
+add_filter('comment_text', 'popuplinks');
+if ( have_posts() ) :
+while ( have_posts() ) : the_post();
+?>
 <h2 id="comments">Kommentarer</h2>
 
-<p><a href="<?php echo get_post_comments_feed_link($post->ID); ?>"><abbr title="Really Simple Syndication">RSS</abbr> fl&ouml;den f&ouml;r kommentarer p&aring; detta inl&auml;gg.</a></p>
+<p><a href="<?php echo get_post_comments_feed_link($post->ID); ?>"><abbr title="Really Simple Syndication">RSS</abbr> fl&ouml;de f&ouml;r kommentarer p&aring; detta inl&auml;gg.</a></p>
 
 <?php if ('open' == $post->ping_status) { ?>
-<p><abbr title="Universal Resource Locator">URL</abbr> till TrackBack f&ouml;r detta inl&auml;gg &auml;r: <em><?php trackback_url() ?></em></p>
+<p><abbr title="Universal Resource Locator">URL</abbr> f&ouml;r Trackback av detta inl&auml;gg &auml;r: <em><?php trackback_url() ?></em></p>
 <?php } ?>
 
 <?php
@@ -33,7 +39,7 @@ $commenter = wp_get_current_commenter();
 extract($commenter);
 $comments = get_approved_comments($id);
 $post = get_post($id);
-if (!empty($post->post_password) && $_COOKIE['wp-postpass_'. COOKIEHASH] != $post->post_password) {  // and it doesn't match the cookie
+if ( post_password_required($post) ) {  // and it doesn't match the cookie
 	echo(get_the_password_form());
 } else { ?>
 
@@ -52,18 +58,16 @@ if (!empty($post->post_password) && $_COOKIE['wp-postpass_'. COOKIEHASH] != $pos
 <?php } ?>
 
 <?php if ('open' == $post->comment_status) { ?>
-<h2>Kommentera</h2>
-<p>Rader och paragrafer bryts automatiskt, e-postadresser visas aldrig, <acronym title="Hypertext Markup Language">HTML</acronym> till&aring;tna: <code><?php echo allowed_tags(); ?></code></p>
+<h2>L&auml;mna en kommentar</h2>
+<p>Rader och paragrafer radbryts automatiskt, e-postadressen visas aldrig, <acronym title="Hypertext Markup Language">HTML</acronym> till&aring;ten: <code><?php echo allowed_tags(); ?></code></p>
 
 <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
 <?php if ( $user_ID ) : ?>
-	<p>Inloggad som <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="Log out of this account">Logga ut &raquo;</a></p>
+	<p>Inloggad som <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Logga ut">Logga ut &raquo;</a></p>
 <?php else : ?>
 	<p>
 	  <input type="text" name="author" id="author" class="textarea" value="<?php echo $comment_author; ?>" size="28" tabindex="1" />
 	   <label for="author">Namn</label>
-	<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
-	<input type="hidden" name="redirect_to" value="<?php echo attribute_escape($_SERVER["REQUEST_URI"]); ?>" />
 	</p>
 
 	<p>
@@ -84,25 +88,29 @@ if (!empty($post->post_password) && $_COOKIE['wp-postpass_'. COOKIEHASH] != $pos
 	</p>
 
 	<p>
+      <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
+	  <input type="hidden" name="redirect_to" value="<?php echo attribute_escape($_SERVER["REQUEST_URI"]); ?>" />
 	  <input name="submit" type="submit" tabindex="5" value="Skicka!" />
 	</p>
 	<?php do_action('comment_form', $post->ID); ?>
 </form>
 <?php } else { // comments are closed ?>
-<p>Ledsen, kommenteringen &auml;r avst&auml;ngd.</p>
+<p>Beklagar, kommentarspostning &auml;r avst&auml;ngd just nu.</p>
 <?php }
 } // end password check
 ?>
 
-<div><strong><a href="javascript:window.close()">St&auml;ng detta f&ouml;nster.</a></strong></div>
+<div><strong><a href="javascript:window.close()">St&auml;ng f&ouml;nstret.</a></strong></div>
 
 <?php // if you delete this the sky will fall on your head
-endwhile;
+endwhile; //endwhile have_posts()
+else: //have_posts()
 ?>
-
+<p>Beklagar, inga poster matchade dina kriterier.</p>
+<?php endif; ?>
 <!-- // this is just the end of the motor - don't touch that line either :) -->
 <?php //} ?>
-<p class="credit"><?php timer_stop(1); ?> <cite>Powered by <a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform"><strong>WordPress</strong></a></cite></p>
+<p class="credit"><?php timer_stop(1); ?> <cite>Drivs med <a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform"><strong>WordPress</strong></a></cite></p>
 <?php // Seen at http://www.mijnkopthee.nl/log2/archive/2003/05/28/esc(18) ?>
 <script type="text/javascript">
 <!--

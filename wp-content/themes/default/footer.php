@@ -1,12 +1,18 @@
+<?php
+/**
+ * @package WordPress
+ * @subpackage Default_Theme
+ */
+?>
 
 <hr />
 <div id="footer">
 <!-- If you'd like to support WordPress, having the "powered by" link somewhere on your blog is the best way; it's our only promotion or advertising. -->
 	<p>
-		<?php bloginfo('name'); ?> drivs med hj&auml;lp av
+		<?php bloginfo('name'); ?> drivs stolt med
 		<a href="http://wordpress.org/">WordPress</a>
 		<br /><a href="<?php bloginfo('rss2_url'); ?>">Inl&auml;gg (RSS)</a>
-		and <a href="<?php bloginfo('comments_rss2_url'); ?>">Kommentarer (RSS)</a>.
+		och <a href="<?php bloginfo('comments_rss2_url'); ?>">Kommentarer (RSS)</a>.
 		<!-- <?php echo get_num_queries(); ?> fr&aring;gor. <?php timer_stop(1); ?> sekunder. -->
 	</p>
 </div>

@@ -38,7 +38,7 @@ define('ARRAY_N', 'ARRAY_N', false);
  * WordPress Database Access Abstraction Object
  *
  * It is possible to replace this class with your own
- * by setting the $wpdb global variable in wp-content/wpdb.php
+ * by setting the $wpdb global variable in wp-content/db.php
  * file with your class. You can name it wpdb also, since
  * this file will not be included, if the other file is
  * available.
@@ -318,33 +318,33 @@ class wpdb {
 		$this->dbh = @mysql_connect($dbhost, $dbuser, $dbpassword, true);
 		if (!$this->dbh) {
 			$this->bail(sprintf(/*WP_I18N_DB_CONN_ERROR*/'
-<h1>Ingen anslutning till databasen kunde skapas</h1>
-<p>Detta betyder att antingen lösenord eller användarnamn i din <code>wp-config.php</code> fil är felaktigt eller så går inte databasservern på <code>%s</code> att nå. Detta kan betyda att servern är tillfälligt nere.</p>
+<h1>Problem med att skapa en databasanslutning</h1>
+<p>Detta betyder att användarnamnet och/eller lösenordet i din <code>wp-config.php</code> fil är felaktigt eller att vi inte kommer in kontakt med servern på <code>%s</code>. Detta kan betyda att din databasserver är nere.</p>
 <ul>
-	<li>Är du säker på att du angett rätt användarnamn och lösenord?</li>
-	<li>Har du angett rätt adress till databasservern?</li>
-	<li>Är databasservern igång?</li>
+	<li>Är du säker på att du har rätt användarnamn och lösenord?</li>
+	<li>Är du säker på att du angivit rätt adress till databasservern?</li>
+	<li>Är du säker på att databasservern är online?</li>
 </ul>
-<p>Om du inte vet vad som menas med dessa termer så bör du kontakta ditt webbhotell. Behöver du fortfarande hjälp så kan du alltid besöka <a href=\'http://wordpress.org/support/\'>WordPress Support Forum</a> eller <a href="http://wp-support.se/">WP-Support Sverige</a>.</p>
+<p>Är du osäker på vad dessa termer betyder så bör du kanske kontakta ditt webbhotell. Behöver du fortfarande hjälp så kan du besöka <a href=\'http://wp-support.se/forum/\'>WP-Support Sveriges forum</a>.</p>
 '/*/WP_I18N_DB_CONN_ERROR*/, $dbhost));
 			return;
 		}
 
 		$this->ready = true;
 
-		if ( $this->supports_collation() ) {
+		if ( $this->has_cap( 'collation' ) ) {
 			$collation_query = '';
 			if ( !empty($this->charset) ) {
 				$collation_query = "SET NAMES '{$this->charset}'";
 				if (!empty($this->collate) )
 					$collation_query .= " COLLATE '{$this->collate}'";
 			}
-			
+
 			if ( !empty($collation_query) )
 				$this->query($collation_query);
-			
+
 		}
-		
+
 		$this->select($dbname);
 	}
 
@@ -378,7 +378,7 @@ class wpdb {
 		$old_prefix = $this->prefix;
 		$this->prefix = $prefix;
 
-		foreach ( $this->tables as $table )
+		foreach ( (array) $this->tables as $table )
 			$this->$table = $this->prefix . $table;
 
 		if ( defined('CUSTOM_USER_TABLE') )
@@ -405,14 +405,14 @@ class wpdb {
 		if (!@mysql_select_db($db, $this->dbh)) {
 			$this->ready = false;
 			$this->bail(sprintf(/*WP_I18N_DB_SELECT_DB*/'
-<h1>Kan inte välja databas</h1>
-<p>Vi kunde ansluta till databasservern (vilket betyder att användarnamn och lösenord är riktigt) men <code>%1$s</code> databasen kunde inte väljas.</p>
+<h1>Kan inte välja databasen</h1>
+<p>Vi kunde ansluta mot databasservern (vilket betyder att ditt användarnamn och lösenord är riktigta) men vi kunde inte välja databasen <code>%1$s</code>.</p>
 <ul>
 <li>Är du säker på att den finns?</li>
-<li>Har användaren <code>%2$s</code> rättigheter för att använda <code>%1$s</code> databasen?</li>
-<li>På vissa system så är namnet på databasen satt med användarnamn som prefix, användarnamn_wordpress. Kan det vara problemet?</li>
+<li>Har användaren <code>%2$s</code> rättigheter att använda <code>%1$s</code> databasen?</li>
+<li>På vissa system så används ditt användarnamn som databasprefix så att det skulle se ut som  användarnamn_wordpress. Kan det vara problemet?</li>
 </ul>
-<p>Om du inte vet hur man skapar en databas <strong>kontakta ditt webbhotell</strong>. Om allt annat misslyckas så kanske du hittar hjälp på <a href="http://wordpress.org/support/">WordPress Support Forum</a> eller <a href="http://wp-support.se/">WP-Support Sverige</a>.</p>'/*/WP_I18N_DB_SELECT_DB*/, $db, DB_USER));
+<p>Om du inte vet hur du skapar en databas så bör du <strong>kontakta ditt webbhotell</strong>. Om allt annat misslyckas så kan du hitta hjälp på <a href="http://wp-support.se/forum/">WP-Support Sveriges forum</a>.</p>'/*/WP_I18N_DB_SELECT_DB*/, $db, DB_USER));
 			return;
 		}
 	}
@@ -488,16 +488,16 @@ class wpdb {
 			return false;
 
 		if ( $caller = $this->get_caller() )
-			$error_str = sprintf(/*WP_I18N_DB_QUERY_ERROR_FULL*/'WordPress databasfel %1$s för fråga %2$s skapad av %3$s'/*/WP_I18N_DB_QUERY_ERROR_FULL*/, $str, $this->last_query, $caller);
+			$error_str = sprintf(/*WP_I18N_DB_QUERY_ERROR_FULL*/'WordPress databasfel för %1$s förfrågan %2$s skapat av %3$s'/*/WP_I18N_DB_QUERY_ERROR_FULL*/, $str, $this->last_query, $caller);
 		else
-			$error_str = sprintf(/*WP_I18N_DB_QUERY_ERROR*/'WordPress databasfel %1$s för fråga %2$s'/*/WP_I18N_DB_QUERY_ERROR*/, $str, $this->last_query);
+			$error_str = sprintf(/*WP_I18N_DB_QUERY_ERROR*/'WordPress databasfel för %1$s förfrågan %2$s'/*/WP_I18N_DB_QUERY_ERROR*/, $str, $this->last_query);
 
 		$log_error = true;
 		if ( ! function_exists('error_log') )
 			$log_error = false;
 
 		$log_file = @ini_get('error_log');
-		if ( !empty($log_file) && ('syslog' != $log_file) && !is_writable($log_file) )
+		if ( !empty($log_file) && ('syslog' != $log_file) && !@is_writable($log_file) )
 			$log_error = false;
 
 		if ( $log_error )
@@ -617,7 +617,7 @@ class wpdb {
 			return false;
 		}
 
-		if ( preg_match("/^\\s*(insert|delete|update|replace) /i",$query) ) {
+		if ( preg_match("/^\\s*(insert|delete|update|replace|alter) /i",$query) ) {
 			$this->rows_affected = mysql_affected_rows($this->dbh);
 			// Take note of the insert_id
 			if ( preg_match("/^\\s*(insert|replace) /i",$query) ) {
@@ -677,7 +677,7 @@ class wpdb {
 	function update($table, $data, $where){
 		$data = add_magic_quotes($data);
 		$bits = $wheres = array();
-		foreach ( array_keys($data) as $k )
+		foreach ( (array) array_keys($data) as $k )
 			$bits[] = "`$k` = '$data[$k]'";
 
 		if ( is_array( $where ) )
@@ -685,7 +685,7 @@ class wpdb {
 				$wheres[] = "$c = '" . $this->escape( $v ) . "'";
 		else
 			return false;
-			
+
 		return $this->query( "UPDATE $table SET " . implode( ', ', $bits ) . ' WHERE ' . implode( ' AND ', $wheres ) );
 	}
 
@@ -747,7 +747,7 @@ class wpdb {
 		} elseif ( $output == ARRAY_N ) {
 			return $this->last_result[$y] ? array_values(get_object_vars($this->last_result[$y])) : null;
 		} else {
-			$this->print_error(/*WP_I18N_DB_GETROW_ERROR*/' $db->get_row(string query, output type, int offset) -- Utskiftstypen måste vara en av: OBJECT, ARRAY_A, ARRAY_N'/*/WP_I18N_DB_GETROW_ERROR*/);
+			$this->print_error(/*WP_I18N_DB_GETROW_ERROR*/' $db->get_row(string query, output type, int offset) -- Utskrift måste vara en av typerna: OBJECT, ARRAY_A, ARRAY_N'/*/WP_I18N_DB_GETROW_ERROR*/);
 		}
 	}
 
@@ -805,7 +805,7 @@ class wpdb {
 			// Return an integer-keyed array of...
 			if ( $this->last_result ) {
 				$i = 0;
-				foreach( $this->last_result as $row ) {
+				foreach( (array) $this->last_result as $row ) {
 					if ( $output == ARRAY_N ) {
 						// ...integer-keyed row arrays
 						$new_array[$i] = array_values( get_object_vars( $row ) );
@@ -833,7 +833,7 @@ class wpdb {
 		if ( $this->col_info ) {
 			if ( $col_offset == -1 ) {
 				$i = 0;
-				foreach($this->col_info as $col ) {
+				foreach( (array) $this->col_info as $col ) {
 					$new_array[$i] = $col->{$info_type};
 					$i++;
 				}
@@ -904,8 +904,7 @@ class wpdb {
 	{
 		global $wp_version;
 		// Make sure the server has MySQL 4.0
-		$mysql_version = preg_replace('|[^0-9\.]|', '', @mysql_get_server_info($this->dbh));
-		if ( version_compare($mysql_version, '4.0.0', '<') )
+		if ( version_compare($this->db_version(), '4.0.0', '<') )
 			return new WP_Error('database_version',sprintf(__('<strong>ERROR</strong>: WordPress %s requires MySQL 4.0.0 or higher'), $wp_version));
 	}
 
@@ -920,7 +919,27 @@ class wpdb {
 	 */
 	function supports_collation()
 	{
-		return ( version_compare(mysql_get_server_info($this->dbh), '4.1.0', '>=') );
+		return $this->has_cap( 'collation' );
+	}
+
+	/**
+	 * Generic function to determine if a database supports a particular feature
+	 * @param string $db_cap the feature
+	 * @param false|string|resource $dbh_or_table the databaese (the current database, the database housing the specified table, or the database of the mysql resource)
+	 * @return bool
+	 */
+	function has_cap( $db_cap ) {
+		$version = $this->db_version();
+
+		switch ( strtolower( $db_cap ) ) :
+		case 'collation' :    // @since 2.5.0
+		case 'group_concat' : // @since 2.7
+		case 'subqueries' :   // @since 2.7
+			return version_compare($version, '4.1', '>=');
+			break;
+		endswitch;
+
+		return false;
 	}
 
 	/**
@@ -939,29 +958,34 @@ class wpdb {
 			return '';
 
 		$bt = debug_backtrace();
-		$caller = '';
+		$caller = array();
 
-		foreach ( $bt as $trace ) {
-			if ( @$trace['class'] == __CLASS__ )
+		$bt = array_reverse( $bt );
+		foreach ( (array) $bt as $call ) {
+			if ( @$call['class'] == __CLASS__ )
 				continue;
-			elseif ( strtolower(@$trace['function']) == 'call_user_func_array' )
-				continue;
-			elseif ( strtolower(@$trace['function']) == 'apply_filters' )
-				continue;
-			elseif ( strtolower(@$trace['function']) == 'do_action' )
-				continue;
-
-			$caller = $trace['function'];
-			break;
+			$function = $call['function'];
+			if ( isset( $call['class'] ) )
+				$function = $call['class'] . "->$function";
+			$caller[] = $function;
 		}
+		$caller = join( ', ', $caller );
+
 		return $caller;
 	}
 
+	/**
+	 * The database version number
+	 * @return false|string false on failure, version number on success
+	 */
+	function db_version() {
+		return preg_replace('/[^0-9.].*/', '', mysql_get_server_info( $this->dbh ));
+	}
 }
 
 if ( ! isset($wpdb) ) {
 	/**
-	 * WordPress Database Object, if it isn't set already in wp-content/wpdb.php
+	 * WordPress Database Object, if it isn't set already in wp-content/db.php
 	 * @global object $wpdb Creates a new wpdb object based on wp-config.php Constants for the database
 	 * @since 0.71
 	 */

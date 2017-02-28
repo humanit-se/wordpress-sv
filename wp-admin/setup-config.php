@@ -1,44 +1,73 @@
 <?php
+/**
+ * Retrieves and creates the wp-config.php file.
+ *
+ * The permissions for the base directory must allow for writing files in order
+ * for the wp-config.php to be created using this page.
+ *
+ * @package WordPress
+ * @subpackage Administration
+ */
+
+/**
+ * We are installing.
+ *
+ * @package WordPress
+ */
 define('WP_INSTALLING', true);
-//These three defines are required to allow us to use require_wp_db() to load the database class while being wp-content/wp-db.php aware
+
+/**#@+
+ * These three defines are required to allow us to use require_wp_db() to load
+ * the database class while being wp-content/db.php aware.
+ * @ignore
+ */
 define('ABSPATH', dirname(dirname(__FILE__)).'/');
 define('WPINC', 'wp-includes');
 define('WP_CONTENT_DIR', ABSPATH . 'wp-content');
+/**#@-*/
 
 require_once('../wp-includes/compat.php');
 require_once('../wp-includes/functions.php');
 require_once('../wp-includes/classes.php');
 
 if (!file_exists('../wp-config-sample.php'))
-	wp_die('Sorry, I need a wp-config-sample.php file to work from. Please re-upload this file from your WordPress installation.');
+	wp_die('Beklagar, vi behöver en wp-config-sample.php fil att arbeta utifrån. Var vänlig ladda upp denna fil från dina WordPress filer.');
 
 $configFile = file('../wp-config-sample.php');
 
 if ( !is_writable('../'))
-	wp_die("Sorry, I can't write to the directory. You'll have to either change the permissions on your WordPress directory or create your wp-config.php manually.");
+	wp_die("Beklagar, vi måste kunna skriva till katalogen. Du måste antingen ändra rättigheterna för din WordPress katalog eller skapa din wp-config.php manuellt.");
 
 // Check if wp-config.php has been created
 if (file_exists('../wp-config.php'))
-	wp_die("<p>The file 'wp-config.php' already exists. If you need to reset any of the configuration items in this file, please delete it first. You may try <a href='install.php'>installing now</a>.</p>");
+	wp_die("<p>Filen 'wp-config.php' finns redan. Om du behöver återställa något värde i filen, var vänlig readera den först. Du kan försöka att <a href='install.php'>installera nu</a>.</p>");
 
 // Check if wp-config.php exists above the root directory
-if (file_exists('../../wp-config.php'))
-	wp_die("<p>The file 'wp-config.php' already exists one level above your WordPress installation. If you need to reset any of the configuration items in this file, please delete it first. You may try <a href='install.php'>installing now</a>.</p>");
+if (file_exists('../../wp-config.php') && ! file_exists('../../wp-load.php'))
+	wp_die("<p>Filen 'wp-config.php' finns redan en nivå ovanför din WordPress installation.  Om du behöver återställa något värde i filen, var vänlig readera den först. Du kan försöka att <a href='install.php'>installera nu</a>.</p>");
 
 if (isset($_GET['step']))
 	$step = $_GET['step'];
 else
 	$step = 0;
 
-function display_header(){
+/**
+ * Display setup wp-config.php file header.
+ *
+ * @ignore
+ * @since 2.3.0
+ * @package WordPress
+ * @subpackage Installer_WP_Config
+ */
+function display_header() {
 	header( 'Content-Type: text/html; charset=utf-8' );
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>WordPress &rsaquo; Setup Configuration File</title>
-<link rel="stylesheet" href="<?php echo $admin_dir; ?>css/install.css" type="text/css" />
+<title>WordPress &rsaquo; Inställning Konfigurationsfil</title>
+<link rel="stylesheet" href="css/install.css" type="text/css" />
 
 </head>
 <body>
@@ -51,18 +80,18 @@ switch($step) {
 		display_header();
 ?>
 
-<p>Welcome to WordPress. Before getting started, we need some information on the database. You will need to know the following items before proceeding.</p>
+<p>Välkommen till WordPress. Innan vi börjar så behöver vi lite databasinformation. Du behöver ha följande uppgifter innan du kan forsätta.</p>
 <ol>
-	<li>Database name</li>
-	<li>Database username</li>
-	<li>Database password</li>
-	<li>Database host</li>
-	<li>Table prefix (if you want to run more than one WordPress in a single database) </li>
+	<li>Databasnamn</li>
+	<li>Användarnamn för databasen</li>
+	<li>Lösenord för databasen</li>
+	<li>Serveradress för databasen</li>
+	<li>Tabellprefix (om du vill köra flera installationer av WordPress i samma databas) </li>
 </ol>
-<p><strong>If for any reason this automatic file creation doesn't work, don't worry. All this does is fill in the database information to a configuration file. You may also simply open <code>wp-config-sample.php</code> in a text editor, fill in your information, and save it as <code>wp-config.php</code>. </strong></p>
-<p>In all likelihood, these items were supplied to you by your ISP. If you do not have this information, then you will need to contact them before you can continue. If you&#8217;re all ready&hellip;</p>
+<p><strong>Om av någon anledning denna automatiska konfigurationsfil kan skapas så behöver du inte oroa dig. Allt detta göra är att fylla i databasinformationen i en konfigurationsfil. Du kan helt enkelt bara öppna <code>wp-config-sample.php</code> i en textredigerare, fylla i uppgifterna själv och spara den som <code>wp-config.php</code>. </strong></p>
+<p>Det mest troliga är att du fått dessa uppgifter från ditt webbhotell, eller när du skapat en databas. Om du saknar uppgifterna så behöver du kontakta webbhotellet innan du kan fortsätta. Du är helt redo&hellip;</p>
 
-<p class="step"><a href="setup-config.php?step=1" class="button">Let&#8217;s go!</a></p>
+<p class="step"><a href="setup-config.php?step=1" class="button">Då kör vi!</a></p>
 <?php
 	break;
 
@@ -70,35 +99,35 @@ switch($step) {
 		display_header();
 	?>
 <form method="post" action="setup-config.php?step=2">
-	<p>Below you should enter your database connection details. If you're not sure about these, contact your host. </p>
+	<p>Nedan bör du ange dina databasuppgifter. Om du är osäker på vilka dessa är, kontakta ditt webbhotell. </p>
 	<table class="form-table">
 		<tr>
-			<th scope="row"><label for="dbname">Database Name</label></th>
+			<th scope="row"><label for="dbname">Databasnamn</label></th>
 			<td><input name="dbname" id="dbname" type="text" size="25" value="wordpress" /></td>
-			<td>The name of the database you want to run WP in. </td>
+			<td>Namnet på databasen du vill använda för WordPress.</td>
 		</tr>
 		<tr>
-			<th scope="row"><label for="uname">User Name</label></th>
+			<th scope="row"><label for="uname">Användarnamn</label></th>
 			<td><input name="uname" id="uname" type="text" size="25" value="username" /></td>
-			<td>Your MySQL username</td>
+			<td>MySQL databasens användarnamn.</td>
 		</tr>
 		<tr>
-			<th scope="row"><label for="pwd">Password</label></th>
+			<th scope="row"><label for="pwd">Lösenord</label></th>
 			<td><input name="pwd" id="pwd" type="text" size="25" value="password" /></td>
-			<td>...and MySQL password.</td>
+			<td>...och MySQL lösenord.</td>
 		</tr>
 		<tr>
-			<th scope="row"><label for="dbhost">Database Host</label></th>
+			<th scope="row"><label for="dbhost">Databasserver</label></th>
 			<td><input name="dbhost" id="dbhost" type="text" size="25" value="localhost" /></td>
-			<td>99% chance you won't need to change this value.</td>
+			<td>Det är 99% chans att du inte behöver ändra detta värde.</td>
 		</tr>
 		<tr>
-			<th scope="row"><label for="prefix">Table Prefix</label></th>
+			<th scope="row"><label for="prefix">Tabellprefix</label></th>
 			<td><input name="prefix" id="prefix" type="text" id="prefix" value="wp_" size="25" /></td>
-			<td>If you want to run multiple WordPress installations in a single database, change this.</td>
+			<td>Om du vill köra flera installationer av WordPress i samma databas, ändra detta.</td>
 		</tr>
 	</table>
-	<p class="step"><input name="submit" type="submit" value="Submit" class="button" /></p>
+	<p class="step"><input name="submit" type="submit" value="Skicka" class="button" /></p>
 </form>
 <?php
 	break;
@@ -112,10 +141,14 @@ switch($step) {
 	if (empty($prefix)) $prefix = 'wp_';
 
 	// Test the db connection.
+	/**#@+
+	 * @ignore
+	 */
 	define('DB_NAME', $dbname);
 	define('DB_USER', $uname);
 	define('DB_PASSWORD', $passwrd);
 	define('DB_HOST', $dbhost);
+	/**#@-*/
 
 	// We'll fail here if the values are no good.
 	require_wp_db();
@@ -127,13 +160,13 @@ switch($step) {
 	foreach ($configFile as $line_num => $line) {
 		switch (substr($line,0,16)) {
 			case "define('DB_NAME'":
-				fwrite($handle, str_replace("putyourdbnamehere", $dbname, $line));
+				fwrite($handle, str_replace("ange-databasnamn", $dbname, $line));
 				break;
 			case "define('DB_USER'":
-				fwrite($handle, str_replace("'usernamehere'", "'$uname'", $line));
+				fwrite($handle, str_replace("'ange-databasanvändare'", "'$uname'", $line));
 				break;
 			case "define('DB_PASSW":
-				fwrite($handle, str_replace("'yourpasswordhere'", "'$passwrd'", $line));
+				fwrite($handle, str_replace("'ange-ditt-databaslösenord'", "'$passwrd'", $line));
 				break;
 			case "define('DB_HOST'":
 				fwrite($handle, str_replace("localhost", $dbhost, $line));
@@ -150,9 +183,9 @@ switch($step) {
 
 	display_header();
 ?>
-<p>All right sparky! You've made it through this part of the installation. WordPress can now communicate with your database. If you are ready, time now to&hellip;</p>
+<p>Ok! Du har fixat det så här långt av installationen. WordPress kan nu kommunicer med din databas. Om du är redo så är det dags att&hellip;</p>
 
-<p class="step"><a href="install.php" class="button">Run the install</a></p>
+<p class="step"><a href="install.php" class="button">Köra installationen</a></p>
 <?php
 	break;
 }
