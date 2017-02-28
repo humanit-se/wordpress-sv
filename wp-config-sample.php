@@ -7,10 +7,13 @@ define('DB_HOST', 'localhost');    // 99% chans att du inte behöver ändra detta
 define('DB_CHARSET', 'utf8');	// Detta kan behöva ändras beroende på vad du använt för teckenkodning tidigare
 define('DB_COLLATE', '');
 
-// Ändra SECRET_KEY till en unik fras.  Du behöver inte komma ihåg den senare,
-// så gör den lång och komplicerad.  Du kan besöka http://api.wordpress.org/secret-key/1.0/
-// för att få en hemlig nyckel genererad till dig, eller hitta helt enklet bara på något.
-define('SECRET_KEY', 'ange din hemliga fras här'); // Ändra detta till en unik fras.
+// Ändra AUTH_KEY, SECURE_AUTH_KEY och LOGGED_IN_KEY till en unika fraser.  Du behöver inte komma ihåg dessa senare,
+// så gör dem långa och komplicerade.  Du kan besöka http://api.wordpress.org/secret-key/1.1/
+// för att få en hemliga nycklar genererade åt dig, eller hitta helt enklet bara på något.
+define('AUTH_KEY', 'ange din hemliga fras här'); // Ändra detta till en unik fras.
+define('SECURE_AUTH_KEY', 'ange din hemliga fras här'); // Ändra detta till en unik fras.
+define('LOGGED_IN_KEY', 'ange din hemliga fras här'); // Ändra detta till en unik fras.
+
 
 // Du kan ha flera installationer under samma databas om du ger varje installation ett unikt prefix
 $table_prefix  = 'wp_';   // Endast nummer, bokstäver och understreck tack!
