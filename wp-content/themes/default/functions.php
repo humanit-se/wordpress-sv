@@ -3,6 +3,8 @@
  * @package WordPress
  * @subpackage Default_Theme
  */
+ 
+automatic_feed_links();
 
 if ( function_exists('register_sidebar') )
     register_sidebar(array(

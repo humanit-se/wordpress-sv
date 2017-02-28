@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sv_SE\n"
 "Report-Msgid-Bugs-To: wp-polyglots@lists.automattic.com\n"
-"POT-Creation-Date: 2009-08-03 16:56+0000\n"
-"PO-Revision-Date: 2009-08-05 17:09+0100\n"
+"POT-Creation-Date: 2009-08-12 04:56+0000\n"
+"PO-Revision-Date: 2009-08-12 14:53+0100\n"
 "Last-Translator: Mattias Tengblad <mst@eyesx.com>\n"
 "Language-Team: WP-Support Sverige / Mattias Tengblad <info@wp-support.se>\n"
 "MIME-Version: 1.0\n"
@@ -728,7 +728,7 @@ msgstr "Författare"
 #: wp-admin/user-edit.php:261
 #: wp-admin/user-new.php:109
 #: wp-content/themes/classic/comments-popup.php:76
-#: wp-login.php:414
+#: wp-login.php:417
 msgid "E-mail"
 msgstr "E-post"
 
@@ -1066,8 +1066,8 @@ msgstr[1] "Alla"
 #, php-format
 msgid "Pending (<span class=\"pending-count\">%s</span>)"
 msgid_plural "Pending (<span class=\"pending-count\">%s</span>)"
-msgstr[0] "Inväntar granskning (<span class=\"count\">%s</span>)"
-msgstr[1] "Inväntar granskning (<span class=\"count\">(%s</span>)"
+msgstr[0] "Inväntar granskning (<span class=\"pending-count\">%s</span>)"
+msgstr[1] "Inväntar granskning (<span class=\"pending-count\">%s</span>)"
 
 #: wp-admin/edit-comments.php:146
 msgid "Approved"
@@ -1079,8 +1079,8 @@ msgstr[1] "Godkända"
 #, php-format
 msgid "Spam (<span class=\"spam-count\">%s</span>)"
 msgid_plural "Spam (<span class=\"spam-count\">%s</span>)"
-msgstr[0] "Utkast (<span class=\"count\">%s</span>)"
-msgstr[1] "Utkast (<span class=\"count\">%s</span>)"
+msgstr[0] "Skräpposter (<span class=\"spam-count\">%s</span>)"
+msgstr[1] "Skräpposter (<span class=\"spam-count\">%s</span>)"
 
 #: wp-admin/edit-comments.php:181
 #: wp-admin/edit-comments.php:183
@@ -2531,7 +2531,7 @@ msgstr "Hittade inga inlägg"
 
 #: wp-admin/export.php:13
 msgid "You do not have sufficient permissions to export the content of this blog."
-msgstr "Du saknar rättigheter för att exportera innehåll från denna blog."
+msgstr "Du saknar rättigheter för att exportera innehåll från denna blogg."
 
 #: wp-admin/export.php:17
 #: wp-admin/menu.php:104
@@ -2569,7 +2569,7 @@ msgstr "Ladda ner exportfil"
 
 #: wp-admin/import.php:13
 msgid "You do not have sufficient permissions to import content in this blog."
-msgstr "Du saknar rättigheter för att importera innehåll till denna blog."
+msgstr "Du saknar rättigheter för att importera innehåll till denna blogg."
 
 #: wp-admin/import.php:23
 msgid "If you have posts or comments in another system, WordPress can import those into this blog. To get started, choose a system to import from below:"
@@ -5035,8 +5035,8 @@ msgstr "Servernamn"
 #: wp-admin/install.php:129
 #: wp-admin/user-edit.php:187
 #: wp-admin/user-new.php:96
-#: wp-login.php:410
-#: wp-login.php:504
+#: wp-login.php:413
+#: wp-login.php:507
 msgid "Username"
 msgstr "Användarnamn"
 
@@ -5045,7 +5045,7 @@ msgstr "Användarnamn"
 #: wp-admin/install.php:133
 #: wp-admin/options-writing.php:100
 #: wp-admin/user-new.php:119
-#: wp-login.php:508
+#: wp-login.php:511
 msgid "Password"
 msgstr "Lösenord"
 
@@ -6984,7 +6984,7 @@ msgid "You can&#8217;t give users that role."
 msgstr "Du saknar rättigheter att redigera användare."
 
 #: wp-admin/includes/user.php:138
-#: wp-login.php:236
+#: wp-login.php:239
 msgid "<strong>ERROR</strong>: Please enter a username."
 msgstr "<strong>FEL</strong>: Var vänlig och ange ett användarnamn."
 
@@ -7026,7 +7026,7 @@ msgid "<strong>ERROR</strong>: The e-mail address isn&#8217;t correct."
 msgstr "<strong>FEL</strong>: E-postadressen är inte riktig."
 
 #: wp-admin/includes/user.php:178
-#: wp-login.php:250
+#: wp-login.php:253
 msgid "<strong>ERROR</strong>: This email is already registered, please choose another one."
 msgstr "<strong>FEL</strong>: Den här e-postadressen är redan registrerad, var vänlig och välj en annan."
 
@@ -7136,14 +7136,14 @@ msgid "WordPress has been installed. Were you expecting more steps? Sorry to dis
 msgstr "WordPress har blivit installerat. Väntade du dig fler steg? Tyvärr måste vi göra dig besviken."
 
 #: wp-admin/install.php:141
-#: wp-login.php:495
-#: wp-login.php:514
+#: wp-login.php:498
+#: wp-login.php:517
 msgid "Log In"
 msgstr "Logga in"
 
 #: wp-admin/link-add.php:13
 msgid "You do not have sufficient permissions to add links to this blog."
-msgstr "Du saknar rättigheter för att lägga till länkar i denna blog."
+msgstr "Du saknar rättigheter för att lägga till länkar i denna blogg."
 
 #: wp-admin/link-add.php:15
 msgid "Add New Link"
@@ -10938,9 +10938,9 @@ msgid "Search for:"
 msgstr "Sök efter:"
 
 #: wp-includes/general-template.php:147
-#: wp-login.php:352
 #: wp-login.php:355
-#: wp-login.php:424
+#: wp-login.php:358
+#: wp-login.php:427
 msgid "Log in"
 msgstr "Logga in"
 
@@ -10949,9 +10949,9 @@ msgid "Log out"
 msgstr "Logga ut"
 
 #: wp-includes/general-template.php:236
-#: wp-login.php:353
-#: wp-login.php:420
-#: wp-login.php:524
+#: wp-login.php:356
+#: wp-login.php:423
+#: wp-login.php:527
 msgid "Register"
 msgstr "Registrera"
 
@@ -12975,7 +12975,7 @@ msgstr "En ny användare har registrerat sig på din blogg %s:"
 #: wp-includes/pluggable.php:1151
 #: wp-includes/pluggable.php:1159
 #: wp-login.php:162
-#: wp-login.php:204
+#: wp-login.php:207
 #, php-format
 msgid "Username: %s"
 msgstr "Användarnamn: %s"
@@ -12991,7 +12991,7 @@ msgid "[%s] New User Registration"
 msgstr "[%s] Registrering av ny användare"
 
 #: wp-includes/pluggable.php:1160
-#: wp-login.php:205
+#: wp-login.php:208
 #, php-format
 msgid "Password: %s"
 msgstr "Lösenord: %s"
@@ -13431,128 +13431,129 @@ msgid "[%s] Password Reset"
 msgstr "[%s] Lösenordet återställt"
 
 #: wp-login.php:172
-#: wp-login.php:214
+#: wp-login.php:217
 msgid "The e-mail could not be sent."
 msgstr "Kunde inte skicka e-post."
 
 #: wp-login.php:172
-#: wp-login.php:214
+#: wp-login.php:217
 msgid "Possible reason: your host may have disabled the mail() function..."
 msgstr "Möjlig anledning: din servervärd kan ha stängt av mail()-funktionen."
 
 #: wp-login.php:191
-#: wp-login.php:195
+#: wp-login.php:194
+#: wp-login.php:198
 msgid "Invalid key"
 msgstr "Ogiltig nyckel"
 
-#: wp-login.php:208
+#: wp-login.php:211
 #, php-format
 msgid "[%s] Your new password"
 msgstr "[%s] Ditt nya lösenord"
 
-#: wp-login.php:238
+#: wp-login.php:241
 msgid "<strong>ERROR</strong>: This username is invalid.  Please enter a valid username."
 msgstr "<strong>FEL</strong>: Var vänlig och ange ett användarnamn."
 
-#: wp-login.php:241
+#: wp-login.php:244
 msgid "<strong>ERROR</strong>: This username is already registered, please choose another one."
 msgstr "<strong>FEL</strong>: Detta användarnamn är upptaget, var vänlig och välj ett annat."
 
-#: wp-login.php:245
+#: wp-login.php:248
 msgid "<strong>ERROR</strong>: Please type your e-mail address."
 msgstr "<strong>FEL</strong>: Var vänlig och ange din e-postadress."
 
-#: wp-login.php:247
+#: wp-login.php:250
 msgid "<strong>ERROR</strong>: The email address isn&#8217;t correct."
 msgstr "<strong>FEL</strong>: E-postadressen är inte riktig."
 
-#: wp-login.php:262
+#: wp-login.php:265
 #, php-format
 msgid "<strong>ERROR</strong>: Couldn&#8217;t register you... please contact the <a href=\"mailto:%s\">webmaster</a> !"
 msgstr "<strong>FEL</strong>: Kunde inte registrera dig. Var vänlig och kontakta den <a href=\"mailto:%s\">webbansvariga</a>!"
 
-#: wp-login.php:332
+#: wp-login.php:335
 msgid "Sorry, that key does not appear to be valid."
 msgstr "Tyvärr, den nyckeln verkar inte stämma."
 
-#: wp-login.php:335
+#: wp-login.php:338
 msgid "Lost Password"
 msgstr "Glömt lösenordet"
 
-#: wp-login.php:335
+#: wp-login.php:338
 msgid "Please enter your username or e-mail address. You will receive a new password via e-mail."
 msgstr "Skriv in ditt användarnamn eller din e-postadress så skickar vi ett nytt lösenord per e-post."
 
-#: wp-login.php:343
+#: wp-login.php:346
 msgid "Username or E-mail:"
 msgstr "Användarnamn eller E-post:"
 
-#: wp-login.php:347
+#: wp-login.php:350
 msgid "Get New Password"
 msgstr "Få ett nytt lösenord"
 
-#: wp-login.php:361
-#: wp-login.php:430
-#: wp-login.php:533
+#: wp-login.php:364
+#: wp-login.php:433
+#: wp-login.php:536
 msgid "Are you lost?"
 msgstr "Gått vilse?"
 
-#: wp-login.php:361
-#: wp-login.php:430
-#: wp-login.php:533
+#: wp-login.php:364
+#: wp-login.php:433
+#: wp-login.php:536
 #, php-format
 msgid "&larr; Back to %s"
 msgstr "&larr; Tillbaka till %s"
 
-#: wp-login.php:405
+#: wp-login.php:408
 msgid "Registration Form"
 msgstr "Registreringsformulär"
 
-#: wp-login.php:405
+#: wp-login.php:408
 msgid "Register For This Site"
 msgstr "Registrera dig på den här bloggen"
 
-#: wp-login.php:418
+#: wp-login.php:421
 msgid "A password will be e-mailed to you."
 msgstr "Ett lösenord kommer att skickas till dig per e-post."
 
-#: wp-login.php:425
-#: wp-login.php:525
-#: wp-login.php:527
+#: wp-login.php:428
+#: wp-login.php:528
+#: wp-login.php:530
 msgid "Password Lost and Found"
 msgstr "Ändra lösenord"
 
-#: wp-login.php:425
-#: wp-login.php:525
-#: wp-login.php:527
+#: wp-login.php:428
+#: wp-login.php:528
+#: wp-login.php:530
 msgid "Lost your password?"
 msgstr "Glömt lösenordet?"
 
-#: wp-login.php:486
+#: wp-login.php:489
 msgid "<strong>ERROR</strong>: Cookies are blocked or not supported by your browser. You must <a href='http://www.google.com/cookies.html'>enable cookies</a> to use WordPress."
 msgstr "<strong>FEL</strong>: Cookies är blockerade eller så kan inte din webbläsare hantera dom. Du måste <a href='http://www.google.com/cookies.html'>aktivera cookies</a> för att använda WordPress."
 
-#: wp-login.php:489
+#: wp-login.php:492
 msgid "You are now logged out."
 msgstr "Du är nu utloggad."
 
-#: wp-login.php:490
+#: wp-login.php:493
 msgid "User registration is currently not allowed."
 msgstr "Registreringsfunktionen är avstängd just nu."
 
-#: wp-login.php:491
+#: wp-login.php:494
 msgid "Check your e-mail for the confirmation link."
 msgstr "Kolla efter bekräftelselänken i din e-post."
 
-#: wp-login.php:492
+#: wp-login.php:495
 msgid "Check your e-mail for your new password."
 msgstr "Kolla efter ditt nya lösenord i din e-post."
 
-#: wp-login.php:493
+#: wp-login.php:496
 msgid "Registration complete. Please check your e-mail."
 msgstr "Registreringen är slutförd. Nu kan du kontrollera din e-post."
 
-#: wp-login.php:512
+#: wp-login.php:515
 msgid "Remember Me"
 msgstr "Kom ihåg mig"
 
@@ -13959,11 +13960,23 @@ msgid "There doesn't seem to be a <code>wp-config.php</code> file. I need this b
 msgstr "Det verkar inte finnas en <code>wp-config.php</code> fil. Denna behövs innan vi kan starta. Behöver du mer hjälp? <a href='http://codex.wordpress.org/Editing_wp-config.php'>Den finns här</a>. Du kan skapa en <code>wp-config.php</code> fil via webbläsaren, men detta funkar inte på alla servrar. Det säkraste sättet är att skapade den manuellt. </p><p><a href='%ssetup-config.php' class='button'>Skapa en konfigurationsfil</a> "
 
 #~ msgid ""
-#~ "This comment has been deleted. Please move it out of the Trash if you "
-#~ "want to edit it."
+#~ "This comment is in the Trash. Please move it out of the Trash if you want "
+#~ "to edit it."
 #~ msgstr ""
-#~ "Denna kommentar har raderats. Förflytta från papperskorgen om du vill "
-#~ "redigera den."
+#~ "Denna kommentar har placerats i papperskorgen. Om du vill redigera "
+#~ "kommentaren så måste du flytta den från papperskorgen."
+#~ msgid "Delete Permanently"
+#~ msgstr "Radera permanent"
+#~ msgid "Trash"
+#~ msgstr "Papperskorg"
+#~ msgid "%s comment moved to the trash"
+#~ msgid_plural "%s comments moved to the trash"
+#~ msgstr[0] "Kommentaren flyttad till papperskorgen"
+#~ msgstr[1] "%s kommentarer flyttade till papperskorgen"
+#~ msgid "%s comment restored from the trash"
+#~ msgid_plural "%s comments restored from the trash"
+#~ msgstr[0] "%s kommentar återställd från papperskorgen"
+#~ msgstr[1] "%s kommentarer återställda från papperskorgen"
 #~ msgid "%s comment permanently deleted"
 #~ msgid_plural "%s comments permanently deleted"
 #~ msgstr[0] "%s kommentar raderad permanent"
@@ -13991,35 +14004,131 @@ msgstr "Det verkar inte finnas en <code>wp-config.php</code> fil. Denna behövs 
 #~ "Skräpposter <span class=\"count\">(<span class=\"spam-count\">%s</span>)</"
 #~ "span>"
 #~ msgid ""
-#~ "Trash <span class=\"count\">(<span class=\"deleted-count\">%s</span>)</"
-#~ "span>"
+#~ "Trash <span class=\"count\">(<span class=\"trash-count\">%s</span>)</span>"
 #~ msgid_plural ""
-#~ "Trash <span class=\"count\">(<span class=\"deleted-count\">%s</span>)</"
-#~ "span>"
+#~ "Trash <span class=\"count\">(<span class=\"trash-count\">%s</span>)</span>"
 #~ msgstr[0] ""
-#~ "Raderad <span class=\"count\">(<span class=\"deleted-count\">%s</span>)</"
-#~ "span>"
+#~ "Papperskorg <span class=\"count\">(<span class=\"trash-count\">%s</span>)"
+#~ "</span>"
 #~ msgstr[1] ""
-#~ "Raderade <span class=\"count\">(<span class=\"deleted-count\">%s</span>)</"
-#~ "span>"
-#~ msgid "Return to Pending"
-#~ msgstr "Återgå till sidan för väntande"
-#~ msgid "Delete Permanently"
-#~ msgstr "Radera permanent"
+#~ "Papperskorg <span class=\"count\">(<span class=\"trash-count\">%s</span>)"
+#~ "</span>"
 #~ msgid "Move to Trash"
 #~ msgstr "Flytta till papperskorgen"
-#~ msgid "Permanently Delete All"
-#~ msgstr "Radera alla permanent"
+#~ msgid "Empty Spam"
+#~ msgstr "Radera skräpposter"
 #~ msgid "Empty Trash"
 #~ msgstr "Töm papperskorgen"
-#~ msgid "Empty Quarantine"
-#~ msgstr "Töm karantän"
-#~ msgid "Return this comment to Unapproved status"
-#~ msgstr "Återställ denna kommentar till väntande status"
+#~ msgid "You are not allowed to move this page to the trash."
+#~ msgstr "Du saknar rättigheter för att flytta denna sida till papperskorgen."
+#~ msgid "Error in moving to trash..."
+#~ msgstr "Fel vid flyttning till papperskorgen..."
+#~ msgid "You are not allowed to remove this page from the trash."
+#~ msgstr "Du saknar rättigheter för att ta bort denns sida ur papperskorgen."
+#~ msgid "Error in removing from trash..."
+#~ msgstr "Fel vid borttagningen från papperskorgen..."
+#~ msgctxt "page"
+#~ msgid "Trash"
+#~ msgstr "Papperskorg"
+#~ msgid "Trash pages"
+#~ msgstr "Sidor i papperskorgen"
+#~ msgctxt "page"
+#~ msgid "Trash <span class=\"count\">(%s)</span>"
+#~ msgid_plural "Trash <span class=\"count\">(%s)</span>"
+#~ msgstr[0] "Papperskorg <span class=\"count\">(%s)</span>"
+#~ msgstr[1] "Papperskorg <span class=\"count\">(%s)</span>"
+#~ msgid "Page permanently deleted."
+#~ msgid_plural "%s pages permanently deleted."
+#~ msgstr[0] "Sidan raderad permanent."
+#~ msgstr[1] "%s sidor raderade permanent."
+#~ msgid "Page moved to the trash."
+#~ msgid_plural "%s pages moved to the trash."
+#~ msgstr[0] "Sidan flyttad till papperskorgen."
+#~ msgstr[1] "%s sidor flyttade till papperskorgen."
+#~ msgid "Page restored from the trash."
+#~ msgid_plural "%s pages restored from the trash."
+#~ msgstr[0] "Sidan återställd från papperskorgen."
+#~ msgstr[1] "%s sidor återställda från papperskorgen."
+#~ msgid "You are not allowed to move this post to the trash."
+#~ msgstr ""
+#~ "Du saknar rättigheter för att flytta detta inlägg till papperskorgen."
+#~ msgid "You are not allowed to remove this post from the trash."
+#~ msgstr ""
+#~ "Du saknar rättigheter för att ta bort detta inlägg ur papperskorgen."
+#~ msgid "Post permanently deleted."
+#~ msgid_plural "%s posts permanently deleted."
+#~ msgstr[0] "Inlägget raderat permanent."
+#~ msgstr[1] "%s inlägg raderade permanent."
+#~ msgid "Post moved to the trash."
+#~ msgid_plural "%s posts moved to the trash."
+#~ msgstr[0] "Inlägget flyttat till papperskorgen."
+#~ msgstr[1] "%s inlägg flyttade till papperskorgen."
+#~ msgid "Post restored from the trash."
+#~ msgid_plural "%s posts restored from the trash."
+#~ msgstr[0] "Inlägget återställt från papperskorgen."
+#~ msgstr[1] "%s inlägg återställda från papperskorgen."
+#~ msgctxt "post"
+#~ msgid "Trash"
+#~ msgstr "Papperskorg"
+#~ msgid "Trash posts"
+#~ msgstr "Inlägg i papperskorgen"
+#~ msgid "Trash <span class=\"count\">(%s)</span>"
+#~ msgid_plural "Trash <span class=\"count\">(%s)</span>"
+#~ msgstr[0] "Papperskorg <span class=\"count\">(%s)</span>"
+#~ msgstr[1] "Papperskorg <span class=\"count\">(%s)</span>"
+#~ msgid "Remove this post from the Trash"
+#~ msgstr "Ta bort detta inlägg från papperskorgen"
+#~ msgid "Delete this post permanently"
+#~ msgstr "Radera detta inlägg permanent"
+#~ msgid "Move this post to the Trash"
+#~ msgstr "Flytta detta inlägg till papperskorgen"
+#~ msgid "Remove this page from the Trash"
+#~ msgstr "Ta bort denna sida från papperskorgen"
+#~ msgid "Delete this page permanently"
+#~ msgstr "Radera denna sida permanent"
+#~ msgid "Move this page to the Trash"
+#~ msgstr "Flytta denna sida till papperskorgen"
 #~ msgid "Enable syntax highlighting"
 #~ msgstr "Aktivera färgkodning"
 #~ msgid "Disable syntax highlighting"
 #~ msgstr "Inaktivera färgkodning"
+#~ msgid ""
+#~ "You attempted to edit an attachment that doesn&#8217;t exist. Perhaps it "
+#~ "was deleted?"
+#~ msgstr ""
+#~ "Du försökte redigera en bilaga som inte existerar. Har den kanske "
+#~ "raderats?"
+#~ msgid ""
+#~ "You can&#8217;t edit this attachment because it is in the Trash. Please "
+#~ "move it out of the Trash and try again."
+#~ msgstr ""
+#~ "Du kan inte redigera denna bilaga eftersom den ligger i papperskorgen. "
+#~ "Återställ den och försök igen."
+#~ msgid ""
+#~ "You can&#8217;t edit this page because it is in the Trash. Please move it "
+#~ "out of the Trash and try again."
+#~ msgstr ""
+#~ "Du kan inte redigera denna sida eftersom den ligger i papperskorgen. "
+#~ "Återställ den och försök igen."
+#~ msgid "You are not allowed to remove this page form the trash."
+#~ msgstr "Du saknar rättigheter för att ta bort denna sida ur papperskorgen."
+#~ msgid ""
+#~ "You can&#8217;t edit this post because it is in the Trash. Please move it "
+#~ "out of the Trash and try again."
+#~ msgstr ""
+#~ "Du kan inte redigera detta inlägg eftersom det ligger i papperskorgen. "
+#~ "Återställ det och försök igen."
+#~ msgid "Error in restoring from trash..."
+#~ msgstr "Fel vid återställning från papperskorgen..."
+#~ msgid "Media moved to Trash."
+#~ msgstr "Media flyttad till papperskorgen."
+#~ msgid "Media removed from Trash."
+#~ msgstr "Media borttaget ur papperskorgen."
+#~ msgctxt "uploaded files"
+#~ msgid "Trash <span class=\"count\">(%s)</span>"
+#~ msgid_plural "Trash <span class=\"count\">(%s)</span>"
+#~ msgstr[0] "Papperskorg <span class=\"count\">(%s)</span>"
+#~ msgstr[1] "Papperskorg <span class=\"count\">(%s)</span>"
 #~ msgid "Could not read image size"
 #~ msgstr "Kunde inte läsa bildens storlek"
 #~ msgid ""
@@ -14028,6 +14137,18 @@ msgstr "Det verkar inte finnas en <code>wp-config.php</code> fil. Denna behövs 
 #~ msgstr ""
 #~ "Vill du radera valda poster permanent? \n"
 #~ " 'Avbryt' för att avbryta, 'OK' för att radera."
+#~ msgid "Moved to Trash"
+#~ msgstr "Flyttad till papperskorgen"
+#~ msgid "Allow new users to sign up"
+#~ msgstr "Tillåt nya användare att registrera sig"
+#~ msgid "Return to Pending"
+#~ msgstr "Återgå till sidan för väntande"
+#~ msgid "Permanently Delete All"
+#~ msgstr "Radera alla permanent"
+#~ msgid "Empty Quarantine"
+#~ msgstr "Töm karantän"
+#~ msgid "Return this comment to Unapproved status"
+#~ msgstr "Återställ denna kommentar till väntande status"
 #~ msgid ""
 #~ "Enable keyboard shortcuts for comment moderation. <a href=\"http://codex."
 #~ "wordpress.org/Keyboard_Shortcuts\">More information</a>"
@@ -15854,8 +15975,6 @@ msgstr "Det verkar inte finnas en <code>wp-config.php</code> fil. Denna behövs 
 #~ msgstr "Radera kommentar"
 #~ msgid "This comment is"
 #~ msgstr "Denna kommentar är"
-#~ msgid "This page is"
-#~ msgstr "Denna sida är"
 #~ msgid "Change page status"
 #~ msgstr "Ändra sidstatus"
 #~ msgid "Delete&nbsp;page"
