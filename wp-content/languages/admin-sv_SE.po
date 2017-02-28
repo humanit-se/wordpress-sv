@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-05-07 07:14:09+0000\n"
+"PO-Revision-Date: 2015-08-25 16:16:05+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -219,7 +219,7 @@ msgstr "Om du temporärt gör din webbrot skrivbar så kan WordPress att generer
 
 #: wp-admin/options-permalink.php:283
 msgid "If your <code>.htaccess</code> file were <a href=\"http://codex.wordpress.org/Changing_File_Permissions\">writable</a>, we could do this automatically, but it isn&#8217;t so these are the mod_rewrite rules you should have in your <code>.htaccess</code> file. Click in the field and press <kbd>CTRL + a</kbd> to select all."
-msgstr "Om WordPress hade <a href=\"http://wpsv.se/dokumentation/att-andra-skrivrattigheter/\">skrivrättigheter</a> till din <code>.htaccess</code> skulle vi kunna genomföra det här automatiskt, men det är inte möjligt för tillfället. Det här är de mod_rewrite-regler som du borde ha i din <code>.htaccess</code>-fil. Klicka i fältet och tryck <kbd>CTRL + a</kbd> för att markera allt."
+msgstr "Om WordPress hade <a href=\"http://codex.wordpress.org/Changing_File_Permissions\">skrivrättigheter</a> till din <code>.htaccess</code> skulle vi kunna genomföra det här automatiskt, men det är inte möjligt för tillfället. Det här är de mod_rewrite-regler som du borde ha i din <code>.htaccess</code>-fil. Klicka i fältet och tryck <kbd>CTRL + a</kbd> för att markera allt."
 
 #: wp-admin/options-reading.php:15
 msgid "Reading Settings"
@@ -560,7 +560,7 @@ msgstr "Uppdatera fil"
 
 #: wp-admin/plugin-editor.php:267 wp-admin/theme-editor.php:224
 msgid "You need to make this file writable before you can save your changes. See <a href=\"http://codex.wordpress.org/Changing_File_Permissions\">the Codex</a> for more information."
-msgstr "Du måste göra denna fil skrivbar innan du kan spara ändringar. Se <a href=\"http://wpsv.se/dokumentation/att-andra-skrivrattigheter/\">dokumentationen</a> för mer information."
+msgstr "Du måste göra denna fil skrivbar innan du kan spara ändringar. Se <a href=\"http://codex.wordpress.org/Changing_File_Permissions\">dokumentationen</a> för mer information."
 
 #: wp-admin/plugin-install.php:18 wp-admin/update.php:96
 #: wp-admin/update.php:127
@@ -1489,7 +1489,7 @@ msgstr "Framtida säkerhetsuppdateringar kommer att installeras automatiskt."
 
 #: wp-admin/update-core.php:166
 msgid "<strong>Important:</strong> before updating, please <a href=\"http://codex.wordpress.org/WordPress_Backups\">back up your database and files</a>. For help with updates, visit the <a href=\"http://codex.wordpress.org/Updating_WordPress\">Updating WordPress</a> Codex page."
-msgstr "<strong>Viktigt:</strong> Innan du uppdaterar, ta en <a href=\"http://wpsv.se/dokumentation/att-ta-backup/\">backup av din databas och filer</a>. För mer hjälp med uppdateringar se <a href=\"http://codex.wordpress.org/Updating_WordPress\">WordPress Codex</a> (engelska)."
+msgstr "<strong>Viktigt:</strong> Innan du uppdaterar, ta en <a href=\"http://codex.wordpress.org/WordPress_Backups\">backup av din databas och filer</a>. För mer hjälp med uppdateringar se <a href=\"http://codex.wordpress.org/Updating_WordPress\">WordPress Codex</a> (engelska)."
 
 #: wp-admin/update-core.php:170
 msgid "An updated version of WordPress is available."
@@ -6860,15 +6860,15 @@ msgstr "Erkännande"
 msgid "Freedoms"
 msgstr "Friheterna"
 
-#: wp-admin/about.php:42 wp-admin/about.php:290
+#: wp-admin/about.php:42 wp-admin/about.php:294
 msgid "Maintenance and Security Release"
 msgid_plural "Maintenance and Security Releases"
 msgstr[0] "Underhålls och säkerhetsrelease"
 msgstr[1] "Underhålls och säkerhetsreleaser"
 
 #. translators: 1: WordPress version number.
-#: wp-admin/about.php:47 wp-admin/about.php:59 wp-admin/about.php:63
-#: wp-admin/about.php:67 wp-admin/about.php:293
+#: wp-admin/about.php:51 wp-admin/about.php:63 wp-admin/about.php:67
+#: wp-admin/about.php:71 wp-admin/about.php:297
 msgid "<strong>Version %1$s</strong> addressed a security issue."
 msgid_plural "<strong>Version %1$s</strong> addressed some security issues."
 msgstr[0] "<strong>Version %1$s</strong> åtgärdar en sårbarhet."
@@ -6876,160 +6876,161 @@ msgstr[1] "<strong>Version %1$s</strong> åtgärdar sårbarheter."
 
 #: wp-admin/about.php:45 wp-admin/about.php:49 wp-admin/about.php:53
 #: wp-admin/about.php:57 wp-admin/about.php:61 wp-admin/about.php:65
-#: wp-admin/about.php:69 wp-admin/about.php:73 wp-admin/about.php:308
+#: wp-admin/about.php:69 wp-admin/about.php:73 wp-admin/about.php:77
+#: wp-admin/about.php:312
 msgid "For more information, see <a href=\"%s\">the release notes</a>."
 msgstr "För mer information, se <a href=\"%s\">detaljer för releasen</a>."
 
 #. translators: 1: WordPress version number, 2: plural number of bugs.
-#: wp-admin/about.php:55 wp-admin/about.php:71 wp-admin/about.php:297
+#: wp-admin/about.php:59 wp-admin/about.php:75 wp-admin/about.php:301
 msgid "<strong>Version %1$s</strong> addressed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed %2$s bugs."
 msgstr[0] "<strong>Version %1$s</strong> åtgärdar %2$s bugg."
 msgstr[1] "<strong>Version %1$s</strong> åtgärdar %2$s buggar."
 
-#: wp-admin/about.php:86
+#: wp-admin/about.php:90
 msgid "A smoother media editing&nbsp;experience"
 msgstr "En smidigare hantering av mediaredigering"
 
-#: wp-admin/about.php:90
+#: wp-admin/about.php:94
 msgid "Improved visual editing"
 msgstr "Förbättrad visuell redigering"
 
-#: wp-admin/about.php:91
+#: wp-admin/about.php:95
 msgid "The updated visual editor has improved speed, accessibility, and mobile support."
 msgstr "Den uppdaterade visuella redigeraren har förbättrad hastighet, tillgänglighet och mobilt stöd."
 
-#: wp-admin/about.php:92
+#: wp-admin/about.php:96
 msgid "You can paste into the visual editor from your word processor without wasting time to clean up messy styling. (Yeah, we&#8217;re talking about you, Microsoft Word.)"
 msgstr "Du kan klistra in i den visuella redigeraren från din ordbehandlare utan att slösa tid att städa upp rörig formatering. (Ja, vi pratar om dig, Microsoft Word.)"
 
-#: wp-admin/about.php:96
+#: wp-admin/about.php:100
 msgid "Edit images easily"
 msgstr "Redigera bilder enkelt"
 
-#: wp-admin/about.php:97
+#: wp-admin/about.php:101
 msgid "With quicker access to crop and rotation tools, it&#8217;s now much easier to edit your images while editing posts. You can also scale images directly in the editor to find just the right fit."
 msgstr "Med snabbare tillgång till verktyg för beskärning och rotering så är det nu mycket enklare att redigera dina bilder medan du redigerar dina inlägg. Du kan även skala bilder direkt i redigeraren för att få till den rätta storleken."
 
-#: wp-admin/about.php:101
+#: wp-admin/about.php:105
 msgid "Drag and drop your images"
 msgstr "Dra och släpp dina bilder"
 
-#: wp-admin/about.php:102
+#: wp-admin/about.php:106
 msgid "Uploading your images is easier than ever. Just grab them from your desktop and drop them onto the editor."
 msgstr "Att ladda upp dina bilder är enklare än någonsin. Dra dom bara från din dator och släpp dom i redigeraren."
 
-#: wp-admin/about.php:111
+#: wp-admin/about.php:115
 msgid "Gallery previews"
 msgstr "Förhandsgranskning av gallerier"
 
-#: wp-admin/about.php:112
+#: wp-admin/about.php:116
 msgid "Galleries display a beautiful grid of images right in the editor, just like they do in your published post."
 msgstr "Gallerier visas som ett vackert rutnät av bilder direkt i redigeraren, precis som dom gör i ditt publicerade inlägg."
 
-#: wp-admin/about.php:205
+#: wp-admin/about.php:209
 msgid "Do more with audio and video"
 msgstr "Gör mer med ljud och bild"
 
-#: wp-admin/about.php:206
+#: wp-admin/about.php:210
 msgid "Images have galleries; now we&#8217;ve added simple audio and video playlists, so you can showcase your music and clips."
 msgstr "Bilder har gallerier: nu har vi även lagt till ljud- och videospellistor så att du kan visa upp dina alster."
 
-#: wp-admin/about.php:226
+#: wp-admin/about.php:230
 msgid "Live widget and header previews"
 msgstr "Förhandsgranskning live för widgets och sidhuvuden"
 
-#: wp-admin/about.php:227
+#: wp-admin/about.php:231
 msgid "Add, edit, and rearrange your site&#8217;s widgets right in the theme customizer. No &#8220;save and surprise&#8221; &mdash; preview your changes live and only save them when you&#8217;re ready."
 msgstr "Lägg till, redigera och omordna din webbplats widgets direkt under anpassning för teman. Du slipper överraskningar efter att du sparat dina ändringar, förhandsgranska din ändringar live och spara när du känner dig redo."
 
-#: wp-admin/about.php:228
+#: wp-admin/about.php:232
 msgid "The improved header image tool also lets you upload, crop, and manage headers while customizing your theme."
 msgstr "Det förbättrade verktyget för bilder i sidhuvudet låter dig även att ladda upp, beskära och hantera dina sidhuvuden under tiden som du anpassar ditt tema."
 
-#: wp-admin/about.php:232
+#: wp-admin/about.php:236
 msgid "Stunning new theme browser"
 msgstr "En grym ny temabläddrare"
 
-#: wp-admin/about.php:233
+#: wp-admin/about.php:237
 msgid "Looking for a new theme should be easy and fun. Lose yourself in the boundless supply of free WordPress.org themes with the beautiful new theme browser."
 msgstr "Att leta efter ett nytt tema ska vara enkelt och kul. Förlora dig i det gränslösa utbudet av fria teman på WordPress.org med den vackra nya temabläddraren."
 
-#: wp-admin/about.php:235
+#: wp-admin/about.php:239
 msgid "Browse Themes"
 msgstr "Bläddra bland teman"
 
-#: wp-admin/about.php:244
+#: wp-admin/about.php:248
 msgid "Under the Hood"
 msgstr "Under huven"
 
-#: wp-admin/about.php:248
+#: wp-admin/about.php:252
 msgid "Semantic Captions and Galleries"
 msgstr "Semantiska bildtexter och gallerier"
 
-#: wp-admin/about.php:249
+#: wp-admin/about.php:253
 msgid "Theme developers have new options for images and galleries that use intelligent HTML5 markup."
 msgstr "Temaskapare har nu fler alternativ för bilder och gallerier med intelligent HTML5."
 
-#: wp-admin/about.php:251
+#: wp-admin/about.php:255
 msgid "Inline Code Documentation"
 msgstr "Inbäddad koddokumentation"
 
-#: wp-admin/about.php:252
+#: wp-admin/about.php:256
 msgid "Every action and filter hook in WordPress is now documented, along with expanded documentation for the media manager and customizer APIs."
 msgstr "Varje action- och filter-hook i WordPress är nu dokumenterade, tillsammans med utökad dokumentation för mediahanteraren och API'n för anpassning av teman."
 
-#: wp-admin/about.php:255 wp-admin/credits.php:190
+#: wp-admin/about.php:259 wp-admin/credits.php:190
 msgid "External Libraries"
 msgstr "Externa bibliotek"
 
-#: wp-admin/about.php:256
+#: wp-admin/about.php:260
 msgid "Updated libraries: TinyMCE&nbsp;4, jQuery&nbsp;1.11, Backbone&nbsp;1.1, Underscore&nbsp;1.6, Plupload&nbsp;2, MediaElement&nbsp;2.14, Masonry&nbsp;3."
 msgstr "Uppdaterade bibliotek: TinyMCE&nbsp;4, jQuery&nbsp;1.11, Backbone&nbsp;1.1, Underscore&nbsp;1.6, Plupload&nbsp;2, MediaElement&nbsp;2.14, Masonry&nbsp;3."
 
-#: wp-admin/about.php:258
+#: wp-admin/about.php:262
 msgid "Improved Database Layer"
 msgstr "Förbättrat databaslager"
 
-#: wp-admin/about.php:259
+#: wp-admin/about.php:263
 msgid "Database connections are now more fault-resistant and have improved compatibility with PHP 5.5 and MySQL 5.6."
 msgstr "Databasanslutningarna är nu mer felresistenta och har bättre kompatibilitet med PHP 5.5 och MySQL 5.6."
 
-#: wp-admin/about.php:262
+#: wp-admin/about.php:266
 msgid "New Utility Functions"
 msgstr "Nya hjälpfunktioner"
 
-#: wp-admin/about.php:263
+#: wp-admin/about.php:267
 msgid "Identify a hook in progress with <code>doing_action()</code> and <code>doing_filter()</code>, and manipulate custom image sizes with <code>has_image_size()</code> and <code>remove_image_size()</code>."
 msgstr "Identifiera en aktiv \"hook\" med <code>doing_action()</code> och <code>doing_filter()</code>, och manipulera anpassade bildstorlekar med <code>has_image_size()</code> och <code>remove_image_size()</code>."
 
-#: wp-admin/about.php:264
+#: wp-admin/about.php:268
 msgid "Plugins and themes registering custom image sizes can now register suggested cropping points. For example, prevent heads from being cropped out of photos with a top-center crop."
 msgstr "Tillägg och teman som registrerar anpassade temastorlekar kan nu registrera föreslagna beskärningspunkter för. T.ex, förhindra huvuden från att bli bortskurna från foton genom att bestämma beskärning till den mittersta delen högst upp."
 
-#: wp-admin/about.php:273
+#: wp-admin/about.php:277
 msgid "Return to Updates"
 msgstr "Återgå till uppdateringar"
 
-#: wp-admin/about.php:273
+#: wp-admin/about.php:277
 msgid "Return to Dashboard &rarr; Updates"
 msgstr "Återgå till Adminpanel &rarr; Uppdateringar"
 
-#: wp-admin/about.php:277
+#: wp-admin/about.php:281
 msgid "Go to Dashboard &rarr; Home"
 msgstr "Gå till Adminpanel &rarr; Hem"
 
-#: wp-admin/about.php:277
+#: wp-admin/about.php:281
 msgid "Go to Dashboard"
 msgstr "Gå till adminpanelen"
 
-#: wp-admin/about.php:288
+#: wp-admin/about.php:292
 msgid "Maintenance Release"
 msgid_plural "Maintenance Releases"
 msgstr[0] "Underhållsrelease"
 msgstr[1] "Underhållsreleaser"
 
-#: wp-admin/about.php:289
+#: wp-admin/about.php:293
 msgid "Security Release"
 msgid_plural "Security Releases"
 msgstr[0] "Säkerhetsrelease"
@@ -7037,7 +7038,7 @@ msgstr[1] "Säkerhetsreleaser"
 
 #. translators: 1: WordPress version number, 2: plural number of bugs. Singular
 #. security issue.
-#: wp-admin/about.php:301
+#: wp-admin/about.php:305
 msgid "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bugs."
 msgstr[0] "<strong>Version %1$s</strong> åtgärdar en säkerhetsrisk och %2$s bugg."
@@ -7045,7 +7046,8 @@ msgstr[1] "<strong>Version %1$s</strong> åtgärdar en säkerhetsrisk och %2$s b
 
 #. translators: 1: WordPress version number, 2: plural number of bugs. More
 #. than one security issue.
-#: wp-admin/about.php:43 wp-admin/about.php:51 wp-admin/about.php:305
+#: wp-admin/about.php:43 wp-admin/about.php:47 wp-admin/about.php:55
+#: wp-admin/about.php:309
 msgid "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bugs."
 msgstr[0] "<strong>Version %1$s</strong> åtgärdar ett par sårbarheter och %2$s bugg."
@@ -7447,7 +7449,7 @@ msgid "Attachment"
 msgstr "Fixering"
 
 #: wp-admin/custom-background.php:357 wp-admin/custom-header.php:781
-#: wp-admin/includes/ajax-actions.php:1614
+#: wp-admin/includes/ajax-actions.php:1616
 msgid "The uploaded file is not a valid image. Please try again."
 msgstr "Den uppladdade filen är inte en giltig bildfil. Vänligen försök igen."
 
@@ -8033,11 +8035,11 @@ msgstr "Ange titel här"
 msgid "Get Shortlink"
 msgstr "Hämta kortlänk"
 
-#: wp-admin/edit-form-advanced.php:506 wp-admin/includes/ajax-actions.php:1753
+#: wp-admin/edit-form-advanced.php:506 wp-admin/includes/ajax-actions.php:1755
 msgid "Last edited by %1$s on %2$s at %3$s"
 msgstr "Senast ändrat av %1$s den %2$s kl. %3$s"
 
-#: wp-admin/edit-form-advanced.php:508 wp-admin/includes/ajax-actions.php:1755
+#: wp-admin/edit-form-advanced.php:508 wp-admin/includes/ajax-actions.php:1757
 msgid "Last edited on %1$s at %2$s"
 msgstr "Senast ändrat den %1$s kl. %2$s"
 
@@ -8069,7 +8071,7 @@ msgstr "URL (%s):"
 msgid "URL:"
 msgstr "URL:"
 
-#: wp-admin/edit-form-comment.php:74 wp-admin/includes/ajax-actions.php:1433
+#: wp-admin/edit-form-comment.php:74 wp-admin/includes/ajax-actions.php:1435
 #: wp-admin/includes/class-wp-posts-list-table.php:1155
 msgid "Status"
 msgstr "Status"
@@ -8297,8 +8299,8 @@ msgstr "Posten uppdaterad."
 msgid "Item not added."
 msgstr "Posten lades inte till."
 
-#: wp-admin/edit-tags.php:262 wp-admin/includes/ajax-actions.php:1392
-#: wp-admin/includes/ajax-actions.php:1397
+#: wp-admin/edit-tags.php:262 wp-admin/includes/ajax-actions.php:1394
+#: wp-admin/includes/ajax-actions.php:1399
 msgid "Item not updated."
 msgstr "Posten uppdaterades inte."
 
@@ -8772,24 +8774,24 @@ msgstr "Sparande inaktiverat: %s redigerar just nu denna sida."
 msgid "Saving is disabled: %s is currently editing this post."
 msgstr "Sparande inaktiverat: %s redigerar just nu detta inlägg."
 
-#: wp-admin/includes/ajax-actions.php:1433
+#: wp-admin/includes/ajax-actions.php:1435
 msgid "Type"
 msgstr "Typ"
 
-#: wp-admin/includes/ajax-actions.php:1433
+#: wp-admin/includes/ajax-actions.php:1435
 #: wp-admin/includes/class-wp-posts-list-table.php:309
 #: wp-admin/includes/class-wp-posts-list-table.php:947
 msgid "Date"
 msgstr "Datum"
 
-#: wp-admin/includes/ajax-actions.php:1445
+#: wp-admin/includes/ajax-actions.php:1447
 #: wp-admin/includes/class-wp-posts-list-table.php:754
 #: wp-admin/includes/class-wp-posts-list-table.php:1162
 #: wp-admin/includes/meta-boxes.php:76 wp-admin/includes/meta-boxes.php:99
 msgid "Scheduled"
 msgstr "Tidsinställt"
 
-#: wp-admin/includes/ajax-actions.php:2247
+#: wp-admin/includes/ajax-actions.php:2249
 #: wp-admin/includes/class-wp-theme-install-list-table.php:353
 #: wp-admin/includes/plugin-install.php:401
 msgid "(based on %s rating)"
