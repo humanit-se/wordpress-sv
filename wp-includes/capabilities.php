@@ -1143,10 +1143,8 @@ function map_meta_cap( $cap, $user_id ) {
 	case 'edit_post':
 	case 'edit_page':
 		$post = get_post( $args[0] );
-		if ( empty( $post ) ) {
-			$caps[] = 'do_not_allow';
+		if ( empty( $post ) )
 			break;
-		}
 
 		if ( 'revision' == $post->post_type ) {
 			$post = get_post( $post->post_parent );
@@ -1260,16 +1258,7 @@ function map_meta_cap( $cap, $user_id ) {
 		if ( empty( $comment ) )
 			break;
 		$post = get_post( $comment->comment_post_ID );
-
-		/*
-		 * If the post doesn't exist, we have an orphaned comment.
-		 * Fall back to the edit_posts capability, instead.
-		 */
-		if ( $post ) {
-			$caps = map_meta_cap( 'edit_post', $user_id, $post->ID );
-		} else {
-			$caps = map_meta_cap( 'edit_posts', $user_id );
-		}
+		$caps = map_meta_cap( 'edit_post', $user_id, $post->ID );
 		break;
 	case 'unfiltered_upload':
 		if ( defined('ALLOW_UNFILTERED_UPLOADS') && ALLOW_UNFILTERED_UPLOADS && ( !is_multisite() || is_super_admin( $user_id ) )  )

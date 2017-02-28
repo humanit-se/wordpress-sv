@@ -763,15 +763,11 @@ function translate_user_role( $name ) {
 function get_available_languages( $dir = null ) {
 	$languages = array();
 
-	$lang_files = glob( ( is_null( $dir) ? WP_LANG_DIR : $dir ) . '/*.mo' );
-	if ( $lang_files ) {
-		foreach( $lang_files as $lang_file ) {
-			$lang_file = basename( $lang_file, '.mo' );
-			if ( 0 !== strpos( $lang_file, 'continents-cities' ) && 0 !== strpos( $lang_file, 'ms-' ) &&
-				0 !== strpos( $lang_file, 'admin-' ) ) {
-				$languages[] = $lang_file;
-			}
-		}
+	foreach( (array)glob( ( is_null( $dir) ? WP_LANG_DIR : $dir ) . '/*.mo' ) as $lang_file ) {
+		$lang_file = basename($lang_file, '.mo');
+		if ( 0 !== strpos( $lang_file, 'continents-cities' ) && 0 !== strpos( $lang_file, 'ms-' ) &&
+			0 !== strpos( $lang_file, 'admin-' ))
+			$languages[] = $lang_file;
 	}
 
 	return $languages;

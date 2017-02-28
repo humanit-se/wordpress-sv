@@ -1,5 +1,5 @@
-# Translation of WordPress - 4.2.x - Administration - Network Admin in Swedish
-# This file is distributed under the same license as the WordPress - 4.2.x - Administration - Network Admin package.
+# Translation of Network Admin in Swedish
+# This file is distributed under the same license as the Network Admin package.
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2015-06-28 14:11:38+0000\n"
@@ -7,9 +7,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/2.3.0-alpha\n"
-"Language: sv_SE\n"
-"Project-Id-Version: WordPress - 4.2.x - Administration - Network Admin\n"
+"X-Generator: GlotPress/1.0-alpha-1000\n"
+"Project-Id-Version: Network Admin\n"
 
 #: wp-admin/network.php:545
 msgid "Once you complete these steps, your network is enabled and configured. You will have to log in again."
@@ -24,13 +23,13 @@ msgstr "Lägg till följande i filen %1$s i %2$s, och <strong>byt ut</strong> ö
 msgid "To make your installation more secure, you should also add:"
 msgstr "För att göra din installation mer säker så bör du också lägga till:"
 
-#: wp-admin/network.php:429
-msgid "These unique authentication keys are also missing from your <code>wp-config.php</code> file."
-msgstr "Dessa unika autentiseringsnycklar saknas också i filen <code>wp-config.php</code>."
-
 #: wp-admin/network.php:427
 msgid "This unique authentication key is also missing from your <code>wp-config.php</code> file."
 msgstr "Denna unika autentiseringsnyckel saknas också i din <code>wp-config.php</code> file."
+
+#: wp-admin/network.php:429
+msgid "These unique authentication keys are also missing from your <code>wp-config.php</code> file."
+msgstr "Dessa unika autentiseringsnycklar saknas också i filen <code>wp-config.php</code>."
 
 #: wp-admin/network.php:393
 msgid "Add the following to your <code>wp-config.php</code> file in <code>%s</code> <strong>above</strong> the line reading <code>/* That&#8217;s all, stop editing! Happy blogging. */</code>:"

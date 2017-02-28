@@ -70,13 +70,13 @@
 								node = node.parentNode;
 							}
 
-							if ( ! node || node.nodeType !== 1 || ( 'ownerSVGElement' in node ) ||
-								( node.className && typeof node.className === 'string' && node.className.indexOf( 'wp-exclude-emoji' ) !== -1 ) ) {
+							if ( ! node || ( node.className && node.className.indexOf( 'wp-exclude-emoji' ) !== -1 ) ) {
+								continue;
+							}
 
- 								continue;
- 							}
-
-							parse( node );
+							if ( node && node.nodeType === 1 ) {
+								parse( node );
+							}
 						}
 					}
 				} ).observe( document.body, {
