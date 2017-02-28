@@ -1787,8 +1787,6 @@ class wpdb {
 	 * @return int|false The number of rows affected, or false on error.
 	 */
 	function _insert_replace_helper( $table, $data, $format = null, $type = 'INSERT' ) {
-		$this->insert_id = 0;
-
 		if ( ! in_array( strtoupper( $type ), array( 'REPLACE', 'INSERT' ) ) ) {
 			return false;
 		}
@@ -1809,6 +1807,7 @@ class wpdb {
 
 		$sql = "$type INTO `$table` ($fields) VALUES ($formats)";
 
+		$this->insert_id = 0;
 		$this->check_current_query = false;
 		return $this->query( $this->prepare( $sql, $values ) );
 	}
@@ -1929,16 +1928,7 @@ class wpdb {
 	 */
 	protected function process_fields( $table, $data, $format ) {
 		$data = $this->process_field_formats( $data, $format );
-		if ( false === $data ) {
-			return false;
-		}
-
 		$data = $this->process_field_charsets( $data, $table );
-		if ( false === $data ) {
-			return false;
-		}
-
-		$data = $this->process_field_lengths( $data, $table );
 		if ( false === $data ) {
 			return false;
 		}
@@ -2004,41 +1994,17 @@ class wpdb {
 				// We can skip this field if we know it isn't a string.
 				// This checks %d/%f versus ! %s because it's sprintf() could take more.
 				$value['charset'] = false;
+			} elseif ( $this->check_ascii( $value['value'] ) ) {
+				// If it's ASCII, then we don't need the charset. We can skip this field.
+				$value['charset'] = false;
 			} else {
 				$value['charset'] = $this->get_col_charset( $table, $field );
 				if ( is_wp_error( $value['charset'] ) ) {
 					return false;
 				}
-			}
 
-			$data[ $field ] = $value;
-		}
-
-		return $data;
-	}
-
-	/**
-	 * For string fields, record the maximum string length that field can safely save.
-	 *
-	 * @since 4.2.1
-	 * @access protected
-	 *
-	 * @param array  $data  As it comes from the wpdb::process_field_charsets() method.
-	 * @param string $table Table name.
-	 * @return array|False The same array as $data with additional 'length' keys, or false if
-	 *                     any of the values were too long for their corresponding field.
-	 */
-	protected function process_field_lengths( $data, $table ) {
-		foreach ( $data as $field => $value ) {
-			if ( '%d' === $value['format'] || '%f' === $value['format'] ) {
-				// We can skip this field if we know it isn't a string.
-				// This checks %d/%f versus ! %s because it's sprintf() could take more.
-				$value['length'] = false;
-			} else {
-				$value['length'] = $this->get_col_length( $table, $field );
-				if ( is_wp_error( $value['length'] ) ) {
-					return false;
-				}
+				// This isn't ASCII. Don't have strip_invalid_text() re-check.
+				$value['ascii'] = false;
 			}
 
 			$data[ $field ] = $value;
@@ -2245,10 +2211,7 @@ class wpdb {
 		}
 
 		$charsets = $columns = array();
-
-		$table_parts = explode( '.', $table );
-		$table = '`' . implode( '`.`', $table_parts ) . '`';
-		$results = $this->get_results( "SHOW FULL COLUMNS FROM $table" );
+		$results = $this->get_results( "SHOW FULL COLUMNS FROM `$table`" );
 		if ( ! $results ) {
 			return new WP_Error( 'wpdb_get_table_charset_failure' );
 		}
@@ -2372,99 +2335,6 @@ class wpdb {
 	}
 
 	/**
-	 * Retrieve the maximum string length allowed in a given column.
-	 * The length may either be specified as a byte length or a character length.
-	 *
-	 * @since 4.2.1
-	 * @access public
-	 *
-	 * @param string $table  Table name.
-	 * @param string $column Column name.
-	 * @return mixed array( 'length' => (int), 'type' => 'byte' | 'char' )
-	 *               false if the column has no length (for example, numeric column)
-	 *               WP_Error object if there was an error.
-	 */
-	public function get_col_length( $table, $column ) {
-		$tablekey = strtolower( $table );
-		$columnkey = strtolower( $column );
-
-		// Skip this entirely if this isn't a MySQL database.
-		if ( false === $this->is_mysql ) {
-			return false;
-		}
-
-		if ( empty( $this->col_meta[ $tablekey ] ) ) {
-			// This primes column information for us.
-			$table_charset = $this->get_table_charset( $table );
-			if ( is_wp_error( $table_charset ) ) {
-				return $table_charset;
-			}
-		}
-
-		if ( empty( $this->col_meta[ $tablekey ][ $columnkey ] ) ) {
-			return false;
-		}
-
-		$typeinfo = explode( '(', $this->col_meta[ $tablekey ][ $columnkey ]->Type );
-
-		$type = strtolower( $typeinfo[0] );
-		if ( ! empty( $typeinfo[1] ) ) {
-			$length = trim( $typeinfo[1], ')' );
-		} else {
-			$length = false;
-		}
-
-		switch( $type ) {
-			case 'char':
-			case 'varchar':
-				return array(
-					'type'   => 'char',
-					'length' => (int) $length,
-				);
-				break;
-			case 'binary':
-			case 'varbinary':
-				return array(
-					'type'   => 'byte',
-					'length' => (int) $length,
-				);
-				break;
-			case 'tinyblob':
-			case 'tinytext':
-				return array(
-					'type'   => 'byte',
-					'length' => 255,        // 2^8 - 1
-				);
-				break;
-			case 'blob':
-			case 'text':
-				return array(
-					'type'   => 'byte',
-					'length' => 65535,      // 2^16 - 1
-				);
-				break;
-			case 'mediumblob':
-			case 'mediumtext':
-				return array(
-					'type'   => 'byte',
-					'length' => 16777215,   // 2^24 - 1
-				);
-				break;
-			case 'longblob':
-			case 'longtext':
-				return array(
-					'type'   => 'byte',
-					'length' => 4294967295, // 2^32 - 1
-				);
-				break;
-			default:
-				return false;
-		}
-
-		return false;
-	}
-
-	/**
 	 * Check if a string is ASCII.
 	 *
 	 * The negative regex is faster for non-ASCII strings, as it allows
@@ -2504,7 +2374,7 @@ class wpdb {
 
 		// We don't need to check the collation for queries that don't read data.
 		$query = ltrim( $query, "\r\n\t (" );
-		if ( preg_match( '/^(?:SHOW|DESCRIBE|DESC|EXPLAIN|CREATE)\s/i', $query ) ) {
+		if ( preg_match( '/^(?:SHOW|DESCRIBE|DESC|EXPLAIN)\s/i', $query ) ) {
 			return true;
 		}
 
@@ -2562,55 +2432,50 @@ class wpdb {
 	 */
 		// If any of the columns don't have one of these collations, it needs more sanity checking.
 	protected function strip_invalid_text( $data ) {
+		// Some multibyte character sets that we can check in PHP.
+		$mb_charsets = array(
+			'ascii'   => 'ASCII',
+			'big5'    => 'BIG-5',
+			'eucjpms' => 'eucJP-win',
+			'gb2312'  => 'EUC-CN',
+			'ujis'    => 'EUC-JP',
+			'utf32'   => 'UTF-32',
+		);
+
+		$supported_charsets = array();
+		if ( function_exists( 'mb_list_encodings' ) ) {
+			$supported_charsets = mb_list_encodings();
+		}
+
 		$db_check_string = false;
 
 		foreach ( $data as &$value ) {
 			$charset = $value['charset'];
 
-			if ( is_array( $value['length'] ) ) {
-				$length = $value['length']['length'];
-			} else {
-				$length = false;
-			}
-
-			// There's no charset to work with.
-			if ( false === $charset ) {
+			// Column isn't a string, or is latin1, which will will happily store anything.
+			if ( false === $charset || 'latin1' === $charset ) {
 				continue;
 			}
 
-			// Column isn't a string.
 			if ( ! is_string( $value['value'] ) ) {
 				continue;
 			}
 
-			$truncate_by_byte_length = 'byte' === $value['length']['type'];
-
-			$needs_validation = true;
-			if (
-				// latin1 can store any byte sequence
-				'latin1' === $charset
-			||
-				// ASCII is always OK.
-				( ! isset( $value['ascii'] ) && $this->check_ascii( $value['value'] ) )
-			) {
-				$truncate_by_byte_length = true;
-				$needs_validation = false;
+			// ASCII is always OK.
+			if ( ! isset( $value['ascii'] ) && $this->check_ascii( $value['value'] ) ) {
+				continue;
 			}
 
-			if ( $truncate_by_byte_length ) {
-				mbstring_binary_safe_encoding();
-				if ( false !== $length && strlen( $value['value'] ) > $length ) {
-					$value['value'] = substr( $value['value'], 0, $length );
-				}
-				reset_mbstring_encoding();
-
-				if ( ! $needs_validation ) {
+			// Convert the text locally.
+			if ( $supported_charsets ) {
+				if ( isset( $mb_charsets[ $charset ] ) && in_array( $mb_charsets[ $charset ], $supported_charsets ) ) {
+					$value['value'] = mb_convert_encoding( $value['value'], $mb_charsets[ $charset ], $mb_charsets[ $charset ] );
 					continue;
 				}
 			}
 
 			// utf8 can be handled by regex, which is a bunch faster than a DB lookup.
-			if ( ( 'utf8' === $charset || 'utf8mb3' === $charset || 'utf8mb4' === $charset ) && function_exists( 'mb_strlen' ) ) {
+			if ( 'utf8' === $charset || 'utf8mb3' === $charset || 'utf8mb4' === $charset ) {
 				$regex = '/
 					(
 						(?: [\x00-\x7F]                  # single-byte sequences   0xxxxxxx
@@ -2620,7 +2485,7 @@ class wpdb {
 						|   \xED[\x80-\x9F][\x80-\xBF]
 						|   [\xEE-\xEF][\x80-\xBF]{2}';
 
-				if ( 'utf8mb4' === $charset ) {
+				if ( 'utf8mb4' === $charset) {
 					$regex .= '
 						|    \xF0[\x90-\xBF][\x80-\xBF]{2} # four-byte sequences   11110xxx 10xxxxxx * 3
 						|    [\xF1-\xF3][\x80-\xBF]{3}
@@ -2628,16 +2493,11 @@ class wpdb {
 					';
 				}
 
-				$regex .= '){1,40}                          # ...one or more times
+				$regex .= '){1,50}                          # ...one or more times
 					)
 					| .                                  # anything else
 					/x';
 				$value['value'] = preg_replace( $regex, '$1', $value['value'] );
-
-
-				if ( false !== $length && mb_strlen( $value['value'], 'UTF-8' ) > $length ) {
-					$value['value'] = mb_substr( $value['value'], 0, $length, 'UTF-8' );
-				}
 				continue;
 			}
 
@@ -2654,15 +2514,8 @@ class wpdb {
 						$queries[ $value['charset'] ] = array();
 					}
 
-					// We're going to need to truncate by characters or bytes, depending on the length value we have.
-					if ( 'byte' === $value['length']['type'] ) {
-						// Split the CONVERT() calls by charset, so we can make sure the connection is right
-						$queries[ $value['charset'] ][ $col ] = $this->prepare( "CONVERT( LEFT( CONVERT( %s USING binary ), %d ) USING {$value['charset']} )", $value['value'], $value['length']['length'] );
-					} else {
-						$queries[ $value['charset'] ][ $col ] = $this->prepare( "LEFT( CONVERT( %s USING {$value['charset']} ), %d )", $value['value'], $value['length']['length'] );
-					}
-
-					unset( $data[ $col ]['db'] );
+					// Split the CONVERT() calls by charset, so we can make sure the connection is right
+					$queries[ $value['charset'] ][ $col ] = $this->prepare( "CONVERT( %s USING {$value['charset']} )", $value['value'] );
 				}
 			}
 
@@ -2680,19 +2533,16 @@ class wpdb {
 
 				$this->check_current_query = false;
 
-				$sql = array();
-				foreach ( $query as $column => $column_query ) {
-					$sql[] = $column_query . " AS x_$column";
-				}
-
-				$row = $this->get_row( "SELECT " . implode( ', ', $sql ), ARRAY_A );
+				$row = $this->get_row( "SELECT " . implode( ', ', $query ), ARRAY_N );
 				if ( ! $row ) {
 					$this->set_charset( $this->dbh, $connection_charset );
 					return new WP_Error( 'wpdb_strip_invalid_text_failure' );
 				}
 
-				foreach ( array_keys( $query ) as $column ) {
-					$data[ $column ]['value'] = $row["x_$column"];
+				$cols = array_keys( $query );
+				$col_count = count( $cols );
+				for ( $ii = 0; $ii < $col_count; $ii++ ) {
+					$data[ $cols[ $ii ] ]['value'] = $row[ $ii ];
 				}
 			}
 
@@ -2715,12 +2565,6 @@ class wpdb {
 	 * @return string|WP_Error The converted query, or a {@see WP_Error} object if the conversion fails.
 	 */
 	protected function strip_invalid_text_from_query( $query ) {
-		// We don't need to check the collation for queries that don't read data.
-		$trimmed_query = ltrim( $query, "\r\n\t (" );
-		if ( preg_match( '/^(?:SHOW|DESCRIBE|DESC|EXPLAIN|CREATE)\s/i', $trimmed_query ) ) {
-			return $query;
-		}
-
 		$table = $this->get_table_from_query( $query );
 		if ( $table ) {
 			$charset = $this->get_table_charset( $table );
@@ -2740,7 +2584,6 @@ class wpdb {
 			'value'   => $query,
 			'charset' => $charset,
 			'ascii'   => false,
-			'length'  => false,
 		);
 
 		$data = $this->strip_invalid_text( array( $data ) );
@@ -2763,7 +2606,7 @@ class wpdb {
 	 * @return string|WP_Error The converted string, or a `WP_Error` object if the conversion fails.
 	 */
 	public function strip_invalid_text_for_column( $table, $column, $value ) {
-		if ( ! is_string( $value ) ) {
+		if ( ! is_string( $value ) || $this->check_ascii( $value ) ) {
 			return $value;
 		}
 
@@ -2780,7 +2623,7 @@ class wpdb {
 			$column => array(
 				'value'   => $value,
 				'charset' => $charset,
-				'length'  => $this->get_col_length( $table, $column ),
+				'ascii'   => false,
 			)
 		);
 
@@ -2821,16 +2664,16 @@ class wpdb {
 				. '|REPLACE(?:\s+LOW_PRIORITY|\s+DELAYED)?(?:\s+INTO)?'
 				. '|UPDATE(?:\s+LOW_PRIORITY)?(?:\s+IGNORE)?'
 				. '|DELETE(?:\s+LOW_PRIORITY|\s+QUICK|\s+IGNORE)*(?:\s+FROM)?'
-				. ')\s+((?:[0-9a-zA-Z$_.`-]|[\xC2-\xDF][\x80-\xBF])+)/is', $query, $maybe ) ) {
-			return str_replace( '`', '', $maybe[1] );
+				. ')\s+`?([\w-]+)`?/is', $query, $maybe ) ) {
+			return $maybe[1];
 		}
 
 		// SHOW TABLE STATUS and SHOW TABLES
 		if ( preg_match( '/^\s*(?:'
 				. 'SHOW\s+TABLE\s+STATUS.+(?:LIKE\s+|WHERE\s+Name\s*=\s*)'
 				. '|SHOW\s+(?:FULL\s+)?TABLES.+(?:LIKE\s+|WHERE\s+Name\s*=\s*)'
-				. ')\W((?:[0-9a-zA-Z$_.`-]|[\xC2-\xDF][\x80-\xBF])+)\W/is', $query, $maybe ) ) {
-			return str_replace( '`', '', $maybe[1] );
+				. ')\W([\w-]+)\W/is', $query, $maybe ) ) {
+			return $maybe[1];
 		}
 
 		// Big pattern for the rest of the table-related queries.
@@ -2848,8 +2691,8 @@ class wpdb {
 				. '|LOAD\s+DATA.*INFILE.*INTO\s+TABLE'
 				. '|(?:GRANT|REVOKE).*ON\s+TABLE'
 				. '|SHOW\s+(?:.*FROM|.*TABLE)'
-				. ')\s+\(*\s*((?:[0-9a-zA-Z$_.`-]|[\xC2-\xDF][\x80-\xBF])+)\s*\)*/is', $query, $maybe ) ) {
-			return str_replace( '`', '', $maybe[1] );
+				. ')\s+\(*\s*`?([\w-]+)`?\s*\)*/is', $query, $maybe ) ) {
+			return $maybe[1];
 		}
 
 		return false;
