@@ -2,12 +2,12 @@
 # This file is distributed under the same license as the Twenty Fifteen package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-06-28 14:11:32+0000\n"
+"PO-Revision-Date: 2015-07-27 16:53:06+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/1.0-alpha-1000\n"
+"X-Generator: GlotPress/1.0-alpha-1100\n"
 "Project-Id-Version: Twenty Fifteen\n"
 
 #. Author of the plugin/theme
@@ -19,7 +19,7 @@ msgid "Our 2015 default theme is clean, blog-focused, and designed for clarity. 
 msgstr "Twenty Fifteen, standardtemat för 2015, är rent, bloggfokuserat, och utformat för tydlighet. Dess enkla, okomplicerade typografi är läsbar på en mängd olika skärmstorlekar och lämpar sig för flera språk. Vi designade temat enligt strategin \"mobile first\" vilket innebär fokus på ditt innehåll i första hand, oavsett om dina besökare kommer till din sida med smartmobil, surfplatta, bärbar dator eller stationär dator. "
 
 #. Theme URI of the plugin/theme
-msgid "https://wordpress.org/themes/twentyfifteen"
+msgid "https://wordpress.org/themes/twentyfifteen/"
 msgstr "https://wordpress.org/themes/twentyfifteen"
 
 #. Theme Name of the plugin/theme
@@ -162,7 +162,7 @@ msgstr "<span class=\"meta-nav\">Publicerat i</span><span class=\"post-title\">%
 msgid "Next Image"
 msgstr "Nästa bild"
 
-#: header.php:44
+#: header.php:43
 msgid "Menu and widgets"
 msgstr "Meny och widgets"
 
@@ -170,46 +170,46 @@ msgstr "Meny och widgets"
 msgid "Previous Image"
 msgstr "Föregående bild"
 
-#: header.php:27
+#: header.php:26
 msgid "Skip to content"
 msgstr "Hoppa till innehåll"
 
-#: functions.php:232
+#: functions.php:256
 msgid "collapse child menu"
 msgstr "minimera undermeny"
 
-#: functions.php:231
+#: functions.php:255
 msgid "expand child menu"
 msgstr "expandera undermeny"
 
-#. translators: To add an additional character subset specific to your
+#. Translators: To add an additional character subset specific to your
 #. language, translate this to 'greek', 'cyrillic', 'devanagari' or
 #. 'vietnamese'. Do not translate into your own language.
-#: functions.php:173
+#: functions.php:185
 msgctxt "Add new subset (greek, cyrillic, devanagari, vietnamese)"
 msgid "no-subset"
 msgstr "no-subset"
 
-#. translators: If there are characters in your language that are not supported
+#. Translators: If there are characters in your language that are not supported
 #. by Inconsolata, translate this to 'off'. Do not translate into your own
 #. language.
-#: functions.php:168
+#: functions.php:177
 msgctxt "Inconsolata font: on or off"
 msgid "on"
 msgstr "på"
 
-#. translators: If there are characters in your language that are not supported
+#. Translators: If there are characters in your language that are not supported
 #. by Noto Serif, translate this to 'off'. Do not translate into your own
 #. language.
-#: functions.php:163
+#: functions.php:169
 msgctxt "Noto Serif font: on or off"
 msgid "on"
 msgstr "på"
 
-#. translators: If there are characters in your language that are not supported
+#. Translators: If there are characters in your language that are not supported
 #. by Noto Sans, translate this to 'off'. Do not translate into your own
 #. language.
-#: functions.php:158
+#: functions.php:161
 msgctxt "Noto Sans font: on or off"
 msgid "on"
 msgstr "på"
@@ -234,7 +234,7 @@ msgstr "Primär meny"
 msgid "Proudly powered by %s"
 msgstr "Drivs med %s"
 
-#. #-#-#-#-#  twentyfifteen.pot (Twenty Fifteen 1.0)  #-#-#-#-#
+#. #-#-#-#-#  twentyfifteen.pot (Twenty Fifteen 1.2)  #-#-#-#-#
 #. Author URI of the plugin/theme
 #: footer.php:25
 msgid "https://wordpress.org/"
