@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/1.0-alpha-1100\n"
+"X-Generator: GlotPress/2.1.0-alpha\n"
 "Project-Id-Version: 3.8.x\n"
 
 #: wp-content/plugins/akismet/admin.php:50
@@ -1555,7 +1555,7 @@ msgid "Enabled"
 msgstr "Aktivera"
 
 #: wp-includes/js/tinymce/langs/wp-langs.php:434
-#: wp-includes/script-loader.php:294
+#: wp-includes/script-loader.php:297
 msgid "Fullscreen"
 msgstr "Fullskärm"
 
@@ -1564,7 +1564,7 @@ msgid "Invoke URLs"
 msgstr "Anropa URLer"
 
 #: wp-includes/js/tinymce/langs/wp-langs.php:436
-#: wp-includes/script-loader.php:303
+#: wp-includes/script-loader.php:306
 msgid "Mute"
 msgstr "Dämpning"
 
@@ -2266,14 +2266,14 @@ msgstr "f m"
 msgid "PM"
 msgstr "e m"
 
-#. translators: $thousands_sep argument for http:php.net/number_format, default
-#. is ,
+#. translators: $thousands_sep argument for http://php.net/number_format,
+#. default is ,
 #: wp-includes/locale.php:173
 msgid "number_format_thousands_sep"
 msgstr " "
 
-#. translators: $dec_point argument for http:php.net/number_format, default is
-#. .
+#. translators: $dec_point argument for http://php.net/number_format, default
+#. is .
 #: wp-includes/locale.php:177
 msgid "number_format_decimal_point"
 msgstr ","
@@ -2284,17 +2284,17 @@ msgctxt "text direction"
 msgid "ltr"
 msgstr "ltr"
 
-#. translators: localized date format, see http:php.net/date
+#. translators: localized date format, see http://php.net/date
 #: wp-includes/locale.php:351
 msgid "F j, Y"
 msgstr "j F, Y"
 
-#. translators: localized time format, see http:php.net/date
+#. translators: localized time format, see http://php.net/date
 #: wp-includes/locale.php:353
 msgid "g:i a"
 msgstr "H:i"
 
-#. translators: localized date and time format, see http:php.net/date
+#. translators: localized date and time format, see http://php.net/date
 #: wp-includes/locale.php:355
 msgid "F j, Y g:i a"
 msgstr "j F, Y H:i"
@@ -2379,7 +2379,7 @@ msgstr "Alt text"
 msgid "Description"
 msgstr "Beskrivning"
 
-#: wp-includes/media-template.php:260 wp-includes/script-loader.php:479
+#: wp-includes/media-template.php:260 wp-includes/script-loader.php:482
 msgid "Clear"
 msgstr "Rensa"
 
@@ -2440,7 +2440,7 @@ msgstr "Slumpvis ordning"
 msgid "No editor could be selected."
 msgstr "Ingen redigerare kunde väljas."
 
-#: wp-includes/media.php:1649 wp-includes/script-loader.php:373
+#: wp-includes/media.php:1649 wp-includes/script-loader.php:376
 msgid "Allowed Files"
 msgstr "Tillåtna filer"
 
@@ -3205,7 +3205,7 @@ msgstr "Det här innehållet är lösenordsskyddat. Vänligen ange ditt lösenor
 msgid "Submit"
 msgstr "Skicka"
 
-#. translators: revision date format, see http:php.net/date
+#. translators: revision date format, see http://php.net/date
 #: wp-includes/post-template.php:1327
 msgctxt "revision date format"
 msgid "j F, Y @ G:i"
@@ -3223,7 +3223,7 @@ msgctxt "post revision title extra"
 msgid "%1$s [Current Revision]"
 msgstr "%1$s [Nuvarande version]"
 
-#. translators: revision date format, see http:php.net/date
+#. translators: revision date format, see http://php.net/date
 #: wp-includes/post-template.php:1367
 msgctxt "revision date format"
 msgid "j F, Y @ G:i:s"
@@ -3372,12 +3372,12 @@ msgid "Pending Review"
 msgstr "Väntar på granskning"
 
 #: wp-includes/post.php:833 wp-includes/post.php:853
-#: wp-includes/script-loader.php:428
+#: wp-includes/script-loader.php:431
 msgid "Private"
 msgstr "Privat"
 
 #: wp-includes/post.php:834 wp-includes/post.php:854
-#: wp-includes/script-loader.php:433
+#: wp-includes/script-loader.php:436
 msgid "Published"
 msgstr "Publicerat"
 
@@ -3541,8 +3541,8 @@ msgstr "Kunde inte infoga inlägget i databasen"
 msgid "The page template is invalid."
 msgstr "Sidmallen är felaktig."
 
-#: wp-includes/post.php:3245 wp-includes/script-loader.php:434
-#: wp-includes/script-loader.php:460
+#: wp-includes/post.php:3245 wp-includes/script-loader.php:437
+#: wp-includes/script-loader.php:463
 msgctxt "tag delimiter"
 msgid ","
 msgstr ","
@@ -3649,11 +3649,11 @@ msgstr "textriktning"
 msgid "Toggle Editor Text Direction"
 msgstr "Växla textriktning i redigeraren"
 
-#: wp-includes/script-loader.php:103 wp-includes/script-loader.php:396
+#: wp-includes/script-loader.php:103 wp-includes/script-loader.php:399
 msgid "You do not have permission to do that."
 msgstr "Du saknar rättigheter för att göra det."
 
-#: wp-includes/script-loader.php:104 wp-includes/script-loader.php:397
+#: wp-includes/script-loader.php:104 wp-includes/script-loader.php:400
 msgid "An unidentified error has occurred."
 msgstr "Ett oidentifierat fel har uppstått."
 
@@ -3773,203 +3773,203 @@ msgstr "flyttad till papperskorgen."
 msgid "&#8220;%s&#8221; has failed to upload."
 msgstr "Uppladdningen av &#8220;%s&#8220; misslyckades."
 
-#: wp-includes/script-loader.php:295
+#: wp-includes/script-loader.php:298
 msgid "Download File"
 msgstr "Ladda ner fil"
 
-#: wp-includes/script-loader.php:296
+#: wp-includes/script-loader.php:299
 msgid "Download Video"
 msgstr "Ladda ner video"
 
-#: wp-includes/script-loader.php:297
+#: wp-includes/script-loader.php:300
 msgid "Play/Pause"
 msgstr "Spela upp/Pausa"
 
-#: wp-includes/script-loader.php:298
+#: wp-includes/script-loader.php:301
 msgid "Mute Toggle"
 msgstr "Ljud av/på"
 
-#: wp-includes/script-loader.php:300
+#: wp-includes/script-loader.php:303
 msgid "Turn off Fullscreen"
 msgstr "Stäng av fullskärmsläge"
 
-#: wp-includes/script-loader.php:301
+#: wp-includes/script-loader.php:304
 msgid "Go Fullscreen"
 msgstr "Visa i fullskärmsläge"
 
-#: wp-includes/script-loader.php:302
+#: wp-includes/script-loader.php:305
 msgid "Unmute"
 msgstr "Sätt på ljud"
 
-#: wp-includes/script-loader.php:304
+#: wp-includes/script-loader.php:307
 msgid "Captions/Subtitles"
 msgstr "Textning"
 
-#: wp-includes/script-loader.php:321 wp-login.php:635
+#: wp-includes/script-loader.php:324 wp-login.php:635
 msgid "Strength indicator"
 msgstr "Indikator för styrka"
 
-#: wp-includes/script-loader.php:322
+#: wp-includes/script-loader.php:325
 msgid "Very weak"
 msgstr "Väldigt svagt"
 
-#: wp-includes/script-loader.php:323
+#: wp-includes/script-loader.php:326
 msgid "Weak"
 msgstr "Svagt"
 
 #. translators: password strength
-#: wp-includes/script-loader.php:325
+#: wp-includes/script-loader.php:328
 msgctxt "password strength"
 msgid "Medium"
 msgstr "Medium"
 
-#: wp-includes/script-loader.php:326
+#: wp-includes/script-loader.php:329
 msgid "Strong"
 msgstr "Starkt"
 
-#: wp-includes/script-loader.php:327
+#: wp-includes/script-loader.php:330
 msgid "Mismatch"
 msgstr "Inte matchande"
 
-#: wp-includes/script-loader.php:341 wp-includes/script-loader.php:459
+#: wp-includes/script-loader.php:344 wp-includes/script-loader.php:462
 msgid "(no title)"
 msgstr "(utan rubrik)"
 
-#: wp-includes/script-loader.php:342
+#: wp-includes/script-loader.php:345
 msgid "No matches found."
 msgstr "Inga träffar."
 
-#: wp-includes/script-loader.php:365
+#: wp-includes/script-loader.php:368
 msgid "Save &amp; Activate"
 msgstr "Spara &amp; aktivera"
 
-#: wp-includes/script-loader.php:366
+#: wp-includes/script-loader.php:369
 msgid "Save &amp; Publish"
 msgstr "Spara &amp; publicera"
 
-#: wp-includes/script-loader.php:367
+#: wp-includes/script-loader.php:370
 msgid "Saved"
 msgstr "Sparat"
 
-#: wp-includes/script-loader.php:404
+#: wp-includes/script-loader.php:407
 msgid "Approve and Reply"
 msgstr "Godkänn och svara"
 
-#: wp-includes/script-loader.php:414
+#: wp-includes/script-loader.php:417
 msgid "OK"
 msgstr "OK"
 
-#: wp-includes/script-loader.php:416
+#: wp-includes/script-loader.php:419
 msgid "Publish on:"
 msgstr "Publicera den:"
 
-#: wp-includes/script-loader.php:417
+#: wp-includes/script-loader.php:420
 msgid "Schedule for:"
 msgstr "Tidsinställ för:"
 
-#: wp-includes/script-loader.php:418
+#: wp-includes/script-loader.php:421
 msgid "Published on:"
 msgstr "Publicerat den:"
 
 #. translators: 1: month, 2: day, 3: year, 4: hour, 5: minute
-#: wp-includes/script-loader.php:420
+#: wp-includes/script-loader.php:423
 msgid "%1$s %2$s, %3$s @ %4$s : %5$s"
 msgstr "%1$s %2$s, %3$s @ %4$s : %5$s"
 
-#: wp-includes/script-loader.php:421
+#: wp-includes/script-loader.php:424
 msgid "Show more comments"
 msgstr "Visa fler kommentarer"
 
-#: wp-includes/script-loader.php:422
+#: wp-includes/script-loader.php:425
 msgid "No more comments found."
 msgstr "Inga fler kommentarer hittade."
 
-#: wp-includes/script-loader.php:423
+#: wp-includes/script-loader.php:426
 msgid "Publish"
 msgstr "Publicera"
 
-#: wp-includes/script-loader.php:424
+#: wp-includes/script-loader.php:427
 msgid "Schedule"
 msgstr "Tidsinställ"
 
-#: wp-includes/script-loader.php:426
+#: wp-includes/script-loader.php:429
 msgid "Save as Pending"
 msgstr "Spara som väntande"
 
-#: wp-includes/script-loader.php:427
+#: wp-includes/script-loader.php:430
 msgid "Save Draft"
 msgstr "Spara utkast"
 
-#: wp-includes/script-loader.php:429
+#: wp-includes/script-loader.php:432
 msgid "Public"
 msgstr "Offentlig"
 
-#: wp-includes/script-loader.php:430
+#: wp-includes/script-loader.php:433
 msgid "Public, Sticky"
 msgstr "Publik, Klistrad"
 
-#: wp-includes/script-loader.php:431
+#: wp-includes/script-loader.php:434
 msgid "Password Protected"
 msgstr "Lösenordsskyddat"
 
-#: wp-includes/script-loader.php:432
+#: wp-includes/script-loader.php:435
 msgid "Privately Published"
 msgstr "Publicerat privat"
 
-#: wp-includes/script-loader.php:442
+#: wp-includes/script-loader.php:445
 msgid "Submitted on:"
 msgstr "Skickat den:"
 
-#: wp-includes/script-loader.php:457 wp-includes/script-loader.php:465
+#: wp-includes/script-loader.php:460 wp-includes/script-loader.php:468
 msgid "Error while saving the changes."
 msgstr "Fel vid sparande av ändringar."
 
-#: wp-includes/script-loader.php:458
+#: wp-includes/script-loader.php:461
 msgid "Remove From Bulk Edit"
 msgstr "Ta bort från massredigering"
 
-#: wp-includes/script-loader.php:470
+#: wp-includes/script-loader.php:473
 msgid "Plugin Information:"
 msgstr "Tilläggsinformation:"
 
-#: wp-includes/script-loader.php:471
+#: wp-includes/script-loader.php:474
 msgid "Are you sure you want to install this plugin?"
 msgstr "Är du säker på att du vill installera det här tillägget?"
 
-#: wp-includes/script-loader.php:481
+#: wp-includes/script-loader.php:484
 msgid "Select Color"
 msgstr "Välj färg"
 
-#: wp-includes/script-loader.php:482
+#: wp-includes/script-loader.php:485
 msgid "Current Color"
 msgstr "Nuvarande färg"
 
-#: wp-includes/script-loader.php:493
+#: wp-includes/script-loader.php:496
 msgid "Could not load the preview image. Please reload the page and try again."
 msgstr "Kunde inte ladda förhandsgranskningsbilden. Ladda om sidan och försök igen."
 
-#: wp-includes/script-loader.php:498
+#: wp-includes/script-loader.php:501
 msgid "Use as featured image"
 msgstr "Använd som utvald bild"
 
-#: wp-includes/script-loader.php:499
+#: wp-includes/script-loader.php:502
 msgid "Saving..."
 msgstr "Sparar..."
 
-#: wp-includes/script-loader.php:500
+#: wp-includes/script-loader.php:503
 msgid "Could not set that as the thumbnail image. Try a different attachment."
 msgstr "Kunde inte ange den som miniatyrbild. Försök med en annan bifogad fil."
 
-#: wp-includes/script-loader.php:501
+#: wp-includes/script-loader.php:504
 msgid "Done"
 msgstr "Klart"
 
-#: wp-includes/script-loader.php:507
+#: wp-includes/script-loader.php:510
 msgctxt "search results"
 msgid "No results found."
 msgstr "Inga resultat funna."
 
-#: wp-includes/script-loader.php:508
+#: wp-includes/script-loader.php:511
 msgid ""
 "You are about to permanently delete this menu. \n"
 " 'Cancel' to stop, 'OK' to delete."
@@ -3980,7 +3980,7 @@ msgstr ""
 #. translators: If there are characters in your language that are not supported
 #. by Open Sans, translate this to 'off'. Do not translate into your own
 #. language.
-#: wp-includes/script-loader.php:564
+#: wp-includes/script-loader.php:567
 msgctxt "Open Sans font: on or off"
 msgid "on"
 msgstr "on"
@@ -3988,12 +3988,12 @@ msgstr "on"
 #. translators: To add an additional Open Sans character subset specific to
 #. your language, translate this to 'greek', 'cyrillic' or 'vietnamese'. Do not
 #. translate into your own language.
-#: wp-includes/script-loader.php:570
+#: wp-includes/script-loader.php:573
 msgctxt "Open Sans font: add new subset (greek, cyrillic, vietnamese)"
 msgid "no-subset"
 msgstr "no-subset"
 
-#: wp-includes/script-loader.php:658
+#: wp-includes/script-loader.php:661
 msgid "Saving Draft&#8230;"
 msgstr "Sparar utkast&#8230;"
 
@@ -4119,7 +4119,7 @@ msgstr "&mdash; Välj &mdash;"
 #: wp-includes/class-wp-customize-control.php:737
 #: wp-includes/class-wp-customize-control.php:766
 #: wp-includes/js/tinymce/langs/wp-langs.php:249
-#: wp-includes/script-loader.php:480
+#: wp-includes/script-loader.php:483
 msgid "Default"
 msgstr "Förvald"
 
@@ -4339,7 +4339,7 @@ msgstr "Svenska=sv,Engelska=en,Danska=da,Holländska=nl,Finska=fi,Franska=fr,Tys
 
 #: wp-includes/class-wp-editor.php:683
 #: wp-includes/js/tinymce/langs/wp-langs.php:21
-#: wp-includes/script-loader.php:339 wp-includes/script-loader.php:425
+#: wp-includes/script-loader.php:342 wp-includes/script-loader.php:428
 msgid "Update"
 msgstr "Uppdatera"
 
@@ -4449,13 +4449,13 @@ msgstr "Eller länka till befintligt innehåll"
 msgid "No search term specified. Showing recent items."
 msgstr "Inga sökord angivna. Visar senaste objekten."
 
-#: wp-includes/class-wp-editor.php:902 wp-includes/script-loader.php:340
+#: wp-includes/class-wp-editor.php:902 wp-includes/script-loader.php:343
 msgid "Add Link"
 msgstr "Lägg till länk"
 
 #: wp-includes/class-wp-editor.php:905
 #: wp-includes/js/tinymce/langs/wp-langs.php:22 wp-includes/media.php:1892
-#: wp-includes/script-loader.php:368 wp-includes/script-loader.php:415
+#: wp-includes/script-loader.php:371 wp-includes/script-loader.php:418
 msgid "Cancel"
 msgstr "Avbryt"
 
@@ -5199,7 +5199,7 @@ msgstr "Ange ditt lösenord för att visa kommentarerna."
 msgid "Comment on %s"
 msgstr "Kommentera %s"
 
-#: wp-includes/comment-template.php:1242 wp-includes/script-loader.php:405
+#: wp-includes/comment-template.php:1242 wp-includes/script-loader.php:408
 msgid "Reply"
 msgstr "Svara"
 
@@ -5659,7 +5659,7 @@ msgstr "Ny WordPress-loop"
 #: wp-includes/deprecated.php:707 wp-includes/js/tinymce/langs/wp-langs.php:520
 #: wp-includes/media-template.php:288 wp-includes/media-template.php:334
 #: wp-includes/media-template.php:391 wp-includes/media-template.php:453
-#: wp-includes/media-template.php:468 wp-includes/script-loader.php:299
+#: wp-includes/media-template.php:468 wp-includes/script-loader.php:302
 msgid "None"
 msgstr "Inget"
 
@@ -5824,7 +5824,7 @@ msgstr "&hellip;"
 #. translators: If your word count is based on single characters (East Asian
 #. characters), 		   enter 'characters'. Otherwise, enter 'words'. Do not
 #. translate into your own language.
-#: wp-includes/formatting.php:2531 wp-includes/script-loader.php:353
+#: wp-includes/formatting.php:2531 wp-includes/script-loader.php:356
 msgctxt "word count: words or characters?"
 msgid "words"
 msgstr "ord"
@@ -5954,8 +5954,8 @@ msgstr "Manuella kompensationer"
 
 #: wp-includes/functions.php:4070 wp-includes/js/tinymce/langs/wp-langs.php:23
 #: wp-includes/js/tinymce/wp-mce-help.php:245 wp-includes/media-template.php:32
-#: wp-includes/script-loader.php:204 wp-includes/script-loader.php:293
-#: wp-includes/script-loader.php:369
+#: wp-includes/script-loader.php:204 wp-includes/script-loader.php:296
+#: wp-includes/script-loader.php:372
 msgid "Close"
 msgstr "Stäng"
 
@@ -6702,7 +6702,7 @@ msgstr "Infoga/redigera bild"
 
 #: wp-includes/js/tinymce/langs/wp-langs.php:152
 #: wp-includes/js/tinymce/langs/wp-langs.php:377
-#: wp-includes/script-loader.php:338
+#: wp-includes/script-loader.php:341
 msgid "Insert/edit link"
 msgstr "Infoga/redigera länk"
 
@@ -6844,7 +6844,7 @@ msgid "Cell"
 msgstr "Cell"
 
 #: wp-includes/js/tinymce/langs/wp-langs.php:206
-#: wp-includes/script-loader.php:509 wp-includes/script-loader.php:659
+#: wp-includes/script-loader.php:512 wp-includes/script-loader.php:662
 msgid "The changes you made will be lost if you navigate away from this page."
 msgstr "Ändringarna du gjort kommer att förloras om du går i från sidan utan att spara."
 
@@ -7059,7 +7059,7 @@ msgstr "Inställningar"
 
 #: wp-content/plugins/akismet/admin.php:90
 #: wp-includes/class-wp-customize-manager.php:83
-#: wp-includes/script-loader.php:370
+#: wp-includes/script-loader.php:373
 msgid "Cheatin&#8217; uh?"
 msgstr "Fuskar du va?"
 
