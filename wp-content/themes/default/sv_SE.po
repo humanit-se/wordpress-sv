@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Default 1.6\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/theme\n"
-"POT-Creation-Date: 2009-12-17 17:34+0200\n"
-"PO-Revision-Date: 2009-12-18 15:34+0100\n"
+"POT-Creation-Date: 2009-12-23 23:38+0200\n"
+"PO-Revision-Date: 2010-01-05 00:33+0100\n"
 "Last-Translator: Mattias Tengblad <mst@eyesx.com>\n"
 "Language-Team: WP-Support Sverige / Mattias Tengblad <info@wp-support.se>\n"
 "MIME-Version: 1.0\n"
@@ -95,6 +95,7 @@ msgid "Permanent Link to %s"
 msgstr "Permanent länk till %s"
 
 #: archive.php:40
+#: image.php:32
 #: sidebar.php:30
 #: single.php:34
 msgid "l, F jS, Y"
@@ -253,6 +254,7 @@ msgid "Close this window."
 msgstr "Stäng detta fönster."
 
 #: comments-popup.php:109
+#: image.php:65
 #: single.php:65
 msgid "Sorry, no posts matched your criteria."
 msgstr "Beklagar, inga inlägg matchade dina kriterier."
@@ -455,10 +457,50 @@ msgstr "Välj standardfärgerna"
 msgid "Toggle Text Display"
 msgstr "Visa/göm textvisning"
 
+#: image.php:20
 #: index.php:20
 #: single.php:23
 msgid "Read the rest of this entry &raquo;"
 msgstr "Läs mer &raquo;"
+
+#: image.php:22
+#: page.php:17
+#: single.php:25
+msgid "Pages:"
+msgstr "Sidor:"
+
+#: image.php:32
+#, php-format
+msgid "This entry was posted on %1$s at %2$s and is filed under %3$s."
+msgstr "Detta inlägg postades den %1$s kl %2$s i kategorin %3$s."
+
+#: image.php:34
+#: single.php:35
+#, php-format
+msgid "You can follow any responses to this entry through the <a href='%s'>RSS 2.0</a> feed."
+msgstr "Du kan följa svar på detta inlägg via <a href='%s'>RSS 2.0</a>-flödet."
+
+#: image.php:38
+#: single.php:39
+#, php-format
+msgid "You can <a href=\"#respond\">leave a response</a>, or <a href=\"%s\" rel=\"trackback\">trackback</a> from your own site."
+msgstr "Du kan <a href=\"#respond\">lämna en kommentar</a> eller en <a href=\"%s\" rel=\"trackback\">trackback</a> från din egen sida."
+
+#: image.php:42
+#: single.php:43
+#, php-format
+msgid "Responses are currently closed, but you can <a href=\"%s\" rel=\"trackback\">trackback</a> from your own site."
+msgstr "Kommentarerna är för närvarande inaktiverade, men du kan lämna en <a href=\"%s\" rel=\"trackback\">trackback</a> från dig egen sida."
+
+#: image.php:46
+#: single.php:47
+msgid "You can skip to the end and leave a response. Pinging is currently not allowed."
+msgstr "Du kan hoppa ner till slutet på sidan för att lämna en kommentar. Pingning är inte tillåten för tillfället."
+
+#: image.php:50
+#: single.php:51
+msgid "Both comments and pings are currently closed."
+msgstr "Både kommentering och pingning är inaktiverat."
 
 #: index.php:35
 msgid "Not Found"
@@ -475,11 +517,6 @@ msgstr "Länkar:"
 #: page.php:15
 msgid "Read the rest of this page &raquo;"
 msgstr "Läs mer &raquo;"
-
-#: page.php:17
-#: single.php:25
-msgid "Pages:"
-msgstr "Sidor:"
 
 #: page.php:22
 msgid "Edit this entry."
@@ -567,29 +604,6 @@ msgstr "Drivs med WordPress, ett modernt publiceringsverktyg."
 #, php-format
 msgid "This entry was posted %1$s on %2$s at %3$s and is filed under %4$s."
 msgstr "Detta inlägg postades %1$s den %2$s kl %3$s i kategorin %4$s."
-
-#: single.php:35
-#, php-format
-msgid "You can follow any responses to this entry through the <a href='%s'>RSS 2.0</a> feed."
-msgstr "Du kan följa svar på detta inlägg via <a href='%s'>RSS 2.0</a>-flödet."
-
-#: single.php:39
-#, php-format
-msgid "You can <a href=\"#respond\">leave a response</a>, or <a href=\"%s\" rel=\"trackback\">trackback</a> from your own site."
-msgstr "Du kan <a href=\"#respond\">lämna en kommentar</a> eller en <a href=\"%s\" rel=\"trackback\">trackback</a> från din egen sida."
-
-#: single.php:43
-#, php-format
-msgid "Responses are currently closed, but you can <a href=\"%s\" rel=\"trackback\">trackback</a> from your own site."
-msgstr "Kommentarerna är för närvarande inaktiverade, men du kan lämna en <a href=\"%s\" rel=\"trackback\">trackback</a> från dig egen sida."
-
-#: single.php:47
-msgid "You can skip to the end and leave a response. Pinging is currently not allowed."
-msgstr "Du kan hoppa ner till slutet på sidan för att lämna en kommentar. Pingning är inte tillåten för tillfället."
-
-#: single.php:51
-msgid "Both comments and pings are currently closed."
-msgstr "Både kommentering och pingning är inaktiverat."
 
 #: single.php:53
 msgid "Edit this entry"
