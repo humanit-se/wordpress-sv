@@ -10,6 +10,10 @@ msgstr ""
 "X-Generator: GlotPress/2.1.0-alpha\n"
 "Project-Id-Version: Twenty Thirteen\n"
 
+#: 404.php:16
+msgid "Not Found"
+msgstr "Kunde inte hittas"
+
 #: 404.php:21
 msgid "This is somewhat embarrassing, isn&rsquo;t it?"
 msgstr "Det här var ju lite pinsamt, inte sant?"
@@ -83,6 +87,14 @@ msgstr "Nyare kommentarer &rarr;"
 msgid "Comments are closed."
 msgstr "Kommentarer inaktiverade."
 
+#. translators: %s: Name of current post
+#: content-aside.php:16 content-audio.php:27 content-chat.php:26
+#: content-gallery.php:27 content-image.php:26 content-link.php:27
+#: content-quote.php:16 content-status.php:16 content-video.php:26
+#: content.php:44 functions.php:478
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Fortsätt läsa %s <span class=\"meta-nav\">&rarr;</span>"
+
 #: content-aside.php:20 content-audio.php:31 content-chat.php:30
 #: content-gallery.php:31 content-image.php:30 content-link.php:31
 #: content-quote.php:20 content-status.php:20 content-video.php:30
@@ -96,10 +108,6 @@ msgstr "Sidor:"
 #: content-video.php:42 content.php:31 image.php:44 page.php:39
 msgid "Edit"
 msgstr "Redigera"
-
-#: functions.php:369
-msgid "Permalink to %s"
-msgstr "Permalänk till %s"
 
 #: content-gallery.php:43 content-image.php:39 content-quote.php:29
 #: content-video.php:39 content.php:56
@@ -163,6 +171,22 @@ msgstr "på"
 msgid "Page %s"
 msgstr "Sida %s"
 
+#: functions.php:231
+msgid "Main Widget Area"
+msgstr "Primärt widgetfält"
+
+#: functions.php:233
+msgid "Appears in the footer section of the site."
+msgstr "Visas i webbplatsens sidfot."
+
+#: functions.php:241
+msgid "Secondary Widget Area"
+msgstr "Sekundärt widgetfält"
+
+#: functions.php:243
+msgid "Appears on posts and pages in the sidebar."
+msgstr "Visas i inlägg och på sidor i sidofältet."
+
 #: functions.php:266
 msgid "Posts navigation"
 msgstr "Inläggsnavigering"
@@ -207,6 +231,10 @@ msgctxt "1: post format name. 2: date"
 msgid "%1$s on %2$s"
 msgstr "%1$s den %2$s"
 
+#: functions.php:369
+msgid "Permalink to %s"
+msgstr "Permalänk till %s"
+
 #: header.php:43
 msgid "Menu"
 msgstr "Meny"
@@ -219,6 +247,14 @@ msgstr "Hoppa till innehåll"
 msgid "<span class=\"attachment-meta\">Published on <time class=\"entry-date\" datetime=\"%1$s\">%2$s</time> in <a href=\"%3$s\" title=\"Return to %4$s\" rel=\"gallery\">%5$s</a></span>"
 msgstr "<span class=\"attachment-meta\">Publicerat <time class=\"entry-date\" datetime=\"%1$s\">%2$s</time> i <a href=\"%3$s\" title=\"Tillbaka till %4$s\" rel=\"gallery\">%5$s</a></span>"
 
+#: image.php:38
+msgid "Link to full-size image"
+msgstr "Länk till bild i fullskala"
+
+#: image.php:39
+msgid "Full resolution"
+msgstr "Full upplösning"
+
 #: image.php:51
 msgid "<span class=\"meta-nav\">&larr;</span> Previous"
 msgstr "<span class=\"meta-nav\">&larr;</span> Föregående"
@@ -226,6 +262,10 @@ msgstr "<span class=\"meta-nav\">&larr;</span> Föregående"
 #: image.php:52
 msgid "Next <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Nästa <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/back-compat.php:37 inc/back-compat.php:47 inc/back-compat.php:60
+msgid "Twenty Thirteen requires at least WordPress version 3.6. You are running version %s. Please upgrade and try again."
+msgstr "Twenty Thirteen kräver minst WordPress version 3.6. Du kör version %s. Vänligen uppdatera och försök igen."
 
 #: inc/custom-header.php:49
 msgctxt "header image description"
@@ -246,6 +286,10 @@ msgstr "Stjärna"
 msgid "Search Results for: %s"
 msgstr "Sökresultat för: %s"
 
+#: tag.php:21
+msgid "Tag Archives: %s"
+msgstr "Taggarkiv: %s"
+
 #: taxonomy-post_format.php:23
 msgid "%s Archives"
 msgstr "Arkiv för %s"
@@ -254,64 +298,20 @@ msgstr "Arkiv för %s"
 msgid "Twenty Thirteen"
 msgstr "Twenty Thirteen"
 
-#. Author of the plugin/theme
-msgid "the WordPress team"
-msgstr "the WordPress team"
-
-#: image.php:39
-msgid "Full resolution"
-msgstr "Full upplösning"
-
-#: inc/back-compat.php:37 inc/back-compat.php:47 inc/back-compat.php:60
-msgid "Twenty Thirteen requires at least WordPress version 3.6. You are running version %s. Please upgrade and try again."
-msgstr "Twenty Thirteen kräver minst WordPress version 3.6. Du kör version %s. Vänligen uppdatera och försök igen."
-
-#: image.php:38
-msgid "Link to full-size image"
-msgstr "Länk till bild i fullskala"
-
-#: functions.php:231
-msgid "Main Widget Area"
-msgstr "Primärt widgetfält"
-
-#: functions.php:241
-msgid "Secondary Widget Area"
-msgstr "Sekundärt widgetfält"
-
-#: functions.php:243
-msgid "Appears on posts and pages in the sidebar."
-msgstr "Visas i inlägg och på sidor i sidofältet."
-
-#: functions.php:233
-msgid "Appears in the footer section of the site."
-msgstr "Visas i webbplatsens sidfot."
+#. Theme URI of the plugin/theme
+msgid "https://wordpress.org/themes/twentythirteen/"
+msgstr "https://wordpress.org/themes/twentythirteen/"
 
 #. Description of the plugin/theme
 msgid "The 2013 theme for WordPress takes us back to the blog, featuring a full range of post formats, each displayed beautifully in their own unique way. Design details abound, starting with a vibrant color scheme and matching header images, beautiful typography and icons, and a flexible layout that looks great on any device, big or small."
 msgstr "2013 års standardtema för WordPress tar oss tillbaka till bloggen, med funktioner som en fulladdad lista med inläggsformat som var och ett visas på sitt eget vackra och unika sätt. Designdetaljer i överflöd, som börjar med en vibrerande färgschema och matchande bilder för sidhuvudet, vacker typografi och ikoner och en flexibel layout som ser bra ut på alla enheter, stora som små."
 
-#: 404.php:16
-msgid "Not Found"
-msgstr "Kunde inte hittas"
-
-#: tag.php:21
-msgid "Tag Archives: %s"
-msgstr "Taggarkiv: %s"
+#. Author of the plugin/theme
+msgid "the WordPress team"
+msgstr "the WordPress team"
 
 #. #-#-#-#-#  twentythirteen.pot (Twenty Thirteen 1.6)  #-#-#-#-#
 #. Author URI of the plugin/theme
 #: footer.php:19
 msgid "https://wordpress.org/"
 msgstr "https://wordpress.org/"
-
-#. Theme URI of the plugin/theme
-msgid "https://wordpress.org/themes/twentythirteen/"
-msgstr "https://wordpress.org/themes/twentythirteen/"
-
-#. translators: %s: Name of current post
-#: content-aside.php:16 content-audio.php:27 content-chat.php:26
-#: content-gallery.php:27 content-image.php:26 content-link.php:27
-#: content-quote.php:16 content-status.php:16 content-video.php:26
-#: content.php:44 functions.php:478
-msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Fortsätt läsa %s <span class=\"meta-nav\">&rarr;</span>"
