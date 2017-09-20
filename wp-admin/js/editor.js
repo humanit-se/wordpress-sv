@@ -118,29 +118,20 @@
 
 		// Replace paragraphs with double line breaks
 		function removep( html ) {
-			var blocklist = 'blockquote|ul|ol|li|dl|dt|dd|table|thead|tbody|tfoot|tr|th|td|h[1-6]|fieldset|figure',
+			var blocklist = 'blockquote|ul|ol|li|dl|dt|dd|table|thead|tbody|tfoot|tr|th|td|h[1-6]|fieldset',
 				blocklist1 = blocklist + '|div|p',
 				blocklist2 = blocklist + '|pre',
 				preserve_linebreaks = false,
-				preserve_br = false,
-				preserve = [];
+				preserve_br = false;
 
 			if ( ! html ) {
 				return '';
 			}
 
-			// Preserve script and style tags.
-			if ( html.indexOf( '<script' ) !== -1 || html.indexOf( '<style' ) !== -1 ) {
-				html = html.replace( /<(script|style)[^>]*>[\s\S]*?<\/\1>/g, function( match ) {
-					preserve.push( match );
-					return '<wp-preserve>';
-				} );
-			}
-
-			// Protect pre tags.
-			if ( html.indexOf( '<pre' ) !== -1 ) {
+			// Protect pre|script tags
+			if ( html.indexOf( '<pre' ) !== -1 || html.indexOf( '<script' ) !== -1 ) {
 				preserve_linebreaks = true;
-				html = html.replace( /<pre[^>]*>[\s\S]+?<\/pre>/g, function( a ) {
+				html = html.replace( /<(pre|script)[^>]*>[\s\S]+?<\/\1>/g, function( a ) {
 					a = a.replace( /<br ?\/?>(\r\n|\n)?/g, '<wp-line-break>' );
 					a = a.replace( /<\/?p( [^>]*)?>(\r\n|\n)?/g, '<wp-line-break>' );
 					return a.replace( /\r?\n/g, '<wp-line-break>' );
@@ -214,13 +205,6 @@
 				html = html.replace( /<wp-temp-br([^>]*)>/g, '<br$1>' );
 			}
 
-			// Put back preserved tags.
-			if ( preserve.length ) {
-				html = html.replace( /<wp-preserve>/g, function() {
-					return preserve.shift();
-				} );
-			}
-
 			return html;
 		}
 
@@ -257,11 +241,6 @@
 				});
 			}
 
-			if ( text.indexOf( '<figcaption' ) !== -1 ) {
-				text = text.replace( /\s*(<figcaption[^>]*>)/g, '$1' );
-				text = text.replace( /<\/figcaption>\s*/g, '</figcaption>' );
-			}
-
 			// keep <br> tags inside captions and convert line breaks
 			if ( text.indexOf( '[caption' ) !== -1 ) {
 				preserve_br = true;
@@ -279,7 +258,7 @@
 
 			text = text + '\n\n';
 			text = text.replace( /<br \/>\s*<br \/>/gi, '\n\n' );
-			text = text.replace( new RegExp( '(<(?:' + blocklist + ')(?: [^>]*)?>)', 'gi' ), '\n\n$1' );
+			text = text.replace( new RegExp( '(<(?:' + blocklist + ')(?: [^>]*)?>)', 'gi' ), '\n$1' );
 			text = text.replace( new RegExp( '(</(?:' + blocklist + ')>)', 'gi' ), '$1\n\n' );
 			text = text.replace( /<hr( [^>]*)?>/gi, '<hr$1>\n\n' ); // hr is self closing block element
 			text = text.replace( /\s*<option/gi, '<option' ); // No <p> or <br> around <option>
