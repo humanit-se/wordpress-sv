@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 4.8.x package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2017-08-02 09:14:31+0000\n"
+"PO-Revision-Date: 2017-09-19 07:26:02+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -2319,20 +2319,20 @@ msgstr "Det gick inte att publicera ditt inlägg."
 msgid "Post"
 msgstr "Inlägg"
 
-#: wp-includes/class-wp-customize-widgets.php:799
-#: wp-includes/class-wp-customize-widgets.php:854
-msgid "No widgets found."
-msgstr "Inga widgets hittades."
-
 #. translators: %1$s is the post type name and %2$s is the error message.
 #: wp-includes/class-wp-customize-nav-menus.php:883
 msgid "%1$s could not be created: %2$s"
 msgstr "%1$s gick inte att skapa: %2$s"
 
+#: wp-includes/class-wp-customize-widgets.php:799
+#: wp-includes/class-wp-customize-widgets.php:854
+msgid "No widgets found."
+msgstr "Inga widgetar hittades."
+
 #. translators: placeholder is the count for the number of widgets found
 #: wp-includes/class-wp-customize-widgets.php:798
 msgid "Number of widgets found: %d"
-msgstr "Antal widgets hittade: %d"
+msgstr "Antal widgetar hittade: %d"
 
 #. translators: 1: .mp4, 2: .mov
 #: wp-includes/class-wp-customize-manager.php:4379
@@ -3484,7 +3484,7 @@ msgstr "Smeknamn kan inte vara längre än 50 tecken."
 #. translators: %s: user name
 #: wp-includes/user.php:166
 msgid "<strong>ERROR</strong>: The password you entered for the username %s is incorrect."
-msgstr "<strong>FEL</strong>: Lösenordet du angav för användarnamnet %s är inkorrekt."
+msgstr "<strong>FEL</strong>: Lösenordet du angav för användarnamnet %s är felaktigt."
 
 #: wp-includes/user.php:142
 msgid "<strong>ERROR</strong>: Invalid username."
@@ -3793,7 +3793,7 @@ msgstr "Kopiera och klistra in denna adress på din WordPress-webbplats för att
 
 #: wp-includes/customize/class-wp-widget-area-customize-control.php:67
 msgid "When in reorder mode, additional controls to reorder widgets will be available in the widgets list above."
-msgstr "När omordningsläget är aktivt kommer extra kontroller för att ändra ordningen bli synliga i listan med widgets ovan."
+msgstr "När omordningsläget är aktivt kommer extra kontroller för att ändra ordningen bli synliga i listan med widgetar ovan."
 
 #: wp-includes/customize/class-wp-customize-themes-section.php:75
 #: wp-includes/customize/class-wp-customize-themes-section.php:76
@@ -5325,10 +5325,6 @@ msgstr "Du anpassar just nu %s"
 msgid "<strong>ERROR</strong>: The comment could not be saved. Please try again later."
 msgstr "<strong>FEL</strong>: Kommentaren kunde inte sparas. Vänligen försök igen senare."
 
-#: wp-includes/class-wp-customize-widgets.php:436
-msgid "Widgets are independent sections of content that can be placed into widgetized areas provided by your theme (commonly called sidebars)."
-msgstr "Widgets är oberoende delar av innehåll som kan placeras i widgetfält som tillhandahålls av ditt tema (allmänt kallade sidofält)."
-
 #. translators: %s: header width in pixels
 #: wp-includes/customize/class-wp-customize-header-image-control.php:184
 msgid "While you can crop images to your liking after clicking <strong>Add new image</strong>, your theme recommends a header width of %s pixels."
@@ -5338,6 +5334,10 @@ msgstr "Medan du kan beskära bilder efter eget tycke när du på <strong>Lägg 
 #: wp-includes/customize/class-wp-customize-header-image-control.php:189
 msgid "While you can crop images to your liking after clicking <strong>Add new image</strong>, your theme recommends a header height of %s pixels."
 msgstr "Medan du kan beskära bilder efter eget tycke när du på <strong>Lägg till ny bild</strong> så är den rekommenderade höjden för sidhuvuden i temat %s pixlar."
+
+#: wp-includes/class-wp-customize-widgets.php:436
+msgid "Widgets are independent sections of content that can be placed into widgetized areas provided by your theme (commonly called sidebars)."
+msgstr "Widgetar är oberoende delar av innehåll som kan placeras i widgetfält som tillhandahålls av ditt tema (allmänt kallade sidofält)."
 
 #: wp-includes/update.php:130 wp-includes/update.php:322
 #: wp-includes/update.php:500
@@ -5492,22 +5492,22 @@ msgstr "Ange bild"
 msgid "Save and preview changes before publishing them."
 msgstr "Spara och förhandsgranska ändringar innan publicering."
 
-#: wp-includes/class-wp-customize-widgets.php:842
-msgid "Search Widgets"
-msgstr "Sök bland widgets"
-
-#: wp-includes/class-wp-customize-widgets.php:843
-msgid "Search widgets&hellip;"
-msgstr "Sök widgets&hellip;"
-
 #: wp-includes/class-wp-editor.php:1002
 msgctxt "TinyMCE"
 msgid "Headings"
 msgstr "Rubriker"
 
+#: wp-includes/class-wp-customize-widgets.php:843
+msgid "Search widgets&hellip;"
+msgstr "Sök widgetar&hellip;"
+
+#: wp-includes/class-wp-customize-widgets.php:842
+msgid "Search Widgets"
+msgstr "Sök bland widgetar"
+
 #: wp-includes/class-wp-customize-widgets.php:787
 msgid "Trash widget by moving it to the inactive widgets sidebar."
-msgstr "Kasta widgets genom att flytta dem till panelen för inaktiva widgets."
+msgstr "Kasta widgetar genom att flytta dem till panelen för inaktiva widgetar."
 
 #: wp-includes/media-template.php:1084 wp-includes/media-template.php:1173
 msgctxt "auto preload"
@@ -6945,10 +6945,6 @@ msgctxt "Display name based on first name and last name"
 msgid "%1$s %2$s"
 msgstr "%1$s %2$s"
 
-#: wp-includes/class-wp-xmlrpc-server.php:285
-msgid "Incorrect username or password."
-msgstr "Felaktig användarnamn eller lösenord."
-
 #: wp-includes/class-wp-xmlrpc-server.php:274
 msgid "XML-RPC services are disabled on this site."
 msgstr "Tjänsten för XML-RPC är inaktiverad för denna webbplats."
@@ -6999,6 +6995,10 @@ msgstr "Alternerande text"
 #: wp-includes/class-wp-xmlrpc-server.php:4957
 msgid "Sorry, you are not allowed to create pages as this user."
 msgstr "Du saknar behörighet för att kunna skapa sidor som den här användaren."
+
+#: wp-includes/class-wp-xmlrpc-server.php:285
+msgid "Incorrect username or password."
+msgstr "Felaktigt användarnamn eller lösenord."
 
 #: wp-includes/class-wp-admin-bar.php:418
 msgid "Skip to toolbar"
@@ -10031,10 +10031,6 @@ msgstr "Återställning av lösenordet ej tillåtet för denna användaren"
 msgid "Invalid key"
 msgstr "Ogiltig nyckel"
 
-#: wp-includes/user.php:2310
-msgid "<strong>ERROR</strong>: The email address isn&#8217;t correct."
-msgstr "<strong>FEL</strong>: E-postadressen är inte riktig."
-
 #: wp-login.php:530
 msgid "Lost Password"
 msgstr "Glömt lösenordet"
@@ -10093,10 +10089,6 @@ msgstr "(Måste bestå av minst 4 tecken, endast bokstäver och siffror.)"
 #: wp-signup.php:236
 msgid "Email&nbsp;Address:"
 msgstr "E-postadress:"
-
-#: wp-signup.php:310
-msgid "There was a problem, please correct the form below and try again."
-msgstr "Ett fel har uppstått. Var vänlig kontrollera formuläret nedan och försök igen."
 
 #. translators: %s: name of the network
 #: wp-signup.php:535
@@ -10257,6 +10249,14 @@ msgstr "URL:en du angav verkar vara en e-postadress. Vill du lägga till det nö
 msgid "The URL you entered seems to be an external link. Do you want to add the required http:// prefix?"
 msgstr "URLen du angav verkar vara en extern länk. Vill du lägga till det nödvändiga prefixet http:// före adressen?"
 
+#: wp-includes/user.php:2310
+msgid "<strong>ERROR</strong>: The email address isn&#8217;t correct."
+msgstr "<strong>FEL</strong>: E-postadressen är inte korrekt."
+
+#: wp-signup.php:310
+msgid "There was a problem, please correct the form below and try again."
+msgstr "Ett fel har uppstått. Vänligen kontrollera formuläret nedan och försök igen."
+
 #: wp-includes/class-wp-customize-panel.php:385
 #: wp-includes/class-wp-customize-section.php:377
 #: wp-includes/customize/class-wp-customize-nav-menus-panel.php:85
@@ -10393,11 +10393,6 @@ msgstr "Visuell"
 #: wp-includes/comment-template.php:2202
 msgid "Website"
 msgstr "Webbplats"
-
-#: wp-includes/admin-bar.php:801 wp-includes/class-wp-customize-widgets.php:435
-#: wp-includes/functions.php:3707
-msgid "Widgets"
-msgstr "Widgets"
 
 #: wp-includes/class-wp-xmlrpc-server.php:4748
 msgid "For some strange yet very annoying reason, this post could not be edited."
@@ -10598,6 +10593,11 @@ msgstr "Kommentarer (%s)"
 msgid "Plugin:"
 msgstr "Tillägg:"
 
+#: wp-includes/admin-bar.php:801 wp-includes/class-wp-customize-widgets.php:435
+#: wp-includes/functions.php:3707
+msgid "Widgets"
+msgstr "Widgetar"
+
 #: wp-includes/class-wp-editor.php:1078 wp-includes/theme-compat/sidebar.php:27
 msgid "Author"
 msgstr "Författare"
@@ -10638,11 +10638,6 @@ msgstr "Sökresultat för &#8221;%s&#8221;"
 #: wp-includes/class-wp-editor.php:1043
 msgid "Undo"
 msgstr "Ångra"
-
-#: wp-includes/class-wp-customize-widgets.php:784
-#: wp-includes/class-wp-editor.php:1256 wp-includes/media.php:3531
-msgid "Apply"
-msgstr "Utför"
 
 #: wp-includes/script-loader.php:529
 msgid "Comments"
@@ -11030,6 +11025,11 @@ msgstr "Bildtext"
 #: wp-includes/script-loader.php:569
 msgid "Public"
 msgstr "Offentlig"
+
+#: wp-includes/class-wp-customize-widgets.php:784
+#: wp-includes/class-wp-editor.php:1256 wp-includes/media.php:3531
+msgid "Apply"
+msgstr "Verkställ"
 
 #: wp-activate.php:78
 msgid "Activation Key Required"
