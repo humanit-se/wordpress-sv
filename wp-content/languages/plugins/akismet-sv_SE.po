@@ -1,5 +1,5 @@
-# Translation of Plugins - Akismet - Stable (latest release) in Swedish
-# This file is distributed under the same license as the Plugins - Akismet - Stable (latest release) package.
+# Translation of Plugins - Akismet Anti-Spam - Stable (latest release) in Swedish
+# This file is distributed under the same license as the Plugins - Akismet Anti-Spam - Stable (latest release) package.
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2017-09-19 18:01:48+0000\n"
@@ -9,9 +9,9 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: GlotPress/2.4.0-alpha\n"
 "Language: sv_SE\n"
-"Project-Id-Version: Plugins - Akismet - Stable (latest release)\n"
+"Project-Id-Version: Plugins - Akismet Anti-Spam - Stable (latest release)\n"
 
-#: class.akismet.php:209
+#: class.akismet.php:210
 msgid "Comment discarded."
 msgstr "Kommentaren har kastats."
 
@@ -67,7 +67,9 @@ msgstr "På denna sida kan du uppdatera dina inställningar för Akismet och se 
 msgid "Used by millions, Akismet is quite possibly the best way in the world to <strong>protect your blog from spam</strong>. It keeps your site protected even while you sleep. To get started: activate the Akismet plugin and then go to your Akismet Settings page to set up your API key."
 msgstr "Akismet används av miljoner personer och är kanske världens bästa sätt att <strong>skydda din blogg från skräppost</strong>. Det skyddar din webbplats t.o.m. medan du sover. För att komma igång behöver du aktivera tillägget Akismet och sedan gå till inställningssidan för Akismet och konfigurera din API-nyckel."
 
+#. #-#-#-#-#  akismet-code.pot (Akismet Anti-Spam 4.0.1)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
+#: class.akismet-admin.php:95 class.akismet-admin.php:98
 msgid "Akismet Anti-Spam"
 msgstr "Akismet Anti-Spam"
 
@@ -135,11 +137,11 @@ msgstr "Detaljerad statistik"
 msgid "Statistics"
 msgstr "Statistik"
 
-#: class.akismet-admin.php:1097
+#: class.akismet-admin.php:1111
 msgid "Used by millions, Akismet is quite possibly the best way in the world to <strong>protect your blog from spam</strong>. It keeps your site protected even while you sleep. To get started, just go to <a href=\"admin.php?page=akismet-key-config\">your Akismet Settings page</a> to set up your API key."
 msgstr "Akismet, som används av miljoner personer, är kanske världens bästa sätt att <strong>skydda din blogg från skräppost</strong>. Det skyddar din webbplats t.o.m. medan du sover. För att komma igång behöver du bara gå till <a href=\"admin.php?page=akismet-key-config\">din inställningssida för Akismet</a> för att konfigurera din API-nyckel."
 
-#: class.akismet-admin.php:1094
+#: class.akismet-admin.php:1108
 msgid "Used by millions, Akismet is quite possibly the best way in the world to <strong>protect your blog from spam</strong>. Your site is fully configured and being protected, even while you sleep."
 msgstr "Akismet, som används av miljoner personer, är kanske världens bästa sätt att <strong>skydda din blogg från skräppost</strong>. Din webbplats är färdigkonfigurerad och skyddar din webbplats t.o.m. medan du sover. "
 
@@ -167,7 +169,7 @@ msgstr "Det fanns inga kommentarer att granska. Akismet kontrollerar bara kommen
 msgid "Checking for Spam"
 msgstr "Söker efter skräppost"
 
-#: class.akismet.php:451
+#: class.akismet.php:452
 msgid "Comment not found."
 msgstr "Kommentaren kunde inte hittas."
 
@@ -355,10 +357,6 @@ msgstr "URL borttagen"
 #: class.akismet-admin.php:128
 msgid "Removing..."
 msgstr "Tar bort..."
-
-#: class.akismet-admin.php:95 class.akismet-admin.php:98
-msgid "Akismet"
-msgstr "Akismet"
 
 #: class.akismet-admin.php:88 class.akismet-admin.php:220
 #: class.akismet-admin.php:633 views/config.php:60
@@ -639,11 +637,11 @@ msgstr "Akismet fångade den här kommentaren som skräpport under en automatisk
 msgid "Akismet cleared this comment during an automatic retry."
 msgstr "Akismet godkände den här kommentaren under en automatisk skanning."
 
-#: class.akismet.php:1176
+#: class.akismet.php:1202
 msgid "Please <a href=\"%1$s\">upgrade WordPress</a> to a current version, or <a href=\"%2$s\">downgrade to version 2.4 of the Akismet plugin</a>."
 msgstr "Vänligen <a href=\"%1$s\">uppdatera WordPress</a> till aktuell version eller <a href=\"%2$s\">använd version 2.4 av tillägget Akismet</a>."
 
-#: class.akismet.php:1176
+#: class.akismet.php:1202
 msgid "Akismet %s requires WordPress %s or higher."
 msgstr "Akismet %s kräver WordPress %s eller senare."
 
