@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 4.9.x - Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2017-11-14 00:05:39+0000\n"
+"PO-Revision-Date: 2017-11-16 14:18:23+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -784,7 +784,7 @@ msgstr "Användaren kan inte läggas till på denna webbplats."
 
 #. translators: Do not translate OLD_EMAIL, NEW_EMAIL, SITENAME, SITEURL: those
 #. are placeholders.
-#: wp-includes/functions.php:5755
+#: wp-includes/functions.php:5756
 msgid ""
 "Hi,\n"
 "\n"
@@ -812,7 +812,7 @@ msgstr ""
 
 #. translators: Site admin email change notification email subject. %s: Site
 #. title
-#: wp-includes/functions.php:5770
+#: wp-includes/functions.php:5771
 msgid "[%s] Notice of Admin Email Change"
 msgstr "[%s] Notis om ändrad e-postadress till administratör"
 
@@ -846,7 +846,7 @@ msgstr "Filtrera teman (%s)"
 msgid "The Press This plugin is required."
 msgstr "Tillägget Blogga detta krävs."
 
-#: wp-includes/functions.php:5698
+#: wp-includes/functions.php:5699
 msgid "Only UUID V4 is supported at this time."
 msgstr "För närvarande stöds endast UUID V4."
 
@@ -3858,7 +3858,7 @@ msgstr "Idag"
 msgid "Edit Menu"
 msgstr "Redigera meny"
 
-#: wp-includes/wp-db.php:1849 wp-includes/wp-db.php:1855
+#: wp-includes/wp-db.php:1856 wp-includes/wp-db.php:1862
 msgid "Unable to retrieve the error message from MySQL"
 msgstr "Felmeddelandet kunde inte hämtas från MySQL"
 
@@ -4146,13 +4146,13 @@ msgstr "Välj logotyp"
 msgid "No logo selected"
 msgstr "Ingen logotyp vald"
 
-#: wp-includes/functions.php:5311
+#: wp-includes/functions.php:5312
 msgid "Close dialog"
 msgstr "Stäng dialogruta"
 
 #. translators: 1: PHP class name, 2: PHP parent class name, 3: version number,
 #. 4: __construct() method
-#: wp-includes/functions.php:3899
+#: wp-includes/functions.php:3900
 msgid "The called constructor method for %1$s in %2$s is <strong>deprecated</strong> since version %3$s! Use %4$s instead."
 msgstr "Konstruktörsmetoden för %1$s i %2$s har <strong>fasats ut</strong> sedan version %3$s! Använd %4$s istället."
 
@@ -4283,11 +4283,11 @@ msgid "https://codex.wordpress.org/Debugging_a_WordPress_Network"
 msgstr "https://codex.wordpress.org/Debugging_a_WordPress_Network"
 
 #. translators: %s: Codex URL
-#: wp-includes/functions.php:4141
+#: wp-includes/functions.php:4142
 msgid "Please see <a href=\"%s\">Debugging in WordPress</a> for more information."
 msgstr "Vänligen se <a href=\"%s\">Felsökning i WordPress</a> för mer information."
 
-#: wp-includes/functions.php:4142
+#: wp-includes/functions.php:4143
 msgid "https://codex.wordpress.org/Debugging_in_WordPress"
 msgstr "https://codex.wordpress.org/Debugging_in_WordPress"
 
@@ -4496,7 +4496,7 @@ msgstr "Åtgärd genomförd. Meddelande %s raderat."
 msgid "Author:"
 msgstr "Författare:"
 
-#: wp-includes/wp-db.php:1737
+#: wp-includes/wp-db.php:1744
 msgid "Error reconnecting to the database"
 msgstr "Fel vid återanslutning till databasen"
 
@@ -4504,21 +4504,21 @@ msgstr "Fel vid återanslutning till databasen"
 msgid "Are you sure that you have typed the correct hostname?"
 msgstr "Är du säker på att du angett korrekt värdnamn?"
 
-#: wp-includes/wp-db.php:1596 wp-includes/wp-db.php:1746
+#: wp-includes/wp-db.php:1596 wp-includes/wp-db.php:1753
 msgid "Are you sure that the database server is running?"
 msgstr "Är du säker på att databasservern är igång?"
 
-#: wp-includes/wp-db.php:1747
+#: wp-includes/wp-db.php:1754
 msgid "Are you sure that the database server is not under particularly heavy load?"
 msgstr "Är du säker på att databasen inte är under ovanligt högt tryck?"
 
 #. translators: %s: support forums URL
-#: wp-includes/wp-db.php:1601 wp-includes/wp-db.php:1752
+#: wp-includes/wp-db.php:1601 wp-includes/wp-db.php:1759
 msgid "If you&#8217;re unsure what these terms mean you should probably contact your host. If you still need help you can always visit the <a href=\"%s\">WordPress Support Forums</a>."
 msgstr "Om du är osäker på vad dessa termer betyder så bör du kontakta ditt webbhotell. Om du ändå behöver hjälp kan du besöka <a href=\"%s\">WordPress supportforum</a>."
 
 #. translators: %s: database host
-#: wp-includes/wp-db.php:1741
+#: wp-includes/wp-db.php:1748
 msgid "This means that we lost contact with the database server at %s. This could mean your host&#8217;s database server is down."
 msgstr "Detta betyder att vi förlorat kontakten med databasservern på %s. Det i sin tur kan betyda att ditt webbhotells databasserver är offline."
 
@@ -5131,7 +5131,7 @@ msgid "(unnamed)"
 msgstr "(ej namngiven)"
 
 #. translators: 1: PHP class name, 2: version number, 3: __construct() method
-#: wp-includes/functions.php:3903
+#: wp-includes/functions.php:3904
 msgid "The called constructor method for %1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead."
 msgstr "Den anropade konstruktormetoden för %1$s har <strong>fasats ut</strong> sedan version %2$s! Använd istället %3$s."
 
@@ -7248,7 +7248,7 @@ msgstr "Klistra in som text"
 #: wp-includes/admin-bar.php:164 wp-includes/update.php:153
 #: wp-includes/update.php:345 wp-includes/update.php:523
 #: wp-includes/wp-db.php:1069 wp-includes/wp-db.php:1602
-#: wp-includes/wp-db.php:1753 wp-login.php:882
+#: wp-includes/wp-db.php:1760 wp-login.php:882
 msgid "https://wordpress.org/support/"
 msgstr "https://sv.wordpress.org/support/"
 
@@ -7264,22 +7264,22 @@ msgstr "Text att visa"
 msgid "Finnish"
 msgstr "Finska"
 
-#: wp-includes/general-template.php:3914
+#: wp-includes/general-template.php:3916
 msgctxt "admin color scheme"
 msgid "Ectoplasm"
 msgstr "Ektoplasma"
 
-#: wp-includes/general-template.php:3920
+#: wp-includes/general-template.php:3922
 msgctxt "admin color scheme"
 msgid "Ocean"
 msgstr "Hav"
 
-#: wp-includes/general-template.php:3926
+#: wp-includes/general-template.php:3928
 msgctxt "admin color scheme"
 msgid "Coffee"
 msgstr "Kaffe"
 
-#: wp-includes/general-template.php:3908
+#: wp-includes/general-template.php:3910
 msgctxt "admin color scheme"
 msgid "Sunrise"
 msgstr "Soluppgång"
@@ -7336,17 +7336,17 @@ msgctxt "Open Sans font: on or off"
 msgid "on"
 msgstr "on"
 
-#: wp-includes/general-template.php:3879
+#: wp-includes/general-template.php:3881
 msgctxt "admin color scheme"
 msgid "Default"
 msgstr "Standard"
 
-#: wp-includes/general-template.php:3890
+#: wp-includes/general-template.php:3892
 msgctxt "admin color scheme"
 msgid "Light"
 msgstr "Ljust"
 
-#: wp-includes/general-template.php:3902
+#: wp-includes/general-template.php:3904
 msgctxt "admin color scheme"
 msgid "Midnight"
 msgstr "Midnatt"
@@ -7551,7 +7551,7 @@ msgstr "%1$s %2$s, %3$s @ %4$s:%5$s"
 msgid "The site you were looking for, %s, does not exist, but you can create it now!"
 msgstr "Webbplatsen du letar efter, %s, existerar inte, men du kan skapa den nu!"
 
-#: wp-includes/functions.php:5328
+#: wp-includes/functions.php:5329
 msgid "The login page will open in a new window. After logging in you can close it and return to this page."
 msgstr "Inloggningssidan kommer att öppnas i ett nytt fönster. Efter att du loggat in kan du stänga det och återgå till denna sida."
 
@@ -7576,7 +7576,7 @@ msgctxt "placeholder"
 msgid "Search &hellip;"
 msgstr "Sök &hellip;"
 
-#: wp-includes/functions.php:5326 wp-includes/script-loader.php:568
+#: wp-includes/functions.php:5327 wp-includes/script-loader.php:568
 msgid "Session expired"
 msgstr "Sessionen har gått ut"
 
@@ -8575,15 +8575,15 @@ msgstr "Supportforum"
 msgid "Documentation"
 msgstr "Dokumentation"
 
-#: wp-includes/formatting.php:3361 wp-includes/general-template.php:3798
+#: wp-includes/formatting.php:3361 wp-includes/general-template.php:3800
 msgid "&hellip;"
 msgstr "&hellip;"
 
-#: wp-includes/functions.php:3772
+#: wp-includes/functions.php:3773
 msgid "Database Error"
 msgstr "Databasfel"
 
-#: wp-includes/functions.php:3776 wp-includes/ms-load.php:455
+#: wp-includes/functions.php:3777 wp-includes/ms-load.php:455
 #: wp-includes/wp-db.php:1584
 msgid "Error establishing a database connection"
 msgstr "Ett fel uppstod vid anslutning till databasen"
@@ -8636,7 +8636,7 @@ msgstr "Den här filen är inte en bild. Prova en annan."
 msgid "This is larger than the maximum size. Please try another."
 msgstr "Detta är större än den maximala storleken. Prova en annan."
 
-#: wp-includes/general-template.php:3896
+#: wp-includes/general-template.php:3898
 msgctxt "admin color scheme"
 msgid "Blue"
 msgstr "Blått"
@@ -8761,13 +8761,13 @@ msgid "The user is already active."
 msgstr "Användaren är redan aktiv."
 
 #. translators: %s: version number
-#: wp-includes/functions.php:4138
+#: wp-includes/functions.php:4139
 msgid "(This message was added in version %s.)"
 msgstr "(Detta meddelande lades till i version %s.)"
 
 #. translators: Developer debugging message. 1: PHP function name, 2:
 #. Explanatory message, 3: Version information message
-#: wp-includes/functions.php:4145
+#: wp-includes/functions.php:4146
 msgid "%1$s was called <strong>incorrectly</strong>. %2$s %3$s"
 msgstr "%1$s kallades <strong>felaktigt</strong>. %2$s %3$s"
 
@@ -9386,7 +9386,7 @@ msgstr "Underhåll"
 
 #: wp-includes/load.php:223
 msgid "Briefly unavailable for scheduled maintenance. Check back in a minute."
-msgstr "Webbplatsen är tillfälligt otillgänglig grund av ett planerat underhållsarbete. Välkommen tillbaka om någon minut."
+msgstr "Webbplatsen är tillfälligt otillgänglig på grund av ett planerat underhållsarbete. Välkommen tillbaka om någon minut."
 
 #: wp-includes/post.php:113
 msgid "Navigation Menu Items"
@@ -9995,23 +9995,23 @@ msgid "Could not write file %s"
 msgstr "Kunde inte skriva till filen %s"
 
 #. translators: %s: site name
-#: wp-includes/functions.php:2594
+#: wp-includes/functions.php:2595
 msgid "You are attempting to log out of %s"
 msgstr "Du försöker att logga ut ifrån %s"
 
-#: wp-includes/functions.php:2615
+#: wp-includes/functions.php:2616
 msgid "WordPress Failure Notice"
 msgstr "WordPress felmeddelande"
 
-#: wp-includes/functions.php:2610 wp-includes/ms-functions.php:2047
+#: wp-includes/functions.php:2611 wp-includes/ms-functions.php:2047
 msgid "Please try again."
 msgstr "Var vänlig försök igen."
 
-#: wp-includes/functions.php:2735
+#: wp-includes/functions.php:2736
 msgid "&laquo; Back"
 msgstr "&laquo; Tillbaka"
 
-#: wp-includes/functions.php:2747 wp-load.php:92
+#: wp-includes/functions.php:2748 wp-load.php:92
 msgid "WordPress &rsaquo; Error"
 msgstr "WordPress &rsaquo; Fel"
 
@@ -10020,39 +10020,39 @@ msgstr "WordPress &rsaquo; Fel"
 #. translators: 1: PHP file name, 2: version number, 3: alternative file name
 #. translators: 1: WordPress hook name, 2: version number, 3: alternative hook
 #. name
-#: wp-includes/functions.php:3837 wp-includes/functions.php:3965
-#: wp-includes/functions.php:4088
+#: wp-includes/functions.php:3838 wp-includes/functions.php:3966
+#: wp-includes/functions.php:4089
 msgid "%1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead."
 msgstr "%1$s har <strong>upphört</strong> sedan version %2$s! Använd %3$s istället."
 
 #. translators: 1: PHP function name, 2: version number
 #. translators: 1: PHP file name, 2: version number
 #. translators: 1: WordPress hook name, 2: version number
-#: wp-includes/functions.php:3840 wp-includes/functions.php:3968
-#: wp-includes/functions.php:4091
+#: wp-includes/functions.php:3841 wp-includes/functions.php:3969
+#: wp-includes/functions.php:4092
 msgid "%1$s is <strong>deprecated</strong> since version %2$s with no alternative available."
 msgstr "%1$s har <strong>upphört</strong> sedan version %2$s utan alternativ tillgängliga."
 
 #. translators: 1: PHP function name, 2: version number, 3: optional message
 #. regarding the change
-#: wp-includes/functions.php:4029
+#: wp-includes/functions.php:4030
 msgid "%1$s was called with an argument that is <strong>deprecated</strong> since version %2$s! %3$s"
 msgstr "%1$s kallades med ett argument som har <strong>upphört</strong> sedan version %2$s! %3$s"
 
 #. translators: 1: PHP function name, 2: version number
-#: wp-includes/functions.php:4032
+#: wp-includes/functions.php:4033
 msgid "%1$s was called with an argument that is <strong>deprecated</strong> since version %2$s with no alternative available."
 msgstr "%1$s kallades med ett argument som har <strong>upphört</strong> sedan version %2$s utan alternativ tillgängliga."
 
-#: wp-includes/functions.php:4668
+#: wp-includes/functions.php:4669
 msgid "Select a city"
 msgstr "Välj en stad"
 
-#: wp-includes/functions.php:4713 wp-includes/functions.php:4717
+#: wp-includes/functions.php:4714 wp-includes/functions.php:4718
 msgid "UTC"
 msgstr "UTC"
 
-#: wp-includes/functions.php:4721
+#: wp-includes/functions.php:4722
 msgid "Manual Offsets"
 msgstr "Manuella kompensationer"
 
@@ -10125,11 +10125,11 @@ msgstr "%1$s %2$s Inlägg av %3$s -flöde"
 msgid "%1$s %2$s Search Results for &#8220;%3$s&#8221; Feed"
 msgstr "%1$s %2$s Sökresultat för &#8221;%3$s&#8221; -flöde"
 
-#: wp-includes/general-template.php:3712
+#: wp-includes/general-template.php:3714
 msgid "&laquo; Previous"
 msgstr "&laquo; Föregående"
 
-#: wp-includes/general-template.php:3713
+#: wp-includes/general-template.php:3715
 msgid "Next &raquo;"
 msgstr "Nästa &raquo;"
 
@@ -10974,7 +10974,7 @@ msgstr "<strong>FEL</strong>: Lösenordsfältet är tomt."
 msgid "<strong>ERROR</strong>: Your account has been marked as a spammer."
 msgstr "<strong>FEL</strong>: Ditt konto har fått anmärkning för skräppostning."
 
-#: wp-includes/functions.php:5327 wp-includes/user.php:285
+#: wp-includes/functions.php:5328 wp-includes/user.php:285
 msgid "Please log in again."
 msgstr "Var vänlig logga in igen."
 
@@ -10984,7 +10984,7 @@ msgstr "Sidopanel %d"
 
 #. translators: 1: WordPress version number, 2: Minimum required MySQL version
 #. number
-#: wp-includes/wp-db.php:3311
+#: wp-includes/wp-db.php:3318
 msgid "<strong>ERROR</strong>: WordPress %1$s requires MySQL %2$s or higher"
 msgstr "<strong>FEL</strong>: WordPress %1$s kräver MySQL %2$s eller senare"
 
@@ -11198,7 +11198,7 @@ msgid "You cannot use that email address to signup. We are having problems with 
 msgstr "Du kan tyvärr inte använda angiven e-postadress för registrering. Vi har problem med att de blockerar vissa av våra mail. Var vänlig använd en annan e-postleverantör."
 
 #. translators: %s: logout URL
-#: wp-includes/functions.php:2601
+#: wp-includes/functions.php:2602
 msgid "Do you really want to <a href=\"%s\">log out</a>?"
 msgstr "Vill du verkligen <a href=\"%s\">logga ut</a>?"
 
@@ -11600,7 +11600,7 @@ msgid "Plugin:"
 msgstr "Tillägg:"
 
 #: wp-includes/admin-bar.php:830 wp-includes/class-wp-customize-widgets.php:412
-#: wp-includes/functions.php:3713
+#: wp-includes/functions.php:3714
 msgid "Widgets"
 msgstr "Widgetar"
 
@@ -11626,7 +11626,7 @@ msgctxt "noun"
 msgid "Comment"
 msgstr "Kommentar"
 
-#: wp-includes/deprecated.php:3130 wp-includes/functions.php:2605
+#: wp-includes/deprecated.php:3130 wp-includes/functions.php:2606
 msgid "Are you sure you want to do this?"
 msgstr "Är du säker på att du vill göra det här?"
 
