@@ -79,7 +79,7 @@ $table_prefix  = 'wp_';
  */ 
 define('WP_DEBUG', false);
 
-/* Det var allt, sluta redigera här och börja publicera! */
+/* Det var allt, sluta redigera här och börja blogga! */
 
 /** Absolut sökväg till WordPress-katalogen. */
 if ( !defined('ABSPATH') )
