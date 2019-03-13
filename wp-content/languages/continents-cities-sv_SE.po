@@ -1,5 +1,5 @@
-# Translation of WordPress - 4.4.x - Continents & Cities in Swedish
-# This file is distributed under the same license as the WordPress - 4.4.x - Continents & Cities package.
+# Translation of WordPress - 4.5.x - Continents & Cities in Swedish
+# This file is distributed under the same license as the WordPress - 4.5.x - Continents & Cities package.
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2011-07-13 17:30:15+0000\n"
@@ -9,7 +9,63 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: GlotPress/2.4.0-alpha\n"
 "Language: sv_SE\n"
-"Project-Id-Version: WordPress - 4.4.x - Continents & Cities\n"
+"Project-Id-Version: WordPress - 4.5.x - Continents & Cities\n"
+
+#: wp-admin/includes/continents-cities.php:265
+msgid "Jerusalem"
+msgstr "Jerusalem"
+
+#: wp-admin/includes/continents-cities.php:266
+msgid "Kabul"
+msgstr "Kabul"
+
+#: wp-admin/includes/continents-cities.php:267
+msgid "Kamchatka"
+msgstr "Kamtjatka"
+
+#: wp-admin/includes/continents-cities.php:268
+msgid "Karachi"
+msgstr "Karachi"
+
+#: wp-admin/includes/continents-cities.php:269
+msgid "Kashgar"
+msgstr "Kashgar"
+
+#: wp-admin/includes/continents-cities.php:270
+msgid "Katmandu"
+msgstr "Katmandu"
+
+#: wp-admin/includes/continents-cities.php:271
+msgid "Kolkata"
+msgstr "Calcutta"
+
+#: wp-admin/includes/continents-cities.php:272
+msgid "Krasnoyarsk"
+msgstr "Krasnojarsk"
+
+#: wp-admin/includes/continents-cities.php:273
+msgid "Kuala Lumpur"
+msgstr "Kuala Lumpur"
+
+#: wp-admin/includes/continents-cities.php:274
+msgid "Kuching"
+msgstr "Kuching"
+
+#: wp-admin/includes/continents-cities.php:275
+msgid "Kuwait"
+msgstr "Kuwait"
+
+#: wp-admin/includes/continents-cities.php:276
+msgid "Macao"
+msgstr "Macao"
+
+#: wp-admin/includes/continents-cities.php:277
+msgid "Macau"
+msgstr "Macau"
+
+#: wp-admin/includes/continents-cities.php:278
+msgid "Magadan"
+msgstr "Magadan"
 
 #: wp-admin/includes/continents-cities.php:279
 msgid "Makassar"
@@ -890,6 +946,10 @@ msgstr "Wallisön"
 #: wp-admin/includes/continents-cities.php:498
 msgid "Yap"
 msgstr "Yapöarna"
+
+#: wp-admin/includes/continents-cities.php:12
+msgid "Africa"
+msgstr "Afrika"
 
 #: wp-admin/includes/continents-cities.php:13
 msgid "Abidjan"
@@ -1898,63 +1958,3 @@ msgstr "Jakarta"
 #: wp-admin/includes/continents-cities.php:264
 msgid "Jayapura"
 msgstr "Jayapura"
-
-#: wp-admin/includes/continents-cities.php:265
-msgid "Jerusalem"
-msgstr "Jerusalem"
-
-#: wp-admin/includes/continents-cities.php:266
-msgid "Kabul"
-msgstr "Kabul"
-
-#: wp-admin/includes/continents-cities.php:267
-msgid "Kamchatka"
-msgstr "Kamtjatka"
-
-#: wp-admin/includes/continents-cities.php:268
-msgid "Karachi"
-msgstr "Karachi"
-
-#: wp-admin/includes/continents-cities.php:269
-msgid "Kashgar"
-msgstr "Kashgar"
-
-#: wp-admin/includes/continents-cities.php:270
-msgid "Katmandu"
-msgstr "Katmandu"
-
-#: wp-admin/includes/continents-cities.php:271
-msgid "Kolkata"
-msgstr "Calcutta"
-
-#: wp-admin/includes/continents-cities.php:272
-msgid "Krasnoyarsk"
-msgstr "Krasnojarsk"
-
-#: wp-admin/includes/continents-cities.php:273
-msgid "Kuala Lumpur"
-msgstr "Kuala Lumpur"
-
-#: wp-admin/includes/continents-cities.php:274
-msgid "Kuching"
-msgstr "Kuching"
-
-#: wp-admin/includes/continents-cities.php:275
-msgid "Kuwait"
-msgstr "Kuwait"
-
-#: wp-admin/includes/continents-cities.php:276
-msgid "Macao"
-msgstr "Macao"
-
-#: wp-admin/includes/continents-cities.php:277
-msgid "Macau"
-msgstr "Macau"
-
-#: wp-admin/includes/continents-cities.php:278
-msgid "Magadan"
-msgstr "Magadan"
-
-#: wp-admin/includes/continents-cities.php:12
-msgid "Africa"
-msgstr "Afrika"
