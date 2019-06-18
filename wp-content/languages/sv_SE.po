@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 5.2.x - Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-05-18 08:39:47+0000\n"
+"PO-Revision-Date: 2019-06-13 17:13:25+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -87,9 +87,9 @@ msgstr " "
 msgid "number_format_decimal_point"
 msgstr ","
 
-#: wp-includes/taxonomy.php:2281
-msgid "Could not insert term taxonomy into the database."
-msgstr "Kunde inte infoga termtaxonomi i databasen."
+#: wp-includes/customize/class-wp-customize-theme-control.php:97
+msgid "New version available."
+msgstr "Ny version är tillgänglig."
 
 #: wp-includes/load.php:152
 msgid "Insufficient Requirements"
@@ -139,7 +139,7 @@ msgstr ""
 "\n"
 "###SUPPORT###\n"
 "\n"
-"Om det skulle se ut som om webbplatsen inte fungerar och du inte kommer åt adminpanelen som du borde, har WordPress nu ett speciellt ”räddningsläge”. Det låter dig på ett säkert sätt logga in i adminpanelen för att underesöka problemet vidare.\n"
+"Om det skulle se ut som om webbplatsen inte fungerar och du inte kommer åt adminpanelen som du borde, har WordPress nu ett speciellt ”räddningsläge”. Det låter dig på ett säkert sätt logga in i adminpanelen för att undersöka problemet vidare.\n"
 "\n"
 "###LINK###\n"
 "\n"
@@ -450,11 +450,11 @@ msgstr "Funktionen har inaktiverats"
 msgid "Block Manager"
 msgstr "Blockhanterare"
 
-#: wp-includes/js/dist/block-editor.js:17991
+#: wp-includes/js/dist/block-editor.js:18013
 msgid "Change block type or style"
 msgstr "Ändra blocktyp eller blockstil"
 
-#: wp-includes/js/dist/block-editor.js:17059
+#: wp-includes/js/dist/block-editor.js:17081
 #: wp-includes/js/dist/block-library.js:6537
 #: wp-includes/js/dist/block-library.js:16785
 #: wp-includes/js/dist/block-library.js:17628
@@ -463,17 +463,17 @@ msgctxt "block style"
 msgid "Default"
 msgstr "Standard"
 
-#: wp-includes/js/dist/block-editor.js:14321
+#: wp-includes/js/dist/block-editor.js:14343
 msgctxt "keyboard key"
 msgid "Space"
 msgstr "Mellanslag"
 
-#: wp-includes/js/dist/block-editor.js:14314
+#: wp-includes/js/dist/block-editor.js:14336
 msgctxt "keyboard key"
 msgid "Backspace"
 msgstr "Backsteg"
 
-#: wp-includes/js/dist/block-editor.js:13782
+#: wp-includes/js/dist/block-editor.js:13804
 msgid "More Rich Text Controls"
 msgstr "Fler reglage för formaterat innehåll"
 
@@ -561,31 +561,31 @@ msgid "Recovery Mode not initialized."
 msgstr "Räddningsläge har inte initierats."
 
 #. translators: user role for subscriber
-#: wp-includes/capabilities.php:994
+#: wp-includes/capabilities.php:1019
 msgctxt "User role"
 msgid "Subscriber"
 msgstr "Prenumerant"
 
 #. translators: user role for contributors
-#: wp-includes/capabilities.php:992
+#: wp-includes/capabilities.php:1017
 msgctxt "User role"
 msgid "Contributor"
 msgstr "Bidragsgivare"
 
 #. translators: user role for authors
-#: wp-includes/capabilities.php:990
+#: wp-includes/capabilities.php:1015
 msgctxt "User role"
 msgid "Author"
 msgstr "Författare"
 
 #. translators: user role for editors
-#: wp-includes/capabilities.php:988
+#: wp-includes/capabilities.php:1013
 msgctxt "User role"
 msgid "Editor"
 msgstr "Redaktör"
 
 #. translators: user role for administrators
-#: wp-includes/capabilities.php:986
+#: wp-includes/capabilities.php:1011
 msgctxt "User role"
 msgid "Administrator"
 msgstr "Administratör"
@@ -640,13 +640,13 @@ msgstr "Det finns inga termer att visa."
 
 #. translators: %s: the amount of additional, not visible images in the gallery
 #. widget preview.
-#: wp-includes/widgets/class-wp-widget-media-gallery.php:218
+#: wp-includes/widgets/class-wp-widget-media-gallery.php:217
 msgid "Additional images added to this gallery: %s"
 msgstr "Ytterligare bilder som lagts till i detta galleri: %s"
 
 #. translators: %s: the image file name.
-#: wp-includes/widgets/class-wp-widget-media-image.php:359
-#: wp-includes/widgets/class-wp-widget-media-gallery.php:204
+#: wp-includes/widgets/class-wp-widget-media-image.php:358
+#: wp-includes/widgets/class-wp-widget-media-gallery.php:203
 msgid "The current image has no alternative text. The file name is: %s"
 msgstr "Den aktuella bilden saknar Alternativ text. Filnamnet är: %s"
 
@@ -916,7 +916,7 @@ msgid "Top Toolbar"
 msgstr "Verktygsfält i toppen"
 
 #. translators: %d: number of words
-#: wp-includes/js/dist/block-editor.js:17185
+#: wp-includes/js/dist/block-editor.js:17207
 msgid "%d word"
 msgid_plural "%d words"
 msgstr[0] "%d ord"
@@ -942,23 +942,23 @@ msgstr "Permalänk"
 msgid "To edit the featured image, you need permission to upload media."
 msgstr "För att redigera den utvalda bilden behöver du behörighet att ladda upp mediafiler."
 
-#: wp-includes/js/dist/block-editor.js:16101
+#: wp-includes/js/dist/block-editor.js:16123
 msgid "Given your current role, you can only link a video, you cannot upload."
 msgstr "Din nuvarande roll ger dig endast behörighet att länka till en video. Du kan inte ladda upp filer."
 
-#: wp-includes/js/dist/block-editor.js:16099
+#: wp-includes/js/dist/block-editor.js:16121
 msgid "Given your current role, you can only link an image, you cannot upload."
 msgstr "Din nuvarande roll ger dig endast behörighet att länka till en bild. Du kan inte ladda upp filer."
 
-#: wp-includes/js/dist/block-editor.js:16097
+#: wp-includes/js/dist/block-editor.js:16119
 msgid "Given your current role, you can only link an audio, you cannot upload."
 msgstr "Din nuvarande roll ger dig endast behörighet att länka till en ljudfil. Du kan inte ladda upp filer."
 
-#: wp-includes/js/dist/block-editor.js:16094
+#: wp-includes/js/dist/block-editor.js:16116
 msgid "Given your current role, you can only link a media file, you cannot upload."
 msgstr "Din nuvarande roll ger dig endast behörighet att länka till en mediafil. Du kan inte ladda upp filer."
 
-#: wp-includes/js/dist/block-editor.js:16073
+#: wp-includes/js/dist/block-editor.js:16095
 msgid "To edit this block, you need permission to upload media."
 msgstr "För att redigera detta block behöver du behörighet att ladda upp media."
 
@@ -970,7 +970,7 @@ msgstr "(valt block)"
 msgid "Block tools"
 msgstr "Blockverktyg"
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-autosaves-controller.php:163
+#: wp-includes/rest-api/endpoints/class-wp-rest-autosaves-controller.php:162
 msgid "Sorry, you are not allowed to view autosaves of this post."
 msgstr "Du saknar behörighet att se automatiskt sparade versioner av detta inlägg."
 
@@ -1000,12 +1000,12 @@ msgstr "Börja skriva in text eller HTML"
 msgid "Type text or HTML"
 msgstr "Skriv in text eller HTML"
 
-#: wp-includes/js/dist/block-editor.js:12830
+#: wp-includes/js/dist/block-editor.js:12852
 #: wp-includes/js/dist/block-library.js:5734
 msgid "Start writing or type / to choose a block"
 msgstr "Börja skriva eller tryck på ”/” för att välja ett block"
 
-#: wp-includes/js/dist/block-editor.js:17968
+#: wp-includes/js/dist/block-editor.js:17990
 msgid "Block icon"
 msgstr "Blockikon"
 
@@ -1410,19 +1410,19 @@ msgstr "Visa media till vänster"
 msgid "Write list…"
 msgstr "Skriv lista…"
 
-#: wp-includes/js/dist/block-editor.js:14320
+#: wp-includes/js/dist/block-editor.js:14342
 msgid "Indent list item"
 msgstr "Sänk listobjektet en nivå"
 
-#: wp-includes/js/dist/block-editor.js:14313
+#: wp-includes/js/dist/block-editor.js:14335
 msgid "Outdent list item"
 msgstr "Lyft listobjektet en nivå"
 
-#: wp-includes/js/dist/block-editor.js:14300
+#: wp-includes/js/dist/block-editor.js:14322
 msgid "Convert to ordered list"
 msgstr "Konvertera till numrerad lista"
 
-#: wp-includes/js/dist/block-editor.js:14287
+#: wp-includes/js/dist/block-editor.js:14309
 msgid "Convert to unordered list"
 msgstr "Konvertera till punktlista"
 
@@ -2130,7 +2130,7 @@ msgid "Close settings"
 msgstr "Stäng inställningar"
 
 #. translators: %d: number of blocks
-#: wp-includes/js/dist/block-editor.js:17181
+#: wp-includes/js/dist/block-editor.js:17203
 msgid "%d block"
 msgid_plural "%d blocks"
 msgstr[0] "%d block"
@@ -2493,24 +2493,24 @@ msgstr "Intensivt röd"
 msgid "Pale pink"
 msgstr "Blek rosa"
 
-#: wp-includes/js/dist/block-editor.js:19674
+#: wp-includes/js/dist/block-editor.js:19696
 msgid "Additional CSS Class"
 msgstr "Ytterligare CSS-klass"
 
-#: wp-includes/js/dist/block-editor.js:19578
+#: wp-includes/js/dist/block-editor.js:19600
 msgid "Anchors lets you link directly to a section on a page."
 msgstr "Ankare låter dig länka direkt till en sektion på en sida."
 
-#: wp-includes/js/dist/block-editor.js:19577
+#: wp-includes/js/dist/block-editor.js:19599
 msgid "HTML Anchor"
 msgstr "HTML-ankare"
 
-#: wp-includes/js/dist/block-editor.js:15862
+#: wp-includes/js/dist/block-editor.js:15884
 #: wp-includes/js/dist/block-library.js:10371
 msgid "Link Settings"
 msgstr "Länkinställningar"
 
-#: wp-includes/js/dist/block-editor.js:16589
+#: wp-includes/js/dist/block-editor.js:16611
 msgid "Insert Link"
 msgstr "Infoga länk"
 
@@ -2554,7 +2554,7 @@ msgstr "Dokumentstatistik"
 msgid "Content structure"
 msgstr "Innehållsstruktur"
 
-#: wp-includes/js/dist/block-editor.js:16933
+#: wp-includes/js/dist/block-editor.js:16955
 msgid "Skip to the selected block"
 msgstr "Hoppa över till det valda blocket"
 
@@ -2896,7 +2896,7 @@ msgstr "Skriv ett utdrag (valfritt)"
 msgid "Allow Comments"
 msgstr "Tillåt kommentarer"
 
-#: wp-includes/js/dist/block-editor.js:13617
+#: wp-includes/js/dist/block-editor.js:13639
 msgid "(%s: %s)"
 msgstr "(%s: %s)"
 
@@ -2912,23 +2912,23 @@ msgstr "ingen rubrik"
 msgid "Order"
 msgstr "Ordning"
 
-#: wp-includes/js/dist/block-editor.js:16091
+#: wp-includes/js/dist/block-editor.js:16113
 msgid "Drag a video, upload a new one or select a file from your library."
 msgstr "Dra in en video, ladda upp en ny eller välj en fil från ditt mediabibliotek."
 
-#: wp-includes/js/dist/block-editor.js:16089
+#: wp-includes/js/dist/block-editor.js:16111
 msgid "Drag an image, upload a new one or select a file from your library."
 msgstr "Dra in en bild, ladda upp en ny eller välj en fil från ditt mediabibliotek."
 
-#: wp-includes/js/dist/block-editor.js:16087
+#: wp-includes/js/dist/block-editor.js:16109
 msgid "Drag an audio, upload a new one or select a file from your library."
 msgstr "Dra in en ljudfil, ladda upp en ny eller välj en fil från ditt mediabibliotek."
 
-#: wp-includes/js/dist/block-editor.js:16084
+#: wp-includes/js/dist/block-editor.js:16106
 msgid "Drag a media file, upload a new one or select a file from your library."
 msgstr "Dra in en mediafil, ladda upp en ny eller välj en fil från ditt mediabibliotek."
 
-#: wp-includes/js/dist/block-editor.js:15922
+#: wp-includes/js/dist/block-editor.js:15944
 msgid "Paste or type URL"
 msgstr "Klistra in eller skriv URL"
 
@@ -3008,66 +3008,66 @@ msgstr "Denna färgkombination kan vara svår för människor att läsa. Försö
 msgid "This color combination may be hard for people to read. Try using a darker background color and/or a brighter text color."
 msgstr "Denna färgkombination kan vara svår för människor att läsa. Försök använda en mörkare bakgrundsfärg och/eller en ljusare textfärg."
 
-#: wp-includes/js/dist/block-editor.js:13530
+#: wp-includes/js/dist/block-editor.js:13552
 msgid "(current %s: %s)"
 msgstr "(nuvarande %s: %s)"
 
-#: wp-includes/js/dist/block-editor.js:18022
+#: wp-includes/js/dist/block-editor.js:18044
 msgid "Transform To:"
 msgstr "Omvandla till:"
 
-#: wp-includes/js/dist/block-editor.js:18015
+#: wp-includes/js/dist/block-editor.js:18037
 msgid "Block Styles"
 msgstr "Blockstilar"
 
-#: wp-includes/js/dist/block-editor.js:17991
+#: wp-includes/js/dist/block-editor.js:18013
 msgid "Change type of %d block"
 msgid_plural "Change type of %d blocks"
 msgstr[0] "Ändra typ hos %d block"
 msgstr[1] "Ändra typ hos %d block"
 
-#: wp-includes/js/dist/block-editor.js:17573
+#: wp-includes/js/dist/block-editor.js:17595
 msgid "Remove from Reusable Blocks"
 msgstr "Ta bort från återanvändbara block"
 
-#: wp-includes/js/dist/block-editor.js:17485
+#: wp-includes/js/dist/block-editor.js:17507
 msgid "Convert to Regular Block"
 msgstr "Konvertera till vanlig block"
 
-#: wp-includes/js/dist/block-editor.js:17481
+#: wp-includes/js/dist/block-editor.js:17503
 msgid "Add to Reusable Blocks"
 msgstr "Lägg till i återanvändbara block"
 
-#: wp-includes/js/dist/block-editor.js:17852
+#: wp-includes/js/dist/block-editor.js:17874
 msgid "Remove Block"
 msgstr "Ta bort block"
 
-#: wp-includes/js/dist/block-editor.js:17831
+#: wp-includes/js/dist/block-editor.js:17853
 msgid "Insert After"
 msgstr "Infoga efter"
 
-#: wp-includes/js/dist/block-editor.js:17826
+#: wp-includes/js/dist/block-editor.js:17848
 msgid "Insert Before"
 msgstr "Infoga före"
 
-#: wp-includes/js/dist/block-editor.js:17821
+#: wp-includes/js/dist/block-editor.js:17843
 msgid "Duplicate"
 msgstr "Duplicera"
 
 #: wp-includes/js/dist/block-editor.js:9729
-#: wp-includes/js/dist/block-editor.js:17785
+#: wp-includes/js/dist/block-editor.js:17807
 msgid "More options"
 msgstr "Fler alternativ"
 
-#: wp-includes/js/dist/block-editor.js:17785
+#: wp-includes/js/dist/block-editor.js:17807
 msgid "Hide options"
 msgstr "Dölj alternativ"
 
-#: wp-includes/js/dist/block-editor.js:17419
+#: wp-includes/js/dist/block-editor.js:17441
 msgid "Edit visually"
 msgstr "Redigera visuellt"
 
-#: wp-includes/js/dist/block-editor.js:17419
+#: wp-includes/js/dist/block-editor.js:17441
 msgid "Edit as HTML"
 msgstr "Redigera som HTML"
 
@@ -3125,7 +3125,7 @@ msgstr "Flytta blocket %1$s från position %2$d ned till position %3$d"
 msgid "Block %s is the only block, and cannot be moved"
 msgstr "Block %s är det enda blocket och kan inte flyttas"
 
-#: wp-includes/js/dist/block-editor.js:12458
+#: wp-includes/js/dist/block-editor.js:12480
 msgid "Block: %s"
 msgstr "Block: %s"
 
@@ -3140,7 +3140,7 @@ msgid "Resolve"
 msgstr "Lös upp"
 
 #: wp-includes/js/dist/block-editor.js:9988
-#: wp-includes/js/dist/block-editor.js:17637
+#: wp-includes/js/dist/block-editor.js:17659
 msgid "Convert to Blocks"
 msgstr "Konvertera till block"
 
@@ -3158,12 +3158,12 @@ msgid "This block has encountered an error and cannot be previewed."
 msgstr "Detta block har stött på ett fel och kan inte förhandsgranskas."
 
 #: wp-includes/js/dist/block-editor.js:11346
-#: wp-includes/js/dist/block-editor.js:12862
-#: wp-includes/js/dist/block-editor.js:12963
+#: wp-includes/js/dist/block-editor.js:12884
+#: wp-includes/js/dist/block-editor.js:12985
 msgid "Add block"
 msgstr "Lägg till block"
 
-#: wp-includes/js/dist/block-editor.js:17244
+#: wp-includes/js/dist/block-editor.js:17266
 msgid "No block selected."
 msgstr "Inga block valda."
 
@@ -3434,13 +3434,13 @@ msgstr "Anpassad färgväljare"
 
 #: wp-includes/js/dist/components.js:27728
 #: wp-includes/js/dist/components.js:33378
-#: wp-includes/js/dist/block-editor.js:16323
+#: wp-includes/js/dist/block-editor.js:16345
 msgid "No results."
 msgstr "Inga resultat."
 
 #: wp-includes/js/dist/components.js:27726
 #: wp-includes/js/dist/components.js:33376
-#: wp-includes/js/dist/block-editor.js:16321
+#: wp-includes/js/dist/block-editor.js:16343
 msgid "%d result found, use up and down arrow keys to navigate."
 msgid_plural "%d results found, use up and down arrow keys to navigate."
 msgstr[0] "%d resultat hittades, använd upp och nedpilarna för att navigera."
@@ -3640,15 +3640,15 @@ msgstr "Version av innehållsblockformat som används av objektet."
 msgid "Slug automatically generated from the object title."
 msgstr "Permalänken har genererats automatiskt utifrån objektets rubrik."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-autosaves-controller.php:353
+#: wp-includes/rest-api/endpoints/class-wp-rest-autosaves-controller.php:352
 msgid "There is nothing to save. The autosave and the post content are the same."
 msgstr "Det finns inget att spara. Autospara och inlägget har samma innehåll."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-autosaves-controller.php:302
+#: wp-includes/rest-api/endpoints/class-wp-rest-autosaves-controller.php:301
 msgid "Preview link for the post."
 msgstr "Förhandsvisa inläggets länk."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-autosaves-controller.php:253
+#: wp-includes/rest-api/endpoints/class-wp-rest-autosaves-controller.php:252
 msgid "There is no autosave revision for this post."
 msgstr "Detta inlägg har ingen autosparad version."
 
@@ -3656,11 +3656,11 @@ msgstr "Detta inlägg har ingen autosparad version."
 msgid "Permalink template for the object."
 msgstr "Permalänksmall för objektet."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-autosaves-controller.php:247
+#: wp-includes/rest-api/endpoints/class-wp-rest-autosaves-controller.php:246
 msgid "Invalid parent post ID."
 msgstr "Ogiltigt inläggs-ID för overordnat objekt."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-autosaves-controller.php:117
+#: wp-includes/rest-api/endpoints/class-wp-rest-autosaves-controller.php:116
 msgid "The ID for the object."
 msgstr "Objektets ID."
 
@@ -4213,8 +4213,8 @@ msgctxt "customizer changeset status"
 msgid "Scheduled"
 msgstr "Schemalagt"
 
-#: wp-includes/customize/class-wp-customize-theme-control.php:115
-#: wp-includes/customize/class-wp-customize-theme-control.php:123
+#: wp-includes/customize/class-wp-customize-theme-control.php:122
+#: wp-includes/customize/class-wp-customize-theme-control.php:130
 msgctxt "theme"
 msgid "Installed"
 msgstr "Installerat"
@@ -4245,7 +4245,7 @@ msgid "Click &#8220;Next&#8221; to start adding links to your new menu."
 msgstr "Klicka på ”Nästa” för att börja lägga till länkar i din nya meny."
 
 #. translators: %s: a list of valid video file extensions
-#: wp-includes/widgets/class-wp-widget-media-video.php:51
+#: wp-includes/widgets/class-wp-widget-media-video.php:50
 msgid "Sorry, we can&#8217;t load the video at the supplied URL. Please check that the URL is for a supported video file (%s) or stream (e.g. YouTube and Vimeo)."
 msgstr "Vi lyckades inte ladda videon från angiven URL. Kolla att URL:en avser en godkänd typ av videofil (%s) eller strömningstjänst (t.ex. YouTube eller Vimeo)."
 
@@ -4413,19 +4413,19 @@ msgstr "Värdetyp som inte stöds (%s)."
 msgid "Widgets need to be registered using %s, before they can be displayed."
 msgstr "Innan widgetar kan visas måste de först registreras med %s."
 
-#: wp-includes/widgets/class-wp-widget-media-image.php:337
+#: wp-includes/widgets/class-wp-widget-media-image.php:336
 msgid "Link to:"
 msgstr "Länk till:"
 
-#: wp-includes/widgets/class-wp-widget-media-gallery.php:38
+#: wp-includes/widgets/class-wp-widget-media-gallery.php:37
 msgid "No images selected"
 msgstr "Inga bilder valda"
 
-#: wp-includes/widgets/class-wp-widget-media-gallery.php:30
+#: wp-includes/widgets/class-wp-widget-media-gallery.php:29
 msgid "Displays an image gallery."
 msgstr "Visar ett bildgalleri."
 
-#: wp-includes/widgets/class-wp-widget-media-gallery.php:28
+#: wp-includes/widgets/class-wp-widget-media-gallery.php:27
 #: wp-includes/js/dist/editor.js:8815
 #: wp-includes/js/dist/block-library.js:13262
 #: wp-includes/js/dist/block-library.js:13421
@@ -4995,7 +4995,7 @@ msgstr "Återgå till tema-källor"
 msgid "Search WordPress.org themes"
 msgstr "Sök teman på WordPress.org"
 
-#: wp-includes/customize/class-wp-customize-theme-control.php:128
+#: wp-includes/customize/class-wp-customize-theme-control.php:135
 msgid "Install &amp; Preview"
 msgstr "Installera och förhandsgranska"
 
@@ -5327,17 +5327,17 @@ msgctxt "label for button in the media widget"
 msgid "Add Media"
 msgstr "Nytt media"
 
-#: wp-includes/widgets/class-wp-widget-media-video.php:39
+#: wp-includes/widgets/class-wp-widget-media-video.php:38
 msgctxt "label for button in the video widget"
 msgid "Add Video"
 msgstr "Ny video"
 
-#: wp-includes/widgets/class-wp-widget-media-image.php:39
+#: wp-includes/widgets/class-wp-widget-media-image.php:38
 msgctxt "label for button in the image widget"
 msgid "Add Image"
 msgstr "Ny bild"
 
-#: wp-includes/widgets/class-wp-widget-media-audio.php:39
+#: wp-includes/widgets/class-wp-widget-media-audio.php:38
 msgctxt "label for button in the audio widget"
 msgid "Add Audio"
 msgstr "Nytt ljud"
@@ -5399,7 +5399,7 @@ msgstr "För närvarande tillåter inte nätverket registreringar."
 msgid "Greetings Network Administrator!"
 msgstr "Hej, nätverksadministratör!"
 
-#: wp-includes/widgets/class-wp-widget-media-gallery.php:62
+#: wp-includes/widgets/class-wp-widget-media-gallery.php:61
 #: wp-includes/widgets/class-wp-widget-media.php:151
 msgid "Title for the widget"
 msgstr "Widgetrubrik"
@@ -5455,127 +5455,127 @@ msgid "A media item."
 msgstr "Ett medieobjekt."
 
 #. translators: %s: video extension
-#: wp-includes/widgets/class-wp-widget-media-video.php:97
+#: wp-includes/widgets/class-wp-widget-media-video.php:96
 msgid "URL to the %s video source file"
 msgstr "URL till %s videoklippets källfil"
 
-#: wp-includes/widgets/class-wp-widget-media-video.php:49
+#: wp-includes/widgets/class-wp-widget-media-video.php:48
 msgid "Video Widget"
 msgstr "Videowidget"
 
 #. translators: %d: widget count
-#: wp-includes/widgets/class-wp-widget-media-video.php:48
+#: wp-includes/widgets/class-wp-widget-media-video.php:47
 msgid "Video Widget (%d)"
 msgid_plural "Video Widget (%d)"
 msgstr[0] "Videowidget (%d)"
 msgstr[1] "Videowidgetar (%d)"
 
 #. translators: %s: URL to media library
-#: wp-includes/widgets/class-wp-widget-media-video.php:44
+#: wp-includes/widgets/class-wp-widget-media-video.php:43
 msgid "We can&#8217;t find that video. Check your <a href=\"%s\">media library</a> and make sure it wasn&#8217;t deleted."
 msgstr "Videofilen går inte att hitta. Kontrollera i ditt <a href=\"%s\">mediabibliotek</a> att den inte raderats."
 
-#: wp-includes/widgets/class-wp-widget-media-video.php:41
+#: wp-includes/widgets/class-wp-widget-media-video.php:40
 msgctxt "label for button in the video widget; should preferably not be longer than ~13 characters long"
 msgid "Edit Video"
 msgstr "Ändra video"
 
-#: wp-includes/widgets/class-wp-widget-media-video.php:40
+#: wp-includes/widgets/class-wp-widget-media-video.php:39
 msgctxt "label for button in the video widget; should preferably not be longer than ~13 characters long"
 msgid "Replace Video"
 msgstr "Byt video"
 
-#: wp-includes/widgets/class-wp-widget-media-gallery.php:39
+#: wp-includes/widgets/class-wp-widget-media-gallery.php:38
 msgctxt "label for button in the gallery widget; should not be longer than ~13 characters long"
 msgid "Add Images"
 msgstr "Lägg till bilder"
 
-#: wp-includes/widgets/class-wp-widget-media-video.php:30
+#: wp-includes/widgets/class-wp-widget-media-video.php:29
 msgid "Displays a video from the media library or from YouTube, Vimeo, or another provider."
 msgstr "Visar en video ur mediabiblioteket eller från YouTube, Vimeo eller någon annan tjänst."
 
-#: wp-includes/widgets/class-wp-widget-media-image.php:49
+#: wp-includes/widgets/class-wp-widget-media-image.php:48
 msgid "Image Widget"
 msgstr "Bildwidget"
 
 #. translators: %d: widget count
-#: wp-includes/widgets/class-wp-widget-media-image.php:48
+#: wp-includes/widgets/class-wp-widget-media-image.php:47
 msgid "Image Widget (%d)"
 msgid_plural "Image Widget (%d)"
 msgstr[0] "Bildwidget (%d)"
 msgstr[1] "Bildwidgetar (%d)"
 
 #. translators: %s: URL to media library
-#: wp-includes/widgets/class-wp-widget-media-image.php:44
+#: wp-includes/widgets/class-wp-widget-media-image.php:43
 msgid "We can&#8217;t find that image. Check your <a href=\"%s\">media library</a> and make sure it wasn&#8217;t deleted."
 msgstr "Bilden går inte att hitta. Kontrollera i ditt <a href=\"%s\">mediabibliotek</a> att den inte raderats."
 
-#: wp-includes/widgets/class-wp-widget-media-image.php:41
+#: wp-includes/widgets/class-wp-widget-media-image.php:40
 msgctxt "label for button in the image widget; should preferably not be longer than ~13 characters long"
 msgid "Edit Image"
 msgstr "Ändra bild"
 
-#: wp-includes/widgets/class-wp-widget-media-image.php:40
+#: wp-includes/widgets/class-wp-widget-media-image.php:39
 msgctxt "label for button in the image widget; should preferably not be longer than ~13 characters long"
 msgid "Replace Image"
 msgstr "Byt bild"
 
-#: wp-includes/widgets/class-wp-widget-media-gallery.php:41
+#: wp-includes/widgets/class-wp-widget-media-gallery.php:40
 msgctxt "label for button in the gallery widget; should not be longer than ~13 characters long"
 msgid "Edit Gallery"
 msgstr "Redigera galleri"
 
-#: wp-includes/widgets/class-wp-widget-media-image.php:30
+#: wp-includes/widgets/class-wp-widget-media-image.php:29
 msgid "Displays an image."
 msgstr "Visar en bild."
 
-#: wp-includes/widgets/class-wp-widget-media-image.php:349
-#: wp-includes/widgets/class-wp-widget-media-audio.php:197
-#: wp-includes/widgets/class-wp-widget-media-video.php:241
+#: wp-includes/widgets/class-wp-widget-media-image.php:348
+#: wp-includes/widgets/class-wp-widget-media-audio.php:196
+#: wp-includes/widgets/class-wp-widget-media-video.php:240
 msgid "Unable to preview media due to an unknown error."
 msgstr "På grund av ett okänt fel går det inte att förhandsvisa mediafilen."
 
 #. translators: %s: audio extension
-#: wp-includes/widgets/class-wp-widget-media-audio.php:86
+#: wp-includes/widgets/class-wp-widget-media-audio.php:85
 msgid "URL to the %s audio source file"
 msgstr "URL till källfilen för ljudfilen %s"
 
-#: wp-includes/widgets/class-wp-widget-media-audio.php:50
+#: wp-includes/widgets/class-wp-widget-media-audio.php:49
 msgid "Looks like this isn&#8217;t the correct kind of file. Please link to an audio file instead."
 msgstr "Det verkar inte vara rätt filtyp. Länka till en ljudfil istället."
 
-#: wp-includes/widgets/class-wp-widget-media-audio.php:49
+#: wp-includes/widgets/class-wp-widget-media-audio.php:48
 msgid "Audio Widget"
 msgstr "Ljudwidget"
 
 #. translators: %d: widget count
-#: wp-includes/widgets/class-wp-widget-media-audio.php:48
+#: wp-includes/widgets/class-wp-widget-media-audio.php:47
 msgid "Audio Widget (%d)"
 msgid_plural "Audio Widget (%d)"
 msgstr[0] "Ljudwidget (%d)"
 msgstr[1] "Ljudwidgetar (%d)"
 
 #. translators: %s: URL to media library
-#: wp-includes/widgets/class-wp-widget-media-audio.php:44
+#: wp-includes/widgets/class-wp-widget-media-audio.php:43
 msgid "We can&#8217;t find that audio file. Check your <a href=\"%s\">media library</a> and make sure it wasn&#8217;t deleted."
 msgstr "Ljudfilen går inte att hitta. Kontrollera i ditt <a href=\"%s\">mediabibliotek</a> att den inte raderats."
 
-#: wp-includes/widgets/class-wp-widget-media-audio.php:41
+#: wp-includes/widgets/class-wp-widget-media-audio.php:40
 msgctxt "label for button in the audio widget; should preferably not be longer than ~13 characters long"
 msgid "Edit Audio"
 msgstr "Ändra ljud"
 
-#: wp-includes/widgets/class-wp-widget-media-audio.php:40
+#: wp-includes/widgets/class-wp-widget-media-audio.php:39
 msgctxt "label for button in the audio widget; should preferably not be longer than ~13 characters long"
 msgid "Replace Audio"
 msgstr "Byt ljud"
 
-#: wp-includes/widgets/class-wp-widget-media-audio.php:38
+#: wp-includes/widgets/class-wp-widget-media-audio.php:37
 #: wp-includes/customize/class-wp-customize-media-control.php:233
 msgid "No audio selected"
 msgstr "Ingen ljudfil vald"
 
-#: wp-includes/widgets/class-wp-widget-media-audio.php:30
+#: wp-includes/widgets/class-wp-widget-media-audio.php:29
 msgid "Displays an audio player."
 msgstr "Visar en ljudspelare."
 
@@ -6302,7 +6302,7 @@ msgstr "Välj video"
 msgid "Change video"
 msgstr "Byt video"
 
-#: wp-includes/widgets/class-wp-widget-media-video.php:38
+#: wp-includes/widgets/class-wp-widget-media-video.php:37
 #: wp-includes/customize/class-wp-customize-media-control.php:223
 msgid "No video selected"
 msgstr "Ingen video vald"
@@ -7144,8 +7144,8 @@ msgstr "ID för associerat inläggsobjekt."
 #: wp-includes/rest-api/endpoints/class-wp-rest-revisions-controller.php:94
 #: wp-includes/rest-api/endpoints/class-wp-rest-revisions-controller.php:655
 #: wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php:1979
-#: wp-includes/rest-api/endpoints/class-wp-rest-autosaves-controller.php:87
-#: wp-includes/rest-api/endpoints/class-wp-rest-autosaves-controller.php:113
+#: wp-includes/rest-api/endpoints/class-wp-rest-autosaves-controller.php:86
+#: wp-includes/rest-api/endpoints/class-wp-rest-autosaves-controller.php:112
 msgid "The ID for the parent of the object."
 msgstr "ID för överordnad till objektet."
 
@@ -7487,13 +7487,12 @@ msgstr "Filtrera teman"
 msgid "Change theme"
 msgstr "Byt tema"
 
-#. translators: %s: "Update now" button
-#: wp-includes/customize/class-wp-customize-theme-control.php:97
+#: wp-includes/customize/class-wp-customize-theme-control.php:102
 msgid "Update now"
 msgstr "Uppdatera nu"
 
 #. translators: %s: "Update now" button
-#: wp-includes/customize/class-wp-customize-theme-control.php:97
+#: wp-includes/customize/class-wp-customize-theme-control.php:101
 msgid "New version available. %s"
 msgstr "Ny version finns tillgänglig. %s"
 
@@ -7837,7 +7836,7 @@ msgstr "Pause"
 msgid "Play"
 msgstr "Spela upp"
 
-#: wp-includes/taxonomy.php:2124 wp-includes/taxonomy.php:2842
+#: wp-includes/taxonomy.php:2124 wp-includes/taxonomy.php:2838
 msgid "A name is required for this term."
 msgstr "Ett namn krävs för den här termen."
 
@@ -8086,7 +8085,7 @@ msgstr "Du saknar behörighet för att gör det."
 
 #: wp-includes/revision.php:585
 msgid "Sorry, you are not allowed to preview drafts."
-msgstr "Du saknar behörighet för att förhandsgranska det här utkastet."
+msgstr "Du saknar behörighet för att förhandsgranska utkast."
 
 #. translators: Password change notification email subject. %s: Site title
 #. translators: Password change notification email subject. %s: Site name
@@ -8156,7 +8155,7 @@ msgstr "Länkalternativ"
 msgid "Link inserted."
 msgstr "Länk infogad."
 
-#: wp-includes/script-loader.php:1394 wp-includes/js/dist/block-editor.js:16420
+#: wp-includes/script-loader.php:1394 wp-includes/js/dist/block-editor.js:16442
 msgid "Link selected."
 msgstr "Länk vald."
 
@@ -8385,7 +8384,7 @@ msgid "Invalid object type"
 msgstr "Ogiltig objekttyp"
 
 #: wp-includes/class-wp-editor.php:1283
-#: wp-includes/js/dist/block-editor.js:16482
+#: wp-includes/js/dist/block-editor.js:16504
 msgid "Paste URL or type to search"
 msgstr "Klistra in URL eller skriv för att söka"
 
@@ -9703,7 +9702,7 @@ msgstr "CSS-klasser"
 msgid "Title Attribute"
 msgstr "Titelattribut"
 
-#: wp-includes/widgets/class-wp-widget-media-image.php:143
+#: wp-includes/widgets/class-wp-widget-media-image.php:142
 #: wp-includes/media-template.php:1082
 #: wp-includes/customize/class-wp-customize-nav-menu-item-control.php:106
 #: wp-includes/class-wp-editor.php:1741
@@ -9790,7 +9789,7 @@ msgstr[0] "%1$s svar till %2$s"
 msgstr[1] "%1$s svar till %2$s"
 
 #. translators: %s: theme name
-#: wp-includes/customize/class-wp-customize-theme-control.php:108
+#: wp-includes/customize/class-wp-customize-theme-control.php:115
 msgid "<span>Previewing:</span> %s"
 msgstr "<span>Förhandsgranskar:</span> %s"
 
@@ -9832,7 +9831,7 @@ msgstr "Installation har genomförts."
 msgid "Taxonomy names must be between 1 and 32 characters in length."
 msgstr "Namn på taxanomier måste vara mellan 1 och 32 tecken."
 
-#: wp-includes/taxonomy.php:3804
+#: wp-includes/taxonomy.php:3800
 msgid "Could not split shared term."
 msgstr "Kunde inte dela på delad term."
 
@@ -10001,7 +10000,7 @@ msgid "Theme Details"
 msgstr "Detaljer för tema"
 
 #: wp-includes/script-loader.php:1767
-#: wp-includes/customize/class-wp-customize-theme-control.php:120
+#: wp-includes/customize/class-wp-customize-theme-control.php:127
 msgid "Live Preview"
 msgstr "Förhandsgranskning live"
 
@@ -10274,7 +10273,7 @@ msgstr "Välj fil"
 msgid "Select image"
 msgstr "Välj bild"
 
-#: wp-includes/widgets/class-wp-widget-media-image.php:38
+#: wp-includes/widgets/class-wp-widget-media-image.php:37
 #: wp-includes/customize/class-wp-customize-media-control.php:244
 msgid "No image selected"
 msgstr "Ingen bild vald"
@@ -10353,7 +10352,7 @@ msgstr "Välj flera"
 
 #. translators: %s: taxonomy label, %l: list of terms formatted as per
 #. $term_template
-#: wp-includes/taxonomy.php:4317
+#: wp-includes/taxonomy.php:4313
 msgid "%s: %l."
 msgstr "%s: %l."
 
@@ -10583,12 +10582,12 @@ msgstr "Album"
 msgid "Artist"
 msgstr "Artist"
 
-#: wp-includes/widgets/class-wp-widget-media-image.php:120
+#: wp-includes/widgets/class-wp-widget-media-image.php:119
 #: wp-includes/media-template.php:1076
 msgid "Image CSS Class"
 msgstr "CSS-klass för bild"
 
-#: wp-includes/widgets/class-wp-widget-media-image.php:151
+#: wp-includes/widgets/class-wp-widget-media-image.php:150
 #: wp-includes/media-template.php:1072
 msgid "Image Title Attribute"
 msgstr "Titelattribut för bild"
@@ -10630,7 +10629,7 @@ msgstr "Visningsinställningar"
 msgid "Show Video List"
 msgstr "Visa videolista"
 
-#: wp-includes/widgets/class-wp-widget-media-image.php:129
+#: wp-includes/widgets/class-wp-widget-media-image.php:128
 #: wp-includes/media-template.php:1089
 #: wp-includes/js/dist/block-library.js:10388
 msgid "Link CSS Class"
@@ -10667,7 +10666,7 @@ msgctxt "auto preload"
 msgid "Auto"
 msgstr "Auto"
 
-#: wp-includes/widgets/class-wp-widget-media-video.php:86
+#: wp-includes/widgets/class-wp-widget-media-video.php:85
 #: wp-includes/media-template.php:1273 wp-includes/media-template.php:1278
 msgid "Tracks (subtitles, captions, descriptions, chapters, or metadata)"
 msgstr "Spår (undertexter, bildtexter, beskrivningar, kapitel eller metadata)"
@@ -11766,7 +11765,7 @@ msgstr "Ge bilden en bildtext&hellip;"
 msgid "Random Order"
 msgstr "Slumpvis ordning"
 
-#: wp-includes/media.php:3689 wp-includes/js/dist/block-editor.js:16155
+#: wp-includes/media.php:3689 wp-includes/js/dist/block-editor.js:16177
 msgid "Insert from URL"
 msgstr "Infoga från URL"
 
@@ -11835,9 +11834,9 @@ msgstr[1] "Videoklipp: <span class=\"count\">(%s)</span>"
 msgid "Manage Video"
 msgstr "Hantera videoklipp"
 
-#: wp-includes/widgets/class-wp-widget-media-video.php:28
+#: wp-includes/widgets/class-wp-widget-media-video.php:27
 #: wp-includes/post.php:2630 wp-includes/js/dist/editor.js:8833
-#: wp-includes/js/dist/block-editor.js:16114
+#: wp-includes/js/dist/block-editor.js:16136
 #: wp-includes/js/dist/block-library.js:15794
 msgid "Video"
 msgstr "Video"
@@ -11870,9 +11869,9 @@ msgstr "Uppladdat till denna sida"
 msgid "Insert into page"
 msgstr "Infoga på sida"
 
-#: wp-includes/widgets/class-wp-widget-media-audio.php:28
+#: wp-includes/widgets/class-wp-widget-media-audio.php:27
 #: wp-includes/post.php:2629 wp-includes/js/dist/editor.js:8836
-#: wp-includes/js/dist/block-editor.js:16110
+#: wp-includes/js/dist/block-editor.js:16132
 #: wp-includes/js/dist/block-library.js:14521
 msgid "Audio"
 msgstr "Ljud"
@@ -11960,7 +11959,7 @@ msgstr "Släpp filer för att ladda upp"
 msgid "Create Gallery"
 msgstr "Skapa galleri"
 
-#: wp-includes/media.php:3657 wp-includes/js/dist/block-editor.js:16146
+#: wp-includes/media.php:3657 wp-includes/js/dist/block-editor.js:16168
 msgid "Media Library"
 msgstr "Mediabibliotek"
 
@@ -12028,7 +12027,7 @@ msgstr "Mediafil"
 msgid "Attachment Page"
 msgstr "Sida för bilaga"
 
-#: wp-includes/widgets/class-wp-widget-media-image.php:104
+#: wp-includes/widgets/class-wp-widget-media-image.php:103
 #: wp-includes/media-template.php:698 wp-includes/media-template.php:780
 #: wp-includes/media-template.php:934 wp-includes/media-template.php:1044
 #: wp-includes/js/dist/block-library.js:10373
@@ -12110,7 +12109,7 @@ msgctxt "Display name based on first name and last name"
 msgid "%1$s %2$s"
 msgstr "%1$s %2$s"
 
-#: wp-includes/taxonomy.php:2540
+#: wp-includes/taxonomy.php:2536
 msgid "Could not insert term relationship into the database."
 msgstr "Kunde inte infoga termrelation i databasen"
 
@@ -12156,7 +12155,7 @@ msgctxt "Uploader: Drop files here - or - Select Files"
 msgid "or"
 msgstr "eller"
 
-#: wp-includes/widgets/class-wp-widget-media-image.php:97
+#: wp-includes/widgets/class-wp-widget-media-image.php:96
 #: wp-includes/media-template.php:422 wp-includes/media-template.php:900
 #: wp-includes/media-template.php:967
 msgid "Alternative Text"
@@ -12235,7 +12234,7 @@ msgid "Select file"
 msgstr "Välj fil"
 
 #: wp-includes/admin-bar.php:434
-#: wp-includes/customize/class-wp-customize-theme-control.php:112
+#: wp-includes/customize/class-wp-customize-theme-control.php:119
 msgid "Customize"
 msgstr "Anpassa"
 
@@ -12351,7 +12350,7 @@ msgstr "Tillåtna filer"
 msgid "Remove"
 msgstr "Ta bort"
 
-#: wp-includes/js/dist/block-editor.js:16134
+#: wp-includes/js/dist/block-editor.js:16156
 msgid "Upload"
 msgstr "Ladda upp"
 
@@ -12393,7 +12392,7 @@ msgstr "Du har inte behörighet att redigera termer i den här taxonomin."
 #: wp-includes/class-wp-xmlrpc-server.php:2161
 #: wp-includes/rest-api/endpoints/class-wp-rest-terms-controller.php:414
 #: wp-includes/rest-api/endpoints/class-wp-rest-terms-controller.php:537
-#: wp-includes/taxonomy.php:2135 wp-includes/taxonomy.php:2846
+#: wp-includes/taxonomy.php:2135 wp-includes/taxonomy.php:2842
 msgid "Parent term does not exist."
 msgstr "Överordnad term existerar inte."
 
@@ -12418,8 +12417,8 @@ msgstr "Du har inte behörighet att skapa termer i den här taxonomin."
 #: wp-includes/taxonomy.php:721 wp-includes/taxonomy.php:821
 #: wp-includes/taxonomy.php:1003 wp-includes/taxonomy.php:1169
 #: wp-includes/taxonomy.php:1968 wp-includes/taxonomy.php:2106
-#: wp-includes/taxonomy.php:2421 wp-includes/taxonomy.php:2596
-#: wp-includes/taxonomy.php:2800
+#: wp-includes/taxonomy.php:2417 wp-includes/taxonomy.php:2592
+#: wp-includes/taxonomy.php:2796
 msgid "Invalid taxonomy."
 msgstr "Ogiltig taxonomi."
 
@@ -12487,7 +12486,7 @@ msgstr "Slogan"
 msgid "Your latest posts"
 msgstr "Dina senaste inlägg"
 
-#: wp-includes/js/dist/block-editor.js:17259
+#: wp-includes/js/dist/block-editor.js:17281
 msgid "Styles"
 msgstr "Stilar"
 
@@ -12887,8 +12886,8 @@ msgstr "Verktygsfält"
 msgid "Very dark gray"
 msgstr "Mycket mörkgrå"
 
-#: wp-includes/widgets/class-wp-widget-media-audio.php:71
-#: wp-includes/widgets/class-wp-widget-media-video.php:73
+#: wp-includes/widgets/class-wp-widget-media-audio.php:70
+#: wp-includes/widgets/class-wp-widget-media-video.php:72
 #: wp-includes/media-template.php:1157 wp-includes/media-template.php:1248
 #: wp-includes/js/dist/block-library.js:14458
 #: wp-includes/js/dist/block-library.js:15711
@@ -14162,12 +14161,12 @@ msgstr "Stilmall saknas."
 msgid "The parent theme is missing. Please install the \"%s\" parent theme."
 msgstr "Modertemat saknas. Var vänlig installera modertemat \"%s\"."
 
-#: wp-includes/taxonomy.php:4389
+#: wp-includes/taxonomy.php:4385
 msgid "Invalid object ID."
 msgstr "Ogiltigt objekt-ID."
 
 #. translators: %s: taxonomy term slug
-#: wp-includes/taxonomy.php:2908
+#: wp-includes/taxonomy.php:2904
 msgid "The slug &#8220;%s&#8221; is already in use by another term."
 msgstr "Permalänken &#8221;%s&#8221; används redan för en annan term."
 
@@ -14175,12 +14174,12 @@ msgstr "Permalänken &#8221;%s&#8221; används redan för en annan term."
 msgid "Could not insert term into the database."
 msgstr "Kunde inte infoga term i databasen."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-autosaves-controller.php:183
+#: wp-includes/rest-api/endpoints/class-wp-rest-autosaves-controller.php:182
 msgid "Invalid item ID."
 msgstr "Ogiltigt objekts-ID"
 
-#: wp-includes/taxonomy.php:817 wp-includes/taxonomy.php:2813
-#: wp-includes/taxonomy.php:4171
+#: wp-includes/taxonomy.php:817 wp-includes/taxonomy.php:2809
+#: wp-includes/taxonomy.php:4167
 msgid "Empty Term."
 msgstr "Tom term."
 
@@ -14294,9 +14293,9 @@ msgid "of"
 msgstr "av"
 
 #: wp-includes/script-loader.php:1102
-#: wp-includes/widgets/class-wp-widget-media-image.php:28
+#: wp-includes/widgets/class-wp-widget-media-image.php:27
 #: wp-includes/class-wp-editor.php:1110 wp-includes/js/dist/editor.js:8821
-#: wp-includes/js/dist/block-editor.js:16112
+#: wp-includes/js/dist/block-editor.js:16134
 #: wp-includes/js/dist/block-library.js:10702
 #: wp-includes/js/dist/format-library.js:570
 msgid "Image"
@@ -14663,7 +14662,7 @@ msgstr "Åtgärd"
 msgid "Letter"
 msgstr "Tangent"
 
-#: wp-includes/widgets/class-wp-widget-media-image.php:136
+#: wp-includes/widgets/class-wp-widget-media-image.php:135
 #: wp-includes/media-template.php:1085
 #: wp-includes/js/dist/block-library.js:10392
 msgid "Link Rel"
@@ -14709,8 +14708,8 @@ msgstr "Bakgrund"
 msgid "Align"
 msgstr "Justera"
 
-#: wp-includes/widgets/class-wp-widget-media-audio.php:76
-#: wp-includes/widgets/class-wp-widget-media-video.php:79
+#: wp-includes/widgets/class-wp-widget-media-audio.php:75
+#: wp-includes/widgets/class-wp-widget-media-video.php:78
 #: wp-includes/media-template.php:1172 wp-includes/media-template.php:1263
 #: wp-includes/js/dist/block-library.js:14454
 #: wp-includes/js/dist/block-library.js:15699
@@ -15789,7 +15788,7 @@ msgstr "Tillägg:"
 msgid "Default"
 msgstr "Standard"
 
-#: wp-includes/widgets/class-wp-widget-media-image.php:83
+#: wp-includes/widgets/class-wp-widget-media-image.php:82
 #: wp-includes/media-template.php:1039 wp-includes/class-wp-editor.php:1222
 #: wp-includes/js/dist/block-library.js:10348
 msgid "Height"
@@ -15843,7 +15842,7 @@ msgstr "Teman"
 msgid "Sites"
 msgstr "Webbplatser"
 
-#: wp-includes/js/dist/block-editor.js:16589
+#: wp-includes/js/dist/block-editor.js:16611
 msgid "Edit Link"
 msgstr "Redigera länken"
 
@@ -15881,7 +15880,7 @@ msgstr "<strong>FEL</strong>: Den här e-postadressen är redan registrerad. Vä
 msgid "<strong>ERROR</strong>: Please enter a username."
 msgstr "<strong>FEL</strong>: Var vänlig och ange ett användarnamn."
 
-#: wp-includes/widgets/class-wp-widget-media-image.php:77
+#: wp-includes/widgets/class-wp-widget-media-image.php:76
 #: wp-includes/media-template.php:1039 wp-includes/class-wp-editor.php:1223
 #: wp-includes/js/dist/block-library.js:10341
 #: wp-includes/js/dist/format-library.js:706
@@ -15947,7 +15946,7 @@ msgstr "Hjälp"
 #: wp-includes/widgets/class-wp-widget-recent-posts.php:97
 #: wp-includes/blocks/latest-comments.php:31 wp-includes/media.php:3265
 #: wp-includes/js/dist/editor.js:10847
-#: wp-includes/js/dist/block-editor.js:16513
+#: wp-includes/js/dist/block-editor.js:16535
 #: wp-includes/js/dist/edit-post.js:4995
 msgid "(no title)"
 msgstr "(utan rubrik)"
@@ -15973,7 +15972,7 @@ msgstr "Välj"
 #: wp-includes/class-wp-customize-manager.php:5600
 #: wp-includes/class-wp-editor.php:1077 wp-includes/class-wp-editor.php:1727
 #: wp-includes/js/dist/components.js:30790
-#: wp-includes/js/dist/block-editor.js:16607
+#: wp-includes/js/dist/block-editor.js:16629
 #: wp-includes/js/dist/edit-post.js:3942 wp-includes/js/dist/edit-post.js:4216
 #: wp-includes/js/dist/edit-post.js:4608
 msgid "Close"
@@ -16075,7 +16074,7 @@ msgid "Image URL"
 msgstr "Bildadress"
 
 #: wp-includes/media.php:4171 wp-includes/class-wp-editor.php:1127
-#: wp-includes/js/dist/block-editor.js:16107
+#: wp-includes/js/dist/block-editor.js:16129
 msgid "Media"
 msgstr "Media"
 
@@ -16088,7 +16087,7 @@ msgstr "Redigera bild"
 msgid "Link URL"
 msgstr "Länkadress"
 
-#: wp-includes/widgets/class-wp-widget-media-image.php:90
+#: wp-includes/widgets/class-wp-widget-media-image.php:89
 #: wp-includes/media-template.php:447 wp-includes/media-template.php:639
 #: wp-includes/media-template.php:910 wp-includes/media-template.php:977
 #: wp-includes/class-wp-editor.php:1224
@@ -16099,7 +16098,7 @@ msgstr "Bildtext"
 msgid "Alignment"
 msgstr "Justering"
 
-#: wp-includes/widgets/class-wp-widget-media-image.php:71
+#: wp-includes/widgets/class-wp-widget-media-image.php:70
 #: wp-includes/media-template.php:743 wp-includes/media-template.php:821
 #: wp-includes/media-template.php:1004
 msgid "Size"
@@ -16259,7 +16258,7 @@ msgstr "Förhandsgranska"
 msgid "RSS"
 msgstr "RSS"
 
-#: wp-includes/js/dist/block-editor.js:16614
+#: wp-includes/js/dist/block-editor.js:16636
 msgid "Submit"
 msgstr "Skicka"
 
@@ -16319,7 +16318,7 @@ msgid "Name"
 msgstr "Namn"
 
 #: wp-includes/class-wp-editor.php:1113
-#: wp-includes/js/dist/block-editor.js:17266
+#: wp-includes/js/dist/block-editor.js:17288
 msgid "Advanced"
 msgstr "Avancerat"
 
@@ -16384,7 +16383,7 @@ msgstr "Kommentarer"
 
 #: wp-includes/class-wp-customize-widgets.php:777 wp-includes/media.php:3678
 #: wp-includes/class-wp-editor.php:1284
-#: wp-includes/js/dist/block-editor.js:15928
+#: wp-includes/js/dist/block-editor.js:15950
 #: wp-includes/js/dist/block-library.js:17530
 #: wp-includes/js/dist/format-library.js:712
 #: wp-includes/js/dist/format-library.js:974
@@ -16427,14 +16426,14 @@ msgctxt "noun"
 msgid "Comment"
 msgstr "Kommentar"
 
-#: wp-includes/widgets/class-wp-widget-media-image.php:112
+#: wp-includes/widgets/class-wp-widget-media-image.php:111
 #: wp-includes/media-template.php:1123 wp-includes/media-template.php:1207
 #: wp-includes/media.php:3635 wp-includes/media.php:4164
 #: wp-includes/customize/class-wp-customize-nav-menu-item-control.php:92
 #: wp-includes/class-wp-editor.php:1159 wp-includes/class-wp-editor.php:1732
 #: wp-includes/class-wp-customize-nav-menus.php:1189
-#: wp-includes/js/dist/block-editor.js:15921
-#: wp-includes/js/dist/block-editor.js:16477
+#: wp-includes/js/dist/block-editor.js:15943
+#: wp-includes/js/dist/block-editor.js:16499
 #: wp-includes/js/dist/block-library.js:11720
 msgid "URL"
 msgstr "URL"
