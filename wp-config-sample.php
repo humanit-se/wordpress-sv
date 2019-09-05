@@ -3,8 +3,8 @@
  * Baskonfiguration för WordPress.
  *
  * Denna fil används av wp-config.php-genereringsskript under installationen.
- * Du behöver inte använda webbplatsens installationsrutin, utan kan kopiera
- * denna fil direkt till "wp-config.php" och fylla i alla värden.
+ * Du behöver inte använda webbplatsen, du kan kopiera denna fil direkt till
+ * "wp-config.php" och fylla i värdena.
  *
  * Denna fil innehåller följande konfigurationer:
  *
@@ -58,18 +58,18 @@ define('NONCE_SALT',       'Ange en unik fras här');
 /**#@-*/
 
 /**
- * Tabellprefix för WordPress-databasen.
+ * Tabellprefix för WordPress Databasen.
  *
  * Du kan ha flera installationer i samma databas om du ger varje installation ett unikt
- * prefix. Använd endast siffror, bokstäver och understreck!
+ * prefix. Endast siffror, bokstäver och understreck!
  */
-$table_prefix = 'wp_';
+$table_prefix  = 'wp_';
 
 /** 
  * För utvecklare: WordPress felsökningsläge. 
  * 
  * Ändra detta till true för att aktivera meddelanden under utveckling. 
- * Det rekommenderas att man som tilläggsskapare och temaskapare använder WP_DEBUG 
+ * Det är rekommderat att man som tilläggsskapare och temaskapare använder WP_DEBUG 
  * i sin utvecklingsmiljö. 
  *
  * För information om andra konstanter som kan användas för felsökning, 
@@ -79,9 +79,9 @@ $table_prefix = 'wp_';
  */ 
 define('WP_DEBUG', false);
 
-/* Det var allt, sluta redigera här och börja publicera! */
+/* Det var allt, sluta redigera här! Blogga på. */
 
-/** Absolut sökväg till WordPress-katalogen. */
+/** Absoluta sökväg till WordPress-katalogen. */
 if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
 
