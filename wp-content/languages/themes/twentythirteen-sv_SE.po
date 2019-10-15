@@ -25,49 +25,49 @@ msgctxt "comments title"
 msgid "One thought on &ldquo;%s&rdquo;"
 msgstr "En tanke kring ”%s”"
 
-#: functions.php:147
-msgid "Off-white"
-msgstr "Off-white"
-
-#: functions.php:142
-msgid "Beige"
-msgstr "Beige"
-
-#: functions.php:137
-msgid "Light Brown"
-msgstr "Ljusbrunt"
-
-#: functions.php:132
-msgid "Medium Brown"
-msgstr "Mellanbrunt"
-
-#: functions.php:127
-msgid "Dark Brown"
-msgstr "Mörkbrunt"
+#: functions.php:97
+msgid "Dark Gray"
+msgstr "Mörkgrått"
 
 #: functions.php:122
 msgid "White"
 msgstr "Vitt"
 
-#: functions.php:117
-msgid "Yellow"
-msgstr "Gult"
+#: functions.php:127
+msgid "Dark Brown"
+msgstr "Mörkbrunt"
 
-#: functions.php:112
-msgid "Light Orange"
-msgstr "Ljusorange"
-
-#: functions.php:107
-msgid "Medium Orange"
-msgstr "Mellanorange"
+#: functions.php:132
+msgid "Medium Brown"
+msgstr "Mellanbrunt"
 
 #: functions.php:102
 msgid "Red"
 msgstr "Röd"
 
-#: functions.php:97
-msgid "Dark Gray"
-msgstr "Mörkgrått"
+#: functions.php:117
+msgid "Yellow"
+msgstr "Gult"
+
+#: functions.php:107
+msgid "Medium Orange"
+msgstr "Mellanorange"
+
+#: functions.php:112
+msgid "Light Orange"
+msgstr "Ljusorange"
+
+#: functions.php:137
+msgid "Light Brown"
+msgstr "Ljusbrunt"
+
+#: functions.php:142
+msgid "Beige"
+msgstr "Beige"
+
+#: functions.php:147
+msgid "Off-white"
+msgstr "Off-white"
 
 #: taxonomy-post_format.php:23
 msgid "%s Archives"
