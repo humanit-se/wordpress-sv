@@ -97,6 +97,9 @@ if ( ! CUSTOM_TAGS ) {
 			'src' => true,
 		),
 		'b' => array(),
+		'bdo' => array(
+			'dir' => true,
+		),
 		'big' => array(),
 		'blockquote' => array(
 			'cite' => true,
@@ -386,6 +389,7 @@ if ( ! CUSTOM_TAGS ) {
 		'ol' => array(
 			'start' => true,
 			'type' => true,
+			'reversed' => true,
 		),
 		'var' => array(),
 		'video' => array(
@@ -1641,6 +1645,21 @@ function wp_kses_post( $data ) {
 }
 
 /**
+ * Navigates through an array, object, or scalar, and sanitizes content for
+ * allowed HTML tags for post content.
+ *
+ * @since 4.4.2
+ *
+ * @see map_deep()
+ *
+ * @param mixed $data The array, object, or scalar value to inspect.
+ * @return mixed The filtered content.
+ */
+function wp_kses_post_deep( $data ) {
+	return map_deep( $data, 'wp_kses_post' );
+}
+
+/**
  * Strips all of the HTML in the content.
  *
  * @since 2.1.0
@@ -1730,6 +1749,10 @@ function kses_init() {
  * Inline CSS filter
  *
  * @since 2.8.1
+ *
+ * @param string $css        A string of CSS rules.
+ * @param string $deprecated Not used.
+ * @return string            Filtered string of CSS rules.
  */
 function safecss_filter_attr( $css, $deprecated = '' ) {
 	if ( !empty( $deprecated ) )
@@ -1757,10 +1780,10 @@ function safecss_filter_attr( $css, $deprecated = '' ) {
 	'border-right-style', 'border-right-width', 'border-spacing', 'border-style', 'border-top',
 	'border-top-color', 'border-top-style', 'border-top-width', 'border-width', 'caption-side',
 	'clear', 'cursor', 'direction', 'font', 'font-family', 'font-size', 'font-style',
-	'font-variant', 'font-weight', 'height', 'letter-spacing', 'line-height', 'margin-bottom',
+	'font-variant', 'font-weight', 'height', 'min-height','max-height' , 'letter-spacing', 'line-height', 'margin-bottom',
 	'margin-left', 'margin-right', 'margin-top', 'overflow', 'padding', 'padding-bottom',
 	'padding-left', 'padding-right', 'padding-top', 'text-decoration', 'text-indent', 'vertical-align',
-	'width' ) );
+	'width', 'min-width', 'max-width' ) );
 
 	if ( empty($allowed_attr) )
 		return $css;
