@@ -313,9 +313,8 @@ commentReply = {
 	},
 
 	toggle : function(el) {
-		if ( 'none' !== $( el ).css( 'display' ) && ( $( '#replyrow' ).parent().is('#com-reply') || window.confirm( adminCommentsL10n.warnQuickEdit ) ) ) {
-			$( el ).find( 'a.vim-q' ).click();
-		}
+		if ( $(el).css('display') != 'none' )
+			$(el).find('a.vim-q').click();
 	},
 
 	revert : function() {
@@ -352,8 +351,8 @@ commentReply = {
 		$('#com-reply').append( replyrow );
 		$('#replycontent').css('height', '').val('');
 		$('#edithead input').val('');
-		$('.error', replyrow).empty().hide();
-		$( '.spinner', replyrow ).removeClass( 'is-active' );
+		$('.error', replyrow).html('').hide();
+		$('.spinner', replyrow).hide();
 
 		this.cid = '';
 	},
@@ -362,8 +361,7 @@ commentReply = {
 		var editRow, rowData, act, replyButton, editHeight,
 			t = this,
 			c = $('#comment-' + comment_id),
-			h = c.height(),
-			colspanVal = 0;
+			h = c.height();
 
 		t.close();
 		t.cid = comment_id;
@@ -373,12 +371,6 @@ commentReply = {
 		action = action || 'replyto';
 		act = 'edit' == action ? 'edit' : 'replyto';
 		act = t.act = act + '-comment';
-		colspanVal = $( 'th:visible, td:visible', c ).length;
-
-		// Make sure it's actually a table and there's a `colspan` value to apply.
-		if ( editRow.hasClass( 'inline-edit-row' ) && 0 !== colspanVal ) {
-			$( 'td', editRow ).attr( 'colspan', colspanVal );
-		}
 
 		$('#action', editRow).val(act);
 		$('#comment_post_ID', editRow).val(post_id);
@@ -405,7 +397,7 @@ commentReply = {
 			});
 		} else if ( action == 'add' ) {
 			$('#addhead, #addbtn', editRow).show();
-			$('#replyhead, #replybtn, #edithead, #savebtn', editRow).hide();
+			$('#replyhead, #replybtn, #edithead, #editbtn', editRow).hide();
 			$('#the-comment-list').prepend(editRow);
 			$('#replyrow').fadeIn(300);
 		} else {
@@ -450,7 +442,7 @@ commentReply = {
 		var post = {};
 
 		$('#replysubmit .error').hide();
-		$( '#replysubmit .spinner' ).addClass( 'is-active' );
+		$('#replysubmit .spinner').show();
 
 		$('#replyrow input').not(':button').each(function() {
 			var t = $(this);
@@ -533,7 +525,7 @@ commentReply = {
 	error : function(r) {
 		var er = r.statusText;
 
-		$( '#replysubmit .spinner' ).removeClass( 'is-active' );
+		$('#replysubmit .spinner').hide();
 
 		if ( r.responseText )
 			er = r.responseText.replace( /<.[^<>]*?>/g, '' );
@@ -611,9 +603,7 @@ $(document).ready(function(){
 					disableInInput: true,
 					type: 'keypress',
 					noDisable: '.check-column input[type="checkbox"]'
-				},
-				cycle_expr: '#the-comment-list tr',
-				start_row_index: 0
+				}
 			}
 		);
 	}
