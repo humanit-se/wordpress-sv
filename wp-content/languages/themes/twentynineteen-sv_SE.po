@@ -122,7 +122,7 @@ msgstr "Liten"
 msgid "S"
 msgstr "S"
 
-#: footer.php:37 functions.php:60
+#: functions.php:60 footer.php:37
 msgid "Footer Menu"
 msgstr "Sidfotsmeny"
 
@@ -172,14 +172,14 @@ msgid "Top Menu"
 msgstr "Toppmeny"
 
 #. translators: %s: Post title. Only visible to screen readers.
-#: template-parts/content/content-single.php:27
 #: template-parts/content/content.php:36
+#: template-parts/content/content-single.php:27
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "Fortsätt läsa<span class=\"screen-reader-text\"> \"%s\"</span>"
 
-#: image.php:52 template-parts/content/content-single.php:40
-#: template-parts/content/content-page.php:27
+#: image.php:52 template-parts/content/content-page.php:27
 #: template-parts/content/content.php:49
+#: template-parts/content/content-single.php:40
 msgid "Pages:"
 msgstr "Sidor:"
 
@@ -298,8 +298,8 @@ msgid "Category Archives: "
 msgstr "Kategoriarkiv:"
 
 #. translators: %s: Post title. Only visible to screen readers.
-#: inc/template-tags.php:120 template-parts/content/content-page.php:41
-#: template-parts/header/entry-header.php:32
+#: template-parts/content/content-page.php:41
+#: template-parts/header/entry-header.php:32 inc/template-tags.php:120
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr "Redigera <span class=\"screen-reader-text\">%s</span>"
 

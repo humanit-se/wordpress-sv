@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Themes - Twenty Twenty package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-03-31 20:55:08+0000\n"
+"PO-Revision-Date: 2020-08-14 16:50:10+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,6 +18,10 @@ msgstr "Vårt standardtema för 2020 är designat att till fullo tillvarata flex
 #. Theme Name of the theme
 msgid "Twenty Twenty"
 msgstr "Twenty Twenty"
+
+#: index.php:51
+msgid "Nothing Found"
+msgstr "Inget hittades"
 
 #: classes/class-twentytwenty-customize.php:246
 msgid "Show author bio"
@@ -169,7 +173,7 @@ msgstr[1] "Din sökning gav %s resultat."
 msgid "search again"
 msgstr "sök igen"
 
-#: template-parts/modal-search.php:20 searchform.php:24
+#: searchform.php:24 template-parts/modal-search.php:20
 msgid "Search for:"
 msgstr "Sök efter:"
 
@@ -208,7 +212,7 @@ msgstr[1] "%1$s svar på ”%2$s”"
 msgid "Comments"
 msgstr "Kommentarer"
 
-#: functions.php:489 inc/starter-content.php:177 inc/starter-content.php:187
+#: inc/starter-content.php:177 inc/starter-content.php:187 functions.php:489
 msgid "Primary"
 msgstr "Huvudmeny"
 
@@ -225,7 +229,7 @@ msgstr "Redigera <span class=\"screen-reader-text\">%s</span>"
 msgid "Footer Menu"
 msgstr "Sidfotsmeny"
 
-#: template-parts/content.php:48 template-parts/content-cover.php:138
+#: template-parts/content-cover.php:138 template-parts/content.php:48
 msgid "Pages:"
 msgstr "Sidor:"
 
@@ -233,7 +237,7 @@ msgstr "Sidor:"
 msgid "Footer"
 msgstr "Sidfot"
 
-#: template-parts/content.php:48 template-parts/content-cover.php:138
+#: template-parts/content-cover.php:138 template-parts/content.php:48
 msgid "Page"
 msgstr "Sida"
 
@@ -443,8 +447,8 @@ msgstr "Inläggsförfattare"
 msgid "Post date"
 msgstr "Inläggsdatum"
 
-#: template-parts/content-cover.php:70 template-parts/entry-header.php:36
-#: inc/template-tags.php:392
+#: inc/template-tags.php:392 template-parts/entry-header.php:36
+#: template-parts/content-cover.php:70
 msgid "Categories"
 msgstr "Kategorier"
 
@@ -479,7 +483,7 @@ msgid "Scroll Down"
 msgstr "Rulla ned"
 
 #. translators: %s: Author name.
-#: template-parts/entry-author-bio.php:20 inc/template-tags.php:357
+#: inc/template-tags.php:357 template-parts/entry-author-bio.php:20
 msgid "By %s"
 msgstr "Av %s"
 
