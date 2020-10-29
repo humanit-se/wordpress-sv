@@ -63,7 +63,7 @@ define('NONCE_SALT',       'Ange en unik fras här');
  * Du kan ha flera installationer i samma databas om du ger varje installation ett unikt
  * prefix. Använd endast siffror, bokstäver och understreck!
  */
-$table_prefix = 'wp_';
+$table_prefix  = 'wp_';
 
 /** 
  * För utvecklare: WordPress felsökningsläge. 
@@ -79,7 +79,7 @@ $table_prefix = 'wp_';
  */ 
 define('WP_DEBUG', false);
 
-/* Det var allt, sluta redigera här och börja publicera! */
+/* Det var allt, sluta redigera här och börja blogga! */
 
 /** Absolut sökväg till WordPress-katalogen. */
 if ( !defined('ABSPATH') )

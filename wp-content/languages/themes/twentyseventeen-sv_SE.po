@@ -307,21 +307,21 @@ msgstr "Ett svar på ”%s”"
 msgid "Page"
 msgstr "Sida"
 
-#: 404.php:21
-msgid "Oops! That page can&rsquo;t be found."
-msgstr "Ojdå! Sidan kunde inte hittas."
-
-#: 404.php:24
-msgid "It looks like nothing was found at this location. Maybe try a search?"
-msgstr "Det verkar inte som något kunde hittas för den här platsen. Testa en sökning kanske?"
+#: archive.php:50 index.php:54 search.php:51
+msgid "Next page"
+msgstr "Nästa sida"
 
 #: archive.php:49 index.php:53 search.php:50
 msgid "Previous page"
 msgstr "Föregående sida"
 
-#: archive.php:50 index.php:54 search.php:51
-msgid "Next page"
-msgstr "Nästa sida"
+#: 404.php:24
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "Det verkar inte som något kunde hittas för den här platsen. Testa en sökning kanske?"
+
+#: 404.php:21
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Ojdå! Sidan kunde inte hittas."
 
 #. Author of the theme
 msgid "the WordPress team"
