@@ -82,12 +82,12 @@ this["wp"] = this["wp"] || {}; this["wp"]["element"] =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 373);
+/******/ 	return __webpack_require__(__webpack_require__.s = 358);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 15:
+/***/ 10:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -162,14 +162,14 @@ function _objectWithoutProperties(source, excluded) {
 
 /***/ }),
 
-/***/ 27:
+/***/ 28:
 /***/ (function(module, exports) {
 
 (function() { module.exports = this["React"]; }());
 
 /***/ }),
 
-/***/ 32:
+/***/ 31:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -192,7 +192,7 @@ function _typeof(obj) {
 
 /***/ }),
 
-/***/ 373:
+/***/ 358:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -209,6 +209,7 @@ __webpack_require__.d(__webpack_exports__, "createRef", function() { return /* r
 __webpack_require__.d(__webpack_exports__, "forwardRef", function() { return /* reexport */ external_React_["forwardRef"]; });
 __webpack_require__.d(__webpack_exports__, "Fragment", function() { return /* reexport */ external_React_["Fragment"]; });
 __webpack_require__.d(__webpack_exports__, "isValidElement", function() { return /* reexport */ external_React_["isValidElement"]; });
+__webpack_require__.d(__webpack_exports__, "memo", function() { return /* reexport */ external_React_["memo"]; });
 __webpack_require__.d(__webpack_exports__, "StrictMode", function() { return /* reexport */ external_React_["StrictMode"]; });
 __webpack_require__.d(__webpack_exports__, "useCallback", function() { return /* reexport */ external_React_["useCallback"]; });
 __webpack_require__.d(__webpack_exports__, "useContext", function() { return /* reexport */ external_React_["useContext"]; });
@@ -220,6 +221,8 @@ __webpack_require__.d(__webpack_exports__, "useMemo", function() { return /* ree
 __webpack_require__.d(__webpack_exports__, "useReducer", function() { return /* reexport */ external_React_["useReducer"]; });
 __webpack_require__.d(__webpack_exports__, "useRef", function() { return /* reexport */ external_React_["useRef"]; });
 __webpack_require__.d(__webpack_exports__, "useState", function() { return /* reexport */ external_React_["useState"]; });
+__webpack_require__.d(__webpack_exports__, "lazy", function() { return /* reexport */ external_React_["lazy"]; });
+__webpack_require__.d(__webpack_exports__, "Suspense", function() { return /* reexport */ external_React_["Suspense"]; });
 __webpack_require__.d(__webpack_exports__, "concatChildren", function() { return /* reexport */ concatChildren; });
 __webpack_require__.d(__webpack_exports__, "switchChildrenNodeName", function() { return /* reexport */ switchChildrenNodeName; });
 __webpack_require__.d(__webpack_exports__, "createPortal", function() { return /* reexport */ external_ReactDOM_["createPortal"]; });
@@ -237,7 +240,7 @@ var objectSpread = __webpack_require__(7);
 var objectWithoutProperties = __webpack_require__(21);
 
 // EXTERNAL MODULE: external "React"
-var external_React_ = __webpack_require__(27);
+var external_React_ = __webpack_require__(28);
 
 // EXTERNAL MODULE: external "lodash"
 var external_lodash_ = __webpack_require__(2);
@@ -331,6 +334,11 @@ var external_lodash_ = __webpack_require__(2);
 
 
 /**
+ * @see https://reactjs.org/docs/react-api.html#reactmemo
+ */
+
+
+/**
  * Component that activates additional checks and warnings for its descendants.
  */
 
@@ -386,6 +394,16 @@ var external_lodash_ = __webpack_require__(2);
 
 
 /**
+ * @see https://reactjs.org/docs/react-api.html#reactlazy
+ */
+
+
+/**
+ * @see https://reactjs.org/docs/react-api.html#reactsuspense
+ */
+
+
+/**
  * Concatenate two or more React children objects.
  *
  * @param {...?Object} childrenArguments Array of children arguments (array of arrays/strings/objects) to concatenate.
@@ -398,7 +416,7 @@ function concatChildren() {
     childrenArguments[_key] = arguments[_key];
   }
 
-  return childrenArguments.reduce(function (memo, children, i) {
+  return childrenArguments.reduce(function (result, children, i) {
     external_React_["Children"].forEach(children, function (child, j) {
       if (child && 'string' !== typeof child) {
         child = Object(external_React_["cloneElement"])(child, {
@@ -406,9 +424,9 @@ function concatChildren() {
         });
       }
 
-      memo.push(child);
+      result.push(child);
     });
-    return memo;
+    return result;
   }, []);
 }
 /**
@@ -439,7 +457,7 @@ function switchChildrenNodeName(children, nodeName) {
 }
 
 // EXTERNAL MODULE: external "ReactDOM"
-var external_ReactDOM_ = __webpack_require__(52);
+var external_ReactDOM_ = __webpack_require__(57);
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/element/build-module/react-platform.js
 /**
@@ -505,10 +523,10 @@ var utils_isEmptyElement = function isEmptyElement(element) {
 };
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/typeof.js
-var esm_typeof = __webpack_require__(32);
+var esm_typeof = __webpack_require__(31);
 
 // EXTERNAL MODULE: external {"this":["wp","escapeHtml"]}
-var external_this_wp_escapeHtml_ = __webpack_require__(69);
+var external_this_wp_escapeHtml_ = __webpack_require__(71);
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/element/build-module/raw-html.js
 
@@ -524,7 +542,9 @@ var external_this_wp_escapeHtml_ = __webpack_require__(69);
  * To preserve additional props, a `div` wrapper _will_ be created if any props
  * aside from `children` are passed.
  *
+ * @param {Object} props
  * @param {string} props.children HTML to render.
+ * @param {Object} props.props    Any additonal props to be set on the containing div.
  *
  * @return {WPElement} Dangerously-rendering element.
  */
@@ -593,12 +613,15 @@ function RawHTML(_ref) {
 var _createContext = Object(external_React_["createContext"])(),
     Provider = _createContext.Provider,
     Consumer = _createContext.Consumer;
+
+var ForwardRef = Object(external_React_["forwardRef"])(function () {
+  return null;
+});
 /**
  * Valid attribute types.
  *
  * @type {Set}
  */
-
 
 var ATTRIBUTES_TYPES = new Set(['string', 'boolean', 'number']);
 /**
@@ -841,6 +864,9 @@ function renderElement(element, context) {
 
     case Consumer.$$typeof:
       return renderElement(props.children(context || type._currentValue), context, legacyContext);
+
+    case ForwardRef.$$typeof:
+      return renderElement(type.render(props), context, legacyContext);
   }
 
   return '';
@@ -1036,17 +1062,10 @@ function renderStyle(style) {
 
 /***/ }),
 
-/***/ 52:
+/***/ 57:
 /***/ (function(module, exports) {
 
 (function() { module.exports = this["ReactDOM"]; }());
-
-/***/ }),
-
-/***/ 69:
-/***/ (function(module, exports) {
-
-(function() { module.exports = this["wp"]["escapeHtml"]; }());
 
 /***/ }),
 
@@ -1055,7 +1074,7 @@ function renderStyle(style) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _objectSpread; });
-/* harmony import */ var _defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(15);
+/* harmony import */ var _defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(10);
 
 function _objectSpread(target) {
   for (var i = 1; i < arguments.length; i++) {
@@ -1075,6 +1094,13 @@ function _objectSpread(target) {
 
   return target;
 }
+
+/***/ }),
+
+/***/ 71:
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["wp"]["escapeHtml"]; }());
 
 /***/ })
 
