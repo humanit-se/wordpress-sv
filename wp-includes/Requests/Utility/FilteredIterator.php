@@ -43,16 +43,4 @@ class Requests_Utility_FilteredIterator extends ArrayIterator {
 		return $value;
 	}
 
-	/**
-	 * @inheritdoc
-	 */
-	public function unserialize( $serialized ) {
-	}
-
-	/**
-	 * @inheritdoc
-	 */
-	public function __unserialize( $serialized ) { // phpcs:ignore PHPCompatibility.FunctionNameRestrictions.ReservedFunctionNames.MethodDoubleUnderscore,PHPCompatibility.FunctionNameRestrictions.NewMagicMethods.__unserializeFound
-		$this->unserialize( $serialized );
-	}
 }
