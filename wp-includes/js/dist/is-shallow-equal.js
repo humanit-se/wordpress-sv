@@ -82,12 +82,12 @@ this["wp"] = this["wp"] || {}; this["wp"]["isShallowEqual"] =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 407);
+/******/ 	return __webpack_require__(__webpack_require__.s = 428);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 407:
+/***/ 428:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -96,13 +96,13 @@ this["wp"] = this["wp"] || {}; this["wp"]["isShallowEqual"] =
 /**
  * Internal dependencies;
  */
-var isShallowEqualObjects = __webpack_require__( 408 );
-var isShallowEqualArrays = __webpack_require__( 409 );
+var isShallowEqualObjects = __webpack_require__( 429 );
+var isShallowEqualArrays = __webpack_require__( 430 );
 
 var isArray = Array.isArray;
 
 /**
- * @typedef {{[key: string]: any}} ComparableObject
+ * @typedef {Record<string, any>} ComparableObject
  */
 
 /**
@@ -133,7 +133,7 @@ module.exports.isShallowEqualArrays = isShallowEqualArrays;
 
 /***/ }),
 
-/***/ 408:
+/***/ 429:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -192,7 +192,7 @@ module.exports = isShallowEqualObjects;
 
 /***/ }),
 
-/***/ 409:
+/***/ 430:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
