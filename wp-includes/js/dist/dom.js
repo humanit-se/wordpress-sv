@@ -82,45 +82,10 @@ this["wp"] = this["wp"] || {}; this["wp"]["dom"] =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 365);
+/******/ 	return __webpack_require__(__webpack_require__.s = 446);
 /******/ })
 /************************************************************************/
 /******/ ({
-
-/***/ 17:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ _toConsumableArray; });
-
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js
-function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) {
-    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
-      arr2[i] = arr[i];
-    }
-
-    return arr2;
-  }
-}
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/iterableToArray.js
-var iterableToArray = __webpack_require__(30);
-
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js
-function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance");
-}
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js
-
-
-
-function _toConsumableArray(arr) {
-  return _arrayWithoutHoles(arr) || Object(iterableToArray["a" /* default */])(arr) || _nonIterableSpread();
-}
-
-/***/ }),
 
 /***/ 2:
 /***/ (function(module, exports) {
@@ -129,18 +94,7 @@ function _toConsumableArray(arr) {
 
 /***/ }),
 
-/***/ 30:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _iterableToArray; });
-function _iterableToArray(iter) {
-  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
-}
-
-/***/ }),
-
-/***/ 365:
+/***/ 446:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -166,6 +120,7 @@ __webpack_require__.d(__webpack_exports__, "insertAfter", function() { return /*
 __webpack_require__.d(__webpack_exports__, "unwrap", function() { return /* reexport */ unwrap; });
 __webpack_require__.d(__webpack_exports__, "replaceTag", function() { return /* reexport */ replaceTag; });
 __webpack_require__.d(__webpack_exports__, "wrap", function() { return /* reexport */ wrap; });
+__webpack_require__.d(__webpack_exports__, "__unstableStripHTML", function() { return /* reexport */ __unstableStripHTML; });
 
 // NAMESPACE OBJECT: ./node_modules/@wordpress/dom/build-module/focusable.js
 var focusable_namespaceObject = {};
@@ -177,13 +132,10 @@ var tabbable_namespaceObject = {};
 __webpack_require__.r(tabbable_namespaceObject);
 __webpack_require__.d(tabbable_namespaceObject, "isTabbableIndex", function() { return isTabbableIndex; });
 __webpack_require__.d(tabbable_namespaceObject, "find", function() { return tabbable_find; });
-
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js + 2 modules
-var toConsumableArray = __webpack_require__(17);
+__webpack_require__.d(tabbable_namespaceObject, "findPrevious", function() { return findPrevious; });
+__webpack_require__.d(tabbable_namespaceObject, "findNext", function() { return findNext; });
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/focusable.js
-
-
 /**
  * References:
  *
@@ -247,7 +199,7 @@ function isValidFocusableArea(element) {
 
 function find(context) {
   var elements = context.querySelectorAll(SELECTOR);
-  return Object(toConsumableArray["a" /* default */])(elements).filter(function (element) {
+  return Array.from(elements).filter(function (element) {
     if (!isVisible(element)) {
       return false;
     }
@@ -262,8 +214,8 @@ function find(context) {
   });
 }
 
-// EXTERNAL MODULE: external "lodash"
-var external_lodash_ = __webpack_require__(2);
+// EXTERNAL MODULE: external {"this":"lodash"}
+var external_this_lodash_ = __webpack_require__(2);
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/tabbable.js
 /**
@@ -338,7 +290,7 @@ function createStatefulCollapseRadioGroup() {
 
     if (hasChosen) {
       var hadChosenElement = CHOSEN_RADIO_BY_NAME[name];
-      result = Object(external_lodash_["without"])(result, hadChosenElement);
+      result = Object(external_this_lodash_["without"])(result, hadChosenElement);
     }
 
     CHOSEN_RADIO_BY_NAME[name] = element;
@@ -399,9 +351,53 @@ function compareObjectTabbables(a, b) {
 
   return aTabIndex - bTabIndex;
 }
+/**
+ * Givin focusable elements, filters out tabbable element.
+ *
+ * @param {Array} focusables Focusable elements to filter.
+ *
+ * @return {Array} Tabbable elements.
+ */
+
+
+function filterTabbable(focusables) {
+  return focusables.filter(isTabbableIndex).map(mapElementToObjectTabbable).sort(compareObjectTabbables).map(mapObjectTabbableToElement).reduce(createStatefulCollapseRadioGroup(), []);
+}
 
 function tabbable_find(context) {
-  return find(context).filter(isTabbableIndex).map(mapElementToObjectTabbable).sort(compareObjectTabbables).map(mapObjectTabbableToElement).reduce(createStatefulCollapseRadioGroup(), []);
+  return filterTabbable(find(context));
+}
+/**
+ * Given a focusable element, find the preceding tabbable element.
+ *
+ * @param {Element} element The focusable element before which to look. Defaults
+ *                          to the active element.
+ */
+
+function findPrevious() {
+  var element = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.activeElement;
+  var focusables = find(document.body);
+  var index = focusables.indexOf(element); // Remove all focusables after and including `element`.
+
+  focusables.length = index;
+  return Object(external_this_lodash_["last"])(filterTabbable(focusables));
+}
+/**
+ * Given a focusable element, find the next tabbable element.
+ *
+ * @param {Element} element The focusable element after which to look. Defaults
+ *                          to the active element.
+ */
+
+function findNext() {
+  var element = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.activeElement;
+  var focusables = find(document.body);
+  var index = focusables.indexOf(element); // Remove all focusables before and inside `element`.
+
+  var remaining = focusables.slice(index + 1).filter(function (node) {
+    return !element.contains(node);
+  });
+  return Object(external_this_lodash_["first"])(filterTabbable(remaining));
 }
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/dom.js
@@ -414,6 +410,7 @@ function tabbable_find(context) {
  */
 
 var _window = window,
+    DOMParser = _window.DOMParser,
     getComputedStyle = _window.getComputedStyle;
 var _window$Node = window.Node,
     TEXT_NODE = _window$Node.TEXT_NODE,
@@ -476,7 +473,7 @@ function isSelectionForward(selection) {
 
 
 function isEdge(container, isReverse, onlyVertical) {
-  if (Object(external_lodash_["includes"])(['INPUT', 'TEXTAREA'], container.tagName)) {
+  if (Object(external_this_lodash_["includes"])(['INPUT', 'TEXTAREA'], container.tagName)) {
     if (container.selectionStart !== container.selectionEnd) {
       return false;
     }
@@ -498,7 +495,8 @@ function isEdge(container, isReverse, onlyVertical) {
     return false;
   }
 
-  var range = selection.getRangeAt(0).cloneRange();
+  var originalRange = selection.getRangeAt(0);
+  var range = originalRange.cloneRange();
   var isForward = isSelectionForward(selection);
   var isCollapsed = selection.isCollapsed; // Collapse in direction of selection.
 
@@ -527,7 +525,8 @@ function isEdge(container, isReverse, onlyVertical) {
 
   var buffer = 3 * parseInt(lineHeight, 10) / 4;
   var containerRect = container.getBoundingClientRect();
-  var verticalEdge = isReverse ? containerRect.top + padding > rangeRect.top - buffer : containerRect.bottom - padding < rangeRect.bottom + buffer;
+  var originalRangeRect = getRectangleFromRange(originalRange);
+  var verticalEdge = isReverse ? containerRect.top + padding > originalRangeRect.top - buffer : containerRect.bottom - padding < originalRangeRect.bottom + buffer;
 
   if (!verticalEdge) {
     return false;
@@ -655,7 +654,7 @@ function placeCaretAtHorizontalEdge(container, isReverse) {
     return;
   }
 
-  if (Object(external_lodash_["includes"])(['INPUT', 'TEXTAREA'], container.tagName)) {
+  if (Object(external_this_lodash_["includes"])(['INPUT', 'TEXTAREA'], container.tagName)) {
     container.focus();
 
     if (isReverse) {
@@ -862,7 +861,7 @@ function documentHasSelection() {
  */
 
 function isEntirelySelected(element) {
-  if (Object(external_lodash_["includes"])(['INPUT', 'TEXTAREA'], element.nodeName)) {
+  if (Object(external_this_lodash_["includes"])(['INPUT', 'TEXTAREA'], element.nodeName)) {
     return element.selectionStart === 0 && element.value.length === element.selectionEnd;
   }
 
@@ -1032,6 +1031,18 @@ function replaceTag(node, tagName) {
 function wrap(newNode, referenceNode) {
   referenceNode.parentNode.insertBefore(newNode, referenceNode);
   newNode.appendChild(referenceNode);
+}
+/**
+ * Removes any HTML tags from the provided string.
+ *
+ * @param {string} html The string containing html.
+ *
+ * @return {string} The text content with any html removed.
+ */
+
+function __unstableStripHTML(html) {
+  var document = new DOMParser().parseFromString(html, 'text/html');
+  return document.body.textContent || '';
 }
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/dom/build-module/index.js
