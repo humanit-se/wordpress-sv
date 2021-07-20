@@ -3,8 +3,8 @@
  * Baskonfiguration för WordPress.
  *
  * Denna fil används av wp-config.php-genereringsskript under installationen.
- * Du behöver inte använda webbplatsen, du kan kopiera denna fil direkt till
- * "wp-config.php" och fylla i värdena.
+ * Du behöver inte använda webbplatsens installationsrutin, utan kan kopiera
+ * denna fil direkt till "wp-config.php" och fylla i alla värden.
  *
  * Denna fil innehåller följande konfigurationer:
  *
@@ -13,7 +13,7 @@
  * * Tabellprefix för databas
  * * ABSPATH
  *
- * @link https://codex.wordpress.org/Editing_wp-config.php
+ * @link https://wordpress.org/support/article/editing-wp-config-php/
  *
  * @package WordPress
  */
@@ -58,18 +58,18 @@ define('NONCE_SALT',       'Ange en unik fras här');
 /**#@-*/
 
 /**
- * Tabellprefix för WordPress Databasen.
+ * Tabellprefix för WordPress-databasen.
  *
  * Du kan ha flera installationer i samma databas om du ger varje installation ett unikt
- * prefix. Endast siffror, bokstäver och understreck!
+ * prefix. Använd endast siffror, bokstäver och understreck!
  */
-$table_prefix  = 'wp_';
+$table_prefix = 'wp_';
 
 /** 
  * För utvecklare: WordPress felsökningsläge. 
  * 
  * Ändra detta till true för att aktivera meddelanden under utveckling. 
- * Det är rekommderat att man som tilläggsskapare och temaskapare använder WP_DEBUG 
+ * Det rekommenderas att man som tilläggsskapare och temaskapare använder WP_DEBUG 
  * i sin utvecklingsmiljö. 
  *
  * För information om andra konstanter som kan användas för felsökning, 
@@ -78,12 +78,16 @@ $table_prefix  = 'wp_';
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */ 
 define('WP_DEBUG', false);
+/* Lägg in eventuella anpassade värden mellan denna rad och raden med "sluta redigera här". */
 
-/* Det var allt, sluta redigera här! Blogga på. */
 
-/** Absoluta sökväg till WordPress-katalogen. */
+
+
+/* Det var allt, sluta redigera här och börja publicera! */
+
+/** Absolut sökväg till WordPress-katalogen. */
 if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(__FILE__) . '/');
+	define('ABSPATH', __DIR__ . '/');
 
 /** Anger WordPress-värden och inkluderade filer. */
 require_once(ABSPATH . 'wp-settings.php');
