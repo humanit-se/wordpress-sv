@@ -203,7 +203,7 @@ function replace(tag, text, callback) {
     var result = callback(fromMatch(arguments)); // Make sure to return any of the extra brackets if they weren't used to
     // escape the shortcode.
 
-    return result || result === '' ? left + result + right : match;
+    return result ? left + result + right : match;
   });
 }
 /**
@@ -627,7 +627,7 @@ module.exports = memize;
 /***/ "YLtl":
 /***/ (function(module, exports) {
 
-(function() { module.exports = window["lodash"]; }());
+(function() { module.exports = this["lodash"]; }());
 
 /***/ })
 

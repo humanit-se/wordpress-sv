@@ -103,7 +103,7 @@ function _classCallCheck(instance, Constructor) {
 /***/ "1ZqX":
 /***/ (function(module, exports) {
 
-(function() { module.exports = window["wp"]["data"]; }());
+(function() { module.exports = this["wp"]["data"]; }());
 
 /***/ }),
 
@@ -120,18 +120,18 @@ var esm_extends = __webpack_require__("wx14");
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
 var defineProperty = __webpack_require__("rePB");
 
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js + 1 modules
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js
 var objectWithoutProperties = __webpack_require__("Ff2n");
 
-// EXTERNAL MODULE: external ["wp","element"]
-var external_wp_element_ = __webpack_require__("GRId");
+// EXTERNAL MODULE: external {"this":["wp","element"]}
+var external_this_wp_element_ = __webpack_require__("GRId");
 
-// EXTERNAL MODULE: external ["wp","data"]
-var external_wp_data_ = __webpack_require__("1ZqX");
+// EXTERNAL MODULE: external {"this":["wp","data"]}
+var external_this_wp_data_ = __webpack_require__("1ZqX");
 
-// EXTERNAL MODULE: external ["wp","deprecated"]
-var external_wp_deprecated_ = __webpack_require__("NMb1");
-var external_wp_deprecated_default = /*#__PURE__*/__webpack_require__.n(external_wp_deprecated_);
+// EXTERNAL MODULE: external {"this":["wp","deprecated"]}
+var external_this_wp_deprecated_ = __webpack_require__("NMb1");
+var external_this_wp_deprecated_default = /*#__PURE__*/__webpack_require__.n(external_this_wp_deprecated_);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js
 var classCallCheck = __webpack_require__("1OyB");
@@ -139,30 +139,30 @@ var classCallCheck = __webpack_require__("1OyB");
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/createClass.js
 var createClass = __webpack_require__("vuIU");
 
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/inherits.js
-var inherits = __webpack_require__("Ji7U");
-
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js
 var possibleConstructorReturn = __webpack_require__("md7G");
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js
 var getPrototypeOf = __webpack_require__("foSv");
 
-// EXTERNAL MODULE: external "lodash"
-var external_lodash_ = __webpack_require__("YLtl");
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/inherits.js + 1 modules
+var inherits = __webpack_require__("Ji7U");
 
-// EXTERNAL MODULE: external ["wp","i18n"]
-var external_wp_i18n_ = __webpack_require__("l3Sj");
+// EXTERNAL MODULE: external {"this":"lodash"}
+var external_this_lodash_ = __webpack_require__("YLtl");
 
-// EXTERNAL MODULE: external ["wp","apiFetch"]
-var external_wp_apiFetch_ = __webpack_require__("ywyh");
-var external_wp_apiFetch_default = /*#__PURE__*/__webpack_require__.n(external_wp_apiFetch_);
+// EXTERNAL MODULE: external {"this":["wp","i18n"]}
+var external_this_wp_i18n_ = __webpack_require__("l3Sj");
 
-// EXTERNAL MODULE: external ["wp","url"]
-var external_wp_url_ = __webpack_require__("Mmq9");
+// EXTERNAL MODULE: external {"this":["wp","apiFetch"]}
+var external_this_wp_apiFetch_ = __webpack_require__("ywyh");
+var external_this_wp_apiFetch_default = /*#__PURE__*/__webpack_require__.n(external_this_wp_apiFetch_);
 
-// EXTERNAL MODULE: external ["wp","components"]
-var external_wp_components_ = __webpack_require__("tI+e");
+// EXTERNAL MODULE: external {"this":["wp","url"]}
+var external_this_wp_url_ = __webpack_require__("Mmq9");
+
+// EXTERNAL MODULE: external {"this":["wp","components"]}
+var external_this_wp_components_ = __webpack_require__("tI+e");
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/server-side-render/build-module/server-side-render.js
 
@@ -173,10 +173,6 @@ var external_wp_components_ = __webpack_require__("tI+e");
 
 
 
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = Object(getPrototypeOf["a" /* default */])(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = Object(getPrototypeOf["a" /* default */])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(possibleConstructorReturn["a" /* default */])(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
@@ -198,23 +194,23 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function rendererPath(block) {
   var attributes = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
   var urlQueryArgs = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-  return Object(external_wp_url_["addQueryArgs"])("/wp/v2/block-renderer/".concat(block), _objectSpread(_objectSpread({
+  return Object(external_this_wp_url_["addQueryArgs"])("/wp/v2/block-renderer/".concat(block), _objectSpread({
     context: 'edit'
   }, null !== attributes ? {
     attributes: attributes
-  } : {}), urlQueryArgs));
+  } : {}, {}, urlQueryArgs));
 }
-var server_side_render_ServerSideRender = /*#__PURE__*/function (_Component) {
+var server_side_render_ServerSideRender =
+/*#__PURE__*/
+function (_Component) {
   Object(inherits["a" /* default */])(ServerSideRender, _Component);
-
-  var _super = _createSuper(ServerSideRender);
 
   function ServerSideRender(props) {
     var _this;
 
     Object(classCallCheck["a" /* default */])(this, ServerSideRender);
 
-    _this = _super.call(this, props);
+    _this = Object(possibleConstructorReturn["a" /* default */])(this, Object(getPrototypeOf["a" /* default */])(ServerSideRender).call(this, props));
     _this.state = {
       response: null
     };
@@ -228,7 +224,7 @@ var server_side_render_ServerSideRender = /*#__PURE__*/function (_Component) {
       this.fetch(this.props); // Only debounce once the initial fetch occurs to ensure that the first
       // renders show data as soon as possible.
 
-      this.fetch = Object(external_lodash_["debounce"])(this.fetch, 500);
+      this.fetch = Object(external_this_lodash_["debounce"])(this.fetch, 500);
     }
   }, {
     key: "componentWillUnmount",
@@ -238,7 +234,7 @@ var server_side_render_ServerSideRender = /*#__PURE__*/function (_Component) {
   }, {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps) {
-      if (!Object(external_lodash_["isEqual"])(prevProps, this.props)) {
+      if (!Object(external_this_lodash_["isEqual"])(prevProps, this.props)) {
         this.fetch(this.props);
       }
     }
@@ -260,24 +256,13 @@ var server_side_render_ServerSideRender = /*#__PURE__*/function (_Component) {
       var block = props.block,
           _props$attributes = props.attributes,
           attributes = _props$attributes === void 0 ? null : _props$attributes,
-          _props$httpMethod = props.httpMethod,
-          httpMethod = _props$httpMethod === void 0 ? 'GET' : _props$httpMethod,
           _props$urlQueryArgs = props.urlQueryArgs,
-          urlQueryArgs = _props$urlQueryArgs === void 0 ? {} : _props$urlQueryArgs; // If httpMethod is 'POST', send the attributes in the request body instead of the URL.
-      // This allows sending a larger attributes object than in a GET request, where the attributes are in the URL.
-
-      var isPostRequest = 'POST' === httpMethod;
-      var urlAttributes = isPostRequest ? null : attributes;
-      var path = rendererPath(block, urlAttributes, urlQueryArgs);
-      var data = isPostRequest ? {
-        attributes: attributes
-      } : null; // Store the latest fetch request so that when we process it, we can
+          urlQueryArgs = _props$urlQueryArgs === void 0 ? {} : _props$urlQueryArgs;
+      var path = rendererPath(block, attributes, urlQueryArgs); // Store the latest fetch request so that when we process it, we can
       // check if it is the current request, to avoid race conditions on slow networks.
 
-      var fetchRequest = this.currentFetchRequest = external_wp_apiFetch_default()({
-        path: path,
-        data: data,
-        method: isPostRequest ? 'POST' : 'GET'
+      var fetchRequest = this.currentFetchRequest = external_this_wp_apiFetch_default()({
+        path: path
       }).then(function (response) {
         if (_this2.isStillMounted && fetchRequest === _this2.currentFetchRequest && response) {
           _this2.setState({
@@ -307,20 +292,20 @@ var server_side_render_ServerSideRender = /*#__PURE__*/function (_Component) {
           LoadingResponsePlaceholder = _this$props.LoadingResponsePlaceholder;
 
       if (response === '') {
-        return Object(external_wp_element_["createElement"])(EmptyResponsePlaceholder, Object(esm_extends["a" /* default */])({
+        return Object(external_this_wp_element_["createElement"])(EmptyResponsePlaceholder, Object(esm_extends["a" /* default */])({
           response: response
         }, this.props));
       } else if (!response) {
-        return Object(external_wp_element_["createElement"])(LoadingResponsePlaceholder, Object(esm_extends["a" /* default */])({
+        return Object(external_this_wp_element_["createElement"])(LoadingResponsePlaceholder, Object(esm_extends["a" /* default */])({
           response: response
         }, this.props));
       } else if (response.error) {
-        return Object(external_wp_element_["createElement"])(ErrorResponsePlaceholder, Object(esm_extends["a" /* default */])({
+        return Object(external_this_wp_element_["createElement"])(ErrorResponsePlaceholder, Object(esm_extends["a" /* default */])({
           response: response
         }, this.props));
       }
 
-      return Object(external_wp_element_["createElement"])(external_wp_element_["RawHTML"], {
+      return Object(external_this_wp_element_["createElement"])(external_this_wp_element_["RawHTML"], {
         key: "html",
         className: className
       }, response);
@@ -328,28 +313,28 @@ var server_side_render_ServerSideRender = /*#__PURE__*/function (_Component) {
   }]);
 
   return ServerSideRender;
-}(external_wp_element_["Component"]);
+}(external_this_wp_element_["Component"]);
 server_side_render_ServerSideRender.defaultProps = {
   EmptyResponsePlaceholder: function EmptyResponsePlaceholder(_ref) {
     var className = _ref.className;
-    return Object(external_wp_element_["createElement"])(external_wp_components_["Placeholder"], {
+    return Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Placeholder"], {
       className: className
-    }, Object(external_wp_i18n_["__"])('Block rendered as empty.'));
+    }, Object(external_this_wp_i18n_["__"])('Block rendered as empty.'));
   },
   ErrorResponsePlaceholder: function ErrorResponsePlaceholder(_ref2) {
     var response = _ref2.response,
         className = _ref2.className;
-    var errorMessage = Object(external_wp_i18n_["sprintf"])( // translators: %s: error message describing the problem
-    Object(external_wp_i18n_["__"])('Error loading block: %s'), response.errorMsg);
-    return Object(external_wp_element_["createElement"])(external_wp_components_["Placeholder"], {
+    // translators: %s: error message describing the problem
+    var errorMessage = Object(external_this_wp_i18n_["sprintf"])(Object(external_this_wp_i18n_["__"])('Error loading block: %s'), response.errorMsg);
+    return Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Placeholder"], {
       className: className
     }, errorMessage);
   },
   LoadingResponsePlaceholder: function LoadingResponsePlaceholder(_ref3) {
     var className = _ref3.className;
-    return Object(external_wp_element_["createElement"])(external_wp_components_["Placeholder"], {
+    return Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Placeholder"], {
       className: className
-    }, Object(external_wp_element_["createElement"])(external_wp_components_["Spinner"], null));
+    }, Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Spinner"], null));
   }
 };
 /* harmony default export */ var server_side_render = (server_side_render_ServerSideRender);
@@ -380,7 +365,7 @@ function build_module_objectSpread(target) { for (var i = 1; i < arguments.lengt
  */
 
 var EMPTY_OBJECT = {};
-var ExportedServerSideRender = Object(external_wp_data_["withSelect"])(function (select) {
+var ExportedServerSideRender = Object(external_this_wp_data_["withSelect"])(function (select) {
   var coreEditorSelect = select('core/editor');
 
   if (coreEditorSelect) {
@@ -400,7 +385,7 @@ var ExportedServerSideRender = Object(external_wp_data_["withSelect"])(function 
       currentPostId = _ref.currentPostId,
       props = Object(objectWithoutProperties["a" /* default */])(_ref, ["urlQueryArgs", "currentPostId"]);
 
-  var newUrlQueryArgs = Object(external_wp_element_["useMemo"])(function () {
+  var newUrlQueryArgs = Object(external_this_wp_element_["useMemo"])(function () {
     if (!currentPostId) {
       return urlQueryArgs;
     }
@@ -409,17 +394,17 @@ var ExportedServerSideRender = Object(external_wp_data_["withSelect"])(function 
       post_id: currentPostId
     }, urlQueryArgs);
   }, [currentPostId, urlQueryArgs]);
-  return Object(external_wp_element_["createElement"])(server_side_render, Object(esm_extends["a" /* default */])({
+  return Object(external_this_wp_element_["createElement"])(server_side_render, Object(esm_extends["a" /* default */])({
     urlQueryArgs: newUrlQueryArgs
   }, props));
 });
 
 if (window && window.wp && window.wp.components) {
-  window.wp.components.ServerSideRender = Object(external_wp_element_["forwardRef"])(function (props, ref) {
-    external_wp_deprecated_default()('wp.components.ServerSideRender', {
+  window.wp.components.ServerSideRender = Object(external_this_wp_element_["forwardRef"])(function (props, ref) {
+    external_this_wp_deprecated_default()('wp.components.ServerSideRender', {
       alternative: 'wp.serverSideRender'
     });
-    return Object(external_wp_element_["createElement"])(ExportedServerSideRender, Object(esm_extends["a" /* default */])({}, props, {
+    return Object(external_this_wp_element_["createElement"])(ExportedServerSideRender, Object(esm_extends["a" /* default */])({}, props, {
       ref: ref
     }));
   });
@@ -434,30 +419,12 @@ if (window && window.wp && window.wp.components) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ _objectWithoutProperties; });
-
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
-function _objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null) return {};
-  var target = {};
-  var sourceKeys = Object.keys(source);
-  var key, i;
-
-  for (i = 0; i < sourceKeys.length; i++) {
-    key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0) continue;
-    target[key] = source[key];
-  }
-
-  return target;
-}
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _objectWithoutProperties; });
+/* harmony import */ var _objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("zLVn");
 
 function _objectWithoutProperties(source, excluded) {
   if (source == null) return {};
-  var target = _objectWithoutPropertiesLoose(source, excluded);
+  var target = Object(_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(source, excluded);
   var key, i;
 
   if (Object.getOwnPropertySymbols) {
@@ -479,7 +446,7 @@ function _objectWithoutProperties(source, excluded) {
 /***/ "GRId":
 /***/ (function(module, exports) {
 
-(function() { module.exports = window["wp"]["element"]; }());
+(function() { module.exports = this["wp"]["element"]; }());
 
 /***/ }),
 
@@ -502,8 +469,20 @@ function _assertThisInitialized(self) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _inherits; });
-/* harmony import */ var _babel_runtime_helpers_esm_setPrototypeOf__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("s4An");
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ _inherits; });
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js
+function _setPrototypeOf(o, p) {
+  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+
+  return _setPrototypeOf(o, p);
+}
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/inherits.js
 
 function _inherits(subClass, superClass) {
   if (typeof superClass !== "function" && superClass !== null) {
@@ -517,7 +496,7 @@ function _inherits(subClass, superClass) {
       configurable: true
     }
   });
-  if (superClass) Object(_babel_runtime_helpers_esm_setPrototypeOf__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(subClass, superClass);
+  if (superClass) _setPrototypeOf(subClass, superClass);
 }
 
 /***/ }),
@@ -525,14 +504,14 @@ function _inherits(subClass, superClass) {
 /***/ "Mmq9":
 /***/ (function(module, exports) {
 
-(function() { module.exports = window["wp"]["url"]; }());
+(function() { module.exports = this["wp"]["url"]; }());
 
 /***/ }),
 
 /***/ "NMb1":
 /***/ (function(module, exports) {
 
-(function() { module.exports = window["wp"]["deprecated"]; }());
+(function() { module.exports = this["wp"]["deprecated"]; }());
 
 /***/ }),
 
@@ -562,7 +541,7 @@ function _typeof(obj) {
 /***/ "YLtl":
 /***/ (function(module, exports) {
 
-(function() { module.exports = window["lodash"]; }());
+(function() { module.exports = this["lodash"]; }());
 
 /***/ }),
 
@@ -583,7 +562,7 @@ function _getPrototypeOf(o) {
 /***/ "l3Sj":
 /***/ (function(module, exports) {
 
-(function() { module.exports = window["wp"]["i18n"]; }());
+(function() { module.exports = this["wp"]["i18n"]; }());
 
 /***/ }),
 
@@ -592,16 +571,16 @@ function _getPrototypeOf(o) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _possibleConstructorReturn; });
-/* harmony import */ var _babel_runtime_helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("U8pU");
-/* harmony import */ var _babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("JX7q");
+/* harmony import */ var _helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("U8pU");
+/* harmony import */ var _assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("JX7q");
 
 
 function _possibleConstructorReturn(self, call) {
-  if (call && (Object(_babel_runtime_helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(call) === "object" || typeof call === "function")) {
+  if (call && (Object(_helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(call) === "object" || typeof call === "function")) {
     return call;
   }
 
-  return Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])(self);
+  return Object(_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])(self);
 }
 
 /***/ }),
@@ -628,26 +607,10 @@ function _defineProperty(obj, key, value) {
 
 /***/ }),
 
-/***/ "s4An":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _setPrototypeOf; });
-function _setPrototypeOf(o, p) {
-  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
-    o.__proto__ = p;
-    return o;
-  };
-
-  return _setPrototypeOf(o, p);
-}
-
-/***/ }),
-
 /***/ "tI+e":
 /***/ (function(module, exports) {
 
-(function() { module.exports = window["wp"]["components"]; }());
+(function() { module.exports = this["wp"]["components"]; }());
 
 /***/ }),
 
@@ -702,7 +665,29 @@ function _extends() {
 /***/ "ywyh":
 /***/ (function(module, exports) {
 
-(function() { module.exports = window["wp"]["apiFetch"]; }());
+(function() { module.exports = this["wp"]["apiFetch"]; }());
+
+/***/ }),
+
+/***/ "zLVn":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _objectWithoutPropertiesLoose; });
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
 
 /***/ })
 
