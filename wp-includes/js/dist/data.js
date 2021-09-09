@@ -368,7 +368,7 @@ function _unsupportedIterableToArray(o, minLen) {
   if (typeof o === "string") return Object(_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(o, minLen);
   var n = Object.prototype.toString.call(o).slice(8, -1);
   if (n === "Object" && o.constructor) n = o.constructor.name;
-  if (n === "Map" || n === "Set") return Array.from(n);
+  if (n === "Map" || n === "Set") return Array.from(o);
   if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Object(_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(o, minLen);
 }
 
@@ -754,6 +754,7 @@ function _asyncToGenerator(fn) {
 /***/ (function(module, exports) {
 
 module.exports = isPromise;
+module.exports.default = isPromise;
 
 function isPromise(obj) {
   return !!obj && (typeof obj === 'object' || typeof obj === 'function') && typeof obj.then === 'function';
@@ -2366,9 +2367,7 @@ function mapResolvers(resolvers, selectors, store) {
       }
 
       function _fulfillSelector() {
-        _fulfillSelector = Object(asyncToGenerator["a" /* default */])(
-        /*#__PURE__*/
-        external_this_regeneratorRuntime_default.a.mark(function _callee() {
+        _fulfillSelector = Object(asyncToGenerator["a" /* default */])( /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(function _callee() {
           var state, _store$__unstableOrig, metadata;
 
           return external_this_regeneratorRuntime_default.a.wrap(function _callee$(_context) {
@@ -2440,9 +2439,7 @@ function fulfillResolver(_x, _x2, _x3) {
 }
 
 function _fulfillResolver() {
-  _fulfillResolver = Object(asyncToGenerator["a" /* default */])(
-  /*#__PURE__*/
-  external_this_regeneratorRuntime_default.a.mark(function _callee2(store, resolvers, selectorName) {
+  _fulfillResolver = Object(asyncToGenerator["a" /* default */])( /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(function _callee2(store, resolvers, selectorName) {
     var resolver,
         _len4,
         args,
@@ -2584,6 +2581,8 @@ function registry_objectSpread(target) { for (var i = 1; i < arguments.length; i
 
 /**
  * @typedef {Object} WPDataPlugin An object of registry function overrides.
+ *
+ * @property {Function} registerStore registers store.
  */
 
 /**
@@ -3009,7 +3008,7 @@ function createPersistenceInterface(options) {
  * @return {WPDataPlugin} Data plugin.
  */
 
-var persistence_persistencePlugin = function persistencePlugin(registry, pluginOptions) {
+function persistencePlugin(registry, pluginOptions) {
   var persistence = createPersistenceInterface(pluginOptions);
   /**
    * Creates an enhanced store dispatch function, triggering the state of the
@@ -3068,7 +3067,7 @@ var persistence_persistencePlugin = function persistencePlugin(registry, pluginO
       var persistedState = persistence.get()[reducerKey];
 
       if (persistedState !== undefined) {
-        var initialState = options.reducer(undefined, {
+        var initialState = options.reducer(options.initialState, {
           type: '@@WP/PERSISTENCE_RESTORE'
         });
 
@@ -3095,14 +3094,14 @@ var persistence_persistencePlugin = function persistencePlugin(registry, pluginO
       return store;
     }
   };
-};
+}
 /**
  * Deprecated: Remove this function and the code in WordPress Core that calls
  * it once WordPress 5.4 is released.
  */
 
 
-persistence_persistencePlugin.__unstableMigrate = function (pluginOptions) {
+persistencePlugin.__unstableMigrate = function (pluginOptions) {
   var persistence = createPersistenceInterface(pluginOptions);
   var state = persistence.get(); // Migrate 'insertUsage' from 'core/editor' to 'core/block-editor'
 
@@ -3154,7 +3153,7 @@ persistence_persistencePlugin.__unstableMigrate = function (pluginOptions) {
   }
 };
 
-/* harmony default export */ var plugins_persistence = (persistence_persistencePlugin);
+/* harmony default export */ var plugins_persistence = (persistencePlugin);
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/data/build-module/plugins/index.js
 
@@ -3640,64 +3639,6 @@ var with_select_withSelect = function withSelect(mapSelectToProps) {
 
 /* harmony default export */ var with_select = (with_select_withSelect);
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/data/build-module/components/use-dispatch/use-dispatch.js
-/**
- * Internal dependencies
- */
-
-/**
- * A custom react hook returning the current registry dispatch actions creators.
- *
- * Note: The component using this hook must be within the context of a
- * RegistryProvider.
- *
- * @param {string} [storeName]  Optionally provide the name of the store from
- *                             which to retrieve action creators. If not
- *                             provided, the registry.dispatch function is
- *                             returned instead.
- *
- * @example
- * This illustrates a pattern where you may need to retrieve dynamic data from
- * the server via the `useSelect` hook to use in combination with the dispatch
- * action.
- *
- * ```jsx
- * const { useDispatch, useSelect } = wp.data;
- * const { useCallback } = wp.element;
- *
- * function Button( { onClick, children } ) {
- *   return <button type="button" onClick={ onClick }>{ children }</button>
- * }
- *
- * const SaleButton = ( { children } ) => {
- *   const { stockNumber } = useSelect(
- *     ( select ) => select( 'my-shop' ).getStockNumber(),
- *     []
- *   );
- *   const { startSale } = useDispatch( 'my-shop' );
- *   const onClick = useCallback( () => {
- *     const discountPercent = stockNumber > 50 ? 10: 20;
- *     startSale( discountPercent );
- *   }, [ stockNumber ] );
- *   return <Button onClick={ onClick }>{ children }</Button>
- * }
- *
- * // Rendered somewhere in the application:
- * //
- * // <SaleButton>Start Sale!</SaleButton>
- * ```
- * @return {Function}  A custom react hook.
- */
-
-var use_dispatch_useDispatch = function useDispatch(storeName) {
-  var _useRegistry = useRegistry(),
-      dispatch = _useRegistry.dispatch;
-
-  return storeName === void 0 ? dispatch : dispatch(storeName);
-};
-
-/* harmony default export */ var use_dispatch = (use_dispatch_useDispatch);
-
 // CONCATENATED MODULE: ./node_modules/@wordpress/data/build-module/components/use-dispatch/use-dispatch-with-map.js
 
 
@@ -3765,10 +3706,6 @@ var use_dispatch_with_map_useDispatchWithMap = function useDispatchWithMap(dispa
 };
 
 /* harmony default export */ var use_dispatch_with_map = (use_dispatch_with_map_useDispatchWithMap);
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/data/build-module/components/use-dispatch/index.js
-
-
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/data/build-module/components/with-dispatch/index.js
 
@@ -3878,10 +3815,6 @@ var with_dispatch_withDispatch = function withDispatch(mapDispatchToProps) {
 
 /* harmony default export */ var with_dispatch = (with_dispatch_withDispatch);
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/data/build-module/components/registry-provider/index.js
-
-
-
 // CONCATENATED MODULE: ./node_modules/@wordpress/data/build-module/components/with-registry/index.js
 
 
@@ -3915,9 +3848,63 @@ var withRegistry = Object(external_this_wp_compose_["createHigherOrderComponent"
 }, 'withRegistry');
 /* harmony default export */ var with_registry = (withRegistry);
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/data/build-module/components/async-mode-provider/index.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/data/build-module/components/use-dispatch/use-dispatch.js
+/**
+ * Internal dependencies
+ */
 
+/**
+ * A custom react hook returning the current registry dispatch actions creators.
+ *
+ * Note: The component using this hook must be within the context of a
+ * RegistryProvider.
+ *
+ * @param {string} [storeName]  Optionally provide the name of the store from
+ *                             which to retrieve action creators. If not
+ *                             provided, the registry.dispatch function is
+ *                             returned instead.
+ *
+ * @example
+ * This illustrates a pattern where you may need to retrieve dynamic data from
+ * the server via the `useSelect` hook to use in combination with the dispatch
+ * action.
+ *
+ * ```jsx
+ * const { useDispatch, useSelect } = wp.data;
+ * const { useCallback } = wp.element;
+ *
+ * function Button( { onClick, children } ) {
+ *   return <button type="button" onClick={ onClick }>{ children }</button>
+ * }
+ *
+ * const SaleButton = ( { children } ) => {
+ *   const { stockNumber } = useSelect(
+ *     ( select ) => select( 'my-shop' ).getStockNumber(),
+ *     []
+ *   );
+ *   const { startSale } = useDispatch( 'my-shop' );
+ *   const onClick = useCallback( () => {
+ *     const discountPercent = stockNumber > 50 ? 10: 20;
+ *     startSale( discountPercent );
+ *   }, [ stockNumber ] );
+ *   return <Button onClick={ onClick }>{ children }</Button>
+ * }
+ *
+ * // Rendered somewhere in the application:
+ * //
+ * // <SaleButton>Start Sale!</SaleButton>
+ * ```
+ * @return {Function}  A custom react hook.
+ */
 
+var use_dispatch_useDispatch = function useDispatch(storeName) {
+  var _useRegistry = useRegistry(),
+      dispatch = _useRegistry.dispatch;
+
+  return storeName === void 0 ? dispatch : dispatch(storeName);
+};
+
+/* harmony default export */ var use_dispatch = (use_dispatch_useDispatch);
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/data/build-module/factory.js
 /**

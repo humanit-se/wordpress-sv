@@ -379,6 +379,11 @@ function fetch_all_middleware_objectSpread(target) { for (var i = 1; i < argumen
 /**
  * WordPress dependencies
  */
+
+/**
+ * Internal dependencies
+ */
+
  // Apply query arguments to both URL and Path, whichever is present.
 
 var fetch_all_middleware_modifyQuery = function modifyQuery(_ref, queryArgs) {
@@ -424,12 +429,8 @@ var requestContainsUnboundedQuery = function requestContainsUnboundedQuery(optio
 // then recursively assemble a full response array from all available pages.
 
 
-var fetchAllMiddleware =
-/*#__PURE__*/
-function () {
-  var _ref2 = Object(asyncToGenerator["a" /* default */])(
-  /*#__PURE__*/
-  external_this_regeneratorRuntime_default.a.mark(function _callee(options, next) {
+var fetchAllMiddleware = /*#__PURE__*/function () {
+  var _ref2 = Object(asyncToGenerator["a" /* default */])( /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(function _callee(options, next) {
     var response, results, nextPage, mergedResults, nextResponse, nextResults;
     return external_this_regeneratorRuntime_default.a.wrap(function _callee$(_context) {
       while (1) {
@@ -452,7 +453,7 @@ function () {
 
           case 4:
             _context.next = 6;
-            return next(fetch_all_middleware_objectSpread({}, fetch_all_middleware_modifyQuery(options, {
+            return build_module(fetch_all_middleware_objectSpread({}, fetch_all_middleware_modifyQuery(options, {
               per_page: 100
             }), {
               // Ensure headers are returned for page 1.
@@ -495,7 +496,7 @@ function () {
             }
 
             _context.next = 19;
-            return next(fetch_all_middleware_objectSpread({}, options, {
+            return build_module(fetch_all_middleware_objectSpread({}, options, {
               // Ensure the URL for the next page is used instead of any provided path.
               path: undefined,
               url: nextPage,

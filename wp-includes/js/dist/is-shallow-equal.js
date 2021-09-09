@@ -82,51 +82,12 @@ this["wp"] = this["wp"] || {}; this["wp"]["isShallowEqual"] =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "mNmh");
+/******/ 	return __webpack_require__(__webpack_require__.s = "X4OT");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "1O94":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * Returns true if the two arrays are shallow equal, or false otherwise.
- *
- * @param {any[]} a First array to compare.
- * @param {any[]} b Second array to compare.
- *
- * @return {boolean} Whether the two arrays are shallow equal.
- */
-function isShallowEqualArrays( a, b ) {
-	var i;
-
-	if ( a === b ) {
-		return true;
-	}
-
-	if ( a.length !== b.length ) {
-		return false;
-	}
-
-	for ( i = 0; i < a.length; i++ ) {
-		if ( a[ i ] !== b[ i ] ) {
-			return false;
-		}
-	}
-
-	return true;
-}
-
-module.exports = isShallowEqualArrays;
-
-
-/***/ }),
-
-/***/ "4UZf":
+/***/ "+nJb":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -185,7 +146,7 @@ module.exports = isShallowEqualObjects;
 
 /***/ }),
 
-/***/ "mNmh":
+/***/ "X4OT":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -194,13 +155,13 @@ module.exports = isShallowEqualObjects;
 /**
  * Internal dependencies;
  */
-var isShallowEqualObjects = __webpack_require__( "4UZf" );
-var isShallowEqualArrays = __webpack_require__( "1O94" );
+var isShallowEqualObjects = __webpack_require__( "+nJb" );
+var isShallowEqualArrays = __webpack_require__( "zlGL" );
 
 var isArray = Array.isArray;
 
 /**
- * @typedef {{[key: string]: any}} ComparableObject
+ * @typedef {Record<string, any>} ComparableObject
  */
 
 /**
@@ -227,6 +188,45 @@ function isShallowEqual( a, b ) {
 module.exports = isShallowEqual;
 module.exports.isShallowEqualObjects = isShallowEqualObjects;
 module.exports.isShallowEqualArrays = isShallowEqualArrays;
+
+
+/***/ }),
+
+/***/ "zlGL":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Returns true if the two arrays are shallow equal, or false otherwise.
+ *
+ * @param {any[]} a First array to compare.
+ * @param {any[]} b Second array to compare.
+ *
+ * @return {boolean} Whether the two arrays are shallow equal.
+ */
+function isShallowEqualArrays( a, b ) {
+	var i;
+
+	if ( a === b ) {
+		return true;
+	}
+
+	if ( a.length !== b.length ) {
+		return false;
+	}
+
+	for ( i = 0; i < a.length; i++ ) {
+		if ( a[ i ] !== b[ i ] ) {
+			return false;
+		}
+	}
+
+	return true;
+}
+
+module.exports = isShallowEqualArrays;
 
 
 /***/ })
