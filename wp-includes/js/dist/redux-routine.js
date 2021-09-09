@@ -101,23 +101,21 @@ __webpack_require__.d(__webpack_exports__, "default", function() { return /* bin
 /**
  * Returns true if the given object is a generator, or false otherwise.
  *
- * @see https://www.ecma-international.org/ecma-262/6.0/#sec-generator-objects
+ * @link https://www.ecma-international.org/ecma-262/6.0/#sec-generator-objects
  *
  * @param {*} object Object to test.
  *
  * @return {boolean} Whether object is a generator.
  */
 function isGenerator(object) {
-  // Check that iterator (next) and iterable (Symbol.iterator) interfaces are satisfied.
-  // These checks seem to be compatible with several generator helpers as well as the native implementation.
-  return !!object && typeof object[Symbol.iterator] === 'function' && typeof object.next === 'function';
+  return !!object && object[Symbol.toStringTag] === 'Generator';
 }
 
 // EXTERNAL MODULE: ./node_modules/rungen/dist/index.js
 var dist = __webpack_require__("hnoU");
 
-// EXTERNAL MODULE: external {"this":"lodash"}
-var external_this_lodash_ = __webpack_require__("YLtl");
+// EXTERNAL MODULE: external "lodash"
+var external_lodash_ = __webpack_require__("YLtl");
 
 // EXTERNAL MODULE: ./node_modules/is-promise/index.js
 var is_promise = __webpack_require__("JlUD");
@@ -137,7 +135,7 @@ var is_promise_default = /*#__PURE__*/__webpack_require__.n(is_promise);
  */
 
 function isAction(object) {
-  return Object(external_this_lodash_["isPlainObject"])(object) && Object(external_this_lodash_["isString"])(object.type);
+  return Object(external_lodash_["isPlainObject"])(object) && Object(external_lodash_["isString"])(object.type);
 }
 /**
  * Returns true if the given object quacks like an action and has a specific
@@ -169,15 +167,15 @@ function isActionOfType(object, expectedType) {
  * Create a co-routine runtime.
  *
  * @param {Object}    controls Object of control handlers.
- * @param {Function}  dispatch Unhandled action dispatch.
+ * @param {function}  dispatch Unhandled action dispatch.
  *
- * @return {Function} co-routine runtime
+ * @return {function} co-routine runtime
  */
 
 function createRuntime() {
   var controls = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var dispatch = arguments.length > 1 ? arguments[1] : undefined;
-  var rungenControls = Object(external_this_lodash_["map"])(controls, function (control, actionType) {
+  var rungenControls = Object(external_lodash_["map"])(controls, function (control, actionType) {
     return function (value, next, iterate, yieldNext, yieldError) {
       if (!isActionOfType(value, actionType)) {
         return false;
@@ -296,7 +294,6 @@ exports.default = createDispatcher;
 /***/ (function(module, exports) {
 
 module.exports = isPromise;
-module.exports.default = isPromise;
 
 function isPromise(obj) {
   return !!obj && (typeof obj === 'object' || typeof obj === 'function') && typeof obj.then === 'function';
