@@ -92,11 +92,11 @@ this["wp"] = this["wp"] || {}; this["wp"]["primitives"] =
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _objectWithoutProperties; });
-/* harmony import */ var _objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("zLVn");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("zLVn");
 
 function _objectWithoutProperties(source, excluded) {
   if (source == null) return {};
-  var target = Object(_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(source, excluded);
+  var target = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(source, excluded);
   var key, i;
 
   if (Object.getOwnPropertySymbols) {
@@ -135,6 +135,7 @@ __webpack_require__.d(__webpack_exports__, "Stop", function() { return /* reexpo
 __webpack_require__.d(__webpack_exports__, "SVG", function() { return /* reexport */ svg_SVG; });
 __webpack_require__.d(__webpack_exports__, "HorizontalRule", function() { return /* reexport */ HorizontalRule; });
 __webpack_require__.d(__webpack_exports__, "BlockQuotation", function() { return /* reexport */ BlockQuotation; });
+__webpack_require__.d(__webpack_exports__, "View", function() { return /* reexport */ View; });
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
 var defineProperty = __webpack_require__("rePB");
@@ -165,13 +166,8 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
  * WordPress dependencies
  */
 
- // Disable reason: JSDoc linter doesn't seem to parse the union (`&`) correctly.
-
-/* eslint-disable jsdoc/valid-types */
 
 /** @typedef {{isPressed?: boolean} & import('react').ComponentPropsWithoutRef<'svg'>} SVGProps */
-
-/* eslint-enable jsdoc/valid-types */
 
 /**
  * @param {import('react').ComponentPropsWithoutRef<'circle'>} props
@@ -267,7 +263,7 @@ var svg_SVG = function SVG(_ref) {
       isPressed = _ref.isPressed,
       props = Object(objectWithoutProperties["a" /* default */])(_ref, ["className", "isPressed"]);
 
-  var appliedProps = _objectSpread({}, props, {
+  var appliedProps = _objectSpread(_objectSpread({}, props), {}, {
     className: classnames_default()(className, {
       'is-pressed': isPressed
     }) || undefined,
@@ -287,7 +283,11 @@ var HorizontalRule = 'hr';
 // CONCATENATED MODULE: ./node_modules/@wordpress/primitives/build-module/block-quotation/index.js
 var BlockQuotation = 'blockquote';
 
+// CONCATENATED MODULE: ./node_modules/@wordpress/primitives/build-module/view/index.js
+var View = 'div';
+
 // CONCATENATED MODULE: ./node_modules/@wordpress/primitives/build-module/index.js
+
 
 
 
