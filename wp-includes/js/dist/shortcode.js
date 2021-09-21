@@ -103,7 +103,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var memize__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("4eJC");
 /* harmony import */ var memize__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(memize__WEBPACK_IMPORTED_MODULE_1__);
 /**
- * External dependencies
+ * Internal dependencies
  */
 
 
@@ -192,6 +192,7 @@ function next(tag, text) {
  */
 
 function replace(tag, text, callback) {
+  var _arguments = arguments;
   return text.replace(regexp(tag), function (match, left, $3, attrs, slash, content, closing, right) {
     // If both extra brackets exist, the shortcode has been properly
     // escaped.
@@ -200,7 +201,7 @@ function replace(tag, text, callback) {
     } // Create the match object and pass it through the callback.
 
 
-    var result = callback(fromMatch(arguments)); // Make sure to return any of the extra brackets if they weren't used to
+    var result = callback(fromMatch(_arguments)); // Make sure to return any of the extra brackets if they weren't used to
     // escape the shortcode.
 
     return result ? left + result + right : match;
@@ -581,4 +582,4 @@ module.exports = function memize( fn, options ) {
 
 /***/ })
 
-/******/ })["default"];
+/******/ });

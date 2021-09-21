@@ -200,9 +200,9 @@ var stack;
  *    not captured. thus, we find the long string of `a`s and remember it, then
  *    reference it as a whole unit inside our pattern
  *
- *    @see http://instanceof.me/post/52245507631/regex-emulate-atomic-grouping-with-lookahead
- *    @see http://blog.stevenlevithan.com/archives/mimic-atomic-groups
- *    @see https://javascript.info/regexp-infinite-backtracking-problem
+ *    @cite http://instanceof.me/post/52245507631/regex-emulate-atomic-grouping-with-lookahead
+ *    @cite http://blog.stevenlevithan.com/archives/mimic-atomic-groups
+ *    @cite https://javascript.info/regexp-infinite-backtracking-problem
  *
  *    once browsers reliably support atomic grouping or possessive
  *    quantifiers natively we should remove this trick and simplify
@@ -238,84 +238,6 @@ function Frame(block, tokenStart, tokenLength, prevOffset, leadingHtmlStart) {
     leadingHtmlStart: leadingHtmlStart
   };
 }
-/**
- * Parser function, that converts input HTML into a block based structure.
- *
- * @param {string} doc The HTML document to parse.
- *
- * @example
- * Input post:
- * ```html
- * <!-- wp:columns {"columns":3} -->
- * <div class="wp-block-columns has-3-columns"><!-- wp:column -->
- * <div class="wp-block-column"><!-- wp:paragraph -->
- * <p>Left</p>
- * <!-- /wp:paragraph --></div>
- * <!-- /wp:column -->
- *
- * <!-- wp:column -->
- * <div class="wp-block-column"><!-- wp:paragraph -->
- * <p><strong>Middle</strong></p>
- * <!-- /wp:paragraph --></div>
- * <!-- /wp:column -->
- *
- * <!-- wp:column -->
- * <div class="wp-block-column"></div>
- * <!-- /wp:column --></div>
- * <!-- /wp:columns -->
- * ```
- *
- * Parsing code:
- * ```js
- * import { parse } from '@wordpress/block-serialization-default-parser';
- *
- * parse( post ) === [
- *     {
- *         blockName: "core/columns",
- *         attrs: {
- *             columns: 3
- *         },
- *         innerBlocks: [
- *             {
- *                 blockName: "core/column",
- *                 attrs: null,
- *                 innerBlocks: [
- *                     {
- *                         blockName: "core/paragraph",
- *                         attrs: null,
- *                         innerBlocks: [],
- *                         innerHTML: "\n<p>Left</p>\n"
- *                     }
- *                 ],
- *                 innerHTML: '\n<div class="wp-block-column"></div>\n'
- *             },
- *             {
- *                 blockName: "core/column",
- *                 attrs: null,
- *                 innerBlocks: [
- *                     {
- *                         blockName: "core/paragraph",
- *                         attrs: null,
- *                         innerBlocks: [],
- *                         innerHTML: "\n<p><strong>Middle</strong></p>\n"
- *                     }
- *                 ],
- *                 innerHTML: '\n<div class="wp-block-column"></div>\n'
- *             },
- *             {
- *                 blockName: "core/column",
- *                 attrs: null,
- *                 innerBlocks: [],
- *                 innerHTML: '\n<div class="wp-block-column"></div>\n'
- *             }
- *         ],
- *         innerHTML: '\n<div class="wp-block-columns has-3-columns">\n\n\n\n</div>\n'
- *     }
- * ];
- * ```
- * @return {Array} A block-based representation of the input HTML.
- */
-
 
 var parse = function parse(doc) {
   document = doc;

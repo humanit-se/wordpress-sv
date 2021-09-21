@@ -320,13 +320,6 @@ var defaultSettings = {
 });
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/wordcount/build-module/index.js
-/**
- * External dependencies
- */
-
-/**
- * Internal dependencies
- */
 
 
 
@@ -398,17 +391,11 @@ function matchCharacters(text, regex, settings) {
 /**
  * Count some words.
  *
- * @param {string} text         The text being processed
- * @param {string} type         The type of count. Accepts ;words', 'characters_excluding_spaces', or 'characters_including_spaces'.
+ * @param {String} text         The text being processed
+ * @param {String} type         The type of count. Accepts ;words', 'characters_excluding_spaces', or 'characters_including_spaces'.
  * @param {Object} userSettings Custom settings object.
  *
- * @example
- * ```js
- * import { count } from '@wordpress/wordcount';
- * const numberOfWords = count( 'Words to count', 'words', {} )
- * ```
- *
- * @return {number} The word or character count.
+ * @return {Number} The word or character count.
  */
 
 
