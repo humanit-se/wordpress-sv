@@ -13,7 +13,7 @@
  * * Tabellprefix för databas
  * * ABSPATH
  *
- * @link https://wordpress.org/support/article/editing-wp-config-php/
+ * @link https://codex.wordpress.org/Editing_wp-config.php
  *
  * @package WordPress
  */
@@ -78,16 +78,12 @@ $table_prefix = 'wp_';
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */ 
 define('WP_DEBUG', false);
-/* Lägg in eventuella anpassade värden mellan denna rad och raden med "sluta redigera här". */
-
-
-
 
 /* Det var allt, sluta redigera här och börja publicera! */
 
 /** Absolut sökväg till WordPress-katalogen. */
 if ( !defined('ABSPATH') )
-	define('ABSPATH', __DIR__ . '/');
+	define('ABSPATH', dirname(__FILE__) . '/');
 
 /** Anger WordPress-värden och inkluderade filer. */
 require_once(ABSPATH . 'wp-settings.php');
