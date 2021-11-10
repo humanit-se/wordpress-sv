@@ -169,15 +169,15 @@ var link = Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _unsupportedIterableToArray; });
-/* harmony import */ var _arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("a3WO");
+/* harmony import */ var _babel_runtime_helpers_esm_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("a3WO");
 
 function _unsupportedIterableToArray(o, minLen) {
   if (!o) return;
-  if (typeof o === "string") return Object(_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(o, minLen);
+  if (typeof o === "string") return Object(_babel_runtime_helpers_esm_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(o, minLen);
   var n = Object.prototype.toString.call(o).slice(8, -1);
   if (n === "Object" && o.constructor) n = o.constructor.name;
   if (n === "Map" || n === "Set") return Array.from(o);
-  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Object(_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(o, minLen);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Object(_babel_runtime_helpers_esm_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(o, minLen);
 }
 
 /***/ }),
@@ -198,11 +198,11 @@ function _arrayWithHoles(arr) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _objectWithoutProperties; });
-/* harmony import */ var _objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("zLVn");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("zLVn");
 
 function _objectWithoutProperties(source, excluded) {
   if (source == null) return {};
-  var target = Object(_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(source, excluded);
+  var target = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(source, excluded);
   var key, i;
 
   if (Object.getOwnPropertySymbols) {
@@ -502,13 +502,8 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 /**
  * WordPress dependencies
  */
- // Disable reason: JSDoc linter doesn't seem to parse the union (`&`) correctly.
 
-/* eslint-disable jsdoc/valid-types */
-
-/** @typedef {{icon: JSX.Element, size?: number} & import('react').ComponentPropsWithoutRef<'SVG'>} IconProps */
-
-/* eslint-enable jsdoc/valid-types */
+/** @typedef {{icon: JSX.Element, size?: number} & import('@wordpress/primitives').SVGProps} IconProps */
 
 /**
  * Return an SVG icon.
@@ -549,16 +544,16 @@ function Icon(_ref) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _possibleConstructorReturn; });
-/* harmony import */ var _helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("U8pU");
-/* harmony import */ var _assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("JX7q");
+/* harmony import */ var _babel_runtime_helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("U8pU");
+/* harmony import */ var _babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("JX7q");
 
 
 function _possibleConstructorReturn(self, call) {
-  if (call && (Object(_helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(call) === "object" || typeof call === "function")) {
+  if (call && (Object(_babel_runtime_helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(call) === "object" || typeof call === "function")) {
     return call;
   }
 
-  return Object(_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])(self);
+  return Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])(self);
 }
 
 /***/ }),
@@ -782,14 +777,14 @@ var createClass = __webpack_require__("vuIU");
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js
 var assertThisInitialized = __webpack_require__("JX7q");
 
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/inherits.js + 1 modules
+var inherits = __webpack_require__("Ji7U");
+
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js
 var possibleConstructorReturn = __webpack_require__("md7G");
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js
 var getPrototypeOf = __webpack_require__("foSv");
-
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/inherits.js + 1 modules
-var inherits = __webpack_require__("Ji7U");
 
 // EXTERNAL MODULE: external {"this":["wp","components"]}
 var external_this_wp_components_ = __webpack_require__("tI+e");
@@ -814,7 +809,7 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(defineProperty["a" /* default */])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
-function _createSuper(Derived) { return function () { var Super = Object(getPrototypeOf["a" /* default */])(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = Object(getPrototypeOf["a" /* default */])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(possibleConstructorReturn["a" /* default */])(this, result); }; }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = Object(getPrototypeOf["a" /* default */])(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = Object(getPrototypeOf["a" /* default */])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(possibleConstructorReturn["a" /* default */])(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
@@ -980,11 +975,11 @@ var image_image = {
             var newReplacements = value.replacements.slice();
             newReplacements[value.start] = {
               type: image_name,
-              attributes: _objectSpread({}, activeObjectAttributes, {
+              attributes: _objectSpread(_objectSpread({}, activeObjectAttributes), {}, {
                 style: "width: ".concat(_this2.state.width, "px;")
               })
             };
-            onChange(_objectSpread({}, value, {
+            onChange(_objectSpread(_objectSpread({}, value), {}, {
               replacements: newReplacements
             }));
             event.preventDefault();
@@ -1310,7 +1305,7 @@ function InlineLinkUI(_ref) {
 
     element = element.nextElementSibling || element;
 
-    while (element.nodeType !== window.Node.ELEMENT_NODE) {
+    while (element.nodeType !== element.ELEMENT_NODE) {
       element = element.parentNode;
     }
 
@@ -1328,7 +1323,7 @@ function InlineLinkUI(_ref) {
     // Merge with values from state, both for the purpose of assigning the
     // next state value, and for use in constructing the new link format if
     // the link is ready to be applied.
-    nextValue = inline_objectSpread({}, nextLinkValue, {}, nextValue); // LinkControl calls `onChange` immediately upon the toggling a setting.
+    nextValue = inline_objectSpread(inline_objectSpread({}, nextLinkValue), nextValue); // LinkControl calls `onChange` immediately upon the toggling a setting.
 
     var didToggleSetting = linkValue.opensInNewTab !== nextValue.opensInNewTab && linkValue.url === nextValue.url; // If change handler was called as a result of a settings change during
     // link insertion, it must be held in state until the link is ready to
@@ -1403,7 +1398,7 @@ function InlineLinkUI(_ref) {
 
 
 
-function link_createSuper(Derived) { return function () { var Super = Object(getPrototypeOf["a" /* default */])(Derived), result; if (link_isNativeReflectConstruct()) { var NewTarget = Object(getPrototypeOf["a" /* default */])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(possibleConstructorReturn["a" /* default */])(this, result); }; }
+function link_createSuper(Derived) { var hasNativeReflectConstruct = link_isNativeReflectConstruct(); return function _createSuperInternal() { var Super = Object(getPrototypeOf["a" /* default */])(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = Object(getPrototypeOf["a" /* default */])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(possibleConstructorReturn["a" /* default */])(this, result); }; }
 
 function link_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
@@ -1672,9 +1667,6 @@ var underline = {
   }
 };
 
-// EXTERNAL MODULE: external {"this":["wp","data"]}
-var external_this_wp_data_ = __webpack_require__("1ZqX");
-
 // EXTERNAL MODULE: ./node_modules/@wordpress/icons/build-module/icon/index.js
 var icon = __webpack_require__("iClF");
 
@@ -1683,6 +1675,9 @@ var text_color = __webpack_require__("uGfJ");
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/extends.js
 var esm_extends = __webpack_require__("wx14");
+
+// EXTERNAL MODULE: external {"this":["wp","data"]}
+var external_this_wp_data_ = __webpack_require__("1ZqX");
 
 // EXTERNAL MODULE: external {"this":["wp","dom"]}
 var external_this_wp_dom_ = __webpack_require__("1CF3");
@@ -1705,7 +1700,6 @@ var external_this_wp_dom_ = __webpack_require__("1CF3");
 
 
 
-
 function getActiveColor(formatName, formatValue, colors) {
   var activeColorFormat = Object(external_this_wp_richText_["getActiveFormat"])(formatValue, formatName);
 
@@ -1722,7 +1716,7 @@ function getActiveColor(formatName, formatValue, colors) {
   var currentClass = activeColorFormat.attributes.class;
 
   if (currentClass) {
-    var colorSlug = currentClass.replace(/.*has-(.*?)-color.*/, '$1');
+    var colorSlug = currentClass.replace(/.*has-([^\s]*)-color.*/, '$1');
     return Object(external_this_wp_blockEditor_["getColorObjectByAttributeValues"])(colors, colorSlug).color;
   }
 }
@@ -1750,7 +1744,7 @@ var inline_ColorPopoverAtLink = function ColorPopoverAtLink(_ref) {
 
     element = element.nextElementSibling || element;
 
-    while (element.nodeType !== window.Node.ELEMENT_NODE) {
+    while (element.nodeType !== element.ELEMENT_NODE) {
       element = element.parentNode;
     }
 
@@ -1804,16 +1798,14 @@ var inline_ColorPicker = function ColorPicker(_ref2) {
   });
 };
 
-var inline_InlineColorUI = function InlineColorUI(_ref3) {
+function InlineColorUI(_ref3) {
   var name = _ref3.name,
       value = _ref3.value,
       onChange = _ref3.onChange,
       onClose = _ref3.onClose,
-      isActive = _ref3.isActive,
       addingColor = _ref3.addingColor;
   return Object(external_this_wp_element_["createElement"])(inline_ColorPopoverAtLink, {
     value: value,
-    isActive: isActive,
     addingColor: addingColor,
     onClose: onClose,
     className: "components-inline-color-popover"
@@ -1822,9 +1814,7 @@ var inline_InlineColorUI = function InlineColorUI(_ref3) {
     value: value,
     onChange: onChange
   }));
-};
-
-/* harmony default export */ var text_color_inline = (Object(external_this_wp_components_["withSpokenMessages"])(inline_InlineColorUI));
+}
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/format-library/build-module/text-color/index.js
 
@@ -1837,7 +1827,6 @@ var inline_InlineColorUI = function InlineColorUI(_ref3) {
 /**
  * WordPress dependencies
  */
-
 
 
 
@@ -1860,24 +1849,8 @@ function TextColorEdit(_ref) {
       onChange = _ref.onChange,
       isActive = _ref.isActive,
       activeAttributes = _ref.activeAttributes;
-
-  var _useSelect = Object(external_this_wp_data_["useSelect"])(function (select) {
-    var blockEditorSelect = select('core/block-editor');
-    var settings;
-
-    if (blockEditorSelect && blockEditorSelect.getSettings) {
-      settings = blockEditorSelect.getSettings();
-    } else {
-      settings = {};
-    }
-
-    return {
-      colors: Object(external_this_lodash_["get"])(settings, ['colors'], EMPTY_ARRAY),
-      disableCustomColors: settings.disableCustomColors
-    };
-  }),
-      colors = _useSelect.colors,
-      disableCustomColors = _useSelect.disableCustomColors;
+  var allowCustomControl = Object(external_this_wp_blockEditor_["__experimentalUseEditorFeature"])('color.custom');
+  var colors = Object(external_this_wp_blockEditor_["__experimentalUseEditorFeature"])('color.palette') || EMPTY_ARRAY;
 
   var _useState = Object(external_this_wp_element_["useState"])(false),
       _useState2 = Object(slicedToArray["a" /* default */])(_useState, 2),
@@ -1901,7 +1874,7 @@ function TextColorEdit(_ref) {
       backgroundColor: activeColor
     };
   }, [value, colors]);
-  var hasColorsToChoose = !Object(external_this_lodash_["isEmpty"])(colors) || disableCustomColors !== true;
+  var hasColorsToChoose = !Object(external_this_lodash_["isEmpty"])(colors) || !allowCustomControl;
 
   if (!hasColorsToChoose && !isActive) {
     return null;
@@ -1922,11 +1895,10 @@ function TextColorEdit(_ref) {
     onClick: hasColorsToChoose ? enableIsAddingColor : function () {
       return onChange(Object(external_this_wp_richText_["removeFormat"])(value, text_color_name));
     }
-  }), isAddingColor && Object(external_this_wp_element_["createElement"])(text_color_inline, {
+  }), isAddingColor && Object(external_this_wp_element_["createElement"])(InlineColorUI, {
     name: text_color_name,
     addingColor: isAddingColor,
     onClose: disableIsAddingColor,
-    isActive: isActive,
     activeAttributes: activeAttributes,
     value: value,
     onChange: onChange
