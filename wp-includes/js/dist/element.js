@@ -87,34 +87,56 @@ this["wp"] = this["wp"] || {}; this["wp"]["element"] =
 /************************************************************************/
 /******/ ({
 
+/***/ "25BE":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _iterableToArray; });
+function _iterableToArray(iter) {
+  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
+}
+
+/***/ }),
+
+/***/ "BsWD":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _unsupportedIterableToArray; });
+/* harmony import */ var _arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("a3WO");
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return Object(_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(n);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Object(_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(o, minLen);
+}
+
+/***/ }),
+
+/***/ "DSFK":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _arrayWithHoles; });
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
+
+/***/ }),
+
 /***/ "Ff2n":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ _objectWithoutProperties; });
-
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
-function _objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null) return {};
-  var target = {};
-  var sourceKeys = Object.keys(source);
-  var key, i;
-
-  for (i = 0; i < sourceKeys.length; i++) {
-    key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0) continue;
-    target[key] = source[key];
-  }
-
-  return target;
-}
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _objectWithoutProperties; });
+/* harmony import */ var _objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("zLVn");
 
 function _objectWithoutProperties(source, excluded) {
   if (source == null) return {};
-  var target = _objectWithoutPropertiesLoose(source, excluded);
+  var target = Object(_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(source, excluded);
   var key, i;
 
   if (Object.getOwnPropertySymbols) {
@@ -133,21 +155,124 @@ function _objectWithoutProperties(source, excluded) {
 
 /***/ }),
 
+/***/ "KQm4":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ _toConsumableArray; });
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js
+var arrayLikeToArray = __webpack_require__("a3WO");
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js
+
+function _arrayWithoutHoles(arr) {
+  if (Array.isArray(arr)) return Object(arrayLikeToArray["a" /* default */])(arr);
+}
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/iterableToArray.js
+var iterableToArray = __webpack_require__("25BE");
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js
+var unsupportedIterableToArray = __webpack_require__("BsWD");
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js
+function _nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js
+
+
+
+
+function _toConsumableArray(arr) {
+  return _arrayWithoutHoles(arr) || Object(iterableToArray["a" /* default */])(arr) || Object(unsupportedIterableToArray["a" /* default */])(arr) || _nonIterableSpread();
+}
+
+/***/ }),
+
+/***/ "ODXe":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ _slicedToArray; });
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js
+var arrayWithHoles = __webpack_require__("DSFK");
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js
+function _iterableToArrayLimit(arr, i) {
+  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
+  var _arr = [];
+  var _n = true;
+  var _d = false;
+  var _e = undefined;
+
+  try {
+    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+      _arr.push(_s.value);
+
+      if (i && _arr.length === i) break;
+    }
+  } catch (err) {
+    _d = true;
+    _e = err;
+  } finally {
+    try {
+      if (!_n && _i["return"] != null) _i["return"]();
+    } finally {
+      if (_d) throw _e;
+    }
+  }
+
+  return _arr;
+}
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js
+var unsupportedIterableToArray = __webpack_require__("BsWD");
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/nonIterableRest.js
+var nonIterableRest = __webpack_require__("PYwp");
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js
+
+
+
+
+function _slicedToArray(arr, i) {
+  return Object(arrayWithHoles["a" /* default */])(arr) || _iterableToArrayLimit(arr, i) || Object(unsupportedIterableToArray["a" /* default */])(arr, i) || Object(nonIterableRest["a" /* default */])();
+}
+
+/***/ }),
+
+/***/ "PYwp":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _nonIterableRest; });
+function _nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+/***/ }),
+
 /***/ "U8pU":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _typeof; });
-function _typeof2(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
-
 function _typeof(obj) {
-  if (typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol") {
+  "@babel/helpers - typeof";
+
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
     _typeof = function _typeof(obj) {
-      return _typeof2(obj);
+      return typeof obj;
     };
   } else {
     _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : _typeof2(obj);
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
     };
   }
 
@@ -167,6 +292,23 @@ function _typeof(obj) {
 /***/ (function(module, exports) {
 
 (function() { module.exports = this["lodash"]; }());
+
+/***/ }),
+
+/***/ "a3WO":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _arrayLikeToArray; });
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
+  }
+
+  return arr2;
+}
 
 /***/ }),
 
@@ -192,52 +334,55 @@ function _typeof(obj) {
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
-__webpack_require__.d(__webpack_exports__, "Children", function() { return /* reexport */ external_React_["Children"]; });
-__webpack_require__.d(__webpack_exports__, "cloneElement", function() { return /* reexport */ external_React_["cloneElement"]; });
-__webpack_require__.d(__webpack_exports__, "Component", function() { return /* reexport */ external_React_["Component"]; });
-__webpack_require__.d(__webpack_exports__, "createContext", function() { return /* reexport */ external_React_["createContext"]; });
-__webpack_require__.d(__webpack_exports__, "createElement", function() { return /* reexport */ external_React_["createElement"]; });
-__webpack_require__.d(__webpack_exports__, "createRef", function() { return /* reexport */ external_React_["createRef"]; });
-__webpack_require__.d(__webpack_exports__, "forwardRef", function() { return /* reexport */ external_React_["forwardRef"]; });
-__webpack_require__.d(__webpack_exports__, "Fragment", function() { return /* reexport */ external_React_["Fragment"]; });
-__webpack_require__.d(__webpack_exports__, "isValidElement", function() { return /* reexport */ external_React_["isValidElement"]; });
-__webpack_require__.d(__webpack_exports__, "memo", function() { return /* reexport */ external_React_["memo"]; });
-__webpack_require__.d(__webpack_exports__, "StrictMode", function() { return /* reexport */ external_React_["StrictMode"]; });
-__webpack_require__.d(__webpack_exports__, "useCallback", function() { return /* reexport */ external_React_["useCallback"]; });
-__webpack_require__.d(__webpack_exports__, "useContext", function() { return /* reexport */ external_React_["useContext"]; });
-__webpack_require__.d(__webpack_exports__, "useDebugValue", function() { return /* reexport */ external_React_["useDebugValue"]; });
-__webpack_require__.d(__webpack_exports__, "useEffect", function() { return /* reexport */ external_React_["useEffect"]; });
-__webpack_require__.d(__webpack_exports__, "useImperativeHandle", function() { return /* reexport */ external_React_["useImperativeHandle"]; });
-__webpack_require__.d(__webpack_exports__, "useLayoutEffect", function() { return /* reexport */ external_React_["useLayoutEffect"]; });
-__webpack_require__.d(__webpack_exports__, "useMemo", function() { return /* reexport */ external_React_["useMemo"]; });
-__webpack_require__.d(__webpack_exports__, "useReducer", function() { return /* reexport */ external_React_["useReducer"]; });
-__webpack_require__.d(__webpack_exports__, "useRef", function() { return /* reexport */ external_React_["useRef"]; });
-__webpack_require__.d(__webpack_exports__, "useState", function() { return /* reexport */ external_React_["useState"]; });
-__webpack_require__.d(__webpack_exports__, "lazy", function() { return /* reexport */ external_React_["lazy"]; });
-__webpack_require__.d(__webpack_exports__, "Suspense", function() { return /* reexport */ external_React_["Suspense"]; });
+__webpack_require__.d(__webpack_exports__, "__experimentalCreateInterpolateElement", function() { return /* reexport */ create_interpolate_element; });
+__webpack_require__.d(__webpack_exports__, "Children", function() { return /* reexport */ external_this_React_["Children"]; });
+__webpack_require__.d(__webpack_exports__, "cloneElement", function() { return /* reexport */ external_this_React_["cloneElement"]; });
+__webpack_require__.d(__webpack_exports__, "Component", function() { return /* reexport */ external_this_React_["Component"]; });
+__webpack_require__.d(__webpack_exports__, "createContext", function() { return /* reexport */ external_this_React_["createContext"]; });
+__webpack_require__.d(__webpack_exports__, "createElement", function() { return /* reexport */ external_this_React_["createElement"]; });
+__webpack_require__.d(__webpack_exports__, "createRef", function() { return /* reexport */ external_this_React_["createRef"]; });
+__webpack_require__.d(__webpack_exports__, "forwardRef", function() { return /* reexport */ external_this_React_["forwardRef"]; });
+__webpack_require__.d(__webpack_exports__, "Fragment", function() { return /* reexport */ external_this_React_["Fragment"]; });
+__webpack_require__.d(__webpack_exports__, "isValidElement", function() { return /* reexport */ external_this_React_["isValidElement"]; });
+__webpack_require__.d(__webpack_exports__, "memo", function() { return /* reexport */ external_this_React_["memo"]; });
+__webpack_require__.d(__webpack_exports__, "StrictMode", function() { return /* reexport */ external_this_React_["StrictMode"]; });
+__webpack_require__.d(__webpack_exports__, "useCallback", function() { return /* reexport */ external_this_React_["useCallback"]; });
+__webpack_require__.d(__webpack_exports__, "useContext", function() { return /* reexport */ external_this_React_["useContext"]; });
+__webpack_require__.d(__webpack_exports__, "useDebugValue", function() { return /* reexport */ external_this_React_["useDebugValue"]; });
+__webpack_require__.d(__webpack_exports__, "useEffect", function() { return /* reexport */ external_this_React_["useEffect"]; });
+__webpack_require__.d(__webpack_exports__, "useImperativeHandle", function() { return /* reexport */ external_this_React_["useImperativeHandle"]; });
+__webpack_require__.d(__webpack_exports__, "useLayoutEffect", function() { return /* reexport */ external_this_React_["useLayoutEffect"]; });
+__webpack_require__.d(__webpack_exports__, "useMemo", function() { return /* reexport */ external_this_React_["useMemo"]; });
+__webpack_require__.d(__webpack_exports__, "useReducer", function() { return /* reexport */ external_this_React_["useReducer"]; });
+__webpack_require__.d(__webpack_exports__, "useRef", function() { return /* reexport */ external_this_React_["useRef"]; });
+__webpack_require__.d(__webpack_exports__, "useState", function() { return /* reexport */ external_this_React_["useState"]; });
+__webpack_require__.d(__webpack_exports__, "lazy", function() { return /* reexport */ external_this_React_["lazy"]; });
+__webpack_require__.d(__webpack_exports__, "Suspense", function() { return /* reexport */ external_this_React_["Suspense"]; });
 __webpack_require__.d(__webpack_exports__, "concatChildren", function() { return /* reexport */ concatChildren; });
 __webpack_require__.d(__webpack_exports__, "switchChildrenNodeName", function() { return /* reexport */ switchChildrenNodeName; });
-__webpack_require__.d(__webpack_exports__, "createPortal", function() { return /* reexport */ external_ReactDOM_["createPortal"]; });
-__webpack_require__.d(__webpack_exports__, "findDOMNode", function() { return /* reexport */ external_ReactDOM_["findDOMNode"]; });
-__webpack_require__.d(__webpack_exports__, "render", function() { return /* reexport */ external_ReactDOM_["render"]; });
-__webpack_require__.d(__webpack_exports__, "unmountComponentAtNode", function() { return /* reexport */ external_ReactDOM_["unmountComponentAtNode"]; });
+__webpack_require__.d(__webpack_exports__, "createPortal", function() { return /* reexport */ external_this_ReactDOM_["createPortal"]; });
+__webpack_require__.d(__webpack_exports__, "findDOMNode", function() { return /* reexport */ external_this_ReactDOM_["findDOMNode"]; });
+__webpack_require__.d(__webpack_exports__, "render", function() { return /* reexport */ external_this_ReactDOM_["render"]; });
+__webpack_require__.d(__webpack_exports__, "unmountComponentAtNode", function() { return /* reexport */ external_this_ReactDOM_["unmountComponentAtNode"]; });
 __webpack_require__.d(__webpack_exports__, "isEmptyElement", function() { return /* reexport */ utils_isEmptyElement; });
+__webpack_require__.d(__webpack_exports__, "Platform", function() { return /* reexport */ platform; });
 __webpack_require__.d(__webpack_exports__, "renderToString", function() { return /* reexport */ serialize; });
 __webpack_require__.d(__webpack_exports__, "RawHTML", function() { return /* reexport */ RawHTML; });
 
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectSpread.js
-var objectSpread = __webpack_require__("vpQ4");
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js + 1 modules
+var slicedToArray = __webpack_require__("ODXe");
 
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js + 1 modules
-var objectWithoutProperties = __webpack_require__("Ff2n");
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/typeof.js
+var esm_typeof = __webpack_require__("U8pU");
 
-// EXTERNAL MODULE: external "React"
-var external_React_ = __webpack_require__("cDcd");
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js + 2 modules
+var toConsumableArray = __webpack_require__("KQm4");
 
-// EXTERNAL MODULE: external "lodash"
-var external_lodash_ = __webpack_require__("YLtl");
+// EXTERNAL MODULE: external {"this":"React"}
+var external_this_React_ = __webpack_require__("cDcd");
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/element/build-module/react.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/element/build-module/create-interpolate-element.js
+
 
 
 
@@ -245,6 +390,366 @@ var external_lodash_ = __webpack_require__("YLtl");
  * External dependencies
  */
 
+var indoc, offset, output, stack;
+/**
+ * Matches tags in the localized string
+ *
+ * This is used for extracting the tag pattern groups for parsing the localized
+ * string and along with the map converting it to a react element.
+ *
+ * There are four references extracted using this tokenizer:
+ *
+ * match: Full match of the tag (i.e. <strong>, </strong>, <br/>)
+ * isClosing: The closing slash, it it exists.
+ * name: The name portion of the tag (strong, br) (if )
+ * isSelfClosed: The slash on a self closing tag, if it exists.
+ *
+ * @type {RegExp}
+ */
+
+var tokenizer = /<(\/)?(\w+)\s*(\/)?>/g;
+/**
+ * Tracks recursive-descent parse state.
+ *
+ * This is a Stack frame holding parent elements until all children have been
+ * parsed.
+ *
+ * @private
+ * @param {WPElement} element          A parent element which may still have
+ *                                     nested children not yet parsed.
+ * @param {number}    tokenStart       Offset at which parent element first
+ *                                     appears.
+ * @param {number}    tokenLength      Length of string marking start of parent
+ *                                     element.
+ * @param {number}    prevOffset       Running offset at which parsing should
+ *                                     continue.
+ * @param {number}    leadingTextStart Offset at which last closing element
+ *                                     finished, used for finding text between
+ *                                     elements
+ *
+ * @return {Frame} The stack frame tracking parse progress.
+ */
+
+function Frame(element, tokenStart, tokenLength, prevOffset, leadingTextStart) {
+  return {
+    element: element,
+    tokenStart: tokenStart,
+    tokenLength: tokenLength,
+    prevOffset: prevOffset,
+    leadingTextStart: leadingTextStart,
+    children: []
+  };
+}
+/**
+ * This function creates an interpolated element from a passed in string with
+ * specific tags matching how the string should be converted to an element via
+ * the conversion map value.
+ *
+ * @example
+ * For example, for the given string:
+ *
+ * "This is a <span>string</span> with <a>a link</a> and a self-closing
+ * <CustomComponentB/> tag"
+ *
+ * You would have something like this as the conversionMap value:
+ *
+ * ```js
+ * {
+ *     span: <span />,
+ *     a: <a href={ 'https://github.com' } />,
+ *     CustomComponentB: <CustomComponent />,
+ * }
+ * ```
+ *
+ * @param {string}  interpolatedString  The interpolation string to be parsed.
+ * @param {Object}  conversionMap       The map used to convert the string to
+ *                                      a react element.
+ * @throws {TypeError}
+ * @return {WPElement}  A wp element.
+ */
+
+
+var create_interpolate_element_createInterpolateElement = function createInterpolateElement(interpolatedString, conversionMap) {
+  indoc = interpolatedString;
+  offset = 0;
+  output = [];
+  stack = [];
+  tokenizer.lastIndex = 0;
+
+  if (!create_interpolate_element_isValidConversionMap(conversionMap)) {
+    throw new TypeError('The conversionMap provided is not valid. It must be an object with values that are WPElements');
+  }
+
+  do {// twiddle our thumbs
+  } while (proceed(conversionMap));
+
+  return external_this_React_["createElement"].apply(void 0, [external_this_React_["Fragment"], null].concat(Object(toConsumableArray["a" /* default */])(output)));
+};
+/**
+ * Validate conversion map.
+ *
+ * A map is considered valid if it's an object and every value in the object
+ * is a WPElement
+ *
+ * @private
+ *
+ * @param {Object} conversionMap  The map being validated.
+ *
+ * @return {boolean}  True means the map is valid.
+ */
+
+
+var create_interpolate_element_isValidConversionMap = function isValidConversionMap(conversionMap) {
+  var isObject = Object(esm_typeof["a" /* default */])(conversionMap) === 'object';
+  var values = isObject && Object.values(conversionMap);
+  return isObject && values.length && values.every(function (element) {
+    return Object(external_this_React_["isValidElement"])(element);
+  });
+};
+/**
+ * This is the iterator over the matches in the string.
+ *
+ * @private
+ *
+ * @param {Object} conversionMap The conversion map for the string.
+ *
+ * @return {boolean} true for continuing to iterate, false for finished.
+ */
+
+
+function proceed(conversionMap) {
+  var next = nextToken();
+
+  var _next = Object(slicedToArray["a" /* default */])(next, 4),
+      tokenType = _next[0],
+      name = _next[1],
+      startOffset = _next[2],
+      tokenLength = _next[3];
+
+  var stackDepth = stack.length;
+  var leadingTextStart = startOffset > offset ? offset : null;
+
+  if (!conversionMap[name]) {
+    addText();
+    return false;
+  }
+
+  switch (tokenType) {
+    case 'no-more-tokens':
+      if (stackDepth !== 0) {
+        var _stack$pop = stack.pop(),
+            stackLeadingText = _stack$pop.leadingTextStart,
+            tokenStart = _stack$pop.tokenStart;
+
+        output.push(indoc.substr(stackLeadingText, tokenStart));
+      }
+
+      addText();
+      return false;
+
+    case 'self-closed':
+      if (0 === stackDepth) {
+        if (null !== leadingTextStart) {
+          output.push(indoc.substr(leadingTextStart, startOffset - leadingTextStart));
+        }
+
+        output.push(conversionMap[name]);
+        offset = startOffset + tokenLength;
+        return true;
+      } // otherwise we found an inner element
+
+
+      addChild(new Frame(conversionMap[name], startOffset, tokenLength));
+      offset = startOffset + tokenLength;
+      return true;
+
+    case 'opener':
+      stack.push(new Frame(conversionMap[name], startOffset, tokenLength, startOffset + tokenLength, leadingTextStart));
+      offset = startOffset + tokenLength;
+      return true;
+
+    case 'closer':
+      // if we're not nesting then this is easy - close the block
+      if (1 === stackDepth) {
+        closeOuterElement(startOffset);
+        offset = startOffset + tokenLength;
+        return true;
+      } // otherwise we're nested and we have to close out the current
+      // block and add it as a innerBlock to the parent
+
+
+      var stackTop = stack.pop();
+      var text = indoc.substr(stackTop.prevOffset, startOffset - stackTop.prevOffset);
+      stackTop.children.push(text);
+      stackTop.prevOffset = startOffset + tokenLength;
+      var frame = new Frame(stackTop.element, stackTop.tokenStart, stackTop.tokenLength, startOffset + tokenLength);
+      frame.children = stackTop.children;
+      addChild(frame);
+      offset = startOffset + tokenLength;
+      return true;
+
+    default:
+      addText();
+      return false;
+  }
+}
+/**
+ * Grabs the next token match in the string and returns it's details.
+ *
+ * @private
+ *
+ * @return {Array}  An array of details for the token matched.
+ */
+
+
+function nextToken() {
+  var matches = tokenizer.exec(indoc); // we have no more tokens
+
+  if (null === matches) {
+    return ['no-more-tokens'];
+  }
+
+  var startedAt = matches.index;
+
+  var _matches = Object(slicedToArray["a" /* default */])(matches, 4),
+      match = _matches[0],
+      isClosing = _matches[1],
+      name = _matches[2],
+      isSelfClosed = _matches[3];
+
+  var length = match.length;
+
+  if (isSelfClosed) {
+    return ['self-closed', name, startedAt, length];
+  }
+
+  if (isClosing) {
+    return ['closer', name, startedAt, length];
+  }
+
+  return ['opener', name, startedAt, length];
+}
+/**
+ * Pushes text extracted from the indoc string to the output stack given the
+ * current rawLength value and offset (if rawLength is provided ) or the
+ * indoc.length and offset.
+ *
+ * @private
+ */
+
+
+function addText() {
+  var length = indoc.length - offset;
+
+  if (0 === length) {
+    return;
+  }
+
+  output.push(indoc.substr(offset, length));
+}
+/**
+ * Pushes a child element to the associated parent element's children for the
+ * parent currently active in the stack.
+ *
+ * @private
+ *
+ * @param {Frame}    frame       The Frame containing the child element and it's
+ *                               token information.
+ */
+
+
+function addChild(frame) {
+  var element = frame.element,
+      tokenStart = frame.tokenStart,
+      tokenLength = frame.tokenLength,
+      prevOffset = frame.prevOffset,
+      children = frame.children;
+  var parent = stack[stack.length - 1];
+  var text = indoc.substr(parent.prevOffset, tokenStart - parent.prevOffset);
+
+  if (text) {
+    parent.children.push(text);
+  }
+
+  parent.children.push(external_this_React_["cloneElement"].apply(void 0, [element, null].concat(Object(toConsumableArray["a" /* default */])(children))));
+  parent.prevOffset = prevOffset ? prevOffset : tokenStart + tokenLength;
+}
+/**
+ * This is called for closing tags. It creates the element currently active in
+ * the stack.
+ *
+ * @private
+ *
+ * @param {number} endOffset Offset at which the closing tag for the element
+ *                           begins in the string. If this is greater than the
+ *                           prevOffset attached to the element, then this
+ *                           helps capture any remaining nested text nodes in
+ *                           the element.
+ */
+
+
+function closeOuterElement(endOffset) {
+  var _stack$pop2 = stack.pop(),
+      element = _stack$pop2.element,
+      leadingTextStart = _stack$pop2.leadingTextStart,
+      prevOffset = _stack$pop2.prevOffset,
+      tokenStart = _stack$pop2.tokenStart,
+      children = _stack$pop2.children;
+
+  var text = endOffset ? indoc.substr(prevOffset, endOffset - prevOffset) : indoc.substr(prevOffset);
+
+  if (text) {
+    children.push(text);
+  }
+
+  if (null !== leadingTextStart) {
+    output.push(indoc.substr(leadingTextStart, tokenStart - leadingTextStart));
+  }
+
+  output.push(external_this_React_["cloneElement"].apply(void 0, [element, null].concat(Object(toConsumableArray["a" /* default */])(children))));
+}
+
+/* harmony default export */ var create_interpolate_element = (create_interpolate_element_createInterpolateElement);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
+var defineProperty = __webpack_require__("rePB");
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js
+var objectWithoutProperties = __webpack_require__("Ff2n");
+
+// EXTERNAL MODULE: external {"this":"lodash"}
+var external_this_lodash_ = __webpack_require__("YLtl");
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/element/build-module/react.js
+
+
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(defineProperty["a" /* default */])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+/**
+ * External dependencies
+ */
+
+
+/**
+ * Object containing a React element.
+ *
+ * @typedef {import('react').ReactElement} WPElement
+ */
+
+/**
+ * Object containing a React component.
+ *
+ * @typedef {import('react').Component} WPComponent
+ */
+
+/**
+ * Object containing a React synthetic event.
+ *
+ * @typedef {import('react').SyntheticEvent} WPSyntheticEvent
+ */
 
 /**
  * Object that provides utilities for dealing with React children.
@@ -281,8 +786,8 @@ var external_lodash_ = __webpack_require__("YLtl");
  *
  * @param {?(string|Function)} type     Tag name or element creator
  * @param {Object}             props    Element properties, either attribute
- *                                       set to apply to DOM node or values to
- *                                       pass through to element creator
+ *                                      set to apply to DOM node or values to
+ *                                      pass through to element creator
  * @param {...WPElement}       children Descendant elements
  *
  * @return {WPElement} Element.
@@ -317,7 +822,7 @@ var external_lodash_ = __webpack_require__("YLtl");
 
 
 /**
- * Checks if an object is a valid WPElement
+ * Checks if an object is a valid WPElement.
  *
  * @param {Object} objectToCheck The object to be checked.
  *
@@ -408,17 +913,17 @@ function concatChildren() {
     childrenArguments[_key] = arguments[_key];
   }
 
-  return childrenArguments.reduce(function (result, children, i) {
-    external_React_["Children"].forEach(children, function (child, j) {
+  return childrenArguments.reduce(function (accumulator, children, i) {
+    external_this_React_["Children"].forEach(children, function (child, j) {
       if (child && 'string' !== typeof child) {
-        child = Object(external_React_["cloneElement"])(child, {
+        child = Object(external_this_React_["cloneElement"])(child, {
           key: [i, j].join()
         });
       }
 
-      result.push(child);
+      accumulator.push(child);
     });
-    return result;
+    return accumulator;
   }, []);
 }
 /**
@@ -431,9 +936,9 @@ function concatChildren() {
  */
 
 function switchChildrenNodeName(children, nodeName) {
-  return children && external_React_["Children"].map(children, function (elt, index) {
-    if (Object(external_lodash_["isString"])(elt)) {
-      return Object(external_React_["createElement"])(nodeName, {
+  return children && external_this_React_["Children"].map(children, function (elt, index) {
+    if (Object(external_this_lodash_["isString"])(elt)) {
+      return Object(external_this_React_["createElement"])(nodeName, {
         key: index
       }, elt);
     }
@@ -442,14 +947,14 @@ function switchChildrenNodeName(children, nodeName) {
         childrenProp = _elt$props.children,
         props = Object(objectWithoutProperties["a" /* default */])(_elt$props, ["children"]);
 
-    return Object(external_React_["createElement"])(nodeName, Object(objectSpread["a" /* default */])({
+    return Object(external_this_React_["createElement"])(nodeName, _objectSpread({
       key: index
     }, props), childrenProp);
   });
 }
 
-// EXTERNAL MODULE: external "ReactDOM"
-var external_ReactDOM_ = __webpack_require__("faye");
+// EXTERNAL MODULE: external {"this":"ReactDOM"}
+var external_this_ReactDOM_ = __webpack_require__("faye");
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/element/build-module/react-platform.js
 /**
@@ -461,24 +966,24 @@ var external_ReactDOM_ = __webpack_require__("faye");
  *
  * @see https://github.com/facebook/react/issues/10309#issuecomment-318433235
  *
- * @param {Component} component Component
- * @param {Element}   target    DOM node into which element should be rendered
+ * @param {WPElement}   child     Any renderable child, such as an element,
+ *                                string, or fragment.
+ * @param {HTMLElement} container DOM node into which element should be rendered.
  */
 
 
 /**
- * Finds the dom node of a React component
+ * Finds the dom node of a React component.
  *
- * @param {Component} component component's instance
- * @param {Element}   target    DOM node into which element should be rendered
+ * @param {WPComponent} component Component's instance.
  */
 
 
 /**
  * Renders a given element into the target DOM node.
  *
- * @param {WPElement} element Element to render
- * @param {Element}   target  DOM node into which element should be rendered
+ * @param {WPElement}   element Element to render.
+ * @param {HTMLElement} target  DOM node into which element should be rendered.
  */
 
 
@@ -503,19 +1008,53 @@ var external_ReactDOM_ = __webpack_require__("faye");
  */
 
 var utils_isEmptyElement = function isEmptyElement(element) {
-  if (Object(external_lodash_["isNumber"])(element)) {
+  if (Object(external_this_lodash_["isNumber"])(element)) {
     return false;
   }
 
-  if (Object(external_lodash_["isString"])(element) || Object(external_lodash_["isArray"])(element)) {
+  if (Object(external_this_lodash_["isString"])(element) || Object(external_this_lodash_["isArray"])(element)) {
     return !element.length;
   }
 
   return !element;
 };
 
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/typeof.js
-var esm_typeof = __webpack_require__("U8pU");
+// CONCATENATED MODULE: ./node_modules/@wordpress/element/build-module/platform.js
+/**
+ * Parts of this source were derived and modified from react-native-web,
+ * released under the MIT license.
+ *
+ * Copyright (c) 2016-present, Nicolas Gallagher.
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ */
+var Platform = {
+  OS: 'web',
+  select: function select(spec) {
+    return 'web' in spec ? spec.web : spec.default;
+  }
+};
+/**
+ * Component used to detect the current Platform being used.
+ * Use Platform.OS === 'web' to detect if running on web enviroment.
+ *
+ * This is the same concept as the React Native implementation.
+ *
+ * @see https://facebook.github.io/react-native/docs/platform-specific-code#platform-module
+ *
+ * Here is an example of how to use the select method:
+ * @example
+ * ```js
+ * import { Platform } from '@wordpress/element';
+ *
+ * const placeholderLabel = Platform.select( {
+ *   native: __( 'Add media' ),
+ *   web: __( 'Drag images, upload new ones or select files from your library.' ),
+ * } );
+ * ```
+ */
+
+/* harmony default export */ var platform = (Platform);
 
 // EXTERNAL MODULE: external {"this":["wp","escapeHtml"]}
 var external_this_wp_escapeHtml_ = __webpack_require__("Vx3V");
@@ -523,6 +1062,10 @@ var external_this_wp_escapeHtml_ = __webpack_require__("Vx3V");
 // CONCATENATED MODULE: ./node_modules/@wordpress/element/build-module/raw-html.js
 
 
+
+function raw_html_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function raw_html_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { raw_html_ownKeys(Object(source), true).forEach(function (key) { Object(defineProperty["a" /* default */])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { raw_html_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 /**
  * Internal dependencies
@@ -538,7 +1081,7 @@ var external_this_wp_escapeHtml_ = __webpack_require__("Vx3V");
  * @param {string} props.children HTML to render.
  * @param {Object} props.props    Any additonal props to be set on the containing div.
  *
- * @return {WPElement} Dangerously-rendering element.
+ * @return {WPComponent} Dangerously-rendering component.
  */
 
 function RawHTML(_ref) {
@@ -547,7 +1090,7 @@ function RawHTML(_ref) {
 
   // The DIV wrapper will be stripped by serializer, unless there are
   // non-children props present.
-  return Object(external_React_["createElement"])('div', Object(objectSpread["a" /* default */])({
+  return Object(external_this_React_["createElement"])('div', raw_html_objectSpread({
     dangerouslySetInnerHTML: {
       __html: children
     }
@@ -558,6 +1101,10 @@ function RawHTML(_ref) {
 
 
 
+
+function serialize_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function serialize_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { serialize_ownKeys(Object(source), true).forEach(function (key) { Object(defineProperty["a" /* default */])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { serialize_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 /**
  * Parts of this source were derived and modified from fast-react-render,
@@ -602,11 +1149,11 @@ function RawHTML(_ref) {
 
 
 
-var _createContext = Object(external_React_["createContext"])(),
+var _createContext = Object(external_this_React_["createContext"])(),
     Provider = _createContext.Provider,
     Consumer = _createContext.Consumer;
 
-var ForwardRef = Object(external_React_["forwardRef"])(function () {
+var ForwardRef = Object(external_this_React_["forwardRef"])(function () {
   return null;
 });
 /**
@@ -761,15 +1308,15 @@ function getNormalAttributeName(attribute) {
 
 
 function getNormalStylePropertyName(property) {
-  if (Object(external_lodash_["startsWith"])(property, '--')) {
+  if (Object(external_this_lodash_["startsWith"])(property, '--')) {
     return property;
   }
 
   if (hasPrefix(property, ['ms', 'O', 'Moz', 'Webkit'])) {
-    return '-' + Object(external_lodash_["kebabCase"])(property);
+    return '-' + Object(external_this_lodash_["kebabCase"])(property);
   }
 
-  return Object(external_lodash_["kebabCase"])(property);
+  return Object(external_this_lodash_["kebabCase"])(property);
 }
 /**
  * Returns the normal form of the style property value for HTML. Appends a
@@ -823,15 +1370,15 @@ function renderElement(element, context) {
       props = element.props;
 
   switch (type) {
-    case external_React_["StrictMode"]:
-    case external_React_["Fragment"]:
+    case external_this_React_["StrictMode"]:
+    case external_this_React_["Fragment"]:
       return renderChildren(props.children, context, legacyContext);
 
     case RawHTML:
       var children = props.children,
           wrapperProps = Object(objectWithoutProperties["a" /* default */])(props, ["children"]);
 
-      return renderNativeComponent(Object(external_lodash_["isEmpty"])(wrapperProps) ? null : 'div', Object(objectSpread["a" /* default */])({}, wrapperProps, {
+      return renderNativeComponent(Object(external_this_lodash_["isEmpty"])(wrapperProps) ? null : 'div', serialize_objectSpread({}, wrapperProps, {
         dangerouslySetInnerHTML: {
           __html: children
         }
@@ -884,7 +1431,7 @@ function renderNativeComponent(type, props, context) {
     // place of children. Ensure to omit so it is not assigned as attribute
     // as well.
     content = renderChildren(props.value, context, legacyContext);
-    props = Object(external_lodash_["omit"])(props, 'value');
+    props = Object(external_this_lodash_["omit"])(props, 'value');
   } else if (props.dangerouslySetInnerHTML && typeof props.dangerouslySetInnerHTML.__html === 'string') {
     // Dangerous content is left unescaped.
     content = props.dangerouslySetInnerHTML.__html;
@@ -939,7 +1486,7 @@ function renderComponent(Component, props, context) {
 function renderChildren(children, context) {
   var legacyContext = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
   var result = '';
-  children = Object(external_lodash_["castArray"])(children);
+  children = Object(external_this_lodash_["castArray"])(children);
 
   for (var i = 0; i < children.length; i++) {
     var child = children[i];
@@ -1016,7 +1563,7 @@ function renderAttributes(props) {
 
 function renderStyle(style) {
   // Only generate from object, e.g. tolerate string value.
-  if (!Object(external_lodash_["isPlainObject"])(style)) {
+  if (!Object(external_this_lodash_["isPlainObject"])(style)) {
     return style;
   }
 
@@ -1052,6 +1599,8 @@ function renderStyle(style) {
 
 
 
+
+
 /***/ }),
 
 /***/ "rePB":
@@ -1076,27 +1625,21 @@ function _defineProperty(obj, key, value) {
 
 /***/ }),
 
-/***/ "vpQ4":
+/***/ "zLVn":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _objectSpread; });
-/* harmony import */ var _defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("rePB");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _objectWithoutPropertiesLoose; });
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
 
-function _objectSpread(target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i] != null ? arguments[i] : {};
-    var ownKeys = Object.keys(source);
-
-    if (typeof Object.getOwnPropertySymbols === 'function') {
-      ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
-        return Object.getOwnPropertyDescriptor(source, sym).enumerable;
-      }));
-    }
-
-    ownKeys.forEach(function (key) {
-      Object(_defineProperty__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(target, key, source[key]);
-    });
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
   }
 
   return target;
