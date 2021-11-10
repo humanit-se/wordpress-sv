@@ -103,14 +103,14 @@ function _classCallCheck(instance, Constructor) {
 /***/ "YLtl":
 /***/ (function(module, exports) {
 
-(function() { module.exports = this["lodash"]; }());
+(function() { module.exports = window["lodash"]; }());
 
 /***/ }),
 
 /***/ "dvlR":
 /***/ (function(module, exports) {
 
-(function() { module.exports = this["regeneratorRuntime"]; }());
+(function() { module.exports = window["regeneratorRuntime"]; }());
 
 /***/ }),
 

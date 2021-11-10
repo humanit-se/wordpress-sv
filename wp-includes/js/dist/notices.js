@@ -90,7 +90,7 @@ this["wp"] = this["wp"] || {}; this["wp"]["notices"] =
 /***/ "1ZqX":
 /***/ (function(module, exports) {
 
-(function() { module.exports = this["wp"]["data"]; }());
+(function() { module.exports = window["wp"]["data"]; }());
 
 /***/ }),
 
@@ -167,6 +167,9 @@ function _toConsumableArray(arr) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "store", function() { return /* reexport */ store; });
+
 // NAMESPACE OBJECT: ./node_modules/@wordpress/notices/build-module/store/actions.js
 var actions_namespaceObject = {};
 __webpack_require__.r(actions_namespaceObject);
@@ -182,14 +185,14 @@ var selectors_namespaceObject = {};
 __webpack_require__.r(selectors_namespaceObject);
 __webpack_require__.d(selectors_namespaceObject, "getNotices", function() { return getNotices; });
 
-// EXTERNAL MODULE: external {"this":["wp","data"]}
-var external_this_wp_data_ = __webpack_require__("1ZqX");
+// EXTERNAL MODULE: external ["wp","data"]
+var external_wp_data_ = __webpack_require__("1ZqX");
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js + 2 modules
 var toConsumableArray = __webpack_require__("KQm4");
 
-// EXTERNAL MODULE: external {"this":"lodash"}
-var external_this_lodash_ = __webpack_require__("YLtl");
+// EXTERNAL MODULE: external "lodash"
+var external_lodash_ = __webpack_require__("YLtl");
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
 var defineProperty = __webpack_require__("rePB");
@@ -265,12 +268,12 @@ var notices = on_sub_key('context')(function () {
   switch (action.type) {
     case 'CREATE_NOTICE':
       // Avoid duplicates on ID.
-      return [].concat(Object(toConsumableArray["a" /* default */])(Object(external_this_lodash_["reject"])(state, {
+      return [].concat(Object(toConsumableArray["a" /* default */])(Object(external_lodash_["reject"])(state, {
         id: action.notice.id
       })), [action.notice]);
 
     case 'REMOVE_NOTICE':
-      return Object(external_this_lodash_["reject"])(state, {
+      return Object(external_lodash_["reject"])(state, {
         id: action.id
       });
   }
@@ -338,6 +341,12 @@ var DEFAULT_STATUS = 'info';
  *                                                             readers.
  * @param {Array<WPNoticeAction>} [options.actions]            User actions to be
  *                                                             presented with notice.
+ * @param {Object}                [options.icon]               An icon displayed with the notice.
+ * @param {boolean}               [options.explicitDismiss]    Whether the notice includes
+ *                                                             an explict dismiss button and
+ *                                                             can't be dismissed by clicking
+ *                                                             the body of the notice.
+ * @param {Function}              [options.onDismiss]          Called when the notice is dismissed.
  *
  * @return {Object} Action object.
  */
@@ -353,12 +362,18 @@ function createNotice() {
       _options$context = options.context,
       context = _options$context === void 0 ? DEFAULT_CONTEXT : _options$context,
       _options$id = options.id,
-      id = _options$id === void 0 ? Object(external_this_lodash_["uniqueId"])(context) : _options$id,
+      id = _options$id === void 0 ? Object(external_lodash_["uniqueId"])(context) : _options$id,
       _options$actions = options.actions,
       actions = _options$actions === void 0 ? [] : _options$actions,
       _options$type = options.type,
       type = _options$type === void 0 ? 'default' : _options$type,
-      __unstableHTML = options.__unstableHTML; // The supported value shape of content is currently limited to plain text
+      __unstableHTML = options.__unstableHTML,
+      _options$icon = options.icon,
+      icon = _options$icon === void 0 ? null : _options$icon,
+      _options$explicitDism = options.explicitDismiss,
+      explicitDismiss = _options$explicitDism === void 0 ? false : _options$explicitDism,
+      _options$onDismiss = options.onDismiss,
+      onDismiss = _options$onDismiss === void 0 ? null : _options$onDismiss; // The supported value shape of content is currently limited to plain text
   // strings. To avoid setting expectation that e.g. a WPElement could be
   // supported, cast to a string.
 
@@ -374,7 +389,10 @@ function createNotice() {
       __unstableHTML: __unstableHTML,
       isDismissible: isDismissible,
       actions: actions,
-      type: type
+      type: type,
+      icon: icon,
+      explicitDismiss: explicitDismiss,
+      onDismiss: onDismiss
     }
   };
 }
@@ -528,16 +546,22 @@ function getNotices(state) {
 
 
 
-/* harmony default export */ var store = (Object(external_this_wp_data_["registerStore"])('core/notices', {
+/**
+ * Store definition for the notices namespace.
+ *
+ * @see https://github.com/WordPress/gutenberg/blob/HEAD/packages/data/README.md#createReduxStore
+ *
+ * @type {Object}
+ */
+
+var store = Object(external_wp_data_["createReduxStore"])('core/notices', {
   reducer: store_reducer,
   actions: actions_namespaceObject,
   selectors: selectors_namespaceObject
-}));
+});
+Object(external_wp_data_["register"])(store);
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/notices/build-module/index.js
-/**
- * Internal dependencies
- */
 
 
 
@@ -546,7 +570,7 @@ function getNotices(state) {
 /***/ "YLtl":
 /***/ (function(module, exports) {
 
-(function() { module.exports = this["lodash"]; }());
+(function() { module.exports = window["lodash"]; }());
 
 /***/ }),
 
