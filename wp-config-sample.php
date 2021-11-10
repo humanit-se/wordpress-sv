@@ -13,7 +13,7 @@
  * * Tabellprefix för databas
  * * ABSPATH
  *
- * @link https://codex.wordpress.org/Editing_wp-config.php
+ * @link https://wordpress.org/support/article/editing-wp-config-php/
  *
  * @package WordPress
  */
@@ -63,7 +63,7 @@ define('NONCE_SALT',       'Ange en unik fras här');
  * Du kan ha flera installationer i samma databas om du ger varje installation ett unikt
  * prefix. Använd endast siffror, bokstäver och understreck!
  */
-$table_prefix  = 'wp_';
+$table_prefix = 'wp_';
 
 /** 
  * För utvecklare: WordPress felsökningsläge. 
@@ -78,12 +78,16 @@ $table_prefix  = 'wp_';
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */ 
 define('WP_DEBUG', false);
+/* Lägg in eventuella anpassade värden mellan denna rad och raden med "sluta redigera här". */
+
+
+
 
 /* Det var allt, sluta redigera här och börja publicera! */
 
 /** Absolut sökväg till WordPress-katalogen. */
 if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(__FILE__) . '/');
+	define('ABSPATH', __DIR__ . '/');
 
 /** Anger WordPress-värden och inkluderade filer. */
 require_once(ABSPATH . 'wp-settings.php');
