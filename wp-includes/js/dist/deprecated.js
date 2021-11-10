@@ -104,20 +104,20 @@ __webpack_require__.r(__webpack_exports__);
  * Object map tracking messages which have been logged, for use in ensuring a
  * message is only logged once.
  *
- * @type {Record<string,true|undefined>}
+ * @type {Object}
  */
 
 var logged = Object.create(null);
 /**
  * Logs a message to notify developers about a deprecated feature.
  *
- * @param {string} feature               Name of the deprecated feature.
- * @param {Object} [options]             Personalisation options
- * @param {string} [options.version]     Version in which the feature will be removed.
- * @param {string} [options.alternative] Feature to use instead
- * @param {string} [options.plugin]      Plugin name if it's a plugin feature
- * @param {string} [options.link]        Link to documentation
- * @param {string} [options.hint]        Additional message to help transition away from the deprecated feature.
+ * @param {string}  feature             Name of the deprecated feature.
+ * @param {?Object} options             Personalisation options
+ * @param {?string} options.version     Version in which the feature will be removed.
+ * @param {?string} options.alternative Feature to use instead
+ * @param {?string} options.plugin      Plugin name if it's a plugin feature
+ * @param {?string} options.link        Link to documentation
+ * @param {?string} options.hint        Additional message to help transition away from the deprecated feature.
  *
  * @example
  * ```js
@@ -142,11 +142,11 @@ function deprecated(feature) {
       link = options.link,
       hint = options.hint;
   var pluginMessage = plugin ? " from ".concat(plugin) : '';
-  var versionMessage = version ? " and will be removed".concat(pluginMessage, " in version ").concat(version) : '';
+  var versionMessage = version ? "".concat(pluginMessage, " in ").concat(version) : '';
   var useInsteadMessage = alternative ? " Please use ".concat(alternative, " instead.") : '';
   var linkMessage = link ? " See: ".concat(link) : '';
   var hintMessage = hint ? " Note: ".concat(hint) : '';
-  var message = "".concat(feature, " is deprecated").concat(versionMessage, ".").concat(useInsteadMessage).concat(linkMessage).concat(hintMessage); // Skip if already logged.
+  var message = "".concat(feature, " is deprecated and will be removed").concat(versionMessage, ".").concat(useInsteadMessage).concat(linkMessage).concat(hintMessage); // Skip if already logged.
 
   if (message in logged) {
     return;
@@ -177,7 +177,7 @@ function deprecated(feature) {
 /***/ "g56x":
 /***/ (function(module, exports) {
 
-(function() { module.exports = window["wp"]["hooks"]; }());
+(function() { module.exports = this["wp"]["hooks"]; }());
 
 /***/ })
 

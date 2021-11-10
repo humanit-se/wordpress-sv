@@ -13,7 +13,7 @@
  * * Tabellprefix för databas
  * * ABSPATH
  *
- * @link https://wordpress.org/support/article/editing-wp-config-php/
+ * @link https://codex.wordpress.org/Editing_wp-config.php
  *
  * @package WordPress
  */
@@ -83,7 +83,7 @@ define('WP_DEBUG', false);
 
 /** Absolut sökväg till WordPress-katalogen. */
 if ( !defined('ABSPATH') )
-	define('ABSPATH', __DIR__ . '/');
+	define('ABSPATH', dirname(__FILE__) . '/');
 
 /** Anger WordPress-värden och inkluderade filer. */
 require_once(ABSPATH . 'wp-settings.php');
