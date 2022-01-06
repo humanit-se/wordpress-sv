@@ -646,6 +646,7 @@ __webpack_require__.d(__webpack_exports__, "getPath", function() { return /* ree
 __webpack_require__.d(__webpack_exports__, "isValidPath", function() { return /* reexport */ isValidPath; });
 __webpack_require__.d(__webpack_exports__, "getQueryString", function() { return /* reexport */ getQueryString; });
 __webpack_require__.d(__webpack_exports__, "isValidQueryString", function() { return /* reexport */ isValidQueryString; });
+__webpack_require__.d(__webpack_exports__, "getPathAndQueryString", function() { return /* reexport */ getPathAndQueryString; });
 __webpack_require__.d(__webpack_exports__, "getFragment", function() { return /* reexport */ getFragment; });
 __webpack_require__.d(__webpack_exports__, "isValidFragment", function() { return /* reexport */ isValidFragment; });
 __webpack_require__.d(__webpack_exports__, "addQueryArgs", function() { return /* reexport */ addQueryArgs; });
@@ -680,7 +681,7 @@ function isURL(url) {
   try {
     new URL(url);
     return true;
-  } catch (error) {
+  } catch (_unused) {
     return false;
   }
 }
@@ -844,17 +845,20 @@ function isValidPath(path) {
  *
  * @example
  * ```js
- * const queryString1 = getQueryString( 'http://localhost:8080/this/is/a/test?query=true#fragment' ); // 'query=true'
- * const queryString2 = getQueryString( 'https://wordpress.org#fragment?query=false&search=hello' ); // 'query=false&search=hello'
+ * const queryString = getQueryString( 'http://localhost:8080/this/is/a/test?query=true#fragment' ); // 'query=true'
  * ```
  *
  * @return {string|void} The query string part of the URL.
  */
 function getQueryString(url) {
-  var matches = /^\S+?\?([^\s#]+)/.exec(url);
+  var query;
 
-  if (matches) {
-    return matches[1];
+  try {
+    query = new URL(url).search.substring(1);
+  } catch (error) {}
+
+  if (query) {
+    return query;
   }
 }
 
@@ -878,6 +882,34 @@ function isValidQueryString(queryString) {
   }
 
   return /^[^\s#?\/]+$/.test(queryString);
+}
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/get-path-and-query-string.js
+/**
+ * Internal dependencies
+ */
+
+/**
+ * Returns the path part and query string part of the URL.
+ *
+ * @param {string} url The full URL.
+ *
+ * @example
+ * ```js
+ * const pathAndQueryString1 = getPathAndQueryString( 'http://localhost:8080/this/is/a/test?query=true' ); // '/this/is/a/test?query=true'
+ * const pathAndQueryString2 = getPathAndQueryString( 'https://wordpress.org/help/faq/' ); // '/help/faq'
+ * ```
+ *
+ * @return {string} The path part and query string part of the URL.
+ */
+
+function getPathAndQueryString(url) {
+  var path = getPath(url);
+  var queryString = getQueryString(url);
+  var value = '/';
+  if (path) value += path;
+  if (queryString) value += "?".concat(queryString);
+  return value;
 }
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/get-fragment.js
@@ -939,7 +971,7 @@ var lib = __webpack_require__("Qyje");
  *
  * @param {string} [url='']  URL to which arguments should be appended. If omitted,
  *                           only the resulting querystring is returned.
- * @param {Object} args      Query arguments to apply to URL.
+ * @param {Object} [args]    Query arguments to apply to URL.
  *
  * @example
  * ```js
@@ -977,9 +1009,13 @@ function addQueryArgs() {
  * External dependencies
  */
 
+/* eslint-disable jsdoc/valid-types */
+
 /**
  * @typedef {{[key: string]: QueryArgParsed}} QueryArgObject
  */
+
+/* eslint-enable */
 
 /**
  * @typedef {string|string[]|QueryArgObject} QueryArgParsed
@@ -1172,11 +1208,11 @@ var external_this_lodash_ = __webpack_require__("YLtl");
  * This replicates some of what `sanitize_title()` does in WordPress core, but
  * is only designed to approximate what the slug will be.
  *
- * Converts whitespace, periods, forward slashes and underscores to hyphens.
  * Converts Latin-1 Supplement and Latin Extended-A letters to basic Latin
- * letters. Removes combining diacritical marks. Converts remaining string
- * to lowercase. It does not touch octets, HTML entities, or other encoded
- * characters.
+ * letters. Removes combining diacritical marks. Converts whitespace, periods,
+ * and forward slashes to hyphens. Removes any remaining non-word characters
+ * except hyphens. Converts remaining string to lowercase. It does not account
+ * for octets, HTML entities, or other encoded characters.
  *
  * @param {string} string Title or slug to be processed.
  *
@@ -1188,10 +1224,11 @@ function cleanForSlug(string) {
     return '';
   }
 
-  return Object(external_this_lodash_["toLower"])(Object(external_this_lodash_["deburr"])(Object(external_this_lodash_["trim"])(string.replace(/[\s\./_]+/g, '-'), '-')));
+  return Object(external_this_lodash_["trim"])(Object(external_this_lodash_["deburr"])(string).replace(/[\s\./]+/g, '-').replace(/[^\w-]+/g, '').toLowerCase(), '-');
 }
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/index.js
+
 
 
 
