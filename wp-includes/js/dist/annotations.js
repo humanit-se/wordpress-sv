@@ -199,7 +199,7 @@ function reducer_annotations() {
       }
 
       var previousAnnotationsForBlock = (_state$blockClientId = state === null || state === void 0 ? void 0 : state[blockClientId]) !== null && _state$blockClientId !== void 0 ? _state$blockClientId : [];
-      return _objectSpread({}, state, Object(defineProperty["a" /* default */])({}, blockClientId, [].concat(Object(toConsumableArray["a" /* default */])(previousAnnotationsForBlock), [newAnnotation])));
+      return _objectSpread(_objectSpread({}, state), {}, Object(defineProperty["a" /* default */])({}, blockClientId, [].concat(Object(toConsumableArray["a" /* default */])(previousAnnotationsForBlock), [newAnnotation])));
 
     case 'ANNOTATION_REMOVE':
       return Object(external_this_lodash_["mapValues"])(state, function (annotationsForBlock) {
@@ -214,7 +214,7 @@ function reducer_annotations() {
         var newAnnotations = annotationsForBlock.map(function (annotation) {
           if (annotation.id === action.annotationId) {
             hasChangedRange = true;
-            return _objectSpread({}, annotation, {
+            return _objectSpread(_objectSpread({}, annotation), {}, {
               range: {
                 start: action.start,
                 end: action.end
@@ -316,7 +316,7 @@ var __experimentalGetAnnotationsForRichText = Object(rememo["a" /* default */])(
     var range = annotation.range,
         other = Object(objectWithoutProperties["a" /* default */])(annotation, ["range"]);
 
-    return selectors_objectSpread({}, range, {}, other);
+    return selectors_objectSpread(selectors_objectSpread({}, range), other);
   });
 }, function (state, blockClientId) {
   var _state$blockClientId5;
@@ -786,15 +786,15 @@ function _iterableToArray(iter) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _unsupportedIterableToArray; });
-/* harmony import */ var _arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("a3WO");
+/* harmony import */ var _babel_runtime_helpers_esm_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("a3WO");
 
 function _unsupportedIterableToArray(o, minLen) {
   if (!o) return;
-  if (typeof o === "string") return Object(_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(o, minLen);
+  if (typeof o === "string") return Object(_babel_runtime_helpers_esm_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(o, minLen);
   var n = Object.prototype.toString.call(o).slice(8, -1);
   if (n === "Object" && o.constructor) n = o.constructor.name;
   if (n === "Map" || n === "Set") return Array.from(o);
-  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Object(_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(o, minLen);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Object(_babel_runtime_helpers_esm_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(o, minLen);
 }
 
 /***/ }),
@@ -804,11 +804,11 @@ function _unsupportedIterableToArray(o, minLen) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _objectWithoutProperties; });
-/* harmony import */ var _objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("zLVn");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("zLVn");
 
 function _objectWithoutProperties(source, excluded) {
   if (source == null) return {};
-  var target = Object(_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(source, excluded);
+  var target = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(source, excluded);
   var key, i;
 
   if (Object.getOwnPropertySymbols) {

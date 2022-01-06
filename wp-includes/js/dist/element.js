@@ -103,15 +103,15 @@ function _iterableToArray(iter) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _unsupportedIterableToArray; });
-/* harmony import */ var _arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("a3WO");
+/* harmony import */ var _babel_runtime_helpers_esm_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("a3WO");
 
 function _unsupportedIterableToArray(o, minLen) {
   if (!o) return;
-  if (typeof o === "string") return Object(_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(o, minLen);
+  if (typeof o === "string") return Object(_babel_runtime_helpers_esm_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(o, minLen);
   var n = Object.prototype.toString.call(o).slice(8, -1);
   if (n === "Object" && o.constructor) n = o.constructor.name;
   if (n === "Map" || n === "Set") return Array.from(o);
-  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Object(_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(o, minLen);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Object(_babel_runtime_helpers_esm_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(o, minLen);
 }
 
 /***/ }),
@@ -132,11 +132,11 @@ function _arrayWithHoles(arr) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _objectWithoutProperties; });
-/* harmony import */ var _objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("zLVn");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("zLVn");
 
 function _objectWithoutProperties(source, excluded) {
   if (source == null) return {};
-  var target = Object(_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(source, excluded);
+  var target = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(source, excluded);
   var key, i;
 
   if (Object.getOwnPropertySymbols) {
@@ -1092,11 +1092,7 @@ function raw_html_objectSpread(target) { for (var i = 1; i < arguments.length; i
  */
  // Disable reason: JSDoc linter doesn't seem to parse the union (`&`) correctly.
 
-/* eslint-disable jsdoc/valid-types */
-
 /** @typedef {{children: string} & import('react').ComponentPropsWithoutRef<'div'>} RawHTMLProps */
-
-/* eslint-enable jsdoc/valid-types */
 
 /**
  * Component used as equivalent of Fragment with unescaped HTML, in cases where
@@ -1407,7 +1403,7 @@ function renderElement(element, context) {
       var children = props.children,
           wrapperProps = Object(objectWithoutProperties["a" /* default */])(props, ["children"]);
 
-      return renderNativeComponent(Object(external_this_lodash_["isEmpty"])(wrapperProps) ? null : 'div', serialize_objectSpread({}, wrapperProps, {
+      return renderNativeComponent(Object(external_this_lodash_["isEmpty"])(wrapperProps) ? null : 'div', serialize_objectSpread(serialize_objectSpread({}, wrapperProps), {}, {
         dangerouslySetInnerHTML: {
           __html: children
         }
