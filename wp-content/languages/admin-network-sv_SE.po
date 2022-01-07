@@ -1,5 +1,5 @@
-# Translation of WordPress - 5.1.x - Administration - Network Admin in Swedish
-# This file is distributed under the same license as the WordPress - 5.1.x - Administration - Network Admin package.
+# Translation of WordPress - 5.2.x - Administration - Network Admin in Swedish
+# This file is distributed under the same license as the WordPress - 5.2.x - Administration - Network Admin package.
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2019-01-26 15:46:32+0000\n"
@@ -9,7 +9,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: GlotPress/3.0.0-alpha.2\n"
 "Language: sv_SE\n"
-"Project-Id-Version: WordPress - 5.1.x - Administration - Network Admin\n"
+"Project-Id-Version: WordPress - 5.2.x - Administration - Network Admin\n"
 
 #: wp-admin/network/sites.php:315
 msgid "Site marked as spam."
@@ -183,7 +183,7 @@ msgstr "Uppdateringar"
 msgid "Site options updated."
 msgstr "Webbplatsinställningar uppdaterade."
 
-#: wp-admin/network/settings.php:458
+#: wp-admin/network/settings.php:457
 msgid "Enable menus"
 msgstr "Aktivera menyer"
 
@@ -886,23 +886,23 @@ msgstr "Ogiltig webbplats-ID."
 msgid "Sorry, you are not allowed to edit this site."
 msgstr "Du saknar behörighet för att redigera den här webbplatsen."
 
-#: wp-admin/includes/class-wp-ms-users-list-table.php:173
+#: wp-admin/includes/class-wp-ms-users-list-table.php:171
 msgctxt "user"
 msgid "Registered"
 msgstr "Registrerad"
 
-#: wp-admin/includes/class-wp-ms-users-list-table.php:144
+#: wp-admin/includes/class-wp-ms-users-list-table.php:142
 msgid "Super Admin <span class=\"count\">(%s)</span>"
 msgid_plural "Super Admins <span class=\"count\">(%s)</span>"
 msgstr[0] "Superadmin <span class=\"count\">(%s)</span>"
 msgstr[1] "Superadmins <span class=\"count\">(%s)</span>"
 
-#: wp-admin/includes/class-wp-ms-users-list-table.php:118
+#: wp-admin/includes/class-wp-ms-users-list-table.php:116
 msgctxt "user"
 msgid "Not Spam"
 msgstr "Ta bort markering som skräppostare"
 
-#: wp-admin/includes/class-wp-ms-users-list-table.php:117
+#: wp-admin/includes/class-wp-ms-users-list-table.php:115
 msgctxt "user"
 msgid "Mark as Spam"
 msgstr "Markera som skräppostare"
@@ -910,10 +910,6 @@ msgstr "Markera som skräppostare"
 #: wp-admin/includes/class-wp-ms-themes-list-table.php:671
 msgid "Active Child Theme"
 msgstr "Aktivt barntema"
-
-#: wp-admin/includes/class-wp-ms-themes-list-table.php:666
-msgid "Active Theme"
-msgstr "Aktivt tema"
 
 #: wp-admin/includes/class-wp-ms-themes-list-table.php:586
 msgid "Visit Theme Site"
@@ -1253,6 +1249,10 @@ msgstr "Det ser ut som Apache-modulen %s inte är installerad."
 #: wp-admin/includes/network.php:192
 msgid "Please make sure the Apache %s module is installed as it will be used at the end of this installation."
 msgstr "Vänligen försäkra dig om att Apache-modulen %s är installerad eftersom den kommer att användas i slutet av denna installation."
+
+#: wp-admin/includes/network.php:189
+msgid "Note:"
+msgstr "Notera:"
 
 #: wp-admin/includes/network.php:177
 msgid "Fill in the information below and you&#8217;ll be on your way to creating a network of WordPress sites. We will create configuration files in the next step."
