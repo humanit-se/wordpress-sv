@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Akismet Spam Protection - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-09-30 21:02:13+0000\n"
+"PO-Revision-Date: 2022-01-25 23:17:41+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,9 +21,40 @@ msgstr "Uppgradera till %s"
 msgid "Upgrade your Subscription Level"
 msgstr "Uppgradera din prenumerationsnivå"
 
+#: views/notice.php:233 views/notice.php:241 views/notice.php:249
+#: views/notice.php:258
+msgid "Learn more about usage limits."
+msgstr "Lär dig mer om användningsgränser."
+
+#. translators: The first placeholder is a date, the second is a (formatted)
+#. number, the third is another formatted number.
+#: views/notice.php:225
+msgid "Since %1$s, your account made %2$s API calls, compared to your plan&#8217;s limit of %3$s."
+msgstr "Sedan %1$s har ditt konto utfört %2$s API-anrop, vilket bör jämföras med gränsen för ditt paket, %3$s."
+
+#: views/notice.php:255
+msgid "Your Akismet usage has been over your plan&#8217;s limit for three consecutive months. We have restricted your account for the rest of the month. Upgrade your plan so Akismet can continue blocking spam."
+msgstr "Din användning av Akismet har nu överskridit användningsgränsen för ditt paket tre månader i följd. Vi har begränsat ditt konto under resten av månaden. Skaffa ett större paket för att Akismet ska kunna fortsätta att blockera skräppost."
+
+#: views/notice.php:246
+msgid "Your Akismet usage is nearing your plan&#8217;s limit for the third consecutive month. We will restrict your account after you reach the limit. Upgrade your plan so Akismet can continue blocking spam."
+msgstr "Din användning av Akismet har nu legat nära användningsgränsen för ditt paket tre månader i följd. Vi kommer att begränsa ditt konto när du går över gränsen. Skaffa ett större paket för att Akismet ska kunna fortsätta att blockera skräppost."
+
+#: views/notice.php:238
+msgid "Your Akismet usage has been over your plan&#8217;s limit for two consecutive months. Next month, we will restrict your account after you reach the limit. Please consider upgrading your plan."
+msgstr "Din användning av Akismet har nu överskridit användningsgränsen för ditt paket två månader i följd. Nästa månad kommer vi att begränsa ditt konto när du överskrider gränsen. Du bör överväga att skaffa ett större paket."
+
 #: views/notice.php:212
 msgid "Your account has been restricted"
 msgstr "Ditt konto har begränsats"
+
+#: views/notice.php:208
+msgid "Your Akismet account usage is approaching your plan&#8217;s limit"
+msgstr "Användningen av ditt Akismet-konto närmar sig gränsen för ditt paket"
+
+#: views/notice.php:205
+msgid "Your Akismet account usage is over your plan&#8217;s limit"
+msgstr "Användningen av ditt Akismet-konto överskrider gränsen för ditt paket"
 
 #. translators: The placeholder is a URL.
 #: views/notice.php:123
