@@ -174,6 +174,10 @@ var external_this_wp_components_ = __webpack_require__("tI+e");
 
 
 
+function _createSuper(Derived) { return function () { var Super = Object(getPrototypeOf["a" /* default */])(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = Object(getPrototypeOf["a" /* default */])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(possibleConstructorReturn["a" /* default */])(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(defineProperty["a" /* default */])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -200,17 +204,17 @@ function rendererPath(block) {
     attributes: attributes
   } : {}, {}, urlQueryArgs));
 }
-var server_side_render_ServerSideRender =
-/*#__PURE__*/
-function (_Component) {
+var server_side_render_ServerSideRender = /*#__PURE__*/function (_Component) {
   Object(inherits["a" /* default */])(ServerSideRender, _Component);
+
+  var _super = _createSuper(ServerSideRender);
 
   function ServerSideRender(props) {
     var _this;
 
     Object(classCallCheck["a" /* default */])(this, ServerSideRender);
 
-    _this = Object(possibleConstructorReturn["a" /* default */])(this, Object(getPrototypeOf["a" /* default */])(ServerSideRender).call(this, props));
+    _this = _super.call(this, props);
     _this.state = {
       response: null
     };
@@ -324,8 +328,8 @@ server_side_render_ServerSideRender.defaultProps = {
   ErrorResponsePlaceholder: function ErrorResponsePlaceholder(_ref2) {
     var response = _ref2.response,
         className = _ref2.className;
-    // translators: %s: error message describing the problem
-    var errorMessage = Object(external_this_wp_i18n_["sprintf"])(Object(external_this_wp_i18n_["__"])('Error loading block: %s'), response.errorMsg);
+    var errorMessage = Object(external_this_wp_i18n_["sprintf"])( // translators: %s: error message describing the problem
+    Object(external_this_wp_i18n_["__"])('Error loading block: %s'), response.errorMsg);
     return Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Placeholder"], {
       className: className
     }, errorMessage);

@@ -110,7 +110,7 @@ function _unsupportedIterableToArray(o, minLen) {
   if (typeof o === "string") return Object(_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(o, minLen);
   var n = Object.prototype.toString.call(o).slice(8, -1);
   if (n === "Object" && o.constructor) n = o.constructor.name;
-  if (n === "Map" || n === "Set") return Array.from(n);
+  if (n === "Map" || n === "Set") return Array.from(o);
   if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Object(_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(o, minLen);
 }
 
@@ -229,6 +229,7 @@ __webpack_require__.d(__webpack_exports__, "ALT", function() { return /* binding
 __webpack_require__.d(__webpack_exports__, "CTRL", function() { return /* binding */ CTRL; });
 __webpack_require__.d(__webpack_exports__, "COMMAND", function() { return /* binding */ COMMAND; });
 __webpack_require__.d(__webpack_exports__, "SHIFT", function() { return /* binding */ SHIFT; });
+__webpack_require__.d(__webpack_exports__, "ZERO", function() { return /* binding */ ZERO; });
 __webpack_require__.d(__webpack_exports__, "modifiers", function() { return /* binding */ modifiers; });
 __webpack_require__.d(__webpack_exports__, "rawShortcut", function() { return /* binding */ rawShortcut; });
 __webpack_require__.d(__webpack_exports__, "displayShortcutList", function() { return /* binding */ displayShortcutList; });
@@ -305,7 +306,7 @@ function isAppleOS() {
  * An object of handler functions for each of the possible modifier
  * combinations. A handler will return a value for a given key.
  *
- * @typedef {{[M in WPKeycodeModifier]:(key:string)=>any}} WPKeycodeHandlerByModifier
+ * @typedef {Record<WPKeycodeModifier, (key:string)=>any>} WPKeycodeHandlerByModifier
  */
 
 /**
@@ -383,6 +384,11 @@ var COMMAND = 'meta';
  */
 
 var SHIFT = 'shift';
+/**
+ * Keycode for ZERO key.
+ */
+
+var ZERO = 48;
 /**
  * Object that contains functions that return the available modifier
  * depending on platform.
@@ -514,6 +520,20 @@ var shortcutAriaLabel = Object(external_this_lodash_["mapValues"])(modifiers, fu
   };
 });
 /**
+ * From a given KeyboardEvent, returns an array of active modifier constants for
+ * the event.
+ *
+ * @param {KeyboardEvent} event Keyboard event.
+ *
+ * @return {Array<ALT|CTRL|COMMAND|SHIFT>} Active modifier constants.
+ */
+
+function getEventModifiers(event) {
+  return [ALT, CTRL, COMMAND, SHIFT].filter(function (key) {
+    return event["".concat(key, "Key")];
+  });
+}
+/**
  * An object that contains functions to check if a keyboard event matches a
  * predefined shortcut combination.
  * E.g. isKeyboardEvent.primary( event, 'm' ) will return true if the event
@@ -522,15 +542,15 @@ var shortcutAriaLabel = Object(external_this_lodash_["mapValues"])(modifiers, fu
  * @type {WPKeycodeHandlerByModifier} Keyed map of functions to match events.
  */
 
+
 var isKeyboardEvent = Object(external_this_lodash_["mapValues"])(modifiers, function (getModifiers) {
   return function (event, character) {
     var _isApple = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : isAppleOS;
 
     var mods = getModifiers(_isApple);
+    var eventMods = getEventModifiers(event);
 
-    if (!mods.every(function (key) {
-      return event["".concat(key, "Key")];
-    })) {
+    if (Object(external_this_lodash_["xor"])(mods, eventMods).length) {
       return false;
     }
 

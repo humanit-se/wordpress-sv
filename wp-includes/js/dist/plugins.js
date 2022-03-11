@@ -87,6 +87,31 @@ this["wp"] = this["wp"] || {}; this["wp"]["plugins"] =
 /************************************************************************/
 /******/ ({
 
+/***/ "0Ene":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("GRId");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("Tqx9");
+/* harmony import */ var _wordpress_primitives__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/**
+ * WordPress dependencies
+ */
+
+var plugins = Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__["SVG"], {
+  xmlns: "http://www.w3.org/2000/svg",
+  viewBox: "0 0 24 24"
+}, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__["Path"], {
+  d: "M10.5 4v4h3V4H15v4h1.5a1 1 0 011 1v4l-3 4v2a1 1 0 01-1 1h-3a1 1 0 01-1-1v-2l-3-4V9a1 1 0 011-1H9V4h1.5zm.5 12.5v2h2v-2l3-4v-3H8v3l3 4z"
+}));
+/* harmony default export */ __webpack_exports__["a"] = (plugins);
+
+
+/***/ }),
+
 /***/ "1OyB":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -165,6 +190,13 @@ function _inherits(subClass, superClass) {
 
 /***/ }),
 
+/***/ "Tqx9":
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["wp"]["primitives"]; }());
+
+/***/ }),
+
 /***/ "U8pU":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -216,14 +248,14 @@ var classCallCheck = __webpack_require__("1OyB");
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/createClass.js
 var createClass = __webpack_require__("vuIU");
 
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js
+var assertThisInitialized = __webpack_require__("JX7q");
+
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js
 var possibleConstructorReturn = __webpack_require__("md7G");
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js
 var getPrototypeOf = __webpack_require__("foSv");
-
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js
-var assertThisInitialized = __webpack_require__("JX7q");
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/inherits.js + 1 modules
 var inherits = __webpack_require__("Ji7U");
@@ -288,6 +320,9 @@ var defineProperty = __webpack_require__("rePB");
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/typeof.js
 var esm_typeof = __webpack_require__("U8pU");
 
+// EXTERNAL MODULE: ./node_modules/@wordpress/icons/build-module/library/plugins.js
+var plugins = __webpack_require__("0Ene");
+
 // CONCATENATED MODULE: ./node_modules/@wordpress/plugins/build-module/api/index.js
 
 
@@ -301,6 +336,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 /**
  * WordPress dependencies
  */
+
 
 /**
  * External dependencies
@@ -329,7 +365,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
  * @type {Object.<string,WPPlugin>}
  */
 
-var plugins = {};
+var api_plugins = {};
 /**
  * Registers a plugin to the editor.
  *
@@ -337,7 +373,8 @@ var plugins = {};
  *                            unique across all registered plugins.
  * @param {WPPlugin} settings The settings for this plugin.
  *
- * @example <caption>ES5</caption>
+ * @example
+ * <caption>ES5</caption>
  * ```js
  * // Using ES5 syntax
  * var el = wp.element.createElement;
@@ -374,7 +411,8 @@ var plugins = {};
  * } );
  * ```
  *
- * @example <caption>ESNext</caption>
+ * @example
+ * <caption>ESNext</caption>
  * ```js
  * // Using ESNext syntax
  * import { PluginSidebar, PluginSidebarMoreMenuItem } from '@wordpress/edit-post';
@@ -422,7 +460,7 @@ function registerPlugin(name, settings) {
     return null;
   }
 
-  if (plugins[name]) {
+  if (api_plugins[name]) {
     console.error("Plugin \"".concat(name, "\" is already registered."));
   }
 
@@ -433,9 +471,9 @@ function registerPlugin(name, settings) {
     return null;
   }
 
-  plugins[name] = _objectSpread({
+  api_plugins[name] = _objectSpread({
     name: name,
-    icon: 'admin-plugins'
+    icon: plugins["a" /* default */]
   }, settings);
   Object(external_this_wp_hooks_["doAction"])('plugins.pluginRegistered', settings, name);
   return settings;
@@ -445,7 +483,8 @@ function registerPlugin(name, settings) {
  *
  * @param {string} name Plugin name.
  *
- * @example <caption>ES5</caption>
+ * @example
+ * <caption>ES5</caption>
  * ```js
  * // Using ES5 syntax
  * var unregisterPlugin = wp.plugins.unregisterPlugin;
@@ -453,10 +492,11 @@ function registerPlugin(name, settings) {
  * unregisterPlugin( 'plugin-name' );
  * ```
  *
- * @example <caption>ESNext</caption>
+ * @example
+ * <caption>ESNext</caption>
  * ```js
  * // Using ESNext syntax
- * const { unregisterPlugin } = wp.plugins;
+ * import { unregisterPlugin } from '@wordpress/plugins';
  *
  * unregisterPlugin( 'plugin-name' );
  * ```
@@ -466,13 +506,13 @@ function registerPlugin(name, settings) {
  */
 
 function unregisterPlugin(name) {
-  if (!plugins[name]) {
+  if (!api_plugins[name]) {
     console.error('Plugin "' + name + '" is not registered.');
     return;
   }
 
-  var oldPlugin = plugins[name];
-  delete plugins[name];
+  var oldPlugin = api_plugins[name];
+  delete api_plugins[name];
   Object(external_this_wp_hooks_["doAction"])('plugins.pluginUnregistered', oldPlugin, name);
   return oldPlugin;
 }
@@ -485,7 +525,7 @@ function unregisterPlugin(name) {
  */
 
 function getPlugin(name) {
-  return plugins[name];
+  return api_plugins[name];
 }
 /**
  * Returns all registered plugins.
@@ -494,7 +534,7 @@ function getPlugin(name) {
  */
 
 function getPlugins() {
-  return Object.values(plugins);
+  return Object.values(api_plugins);
 }
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/plugins/build-module/components/plugin-area/index.js
@@ -505,6 +545,10 @@ function getPlugins() {
 
 
 
+
+function _createSuper(Derived) { return function () { var Super = Object(getPrototypeOf["a" /* default */])(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = Object(getPrototypeOf["a" /* default */])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(possibleConstructorReturn["a" /* default */])(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 /**
  * External dependencies
@@ -525,7 +569,8 @@ function getPlugins() {
 /**
  * A component that renders all plugin fills in a hidden div.
  *
- * @example <caption>ES5</caption>
+ * @example
+ * <caption>ES5</caption>
  * ```js
  * // Using ES5 syntax
  * var el = wp.element.createElement;
@@ -541,10 +586,11 @@ function getPlugins() {
  * }
  * ```
  *
- * @example <caption>ESNext</caption>
+ * @example
+ * <caption>ESNext</caption>
  * ```js
  * // Using ESNext syntax
- * const { PluginArea } = wp.plugins;
+ * import { PluginArea } from '@wordpress/plugins';
  *
  * const Layout = () => (
  * 	<div>
@@ -557,17 +603,17 @@ function getPlugins() {
  * @return {WPComponent} The component to be rendered.
  */
 
-var plugin_area_PluginArea =
-/*#__PURE__*/
-function (_Component) {
+var plugin_area_PluginArea = /*#__PURE__*/function (_Component) {
   Object(inherits["a" /* default */])(PluginArea, _Component);
+
+  var _super = _createSuper(PluginArea);
 
   function PluginArea() {
     var _this;
 
     Object(classCallCheck["a" /* default */])(this, PluginArea);
 
-    _this = Object(possibleConstructorReturn["a" /* default */])(this, Object(getPrototypeOf["a" /* default */])(PluginArea).apply(this, arguments));
+    _this = _super.apply(this, arguments);
     _this.setPlugins = _this.setPlugins.bind(Object(assertThisInitialized["a" /* default */])(_this));
     _this.state = _this.getCurrentPluginsState();
     return _this;

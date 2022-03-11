@@ -87,6 +87,31 @@ this["wp"] = this["wp"] || {}; this["wp"]["editor"] =
 /************************************************************************/
 /******/ ({
 
+/***/ "//Lo":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("GRId");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("Tqx9");
+/* harmony import */ var _wordpress_primitives__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/**
+ * WordPress dependencies
+ */
+
+var blockDefault = Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__["SVG"], {
+  xmlns: "http://www.w3.org/2000/svg",
+  viewBox: "0 0 24 24"
+}, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__["Path"], {
+  d: "M19 8h-1V6h-5v2h-2V6H6v2H5c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-8c0-1.1-.9-2-2-2zm.5 10c0 .3-.2.5-.5.5H5c-.3 0-.5-.2-.5-.5v-8c0-.3.2-.5.5-.5h14c.3 0 .5.2.5.5v8z"
+}));
+/* harmony default export */ __webpack_exports__["a"] = (blockDefault);
+
+
+/***/ }),
+
 /***/ "16Al":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -398,31 +423,6 @@ module.exports = memize;
 
 /***/ }),
 
-/***/ "Bpkj":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("GRId");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("Tqx9");
-/* harmony import */ var _wordpress_primitives__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__);
-
-
-/**
- * WordPress dependencies
- */
-
-var link = Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__["SVG"], {
-  xmlns: "http://www.w3.org/2000/svg",
-  viewBox: "-2 -2 24 24"
-}, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__["Path"], {
-  d: "M17.74 2.76c1.68 1.69 1.68 4.41 0 6.1l-1.53 1.52c-1.12 1.12-2.7 1.47-4.14 1.09l2.62-2.61.76-.77.76-.76c.84-.84.84-2.2 0-3.04-.84-.85-2.2-.85-3.04 0l-.77.76-3.38 3.38c-.37-1.44-.02-3.02 1.1-4.14l1.52-1.53c1.69-1.68 4.42-1.68 6.1 0zM8.59 13.43l5.34-5.34c.42-.42.42-1.1 0-1.52-.44-.43-1.13-.39-1.53 0l-5.33 5.34c-.42.42-.42 1.1 0 1.52.44.43 1.13.39 1.52 0zm-.76 2.29l4.14-4.15c.38 1.44.03 3.02-1.09 4.14l-1.52 1.53c-1.69 1.68-4.41 1.68-6.1 0-1.68-1.68-1.68-4.42 0-6.1l1.53-1.52c1.12-1.12 2.7-1.47 4.14-1.1l-4.14 4.15c-.85.84-.85 2.2 0 3.05.84.84 2.2.84 3.04 0z"
-}));
-/* harmony default export */ __webpack_exports__["a"] = (link);
-
-
-/***/ }),
-
 /***/ "BsWD":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -435,7 +435,7 @@ function _unsupportedIterableToArray(o, minLen) {
   if (typeof o === "string") return Object(_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(o, minLen);
   var n = Object.prototype.toString.call(o).slice(8, -1);
   if (n === "Object" && o.constructor) n = o.constructor.name;
-  if (n === "Map" || n === "Set") return Array.from(n);
+  if (n === "Map" || n === "Set") return Array.from(o);
   if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Object(_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(o, minLen);
 }
 
@@ -570,6 +570,31 @@ exports["default"] = TextareaAutosize;
 
 /***/ }),
 
+/***/ "Civd":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("GRId");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("Tqx9");
+/* harmony import */ var _wordpress_primitives__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/**
+ * WordPress dependencies
+ */
+
+var layout = Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__["SVG"], {
+  xmlns: "http://www.w3.org/2000/svg",
+  viewBox: "-2 -2 24 24"
+}, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__["Path"], {
+  d: "M2 2h5v11H2V2zm6 0h5v5H8V2zm6 0h4v16h-4V2zM8 8h5v5H8V8zm-6 6h11v4H2v-4z"
+}));
+/* harmony default export */ __webpack_exports__["a"] = (layout);
+
+
+/***/ }),
+
 /***/ "DSFK":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -613,321 +638,6 @@ function _objectWithoutProperties(source, excluded) {
 /***/ (function(module, exports) {
 
 (function() { module.exports = this["wp"]["date"]; }());
-
-/***/ }),
-
-/***/ "FtRg":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-function _typeof(obj) {
-  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-    _typeof = function (obj) {
-      return typeof obj;
-    };
-  } else {
-    _typeof = function (obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-    };
-  }
-
-  return _typeof(obj);
-}
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
-  }
-}
-
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
-
-/**
- * Given an instance of EquivalentKeyMap, returns its internal value pair tuple
- * for a key, if one exists. The tuple members consist of the last reference
- * value for the key (used in efficient subsequent lookups) and the value
- * assigned for the key at the leaf node.
- *
- * @param {EquivalentKeyMap} instance EquivalentKeyMap instance.
- * @param {*} key                     The key for which to return value pair.
- *
- * @return {?Array} Value pair, if exists.
- */
-function getValuePair(instance, key) {
-  var _map = instance._map,
-      _arrayTreeMap = instance._arrayTreeMap,
-      _objectTreeMap = instance._objectTreeMap; // Map keeps a reference to the last object-like key used to set the
-  // value, which can be used to shortcut immediately to the value.
-
-  if (_map.has(key)) {
-    return _map.get(key);
-  } // Sort keys to ensure stable retrieval from tree.
-
-
-  var properties = Object.keys(key).sort(); // Tree by type to avoid conflicts on numeric object keys, empty value.
-
-  var map = Array.isArray(key) ? _arrayTreeMap : _objectTreeMap;
-
-  for (var i = 0; i < properties.length; i++) {
-    var property = properties[i];
-    map = map.get(property);
-
-    if (map === undefined) {
-      return;
-    }
-
-    var propertyValue = key[property];
-    map = map.get(propertyValue);
-
-    if (map === undefined) {
-      return;
-    }
-  }
-
-  var valuePair = map.get('_ekm_value');
-
-  if (!valuePair) {
-    return;
-  } // If reached, it implies that an object-like key was set with another
-  // reference, so delete the reference and replace with the current.
-
-
-  _map.delete(valuePair[0]);
-
-  valuePair[0] = key;
-  map.set('_ekm_value', valuePair);
-
-  _map.set(key, valuePair);
-
-  return valuePair;
-}
-/**
- * Variant of a Map object which enables lookup by equivalent (deeply equal)
- * object and array keys.
- */
-
-
-var EquivalentKeyMap =
-/*#__PURE__*/
-function () {
-  /**
-   * Constructs a new instance of EquivalentKeyMap.
-   *
-   * @param {Iterable.<*>} iterable Initial pair of key, value for map.
-   */
-  function EquivalentKeyMap(iterable) {
-    _classCallCheck(this, EquivalentKeyMap);
-
-    this.clear();
-
-    if (iterable instanceof EquivalentKeyMap) {
-      // Map#forEach is only means of iterating with support for IE11.
-      var iterablePairs = [];
-      iterable.forEach(function (value, key) {
-        iterablePairs.push([key, value]);
-      });
-      iterable = iterablePairs;
-    }
-
-    if (iterable != null) {
-      for (var i = 0; i < iterable.length; i++) {
-        this.set(iterable[i][0], iterable[i][1]);
-      }
-    }
-  }
-  /**
-   * Accessor property returning the number of elements.
-   *
-   * @return {number} Number of elements.
-   */
-
-
-  _createClass(EquivalentKeyMap, [{
-    key: "set",
-
-    /**
-     * Add or update an element with a specified key and value.
-     *
-     * @param {*} key   The key of the element to add.
-     * @param {*} value The value of the element to add.
-     *
-     * @return {EquivalentKeyMap} Map instance.
-     */
-    value: function set(key, value) {
-      // Shortcut non-object-like to set on internal Map.
-      if (key === null || _typeof(key) !== 'object') {
-        this._map.set(key, value);
-
-        return this;
-      } // Sort keys to ensure stable assignment into tree.
-
-
-      var properties = Object.keys(key).sort();
-      var valuePair = [key, value]; // Tree by type to avoid conflicts on numeric object keys, empty value.
-
-      var map = Array.isArray(key) ? this._arrayTreeMap : this._objectTreeMap;
-
-      for (var i = 0; i < properties.length; i++) {
-        var property = properties[i];
-
-        if (!map.has(property)) {
-          map.set(property, new EquivalentKeyMap());
-        }
-
-        map = map.get(property);
-        var propertyValue = key[property];
-
-        if (!map.has(propertyValue)) {
-          map.set(propertyValue, new EquivalentKeyMap());
-        }
-
-        map = map.get(propertyValue);
-      } // If an _ekm_value exists, there was already an equivalent key. Before
-      // overriding, ensure that the old key reference is removed from map to
-      // avoid memory leak of accumulating equivalent keys. This is, in a
-      // sense, a poor man's WeakMap, while still enabling iterability.
-
-
-      var previousValuePair = map.get('_ekm_value');
-
-      if (previousValuePair) {
-        this._map.delete(previousValuePair[0]);
-      }
-
-      map.set('_ekm_value', valuePair);
-
-      this._map.set(key, valuePair);
-
-      return this;
-    }
-    /**
-     * Returns a specified element.
-     *
-     * @param {*} key The key of the element to return.
-     *
-     * @return {?*} The element associated with the specified key or undefined
-     *              if the key can't be found.
-     */
-
-  }, {
-    key: "get",
-    value: function get(key) {
-      // Shortcut non-object-like to get from internal Map.
-      if (key === null || _typeof(key) !== 'object') {
-        return this._map.get(key);
-      }
-
-      var valuePair = getValuePair(this, key);
-
-      if (valuePair) {
-        return valuePair[1];
-      }
-    }
-    /**
-     * Returns a boolean indicating whether an element with the specified key
-     * exists or not.
-     *
-     * @param {*} key The key of the element to test for presence.
-     *
-     * @return {boolean} Whether an element with the specified key exists.
-     */
-
-  }, {
-    key: "has",
-    value: function has(key) {
-      if (key === null || _typeof(key) !== 'object') {
-        return this._map.has(key);
-      } // Test on the _presence_ of the pair, not its value, as even undefined
-      // can be a valid member value for a key.
-
-
-      return getValuePair(this, key) !== undefined;
-    }
-    /**
-     * Removes the specified element.
-     *
-     * @param {*} key The key of the element to remove.
-     *
-     * @return {boolean} Returns true if an element existed and has been
-     *                   removed, or false if the element does not exist.
-     */
-
-  }, {
-    key: "delete",
-    value: function _delete(key) {
-      if (!this.has(key)) {
-        return false;
-      } // This naive implementation will leave orphaned child trees. A better
-      // implementation should traverse and remove orphans.
-
-
-      this.set(key, undefined);
-      return true;
-    }
-    /**
-     * Executes a provided function once per each key/value pair, in insertion
-     * order.
-     *
-     * @param {Function} callback Function to execute for each element.
-     * @param {*}        thisArg  Value to use as `this` when executing
-     *                            `callback`.
-     */
-
-  }, {
-    key: "forEach",
-    value: function forEach(callback) {
-      var _this = this;
-
-      var thisArg = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this;
-
-      this._map.forEach(function (value, key) {
-        // Unwrap value from object-like value pair.
-        if (key !== null && _typeof(key) === 'object') {
-          value = value[1];
-        }
-
-        callback.call(thisArg, value, key, _this);
-      });
-    }
-    /**
-     * Removes all elements.
-     */
-
-  }, {
-    key: "clear",
-    value: function clear() {
-      this._map = new Map();
-      this._arrayTreeMap = new Map();
-      this._objectTreeMap = new Map();
-    }
-  }, {
-    key: "size",
-    get: function get() {
-      return this._map.size;
-    }
-  }]);
-
-  return EquivalentKeyMap;
-}();
-
-module.exports = EquivalentKeyMap;
-
 
 /***/ }),
 
@@ -1475,7 +1185,6 @@ function _slicedToArray(arr, i) {
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
-__webpack_require__.d(__webpack_exports__, "blockAutocompleter", function() { return /* reexport */ autocompleters_block; });
 __webpack_require__.d(__webpack_exports__, "userAutocompleter", function() { return /* reexport */ autocompleters_user; });
 __webpack_require__.d(__webpack_exports__, "AutosaveMonitor", function() { return /* reexport */ autosave_monitor; });
 __webpack_require__.d(__webpack_exports__, "DocumentOutline", function() { return /* reexport */ document_outline; });
@@ -1571,7 +1280,6 @@ __webpack_require__.d(__webpack_exports__, "__unstableRichTextInputEvent", funct
 __webpack_require__.d(__webpack_exports__, "MediaPlaceholder", function() { return /* reexport */ MediaPlaceholder; });
 __webpack_require__.d(__webpack_exports__, "MediaUpload", function() { return /* reexport */ MediaUpload; });
 __webpack_require__.d(__webpack_exports__, "MediaUploadCheck", function() { return /* reexport */ MediaUploadCheck; });
-__webpack_require__.d(__webpack_exports__, "MultiBlocksSwitcher", function() { return /* reexport */ MultiBlocksSwitcher; });
 __webpack_require__.d(__webpack_exports__, "MultiSelectScrollIntoView", function() { return /* reexport */ MultiSelectScrollIntoView; });
 __webpack_require__.d(__webpack_exports__, "NavigableToolbar", function() { return /* reexport */ NavigableToolbar; });
 __webpack_require__.d(__webpack_exports__, "ObserveTyping", function() { return /* reexport */ ObserveTyping; });
@@ -1591,7 +1299,7 @@ __webpack_require__.d(__webpack_exports__, "getFontSizeClass", function() { retu
 __webpack_require__.d(__webpack_exports__, "withColorContext", function() { return /* reexport */ withColorContext; });
 __webpack_require__.d(__webpack_exports__, "withColors", function() { return /* reexport */ withColors; });
 __webpack_require__.d(__webpack_exports__, "withFontSizes", function() { return /* reexport */ withFontSizes; });
-__webpack_require__.d(__webpack_exports__, "mediaUpload", function() { return /* reexport */ media_upload; });
+__webpack_require__.d(__webpack_exports__, "mediaUpload", function() { return /* reexport */ mediaUpload; });
 __webpack_require__.d(__webpack_exports__, "cleanForSlug", function() { return /* reexport */ cleanForSlug; });
 __webpack_require__.d(__webpack_exports__, "storeConfig", function() { return /* reexport */ storeConfig; });
 __webpack_require__.d(__webpack_exports__, "transformStyles", function() { return /* reexport */ external_this_wp_blockEditor_["transformStyles"]; });
@@ -1637,7 +1345,7 @@ __webpack_require__.d(actions_namespaceObject, "resetBlocks", function() { retur
 __webpack_require__.d(actions_namespaceObject, "receiveBlocks", function() { return receiveBlocks; });
 __webpack_require__.d(actions_namespaceObject, "updateBlock", function() { return updateBlock; });
 __webpack_require__.d(actions_namespaceObject, "updateBlockAttributes", function() { return updateBlockAttributes; });
-__webpack_require__.d(actions_namespaceObject, "selectBlock", function() { return selectBlock; });
+__webpack_require__.d(actions_namespaceObject, "selectBlock", function() { return actions_selectBlock; });
 __webpack_require__.d(actions_namespaceObject, "startMultiSelect", function() { return startMultiSelect; });
 __webpack_require__.d(actions_namespaceObject, "stopMultiSelect", function() { return stopMultiSelect; });
 __webpack_require__.d(actions_namespaceObject, "multiSelect", function() { return multiSelect; });
@@ -1670,7 +1378,7 @@ var selectors_namespaceObject = {};
 __webpack_require__.r(selectors_namespaceObject);
 __webpack_require__.d(selectors_namespaceObject, "hasEditorUndo", function() { return hasEditorUndo; });
 __webpack_require__.d(selectors_namespaceObject, "hasEditorRedo", function() { return hasEditorRedo; });
-__webpack_require__.d(selectors_namespaceObject, "isEditedPostNew", function() { return selectors_isEditedPostNew; });
+__webpack_require__.d(selectors_namespaceObject, "isEditedPostNew", function() { return isEditedPostNew; });
 __webpack_require__.d(selectors_namespaceObject, "hasChangedContent", function() { return hasChangedContent; });
 __webpack_require__.d(selectors_namespaceObject, "isEditedPostDirty", function() { return selectors_isEditedPostDirty; });
 __webpack_require__.d(selectors_namespaceObject, "hasNonPostEntityChanges", function() { return selectors_hasNonPostEntityChanges; });
@@ -1680,7 +1388,7 @@ __webpack_require__.d(selectors_namespaceObject, "getCurrentPostType", function(
 __webpack_require__.d(selectors_namespaceObject, "getCurrentPostId", function() { return selectors_getCurrentPostId; });
 __webpack_require__.d(selectors_namespaceObject, "getCurrentPostRevisionsCount", function() { return getCurrentPostRevisionsCount; });
 __webpack_require__.d(selectors_namespaceObject, "getCurrentPostLastRevisionId", function() { return getCurrentPostLastRevisionId; });
-__webpack_require__.d(selectors_namespaceObject, "getPostEdits", function() { return getPostEdits; });
+__webpack_require__.d(selectors_namespaceObject, "getPostEdits", function() { return selectors_getPostEdits; });
 __webpack_require__.d(selectors_namespaceObject, "getReferenceByDistinctEdits", function() { return getReferenceByDistinctEdits; });
 __webpack_require__.d(selectors_namespaceObject, "getCurrentPostAttribute", function() { return selectors_getCurrentPostAttribute; });
 __webpack_require__.d(selectors_namespaceObject, "getEditedPostAttribute", function() { return selectors_getEditedPostAttribute; });
@@ -1712,9 +1420,10 @@ __webpack_require__.d(selectors_namespaceObject, "__experimentalIsFetchingReusab
 __webpack_require__.d(selectors_namespaceObject, "__experimentalGetReusableBlocks", function() { return selectors_experimentalGetReusableBlocks; });
 __webpack_require__.d(selectors_namespaceObject, "getStateBeforeOptimisticTransaction", function() { return getStateBeforeOptimisticTransaction; });
 __webpack_require__.d(selectors_namespaceObject, "isPublishingPost", function() { return selectors_isPublishingPost; });
-__webpack_require__.d(selectors_namespaceObject, "isPermalinkEditable", function() { return selectors_isPermalinkEditable; });
+__webpack_require__.d(selectors_namespaceObject, "isPermalinkEditable", function() { return isPermalinkEditable; });
 __webpack_require__.d(selectors_namespaceObject, "getPermalink", function() { return getPermalink; });
-__webpack_require__.d(selectors_namespaceObject, "getPermalinkParts", function() { return selectors_getPermalinkParts; });
+__webpack_require__.d(selectors_namespaceObject, "getEditedPostSlug", function() { return getEditedPostSlug; });
+__webpack_require__.d(selectors_namespaceObject, "getPermalinkParts", function() { return getPermalinkParts; });
 __webpack_require__.d(selectors_namespaceObject, "inSomeHistory", function() { return inSomeHistory; });
 __webpack_require__.d(selectors_namespaceObject, "isPostLocked", function() { return isPostLocked; });
 __webpack_require__.d(selectors_namespaceObject, "isPostSavingLocked", function() { return selectors_isPostSavingLocked; });
@@ -1729,7 +1438,7 @@ __webpack_require__.d(selectors_namespaceObject, "getEditorSelectionStart", func
 __webpack_require__.d(selectors_namespaceObject, "getEditorSelectionEnd", function() { return selectors_getEditorSelectionEnd; });
 __webpack_require__.d(selectors_namespaceObject, "__unstableIsEditorReady", function() { return __unstableIsEditorReady; });
 __webpack_require__.d(selectors_namespaceObject, "getEditorSettings", function() { return selectors_getEditorSettings; });
-__webpack_require__.d(selectors_namespaceObject, "getBlockName", function() { return selectors_getBlockName; });
+__webpack_require__.d(selectors_namespaceObject, "getBlockName", function() { return getBlockName; });
 __webpack_require__.d(selectors_namespaceObject, "isBlockValid", function() { return isBlockValid; });
 __webpack_require__.d(selectors_namespaceObject, "getBlockAttributes", function() { return getBlockAttributes; });
 __webpack_require__.d(selectors_namespaceObject, "getBlock", function() { return selectors_getBlock; });
@@ -1744,7 +1453,7 @@ __webpack_require__.d(selectors_namespaceObject, "getBlockSelectionStart", funct
 __webpack_require__.d(selectors_namespaceObject, "getBlockSelectionEnd", function() { return getBlockSelectionEnd; });
 __webpack_require__.d(selectors_namespaceObject, "getSelectedBlockCount", function() { return getSelectedBlockCount; });
 __webpack_require__.d(selectors_namespaceObject, "hasSelectedBlock", function() { return hasSelectedBlock; });
-__webpack_require__.d(selectors_namespaceObject, "getSelectedBlockClientId", function() { return selectors_getSelectedBlockClientId; });
+__webpack_require__.d(selectors_namespaceObject, "getSelectedBlockClientId", function() { return getSelectedBlockClientId; });
 __webpack_require__.d(selectors_namespaceObject, "getSelectedBlock", function() { return getSelectedBlock; });
 __webpack_require__.d(selectors_namespaceObject, "getBlockRootClientId", function() { return getBlockRootClientId; });
 __webpack_require__.d(selectors_namespaceObject, "getBlockHierarchyRootClientId", function() { return getBlockHierarchyRootClientId; });
@@ -1778,7 +1487,7 @@ __webpack_require__.d(selectors_namespaceObject, "isValidTemplate", function() {
 __webpack_require__.d(selectors_namespaceObject, "getTemplate", function() { return getTemplate; });
 __webpack_require__.d(selectors_namespaceObject, "getTemplateLock", function() { return getTemplateLock; });
 __webpack_require__.d(selectors_namespaceObject, "canInsertBlockType", function() { return selectors_canInsertBlockType; });
-__webpack_require__.d(selectors_namespaceObject, "getInserterItems", function() { return selectors_getInserterItems; });
+__webpack_require__.d(selectors_namespaceObject, "getInserterItems", function() { return getInserterItems; });
 __webpack_require__.d(selectors_namespaceObject, "hasInserterItems", function() { return hasInserterItems; });
 __webpack_require__.d(selectors_namespaceObject, "getBlockListSettings", function() { return getBlockListSettings; });
 
@@ -2512,39 +2221,17 @@ function actions_ownKeys(object, enumerableOnly) { var keys = Object.keys(object
 
 function actions_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { actions_ownKeys(Object(source), true).forEach(function (key) { Object(defineProperty["a" /* default */])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { actions_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
-var _marked =
-/*#__PURE__*/
-external_this_regeneratorRuntime_default.a.mark(setupEditor),
-    _marked2 =
-/*#__PURE__*/
-external_this_regeneratorRuntime_default.a.mark(resetAutosave),
-    _marked3 =
-/*#__PURE__*/
-external_this_regeneratorRuntime_default.a.mark(actions_editPost),
-    _marked4 =
-/*#__PURE__*/
-external_this_regeneratorRuntime_default.a.mark(actions_savePost),
-    _marked5 =
-/*#__PURE__*/
-external_this_regeneratorRuntime_default.a.mark(refreshPost),
-    _marked6 =
-/*#__PURE__*/
-external_this_regeneratorRuntime_default.a.mark(trashPost),
-    _marked7 =
-/*#__PURE__*/
-external_this_regeneratorRuntime_default.a.mark(actions_autosave),
-    _marked8 =
-/*#__PURE__*/
-external_this_regeneratorRuntime_default.a.mark(actions_experimentalLocalAutosave),
-    _marked9 =
-/*#__PURE__*/
-external_this_regeneratorRuntime_default.a.mark(actions_redo),
-    _marked10 =
-/*#__PURE__*/
-external_this_regeneratorRuntime_default.a.mark(actions_undo),
-    _marked11 =
-/*#__PURE__*/
-external_this_regeneratorRuntime_default.a.mark(actions_resetEditorBlocks);
+var _marked = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(setupEditor),
+    _marked2 = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(resetAutosave),
+    _marked3 = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(actions_editPost),
+    _marked4 = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(actions_savePost),
+    _marked5 = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(refreshPost),
+    _marked6 = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(trashPost),
+    _marked7 = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(actions_autosave),
+    _marked8 = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(actions_experimentalLocalAutosave),
+    _marked9 = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(actions_redo),
+    _marked10 = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(actions_undo),
+    _marked11 = /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(actions_resetEditorBlocks);
 
 /**
  * External dependencies
@@ -2776,7 +2463,7 @@ function setupEditorState(post) {
  */
 
 function actions_editPost(edits, options) {
-  var _ref, id, type;
+  var _yield$select, id, type;
 
   return external_this_regeneratorRuntime_default.a.wrap(function editPost$(_context3) {
     while (1) {
@@ -2786,9 +2473,9 @@ function actions_editPost(edits, options) {
           return Object(external_this_wp_dataControls_["select"])(STORE_KEY, 'getCurrentPost');
 
         case 2:
-          _ref = _context3.sent;
-          id = _ref.id;
-          type = _ref.type;
+          _yield$select = _context3.sent;
+          id = _yield$select.id;
+          type = _yield$select.type;
           _context3.next = 7;
           return Object(external_this_wp_dataControls_["dispatch"])('core', 'editEntityRecord', 'postType', type, id, edits, options);
 
@@ -3468,7 +3155,7 @@ function actions_resetEditorBlocks(blocks) {
       selectionStart,
       selectionEnd,
       edits,
-      _ref2,
+      _yield$select2,
       id,
       type,
       noChange,
@@ -3495,11 +3182,11 @@ function actions_resetEditorBlocks(blocks) {
           return Object(external_this_wp_dataControls_["select"])(STORE_KEY, 'getCurrentPost');
 
         case 6:
-          _ref2 = _context11.sent;
-          id = _ref2.id;
-          type = _ref2.type;
+          _yield$select2 = _context11.sent;
+          id = _yield$select2.id;
+          type = _yield$select2.type;
           _context11.next = 11;
-          return Object(external_this_wp_dataControls_["select"])('core', 'getEditedEntityRecord', 'postType', type, id);
+          return Object(external_this_wp_dataControls_["__unstableSyncSelect"])('core', 'getEditedEntityRecord', 'postType', type, id);
 
         case 11:
           _context11.t0 = _context11.sent.blocks;
@@ -3521,9 +3208,9 @@ function actions_resetEditorBlocks(blocks) {
           // We create a new function here on every persistent edit
           // to make sure the edit makes the post dirty and creates
           // a new undo level.
-          edits.content = function (_ref3) {
-            var _ref3$blocks = _ref3.blocks,
-                blocksForSerialization = _ref3$blocks === void 0 ? [] : _ref3$blocks;
+          edits.content = function (_ref) {
+            var _ref$blocks = _ref.blocks,
+                blocksForSerialization = _ref$blocks === void 0 ? [] : _ref$blocks;
             return serialize_blocks(blocksForSerialization);
           };
 
@@ -3556,37 +3243,34 @@ function updateEditorSettings(settings) {
  */
 
 var actions_getBlockEditorAction = function getBlockEditorAction(name) {
-  return (
-    /*#__PURE__*/
-    external_this_regeneratorRuntime_default.a.mark(function _callee() {
-      var _len,
-          args,
-          _key,
-          _args13 = arguments;
+  return /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(function _callee() {
+    var _len,
+        args,
+        _key,
+        _args13 = arguments;
 
-      return external_this_regeneratorRuntime_default.a.wrap(function _callee$(_context12) {
-        while (1) {
-          switch (_context12.prev = _context12.next) {
-            case 0:
-              external_this_wp_deprecated_default()("`wp.data.dispatch( 'core/editor' )." + name + '`', {
-                alternative: "`wp.data.dispatch( 'core/block-editor' )." + name + '`'
-              });
+    return external_this_regeneratorRuntime_default.a.wrap(function _callee$(_context12) {
+      while (1) {
+        switch (_context12.prev = _context12.next) {
+          case 0:
+            external_this_wp_deprecated_default()("`wp.data.dispatch( 'core/editor' )." + name + '`', {
+              alternative: "`wp.data.dispatch( 'core/block-editor' )." + name + '`'
+            });
 
-              for (_len = _args13.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-                args[_key] = _args13[_key];
-              }
+            for (_len = _args13.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+              args[_key] = _args13[_key];
+            }
 
-              _context12.next = 4;
-              return external_this_wp_dataControls_["dispatch"].apply(void 0, ['core/block-editor', name].concat(args));
+            _context12.next = 4;
+            return external_this_wp_dataControls_["dispatch"].apply(void 0, ['core/block-editor', name].concat(args));
 
-            case 4:
-            case "end":
-              return _context12.stop();
-          }
+          case 4:
+          case "end":
+            return _context12.stop();
         }
-      }, _callee);
-    })
-  );
+      }
+    }, _callee);
+  });
 };
 /**
  * @see resetBlocks in core/block-editor store.
@@ -3613,7 +3297,7 @@ var updateBlockAttributes = actions_getBlockEditorAction('updateBlockAttributes'
  * @see selectBlock in core/block-editor store.
  */
 
-var selectBlock = actions_getBlockEditorAction('selectBlock');
+var actions_selectBlock = actions_getBlockEditorAction('selectBlock');
 /**
  * @see startMultiSelect in core/block-editor store.
  */
@@ -3757,6 +3441,55 @@ var external_this_wp_date_ = __webpack_require__("FqII");
 // EXTERNAL MODULE: external {"this":["wp","url"]}
 var external_this_wp_url_ = __webpack_require__("Mmq9");
 
+// CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/utils/url.js
+/**
+ * External dependencies
+ */
+
+/**
+ * WordPress dependencies
+ */
+
+
+/**
+ * Returns the URL of a WPAdmin Page.
+ *
+ * TODO: This should be moved to a module less specific to the editor.
+ *
+ * @param {string} page  Page to navigate to.
+ * @param {Object} query Query Args.
+ *
+ * @return {string} WPAdmin URL.
+ */
+
+function getWPAdminURL(page, query) {
+  return Object(external_this_wp_url_["addQueryArgs"])(page, query);
+}
+/**
+ * Performs some basic cleanup of a string for use as a post slug
+ *
+ * This replicates some of what sanitize_title() does in WordPress core, but
+ * is only designed to approximate what the slug will be.
+ *
+ * Converts Latin-1 Supplement and Latin Extended-A letters to basic Latin
+ * letters. Removes combining diacritical marks. Converts whitespace, periods,
+ * and forward slashes to hyphens. Removes any remaining non-word characters
+ * except hyphens. Converts remaining string to lowercase. It does not account
+ * for octets, HTML entities, or other encoded characters.
+ *
+ * @param {string} string Title or slug to be processed
+ *
+ * @return {string} Processed string
+ */
+
+function cleanForSlug(string) {
+  if (!string) {
+    return '';
+  }
+
+  return Object(external_this_lodash_["trim"])(Object(external_this_lodash_["deburr"])(string).replace(/[\s\./]+/g, '-').replace(/[^\w-]+/g, '').toLowerCase(), '-');
+}
+
 // CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/store/selectors.js
 
 
@@ -3782,6 +3515,7 @@ function selectors_objectSpread(target) { for (var i = 1; i < arguments.length; 
 /**
  * Internal dependencies
  */
+
 
 
 
@@ -3841,7 +3575,7 @@ var hasEditorRedo = Object(external_this_wp_data_["createRegistrySelector"])(fun
  * @return {boolean} Whether the post is new.
  */
 
-function selectors_isEditedPostNew(state) {
+function isEditedPostNew(state) {
   return selectors_getCurrentPost(state).status === 'auto-draft';
 }
 /**
@@ -3853,7 +3587,7 @@ function selectors_isEditedPostNew(state) {
  */
 
 function hasChangedContent(state) {
-  var edits = getPostEdits(state);
+  var edits = selectors_getPostEdits(state);
   return 'blocks' in edits || // `edits` is intended to contain only values which are different from
   // the saved post, so the mere presence of a property is an indicator
   // that the value is different than what is known to be saved. While
@@ -3902,39 +3636,15 @@ var selectors_hasNonPostEntityChanges = Object(external_this_wp_data_["createReg
       return false;
     }
 
-    var entityRecordChangesByRecord = select('core').getEntityRecordChangesByRecord();
-    var changedKinds = Object.keys(entityRecordChangesByRecord);
-
-    if (changedKinds.length > 1 || changedKinds.length === 1 && !entityRecordChangesByRecord.postType) {
-      // Return true if there is more than one edited entity kind
-      // or the edited entity kind is not the editor's post's kind.
-      return true;
-    } else if (!entityRecordChangesByRecord.postType) {
-      // Don't continue if there are no edited entity kinds.
-      return false;
-    }
+    var dirtyEntityRecords = select('core').__experimentalGetDirtyEntityRecords();
 
     var _getCurrentPost = selectors_getCurrentPost(state),
         type = _getCurrentPost.type,
         id = _getCurrentPost.id;
 
-    var changedPostTypes = Object.keys(entityRecordChangesByRecord.postType);
-
-    if (changedPostTypes.length > 1 || changedPostTypes.length === 1 && !entityRecordChangesByRecord.postType[type]) {
-      // Return true if there is more than one edited post type
-      // or the edited entity's post type is not the editor's post's post type.
-      return true;
-    }
-
-    var changedPosts = Object.keys(entityRecordChangesByRecord.postType[type]);
-
-    if (changedPosts.length > 1 || changedPosts.length === 1 && !entityRecordChangesByRecord.postType[type][id]) {
-      // Return true if there is more than one edited post
-      // or the edited post is not the editor's post.
-      return true;
-    }
-
-    return false;
+    return Object(external_this_lodash_["some"])(dirtyEntityRecords, function (entityRecord) {
+      return entityRecord.kind !== 'postType' || entityRecord.name !== type || entityRecord.key !== id;
+    });
   };
 });
 /**
@@ -3947,7 +3657,7 @@ var selectors_hasNonPostEntityChanges = Object(external_this_wp_data_["createReg
  */
 
 function selectors_isCleanNewPost(state) {
-  return !selectors_isEditedPostDirty(state) && selectors_isEditedPostNew(state);
+  return !selectors_isEditedPostDirty(state) && isEditedPostNew(state);
 }
 /**
  * Returns the post currently being edited in its last known saved state, not
@@ -4030,7 +3740,7 @@ function getCurrentPostLastRevisionId(state) {
  * @return {Object} Object of key value pairs comprising unsaved edits.
  */
 
-var getPostEdits = Object(external_this_wp_data_["createRegistrySelector"])(function (select) {
+var selectors_getPostEdits = Object(external_this_wp_data_["createRegistrySelector"])(function (select) {
   return function (state) {
     var postType = selectors_getCurrentPostType(state);
     var postId = selectors_getCurrentPostId(state);
@@ -4107,7 +3817,7 @@ function selectors_getCurrentPostAttribute(state, attributeName) {
  */
 
 var getNestedEditedPostProperty = function getNestedEditedPostProperty(state, attributeName) {
-  var edits = getPostEdits(state);
+  var edits = selectors_getPostEdits(state);
 
   if (!edits.hasOwnProperty(attributeName)) {
     return selectors_getCurrentPostAttribute(state, attributeName);
@@ -4135,7 +3845,7 @@ function selectors_getEditedPostAttribute(state, attributeName) {
   } // Fall back to saved post value if not edited.
 
 
-  var edits = getPostEdits(state);
+  var edits = selectors_getPostEdits(state);
 
   if (!edits.hasOwnProperty(attributeName)) {
     return selectors_getCurrentPostAttribute(state, attributeName);
@@ -4466,7 +4176,7 @@ function isEditedPostDateFloating(state) {
   var status = selectors_getEditedPostAttribute(state, 'status');
 
   if (status === 'draft' || status === 'auto-draft' || status === 'pending') {
-    return date === modified;
+    return date === modified || date === null;
   }
 
   return false;
@@ -4808,7 +4518,7 @@ function selectors_isPublishingPost(state) {
  * @return {boolean} Whether or not the permalink is editable.
  */
 
-function selectors_isPermalinkEditable(state) {
+function isPermalinkEditable(state) {
   var permalinkTemplate = selectors_getEditedPostAttribute(state, 'permalink_template');
   return PERMALINK_POSTNAME_REGEX.test(permalinkTemplate);
 }
@@ -4821,7 +4531,7 @@ function selectors_isPermalinkEditable(state) {
  */
 
 function getPermalink(state) {
-  var permalinkParts = selectors_getPermalinkParts(state);
+  var permalinkParts = getPermalinkParts(state);
 
   if (!permalinkParts) {
     return null;
@@ -4831,11 +4541,24 @@ function getPermalink(state) {
       postName = permalinkParts.postName,
       suffix = permalinkParts.suffix;
 
-  if (selectors_isPermalinkEditable(state)) {
+  if (isPermalinkEditable(state)) {
     return prefix + postName + suffix;
   }
 
   return prefix;
+}
+/**
+ * Returns the slug for the post being edited, preferring a manually edited
+ * value if one exists, then a sanitized version of the current post title, and
+ * finally the post ID.
+ *
+ * @param {Object} state Editor state.
+ *
+ * @return {string} The current slug to be displayed in the editor
+ */
+
+function getEditedPostSlug(state) {
+  return selectors_getEditedPostAttribute(state, 'slug') || cleanForSlug(selectors_getEditedPostAttribute(state, 'title')) || selectors_getCurrentPostId(state);
 }
 /**
  * Returns the permalink for a post, split into it's three parts: the prefix,
@@ -4847,7 +4570,7 @@ function getPermalink(state) {
  *                  the permalink, or null if the post is not viewable.
  */
 
-function selectors_getPermalinkParts(state) {
+function getPermalinkParts(state) {
   var permalinkTemplate = selectors_getEditedPostAttribute(state, 'permalink_template');
 
   if (!permalinkTemplate) {
@@ -5070,7 +4793,7 @@ function getBlockEditorSelector(name) {
  */
 
 
-var selectors_getBlockName = getBlockEditorSelector('getBlockName');
+var getBlockName = getBlockEditorSelector('getBlockName');
 /**
  * @see isBlockValid in core/block-editor store.
  */
@@ -5145,7 +4868,7 @@ var hasSelectedBlock = getBlockEditorSelector('hasSelectedBlock');
  * @see getSelectedBlockClientId in core/block-editor store.
  */
 
-var selectors_getSelectedBlockClientId = getBlockEditorSelector('getSelectedBlockClientId');
+var getSelectedBlockClientId = getBlockEditorSelector('getSelectedBlockClientId');
 /**
  * @see getSelectedBlock in core/block-editor store.
  */
@@ -5315,7 +5038,7 @@ var selectors_canInsertBlockType = getBlockEditorSelector('canInsertBlockType');
  * @see getInserterItems in core/block-editor store.
  */
 
-var selectors_getInserterItems = getBlockEditorSelector('getInserterItems');
+var getInserterItems = getBlockEditorSelector('getInserterItems');
 /**
  * @see hasInserterItems in core/block-editor store.
  */
@@ -5370,12 +5093,8 @@ var REUSABLE_BLOCK_NOTICE_ID = 'REUSABLE_BLOCK_NOTICE_ID';
  * @param {Object} store   Redux Store.
  */
 
-var fetchReusableBlocks =
-/*#__PURE__*/
-function () {
-  var _ref = Object(asyncToGenerator["a" /* default */])(
-  /*#__PURE__*/
-  external_this_regeneratorRuntime_default.a.mark(function _callee(action, store) {
+var fetchReusableBlocks = /*#__PURE__*/function () {
+  var _ref = Object(asyncToGenerator["a" /* default */])( /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(function _callee(action, store) {
     var id, dispatch, postType, posts, results;
     return external_this_regeneratorRuntime_default.a.wrap(function _callee$(_context) {
       while (1) {
@@ -5479,12 +5198,8 @@ function () {
  * @param {Object} store   Redux Store.
  */
 
-var saveReusableBlocks =
-/*#__PURE__*/
-function () {
-  var _ref2 = Object(asyncToGenerator["a" /* default */])(
-  /*#__PURE__*/
-  external_this_regeneratorRuntime_default.a.mark(function _callee2(action, store) {
+var saveReusableBlocks = /*#__PURE__*/function () {
+  var _ref2 = Object(asyncToGenerator["a" /* default */])( /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(function _callee2(action, store) {
     var postType, id, dispatch, state, _getReusableBlock, title, content, isTemporary, data, path, method, updatedReusableBlock, message;
 
     return external_this_regeneratorRuntime_default.a.wrap(function _callee2$(_context2) {
@@ -5579,12 +5294,8 @@ function () {
  * @param {Object} store   Redux Store.
  */
 
-var deleteReusableBlocks =
-/*#__PURE__*/
-function () {
-  var _ref3 = Object(asyncToGenerator["a" /* default */])(
-  /*#__PURE__*/
-  external_this_regeneratorRuntime_default.a.mark(function _callee3(action, store) {
+var deleteReusableBlocks = /*#__PURE__*/function () {
+  var _ref3 = Object(asyncToGenerator["a" /* default */])( /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(function _callee3(action, store) {
     var postType, id, getState, dispatch, reusableBlock, allBlocks, associatedBlocks, associatedBlockClientIds, transactionId, message;
     return external_this_regeneratorRuntime_default.a.wrap(function _callee3$(_context3) {
       while (1) {
@@ -6062,153 +5773,6 @@ Object(external_this_wp_data_["select"])('core/blocks').getBlockTypes().map(func
   return Object(external_this_wp_data_["select"])('core/blocks').getBlockType(name);
 }).forEach(shimAttributeSource);
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/components/autocompleters/block.js
-
-
-
-/**
- * External dependencies
- */
-
-/**
- * WordPress dependencies
- */
-
-
-
-
-/** @typedef {import('@wordpress/block-editor').WPEditorInserterItem} WPEditorInserterItem */
-
-/** @typedef {import('@wordpress/components').WPCompleter} WPCompleter */
-
-/**
- * Returns the client ID of the parent where a newly inserted block would be
- * placed.
- *
- * @return {string} Client ID of the parent where a newly inserted block would
- *                  be placed.
- */
-
-function defaultGetBlockInsertionParentClientId() {
-  return Object(external_this_wp_data_["select"])('core/block-editor').getBlockInsertionPoint().rootClientId;
-}
-/**
- * Returns the inserter items for the specified parent block.
- *
- * @param {string} rootClientId Client ID of the block for which to retrieve
- *                              inserter items.
- *
- * @return {Array<WPEditorInserterItem>} The inserter items for the specified
- *                                      parent.
- */
-
-
-function defaultGetInserterItems(rootClientId) {
-  return Object(external_this_wp_data_["select"])('core/block-editor').getInserterItems(rootClientId);
-}
-/**
- * Returns the name of the currently selected block.
- *
- * @return {string?} The name of the currently selected block or `null` if no
- *                   block is selected.
- */
-
-
-function defaultGetSelectedBlockName() {
-  var _select = Object(external_this_wp_data_["select"])('core/block-editor'),
-      getSelectedBlockClientId = _select.getSelectedBlockClientId,
-      getBlockName = _select.getBlockName;
-
-  var selectedBlockClientId = getSelectedBlockClientId();
-  return selectedBlockClientId ? getBlockName(selectedBlockClientId) : null;
-}
-/**
- * Triggers a fetch of reusable blocks, once.
- *
- * TODO: Reusable blocks fetching should be reimplemented as a core-data entity
- * resolver, not relying on `core/editor` (see #7119). The implementation here
- * is imperfect in that the options result will not await the completion of the
- * fetch request and thus will not include any reusable blocks. This has always
- * been true, but relied upon the fact the user would be delayed in typing an
- * autocompleter search query. Once implemented using resolvers, the status of
- * this request could be subscribed to as part of a promised return value using
- * the result of `hasFinishedResolution`. There is currently reliable way to
- * determine that a reusable blocks fetch request has completed.
- *
- * @return {Promise} Promise resolving once reusable blocks fetched.
- */
-
-
-var block_fetchReusableBlocks = Object(external_this_lodash_["once"])(function () {
-  Object(external_this_wp_data_["dispatch"])('core/editor').__experimentalFetchReusableBlocks();
-});
-/**
- * Creates a blocks repeater for replacing the current block with a selected block type.
- *
- * @return {WPCompleter} A blocks completer.
- */
-
-function createBlockCompleter() {
-  var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
-      _ref$getBlockInsertio = _ref.getBlockInsertionParentClientId,
-      getBlockInsertionParentClientId = _ref$getBlockInsertio === void 0 ? defaultGetBlockInsertionParentClientId : _ref$getBlockInsertio,
-      _ref$getInserterItems = _ref.getInserterItems,
-      getInserterItems = _ref$getInserterItems === void 0 ? defaultGetInserterItems : _ref$getInserterItems,
-      _ref$getSelectedBlock = _ref.getSelectedBlockName,
-      getSelectedBlockName = _ref$getSelectedBlock === void 0 ? defaultGetSelectedBlockName : _ref$getSelectedBlock;
-
-  return {
-    name: 'blocks',
-    className: 'editor-autocompleters__block',
-    triggerPrefix: '/',
-    options: function options() {
-      block_fetchReusableBlocks();
-      var selectedBlockName = getSelectedBlockName();
-      return getInserterItems(getBlockInsertionParentClientId()).filter( // Avoid offering to replace the current block with a block of the same type.
-      function (inserterItem) {
-        return selectedBlockName !== inserterItem.name;
-      });
-    },
-    getOptionKeywords: function getOptionKeywords(inserterItem) {
-      var title = inserterItem.title,
-          _inserterItem$keyword = inserterItem.keywords,
-          keywords = _inserterItem$keyword === void 0 ? [] : _inserterItem$keyword,
-          category = inserterItem.category;
-      return [category].concat(Object(toConsumableArray["a" /* default */])(keywords), [title]);
-    },
-    getOptionLabel: function getOptionLabel(inserterItem) {
-      var icon = inserterItem.icon,
-          title = inserterItem.title;
-      return [Object(external_this_wp_element_["createElement"])(external_this_wp_blockEditor_["BlockIcon"], {
-        key: "icon",
-        icon: icon,
-        showColors: true
-      }), title];
-    },
-    allowContext: function allowContext(before, after) {
-      return !(/\S/.test(before) || /\S/.test(after));
-    },
-    getOptionCompletion: function getOptionCompletion(inserterItem) {
-      var name = inserterItem.name,
-          initialAttributes = inserterItem.initialAttributes;
-      return {
-        action: 'replace',
-        value: Object(external_this_wp_blocks_["createBlock"])(name, initialAttributes)
-      };
-    },
-    isOptionDisabled: function isOptionDisabled(inserterItem) {
-      return inserterItem.isDisabled;
-    }
-  };
-}
-/**
- * Creates a blocks repeater for replacing the current block with a selected block type.
- *
- * @return {WPCompleter} A blocks completer.
- */
-
-/* harmony default export */ var autocompleters_block = (createBlockCompleter());
-
 // CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/components/autocompleters/user.js
 
 
@@ -6265,8 +5829,39 @@ function createBlockCompleter() {
   }
 });
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/components/autocompleters/index.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/hooks/default-autocompleters.js
+/**
+ * External dependencies
+ */
 
+/**
+ * WordPress dependencies
+ */
+
+
+/**
+ * Internal dependencies
+ */
+
+
+
+function setDefaultCompleters() {
+  var completers = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  // Provide copies so filters may directly modify them.
+  completers.push(Object(external_this_lodash_["clone"])(autocompleters_user));
+  return completers;
+}
+
+Object(external_this_wp_hooks_["addFilter"])('editor.Autocomplete.completers', 'editor/autocompleters/set-default-completers', setDefaultCompleters);
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/hooks/index.js
+/**
+ * Internal dependencies
+ */
+
+
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/components/autocompleters/index.js
 
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js
@@ -6291,21 +5886,25 @@ var inherits = __webpack_require__("Ji7U");
 
 
 
+function _createSuper(Derived) { return function () { var Super = Object(getPrototypeOf["a" /* default */])(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = Object(getPrototypeOf["a" /* default */])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(possibleConstructorReturn["a" /* default */])(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 /**
  * WordPress dependencies
  */
 
 
 
-var autosave_monitor_AutosaveMonitor =
-/*#__PURE__*/
-function (_Component) {
+var autosave_monitor_AutosaveMonitor = /*#__PURE__*/function (_Component) {
   Object(inherits["a" /* default */])(AutosaveMonitor, _Component);
+
+  var _super = _createSuper(AutosaveMonitor);
 
   function AutosaveMonitor() {
     Object(classCallCheck["a" /* default */])(this, AutosaveMonitor);
 
-    return Object(possibleConstructorReturn["a" /* default */])(this, Object(getPrototypeOf["a" /* default */])(AutosaveMonitor).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   Object(createClass["a" /* default */])(AutosaveMonitor, [{
@@ -6642,13 +6241,27 @@ function DocumentOutlineCheck(_ref) {
 
 
 
-function SaveShortcut() {
+
+function SaveShortcut(_ref) {
+  var resetBlocksOnSave = _ref.resetBlocksOnSave;
+
   var _useDispatch = Object(external_this_wp_data_["useDispatch"])('core/editor'),
+      resetEditorBlocks = _useDispatch.resetEditorBlocks,
       savePost = _useDispatch.savePost;
 
-  var isEditedPostDirty = Object(external_this_wp_data_["useSelect"])(function (select) {
-    return select('core/editor').isEditedPostDirty;
-  }, []);
+  var _useSelect = Object(external_this_wp_data_["useSelect"])(function (select) {
+    var _select = select('core/editor'),
+        _isEditedPostDirty = _select.isEditedPostDirty,
+        _getPostEdits = _select.getPostEdits;
+
+    return {
+      isEditedPostDirty: _isEditedPostDirty,
+      getPostEdits: _getPostEdits
+    };
+  }, []),
+      isEditedPostDirty = _useSelect.isEditedPostDirty,
+      getPostEdits = _useSelect.getPostEdits;
+
   Object(external_this_wp_keyboardShortcuts_["useShortcut"])('core/editor/save', function (event) {
     event.preventDefault(); // TODO: This should be handled in the `savePost` effect in
     // considering `isSaveable`. See note on `isEditedPostSaveable`
@@ -6658,6 +6271,19 @@ function SaveShortcut() {
 
     if (!isEditedPostDirty()) {
       return;
+    } // The text editor requires that editor blocks are updated for a
+    // save to work correctly. Usually this happens when the textarea
+    // for the code editors blurs, but the shortcut can be used without
+    // blurring the textarea.
+
+
+    if (resetBlocksOnSave) {
+      var postEdits = getPostEdits();
+
+      if (postEdits.content && typeof postEdits.content === 'string') {
+        var blocks = Object(external_this_wp_blocks_["parse"])(postEdits.content);
+        resetEditorBlocks(blocks);
+      }
     }
 
     savePost();
@@ -6688,12 +6314,8 @@ function SaveShortcut() {
 function VisualEditorGlobalKeyboardShortcuts() {
   var _useDispatch = Object(external_this_wp_data_["useDispatch"])('core/editor'),
       redo = _useDispatch.redo,
-      undo = _useDispatch.undo,
-      savePost = _useDispatch.savePost;
+      undo = _useDispatch.undo;
 
-  var isEditedPostDirty = Object(external_this_wp_data_["useSelect"])(function (select) {
-    return select('core/editor').isEditedPostDirty;
-  }, []);
   Object(external_this_wp_keyboardShortcuts_["useShortcut"])('core/editor/undo', function (event) {
     undo();
     event.preventDefault();
@@ -6703,21 +6325,6 @@ function VisualEditorGlobalKeyboardShortcuts() {
   Object(external_this_wp_keyboardShortcuts_["useShortcut"])('core/editor/redo', function (event) {
     redo();
     event.preventDefault();
-  }, {
-    bindGlobal: true
-  });
-  Object(external_this_wp_keyboardShortcuts_["useShortcut"])('core/editor/save', function (event) {
-    event.preventDefault(); // TODO: This should be handled in the `savePost` effect in
-    // considering `isSaveable`. See note on `isEditedPostSaveable`
-    // selector about dirtiness and meta-boxes.
-    //
-    // See: `isEditedPostSaveable`
-
-    if (!isEditedPostDirty()) {
-      return;
-    }
-
-    savePost();
   }, {
     bindGlobal: true
   });
@@ -6741,7 +6348,9 @@ function EditorGlobalKeyboardShortcuts() {
  */
 
 function TextEditorGlobalKeyboardShortcuts() {
-  return Object(external_this_wp_element_["createElement"])(save_shortcut, null);
+  return Object(external_this_wp_element_["createElement"])(save_shortcut, {
+    resetBlocksOnSave: true
+  });
 }
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/components/global-keyboard-shortcuts/register-shortcuts.js
@@ -6812,13 +6421,14 @@ var external_this_wp_primitives_ = __webpack_require__("Tqx9");
 
 var redo_redo = Object(external_this_wp_element_["createElement"])(external_this_wp_primitives_["SVG"], {
   xmlns: "http://www.w3.org/2000/svg",
-  viewBox: "-2 -2 24 24"
+  viewBox: "0 0 24 24"
 }, Object(external_this_wp_element_["createElement"])(external_this_wp_primitives_["Path"], {
-  d: "M8 5h5V2l6 4-6 4V7H8c-2.2 0-4 1.8-4 4s1.8 4 4 4h5v2H8c-3.3 0-6-2.7-6-6s2.7-6 6-6z"
+  d: "M15.6 6.5l-1.1 1 2.9 3.3H8c-.9 0-1.7.3-2.3.9-1.4 1.5-1.4 4.2-1.4 5.6v.2h1.5v-.3c0-1.1 0-3.5 1-4.5.3-.3.7-.5 1.3-.5h9.2L14.5 15l1.1 1.1 4.6-4.6-4.6-5z"
 }));
 /* harmony default export */ var library_redo = (redo_redo);
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/components/editor-history/redo.js
+
 
 
 /**
@@ -6831,10 +6441,16 @@ var redo_redo = Object(external_this_wp_element_["createElement"])(external_this
 
 
 
-function EditorHistoryRedo(_ref) {
-  var hasRedo = _ref.hasRedo,
-      redo = _ref.redo;
-  return Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Button"], {
+function EditorHistoryRedo(props, ref) {
+  var hasRedo = Object(external_this_wp_data_["useSelect"])(function (select) {
+    return select('core/editor').hasEditorRedo();
+  }, []);
+
+  var _useDispatch = Object(external_this_wp_data_["useDispatch"])('core/editor'),
+      redo = _useDispatch.redo;
+
+  return Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Button"], Object(esm_extends["a" /* default */])({}, props, {
+    ref: ref,
     icon: library_redo,
     label: Object(external_this_wp_i18n_["__"])('Redo'),
     shortcut: external_this_wp_keycodes_["displayShortcut"].primaryShift('z') // If there are no redo levels we don't want to actually disable this
@@ -6844,18 +6460,10 @@ function EditorHistoryRedo(_ref) {
     "aria-disabled": !hasRedo,
     onClick: hasRedo ? redo : undefined,
     className: "editor-history__redo"
-  });
+  }));
 }
 
-/* harmony default export */ var editor_history_redo = (Object(external_this_wp_compose_["compose"])([Object(external_this_wp_data_["withSelect"])(function (select) {
-  return {
-    hasRedo: select('core/editor').hasEditorRedo()
-  };
-}), Object(external_this_wp_data_["withDispatch"])(function (dispatch) {
-  return {
-    redo: dispatch('core/editor').redo
-  };
-})])(EditorHistoryRedo));
+/* harmony default export */ var editor_history_redo = (Object(external_this_wp_element_["forwardRef"])(EditorHistoryRedo));
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/icons/build-module/library/undo.js
 
@@ -6866,13 +6474,14 @@ function EditorHistoryRedo(_ref) {
 
 var undo_undo = Object(external_this_wp_element_["createElement"])(external_this_wp_primitives_["SVG"], {
   xmlns: "http://www.w3.org/2000/svg",
-  viewBox: "-2 -2 24 24"
+  viewBox: "0 0 24 24"
 }, Object(external_this_wp_element_["createElement"])(external_this_wp_primitives_["Path"], {
-  d: "M12 5H7V2L1 6l6 4V7h5c2.2 0 4 1.8 4 4s-1.8 4-4 4H7v2h5c3.3 0 6-2.7 6-6s-2.7-6-6-6z"
+  d: "M18.3 11.7c-.6-.6-1.4-.9-2.3-.9H6.7l2.9-3.3-1.1-1-4.5 5L8.5 16l1-1-2.7-2.7H16c.5 0 .9.2 1.3.5 1 1 1 3.4 1 4.5v.3h1.5v-.2c0-1.5 0-4.3-1.5-5.7z"
 }));
 /* harmony default export */ var library_undo = (undo_undo);
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/components/editor-history/undo.js
+
 
 
 /**
@@ -6885,10 +6494,16 @@ var undo_undo = Object(external_this_wp_element_["createElement"])(external_this
 
 
 
-function EditorHistoryUndo(_ref) {
-  var hasUndo = _ref.hasUndo,
-      undo = _ref.undo;
-  return Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Button"], {
+function EditorHistoryUndo(props, ref) {
+  var hasUndo = Object(external_this_wp_data_["useSelect"])(function (select) {
+    return select('core/editor').hasEditorUndo();
+  }, []);
+
+  var _useDispatch = Object(external_this_wp_data_["useDispatch"])('core/editor'),
+      undo = _useDispatch.undo;
+
+  return Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Button"], Object(esm_extends["a" /* default */])({}, props, {
+    ref: ref,
     icon: library_undo,
     label: Object(external_this_wp_i18n_["__"])('Undo'),
     shortcut: external_this_wp_keycodes_["displayShortcut"].primary('z') // If there are no undo levels we don't want to actually disable this
@@ -6898,18 +6513,10 @@ function EditorHistoryUndo(_ref) {
     "aria-disabled": !hasUndo,
     onClick: hasUndo ? undo : undefined,
     className: "editor-history__undo"
-  });
+  }));
 }
 
-/* harmony default export */ var editor_history_undo = (Object(external_this_wp_compose_["compose"])([Object(external_this_wp_data_["withSelect"])(function (select) {
-  return {
-    hasUndo: select('core/editor').hasEditorUndo()
-  };
-}), Object(external_this_wp_data_["withDispatch"])(function (dispatch) {
-  return {
-    undo: dispatch('core/editor').undo
-  };
-})])(EditorHistoryUndo));
+/* harmony default export */ var editor_history_undo = (Object(external_this_wp_element_["forwardRef"])(EditorHistoryUndo));
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/components/template-validation-notice/index.js
 
@@ -7026,9 +6633,151 @@ function EditorNotices(_ref) {
   };
 })])(EditorNotices));
 
-// EXTERNAL MODULE: ./node_modules/equivalent-key-map/equivalent-key-map.js
-var equivalent_key_map = __webpack_require__("FtRg");
-var equivalent_key_map_default = /*#__PURE__*/__webpack_require__.n(equivalent_key_map);
+// EXTERNAL MODULE: ./node_modules/@wordpress/icons/build-module/library/close.js
+var library_close = __webpack_require__("w95h");
+
+// EXTERNAL MODULE: ./node_modules/@wordpress/icons/build-module/library/layout.js
+var layout = __webpack_require__("Civd");
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/icons/build-module/library/page.js
+
+
+/**
+ * WordPress dependencies
+ */
+
+var page_page = Object(external_this_wp_element_["createElement"])(external_this_wp_primitives_["SVG"], {
+  xmlns: "http://www.w3.org/2000/svg",
+  viewBox: "0 0 24 24"
+}, Object(external_this_wp_element_["createElement"])(external_this_wp_primitives_["Path"], {
+  d: "M7 5.5h10a.5.5 0 01.5.5v12a.5.5 0 01-.5.5H7a.5.5 0 01-.5-.5V6a.5.5 0 01.5-.5zM17 4H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V6a2 2 0 00-2-2zm-1 3.75H8v1.5h8v-1.5zM8 11h8v1.5H8V11zm6 3.25H8v1.5h6v-1.5z"
+}));
+/* harmony default export */ var library_page = (page_page);
+
+// EXTERNAL MODULE: ./node_modules/@wordpress/icons/build-module/library/grid.js
+var grid = __webpack_require__("b2RC");
+
+// EXTERNAL MODULE: ./node_modules/@wordpress/icons/build-module/library/block-default.js
+var block_default = __webpack_require__("//Lo");
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/components/entities-saved-states/entity-record-item.js
+
+
+/**
+ * WordPress dependencies
+ */
+
+
+
+
+function EntityRecordItem(_ref) {
+  var record = _ref.record,
+      checked = _ref.checked,
+      onChange = _ref.onChange,
+      closePanel = _ref.closePanel;
+  var name = record.name,
+      kind = record.kind,
+      title = record.title,
+      key = record.key;
+  var parentBlockId = Object(external_this_wp_data_["useSelect"])(function (select) {
+    var _blocks$;
+
+    // Get entity's blocks.
+    var _select$getEditedEnti = select('core').getEditedEntityRecord(kind, name, key),
+        _select$getEditedEnti2 = _select$getEditedEnti.blocks,
+        blocks = _select$getEditedEnti2 === void 0 ? [] : _select$getEditedEnti2; // Get parents of the entity's first block.
+
+
+    var parents = select('core/block-editor').getBlockParents((_blocks$ = blocks[0]) === null || _blocks$ === void 0 ? void 0 : _blocks$.clientId); // Return closest parent block's clientId.
+
+    return parents[parents.length - 1];
+  }, []);
+  var isSelected = Object(external_this_wp_data_["useSelect"])(function (select) {
+    var selectedBlockId = select('core/block-editor').getSelectedBlockClientId();
+    return selectedBlockId === parentBlockId;
+  }, [parentBlockId]);
+  var isSelectedText = isSelected ? Object(external_this_wp_i18n_["__"])('Selected') : Object(external_this_wp_i18n_["__"])('Select');
+
+  var _useDispatch = Object(external_this_wp_data_["useDispatch"])('core/block-editor'),
+      selectBlock = _useDispatch.selectBlock;
+
+  var selectParentBlock = Object(external_this_wp_element_["useCallback"])(function () {
+    return selectBlock(parentBlockId);
+  }, [parentBlockId]);
+  var selectAndDismiss = Object(external_this_wp_element_["useCallback"])(function () {
+    selectBlock(parentBlockId);
+    closePanel();
+  }, [parentBlockId]);
+  return Object(external_this_wp_element_["createElement"])(external_this_wp_components_["PanelRow"], null, Object(external_this_wp_element_["createElement"])(external_this_wp_components_["CheckboxControl"], {
+    label: Object(external_this_wp_element_["createElement"])("strong", null, title || Object(external_this_wp_i18n_["__"])('Untitled')),
+    checked: checked,
+    onChange: onChange
+  }), parentBlockId ? Object(external_this_wp_element_["createElement"])(external_this_wp_element_["Fragment"], null, Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Button"], {
+    onClick: selectParentBlock,
+    className: "entities-saved-states__find-entity",
+    disabled: isSelected
+  }, isSelectedText), Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Button"], {
+    onClick: selectAndDismiss,
+    className: "entities-saved-states__find-entity-small",
+    disabled: isSelected
+  }, isSelectedText)) : null);
+}
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/components/entities-saved-states/entity-type-list.js
+
+
+/**
+ * External dependencies
+ */
+
+/**
+ * WordPress dependencies
+ */
+
+
+
+
+/**
+ * Internal dependencies
+ */
+
+
+var ENTITY_NAME_ICONS = {
+  site: layout["a" /* default */],
+  page: library_page,
+  post: grid["a" /* default */],
+  wp_template: grid["a" /* default */]
+};
+function EntityTypeList(_ref) {
+  var list = _ref.list,
+      unselectedEntities = _ref.unselectedEntities,
+      setUnselectedEntities = _ref.setUnselectedEntities,
+      closePanel = _ref.closePanel;
+  var firstRecord = list[0];
+  var entity = Object(external_this_wp_data_["useSelect"])(function (select) {
+    return select('core').getEntity(firstRecord.kind, firstRecord.name);
+  }, [firstRecord.kind, firstRecord.name]); // Set icon based on type of entity.
+
+  var name = firstRecord.name;
+  var icon = ENTITY_NAME_ICONS[name] || block_default["a" /* default */];
+  return Object(external_this_wp_element_["createElement"])(external_this_wp_components_["PanelBody"], {
+    title: entity.label,
+    initialOpen: true,
+    icon: icon
+  }, list.map(function (record) {
+    return Object(external_this_wp_element_["createElement"])(EntityRecordItem, {
+      key: record.key || 'site',
+      record: record,
+      checked: !Object(external_this_lodash_["some"])(unselectedEntities, function (elt) {
+        return elt.kind === record.kind && elt.name === record.name && elt.key === record.key;
+      }),
+      onChange: function onChange(value) {
+        return setUnselectedEntities(record, value);
+      },
+      closePanel: closePanel
+    });
+  }));
+}
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/components/entities-saved-states/index.js
 
@@ -7048,92 +6797,162 @@ var equivalent_key_map_default = /*#__PURE__*/__webpack_require__.n(equivalent_k
 
 
 
-var entities_saved_states_EntitiesSavedStatesCheckbox = function EntitiesSavedStatesCheckbox(_ref) {
-  var id = _ref.id,
-      name = _ref.name,
-      rawRecord = _ref.changes.rawRecord,
-      checked = _ref.checked,
-      setCheckedById = _ref.setCheckedById;
-  return Object(external_this_wp_element_["createElement"])(external_this_wp_components_["CheckboxControl"], {
-    label: "".concat(name, ": \"").concat(rawRecord.name || rawRecord.slug || rawRecord.title || Object(external_this_wp_i18n_["__"])('Untitled'), "\""),
-    checked: checked,
-    onChange: function onChange(nextChecked) {
-      return setCheckedById(id, nextChecked);
-    }
-  });
-};
+/**
+ * Internal dependencies
+ */
 
-function EntitiesSavedStates(_ref2) {
-  var isOpen = _ref2.isOpen,
-      _onRequestClose = _ref2.onRequestClose,
-      _ref2$ignoredForSave = _ref2.ignoredForSave,
-      ignoredForSave = _ref2$ignoredForSave === void 0 ? new equivalent_key_map_default.a() : _ref2$ignoredForSave;
-  var entityRecordChangesByRecord = Object(external_this_wp_data_["useSelect"])(function (select) {
-    return select('core').getEntityRecordChangesByRecord();
-  });
+
+var ENTITY_NAMES = {
+  wp_template_part: function wp_template_part(number) {
+    return Object(external_this_wp_i18n_["_n"])('template part', 'template parts', number);
+  },
+  wp_template: function wp_template(number) {
+    return Object(external_this_wp_i18n_["_n"])('template', 'templates', number);
+  },
+  post: function post(number) {
+    return Object(external_this_wp_i18n_["_n"])('post', 'posts', number);
+  },
+  page: function page(number) {
+    return Object(external_this_wp_i18n_["_n"])('page', 'pages', number);
+  },
+  site: function site(number) {
+    return Object(external_this_wp_i18n_["_n"])('site', 'sites', number);
+  }
+};
+var PLACEHOLDER_PHRASES = {
+  // 0 is a back up, but should never be observed.
+  0: Object(external_this_wp_i18n_["__"])('There are no changes.'),
+
+  /* translators: placeholders represent pre-translated singular/plural entity names (page, post, template, site, etc.) */
+  1: Object(external_this_wp_i18n_["__"])('Changes have been made to your %s.'),
+
+  /* translators: placeholders represent pre-translated singular/plural entity names (page, post, template, site, etc.) */
+  2: Object(external_this_wp_i18n_["__"])('Changes have been made to your %1$s and %2$s.'),
+
+  /* translators: placeholders represent pre-translated singular/plural entity names (page, post, template, site, etc.) */
+  3: Object(external_this_wp_i18n_["__"])('Changes have been made to your %1$s, %2$s, and %3$s.'),
+
+  /* translators: placeholders represent pre-translated singular/plural entity names (page, post, template, site, etc.) */
+  4: Object(external_this_wp_i18n_["__"])('Changes have been made to your %1$s, %2$s, %3$s, and %4$s.'),
+
+  /* translators: placeholders represent pre-translated singular/plural entity names (page, post, template, site, etc.) */
+  5: Object(external_this_wp_i18n_["__"])('Changes have been made to your %1$s, %2$s, %3$s, %4$s, and %5$s.')
+};
+function EntitiesSavedStates(_ref) {
+  var isOpen = _ref.isOpen,
+      close = _ref.close;
+
+  var _useSelect = Object(external_this_wp_data_["useSelect"])(function (select) {
+    return {
+      dirtyEntityRecords: select('core').__experimentalGetDirtyEntityRecords()
+    };
+  }, []),
+      dirtyEntityRecords = _useSelect.dirtyEntityRecords;
 
   var _useDispatch = Object(external_this_wp_data_["useDispatch"])('core'),
-      saveEditedEntityRecord = _useDispatch.saveEditedEntityRecord;
+      saveEditedEntityRecord = _useDispatch.saveEditedEntityRecord; // To group entities by type.
 
-  var _useState = Object(external_this_wp_element_["useState"])(function () {
-    return new equivalent_key_map_default.a();
-  }),
+
+  var partitionedSavables = Object.values(Object(external_this_lodash_["groupBy"])(dirtyEntityRecords, 'name')); // Get labels for text-prompt phrase.
+
+  var entityNamesForPrompt = [];
+  partitionedSavables.forEach(function (list) {
+    if (ENTITY_NAMES[list[0].name]) {
+      entityNamesForPrompt.push(ENTITY_NAMES[list[0].name](list.length));
+    }
+  }); // Get text-prompt phrase based on number of entity types changed.
+
+  var placeholderPhrase = PLACEHOLDER_PHRASES[entityNamesForPrompt.length] || // Fallback for edge case that should not be observed (more than 5 entity types edited).
+  Object(external_this_wp_i18n_["__"])('Changes have been made to multiple entity types.'); // eslint-disable-next-line @wordpress/valid-sprintf
+
+
+  var promptPhrase = external_this_wp_i18n_["sprintf"].apply(void 0, [placeholderPhrase].concat(entityNamesForPrompt)); // Unchecked entities to be ignored by save function.
+
+  var _useState = Object(external_this_wp_element_["useState"])([]),
       _useState2 = Object(slicedToArray["a" /* default */])(_useState, 2),
-      checkedById = _useState2[0],
-      _setCheckedById = _useState2[1];
+      unselectedEntities = _useState2[0],
+      _setUnselectedEntities = _useState2[1];
 
-  var setCheckedById = function setCheckedById(id, checked) {
-    return _setCheckedById(function (prevCheckedById) {
-      var nextCheckedById = new equivalent_key_map_default.a(prevCheckedById);
+  var setUnselectedEntities = function setUnselectedEntities(_ref2, checked) {
+    var kind = _ref2.kind,
+        name = _ref2.name,
+        key = _ref2.key;
 
-      if (checked) {
-        nextCheckedById.set(id, true);
-      } else {
-        nextCheckedById.delete(id);
-      }
-
-      return nextCheckedById;
-    });
+    if (checked) {
+      _setUnselectedEntities(unselectedEntities.filter(function (elt) {
+        return elt.kind !== kind || elt.name !== name || elt.key !== key;
+      }));
+    } else {
+      _setUnselectedEntities([].concat(Object(toConsumableArray["a" /* default */])(unselectedEntities), [{
+        kind: kind,
+        name: name,
+        key: key
+      }]));
+    }
   };
 
   var saveCheckedEntities = function saveCheckedEntities() {
-    checkedById.forEach(function (_checked, id) {
-      if (!ignoredForSave.has(id)) {
-        saveEditedEntityRecord.apply(void 0, Object(toConsumableArray["a" /* default */])(id.filter(function (s, i) {
-          return i !== id.length - 1 || s !== 'undefined';
-        })));
-      }
-    });
-
-    _onRequestClose(checkedById);
-  };
-
-  return isOpen && Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Modal"], {
-    title: Object(external_this_wp_i18n_["__"])('What do you want to save?'),
-    onRequestClose: function onRequestClose() {
-      return _onRequestClose();
-    },
-    contentLabel: Object(external_this_wp_i18n_["__"])('Select items to save.')
-  }, Object.keys(entityRecordChangesByRecord).map(function (changedKind) {
-    return Object.keys(entityRecordChangesByRecord[changedKind]).map(function (changedName) {
-      return Object.keys(entityRecordChangesByRecord[changedKind][changedName]).map(function (changedKey) {
-        var id = [changedKind, changedName, changedKey];
-        return Object(external_this_wp_element_["createElement"])(entities_saved_states_EntitiesSavedStatesCheckbox, {
-          key: id.join(' | '),
-          id: id,
-          name: changedName,
-          changes: entityRecordChangesByRecord[changedKind][changedName][changedKey],
-          checked: checkedById.get(id),
-          setCheckedById: setCheckedById
-        });
+    var entitiesToSave = dirtyEntityRecords.filter(function (_ref3) {
+      var kind = _ref3.kind,
+          name = _ref3.name,
+          key = _ref3.key;
+      return !Object(external_this_lodash_["some"])(unselectedEntities, function (elt) {
+        return elt.kind === kind && elt.name === name && elt.key === key;
       });
     });
-  }), Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Button"], {
+    close(entitiesToSave);
+    entitiesToSave.forEach(function (_ref4) {
+      var kind = _ref4.kind,
+          name = _ref4.name,
+          key = _ref4.key;
+      saveEditedEntityRecord(kind, name, key);
+    });
+  };
+
+  var _useState3 = Object(external_this_wp_element_["useState"])(false),
+      _useState4 = Object(slicedToArray["a" /* default */])(_useState3, 2),
+      isReviewing = _useState4[0],
+      setIsReviewing = _useState4[1];
+
+  var toggleIsReviewing = function toggleIsReviewing() {
+    return setIsReviewing(function (value) {
+      return !value;
+    });
+  }; // Explicitly define this with no argument passed.  Using `close` on
+  // its own will use the event object in place of the expected saved entities.
+
+
+  var dismissPanel = Object(external_this_wp_element_["useCallback"])(function () {
+    return close();
+  }, [close]);
+  return isOpen ? Object(external_this_wp_element_["createElement"])("div", {
+    className: "entities-saved-states__panel"
+  }, Object(external_this_wp_element_["createElement"])("div", {
+    className: "entities-saved-states__panel-header"
+  }, Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Button"], {
     isPrimary: true,
-    disabled: checkedById.size === 0,
+    disabled: dirtyEntityRecords.length - unselectedEntities.length === 0,
     onClick: saveCheckedEntities,
     className: "editor-entities-saved-states__save-button"
-  }, Object(external_this_wp_i18n_["__"])('Save')));
+  }, Object(external_this_wp_i18n_["__"])('Save')), Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Button"], {
+    onClick: dismissPanel,
+    icon: library_close["a" /* default */],
+    label: Object(external_this_wp_i18n_["__"])('Close panel')
+  })), Object(external_this_wp_element_["createElement"])("div", {
+    className: "entities-saved-states__text-prompt"
+  }, Object(external_this_wp_element_["createElement"])("strong", null, Object(external_this_wp_i18n_["__"])('Are you ready to save?')), Object(external_this_wp_element_["createElement"])("p", null, promptPhrase), Object(external_this_wp_element_["createElement"])("p", null, Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Button"], {
+    onClick: toggleIsReviewing,
+    isLink: true,
+    className: "entities-saved-states__review-changes-button"
+  }, isReviewing ? Object(external_this_wp_i18n_["__"])('Hide changes.') : Object(external_this_wp_i18n_["__"])('Review changes.')))), isReviewing && partitionedSavables.map(function (list) {
+    return Object(external_this_wp_element_["createElement"])(EntityTypeList, {
+      key: list[0].name,
+      list: list,
+      closePanel: dismissPanel,
+      unselectedEntities: unselectedEntities,
+      setUnselectedEntities: setUnselectedEntities
+    });
+  })) : null;
 }
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js
@@ -7148,6 +6967,10 @@ var assertThisInitialized = __webpack_require__("JX7q");
 
 
 
+function error_boundary_createSuper(Derived) { return function () { var Super = Object(getPrototypeOf["a" /* default */])(Derived), result; if (error_boundary_isNativeReflectConstruct()) { var NewTarget = Object(getPrototypeOf["a" /* default */])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(possibleConstructorReturn["a" /* default */])(this, result); }; }
+
+function error_boundary_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 /**
  * WordPress dependencies
  */
@@ -7157,17 +6980,17 @@ var assertThisInitialized = __webpack_require__("JX7q");
 
 
 
-var error_boundary_ErrorBoundary =
-/*#__PURE__*/
-function (_Component) {
+var error_boundary_ErrorBoundary = /*#__PURE__*/function (_Component) {
   Object(inherits["a" /* default */])(ErrorBoundary, _Component);
+
+  var _super = error_boundary_createSuper(ErrorBoundary);
 
   function ErrorBoundary() {
     var _this;
 
     Object(classCallCheck["a" /* default */])(this, ErrorBoundary);
 
-    _this = Object(possibleConstructorReturn["a" /* default */])(this, Object(getPrototypeOf["a" /* default */])(ErrorBoundary).apply(this, arguments));
+    _this = _super.apply(this, arguments);
     _this.reboot = _this.reboot.bind(Object(assertThisInitialized["a" /* default */])(_this));
     _this.getContent = _this.getContent.bind(Object(assertThisInitialized["a" /* default */])(_this));
     _this.state = {
@@ -7825,6 +7648,10 @@ function PostAuthorCheck(_ref) {
 
 
 
+function post_author_createSuper(Derived) { return function () { var Super = Object(getPrototypeOf["a" /* default */])(Derived), result; if (post_author_isNativeReflectConstruct()) { var NewTarget = Object(getPrototypeOf["a" /* default */])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(possibleConstructorReturn["a" /* default */])(this, result); }; }
+
+function post_author_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 /**
  * WordPress dependencies
  */
@@ -7838,17 +7665,17 @@ function PostAuthorCheck(_ref) {
  */
 
 
-var post_author_PostAuthor =
-/*#__PURE__*/
-function (_Component) {
+var post_author_PostAuthor = /*#__PURE__*/function (_Component) {
   Object(inherits["a" /* default */])(PostAuthor, _Component);
+
+  var _super = post_author_createSuper(PostAuthor);
 
   function PostAuthor() {
     var _this;
 
     Object(classCallCheck["a" /* default */])(this, PostAuthor);
 
-    _this = Object(possibleConstructorReturn["a" /* default */])(this, Object(getPrototypeOf["a" /* default */])(PostAuthor).apply(this, arguments));
+    _this = _super.apply(this, arguments);
     _this.setAuthorId = _this.setAuthorId.bind(Object(assertThisInitialized["a" /* default */])(_this));
     return _this;
   }
@@ -8399,6 +8226,21 @@ function PostFormat(_ref) {
   };
 }), external_this_wp_compose_["withInstanceId"]])(PostFormat));
 
+// CONCATENATED MODULE: ./node_modules/@wordpress/icons/build-module/library/backup.js
+
+
+/**
+ * WordPress dependencies
+ */
+
+var backup = Object(external_this_wp_element_["createElement"])(external_this_wp_primitives_["SVG"], {
+  xmlns: "http://www.w3.org/2000/svg",
+  viewBox: "-2 -2 24 24"
+}, Object(external_this_wp_element_["createElement"])(external_this_wp_primitives_["Path"], {
+  d: "M13.65 2.88c3.93 2.01 5.48 6.84 3.47 10.77s-6.83 5.48-10.77 3.47c-1.87-.96-3.2-2.56-3.86-4.4l1.64-1.03c.45 1.57 1.52 2.95 3.08 3.76 3.01 1.54 6.69.35 8.23-2.66 1.55-3.01.36-6.69-2.65-8.24C9.78 3.01 6.1 4.2 4.56 7.21l1.88.97-4.95 3.08-.39-5.82 1.78.91C4.9 2.4 9.75.89 13.65 2.88zm-4.36 7.83C9.11 10.53 9 10.28 9 10c0-.07.03-.12.04-.19h-.01L10 5l.97 4.81L14 13l-4.5-2.12.02-.02c-.08-.04-.16-.09-.23-.15z"
+}));
+/* harmony default export */ var library_backup = (backup);
+
 // CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/components/post-last-revision/check.js
 
 
@@ -8435,61 +8277,13 @@ function PostLastRevisionCheck(_ref) {
   };
 })(PostLastRevisionCheck));
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/utils/url.js
-/**
- * External dependencies
- */
-
-/**
- * WordPress dependencies
- */
-
-
-/**
- * Returns the URL of a WPAdmin Page.
- *
- * TODO: This should be moved to a module less specific to the editor.
- *
- * @param {string} page  Page to navigate to.
- * @param {Object} query Query Args.
- *
- * @return {string} WPAdmin URL.
- */
-
-function getWPAdminURL(page, query) {
-  return Object(external_this_wp_url_["addQueryArgs"])(page, query);
-}
-/**
- * Performs some basic cleanup of a string for use as a post slug
- *
- * This replicates some of what sanitize_title() does in WordPress core, but
- * is only designed to approximate what the slug will be.
- *
- * Converts whitespace, periods, forward slashes and underscores to hyphens.
- * Converts Latin-1 Supplement and Latin Extended-A letters to basic Latin
- * letters. Removes combining diacritical marks. Converts remaining string
- * to lowercase. It does not touch octets, HTML entities, or other encoded
- * characters.
- *
- * @param {string} string Title or slug to be processed
- *
- * @return {string} Processed string
- */
-
-function cleanForSlug(string) {
-  if (!string) {
-    return '';
-  }
-
-  return Object(external_this_lodash_["toLower"])(Object(external_this_lodash_["deburr"])(Object(external_this_lodash_["trim"])(string.replace(/[\s\./_]+/g, '-'), '-')));
-}
-
 // CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/components/post-last-revision/index.js
 
 
 /**
  * WordPress dependencies
  */
+
 
 
 
@@ -8509,8 +8303,10 @@ function LastRevision(_ref) {
       gutenberg: true
     }),
     className: "editor-post-last-revision__title",
-    icon: "backup"
-  }, Object(external_this_wp_i18n_["sprintf"])(Object(external_this_wp_i18n_["_n"])('%d Revision', '%d Revisions', revisionsCount), revisionsCount)));
+    icon: library_backup
+  }, Object(external_this_wp_i18n_["sprintf"])(
+  /* translators: %d: number of revisions */
+  Object(external_this_wp_i18n_["_n"])('%d Revision', '%d Revisions', revisionsCount), revisionsCount)));
 }
 
 /* harmony default export */ var post_last_revision = (Object(external_this_wp_data_["withSelect"])(function (select) {
@@ -8533,9 +8329,14 @@ function LastRevision(_ref) {
 
 
 
+function post_preview_button_createSuper(Derived) { return function () { var Super = Object(getPrototypeOf["a" /* default */])(Derived), result; if (post_preview_button_isNativeReflectConstruct()) { var NewTarget = Object(getPrototypeOf["a" /* default */])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(possibleConstructorReturn["a" /* default */])(this, result); }; }
+
+function post_preview_button_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 /**
  * External dependencies
  */
+
 
 /**
  * WordPress dependencies
@@ -8576,17 +8377,18 @@ function writeInterstitialMessage(targetDocument) {
   targetDocument.close();
 }
 
-var post_preview_button_PostPreviewButton =
-/*#__PURE__*/
-function (_Component) {
+var post_preview_button_PostPreviewButton = /*#__PURE__*/function (_Component) {
   Object(inherits["a" /* default */])(PostPreviewButton, _Component);
+
+  var _super = post_preview_button_createSuper(PostPreviewButton);
 
   function PostPreviewButton() {
     var _this;
 
     Object(classCallCheck["a" /* default */])(this, PostPreviewButton);
 
-    _this = Object(possibleConstructorReturn["a" /* default */])(this, Object(getPrototypeOf["a" /* default */])(PostPreviewButton).apply(this, arguments));
+    _this = _super.apply(this, arguments);
+    _this.buttonRef = Object(external_this_wp_element_["createRef"])();
     _this.openPreviewWindow = _this.openPreviewWindow.bind(Object(assertThisInitialized["a" /* default */])(_this));
     return _this;
   }
@@ -8616,6 +8418,10 @@ function (_Component) {
 
       if (previewWindow && !previewWindow.closed) {
         previewWindow.location = url;
+
+        if (this.buttonRef.current) {
+          this.buttonRef.current.focus();
+        }
       }
     }
   }, {
@@ -8676,15 +8482,19 @@ function (_Component) {
       // just link to the post's URL.
 
       var href = previewLink || currentPostLink;
+      var classNames = classnames_default()({
+        'editor-post-preview': !this.props.className
+      }, this.props.className);
       return Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Button"], {
-        isSecondary: true,
-        className: "editor-post-preview",
+        isTertiary: !this.props.className,
+        className: classNames,
         href: href,
         target: this.getWindowTarget(),
         disabled: !isSaveable,
-        onClick: this.openPreviewWindow
-      }, Object(external_this_wp_i18n_["_x"])('Preview', 'imperative verb'), Object(external_this_wp_element_["createElement"])("span", {
-        className: "screen-reader-text"
+        onClick: this.openPreviewWindow,
+        ref: this.buttonRef
+      }, this.props.textContent ? this.props.textContent : Object(external_this_wp_i18n_["_x"])('Preview', 'imperative verb'), Object(external_this_wp_element_["createElement"])(external_this_wp_components_["VisuallyHidden"], {
+        as: "span"
       },
       /* translators: accessibility text */
       Object(external_this_wp_i18n_["__"])('(opens in a new tab)')));
@@ -8738,6 +8548,10 @@ function (_Component) {
 
 
 
+function post_locked_modal_createSuper(Derived) { return function () { var Super = Object(getPrototypeOf["a" /* default */])(Derived), result; if (post_locked_modal_isNativeReflectConstruct()) { var NewTarget = Object(getPrototypeOf["a" /* default */])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(possibleConstructorReturn["a" /* default */])(this, result); }; }
+
+function post_locked_modal_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 /**
  * External dependencies
  */
@@ -8760,17 +8574,17 @@ function (_Component) {
 
 
 
-var post_locked_modal_PostLockedModal =
-/*#__PURE__*/
-function (_Component) {
+var post_locked_modal_PostLockedModal = /*#__PURE__*/function (_Component) {
   Object(inherits["a" /* default */])(PostLockedModal, _Component);
+
+  var _super = post_locked_modal_createSuper(PostLockedModal);
 
   function PostLockedModal() {
     var _this;
 
     Object(classCallCheck["a" /* default */])(this, PostLockedModal);
 
-    _this = Object(possibleConstructorReturn["a" /* default */])(this, Object(getPrototypeOf["a" /* default */])(PostLockedModal).apply(this, arguments));
+    _this = _super.apply(this, arguments);
     _this.sendPostLock = _this.sendPostLock.bind(Object(assertThisInitialized["a" /* default */])(_this));
     _this.receivePostLock = _this.receivePostLock.bind(Object(assertThisInitialized["a" /* default */])(_this));
     _this.releasePostLock = _this.releasePostLock.bind(Object(assertThisInitialized["a" /* default */])(_this));
@@ -9154,7 +8968,7 @@ function PublishButtonLabel(_ref) {
     return hasNonPostEntityChanges ? Object(external_this_wp_i18n_["__"])('Schedule…') : Object(external_this_wp_i18n_["__"])('Schedule');
   }
 
-  return hasNonPostEntityChanges ? Object(external_this_wp_i18n_["__"])('Publish…') : Object(external_this_wp_i18n_["__"])('Publish');
+  return Object(external_this_wp_i18n_["__"])('Publish');
 }
 /* harmony default export */ var post_publish_button_label = (Object(external_this_wp_compose_["compose"])([Object(external_this_wp_data_["withSelect"])(function (select, _ref2) {
   var forceIsSaving = _ref2.forceIsSaving;
@@ -9189,11 +9003,13 @@ function PublishButtonLabel(_ref) {
 
 
 
+function post_publish_button_createSuper(Derived) { return function () { var Super = Object(getPrototypeOf["a" /* default */])(Derived), result; if (post_publish_button_isNativeReflectConstruct()) { var NewTarget = Object(getPrototypeOf["a" /* default */])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(possibleConstructorReturn["a" /* default */])(this, result); }; }
+
+function post_publish_button_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 /**
  * External dependencies
  */
-
-
 
 
 /**
@@ -9210,29 +9026,23 @@ function PublishButtonLabel(_ref) {
  */
 
 
-
-var post_publish_button_PostPublishButton =
-/*#__PURE__*/
-function (_Component) {
+var post_publish_button_PostPublishButton = /*#__PURE__*/function (_Component) {
   Object(inherits["a" /* default */])(PostPublishButton, _Component);
+
+  var _super = post_publish_button_createSuper(PostPublishButton);
 
   function PostPublishButton(props) {
     var _this;
 
     Object(classCallCheck["a" /* default */])(this, PostPublishButton);
 
-    _this = Object(possibleConstructorReturn["a" /* default */])(this, Object(getPrototypeOf["a" /* default */])(PostPublishButton).call(this, props));
+    _this = _super.call(this, props);
     _this.buttonNode = Object(external_this_wp_element_["createRef"])();
     _this.createOnClick = _this.createOnClick.bind(Object(assertThisInitialized["a" /* default */])(_this));
     _this.closeEntitiesSavedStates = _this.closeEntitiesSavedStates.bind(Object(assertThisInitialized["a" /* default */])(_this));
     _this.state = {
       entitiesSavedStatesCallback: false
     };
-    _this.createIgnoredForSave = memize_default()(function (postType, postId) {
-      return new equivalent_key_map_default.a([[['postType', postType, String(postId)], true]]);
-    }, {
-      maxSize: 1
-    });
     return _this;
   }
 
@@ -9263,6 +9073,14 @@ function (_Component) {
             entitiesSavedStatesCallback: function entitiesSavedStatesCallback() {
               return callback.apply(void 0, args);
             }
+          }); // Open the save panel by setting its callback.
+          // To set a function on the useState hook, we must set it
+          // with another function (() => myFunction). Passing the
+          // function on its own will cause an error when called.
+
+
+          _this2.props.setEntitiesSavedStatesCallback(function () {
+            return _this2.closeEntitiesSavedStates;
           });
 
           return external_this_lodash_["noop"];
@@ -9273,7 +9091,7 @@ function (_Component) {
     }
   }, {
     key: "closeEntitiesSavedStates",
-    value: function closeEntitiesSavedStates(savedById) {
+    value: function closeEntitiesSavedStates(savedEntities) {
       var _this$props = this.props,
           postType = _this$props.postType,
           postId = _this$props.postId;
@@ -9281,7 +9099,9 @@ function (_Component) {
       this.setState({
         entitiesSavedStatesCallback: false
       }, function () {
-        if (savedById && savedById.has(['postType', postType, String(postId)])) {
+        if (savedEntities && Object(external_this_lodash_["some"])(savedEntities, function (elt) {
+          return elt.kind === 'postType' && elt.name === postType && elt.key === postId;
+        })) {
           // The post entity was checked, call the held callback from `createOnClick`.
           entitiesSavedStatesCallback();
         }
@@ -9308,10 +9128,7 @@ function (_Component) {
           onSubmit = _this$props2$onSubmit === void 0 ? external_this_lodash_["noop"] : _this$props2$onSubmit,
           onToggle = _this$props2.onToggle,
           visibility = _this$props2.visibility,
-          hasNonPostEntityChanges = _this$props2.hasNonPostEntityChanges,
-          postType = _this$props2.postType,
-          postId = _this$props2.postId;
-      var entitiesSavedStatesCallback = this.state.entitiesSavedStatesCallback;
+          hasNonPostEntityChanges = _this$props2.hasNonPostEntityChanges;
       var isButtonDisabled = isSaving || forceIsSaving || !isSaveable || isPostSavingLocked || !isPublishable && !forceIsDirty;
       var isToggleDisabled = isPublished || isSaving || forceIsSaving || !isSaveable || !isPublishable && !forceIsDirty;
       var publishStatus;
@@ -9359,18 +9176,14 @@ function (_Component) {
         isPrimary: true,
         onClick: this.createOnClick(onClickToggle)
       };
-      var toggleChildren = isBeingScheduled ? Object(external_this_wp_i18n_["__"])('Schedule…') : Object(external_this_wp_i18n_["__"])('Publish…');
+      var toggleChildren = isBeingScheduled ? Object(external_this_wp_i18n_["__"])('Schedule…') : Object(external_this_wp_i18n_["__"])('Publish');
       var buttonChildren = Object(external_this_wp_element_["createElement"])(post_publish_button_label, {
         forceIsSaving: forceIsSaving,
         hasNonPostEntityChanges: hasNonPostEntityChanges
       });
       var componentProps = isToggle ? toggleProps : buttonProps;
       var componentChildren = isToggle ? toggleChildren : buttonChildren;
-      return Object(external_this_wp_element_["createElement"])(external_this_wp_element_["Fragment"], null, Object(external_this_wp_element_["createElement"])(EntitiesSavedStates, {
-        isOpen: Boolean(entitiesSavedStatesCallback),
-        onRequestClose: this.closeEntitiesSavedStates,
-        ignoredForSave: this.createIgnoredForSave(postType, postId)
-      }), Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Button"], Object(esm_extends["a" /* default */])({
+      return Object(external_this_wp_element_["createElement"])(external_this_wp_element_["Fragment"], null, Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Button"], Object(esm_extends["a" /* default */])({
         ref: this.buttonNode
       }, componentProps, {
         className: classnames_default()(componentProps.className, 'editor-post-publish-button__button', {
@@ -9426,8 +9239,8 @@ function (_Component) {
   };
 })])(post_publish_button_PostPublishButton));
 
-// EXTERNAL MODULE: ./node_modules/@wordpress/icons/build-module/library/close.js
-var library_close = __webpack_require__("w95h");
+// EXTERNAL MODULE: ./node_modules/@wordpress/icons/build-module/library/close-small.js
+var close_small = __webpack_require__("bWcr");
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/components/post-visibility/utils.js
 /**
@@ -9457,9 +9270,14 @@ var visibilityOptions = [{
 
 
 
+function post_visibility_createSuper(Derived) { return function () { var Super = Object(getPrototypeOf["a" /* default */])(Derived), result; if (post_visibility_isNativeReflectConstruct()) { var NewTarget = Object(getPrototypeOf["a" /* default */])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(possibleConstructorReturn["a" /* default */])(this, result); }; }
+
+function post_visibility_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 /**
  * WordPress dependencies
  */
+
 
 
 
@@ -9469,17 +9287,17 @@ var visibilityOptions = [{
  */
 
 
-var post_visibility_PostVisibility =
-/*#__PURE__*/
-function (_Component) {
+var post_visibility_PostVisibility = /*#__PURE__*/function (_Component) {
   Object(inherits["a" /* default */])(PostVisibility, _Component);
+
+  var _super = post_visibility_createSuper(PostVisibility);
 
   function PostVisibility(props) {
     var _this;
 
     Object(classCallCheck["a" /* default */])(this, PostVisibility);
 
-    _this = Object(possibleConstructorReturn["a" /* default */])(this, Object(getPrototypeOf["a" /* default */])(PostVisibility).apply(this, arguments));
+    _this = _super.apply(this, arguments);
     _this.setPublic = _this.setPublic.bind(Object(assertThisInitialized["a" /* default */])(_this));
     _this.setPrivate = _this.setPrivate.bind(Object(assertThisInitialized["a" /* default */])(_this));
     _this.setPasswordProtected = _this.setPasswordProtected.bind(Object(assertThisInitialized["a" /* default */])(_this));
@@ -9592,9 +9410,9 @@ function (_Component) {
       })), this.state.hasPassword && Object(external_this_wp_element_["createElement"])("div", {
         className: "editor-post-visibility__dialog-password",
         key: "password-selector"
-      }, Object(external_this_wp_element_["createElement"])("label", {
-        htmlFor: "editor-post-visibility__dialog-password-input-".concat(instanceId),
-        className: "screen-reader-text"
+      }, Object(external_this_wp_element_["createElement"])(external_this_wp_components_["VisuallyHidden"], {
+        as: "label",
+        htmlFor: "editor-post-visibility__dialog-password-input-".concat(instanceId)
       }, Object(external_this_wp_i18n_["__"])('Create password')), Object(external_this_wp_element_["createElement"])("input", {
         className: "editor-post-visibility__dialog-password-input",
         id: "editor-post-visibility__dialog-password-input-".concat(instanceId),
@@ -9683,6 +9501,11 @@ function PostSchedule(_ref) {
   var date = _ref.date,
       onUpdateDate = _ref.onUpdateDate;
 
+  var onChange = function onChange(newDate) {
+    onUpdateDate(newDate);
+    document.activeElement.blur();
+  };
+
   var settings = Object(external_this_wp_date_["__experimentalGetSettings"])(); // To know if the current timezone is a 12 hour time with look for "a" in the time format
   // We also make sure this a is not escaped by a "/"
 
@@ -9694,7 +9517,7 @@ function PostSchedule(_ref) {
   return Object(external_this_wp_element_["createElement"])(external_this_wp_components_["DateTimePicker"], {
     key: "date-time-picker",
     currentDate: date,
-    onChange: onUpdateDate,
+    onChange: onChange,
     is12Hour: is12HourTime
   });
 }
@@ -9725,7 +9548,7 @@ function PostScheduleLabel(_ref) {
 
   var settings = Object(external_this_wp_date_["__experimentalGetSettings"])();
 
-  return date && !isFloating ? Object(external_this_wp_date_["dateI18n"])("".concat(settings.formats.date, " ").concat(settings.formats.time), date) : Object(external_this_wp_i18n_["__"])('Immediately');
+  return date && !isFloating ? Object(external_this_wp_date_["format"])("".concat(settings.formats.date, " ").concat(settings.formats.time), date) : Object(external_this_wp_i18n_["__"])('Immediately');
 }
 /* harmony default export */ var post_schedule_label = (Object(external_this_wp_data_["withSelect"])(function (select) {
   return {
@@ -9743,6 +9566,10 @@ function PostScheduleLabel(_ref) {
 
 
 
+
+function flat_term_selector_createSuper(Derived) { return function () { var Super = Object(getPrototypeOf["a" /* default */])(Derived), result; if (flat_term_selector_isNativeReflectConstruct()) { var NewTarget = Object(getPrototypeOf["a" /* default */])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(possibleConstructorReturn["a" /* default */])(this, result); }; }
+
+function flat_term_selector_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function flat_term_selector_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
@@ -9807,17 +9634,17 @@ var flat_term_selector_unescapeTerms = function unescapeTerms(terms) {
   return Object(external_this_lodash_["map"])(terms, flat_term_selector_unescapeTerm);
 };
 
-var flat_term_selector_FlatTermSelector =
-/*#__PURE__*/
-function (_Component) {
+var flat_term_selector_FlatTermSelector = /*#__PURE__*/function (_Component) {
   Object(inherits["a" /* default */])(FlatTermSelector, _Component);
+
+  var _super = flat_term_selector_createSuper(FlatTermSelector);
 
   function FlatTermSelector() {
     var _this;
 
     Object(classCallCheck["a" /* default */])(this, FlatTermSelector);
 
-    _this = Object(possibleConstructorReturn["a" /* default */])(this, Object(getPrototypeOf["a" /* default */])(FlatTermSelector).apply(this, arguments));
+    _this = _super.apply(this, arguments);
     _this.onChange = _this.onChange.bind(Object(assertThisInitialized["a" /* default */])(_this));
     _this.searchTerms = Object(external_this_lodash_["throttle"])(_this.searchTerms.bind(Object(assertThisInitialized["a" /* default */])(_this)), 500);
     _this.findOrCreateTerm = _this.findOrCreateTerm.bind(Object(assertThisInitialized["a" /* default */])(_this));
@@ -10019,9 +9846,15 @@ function (_Component) {
       });
       var newTermLabel = Object(external_this_lodash_["get"])(taxonomy, ['labels', 'add_new_item'], slug === 'post_tag' ? Object(external_this_wp_i18n_["__"])('Add new tag') : Object(external_this_wp_i18n_["__"])('Add new Term'));
       var singularName = Object(external_this_lodash_["get"])(taxonomy, ['labels', 'singular_name'], slug === 'post_tag' ? Object(external_this_wp_i18n_["__"])('Tag') : Object(external_this_wp_i18n_["__"])('Term'));
-      var termAddedLabel = Object(external_this_wp_i18n_["sprintf"])(Object(external_this_wp_i18n_["_x"])('%s added', 'term'), singularName);
-      var termRemovedLabel = Object(external_this_wp_i18n_["sprintf"])(Object(external_this_wp_i18n_["_x"])('%s removed', 'term'), singularName);
-      var removeTermLabel = Object(external_this_wp_i18n_["sprintf"])(Object(external_this_wp_i18n_["_x"])('Remove %s', 'term'), singularName);
+      var termAddedLabel = Object(external_this_wp_i18n_["sprintf"])(
+      /* translators: %s: term name. */
+      Object(external_this_wp_i18n_["_x"])('%s added', 'term'), singularName);
+      var termRemovedLabel = Object(external_this_wp_i18n_["sprintf"])(
+      /* translators: %s: term name. */
+      Object(external_this_wp_i18n_["_x"])('%s removed', 'term'), singularName);
+      var removeTermLabel = Object(external_this_wp_i18n_["sprintf"])(
+      /* translators: %s: term name. */
+      Object(external_this_wp_i18n_["_x"])('Remove %s', 'term'), singularName);
       return Object(external_this_wp_element_["createElement"])(external_this_wp_components_["FormTokenField"], {
         value: selectedTerms,
         suggestions: termNames,
@@ -10074,6 +9907,10 @@ function (_Component) {
 
 
 
+function maybe_tags_panel_createSuper(Derived) { return function () { var Super = Object(getPrototypeOf["a" /* default */])(Derived), result; if (maybe_tags_panel_isNativeReflectConstruct()) { var NewTarget = Object(getPrototypeOf["a" /* default */])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(possibleConstructorReturn["a" /* default */])(this, result); }; }
+
+function maybe_tags_panel_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 /**
  * External dependencies
  */
@@ -10106,17 +9943,17 @@ var maybe_tags_panel_TagsPanel = function TagsPanel() {
   }));
 };
 
-var maybe_tags_panel_MaybeTagsPanel =
-/*#__PURE__*/
-function (_Component) {
+var maybe_tags_panel_MaybeTagsPanel = /*#__PURE__*/function (_Component) {
   Object(inherits["a" /* default */])(MaybeTagsPanel, _Component);
+
+  var _super = maybe_tags_panel_createSuper(MaybeTagsPanel);
 
   function MaybeTagsPanel(props) {
     var _this;
 
     Object(classCallCheck["a" /* default */])(this, MaybeTagsPanel);
 
-    _this = Object(possibleConstructorReturn["a" /* default */])(this, Object(getPrototypeOf["a" /* default */])(MaybeTagsPanel).call(this, props));
+    _this = _super.call(this, props);
     _this.state = {
       hadTagsWhenOpeningThePanel: props.hasTags
     };
@@ -10211,7 +10048,9 @@ var maybe_post_format_panel_PostFormatPanel = function PostFormatPanel(_ref2) {
   }, Object(external_this_wp_element_["createElement"])("p", null, Object(external_this_wp_i18n_["__"])('Your theme uses post formats to highlight different kinds of content, like images or videos. Apply a post format to see this special styling.')), Object(external_this_wp_element_["createElement"])("p", null, Object(external_this_wp_element_["createElement"])(maybe_post_format_panel_PostFormatSuggestion, {
     onUpdatePostFormat: onUpdatePostFormat,
     suggestedPostFormat: suggestion.id,
-    suggestionText: Object(external_this_wp_i18n_["sprintf"])(Object(external_this_wp_i18n_["__"])('Apply the "%1$s" format.'), suggestion.caption)
+    suggestionText: Object(external_this_wp_i18n_["sprintf"])(
+    /* translators: %s: post format */
+    Object(external_this_wp_i18n_["__"])('Apply the "%1$s" format.'), suggestion.caption)
   })));
 };
 
@@ -10327,6 +10166,10 @@ function PostPublishPanelPrepublish(_ref) {
 
 
 
+function postpublish_createSuper(Derived) { return function () { var Super = Object(getPrototypeOf["a" /* default */])(Derived), result; if (postpublish_isNativeReflectConstruct()) { var NewTarget = Object(getPrototypeOf["a" /* default */])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(possibleConstructorReturn["a" /* default */])(this, result); }; }
+
+function postpublish_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 /**
  * External dependencies
  */
@@ -10346,18 +10189,36 @@ function PostPublishPanelPrepublish(_ref) {
  */
 
 
+var POSTNAME = '%postname%';
+/**
+ * Returns URL for a future post.
+ *
+ * @param {Object} post         Post object.
+ *
+ * @return {string} PostPublish URL.
+ */
 
-var postpublish_PostPublishPanelPostpublish =
-/*#__PURE__*/
-function (_Component) {
+var getFuturePostUrl = function getFuturePostUrl(post) {
+  var slug = post.slug;
+
+  if (post.permalink_template.includes(POSTNAME)) {
+    return post.permalink_template.replace(POSTNAME, slug);
+  }
+
+  return post.permalink_template;
+};
+
+var postpublish_PostPublishPanelPostpublish = /*#__PURE__*/function (_Component) {
   Object(inherits["a" /* default */])(PostPublishPanelPostpublish, _Component);
+
+  var _super = postpublish_createSuper(PostPublishPanelPostpublish);
 
   function PostPublishPanelPostpublish() {
     var _this;
 
     Object(classCallCheck["a" /* default */])(this, PostPublishPanelPostpublish);
 
-    _this = Object(possibleConstructorReturn["a" /* default */])(this, Object(getPrototypeOf["a" /* default */])(PostPublishPanelPostpublish).apply(this, arguments));
+    _this = _super.apply(this, arguments);
     _this.state = {
       showCopyConfirmation: false
     };
@@ -10409,6 +10270,7 @@ function (_Component) {
           postType = _this$props.postType;
       var postLabel = Object(external_this_lodash_["get"])(postType, ['labels', 'singular_name']);
       var viewPostLabel = Object(external_this_lodash_["get"])(postType, ['labels', 'view_item']);
+      var link = post.status === 'future' ? getFuturePostUrl(post) : post.link;
       var postPublishNonLinkHeader = isScheduled ? Object(external_this_wp_element_["createElement"])(external_this_wp_element_["Fragment"], null, Object(external_this_wp_i18n_["__"])('is now scheduled. It will go live on'), ' ', Object(external_this_wp_element_["createElement"])(post_schedule_label, null), ".") : Object(external_this_wp_i18n_["__"])('is now live.');
       return Object(external_this_wp_element_["createElement"])("div", {
         className: "post-publish-panel__postpublish"
@@ -10416,7 +10278,7 @@ function (_Component) {
         className: "post-publish-panel__postpublish-header"
       }, Object(external_this_wp_element_["createElement"])("a", {
         ref: this.postLink,
-        href: post.link
+        href: link
       }, Object(external_this_wp_htmlEntities_["decodeEntities"])(post.title) || Object(external_this_wp_i18n_["__"])('(no title)')), ' ', postPublishNonLinkHeader), Object(external_this_wp_element_["createElement"])(external_this_wp_components_["PanelBody"], null, Object(external_this_wp_element_["createElement"])("p", {
         className: "post-publish-panel__postpublish-subheader"
       }, Object(external_this_wp_element_["createElement"])("strong", null, Object(external_this_wp_i18n_["__"])('What’s next?'))), Object(external_this_wp_element_["createElement"])(external_this_wp_components_["TextControl"], {
@@ -10425,16 +10287,16 @@ function (_Component) {
         label: Object(external_this_wp_i18n_["sprintf"])(
         /* translators: %s: post type singular name */
         Object(external_this_wp_i18n_["__"])('%s address'), postLabel),
-        value: Object(external_this_wp_url_["safeDecodeURIComponent"])(post.link),
+        value: Object(external_this_wp_url_["safeDecodeURIComponent"])(link),
         onFocus: this.onSelectInput
       }), Object(external_this_wp_element_["createElement"])("div", {
         className: "post-publish-panel__postpublish-buttons"
       }, !isScheduled && Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Button"], {
         isSecondary: true,
-        href: post.link
+        href: link
       }, viewPostLabel), Object(external_this_wp_element_["createElement"])(external_this_wp_components_["ClipboardButton"], {
         isSecondary: true,
-        text: post.link,
+        text: link,
         onCopy: this.onCopy
       }, this.state.showCopyConfirmation ? Object(external_this_wp_i18n_["__"])('Copied!') : Object(external_this_wp_i18n_["__"])('Copy Link')))), children);
     }
@@ -10470,6 +10332,10 @@ function (_Component) {
 
 
 
+function post_publish_panel_createSuper(Derived) { return function () { var Super = Object(getPrototypeOf["a" /* default */])(Derived), result; if (post_publish_panel_isNativeReflectConstruct()) { var NewTarget = Object(getPrototypeOf["a" /* default */])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(possibleConstructorReturn["a" /* default */])(this, result); }; }
+
+function post_publish_panel_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 /**
  * External dependencies
  */
@@ -10491,17 +10357,17 @@ function (_Component) {
 
 
 
-var post_publish_panel_PostPublishPanel =
-/*#__PURE__*/
-function (_Component) {
+var post_publish_panel_PostPublishPanel = /*#__PURE__*/function (_Component) {
   Object(inherits["a" /* default */])(PostPublishPanel, _Component);
+
+  var _super = post_publish_panel_createSuper(PostPublishPanel);
 
   function PostPublishPanel() {
     var _this;
 
     Object(classCallCheck["a" /* default */])(this, PostPublishPanel);
 
-    _this = Object(possibleConstructorReturn["a" /* default */])(this, Object(getPrototypeOf["a" /* default */])(PostPublishPanel).apply(this, arguments));
+    _this = _super.apply(this, arguments);
     _this.onSubmit = _this.onSubmit.bind(Object(assertThisInitialized["a" /* default */])(_this));
     return _this;
   }
@@ -10552,21 +10418,24 @@ function (_Component) {
         className: "editor-post-publish-panel"
       }, propsForPanel), Object(external_this_wp_element_["createElement"])("div", {
         className: "editor-post-publish-panel__header"
-      }, isPostPublish ? Object(external_this_wp_element_["createElement"])("div", {
-        className: "editor-post-publish-panel__header-published"
-      }, isScheduled ? Object(external_this_wp_i18n_["__"])('Scheduled') : Object(external_this_wp_i18n_["__"])('Published')) : Object(external_this_wp_element_["createElement"])("div", {
+      }, isPostPublish ? Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Button"], {
+        onClick: onClose,
+        icon: close_small["a" /* default */],
+        label: Object(external_this_wp_i18n_["__"])('Close panel')
+      }) : Object(external_this_wp_element_["createElement"])(external_this_wp_element_["Fragment"], null, Object(external_this_wp_element_["createElement"])("div", {
         className: "editor-post-publish-panel__header-publish-button"
       }, Object(external_this_wp_element_["createElement"])(post_publish_button, {
         focusOnMount: true,
         onSubmit: this.onSubmit,
         forceIsDirty: forceIsDirty,
         forceIsSaving: forceIsSaving
-      })), Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Button"], {
-        "aria-expanded": true,
-        onClick: onClose,
-        icon: library_close["a" /* default */],
-        label: Object(external_this_wp_i18n_["__"])('Close panel')
       })), Object(external_this_wp_element_["createElement"])("div", {
+        className: "editor-post-publish-panel__header-cancel-button"
+      }, Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Button"], {
+        onClick: onClose,
+        label: Object(external_this_wp_i18n_["__"])('Close panel'),
+        isSecondary: true
+      }, Object(external_this_wp_i18n_["__"])('Cancel'))))), Object(external_this_wp_element_["createElement"])("div", {
         className: "editor-post-publish-panel__content"
       }, isPrePublish && Object(external_this_wp_element_["createElement"])(prepublish, null, PrePublishExtension && Object(external_this_wp_element_["createElement"])(PrePublishExtension, null)), isPostPublish && Object(external_this_wp_element_["createElement"])(postpublish, {
         focusOnMount: true
@@ -10630,8 +10499,38 @@ function (_Component) {
 // EXTERNAL MODULE: ./node_modules/@wordpress/icons/build-module/icon/index.js
 var build_module_icon = __webpack_require__("iClF");
 
+// CONCATENATED MODULE: ./node_modules/@wordpress/icons/build-module/library/cloud.js
+
+
+/**
+ * WordPress dependencies
+ */
+
+var cloud = Object(external_this_wp_element_["createElement"])(external_this_wp_primitives_["SVG"], {
+  xmlns: "http://www.w3.org/2000/svg",
+  viewBox: "-2 -2 24 24"
+}, Object(external_this_wp_element_["createElement"])(external_this_wp_primitives_["Path"], {
+  d: "M14.9 9c1.8.2 3.1 1.7 3.1 3.5 0 1.9-1.6 3.5-3.5 3.5h-10C2.6 16 1 14.4 1 12.5 1 10.7 2.3 9.3 4.1 9 4 8.9 4 8.7 4 8.5 4 7.1 5.1 6 6.5 6c.3 0 .7.1.9.2C8.1 4.9 9.4 4 11 4c2.2 0 4 1.8 4 4 0 .4-.1.7-.1 1z"
+}));
+/* harmony default export */ var library_cloud = (cloud);
+
 // EXTERNAL MODULE: ./node_modules/@wordpress/icons/build-module/library/check.js
 var library_check = __webpack_require__("RMJe");
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/icons/build-module/library/cloud-upload.js
+
+
+/**
+ * WordPress dependencies
+ */
+
+var cloudUpload = Object(external_this_wp_element_["createElement"])(external_this_wp_primitives_["SVG"], {
+  xmlns: "http://www.w3.org/2000/svg",
+  viewBox: "-2 -2 24 24"
+}, Object(external_this_wp_element_["createElement"])(external_this_wp_primitives_["Path"], {
+  d: "M14.8 9c.1-.3.2-.6.2-1 0-2.2-1.8-4-4-4-1.5 0-2.9.9-3.5 2.2-.3-.1-.7-.2-1-.2C5.1 6 4 7.1 4 8.5c0 .2 0 .4.1.5-1.8.3-3.1 1.7-3.1 3.5C1 14.4 2.6 16 4.5 16H8v-3H5l4.5-4.5L14 13h-3v3h3.5c1.9 0 3.5-1.6 3.5-3.5 0-1.8-1.4-3.3-3.2-3.5z"
+}));
+/* harmony default export */ var cloud_upload = (cloudUpload);
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/components/post-switch-to-draft-button/index.js
 
@@ -10712,10 +10611,13 @@ function PostSwitchToDraftButton(_ref) {
 
 
 
+function post_saved_state_createSuper(Derived) { return function () { var Super = Object(getPrototypeOf["a" /* default */])(Derived), result; if (post_saved_state_isNativeReflectConstruct()) { var NewTarget = Object(getPrototypeOf["a" /* default */])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(possibleConstructorReturn["a" /* default */])(this, result); }; }
+
+function post_saved_state_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 /**
  * External dependencies
  */
-
 
 /**
  * WordPress dependencies
@@ -10740,17 +10642,17 @@ function PostSwitchToDraftButton(_ref) {
  * @param   {Object}    Props Component Props.
  */
 
-var post_saved_state_PostSavedState =
-/*#__PURE__*/
-function (_Component) {
+var post_saved_state_PostSavedState = /*#__PURE__*/function (_Component) {
   Object(inherits["a" /* default */])(PostSavedState, _Component);
+
+  var _super = post_saved_state_createSuper(PostSavedState);
 
   function PostSavedState() {
     var _this;
 
     Object(classCallCheck["a" /* default */])(this, PostSavedState);
 
-    _this = Object(possibleConstructorReturn["a" /* default */])(this, Object(getPrototypeOf["a" /* default */])(PostSavedState).apply(this, arguments));
+    _this = _super.apply(this, arguments);
     _this.state = {
       forceSavedMessage: false
     };
@@ -10777,7 +10679,7 @@ function (_Component) {
     key: "render",
     value: function render() {
       var _this$props = this.props,
-          post = _this$props.post,
+          hasPublishAction = _this$props.hasPublishAction,
           isNew = _this$props.isNew,
           isScheduled = _this$props.isScheduled,
           isPublished = _this$props.isPublished,
@@ -10803,8 +10705,8 @@ function (_Component) {
           var animateClassName = _ref.className;
           return Object(external_this_wp_element_["createElement"])("span", {
             className: classnames_default()(classes, animateClassName)
-          }, Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Dashicon"], {
-            icon: "cloud"
+          }, Object(external_this_wp_element_["createElement"])(build_module_icon["a" /* default */], {
+            icon: library_cloud
           }), isAutosaving ? Object(external_this_wp_i18n_["__"])('Autosaving') : Object(external_this_wp_i18n_["__"])('Saving'));
         });
       }
@@ -10827,13 +10729,11 @@ function (_Component) {
       // is not needed for the contributor role.
 
 
-      var hasPublishAction = Object(external_this_lodash_["get"])(post, ['_links', 'wp:action-publish'], false);
-
       if (!hasPublishAction && isPending) {
         return null;
       }
 
-      var label = isPending ? Object(external_this_wp_i18n_["__"])('Save as Pending') : Object(external_this_wp_i18n_["__"])('Save Draft');
+      var label = isPending ? Object(external_this_wp_i18n_["__"])('Save as pending') : Object(external_this_wp_i18n_["__"])('Save draft');
 
       if (!isLargeViewport) {
         return Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Button"], {
@@ -10843,7 +10743,7 @@ function (_Component) {
             return onSave();
           },
           shortcut: external_this_wp_keycodes_["displayShortcut"].primary('s'),
-          icon: "cloud-upload"
+          icon: cloud_upload
         });
       }
 
@@ -10861,6 +10761,8 @@ function (_Component) {
   return PostSavedState;
 }(external_this_wp_element_["Component"]);
 /* harmony default export */ var post_saved_state = (Object(external_this_wp_compose_["compose"])([Object(external_this_wp_data_["withSelect"])(function (select, _ref2) {
+  var _getCurrentPost$_link, _getCurrentPost, _getCurrentPost$_link2;
+
   var forceIsDirty = _ref2.forceIsDirty,
       forceIsSaving = _ref2.forceIsSaving;
 
@@ -10876,7 +10778,7 @@ function (_Component) {
       getEditedPostAttribute = _select.getEditedPostAttribute;
 
   return {
-    post: getCurrentPost(),
+    hasPublishAction: (_getCurrentPost$_link = (_getCurrentPost = getCurrentPost()) === null || _getCurrentPost === void 0 ? void 0 : (_getCurrentPost$_link2 = _getCurrentPost['_links']) === null || _getCurrentPost$_link2 === void 0 ? void 0 : _getCurrentPost$_link2['wp:action-publish']) !== null && _getCurrentPost$_link !== void 0 ? _getCurrentPost$_link : false,
     isNew: isEditedPostNew(),
     isPublished: isCurrentPostPublished(),
     isScheduled: isCurrentPostScheduled(),
@@ -10949,6 +10851,10 @@ function PostSlugCheck(_ref) {
 
 
 
+function post_slug_createSuper(Derived) { return function () { var Super = Object(getPrototypeOf["a" /* default */])(Derived), result; if (post_slug_isNativeReflectConstruct()) { var NewTarget = Object(getPrototypeOf["a" /* default */])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(possibleConstructorReturn["a" /* default */])(this, result); }; }
+
+function post_slug_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 /**
  * WordPress dependencies
  */
@@ -10963,10 +10869,10 @@ function PostSlugCheck(_ref) {
 
 
 
-var post_slug_PostSlug =
-/*#__PURE__*/
-function (_Component) {
+var post_slug_PostSlug = /*#__PURE__*/function (_Component) {
   Object(inherits["a" /* default */])(PostSlug, _Component);
+
+  var _super = post_slug_createSuper(PostSlug);
 
   function PostSlug(_ref) {
     var _this;
@@ -10977,7 +10883,7 @@ function (_Component) {
 
     Object(classCallCheck["a" /* default */])(this, PostSlug);
 
-    _this = Object(possibleConstructorReturn["a" /* default */])(this, Object(getPrototypeOf["a" /* default */])(PostSlug).apply(this, arguments));
+    _this = _super.apply(this, arguments);
     _this.state = {
       editedSlug: Object(external_this_wp_url_["safeDecodeURIComponent"])(postSlug) || cleanForSlug(postTitle) || postID
     };
@@ -11139,6 +11045,10 @@ function hierarchical_term_selector_ownKeys(object, enumerableOnly) { var keys =
 
 function hierarchical_term_selector_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { hierarchical_term_selector_ownKeys(Object(source), true).forEach(function (key) { Object(defineProperty["a" /* default */])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { hierarchical_term_selector_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
+function hierarchical_term_selector_createSuper(Derived) { return function () { var Super = Object(getPrototypeOf["a" /* default */])(Derived), result; if (hierarchical_term_selector_isNativeReflectConstruct()) { var NewTarget = Object(getPrototypeOf["a" /* default */])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(possibleConstructorReturn["a" /* default */])(this, result); }; }
+
+function hierarchical_term_selector_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 /**
  * External dependencies
  */
@@ -11171,17 +11081,17 @@ var hierarchical_term_selector_DEFAULT_QUERY = {
 };
 var MIN_TERMS_COUNT_FOR_FILTER = 8;
 
-var hierarchical_term_selector_HierarchicalTermSelector =
-/*#__PURE__*/
-function (_Component) {
+var hierarchical_term_selector_HierarchicalTermSelector = /*#__PURE__*/function (_Component) {
   Object(inherits["a" /* default */])(HierarchicalTermSelector, _Component);
+
+  var _super = hierarchical_term_selector_createSuper(HierarchicalTermSelector);
 
   function HierarchicalTermSelector() {
     var _this;
 
     Object(classCallCheck["a" /* default */])(this, HierarchicalTermSelector);
 
-    _this = Object(possibleConstructorReturn["a" /* default */])(this, Object(getPrototypeOf["a" /* default */])(HierarchicalTermSelector).apply(this, arguments));
+    _this = _super.apply(this, arguments);
     _this.findTerm = _this.findTerm.bind(Object(assertThisInitialized["a" /* default */])(_this));
     _this.onChange = _this.onChange.bind(Object(assertThisInitialized["a" /* default */])(_this));
     _this.onChangeFormName = _this.onChangeFormName.bind(Object(assertThisInitialized["a" /* default */])(_this));
@@ -11321,7 +11231,9 @@ function (_Component) {
           return availableTerm.id === term.id;
         });
         var newAvailableTerms = hasTerm ? _this2.state.availableTerms : [term].concat(Object(toConsumableArray["a" /* default */])(_this2.state.availableTerms));
-        var termAddedMessage = Object(external_this_wp_i18n_["sprintf"])(Object(external_this_wp_i18n_["_x"])('%s added', 'term'), Object(external_this_lodash_["get"])(_this2.props.taxonomy, ['labels', 'singular_name'], slug === 'category' ? Object(external_this_wp_i18n_["__"])('Category') : Object(external_this_wp_i18n_["__"])('Term')));
+        var termAddedMessage = Object(external_this_wp_i18n_["sprintf"])(
+        /* translators: %s: taxonomy name */
+        Object(external_this_wp_i18n_["_x"])('%s added', 'term'), Object(external_this_lodash_["get"])(_this2.props.taxonomy, ['labels', 'singular_name'], slug === 'category' ? Object(external_this_wp_i18n_["__"])('Category') : Object(external_this_wp_i18n_["__"])('Term')));
 
         _this2.props.speak(termAddedMessage, 'assertive');
 
@@ -11479,7 +11391,9 @@ function (_Component) {
         filteredTermsTree: filteredTermsTree
       });
       var resultCount = getResultCount(filteredTermsTree);
-      var resultsFoundMessage = Object(external_this_wp_i18n_["sprintf"])(Object(external_this_wp_i18n_["_n"])('%d result found.', '%d results found.', resultCount), resultCount);
+      var resultsFoundMessage = Object(external_this_wp_i18n_["sprintf"])(
+      /* translators: %d: number of results */
+      Object(external_this_wp_i18n_["_n"])('%d result found.', '%d results found.', resultCount), resultCount);
       this.props.debouncedSpeak(resultsFoundMessage, 'assertive');
     }
   }, {
@@ -11749,6 +11663,10 @@ var lib_default = /*#__PURE__*/__webpack_require__.n(lib);
 
 
 
+function post_text_editor_createSuper(Derived) { return function () { var Super = Object(getPrototypeOf["a" /* default */])(Derived), result; if (post_text_editor_isNativeReflectConstruct()) { var NewTarget = Object(getPrototypeOf["a" /* default */])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(possibleConstructorReturn["a" /* default */])(this, result); }; }
+
+function post_text_editor_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 /**
  * External dependencies
  */
@@ -11762,17 +11680,18 @@ var lib_default = /*#__PURE__*/__webpack_require__.n(lib);
 
 
 
-var post_text_editor_PostTextEditor =
-/*#__PURE__*/
-function (_Component) {
+
+var post_text_editor_PostTextEditor = /*#__PURE__*/function (_Component) {
   Object(inherits["a" /* default */])(PostTextEditor, _Component);
+
+  var _super = post_text_editor_createSuper(PostTextEditor);
 
   function PostTextEditor() {
     var _this;
 
     Object(classCallCheck["a" /* default */])(this, PostTextEditor);
 
-    _this = Object(possibleConstructorReturn["a" /* default */])(this, Object(getPrototypeOf["a" /* default */])(PostTextEditor).apply(this, arguments));
+    _this = _super.apply(this, arguments);
     _this.edit = _this.edit.bind(Object(assertThisInitialized["a" /* default */])(_this));
     _this.stopEditing = _this.stopEditing.bind(Object(assertThisInitialized["a" /* default */])(_this));
     _this.state = {};
@@ -11822,9 +11741,9 @@ function (_Component) {
     value: function render() {
       var value = this.state.value;
       var instanceId = this.props.instanceId;
-      return Object(external_this_wp_element_["createElement"])(external_this_wp_element_["Fragment"], null, Object(external_this_wp_element_["createElement"])("label", {
-        htmlFor: "post-content-".concat(instanceId),
-        className: "screen-reader-text"
+      return Object(external_this_wp_element_["createElement"])(external_this_wp_element_["Fragment"], null, Object(external_this_wp_element_["createElement"])(external_this_wp_components_["VisuallyHidden"], {
+        as: "label",
+        htmlFor: "post-content-".concat(instanceId)
       }, Object(external_this_wp_i18n_["__"])('Type text or HTML')), Object(external_this_wp_element_["createElement"])(lib_default.a, {
         autoComplete: "off",
         dir: "auto",
@@ -11877,325 +11796,6 @@ function (_Component) {
   };
 }), external_this_wp_compose_["withInstanceId"]])(post_text_editor_PostTextEditor));
 
-// EXTERNAL MODULE: ./node_modules/@wordpress/icons/build-module/library/link.js
-var library_link = __webpack_require__("Bpkj");
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/components/post-permalink/editor.js
-
-
-
-
-
-
-
-
-/**
- * WordPress dependencies
- */
-
-
-
-
-
-/**
- * Internal dependencies
- */
-
-
-
-var editor_PostPermalinkEditor =
-/*#__PURE__*/
-function (_Component) {
-  Object(inherits["a" /* default */])(PostPermalinkEditor, _Component);
-
-  function PostPermalinkEditor(_ref) {
-    var _this;
-
-    var permalinkParts = _ref.permalinkParts,
-        slug = _ref.slug;
-
-    Object(classCallCheck["a" /* default */])(this, PostPermalinkEditor);
-
-    _this = Object(possibleConstructorReturn["a" /* default */])(this, Object(getPrototypeOf["a" /* default */])(PostPermalinkEditor).apply(this, arguments));
-    _this.state = {
-      editedPostName: slug || permalinkParts.postName
-    };
-    _this.onSavePermalink = _this.onSavePermalink.bind(Object(assertThisInitialized["a" /* default */])(_this));
-    return _this;
-  }
-
-  Object(createClass["a" /* default */])(PostPermalinkEditor, [{
-    key: "onSavePermalink",
-    value: function onSavePermalink(event) {
-      var postName = cleanForSlug(this.state.editedPostName);
-      event.preventDefault();
-      this.props.onSave();
-
-      if (postName === this.props.postName) {
-        return;
-      }
-
-      this.props.editPost({
-        slug: postName
-      });
-      this.setState({
-        editedPostName: postName
-      });
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      var _this$props$permalink = this.props.permalinkParts,
-          prefix = _this$props$permalink.prefix,
-          suffix = _this$props$permalink.suffix;
-      var editedPostName = this.state.editedPostName;
-      /* eslint-disable jsx-a11y/no-autofocus */
-      // Autofocus is allowed here, as this mini-UI is only loaded when the user clicks to open it.
-
-      return Object(external_this_wp_element_["createElement"])("form", {
-        className: "editor-post-permalink-editor",
-        onSubmit: this.onSavePermalink
-      }, Object(external_this_wp_element_["createElement"])("span", {
-        className: "editor-post-permalink__editor-container"
-      }, Object(external_this_wp_element_["createElement"])("span", {
-        className: "editor-post-permalink-editor__prefix"
-      }, prefix), Object(external_this_wp_element_["createElement"])("input", {
-        className: "editor-post-permalink-editor__edit",
-        "aria-label": Object(external_this_wp_i18n_["__"])('Edit post permalink'),
-        value: editedPostName,
-        onChange: function onChange(event) {
-          return _this2.setState({
-            editedPostName: event.target.value
-          });
-        },
-        type: "text",
-        autoFocus: true
-      }), Object(external_this_wp_element_["createElement"])("span", {
-        className: "editor-post-permalink-editor__suffix"
-      }, suffix), "\u200E"), Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Button"], {
-        className: "editor-post-permalink-editor__save",
-        isSecondary: true,
-        onClick: this.onSavePermalink
-      }, Object(external_this_wp_i18n_["__"])('Save')));
-      /* eslint-enable jsx-a11y/no-autofocus */
-    }
-  }]);
-
-  return PostPermalinkEditor;
-}(external_this_wp_element_["Component"]);
-
-/* harmony default export */ var editor = (Object(external_this_wp_compose_["compose"])([Object(external_this_wp_data_["withSelect"])(function (select) {
-  var _select = select('core/editor'),
-      getPermalinkParts = _select.getPermalinkParts;
-
-  return {
-    permalinkParts: getPermalinkParts()
-  };
-}), Object(external_this_wp_data_["withDispatch"])(function (dispatch) {
-  var _dispatch = dispatch('core/editor'),
-      editPost = _dispatch.editPost;
-
-  return {
-    editPost: editPost
-  };
-})])(editor_PostPermalinkEditor));
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/components/post-permalink/index.js
-
-
-
-
-
-
-
-
-/**
- * External dependencies
- */
-
-
-/**
- * WordPress dependencies
- */
-
-
-
-
-
-
-
-
-/**
- * Internal dependencies
- */
-
-
-
-
-var post_permalink_PostPermalink =
-/*#__PURE__*/
-function (_Component) {
-  Object(inherits["a" /* default */])(PostPermalink, _Component);
-
-  function PostPermalink() {
-    var _this;
-
-    Object(classCallCheck["a" /* default */])(this, PostPermalink);
-
-    _this = Object(possibleConstructorReturn["a" /* default */])(this, Object(getPrototypeOf["a" /* default */])(PostPermalink).apply(this, arguments));
-    _this.addVisibilityCheck = _this.addVisibilityCheck.bind(Object(assertThisInitialized["a" /* default */])(_this));
-    _this.onVisibilityChange = _this.onVisibilityChange.bind(Object(assertThisInitialized["a" /* default */])(_this));
-    _this.state = {
-      isCopied: false,
-      isEditingPermalink: false
-    };
-    return _this;
-  }
-
-  Object(createClass["a" /* default */])(PostPermalink, [{
-    key: "addVisibilityCheck",
-    value: function addVisibilityCheck() {
-      window.addEventListener('visibilitychange', this.onVisibilityChange);
-    }
-  }, {
-    key: "onVisibilityChange",
-    value: function onVisibilityChange() {
-      var _this$props = this.props,
-          isEditable = _this$props.isEditable,
-          refreshPost = _this$props.refreshPost; // If the user just returned after having clicked the "Change Permalinks" button,
-      // fetch a new copy of the post from the server, just in case they enabled permalinks.
-
-      if (!isEditable && 'visible' === document.visibilityState) {
-        refreshPost();
-      }
-    }
-  }, {
-    key: "componentDidUpdate",
-    value: function componentDidUpdate(prevProps, prevState) {
-      // If we've just stopped editing the permalink, focus on the new permalink.
-      if (prevState.isEditingPermalink && !this.state.isEditingPermalink) {
-        this.linkElement.focus();
-      }
-    }
-  }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      window.removeEventListener('visibilitychange', this.addVisibilityCheck);
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      var _this$props2 = this.props,
-          isEditable = _this$props2.isEditable,
-          isNew = _this$props2.isNew,
-          isPublished = _this$props2.isPublished,
-          isViewable = _this$props2.isViewable,
-          permalinkParts = _this$props2.permalinkParts,
-          postLink = _this$props2.postLink,
-          postSlug = _this$props2.postSlug,
-          postID = _this$props2.postID,
-          postTitle = _this$props2.postTitle;
-
-      if (isNew || !isViewable || !permalinkParts || !postLink) {
-        return null;
-      }
-
-      var _this$state = this.state,
-          isCopied = _this$state.isCopied,
-          isEditingPermalink = _this$state.isEditingPermalink;
-      var ariaLabel = isCopied ? Object(external_this_wp_i18n_["__"])('Permalink copied') : Object(external_this_wp_i18n_["__"])('Copy the permalink');
-      var prefix = permalinkParts.prefix,
-          suffix = permalinkParts.suffix;
-      var slug = Object(external_this_wp_url_["safeDecodeURIComponent"])(postSlug) || cleanForSlug(postTitle) || postID;
-      var samplePermalink = isEditable ? prefix + slug + suffix : prefix;
-      return Object(external_this_wp_element_["createElement"])("div", {
-        className: "editor-post-permalink"
-      }, Object(external_this_wp_element_["createElement"])(external_this_wp_components_["ClipboardButton"], {
-        className: classnames_default()('editor-post-permalink__copy', {
-          'is-copied': isCopied
-        }),
-        text: samplePermalink,
-        label: ariaLabel,
-        onCopy: function onCopy() {
-          return _this2.setState({
-            isCopied: true
-          });
-        },
-        "aria-disabled": isCopied,
-        icon: library_link["a" /* default */]
-      }), Object(external_this_wp_element_["createElement"])("span", {
-        className: "editor-post-permalink__label"
-      }, Object(external_this_wp_i18n_["__"])('Permalink:')), !isEditingPermalink && Object(external_this_wp_element_["createElement"])(external_this_wp_components_["ExternalLink"], {
-        className: "editor-post-permalink__link",
-        href: !isPublished ? postLink : samplePermalink,
-        target: "_blank",
-        ref: function ref(linkElement) {
-          return _this2.linkElement = linkElement;
-        }
-      }, Object(external_this_wp_url_["safeDecodeURI"])(samplePermalink), "\u200E"), isEditingPermalink && Object(external_this_wp_element_["createElement"])(editor, {
-        slug: slug,
-        onSave: function onSave() {
-          return _this2.setState({
-            isEditingPermalink: false
-          });
-        }
-      }), isEditable && !isEditingPermalink && Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Button"], {
-        className: "editor-post-permalink__edit",
-        isSecondary: true,
-        onClick: function onClick() {
-          return _this2.setState({
-            isEditingPermalink: true
-          });
-        }
-      }, Object(external_this_wp_i18n_["__"])('Edit')));
-    }
-  }]);
-
-  return PostPermalink;
-}(external_this_wp_element_["Component"]);
-
-/* harmony default export */ var post_permalink = (Object(external_this_wp_compose_["compose"])([Object(external_this_wp_data_["withSelect"])(function (select) {
-  var _select = select('core/editor'),
-      isEditedPostNew = _select.isEditedPostNew,
-      isPermalinkEditable = _select.isPermalinkEditable,
-      getCurrentPost = _select.getCurrentPost,
-      getPermalinkParts = _select.getPermalinkParts,
-      getEditedPostAttribute = _select.getEditedPostAttribute,
-      isCurrentPostPublished = _select.isCurrentPostPublished;
-
-  var _select2 = select('core'),
-      getPostType = _select2.getPostType;
-
-  var _getCurrentPost = getCurrentPost(),
-      id = _getCurrentPost.id,
-      link = _getCurrentPost.link;
-
-  var postTypeName = getEditedPostAttribute('type');
-  var postType = getPostType(postTypeName);
-  return {
-    isNew: isEditedPostNew(),
-    postLink: link,
-    permalinkParts: getPermalinkParts(),
-    postSlug: getEditedPostAttribute('slug'),
-    isEditable: isPermalinkEditable(),
-    isPublished: isCurrentPostPublished(),
-    postTitle: getEditedPostAttribute('title'),
-    postID: id,
-    isViewable: Object(external_this_lodash_["get"])(postType, ['viewable'], false)
-  };
-}), Object(external_this_wp_data_["withDispatch"])(function (dispatch) {
-  var _dispatch = dispatch('core/editor'),
-      refreshPost = _dispatch.refreshPost;
-
-  return {
-    refreshPost: refreshPost
-  };
-})])(post_permalink_PostPermalink));
-
 // CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/components/post-title/index.js
 
 
@@ -12205,10 +11805,14 @@ function (_Component) {
 
 
 
+
+function post_title_createSuper(Derived) { return function () { var Super = Object(getPrototypeOf["a" /* default */])(Derived), result; if (post_title_isNativeReflectConstruct()) { var NewTarget = Object(getPrototypeOf["a" /* default */])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(possibleConstructorReturn["a" /* default */])(this, result); }; }
+
+function post_title_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 /**
  * External dependencies
  */
-
 
 
 /**
@@ -12222,10 +11826,10 @@ function (_Component) {
 
 
 
+
 /**
  * Internal dependencies
  */
-
 
 
 /**
@@ -12234,21 +11838,22 @@ function (_Component) {
 
 var REGEXP_NEWLINES = /[\r\n]+/g;
 
-var post_title_PostTitle =
-/*#__PURE__*/
-function (_Component) {
+var post_title_PostTitle = /*#__PURE__*/function (_Component) {
   Object(inherits["a" /* default */])(PostTitle, _Component);
+
+  var _super = post_title_createSuper(PostTitle);
 
   function PostTitle() {
     var _this;
 
     Object(classCallCheck["a" /* default */])(this, PostTitle);
 
-    _this = Object(possibleConstructorReturn["a" /* default */])(this, Object(getPrototypeOf["a" /* default */])(PostTitle).apply(this, arguments));
+    _this = _super.apply(this, arguments);
     _this.onChange = _this.onChange.bind(Object(assertThisInitialized["a" /* default */])(_this));
     _this.onSelect = _this.onSelect.bind(Object(assertThisInitialized["a" /* default */])(_this));
     _this.onUnselect = _this.onUnselect.bind(Object(assertThisInitialized["a" /* default */])(_this));
     _this.onKeyDown = _this.onKeyDown.bind(Object(assertThisInitialized["a" /* default */])(_this));
+    _this.onPaste = _this.onPaste.bind(Object(assertThisInitialized["a" /* default */])(_this));
     _this.state = {
       isSelected: false
     };
@@ -12256,11 +11861,6 @@ function (_Component) {
   }
 
   Object(createClass["a" /* default */])(PostTitle, [{
-    key: "handleFocusOutside",
-    value: function handleFocusOutside() {
-      this.onUnselect();
-    }
-  }, {
     key: "onSelect",
     value: function onSelect() {
       this.setState({
@@ -12290,19 +11890,68 @@ function (_Component) {
       }
     }
   }, {
+    key: "onPaste",
+    value: function onPaste(event) {
+      var _this$props = this.props,
+          title = _this$props.title,
+          onInsertBlockAfter = _this$props.onInsertBlockAfter,
+          onUpdate = _this$props.onUpdate;
+      var clipboardData = event.clipboardData;
+      var plainText = '';
+      var html = ''; // IE11 only supports `Text` as an argument for `getData` and will
+      // otherwise throw an invalid argument error, so we try the standard
+      // arguments first, then fallback to `Text` if they fail.
+
+      try {
+        plainText = clipboardData.getData('text/plain');
+        html = clipboardData.getData('text/html');
+      } catch (error1) {
+        try {
+          html = clipboardData.getData('Text');
+        } catch (error2) {
+          // Some browsers like UC Browser paste plain text by default and
+          // don't support clipboardData at all, so allow default
+          // behaviour.
+          return;
+        }
+      } // Allows us to ask for this information when we get a report.
+
+
+      window.console.log('Received HTML:\n\n', html);
+      window.console.log('Received plain text:\n\n', plainText);
+      var content = Object(external_this_wp_blocks_["pasteHandler"])({
+        HTML: html,
+        plainText: plainText
+      });
+
+      if (typeof content !== 'string' && content.length) {
+        event.preventDefault();
+
+        var _content = Object(slicedToArray["a" /* default */])(content, 1),
+            firstBlock = _content[0];
+
+        if (!title && (firstBlock.name === 'core/heading' || firstBlock.name === 'core/paragraph')) {
+          onUpdate(firstBlock.attributes.content);
+          onInsertBlockAfter(content.slice(1));
+        } else {
+          onInsertBlockAfter(content);
+        }
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
-      var _this$props = this.props,
-          hasFixedToolbar = _this$props.hasFixedToolbar,
-          isCleanNewPost = _this$props.isCleanNewPost,
-          isFocusMode = _this$props.isFocusMode,
-          isPostTypeViewable = _this$props.isPostTypeViewable,
-          instanceId = _this$props.instanceId,
-          placeholder = _this$props.placeholder,
-          title = _this$props.title;
+      var _this$props2 = this.props,
+          hasFixedToolbar = _this$props2.hasFixedToolbar,
+          isCleanNewPost = _this$props2.isCleanNewPost,
+          isFocusMode = _this$props2.isFocusMode,
+          instanceId = _this$props2.instanceId,
+          placeholder = _this$props2.placeholder,
+          title = _this$props2.title;
       var isSelected = this.state.isSelected; // The wp-block className is important for editor styles.
+      // This same block is used in both the visual and the code editor.
 
-      var className = classnames_default()('wp-block editor-post-title__block', {
+      var className = classnames_default()('wp-block editor-post-title editor-post-title__block', {
         'is-selected': isSelected,
         'is-focus-mode': isFocusMode,
         'has-fixed-toolbar': hasFixedToolbar
@@ -12311,12 +11960,10 @@ function (_Component) {
       return Object(external_this_wp_element_["createElement"])(post_type_support_check, {
         supportKeys: "title"
       }, Object(external_this_wp_element_["createElement"])("div", {
-        className: "editor-post-title"
-      }, Object(external_this_wp_element_["createElement"])("div", {
         className: className
-      }, Object(external_this_wp_element_["createElement"])("div", null, Object(external_this_wp_element_["createElement"])("label", {
-        htmlFor: "post-title-".concat(instanceId),
-        className: "screen-reader-text"
+      }, Object(external_this_wp_element_["createElement"])(external_this_wp_components_["VisuallyHidden"], {
+        as: "label",
+        htmlFor: "post-title-".concat(instanceId)
       }, decodedPlaceholder || Object(external_this_wp_i18n_["__"])('Add title')), Object(external_this_wp_element_["createElement"])(lib_default.a, {
         id: "post-title-".concat(instanceId),
         className: "editor-post-title__input",
@@ -12324,8 +11971,10 @@ function (_Component) {
         onChange: this.onChange,
         placeholder: decodedPlaceholder || Object(external_this_wp_i18n_["__"])('Add title'),
         onFocus: this.onSelect,
+        onBlur: this.onUnselect,
         onKeyDown: this.onKeyDown,
-        onKeyPress: this.onUnselect
+        onKeyPress: this.onUnselect,
+        onPaste: this.onPaste
         /*
         	Only autofocus the title when the post is entirely empty.
         	This should only happen for a new post, which means we
@@ -12335,10 +11984,10 @@ function (_Component) {
 
         /* eslint-disable jsx-a11y/no-autofocus */
         ,
-        autoFocus: document.body === document.activeElement && isCleanNewPost
+        autoFocus: (document.body === document.activeElement || !document.activeElement) && isCleanNewPost
         /* eslint-enable jsx-a11y/no-autofocus */
 
-      })), isSelected && isPostTypeViewable && Object(external_this_wp_element_["createElement"])(post_permalink, null))));
+      })));
     }
   }]);
 
@@ -12353,11 +12002,6 @@ var post_title_applyWithSelect = Object(external_this_wp_data_["withSelect"])(fu
   var _select2 = select('core/block-editor'),
       getSettings = _select2.getSettings;
 
-  var _select3 = select('core'),
-      getPostType = _select3.getPostType;
-
-  var postType = getPostType(getEditedPostAttribute('type'));
-
   var _getSettings = getSettings(),
       titlePlaceholder = _getSettings.titlePlaceholder,
       focusMode = _getSettings.focusMode,
@@ -12366,7 +12010,6 @@ var post_title_applyWithSelect = Object(external_this_wp_data_["withSelect"])(fu
   return {
     isCleanNewPost: isCleanNewPost(),
     title: getEditedPostAttribute('title'),
-    isPostTypeViewable: Object(external_this_lodash_["get"])(postType, ['viewable'], false),
     placeholder: titlePlaceholder,
     isFocusMode: focusMode,
     hasFixedToolbar: hasFixedToolbar
@@ -12375,7 +12018,8 @@ var post_title_applyWithSelect = Object(external_this_wp_data_["withSelect"])(fu
 var post_title_applyWithDispatch = Object(external_this_wp_data_["withDispatch"])(function (dispatch) {
   var _dispatch = dispatch('core/block-editor'),
       insertDefaultBlock = _dispatch.insertDefaultBlock,
-      clearSelectedBlock = _dispatch.clearSelectedBlock;
+      clearSelectedBlock = _dispatch.clearSelectedBlock,
+      insertBlocks = _dispatch.insertBlocks;
 
   var _dispatch2 = dispatch('core/editor'),
       editPost = _dispatch2.editPost;
@@ -12383,6 +12027,9 @@ var post_title_applyWithDispatch = Object(external_this_wp_data_["withDispatch"]
   return {
     onEnterPress: function onEnterPress() {
       insertDefaultBlock(undefined, undefined, 0);
+    },
+    onInsertBlockAfter: function onInsertBlockAfter(blocks) {
+      insertBlocks(blocks, 0);
     },
     onUpdate: function onUpdate(title) {
       editPost({
@@ -12392,7 +12039,7 @@ var post_title_applyWithDispatch = Object(external_this_wp_data_["withDispatch"]
     clearSelectedBlock: clearSelectedBlock
   };
 });
-/* harmony default export */ var post_title = (Object(external_this_wp_compose_["compose"])(post_title_applyWithSelect, post_title_applyWithDispatch, external_this_wp_compose_["withInstanceId"], external_this_wp_components_["withFocusOutside"])(post_title_PostTitle));
+/* harmony default export */ var post_title = (Object(external_this_wp_compose_["compose"])(post_title_applyWithSelect, post_title_applyWithDispatch, external_this_wp_compose_["withInstanceId"])(post_title_PostTitle));
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/components/post-trash/index.js
 
@@ -12421,9 +12068,11 @@ function PostTrash(_ref) {
   };
 
   return Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Button"], {
-    className: "editor-post-trash is-link",
+    className: "editor-post-trash",
+    isDestructive: true,
+    isTertiary: true,
     onClick: onClick
-  }, Object(external_this_wp_i18n_["__"])('Move to Trash'));
+  }, Object(external_this_wp_i18n_["__"])('Move to trash'));
 }
 
 /* harmony default export */ var post_trash = (Object(external_this_wp_compose_["compose"])([Object(external_this_wp_data_["withSelect"])(function (select) {
@@ -12452,9 +12101,10 @@ function PostTrash(_ref) {
 function PostTrashCheck(_ref) {
   var isNew = _ref.isNew,
       postId = _ref.postId,
+      canUserDelete = _ref.canUserDelete,
       children = _ref.children;
 
-  if (isNew || !postId) {
+  if (isNew || !postId || !canUserDelete) {
     return null;
   }
 
@@ -12464,11 +12114,20 @@ function PostTrashCheck(_ref) {
 /* harmony default export */ var post_trash_check = (Object(external_this_wp_data_["withSelect"])(function (select) {
   var _select = select('core/editor'),
       isEditedPostNew = _select.isEditedPostNew,
-      getCurrentPostId = _select.getCurrentPostId;
+      getCurrentPostId = _select.getCurrentPostId,
+      getCurrentPostType = _select.getCurrentPostType;
 
+  var _select2 = select('core'),
+      getPostType = _select2.getPostType,
+      canUser = _select2.canUser;
+
+  var postId = getCurrentPostId();
+  var postType = getPostType(getCurrentPostType());
+  var resource = (postType === null || postType === void 0 ? void 0 : postType['rest_base']) || '';
   return {
     isNew: isEditedPostNew(),
-    postId: getCurrentPostId()
+    postId: postId,
+    canUserDelete: postId && resource ? canUser('delete', resource, postId) : false
   };
 })(PostTrashCheck));
 
@@ -12501,6 +12160,21 @@ function PostVisibilityCheck(_ref) {
     postType: getCurrentPostType()
   };
 })])(PostVisibilityCheck));
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/icons/build-module/library/info.js
+
+
+/**
+ * WordPress dependencies
+ */
+
+var info_info = Object(external_this_wp_element_["createElement"])(external_this_wp_primitives_["SVG"], {
+  xmlns: "http://www.w3.org/2000/svg",
+  viewBox: "0 0 24 24"
+}, Object(external_this_wp_element_["createElement"])(external_this_wp_primitives_["Path"], {
+  d: "M12 3.2c-4.8 0-8.8 3.9-8.8 8.8 0 4.8 3.9 8.8 8.8 8.8 4.8 0 8.8-3.9 8.8-8.8 0-4.8-4-8.8-8.8-8.8zm0 16c-4 0-7.2-3.3-7.2-7.2C4.8 8 8 4.8 12 4.8s7.2 3.3 7.2 7.2c0 4-3.2 7.2-7.2 7.2zM11 17h2v-6h-2v6zm0-8h2V7h-2v2z"
+}));
+/* harmony default export */ var library_info = (info_info);
 
 // EXTERNAL MODULE: external {"this":["wp","wordcount"]}
 var external_this_wp_wordcount_ = __webpack_require__("7fqt");
@@ -12552,11 +12226,23 @@ function WordCount(_ref) {
 
 
 function TableOfContentsPanel(_ref) {
-  var headingCount = _ref.headingCount,
-      paragraphCount = _ref.paragraphCount,
-      numberOfBlocks = _ref.numberOfBlocks,
-      hasOutlineItemsDisabled = _ref.hasOutlineItemsDisabled,
+  var hasOutlineItemsDisabled = _ref.hasOutlineItemsDisabled,
       onRequestClose = _ref.onRequestClose;
+
+  var _useSelect = Object(external_this_wp_data_["useSelect"])(function (select) {
+    var _select = select('core/block-editor'),
+        getGlobalBlockCount = _select.getGlobalBlockCount;
+
+    return {
+      headingCount: getGlobalBlockCount('core/heading'),
+      paragraphCount: getGlobalBlockCount('core/paragraph'),
+      numberOfBlocks: getGlobalBlockCount()
+    };
+  }, []),
+      headingCount = _useSelect.headingCount,
+      paragraphCount = _useSelect.paragraphCount,
+      numberOfBlocks = _useSelect.numberOfBlocks;
+
   return (
     /*
      * Disable reason: The `list` ARIA role is redundant but
@@ -12597,23 +12283,18 @@ function TableOfContentsPanel(_ref) {
   );
 }
 
-/* harmony default export */ var panel = (Object(external_this_wp_data_["withSelect"])(function (select) {
-  var _select = select('core/block-editor'),
-      getGlobalBlockCount = _select.getGlobalBlockCount;
-
-  return {
-    headingCount: getGlobalBlockCount('core/heading'),
-    paragraphCount: getGlobalBlockCount('core/paragraph'),
-    numberOfBlocks: getGlobalBlockCount()
-  };
-})(TableOfContentsPanel));
+/* harmony default export */ var panel = (TableOfContentsPanel);
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/components/table-of-contents/index.js
+
+
 
 
 /**
  * WordPress dependencies
  */
+
+
 
 
 
@@ -12623,9 +12304,13 @@ function TableOfContentsPanel(_ref) {
 
 
 
-function TableOfContents(_ref) {
-  var hasBlocks = _ref.hasBlocks,
-      hasOutlineItemsDisabled = _ref.hasOutlineItemsDisabled;
+function TableOfContents(_ref, ref) {
+  var hasOutlineItemsDisabled = _ref.hasOutlineItemsDisabled,
+      props = Object(objectWithoutProperties["a" /* default */])(_ref, ["hasOutlineItemsDisabled"]);
+
+  var hasBlocks = Object(external_this_wp_data_["useSelect"])(function (select) {
+    return !!select('core/block-editor').getBlockCount();
+  }, []);
   return Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Dropdown"], {
     position: "bottom",
     className: "table-of-contents",
@@ -12633,14 +12318,15 @@ function TableOfContents(_ref) {
     renderToggle: function renderToggle(_ref2) {
       var isOpen = _ref2.isOpen,
           onToggle = _ref2.onToggle;
-      return Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Button"], {
+      return Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Button"], Object(esm_extends["a" /* default */])({}, props, {
+        ref: ref,
         onClick: hasBlocks ? onToggle : undefined,
-        icon: "info-outline",
+        icon: library_info,
         "aria-expanded": isOpen,
         label: Object(external_this_wp_i18n_["__"])('Content structure'),
         tooltipPosition: "bottom",
         "aria-disabled": !hasBlocks
-      });
+      }));
     },
     renderContent: function renderContent(_ref3) {
       var onClose = _ref3.onClose;
@@ -12652,11 +12338,7 @@ function TableOfContents(_ref) {
   });
 }
 
-/* harmony default export */ var table_of_contents = (Object(external_this_wp_data_["withSelect"])(function (select) {
-  return {
-    hasBlocks: !!select('core/block-editor').getBlockCount()
-  };
-})(TableOfContents));
+/* harmony default export */ var table_of_contents = (Object(external_this_wp_element_["forwardRef"])(TableOfContents));
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/components/unsaved-changes-warning/index.js
 
@@ -12666,6 +12348,10 @@ function TableOfContents(_ref) {
 
 
 
+function unsaved_changes_warning_createSuper(Derived) { return function () { var Super = Object(getPrototypeOf["a" /* default */])(Derived), result; if (unsaved_changes_warning_isNativeReflectConstruct()) { var NewTarget = Object(getPrototypeOf["a" /* default */])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(possibleConstructorReturn["a" /* default */])(this, result); }; }
+
+function unsaved_changes_warning_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 /**
  * WordPress dependencies
  */
@@ -12673,17 +12359,17 @@ function TableOfContents(_ref) {
 
 
 
-var unsaved_changes_warning_UnsavedChangesWarning =
-/*#__PURE__*/
-function (_Component) {
+var unsaved_changes_warning_UnsavedChangesWarning = /*#__PURE__*/function (_Component) {
   Object(inherits["a" /* default */])(UnsavedChangesWarning, _Component);
+
+  var _super = unsaved_changes_warning_createSuper(UnsavedChangesWarning);
 
   function UnsavedChangesWarning() {
     var _this;
 
     Object(classCallCheck["a" /* default */])(this, UnsavedChangesWarning);
 
-    _this = Object(possibleConstructorReturn["a" /* default */])(this, Object(getPrototypeOf["a" /* default */])(UnsavedChangesWarning).apply(this, arguments));
+    _this = _super.apply(this, arguments);
     _this.warnIfUnsavedChanges = _this.warnIfUnsavedChanges.bind(Object(assertThisInitialized["a" /* default */])(_this));
     return _this;
   }
@@ -12824,7 +12510,7 @@ function media_upload_objectSpread(target) { for (var i = 1; i < arguments.lengt
  * @param   {Function} $0.onFileChange      Function called each time a file or a temporary representation of the file is available.
  */
 
-/* harmony default export */ var media_upload = (function (_ref) {
+function mediaUpload(_ref) {
   var _ref$additionalData = _ref.additionalData,
       additionalData = _ref$additionalData === void 0 ? {} : _ref$additionalData,
       allowedTypes = _ref.allowedTypes,
@@ -12854,15 +12540,7 @@ function media_upload_objectSpread(target) { for (var i = 1; i < arguments.lengt
     },
     wpAllowedMimeTypes: wpAllowedMimeTypes
   });
-});
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/utils/index.js
-/**
- * Internal dependencies
- */
-
-
-
+}
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/components/reusable-blocks-buttons/reusable-block-convert-button.js
 
@@ -12880,6 +12558,7 @@ function media_upload_objectSpread(target) { for (var i = 1; i < arguments.lengt
 
 
 
+
 function ReusableBlockConvertButton(_ref) {
   var isVisible = _ref.isVisible,
       isReusable = _ref.isReusable,
@@ -12890,16 +12569,23 @@ function ReusableBlockConvertButton(_ref) {
     return null;
   }
 
-  return Object(external_this_wp_element_["createElement"])(external_this_wp_element_["Fragment"], null, !isReusable && Object(external_this_wp_element_["createElement"])(external_this_wp_components_["MenuItem"], {
-    icon: "controls-repeat",
-    onClick: onConvertToReusable
-  }, Object(external_this_wp_i18n_["__"])('Add to Reusable blocks')), isReusable && Object(external_this_wp_element_["createElement"])(external_this_wp_components_["MenuItem"], {
-    icon: "controls-repeat",
-    onClick: onConvertToStatic
-  }, Object(external_this_wp_i18n_["__"])('Convert to Regular Block')));
+  return Object(external_this_wp_element_["createElement"])(external_this_wp_blockEditor_["BlockSettingsMenuControls"], null, function (_ref2) {
+    var onClose = _ref2.onClose;
+    return Object(external_this_wp_element_["createElement"])(external_this_wp_element_["Fragment"], null, !isReusable && Object(external_this_wp_element_["createElement"])(external_this_wp_components_["MenuItem"], {
+      onClick: function onClick() {
+        onConvertToReusable();
+        onClose();
+      }
+    }, Object(external_this_wp_i18n_["__"])('Add to Reusable blocks')), isReusable && Object(external_this_wp_element_["createElement"])(external_this_wp_components_["MenuItem"], {
+      onClick: function onClick() {
+        onConvertToStatic();
+        onClose();
+      }
+    }, Object(external_this_wp_i18n_["__"])('Convert to Regular Block')));
+  });
 }
-/* harmony default export */ var reusable_block_convert_button = (Object(external_this_wp_compose_["compose"])([Object(external_this_wp_data_["withSelect"])(function (select, _ref2) {
-  var clientIds = _ref2.clientIds;
+/* harmony default export */ var reusable_block_convert_button = (Object(external_this_wp_compose_["compose"])([Object(external_this_wp_data_["withSelect"])(function (select, _ref3) {
+  var clientIds = _ref3.clientIds;
 
   var _select = select('core/block-editor'),
       getBlocksByClientId = _select.getBlocksByClientId,
@@ -12927,10 +12613,8 @@ function ReusableBlockConvertButton(_ref) {
     isReusable: isReusable,
     isVisible: isVisible
   };
-}), Object(external_this_wp_data_["withDispatch"])(function (dispatch, _ref3) {
-  var clientIds = _ref3.clientIds,
-      _ref3$onToggle = _ref3.onToggle,
-      onToggle = _ref3$onToggle === void 0 ? external_this_lodash_["noop"] : _ref3$onToggle;
+}), Object(external_this_wp_data_["withDispatch"])(function (dispatch, _ref4) {
+  var clientIds = _ref4.clientIds;
 
   var _dispatch = dispatch('core/editor'),
       convertBlockToReusable = _dispatch.__experimentalConvertBlockToReusable,
@@ -12938,16 +12622,10 @@ function ReusableBlockConvertButton(_ref) {
 
   return {
     onConvertToStatic: function onConvertToStatic() {
-      if (clientIds.length !== 1) {
-        return;
-      }
-
       convertBlockToStatic(clientIds[0]);
-      onToggle();
     },
     onConvertToReusable: function onConvertToReusable() {
       convertBlockToReusable(clientIds);
-      onToggle();
     }
   };
 })])(ReusableBlockConvertButton));
@@ -12956,13 +12634,8 @@ function ReusableBlockConvertButton(_ref) {
 
 
 /**
- * External dependencies
- */
-
-/**
  * WordPress dependencies
  */
-
 
 
 
@@ -12978,16 +12651,22 @@ function ReusableBlockDeleteButton(_ref) {
     return null;
   }
 
-  return Object(external_this_wp_element_["createElement"])(external_this_wp_components_["MenuItem"], {
-    icon: library_close["a" /* default */],
-    disabled: isDisabled,
-    onClick: function onClick() {
-      return onDelete();
-    }
-  }, Object(external_this_wp_i18n_["__"])('Remove from Reusable blocks'));
+  return Object(external_this_wp_element_["createElement"])(external_this_wp_blockEditor_["BlockSettingsMenuControls"], null, function (_ref2) {
+    var onClose = _ref2.onClose;
+    return Object(external_this_wp_element_["createElement"])(external_this_wp_components_["MenuItem"], {
+      disabled: isDisabled,
+      onClick: function onClick() {
+        var hasConfirmed = onDelete();
+
+        if (hasConfirmed) {
+          onClose();
+        }
+      }
+    }, Object(external_this_wp_i18n_["__"])('Remove from Reusable blocks'));
+  });
 }
-/* harmony default export */ var reusable_block_delete_button = (Object(external_this_wp_compose_["compose"])([Object(external_this_wp_data_["withSelect"])(function (select, _ref2) {
-  var clientId = _ref2.clientId;
+/* harmony default export */ var reusable_block_delete_button = (Object(external_this_wp_compose_["compose"])([Object(external_this_wp_data_["withSelect"])(function (select, _ref3) {
+  var clientId = _ref3.clientId;
 
   var _select = select('core/block-editor'),
       getBlock = _select.getBlock;
@@ -13001,14 +12680,12 @@ function ReusableBlockDeleteButton(_ref) {
   var block = getBlock(clientId);
   var reusableBlock = block && Object(external_this_wp_blocks_["isReusableBlock"])(block) ? getReusableBlock(block.attributes.ref) : null;
   return {
-    isVisible: !!reusableBlock && !!canUser('delete', 'blocks', reusableBlock.id),
+    isVisible: !!reusableBlock && (reusableBlock.isTemporary || !!canUser('delete', 'blocks', reusableBlock.id)),
     isDisabled: reusableBlock && reusableBlock.isTemporary
   };
-}), Object(external_this_wp_data_["withDispatch"])(function (dispatch, _ref3, _ref4) {
-  var clientId = _ref3.clientId,
-      _ref3$onToggle = _ref3.onToggle,
-      onToggle = _ref3$onToggle === void 0 ? external_this_lodash_["noop"] : _ref3$onToggle;
-  var select = _ref4.select;
+}), Object(external_this_wp_data_["withDispatch"])(function (dispatch, _ref4, _ref5) {
+  var clientId = _ref4.clientId;
+  var select = _ref5.select;
 
   var _dispatch = dispatch('core/editor'),
       deleteReusableBlock = _dispatch.__experimentalDeleteReusableBlock;
@@ -13020,13 +12697,15 @@ function ReusableBlockDeleteButton(_ref) {
     onDelete: function onDelete() {
       // TODO: Make this a <Confirm /> component or similar
       // eslint-disable-next-line no-alert
-      var hasConfirmed = window.confirm(Object(external_this_wp_i18n_["__"])('Are you sure you want to delete this Reusable Block?\n\n' + 'It will be permanently removed from all posts and pages that use it.'));
+      var hasConfirmed = window.confirm( // eslint-disable-next-line @wordpress/i18n-no-collapsible-whitespace
+      Object(external_this_wp_i18n_["__"])('Are you sure you want to delete this Reusable Block?\n\n' + 'It will be permanently removed from all posts and pages that use it.'));
 
       if (hasConfirmed) {
         var block = getBlock(clientId);
         deleteReusableBlock(block.attributes.ref);
-        onToggle();
       }
+
+      return hasConfirmed;
     }
   };
 })])(ReusableBlockDeleteButton));
@@ -13038,7 +12717,6 @@ function ReusableBlockDeleteButton(_ref) {
  * WordPress dependencies
  */
 
-
 /**
  * Internal dependencies
  */
@@ -13048,16 +12726,11 @@ function ReusableBlockDeleteButton(_ref) {
 
 function ReusableBlocksButtons(_ref) {
   var clientIds = _ref.clientIds;
-  return Object(external_this_wp_element_["createElement"])(external_this_wp_blockEditor_["__experimentalBlockSettingsMenuPluginsExtension"], null, function (_ref2) {
-    var onClose = _ref2.onClose;
-    return Object(external_this_wp_element_["createElement"])(external_this_wp_element_["Fragment"], null, Object(external_this_wp_element_["createElement"])(reusable_block_convert_button, {
-      clientIds: clientIds,
-      onToggle: onClose
-    }), clientIds.length === 1 && Object(external_this_wp_element_["createElement"])(reusable_block_delete_button, {
-      clientId: clientIds[0],
-      onToggle: onClose
-    }));
-  });
+  return Object(external_this_wp_element_["createElement"])(external_this_wp_element_["Fragment"], null, Object(external_this_wp_element_["createElement"])(reusable_block_convert_button, {
+    clientIds: clientIds
+  }), clientIds.length === 1 && Object(external_this_wp_element_["createElement"])(reusable_block_delete_button, {
+    clientId: clientIds[0]
+  }));
 }
 
 /* harmony default export */ var reusable_blocks_buttons = (Object(external_this_wp_data_["withSelect"])(function (select) {
@@ -13069,68 +12742,16 @@ function ReusableBlocksButtons(_ref) {
   };
 })(ReusableBlocksButtons));
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/components/convert-to-group-buttons/icons.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/components/convert-to-group-buttons/index.js
 
 
 /**
  * WordPress dependencies
  */
 
-var GroupSVG = Object(external_this_wp_element_["createElement"])(external_this_wp_components_["SVG"], {
-  width: "20",
-  height: "20",
-  viewBox: "0 0 20 20",
-  xmlns: "http://www.w3.org/2000/svg"
-}, Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Path"], {
-  fillRule: "evenodd",
-  clipRule: "evenodd",
-  d: "M8 5a1 1 0 0 0-1 1v3H6a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3h1a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H8zm3 6H7v2h4v-2zM9 9V7h4v2H9z"
-}), Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Path"], {
-  fillRule: "evenodd",
-  clipRule: "evenodd",
-  d: "M1 3a2 2 0 0 0 1 1.732v10.536A2 2 0 1 0 4.732 18h10.536A2 2 0 1 0 18 15.268V4.732A2 2 0 1 0 15.268 2H4.732A2 2 0 0 0 1 3zm14.268 1H4.732A2.01 2.01 0 0 1 4 4.732v10.536c.304.175.557.428.732.732h10.536a2.01 2.01 0 0 1 .732-.732V4.732A2.01 2.01 0 0 1 15.268 4z"
-}));
-var Group = Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Icon"], {
-  icon: GroupSVG
-});
-var UngroupSVG = Object(external_this_wp_element_["createElement"])(external_this_wp_components_["SVG"], {
-  width: "20",
-  height: "20",
-  viewBox: "0 0 20 20",
-  xmlns: "http://www.w3.org/2000/svg"
-}, Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Path"], {
-  fillRule: "evenodd",
-  clipRule: "evenodd",
-  d: "M9 2H15C16.1 2 17 2.9 17 4V7C17 8.1 16.1 9 15 9H9C7.9 9 7 8.1 7 7V4C7 2.9 7.9 2 9 2ZM9 7H15V4H9V7Z"
-}), Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Path"], {
-  fillRule: "evenodd",
-  clipRule: "evenodd",
-  d: "M5 11H11C12.1 11 13 11.9 13 13V16C13 17.1 12.1 18 11 18H5C3.9 18 3 17.1 3 16V13C3 11.9 3.9 11 5 11ZM5 16H11V13H5V16Z"
-}));
-var Ungroup = Object(external_this_wp_element_["createElement"])(external_this_wp_components_["Icon"], {
-  icon: UngroupSVG
-});
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/components/convert-to-group-buttons/convert-button.js
-
-
-/**
- * External dependencies
- */
-
-/**
- * WordPress dependencies
- */
 
 
 
-
-
-
-
-/**
- * Internal dependencies
- */
 
 
 function ConvertToGroupButton(_ref) {
@@ -13140,25 +12761,37 @@ function ConvertToGroupButton(_ref) {
       isGroupable = _ref$isGroupable === void 0 ? false : _ref$isGroupable,
       _ref$isUngroupable = _ref.isUngroupable,
       isUngroupable = _ref$isUngroupable === void 0 ? false : _ref$isUngroupable;
-  return Object(external_this_wp_element_["createElement"])(external_this_wp_element_["Fragment"], null, isGroupable && Object(external_this_wp_element_["createElement"])(external_this_wp_components_["MenuItem"], {
-    icon: Group,
-    onClick: onConvertToGroup
-  }, Object(external_this_wp_i18n_["_x"])('Group', 'verb')), isUngroupable && Object(external_this_wp_element_["createElement"])(external_this_wp_components_["MenuItem"], {
-    icon: Ungroup,
-    onClick: onConvertFromGroup
-  }, Object(external_this_wp_i18n_["_x"])('Ungroup', 'Ungrouping blocks from within a Group block back into individual blocks within the Editor ')));
-}
-/* harmony default export */ var convert_button = (Object(external_this_wp_compose_["compose"])([Object(external_this_wp_data_["withSelect"])(function (select, _ref2) {
-  var clientIds = _ref2.clientIds;
 
+  if (!isGroupable && !isUngroupable) {
+    return null;
+  }
+
+  return Object(external_this_wp_element_["createElement"])(external_this_wp_blockEditor_["BlockSettingsMenuControls"], null, function (_ref2) {
+    var onClose = _ref2.onClose;
+    return Object(external_this_wp_element_["createElement"])(external_this_wp_element_["Fragment"], null, isGroupable && Object(external_this_wp_element_["createElement"])(external_this_wp_components_["MenuItem"], {
+      onClick: function onClick() {
+        onConvertToGroup();
+        onClose();
+      }
+    }, Object(external_this_wp_i18n_["_x"])('Group', 'verb')), isUngroupable && Object(external_this_wp_element_["createElement"])(external_this_wp_components_["MenuItem"], {
+      onClick: function onClick() {
+        onConvertFromGroup();
+        onClose();
+      }
+    }, Object(external_this_wp_i18n_["_x"])('Ungroup', 'Ungrouping blocks from within a Group block back into individual blocks within the Editor ')));
+  });
+}
+/* harmony default export */ var convert_to_group_buttons = (Object(external_this_wp_compose_["compose"])([Object(external_this_wp_data_["withSelect"])(function (select) {
   var _select = select('core/block-editor'),
       getBlockRootClientId = _select.getBlockRootClientId,
       getBlocksByClientId = _select.getBlocksByClientId,
-      canInsertBlockType = _select.canInsertBlockType;
+      canInsertBlockType = _select.canInsertBlockType,
+      getSelectedBlockClientIds = _select.getSelectedBlockClientIds;
 
   var _select2 = select('core/blocks'),
       getGroupingBlockName = _select2.getGroupingBlockName;
 
+  var clientIds = getSelectedBlockClientIds();
   var groupingBlockName = getGroupingBlockName();
   var rootClientId = clientIds && clientIds.length > 0 ? getBlockRootClientId(clientIds[0]) : undefined;
   var groupingBlockAvailable = canInsertBlockType(groupingBlockName, rootClientId);
@@ -13173,6 +12806,7 @@ function ConvertToGroupButton(_ref) {
 
   var isUngroupable = isSingleGroupingBlock && !!blocksSelection[0].innerBlocks.length;
   return {
+    clientIds: clientIds,
     isGroupable: isGroupable,
     isUngroupable: isUngroupable,
     blocksSelection: blocksSelection,
@@ -13180,8 +12814,6 @@ function ConvertToGroupButton(_ref) {
   };
 }), Object(external_this_wp_data_["withDispatch"])(function (dispatch, _ref3) {
   var clientIds = _ref3.clientIds,
-      _ref3$onToggle = _ref3.onToggle,
-      onToggle = _ref3$onToggle === void 0 ? external_this_lodash_["noop"] : _ref3$onToggle,
       _ref3$blocksSelection = _ref3.blocksSelection,
       blocksSelection = _ref3$blocksSelection === void 0 ? [] : _ref3$blocksSelection,
       groupingBlockName = _ref3.groupingBlockName;
@@ -13191,24 +12823,14 @@ function ConvertToGroupButton(_ref) {
 
   return {
     onConvertToGroup: function onConvertToGroup() {
-      if (!blocksSelection.length) {
-        return;
-      } // Activate the `transform` on the Grouping Block which does the conversion
-
-
+      // Activate the `transform` on the Grouping Block which does the conversion
       var newBlocks = Object(external_this_wp_blocks_["switchToBlockType"])(blocksSelection, groupingBlockName);
 
       if (newBlocks) {
         replaceBlocks(clientIds, newBlocks);
       }
-
-      onToggle();
     },
     onConvertFromGroup: function onConvertFromGroup() {
-      if (!blocksSelection.length) {
-        return;
-      }
-
       var innerBlocks = blocksSelection[0].innerBlocks;
 
       if (!innerBlocks.length) {
@@ -13216,45 +12838,9 @@ function ConvertToGroupButton(_ref) {
       }
 
       replaceBlocks(clientIds, innerBlocks);
-      onToggle();
     }
   };
 })])(ConvertToGroupButton));
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/components/convert-to-group-buttons/index.js
-
-
-/**
- * WordPress dependencies
- */
-
-
-
-/**
- * Internal dependencies
- */
-
-
-
-function ConvertToGroupButtons(_ref) {
-  var clientIds = _ref.clientIds;
-  return Object(external_this_wp_element_["createElement"])(external_this_wp_blockEditor_["__experimentalBlockSettingsMenuPluginsExtension"], null, function (_ref2) {
-    var onClose = _ref2.onClose;
-    return Object(external_this_wp_element_["createElement"])(external_this_wp_element_["Fragment"], null, Object(external_this_wp_element_["createElement"])(convert_button, {
-      clientIds: clientIds,
-      onToggle: onClose
-    }));
-  });
-}
-
-/* harmony default export */ var convert_to_group_buttons = (Object(external_this_wp_data_["withSelect"])(function (select) {
-  var _select = select('core/block-editor'),
-      getSelectedBlockClientIds = _select.getSelectedBlockClientIds;
-
-  return {
-    clientIds: getSelectedBlockClientIds()
-  };
-})(ConvertToGroupButtons));
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/components/provider/index.js
 
@@ -13271,6 +12857,10 @@ function provider_ownKeys(object, enumerableOnly) { var keys = Object.keys(objec
 
 function provider_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { provider_ownKeys(Object(source), true).forEach(function (key) { Object(defineProperty["a" /* default */])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { provider_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
+function provider_createSuper(Derived) { return function () { var Super = Object(getPrototypeOf["a" /* default */])(Derived), result; if (provider_isNativeReflectConstruct()) { var NewTarget = Object(getPrototypeOf["a" /* default */])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(possibleConstructorReturn["a" /* default */])(this, result); }; }
+
+function provider_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 /**
  * External dependencies
  */
@@ -13297,13 +12887,21 @@ function provider_objectSpread(target) { for (var i = 1; i < arguments.length; i
 
 
 
+/**
+ * Fetches link suggestions from the API. This function is an exact copy of a function found at:
+ *
+ * wordpress/editor/src/components/provider/index.js
+ *
+ * It seems like there is no suitable package to import this from. Ideally it would be either part of core-data.
+ * Until we refactor it, just copying the code is the simplest solution.
+ *
+ * @param {Object} search
+ * @param {number} perPage
+ * @return {Promise<Object[]>} List of suggestions
+ */
 
-var fetchLinkSuggestions =
-/*#__PURE__*/
-function () {
-  var _ref = Object(asyncToGenerator["a" /* default */])(
-  /*#__PURE__*/
-  external_this_regeneratorRuntime_default.a.mark(function _callee(search) {
+var fetchLinkSuggestions = /*#__PURE__*/function () {
+  var _ref = Object(asyncToGenerator["a" /* default */])( /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(function _callee(search) {
     var _ref2,
         _ref2$perPage,
         perPage,
@@ -13348,18 +12946,21 @@ function () {
   };
 }();
 
-var provider_EditorProvider =
-/*#__PURE__*/
-function (_Component) {
+var provider_EditorProvider = /*#__PURE__*/function (_Component) {
   Object(inherits["a" /* default */])(EditorProvider, _Component);
+
+  var _super = provider_createSuper(EditorProvider);
 
   function EditorProvider(props) {
     var _this;
 
     Object(classCallCheck["a" /* default */])(this, EditorProvider);
 
-    _this = Object(possibleConstructorReturn["a" /* default */])(this, Object(getPrototypeOf["a" /* default */])(EditorProvider).apply(this, arguments));
+    _this = _super.apply(this, arguments);
     _this.getBlockEditorSettings = memize_default()(_this.getBlockEditorSettings, {
+      maxSize: 1
+    });
+    _this.getDefaultBlockContext = memize_default()(_this.getDefaultBlockContext, {
       maxSize: 1
     }); // Assume that we don't need to initialize in the case of an error recovery.
 
@@ -13386,8 +12987,8 @@ function (_Component) {
   Object(createClass["a" /* default */])(EditorProvider, [{
     key: "getBlockEditorSettings",
     value: function getBlockEditorSettings(settings, reusableBlocks, __experimentalFetchReusableBlocks, hasUploadPermissions, canUserUseUnfilteredHTML, undo, shouldInsertAtTheTop) {
-      return provider_objectSpread({}, Object(external_this_lodash_["pick"])(settings, ['alignWide', 'allowedBlockTypes', '__experimentalPreferredStyleVariations', 'availableLegacyWidgets', 'bodyPlaceholder', 'codeEditingEnabled', 'colors', 'disableCustomColors', 'disableCustomFontSizes', 'disableCustomGradients', 'focusMode', 'fontSizes', 'hasFixedToolbar', 'hasPermissionsToManageWidgets', 'imageSizes', 'imageDimensions', 'isRTL', 'maxWidth', 'styles', 'template', 'templateLock', 'titlePlaceholder', 'onUpdateDefaultBlockStyles', '__experimentalEnableLegacyWidgetBlock', '__experimentalBlockDirectory', '__experimentalEnableFullSiteEditing', '__experimentalEnableFullSiteEditingDemo', '__experimentalEnablePageTemplates', 'showInserterHelpPanel', 'gradients']), {
-        mediaUpload: hasUploadPermissions ? media_upload : undefined,
+      return provider_objectSpread({}, Object(external_this_lodash_["pick"])(settings, ['__experimentalBlockDirectory', '__experimentalBlockPatterns', '__experimentalBlockPatternCategories', '__experimentalEnableCustomSpacing', '__experimentalEnableLegacyWidgetBlock', '__experimentalEnableLinkColor', '__experimentalEnableFullSiteEditing', '__experimentalEnableFullSiteEditingDemo', '__experimentalFeatures', '__experimentalGlobalStylesUserEntityId', '__experimentalGlobalStylesBase', '__experimentalPreferredStyleVariations', '__experimentalSetIsInserterOpened', 'alignWide', 'allowedBlockTypes', 'availableLegacyWidgets', 'bodyPlaceholder', 'codeEditingEnabled', 'colors', 'disableCustomColors', 'disableCustomFontSizes', 'disableCustomGradients', 'enableCustomUnits', 'enableCustomLineHeight', 'focusMode', 'fontSizes', 'gradients', 'hasFixedToolbar', 'hasPermissionsToManageWidgets', 'imageEditing', 'imageSizes', 'imageDimensions', 'isRTL', 'keepCaretInsideBlock', 'maxWidth', 'onUpdateDefaultBlockStyles', 'styles', 'template', 'templateLock', 'titlePlaceholder']), {
+        mediaUpload: hasUploadPermissions ? mediaUpload : undefined,
         __experimentalReusableBlocks: reusableBlocks,
         __experimentalFetchReusableBlocks: __experimentalFetchReusableBlocks,
         __experimentalFetchLinkSuggestions: fetchLinkSuggestions,
@@ -13397,22 +12998,17 @@ function (_Component) {
       });
     }
   }, {
+    key: "getDefaultBlockContext",
+    value: function getDefaultBlockContext(postId, postType) {
+      return {
+        postId: postId,
+        postType: postType
+      };
+    }
+  }, {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.updateEditorSettings(this.props.settings);
-
-      if (!this.props.settings.styles) {
-        return;
-      }
-
-      var updatedStyles = Object(external_this_wp_blockEditor_["transformStyles"])(this.props.settings.styles, '.editor-styles-wrapper');
-      Object(external_this_lodash_["map"])(updatedStyles, function (updatedCSS) {
-        if (updatedCSS) {
-          var node = document.createElement('style');
-          node.innerHTML = updatedCSS;
-          document.body.appendChild(node);
-        }
-      });
     }
   }, {
     key: "componentDidUpdate",
@@ -13451,13 +13047,18 @@ function (_Component) {
       }
 
       var editorSettings = this.getBlockEditorSettings(settings, reusableBlocks, __experimentalFetchReusableBlocks, hasUploadPermissions, canUserUseUnfilteredHTML, undo, isPostTitleSelected);
-      return Object(external_this_wp_element_["createElement"])(external_this_wp_coreData_["EntityProvider"], {
+      var defaultBlockContext = this.getDefaultBlockContext(post.id, post.type);
+      return Object(external_this_wp_element_["createElement"])(external_this_wp_element_["Fragment"], null, Object(external_this_wp_element_["createElement"])(external_this_wp_blockEditor_["__unstableEditorStyles"], {
+        styles: settings.styles
+      }), Object(external_this_wp_element_["createElement"])(external_this_wp_coreData_["EntityProvider"], {
         kind: "root",
         type: "site"
       }, Object(external_this_wp_element_["createElement"])(external_this_wp_coreData_["EntityProvider"], {
         kind: "postType",
         type: post.type,
         id: post.id
+      }, Object(external_this_wp_element_["createElement"])(external_this_wp_blockEditor_["BlockContextProvider"], {
+        value: defaultBlockContext
       }, Object(external_this_wp_element_["createElement"])(external_this_wp_blockEditor_["BlockEditorProvider"], {
         value: blocks,
         onInput: resetEditorBlocksWithoutUndoLevel,
@@ -13466,7 +13067,7 @@ function (_Component) {
         selectionEnd: selectionEnd,
         settings: editorSettings,
         useSubRegistry: false
-      }, children, Object(external_this_wp_element_["createElement"])(reusable_blocks_buttons, null), Object(external_this_wp_element_["createElement"])(convert_to_group_buttons, null))));
+      }, children, Object(external_this_wp_element_["createElement"])(reusable_blocks_buttons, null), Object(external_this_wp_element_["createElement"])(convert_to_group_buttons, null))))));
     }
   }]);
 
@@ -13605,7 +13206,6 @@ var __unstableRichTextInputEvent = deprecateComponent('__unstableRichTextInputEv
 var MediaPlaceholder = deprecateComponent('MediaPlaceholder', external_this_wp_blockEditor_["MediaPlaceholder"]);
 var MediaUpload = deprecateComponent('MediaUpload', external_this_wp_blockEditor_["MediaUpload"]);
 var MediaUploadCheck = deprecateComponent('MediaUploadCheck', external_this_wp_blockEditor_["MediaUploadCheck"]);
-var MultiBlocksSwitcher = deprecateComponent('MultiBlocksSwitcher', external_this_wp_blockEditor_["MultiBlocksSwitcher"]);
 var MultiSelectScrollIntoView = deprecateComponent('MultiSelectScrollIntoView', external_this_wp_blockEditor_["MultiSelectScrollIntoView"]);
 var NavigableToolbar = deprecateComponent('NavigableToolbar', external_this_wp_blockEditor_["NavigableToolbar"]);
 var ObserveTyping = deprecateComponent('ObserveTyping', external_this_wp_blockEditor_["ObserveTyping"]);
@@ -13691,42 +13291,11 @@ var withFontSizes = deprecateFunction('withFontSizes', external_this_wp_blockEdi
 
 
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/hooks/default-autocompleters.js
-/**
- * External dependencies
- */
-
-/**
- * WordPress dependencies
- */
-
-
-
+// CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/utils/index.js
 /**
  * Internal dependencies
  */
 
-
-
-function setDefaultCompleters() {
-  var completers = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-  var blockName = arguments.length > 1 ? arguments[1] : undefined;
-  // Provide copies so filters may directly modify them.
-  completers.push(Object(external_this_lodash_["clone"])(autocompleters_user)); // Add blocks autocompleter for Paragraph block
-
-  if (blockName === Object(external_this_wp_blocks_["getDefaultBlockName"])()) {
-    completers.push(Object(external_this_lodash_["clone"])(autocompleters_block));
-  }
-
-  return completers;
-}
-
-Object(external_this_wp_hooks_["addFilter"])('editor.Autocomplete.completers', 'editor/autocompleters/set-default-completers', setDefaultCompleters);
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/editor/build-module/hooks/index.js
-/**
- * Internal dependencies
- */
 
 
 
@@ -13786,9 +13355,9 @@ function _nonIterableRest() {
 
 var check = Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__["SVG"], {
   xmlns: "http://www.w3.org/2000/svg",
-  viewBox: "-2 -2 24 24"
+  viewBox: "0 0 24 24"
 }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__["Path"], {
-  d: "M15.3 5.3l-6.8 6.8-2.8-2.8-1.4 1.4 4.2 4.2 8.2-8.2"
+  d: "M9 18.6L3.5 13l1-1L9 16.4l9.5-9.9 1 1z"
 }));
 /* harmony default export */ __webpack_exports__["a"] = (check);
 
@@ -14218,6 +13787,56 @@ function _arrayLikeToArray(arr, len) {
 
 /***/ }),
 
+/***/ "b2RC":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("GRId");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("Tqx9");
+/* harmony import */ var _wordpress_primitives__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/**
+ * WordPress dependencies
+ */
+
+var grid = Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__["SVG"], {
+  xmlns: "http://www.w3.org/2000/svg",
+  viewBox: "-2 -2 24 24"
+}, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__["Path"], {
+  d: "M9 9V3H3v6h6zm8 0V3h-6v6h6zm-8 8v-6H3v6h6zm8 0v-6h-6v6h6z"
+}));
+/* harmony default export */ __webpack_exports__["a"] = (grid);
+
+
+/***/ }),
+
+/***/ "bWcr":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("GRId");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("Tqx9");
+/* harmony import */ var _wordpress_primitives__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/**
+ * WordPress dependencies
+ */
+
+var closeSmall = Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__["SVG"], {
+  xmlns: "http://www.w3.org/2000/svg",
+  viewBox: "0 0 24 24"
+}, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__["Path"], {
+  d: "M13 11.9l3.3-3.4-1.1-1-3.2 3.3-3.2-3.3-1.1 1 3.3 3.4-3.5 3.6 1 1L12 13l3.5 3.5 1-1z"
+}));
+/* harmony default export */ __webpack_exports__["a"] = (closeSmall);
+
+
+/***/ }),
+
 /***/ "cDcd":
 /***/ (function(module, exports) {
 
@@ -14342,7 +13961,23 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 /**
  * WordPress dependencies
  */
+ // Disable reason: JSDoc linter doesn't seem to parse the union (`&`) correctly.
 
+/* eslint-disable jsdoc/valid-types */
+
+/** @typedef {{icon: JSX.Element, size?: number} & import('react').ComponentPropsWithoutRef<'SVG'>} IconProps */
+
+/* eslint-enable jsdoc/valid-types */
+
+/**
+ * Return an SVG icon.
+ *
+ * @param {IconProps} props icon is the SVG component to render
+ *                          size is a number specifiying the icon size in pixels
+ *                          Other props will be passed to wrapped SVG component
+ *
+ * @return {JSX.Element}  Icon component
+ */
 
 function Icon(_ref) {
   var icon = _ref.icon,
@@ -14799,9 +14434,9 @@ function _createClass(Constructor, protoProps, staticProps) {
 
 var close = Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__["SVG"], {
   xmlns: "http://www.w3.org/2000/svg",
-  viewBox: "-2 -2 24 24"
+  viewBox: "0 0 24 24"
 }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__["Path"], {
-  d: "M14.95 6.46L11.41 10l3.54 3.54-1.41 1.41L10 11.42l-3.53 3.53-1.42-1.42L8.58 10 5.05 6.47l1.42-1.42L10 8.58l3.54-3.53z"
+  d: "M13 11.8l6.1-6.3-1-1-6.1 6.2-6.1-6.2-1 1 6.1 6.3-6.5 6.7 1 1 6.5-6.6 6.5 6.6 1-1z"
 }));
 /* harmony default export */ __webpack_exports__["a"] = (close);
 

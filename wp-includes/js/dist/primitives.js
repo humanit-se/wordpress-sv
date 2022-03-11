@@ -165,34 +165,103 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
  * WordPress dependencies
  */
 
+ // Disable reason: JSDoc linter doesn't seem to parse the union (`&`) correctly.
+
+/* eslint-disable jsdoc/valid-types */
+
+/** @typedef {{isPressed?: boolean} & import('react').ComponentPropsWithoutRef<'svg'>} SVGProps */
+
+/* eslint-enable jsdoc/valid-types */
+
+/**
+ * @param {import('react').ComponentPropsWithoutRef<'circle'>} props
+ *
+ * @return {JSX.Element} Circle component
+ */
 
 var svg_Circle = function Circle(props) {
   return Object(external_this_wp_element_["createElement"])('circle', props);
 };
+/**
+ * @param {import('react').ComponentPropsWithoutRef<'g'>} props
+ *
+ * @return {JSX.Element} G component
+ */
+
 var svg_G = function G(props) {
   return Object(external_this_wp_element_["createElement"])('g', props);
 };
+/**
+ * @param {import('react').ComponentPropsWithoutRef<'path'>} props
+ *
+ * @return {JSX.Element} Path component
+ */
+
 var svg_Path = function Path(props) {
   return Object(external_this_wp_element_["createElement"])('path', props);
 };
+/**
+ * @param {import('react').ComponentPropsWithoutRef<'polygon'>} props
+ *
+ * @return {JSX.Element} Polygon component
+ */
+
 var svg_Polygon = function Polygon(props) {
   return Object(external_this_wp_element_["createElement"])('polygon', props);
 };
+/**
+ * @param {import('react').ComponentPropsWithoutRef<'rect'>} props
+ *
+ * @return {JSX.Element} Rect component
+ */
+
 var svg_Rect = function Rect(props) {
   return Object(external_this_wp_element_["createElement"])('rect', props);
 };
+/**
+ * @param {import('react').ComponentPropsWithoutRef<'defs'>} props
+ *
+ * @return {JSX.Element} Defs component
+ */
+
 var svg_Defs = function Defs(props) {
   return Object(external_this_wp_element_["createElement"])('defs', props);
 };
+/**
+ * @param {import('react').ComponentPropsWithoutRef<'radialGradient'>} props
+ *
+ * @return {JSX.Element} RadialGradient component
+ */
+
 var svg_RadialGradient = function RadialGradient(props) {
   return Object(external_this_wp_element_["createElement"])('radialGradient', props);
 };
+/**
+ * @param {import('react').ComponentPropsWithoutRef<'linearGradient'>} props
+ *
+ * @return {JSX.Element} LinearGradient component
+ */
+
 var svg_LinearGradient = function LinearGradient(props) {
   return Object(external_this_wp_element_["createElement"])('linearGradient', props);
 };
+/**
+ * @param {import('react').ComponentPropsWithoutRef<'stop'>} props
+ *
+ * @return {JSX.Element} Stop component
+ */
+
 var svg_Stop = function Stop(props) {
   return Object(external_this_wp_element_["createElement"])('stop', props);
 };
+/**
+ *
+ * @param {SVGProps} props isPressed indicates whether the SVG should appear as pressed.
+ *                         Other props will be passed through to svg component.
+ *
+ * @return {JSX.Element} Stop component
+ */
+
 var svg_SVG = function SVG(_ref) {
   var className = _ref.className,
       isPressed = _ref.isPressed,
@@ -203,8 +272,8 @@ var svg_SVG = function SVG(_ref) {
       'is-pressed': isPressed
     }) || undefined,
     role: 'img',
-    'aria-hidden': 'true',
-    focusable: 'false'
+    'aria-hidden': true,
+    focusable: false
   }); // Disable reason: We need to have a way to render HTML tag for web.
   // eslint-disable-next-line react/forbid-elements
 
