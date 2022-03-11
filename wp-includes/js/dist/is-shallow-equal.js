@@ -96,8 +96,8 @@ this["wp"] = this["wp"] || {}; this["wp"]["isShallowEqual"] =
 /**
  * Returns true if the two arrays are shallow equal, or false otherwise.
  *
- * @param {Array} a First array to compare.
- * @param {Array} b Second array to compare.
+ * @param {any[]} a First array to compare.
+ * @param {any[]} b Second array to compare.
  *
  * @return {boolean} Whether the two arrays are shallow equal.
  */
@@ -137,8 +137,8 @@ var keys = Object.keys;
 /**
  * Returns true if the two objects are shallow equal, or false otherwise.
  *
- * @param {Object} a First object to compare.
- * @param {Object} b Second object to compare.
+ * @param {import('.').ComparableObject} a First object to compare.
+ * @param {import('.').ComparableObject} b Second object to compare.
  *
  * @return {boolean} Whether the two objects are shallow equal.
  */
@@ -200,11 +200,15 @@ var isShallowEqualArrays = __webpack_require__( "1O94" );
 var isArray = Array.isArray;
 
 /**
+ * @typedef {{[key: string]: any}} ComparableObject
+ */
+
+/**
  * Returns true if the two arrays or objects are shallow equal, or false
  * otherwise.
  *
- * @param {(Array|Object)} a First object or array to compare.
- * @param {(Array|Object)} b Second object or array to compare.
+ * @param {any[]|ComparableObject} a First object or array to compare.
+ * @param {any[]|ComparableObject} b Second object or array to compare.
  *
  * @return {boolean} Whether the two values are shallow equal.
  */
