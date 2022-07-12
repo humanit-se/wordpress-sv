@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 6.0.x - Development - Administration - Network Admin package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-05-15 14:24:53+0000\n"
+"PO-Revision-Date: 2022-05-29 17:52:32+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -70,7 +70,7 @@ msgstr[1] "%s teman kommer att uppdateras automatiskt."
 
 #: wp-admin/network/themes.php:226
 msgid "Sorry, you are not allowed to change themes automatic update settings."
-msgstr "Du saknar behörighet att ändra inställningarna för automatisk uppdateringar av teman."
+msgstr "Du har inte behörighet att ändra inställningarna för automatiska uppdateringar av teman."
 
 #: wp-admin/includes/class-wp-ms-themes-list-table.php:321
 msgid "No themes are currently available."
@@ -183,7 +183,7 @@ msgstr "Användarnamnet och en länk för att ange lösenord kommer att skickas 
 #. translators: %s: New network admin email.
 #: wp-admin/network/settings.php:176
 msgid "There is a pending change of the network admin email to %s."
-msgstr "En ändring av e-postadressen för nätverksadministratören till %s inväntar bekräftelse."
+msgstr "En ändring av e-postadressen för nätverksadministration till %s inväntar bekräftelse."
 
 #: wp-admin/includes/network.php:332
 msgid "Sub-domain Installation"
@@ -213,28 +213,28 @@ msgstr "%s-webbplatser"
 
 #: wp-admin/network/themes.php:102
 msgid "Sorry, you are not allowed to delete themes for this site."
-msgstr "Du saknar behörighet för att radera teman för den här webbplatsen."
+msgstr "Du har inte behörighet att ta bort teman för denna webbplats."
 
 #: wp-admin/network/themes.php:14
 msgid "Sorry, you are not allowed to manage network themes."
-msgstr "Du saknar behörighet att hantera teman i nätverket."
+msgstr "Du har inte behörighet att hantera teman i nätverket."
 
 #: wp-admin/network/sites.php:321
 msgid "Sorry, you are not allowed to delete that site."
-msgstr "Du saknar behörighet för att radera den webbplatsen."
+msgstr "Du har inte behörighet för att ta bort den webbplatsen."
 
 #: wp-admin/network/site-themes.php:14
 msgid "Sorry, you are not allowed to manage themes for this site."
-msgstr "Du saknar behörighet för att hantera teman för den här webbplatsen."
+msgstr "Du har inte behörighet att hantera teman för denna webbplats."
 
 #: wp-admin/network/site-new.php:17
 msgid "Sorry, you are not allowed to add sites to this network."
-msgstr "Du saknar behörighet för att lägga till webbplatser i det här nätverket."
+msgstr "Du har inte behörighet att lägga till webbplatser i detta nätverk."
 
 #: wp-admin/network/site-info.php:14 wp-admin/network/site-settings.php:14
 #: wp-admin/network/site-users.php:14
 msgid "Sorry, you are not allowed to edit this site."
-msgstr "Du saknar behörighet för att redigera den här webbplatsen."
+msgstr "Du har inte behörighet att redigera denna webbplats."
 
 #: wp-admin/network/settings.php:375
 msgid "The email address of the first comment author on a new site."
@@ -820,7 +820,7 @@ msgstr "Nej, gå tillbaka till listan över teman"
 
 #: wp-admin/network/themes.php:174
 msgid "Yes, delete this theme"
-msgstr "Ja, radera detta tema"
+msgstr "Ja, ta bort detta tema"
 
 #: wp-admin/network/themes.php:160
 msgid "Are you sure you want to delete these themes?"
@@ -836,7 +836,7 @@ msgstr "Detta tema kan vara aktivt på andra webbplatser i nätverket."
 
 #: wp-admin/network/themes.php:137
 msgid "Delete Theme"
-msgstr "Radera tema"
+msgstr "Ta bort tema"
 
 #: wp-admin/network/site-themes.php:213
 msgid "Network enabled themes are not shown on this screen."
@@ -868,11 +868,11 @@ msgstr "Ogiltigt webbplats-ID."
 #. translators: %s: Site URL.
 #: wp-admin/network/sites.php:168
 msgid "Sorry, you are not allowed to delete the site %s."
-msgstr "Du saknar behörighet att radera webbplatsen %s."
+msgstr "Du har inte behörighet att ta bort webbplatsen %s."
 
 #: wp-admin/network/sites.php:40
 msgid "Clicking on bold headings can re-sort this table."
-msgstr "Genom att klicka på rubrikerna i fetstil så kan denna tabell omsorteras."
+msgstr "Klicka på rubrikerna i fetstil för att sortera om denna tabell."
 
 #: wp-admin/network/sites.php:37
 msgid "Delete which is a permanent action after the confirmation screens."
@@ -1225,11 +1225,11 @@ msgstr "Webbplats arkiverad."
 
 #: wp-admin/network/sites.php:318
 msgid "Site deleted."
-msgstr "Webbplats raderad."
+msgstr "Webbplats borttagen."
 
 #: wp-admin/network/sites.php:315
 msgid "Sites deleted."
-msgstr "Webbplatser raderade."
+msgstr "Webbplatser borttagna."
 
 #: wp-admin/network/sites.php:106 wp-admin/network/sites.php:224
 msgid "Sorry, you are not allowed to change the current site."
@@ -1330,7 +1330,7 @@ msgstr "Välkomstmeddelande som skickas via e-post till nya webbplatsägare."
 
 #: wp-admin/network/settings.php:257
 msgid "Users are not allowed to register these sites. Separate names by spaces."
-msgstr "Användare kan ej registrera dessa webbplatser. Separera namn med mellanslag."
+msgstr "Användare får inte registrera dessa webbplatser. Separera namn med mellanslag."
 
 #: wp-admin/network/settings.php:232
 msgid "Send the network admin an email notification every time someone registers a site or user account"
@@ -1358,7 +1358,7 @@ msgstr "Standardspråk"
 
 #: wp-admin/network/settings.php:420
 msgid "Max upload file size"
-msgstr "Maximal storlek för filuppladdning"
+msgstr "Maximal filstorlek för uppladdning"
 
 #: wp-admin/network/settings.php:380
 msgid "First Comment URL"
@@ -1394,7 +1394,7 @@ msgstr "Förbjudna e-postdomäner"
 
 #: wp-admin/network/settings.php:263
 msgid "Limited Email Registrations"
-msgstr "Begränsad e-postregistrering"
+msgstr "Begränsade e-postregistreringar"
 
 #: wp-admin/network/settings.php:244
 msgid "Banned Names"
