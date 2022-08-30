@@ -136,6 +136,7 @@ var arrayToObject = function arrayToObject(source, options) {
 };
 
 var merge = function merge(target, source, options) {
+    /* eslint no-param-reassign: 0 */
     if (!source) {
         return target;
     }
@@ -219,7 +220,12 @@ var encode = function encode(str, defaultEncoder, charset) {
         return str;
     }
 
-    var string = typeof str === 'string' ? str : String(str);
+    var string = str;
+    if (typeof str === 'symbol') {
+        string = Symbol.prototype.toString.call(str);
+    } else if (typeof str !== 'string') {
+        string = String(str);
+    }
 
     if (charset === 'iso-8859-1') {
         return escape(string).replace(/%u[0-9a-f]{4}/gi, function ($0) {
@@ -310,6 +316,17 @@ var combine = function combine(a, b) {
     return [].concat(a, b);
 };
 
+var maybeMap = function maybeMap(val, fn) {
+    if (isArray(val)) {
+        var mapped = [];
+        for (var i = 0; i < val.length; i += 1) {
+            mapped.push(fn(val[i]));
+        }
+        return mapped;
+    }
+    return fn(val);
+};
+
 module.exports = {
     arrayToObject: arrayToObject,
     assign: assign,
@@ -319,6 +336,7 @@ module.exports = {
     encode: encode,
     isBuffer: isBuffer,
     isRegExp: isRegExp,
+    maybeMap: maybeMap,
     merge: merge
 };
 
@@ -336,14 +354,14 @@ var formats = __webpack_require__("sxOR");
 var has = Object.prototype.hasOwnProperty;
 
 var arrayPrefixGenerators = {
-    brackets: function brackets(prefix) { // eslint-disable-line func-name-matching
+    brackets: function brackets(prefix) {
         return prefix + '[]';
     },
     comma: 'comma',
-    indices: function indices(prefix, key) { // eslint-disable-line func-name-matching
+    indices: function indices(prefix, key) {
         return prefix + '[' + key + ']';
     },
-    repeat: function repeat(prefix) { // eslint-disable-line func-name-matching
+    repeat: function repeat(prefix) {
         return prefix;
     }
 };
@@ -356,6 +374,7 @@ var pushToArray = function (arr, valueOrArray) {
 
 var toISO = Date.prototype.toISOString;
 
+var defaultFormat = formats['default'];
 var defaults = {
     addQueryPrefix: false,
     allowDots: false,
@@ -365,17 +384,26 @@ var defaults = {
     encode: true,
     encoder: utils.encode,
     encodeValuesOnly: false,
-    formatter: formats.formatters[formats['default']],
+    format: defaultFormat,
+    formatter: formats.formatters[defaultFormat],
     // deprecated
     indices: false,
-    serializeDate: function serializeDate(date) { // eslint-disable-line func-name-matching
+    serializeDate: function serializeDate(date) {
         return toISO.call(date);
     },
     skipNulls: false,
     strictNullHandling: false
 };
 
-var stringify = function stringify( // eslint-disable-line func-name-matching
+var isNonNullishPrimitive = function isNonNullishPrimitive(v) {
+    return typeof v === 'string'
+        || typeof v === 'number'
+        || typeof v === 'boolean'
+        || typeof v === 'symbol'
+        || typeof v === 'bigint';
+};
+
+var stringify = function stringify(
     object,
     prefix,
     generateArrayPrefix,
@@ -396,21 +424,26 @@ var stringify = function stringify( // eslint-disable-line func-name-matching
     } else if (obj instanceof Date) {
         obj = serializeDate(obj);
     } else if (generateArrayPrefix === 'comma' && isArray(obj)) {
-        obj = obj.join(',');
+        obj = utils.maybeMap(obj, function (value) {
+            if (value instanceof Date) {
+                return serializeDate(value);
+            }
+            return value;
+        }).join(',');
     }
 
     if (obj === null) {
         if (strictNullHandling) {
-            return encoder && !encodeValuesOnly ? encoder(prefix, defaults.encoder, charset) : prefix;
+            return encoder && !encodeValuesOnly ? encoder(prefix, defaults.encoder, charset, 'key') : prefix;
         }
 
         obj = '';
     }
 
-    if (typeof obj === 'string' || typeof obj === 'number' || typeof obj === 'boolean' || utils.isBuffer(obj)) {
+    if (isNonNullishPrimitive(obj) || utils.isBuffer(obj)) {
         if (encoder) {
-            var keyValue = encodeValuesOnly ? prefix : encoder(prefix, defaults.encoder, charset);
-            return [formatter(keyValue) + '=' + formatter(encoder(obj, defaults.encoder, charset))];
+            var keyValue = encodeValuesOnly ? prefix : encoder(prefix, defaults.encoder, charset, 'key');
+            return [formatter(keyValue) + '=' + formatter(encoder(obj, defaults.encoder, charset, 'value'))];
         }
         return [formatter(prefix) + '=' + formatter(String(obj))];
     }
@@ -431,44 +464,31 @@ var stringify = function stringify( // eslint-disable-line func-name-matching
 
     for (var i = 0; i < objKeys.length; ++i) {
         var key = objKeys[i];
+        var value = obj[key];
 
-        if (skipNulls && obj[key] === null) {
+        if (skipNulls && value === null) {
             continue;
         }
 
-        if (isArray(obj)) {
-            pushToArray(values, stringify(
-                obj[key],
-                typeof generateArrayPrefix === 'function' ? generateArrayPrefix(prefix, key) : prefix,
-                generateArrayPrefix,
-                strictNullHandling,
-                skipNulls,
-                encoder,
-                filter,
-                sort,
-                allowDots,
-                serializeDate,
-                formatter,
-                encodeValuesOnly,
-                charset
-            ));
-        } else {
-            pushToArray(values, stringify(
-                obj[key],
-                prefix + (allowDots ? '.' + key : '[' + key + ']'),
-                generateArrayPrefix,
-                strictNullHandling,
-                skipNulls,
-                encoder,
-                filter,
-                sort,
-                allowDots,
-                serializeDate,
-                formatter,
-                encodeValuesOnly,
-                charset
-            ));
-        }
+        var keyPrefix = isArray(obj)
+            ? typeof generateArrayPrefix === 'function' ? generateArrayPrefix(prefix, key) : prefix
+            : prefix + (allowDots ? '.' + key : '[' + key + ']');
+
+        pushToArray(values, stringify(
+            value,
+            keyPrefix,
+            generateArrayPrefix,
+            strictNullHandling,
+            skipNulls,
+            encoder,
+            filter,
+            sort,
+            allowDots,
+            serializeDate,
+            formatter,
+            encodeValuesOnly,
+            charset
+        ));
     }
 
     return values;
@@ -621,104 +641,57 @@ module.exports = {
 
 /***/ }),
 
-/***/ "YLtl":
-/***/ (function(module, exports) {
-
-(function() { module.exports = this["lodash"]; }());
-
-/***/ }),
-
 /***/ "lbya":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isURL", function() { return isURL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getProtocol", function() { return getProtocol; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isValidProtocol", function() { return isValidProtocol; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getAuthority", function() { return getAuthority; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isValidAuthority", function() { return isValidAuthority; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPath", function() { return getPath; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isValidPath", function() { return isValidPath; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getQueryString", function() { return getQueryString; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isValidQueryString", function() { return isValidQueryString; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getFragment", function() { return getFragment; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isValidFragment", function() { return isValidFragment; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addQueryArgs", function() { return addQueryArgs; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getQueryArg", function() { return getQueryArg; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hasQueryArg", function() { return hasQueryArg; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeQueryArgs", function() { return removeQueryArgs; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "prependHTTP", function() { return prependHTTP; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "safeDecodeURI", function() { return safeDecodeURI; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "filterURLForDisplay", function() { return filterURLForDisplay; });
+/* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("Qyje");
+/* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(qs__WEBPACK_IMPORTED_MODULE_0__);
+/**
+ * External dependencies
+ */
 
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, "isURL", function() { return /* reexport */ isURL; });
-__webpack_require__.d(__webpack_exports__, "isEmail", function() { return /* reexport */ isEmail; });
-__webpack_require__.d(__webpack_exports__, "getProtocol", function() { return /* reexport */ getProtocol; });
-__webpack_require__.d(__webpack_exports__, "isValidProtocol", function() { return /* reexport */ isValidProtocol; });
-__webpack_require__.d(__webpack_exports__, "getAuthority", function() { return /* reexport */ getAuthority; });
-__webpack_require__.d(__webpack_exports__, "isValidAuthority", function() { return /* reexport */ isValidAuthority; });
-__webpack_require__.d(__webpack_exports__, "getPath", function() { return /* reexport */ getPath; });
-__webpack_require__.d(__webpack_exports__, "isValidPath", function() { return /* reexport */ isValidPath; });
-__webpack_require__.d(__webpack_exports__, "getQueryString", function() { return /* reexport */ getQueryString; });
-__webpack_require__.d(__webpack_exports__, "isValidQueryString", function() { return /* reexport */ isValidQueryString; });
-__webpack_require__.d(__webpack_exports__, "getPathAndQueryString", function() { return /* reexport */ getPathAndQueryString; });
-__webpack_require__.d(__webpack_exports__, "getFragment", function() { return /* reexport */ getFragment; });
-__webpack_require__.d(__webpack_exports__, "isValidFragment", function() { return /* reexport */ isValidFragment; });
-__webpack_require__.d(__webpack_exports__, "addQueryArgs", function() { return /* reexport */ addQueryArgs; });
-__webpack_require__.d(__webpack_exports__, "getQueryArg", function() { return /* reexport */ getQueryArg; });
-__webpack_require__.d(__webpack_exports__, "hasQueryArg", function() { return /* reexport */ hasQueryArg; });
-__webpack_require__.d(__webpack_exports__, "removeQueryArgs", function() { return /* reexport */ removeQueryArgs; });
-__webpack_require__.d(__webpack_exports__, "prependHTTP", function() { return /* reexport */ prependHTTP; });
-__webpack_require__.d(__webpack_exports__, "safeDecodeURI", function() { return /* reexport */ safeDecodeURI; });
-__webpack_require__.d(__webpack_exports__, "safeDecodeURIComponent", function() { return /* reexport */ safeDecodeURIComponent; });
-__webpack_require__.d(__webpack_exports__, "filterURLForDisplay", function() { return /* reexport */ filterURLForDisplay; });
-__webpack_require__.d(__webpack_exports__, "cleanForSlug", function() { return /* reexport */ cleanForSlug; });
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/is-url.js
+var URL_REGEXP = /^(?:https?:)?\/\/\S+$/i;
+var EMAIL_REGEXP = /^(mailto:)?[a-z0-9._%+-]+@[a-z0-9][a-z0-9.-]*\.[a-z]{2,63}$/i;
+var USABLE_HREF_REGEXP = /^(?:[a-z]+:|#|\?|\.|\/)/i;
 /**
  * Determines whether the given string looks like a URL.
  *
  * @param {string} url The string to scrutinise.
  *
- * @example
- * ```js
- * const isURL = isURL( 'https://wordpress.org' ); // true
- * ```
- *
- * @see https://url.spec.whatwg.org/
- * @see https://url.spec.whatwg.org/#valid-url-string
- *
  * @return {boolean} Whether or not it looks like a URL.
  */
+
 function isURL(url) {
-  // A URL can be considered value if the `URL` constructor is able to parse
-  // it. The constructor throws an error for an invalid URL.
-  try {
-    new URL(url);
-    return true;
-  } catch (_unused) {
-    return false;
-  }
+  return URL_REGEXP.test(url);
 }
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/is-email.js
-var EMAIL_REGEXP = /^(mailto:)?[a-z0-9._%+-]+@[a-z0-9][a-z0-9.-]*\.[a-z]{2,63}$/i;
-/**
- * Determines whether the given string looks like an email.
- *
- * @param {string} email The string to scrutinise.
- *
- * @example
- * ```js
- * const isEmail = isEmail( 'hello@wordpress.org' ); // true
- * ```
- *
- * @return {boolean} Whether or not it looks like an email.
- */
-
-function isEmail(email) {
-  return EMAIL_REGEXP.test(email);
-}
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/get-protocol.js
 /**
  * Returns the protocol part of the URL.
  *
  * @param {string} url The full URL.
  *
- * @example
- * ```js
- * const protocol1 = getProtocol( 'tel:012345678' ); // 'tel:'
- * const protocol2 = getProtocol( 'https://wordpress.org' ); // 'https:'
- * ```
- *
- * @return {string|void} The protocol part of the URL.
+ * @return {?string} The protocol part of the URL.
  */
+
 function getProtocol(url) {
   var matches = /^([^\s:]+:)/.exec(url);
 
@@ -726,21 +699,14 @@ function getProtocol(url) {
     return matches[1];
   }
 }
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/is-valid-protocol.js
 /**
  * Tests if a url protocol is valid.
  *
  * @param {string} protocol The url protocol.
  *
- * @example
- * ```js
- * const isValid = isValidProtocol( 'https:' ); // true
- * const isNotValid = isValidProtocol( 'https :' ); // false
- * ```
- *
  * @return {boolean} True if the argument is a valid protocol (e.g. http:, tel:).
  */
+
 function isValidProtocol(protocol) {
   if (!protocol) {
     return false;
@@ -748,21 +714,14 @@ function isValidProtocol(protocol) {
 
   return /^[a-z\-.\+]+[0-9]*:$/i.test(protocol);
 }
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/get-authority.js
 /**
  * Returns the authority part of the URL.
  *
  * @param {string} url The full URL.
  *
- * @example
- * ```js
- * const authority1 = getAuthority( 'https://wordpress.org/help/' ); // 'wordpress.org'
- * const authority2 = getAuthority( 'https://localhost:8080/test/' ); // 'localhost:8080'
- * ```
- *
- * @return {string|void} The authority part of the URL.
+ * @return {?string} The authority part of the URL.
  */
+
 function getAuthority(url) {
   var matches = /^[^\/\s:]+:(?:\/\/)?\/?([^\/\s#?]+)[\/#?]{0,1}\S*$/.exec(url);
 
@@ -770,21 +729,14 @@ function getAuthority(url) {
     return matches[1];
   }
 }
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/is-valid-authority.js
 /**
  * Checks for invalid characters within the provided authority.
  *
  * @param {string} authority A string containing the URL authority.
  *
- * @example
- * ```js
- * const isValid = isValidAuthority( 'wordpress.org' ); // true
- * const isNotValid = isValidAuthority( 'wordpress#org' ); // false
- * ```
- *
  * @return {boolean} True if the argument contains a valid authority.
  */
+
 function isValidAuthority(authority) {
   if (!authority) {
     return false;
@@ -792,21 +744,14 @@ function isValidAuthority(authority) {
 
   return /^[^\s#?]+$/.test(authority);
 }
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/get-path.js
 /**
  * Returns the path part of the URL.
  *
  * @param {string} url The full URL.
  *
- * @example
- * ```js
- * const path1 = getPath( 'http://localhost:8080/this/is/a/test?query=true' ); // 'this/is/a/test'
- * const path2 = getPath( 'https://wordpress.org/help/faq/' ); // 'help/faq'
- * ```
- *
- * @return {string|void} The path part of the URL.
+ * @return {?string} The path part of the URL.
  */
+
 function getPath(url) {
   var matches = /^[^\/\s:]+:(?:\/\/)?[^\/\s#?]+[\/]([^\s#?]+)[#?]{0,1}\S*$/.exec(url);
 
@@ -814,21 +759,14 @@ function getPath(url) {
     return matches[1];
   }
 }
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/is-valid-path.js
 /**
  * Checks for invalid characters within the provided path.
  *
  * @param {string} path The URL path.
  *
- * @example
- * ```js
- * const isValid = isValidPath( 'test/path/' ); // true
- * const isNotValid = isValidPath( '/invalid?test/path/' ); // false
- * ```
- *
  * @return {boolean} True if the argument contains a valid path
  */
+
 function isValidPath(path) {
   if (!path) {
     return false;
@@ -836,46 +774,29 @@ function isValidPath(path) {
 
   return /^[^\s#?]+$/.test(path);
 }
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/get-query-string.js
 /**
  * Returns the query string part of the URL.
  *
  * @param {string} url The full URL.
  *
- * @example
- * ```js
- * const queryString = getQueryString( 'http://localhost:8080/this/is/a/test?query=true#fragment' ); // 'query=true'
- * ```
- *
- * @return {string|void} The query string part of the URL.
+ * @return {?string} The query string part of the URL.
  */
+
 function getQueryString(url) {
-  var query;
+  var matches = /^\S+?\?([^\s#]+)/.exec(url);
 
-  try {
-    query = new URL(url).search.substring(1);
-  } catch (error) {}
-
-  if (query) {
-    return query;
+  if (matches) {
+    return matches[1];
   }
 }
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/is-valid-query-string.js
 /**
  * Checks for invalid characters within the provided query string.
  *
  * @param {string} queryString The query string.
  *
- * @example
- * ```js
- * const isValid = isValidQueryString( 'query=true&another=false' ); // true
- * const isNotValid = isValidQueryString( 'query=true?another=false' ); // false
- * ```
- *
  * @return {boolean} True if the argument contains a valid query string.
  */
+
 function isValidQueryString(queryString) {
   if (!queryString) {
     return false;
@@ -883,49 +804,14 @@ function isValidQueryString(queryString) {
 
   return /^[^\s#?\/]+$/.test(queryString);
 }
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/get-path-and-query-string.js
-/**
- * Internal dependencies
- */
-
-/**
- * Returns the path part and query string part of the URL.
- *
- * @param {string} url The full URL.
- *
- * @example
- * ```js
- * const pathAndQueryString1 = getPathAndQueryString( 'http://localhost:8080/this/is/a/test?query=true' ); // '/this/is/a/test?query=true'
- * const pathAndQueryString2 = getPathAndQueryString( 'https://wordpress.org/help/faq/' ); // '/help/faq'
- * ```
- *
- * @return {string} The path part and query string part of the URL.
- */
-
-function getPathAndQueryString(url) {
-  var path = getPath(url);
-  var queryString = getQueryString(url);
-  var value = '/';
-  if (path) value += path;
-  if (queryString) value += "?".concat(queryString);
-  return value;
-}
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/get-fragment.js
 /**
  * Returns the fragment part of the URL.
  *
  * @param {string} url The full URL
  *
- * @example
- * ```js
- * const fragment1 = getFragment( 'http://localhost:8080/this/is/a/test?query=true#fragment' ); // '#fragment'
- * const fragment2 = getFragment( 'https://wordpress.org#another-fragment?query=true' ); // '#another-fragment'
- * ```
- *
- * @return {string|void} The fragment part of the URL.
+ * @return {?string} The fragment part of the URL.
  */
+
 function getFragment(url) {
   var matches = /^\S+?(#[^\s\?]*)/.exec(url);
 
@@ -933,21 +819,14 @@ function getFragment(url) {
     return matches[1];
   }
 }
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/is-valid-fragment.js
 /**
  * Checks for invalid characters within the provided fragment.
  *
  * @param {string} fragment The url fragment.
  *
- * @example
- * ```js
- * const isValid = isValidFragment( '#valid-fragment' ); // true
- * const isNotValid = isValidFragment( '#invalid-#fragment' ); // false
- * ```
- *
  * @return {boolean} True if the argument contains a valid fragment.
  */
+
 function isValidFragment(fragment) {
   if (!fragment) {
     return false;
@@ -955,28 +834,14 @@ function isValidFragment(fragment) {
 
   return /^#[^\s#?\/]*$/.test(fragment);
 }
-
-// EXTERNAL MODULE: ./node_modules/qs/lib/index.js
-var lib = __webpack_require__("Qyje");
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/add-query-args.js
-/**
- * External dependencies
- */
-
 /**
  * Appends arguments as querystring to the provided URL. If the URL already
  * includes query arguments, the arguments are merged with (and take precedent
  * over) the existing set.
  *
- * @param {string} [url='']  URL to which arguments should be appended. If omitted,
- *                           only the resulting querystring is returned.
- * @param {Object} [args]    Query arguments to apply to URL.
- *
- * @example
- * ```js
- * const newURL = addQueryArgs( 'https://google.com', { q: 'test' } ); // https://google.com/?q=test
- * ```
+ * @param {?string} url  URL to which arguments should be appended. If omitted,
+ *                       only the resulting querystring is returned.
+ * @param {Object}  args Query arguments to apply to URL.
  *
  * @return {string} URL with arguments applied.
  */
@@ -984,108 +849,57 @@ var lib = __webpack_require__("Qyje");
 function addQueryArgs() {
   var url = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
   var args = arguments.length > 1 ? arguments[1] : undefined;
-
-  // If no arguments are to be appended, return original URL.
-  if (!args || !Object.keys(args).length) {
-    return url;
-  }
-
   var baseUrl = url; // Determine whether URL already had query arguments.
 
   var queryStringIndex = url.indexOf('?');
 
   if (queryStringIndex !== -1) {
     // Merge into existing query arguments.
-    args = Object.assign(Object(lib["parse"])(url.substr(queryStringIndex + 1)), args); // Change working base URL to omit previous query arguments.
+    args = Object.assign(Object(qs__WEBPACK_IMPORTED_MODULE_0__["parse"])(url.substr(queryStringIndex + 1)), args); // Change working base URL to omit previous query arguments.
 
     baseUrl = baseUrl.substr(0, queryStringIndex);
   }
 
-  return baseUrl + '?' + Object(lib["stringify"])(args);
+  return baseUrl + '?' + Object(qs__WEBPACK_IMPORTED_MODULE_0__["stringify"])(args);
 }
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/get-query-arg.js
-/**
- * External dependencies
- */
-
-/* eslint-disable jsdoc/valid-types */
-
-/**
- * @typedef {{[key: string]: QueryArgParsed}} QueryArgObject
- */
-
-/* eslint-enable */
-
-/**
- * @typedef {string|string[]|QueryArgObject} QueryArgParsed
- */
-
 /**
  * Returns a single query argument of the url
  *
- * @param {string} url URL.
- * @param {string} arg Query arg name.
+ * @param {string} url URL
+ * @param {string} arg Query arg name
  *
- * @example
- * ```js
- * const foo = getQueryArg( 'https://wordpress.org?foo=bar&bar=baz', 'foo' ); // bar
- * ```
- *
- * @return {QueryArgParsed|undefined} Query arg value.
+ * @return {Array|string} Query arg value.
  */
 
 function getQueryArg(url, arg) {
   var queryStringIndex = url.indexOf('?');
-  var query = queryStringIndex !== -1 ? Object(lib["parse"])(url.substr(queryStringIndex + 1)) : {};
+  var query = queryStringIndex !== -1 ? Object(qs__WEBPACK_IMPORTED_MODULE_0__["parse"])(url.substr(queryStringIndex + 1)) : {};
   return query[arg];
 }
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/has-query-arg.js
-/**
- * Internal dependencies
- */
-
 /**
  * Determines whether the URL contains a given query arg.
  *
- * @param {string} url URL.
- * @param {string} arg Query arg name.
+ * @param {string} url URL
+ * @param {string} arg Query arg name
  *
- * @example
- * ```js
- * const hasBar = hasQueryArg( 'https://wordpress.org?foo=bar&bar=baz', 'bar' ); // true
- * ```
- *
- * @return {boolean} Whether or not the URL contains the query arg.
+ * @return {boolean} Whether or not the URL contains the query aeg.
  */
 
 function hasQueryArg(url, arg) {
   return getQueryArg(url, arg) !== undefined;
 }
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/remove-query-args.js
-/**
- * External dependencies
- */
-
 /**
  * Removes arguments from the query string of the url
  *
- * @param {string}    url  URL.
- * @param {...string} args Query Args.
+ * @param {string} url  URL
+ * @param {...string} args Query Args
  *
- * @example
- * ```js
- * const newUrl = removeQueryArgs( 'https://wordpress.org?foo=bar&bar=baz&baz=foobar', 'foo', 'bar' ); // https://wordpress.org?baz=foobar
- * ```
- *
- * @return {string} Updated URL.
+ * @return {string} Updated URL
  */
 
 function removeQueryArgs(url) {
   var queryStringIndex = url.indexOf('?');
-  var query = queryStringIndex !== -1 ? Object(lib["parse"])(url.substr(queryStringIndex + 1)) : {};
+  var query = queryStringIndex !== -1 ? Object(qs__WEBPACK_IMPORTED_MODULE_0__["parse"])(url.substr(queryStringIndex + 1)) : {};
   var baseUrl = queryStringIndex !== -1 ? url.substr(0, queryStringIndex) : url;
 
   for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
@@ -1095,56 +909,32 @@ function removeQueryArgs(url) {
   args.forEach(function (arg) {
     return delete query[arg];
   });
-  return baseUrl + '?' + Object(lib["stringify"])(query);
+  return baseUrl + '?' + Object(qs__WEBPACK_IMPORTED_MODULE_0__["stringify"])(query);
 }
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/prepend-http.js
-/**
- * Internal dependencies
- */
-
-var USABLE_HREF_REGEXP = /^(?:[a-z]+:|#|\?|\.|\/)/i;
 /**
  * Prepends "http://" to a url, if it looks like something that is meant to be a TLD.
  *
- * @param {string} url The URL to test.
+ * @param  {string} url The URL to test
  *
- * @example
- * ```js
- * const actualURL = prependHTTP( 'wordpress.org' ); // http://wordpress.org
- * ```
- *
- * @return {string} The updated URL.
+ * @return {string}     The updated URL
  */
 
 function prependHTTP(url) {
-  if (!url) {
-    return url;
-  }
-
-  url = url.trim();
-
-  if (!USABLE_HREF_REGEXP.test(url) && !isEmail(url)) {
+  if (!USABLE_HREF_REGEXP.test(url) && !EMAIL_REGEXP.test(url)) {
     return 'http://' + url;
   }
 
   return url;
 }
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/safe-decode-uri.js
 /**
  * Safely decodes a URI with `decodeURI`. Returns the URI unmodified if
  * `decodeURI` throws an error.
  *
  * @param {string} uri URI to decode.
  *
- * @example
- * ```js
- * const badUri = safeDecodeURI( '%z' ); // does not throw an Error, simply returns '%z'
- * ```
- *
  * @return {string} Decoded URI if possible.
  */
+
 function safeDecodeURI(uri) {
   try {
     return decodeURI(uri);
@@ -1152,37 +942,14 @@ function safeDecodeURI(uri) {
     return uri;
   }
 }
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/safe-decode-uri-component.js
-/**
- * Safely decodes a URI component with `decodeURIComponent`. Returns the URI component unmodified if
- * `decodeURIComponent` throws an error.
- *
- * @param {string} uriComponent URI component to decode.
- *
- * @return {string} Decoded URI component if possible.
- */
-function safeDecodeURIComponent(uriComponent) {
-  try {
-    return decodeURIComponent(uriComponent);
-  } catch (uriComponentError) {
-    return uriComponent;
-  }
-}
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/filter-url-for-display.js
 /**
  * Returns a URL for display.
  *
  * @param {string} url Original URL.
  *
- * @example
- * ```js
- * const displayUrl = filterURLForDisplay( 'https://www.wordpress.org/gutenberg/' ); // wordpress.org/gutenberg
- * ```
- *
  * @return {string} Displayed URL.
  */
+
 function filterURLForDisplay(url) {
   // Remove protocol and www prefixes.
   var filteredURL = url.replace(/^(?:https?:)\/\/(?:www\.)?/, ''); // Ends with / and only has that single slash, strip it.
@@ -1193,63 +960,6 @@ function filterURLForDisplay(url) {
 
   return filteredURL;
 }
-
-// EXTERNAL MODULE: external {"this":"lodash"}
-var external_this_lodash_ = __webpack_require__("YLtl");
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/clean-for-slug.js
-/**
- * External dependencies
- */
-
-/**
- * Performs some basic cleanup of a string for use as a post slug.
- *
- * This replicates some of what `sanitize_title()` does in WordPress core, but
- * is only designed to approximate what the slug will be.
- *
- * Converts Latin-1 Supplement and Latin Extended-A letters to basic Latin
- * letters. Removes combining diacritical marks. Converts whitespace, periods,
- * and forward slashes to hyphens. Removes any remaining non-word characters
- * except hyphens. Converts remaining string to lowercase. It does not account
- * for octets, HTML entities, or other encoded characters.
- *
- * @param {string} string Title or slug to be processed.
- *
- * @return {string} Processed string.
- */
-
-function cleanForSlug(string) {
-  if (!string) {
-    return '';
-  }
-
-  return Object(external_this_lodash_["trim"])(Object(external_this_lodash_["deburr"])(string).replace(/[\s\./]+/g, '-').replace(/[^\w-]+/g, '').toLowerCase(), '-');
-}
-
-// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/index.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /***/ }),
@@ -1263,6 +973,7 @@ function cleanForSlug(string) {
 var utils = __webpack_require__("0jNN");
 
 var has = Object.prototype.hasOwnProperty;
+var isArray = Array.isArray;
 
 var defaults = {
     allowDots: false,
@@ -1286,6 +997,14 @@ var interpretNumericEntities = function (str) {
     return str.replace(/&#(\d+);/g, function ($0, numberStr) {
         return String.fromCharCode(parseInt(numberStr, 10));
     });
+};
+
+var parseArrayValue = function (val, options) {
+    if (val && typeof val === 'string' && options.comma && val.indexOf(',') > -1) {
+        return val.split(',');
+    }
+
+    return val;
 };
 
 // This is what browsers will submit when the ✓ character occurs in an
@@ -1332,19 +1051,24 @@ var parseValues = function parseQueryStringValues(str, options) {
 
         var key, val;
         if (pos === -1) {
-            key = options.decoder(part, defaults.decoder, charset);
+            key = options.decoder(part, defaults.decoder, charset, 'key');
             val = options.strictNullHandling ? null : '';
         } else {
-            key = options.decoder(part.slice(0, pos), defaults.decoder, charset);
-            val = options.decoder(part.slice(pos + 1), defaults.decoder, charset);
+            key = options.decoder(part.slice(0, pos), defaults.decoder, charset, 'key');
+            val = utils.maybeMap(
+                parseArrayValue(part.slice(pos + 1), options),
+                function (encodedVal) {
+                    return options.decoder(encodedVal, defaults.decoder, charset, 'value');
+                }
+            );
         }
 
         if (val && options.interpretNumericEntities && charset === 'iso-8859-1') {
             val = interpretNumericEntities(val);
         }
 
-        if (val && options.comma && val.indexOf(',') > -1) {
-            val = val.split(',');
+        if (part.indexOf('[]=') > -1) {
+            val = isArray(val) ? [val] : val;
         }
 
         if (has.call(obj, key)) {
@@ -1357,8 +1081,8 @@ var parseValues = function parseQueryStringValues(str, options) {
     return obj;
 };
 
-var parseObject = function (chain, val, options) {
-    var leaf = val;
+var parseObject = function (chain, val, options, valuesParsed) {
+    var leaf = valuesParsed ? val : parseArrayValue(val, options);
 
     for (var i = chain.length - 1; i >= 0; --i) {
         var obj;
@@ -1386,13 +1110,13 @@ var parseObject = function (chain, val, options) {
             }
         }
 
-        leaf = obj;
+        leaf = obj; // eslint-disable-line no-param-reassign
     }
 
     return leaf;
 };
 
-var parseKeys = function parseQueryStringKeys(givenKey, val, options) {
+var parseKeys = function parseQueryStringKeys(givenKey, val, options, valuesParsed) {
     if (!givenKey) {
         return;
     }
@@ -1407,7 +1131,7 @@ var parseKeys = function parseQueryStringKeys(givenKey, val, options) {
 
     // Get the parent
 
-    var segment = brackets.exec(key);
+    var segment = options.depth > 0 && brackets.exec(key);
     var parent = segment ? key.slice(0, segment.index) : key;
 
     // Stash the parent if it exists
@@ -1427,7 +1151,7 @@ var parseKeys = function parseQueryStringKeys(givenKey, val, options) {
     // Loop through children appending to the array until we hit depth
 
     var i = 0;
-    while ((segment = child.exec(key)) !== null && i < options.depth) {
+    while (options.depth > 0 && (segment = child.exec(key)) !== null && i < options.depth) {
         i += 1;
         if (!options.plainObjects && has.call(Object.prototype, segment[1].slice(1, -1))) {
             if (!options.allowPrototypes) {
@@ -1443,7 +1167,7 @@ var parseKeys = function parseQueryStringKeys(givenKey, val, options) {
         keys.push('[' + key.slice(segment.index) + ']');
     }
 
-    return parseObject(keys, val, options);
+    return parseObject(keys, val, options, valuesParsed);
 };
 
 var normalizeParseOptions = function normalizeParseOptions(opts) {
@@ -1456,7 +1180,7 @@ var normalizeParseOptions = function normalizeParseOptions(opts) {
     }
 
     if (typeof opts.charset !== 'undefined' && opts.charset !== 'utf-8' && opts.charset !== 'iso-8859-1') {
-        throw new Error('The charset option must be either utf-8, iso-8859-1, or undefined');
+        throw new TypeError('The charset option must be either utf-8, iso-8859-1, or undefined');
     }
     var charset = typeof opts.charset === 'undefined' ? defaults.charset : opts.charset;
 
@@ -1469,7 +1193,8 @@ var normalizeParseOptions = function normalizeParseOptions(opts) {
         comma: typeof opts.comma === 'boolean' ? opts.comma : defaults.comma,
         decoder: typeof opts.decoder === 'function' ? opts.decoder : defaults.decoder,
         delimiter: typeof opts.delimiter === 'string' || utils.isRegExp(opts.delimiter) ? opts.delimiter : defaults.delimiter,
-        depth: typeof opts.depth === 'number' ? opts.depth : defaults.depth,
+        // eslint-disable-next-line no-implicit-coercion, no-extra-parens
+        depth: (typeof opts.depth === 'number' || opts.depth === false) ? +opts.depth : defaults.depth,
         ignoreQueryPrefix: opts.ignoreQueryPrefix === true,
         interpretNumericEntities: typeof opts.interpretNumericEntities === 'boolean' ? opts.interpretNumericEntities : defaults.interpretNumericEntities,
         parameterLimit: typeof opts.parameterLimit === 'number' ? opts.parameterLimit : defaults.parameterLimit,
@@ -1494,7 +1219,7 @@ module.exports = function (str, opts) {
     var keys = Object.keys(tempObj);
     for (var i = 0; i < keys.length; ++i) {
         var key = keys[i];
-        var newObj = parseKeys(key, tempObj[key], options);
+        var newObj = parseKeys(key, tempObj[key], options, typeof str === 'string');
         obj = utils.merge(obj, newObj, options);
     }
 
@@ -1513,19 +1238,27 @@ module.exports = function (str, opts) {
 var replace = String.prototype.replace;
 var percentTwenties = /%20/g;
 
-module.exports = {
-    'default': 'RFC3986',
-    formatters: {
-        RFC1738: function (value) {
-            return replace.call(value, percentTwenties, '+');
-        },
-        RFC3986: function (value) {
-            return value;
-        }
-    },
+var util = __webpack_require__("0jNN");
+
+var Format = {
     RFC1738: 'RFC1738',
     RFC3986: 'RFC3986'
 };
+
+module.exports = util.assign(
+    {
+        'default': Format.RFC3986,
+        formatters: {
+            RFC1738: function (value) {
+                return replace.call(value, percentTwenties, '+');
+            },
+            RFC3986: function (value) {
+                return String(value);
+            }
+        }
+    },
+    Format
+);
 
 
 /***/ })
