@@ -8,7 +8,7 @@
  *
  * Denna fil innehåller följande konfigurationer:
  *
- * * Inställningar för databas
+ * * Inställningar för MySQL
  * * Säkerhetsnycklar
  * * Tabellprefix för databas
  * * ABSPATH
@@ -18,17 +18,17 @@
  * @package WordPress
  */
 
-// ** Databasinställningar - åtkomstuppgifter för databasen får du från ditt webbhotell ** //
+// ** MySQL-inställningar - MySQL-uppgifter får du från ditt webbhotell ** //
 /** Namnet på databasen du vill använda för WordPress */
 define('DB_NAME', 'Ange databasnamn här');
 
-/** Databasens användarnamn */
+/** MySQL-databasens användarnamn */
 define('DB_USER', 'Ange databasanvändare här');
 
-/** Databasens lösenord */
+/** MySQL-databasens lösenord */
 define('DB_PASSWORD', 'Ange databaslösenord här');
 
-/** Databasserver */
+/** MySQL-server */
 define('DB_HOST', 'localhost');
 
 /** Teckenkodning för tabellerna i databasen. */
@@ -78,10 +78,6 @@ $table_prefix = 'wp_';
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */ 
 define('WP_DEBUG', false);
-/* Lägg in eventuella anpassade värden mellan denna rad och raden med "sluta redigera här". */
-
-
-
 
 /* Det var allt, sluta redigera här och börja publicera! */
 
