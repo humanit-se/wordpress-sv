@@ -105,7 +105,7 @@ __webpack_require__.r(__webpack_exports__);
 var selectors_namespaceObject = {};
 __webpack_require__.r(selectors_namespaceObject);
 __webpack_require__.d(selectors_namespaceObject, "__experimentalGetAnnotationsForBlock", function() { return __experimentalGetAnnotationsForBlock; });
-__webpack_require__.d(selectors_namespaceObject, "__experimentalGetAllAnnotationsForBlock", function() { return selectors_experimentalGetAllAnnotationsForBlock; });
+__webpack_require__.d(selectors_namespaceObject, "__experimentalGetAllAnnotationsForBlock", function() { return __experimentalGetAllAnnotationsForBlock; });
 __webpack_require__.d(selectors_namespaceObject, "__experimentalGetAnnotationsForRichText", function() { return __experimentalGetAnnotationsForRichText; });
 __webpack_require__.d(selectors_namespaceObject, "__experimentalGetAnnotations", function() { return __experimentalGetAnnotations; });
 
@@ -169,7 +169,7 @@ function isValidAnnotationRange(annotation) {
 /**
  * Reducer managing annotations.
  *
- * @param {Array} state The annotations currently shown in the editor.
+ * @param {Object} state  The annotations currently shown in the editor.
  * @param {Object} action Dispatched action.
  *
  * @return {Array} Updated state.
@@ -177,6 +177,8 @@ function isValidAnnotationRange(annotation) {
 
 
 function reducer_annotations() {
+  var _state$blockClientId;
+
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
@@ -196,7 +198,7 @@ function reducer_annotations() {
         return state;
       }
 
-      var previousAnnotationsForBlock = Object(external_this_lodash_["get"])(state, blockClientId, []);
+      var previousAnnotationsForBlock = (_state$blockClientId = state === null || state === void 0 ? void 0 : state[blockClientId]) !== null && _state$blockClientId !== void 0 ? _state$blockClientId : [];
       return _objectSpread({}, state, Object(defineProperty["a" /* default */])({}, blockClientId, [].concat(Object(toConsumableArray["a" /* default */])(previousAnnotationsForBlock), [newAnnotation])));
 
     case 'ANNOTATION_REMOVE':
@@ -277,15 +279,21 @@ var EMPTY_ARRAY = [];
  */
 
 var __experimentalGetAnnotationsForBlock = Object(rememo["a" /* default */])(function (state, blockClientId) {
-  return Object(external_this_lodash_["get"])(state, blockClientId, []).filter(function (annotation) {
+  var _state$blockClientId;
+
+  return ((_state$blockClientId = state === null || state === void 0 ? void 0 : state[blockClientId]) !== null && _state$blockClientId !== void 0 ? _state$blockClientId : []).filter(function (annotation) {
     return annotation.selector === 'block';
   });
 }, function (state, blockClientId) {
-  return [Object(external_this_lodash_["get"])(state, blockClientId, EMPTY_ARRAY)];
+  var _state$blockClientId2;
+
+  return [(_state$blockClientId2 = state === null || state === void 0 ? void 0 : state[blockClientId]) !== null && _state$blockClientId2 !== void 0 ? _state$blockClientId2 : EMPTY_ARRAY];
 });
-var selectors_experimentalGetAllAnnotationsForBlock = function __experimentalGetAllAnnotationsForBlock(state, blockClientId) {
-  return Object(external_this_lodash_["get"])(state, blockClientId, EMPTY_ARRAY);
-};
+function __experimentalGetAllAnnotationsForBlock(state, blockClientId) {
+  var _state$blockClientId3;
+
+  return (_state$blockClientId3 = state === null || state === void 0 ? void 0 : state[blockClientId]) !== null && _state$blockClientId3 !== void 0 ? _state$blockClientId3 : EMPTY_ARRAY;
+}
 /**
  * Returns the annotations that apply to the given RichText instance.
  *
@@ -300,7 +308,9 @@ var selectors_experimentalGetAllAnnotationsForBlock = function __experimentalGet
  */
 
 var __experimentalGetAnnotationsForRichText = Object(rememo["a" /* default */])(function (state, blockClientId, richTextIdentifier) {
-  return Object(external_this_lodash_["get"])(state, blockClientId, []).filter(function (annotation) {
+  var _state$blockClientId4;
+
+  return ((_state$blockClientId4 = state === null || state === void 0 ? void 0 : state[blockClientId]) !== null && _state$blockClientId4 !== void 0 ? _state$blockClientId4 : []).filter(function (annotation) {
     return annotation.selector === 'range' && richTextIdentifier === annotation.richTextIdentifier;
   }).map(function (annotation) {
     var range = annotation.range,
@@ -309,7 +319,9 @@ var __experimentalGetAnnotationsForRichText = Object(rememo["a" /* default */])(
     return selectors_objectSpread({}, range, {}, other);
   });
 }, function (state, blockClientId) {
-  return [Object(external_this_lodash_["get"])(state, blockClientId, EMPTY_ARRAY)];
+  var _state$blockClientId5;
+
+  return [(_state$blockClientId5 = state === null || state === void 0 ? void 0 : state[blockClientId]) !== null && _state$blockClientId5 !== void 0 ? _state$blockClientId5 : EMPTY_ARRAY];
 });
 /**
  * Returns all annotations in the editor state.
@@ -324,13 +336,79 @@ function __experimentalGetAnnotations(state) {
   });
 }
 
-// EXTERNAL MODULE: ./node_modules/uuid/v4.js
-var v4 = __webpack_require__("xk4V");
-var v4_default = /*#__PURE__*/__webpack_require__.n(v4);
+// CONCATENATED MODULE: ./node_modules/@wordpress/annotations/node_modules/uuid/dist/esm-browser/rng.js
+// Unique ID creation requires a high quality random # generator. In the browser we therefore
+// require the crypto API and do not support built-in fallback to lower quality random number
+// generators (like Math.random()).
+// getRandomValues needs to be invoked in a context where "this" is a Crypto implementation. Also,
+// find the complete implementation of crypto (msCrypto) on IE11.
+var getRandomValues = typeof crypto != 'undefined' && crypto.getRandomValues && crypto.getRandomValues.bind(crypto) || typeof msCrypto != 'undefined' && typeof msCrypto.getRandomValues == 'function' && msCrypto.getRandomValues.bind(msCrypto);
+var rnds8 = new Uint8Array(16); // eslint-disable-line no-undef
 
+function rng() {
+  if (!getRandomValues) {
+    throw new Error('crypto.getRandomValues() not supported. See https://github.com/uuidjs/uuid#getrandomvalues-not-supported');
+  }
+
+  return getRandomValues(rnds8);
+}
+// CONCATENATED MODULE: ./node_modules/@wordpress/annotations/node_modules/uuid/dist/esm-browser/bytesToUuid.js
+/**
+ * Convert array of 16 byte values to UUID string format of the form:
+ * XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+ */
+var byteToHex = [];
+
+for (var bytesToUuid_i = 0; bytesToUuid_i < 256; ++bytesToUuid_i) {
+  byteToHex[bytesToUuid_i] = (bytesToUuid_i + 0x100).toString(16).substr(1);
+}
+
+function bytesToUuid(buf, offset) {
+  var i = offset || 0;
+  var bth = byteToHex; // join used to fix memory issue caused by concatenation: https://bugs.chromium.org/p/v8/issues/detail?id=3175#c4
+
+  return [bth[buf[i++]], bth[buf[i++]], bth[buf[i++]], bth[buf[i++]], '-', bth[buf[i++]], bth[buf[i++]], '-', bth[buf[i++]], bth[buf[i++]], '-', bth[buf[i++]], bth[buf[i++]], '-', bth[buf[i++]], bth[buf[i++]], bth[buf[i++]], bth[buf[i++]], bth[buf[i++]], bth[buf[i++]]].join('');
+}
+
+/* harmony default export */ var esm_browser_bytesToUuid = (bytesToUuid);
+// CONCATENATED MODULE: ./node_modules/@wordpress/annotations/node_modules/uuid/dist/esm-browser/v4.js
+
+
+
+function v4(options, buf, offset) {
+  var i = buf && offset || 0;
+
+  if (typeof options == 'string') {
+    buf = options === 'binary' ? new Array(16) : null;
+    options = null;
+  }
+
+  options = options || {};
+  var rnds = options.random || (options.rng || rng)(); // Per 4.4, set bits for version and `clock_seq_hi_and_reserved`
+
+  rnds[6] = rnds[6] & 0x0f | 0x40;
+  rnds[8] = rnds[8] & 0x3f | 0x80; // Copy bytes to buffer, if provided
+
+  if (buf) {
+    for (var ii = 0; ii < 16; ++ii) {
+      buf[i + ii] = rnds[ii];
+    }
+  }
+
+  return buf || esm_browser_bytesToUuid(rnds);
+}
+
+/* harmony default export */ var esm_browser_v4 = (v4);
 // CONCATENATED MODULE: ./node_modules/@wordpress/annotations/build-module/store/actions.js
 /**
  * External dependencies
+ */
+
+/**
+ * @typedef WPAnnotationRange
+ *
+ * @property {number} start The offset where the annotation should start.
+ * @property {number} end   The offset where the annotation should end.
  */
 
 /**
@@ -343,15 +421,13 @@ var v4_default = /*#__PURE__*/__webpack_require__.n(v4);
  *
  * The `range` property is only relevant if the selector is 'range'.
  *
- * @param {Object} annotation                    The annotation to add.
- * @param {string} annotation.blockClientId      The blockClientId to add the annotation to.
- * @param {string} annotation.richTextIdentifier Identifier for the RichText instance the annotation applies to.
- * @param {Object} annotation.range              The range at which to apply this annotation.
- * @param {number} annotation.range.start        The offset where the annotation should start.
- * @param {number} annotation.range.end          The offset where the annotation should end.
- * @param {string} annotation.[selector="range"] The way to apply this annotation.
- * @param {string} annotation.[source="default"] The source that added the annotation.
- * @param {string} annotation.[id]               The ID the annotation should have. Generates a UUID by default.
+ * @param {Object}            annotation                    The annotation to add.
+ * @param {string}            annotation.blockClientId      The blockClientId to add the annotation to.
+ * @param {string}            annotation.richTextIdentifier Identifier for the RichText instance the annotation applies to.
+ * @param {WPAnnotationRange} annotation.range              The range at which to apply this annotation.
+ * @param {string}            [annotation.selector="range"] The way to apply this annotation.
+ * @param {string}            [annotation.source="default"] The source that added the annotation.
+ * @param {string}            [annotation.id]               The ID the annotation should have. Generates a UUID by default.
  *
  * @return {Object} Action object.
  */
@@ -367,7 +443,7 @@ function __experimentalAddAnnotation(_ref) {
       _ref$source = _ref.source,
       source = _ref$source === void 0 ? 'default' : _ref$source,
       _ref$id = _ref.id,
-      id = _ref$id === void 0 ? v4_default()() : _ref$id;
+      id = _ref$id === void 0 ? esm_browser_v4() : _ref$id;
   var action = {
     type: 'ANNOTATION_ADD',
     id: id,
@@ -705,47 +781,6 @@ function _iterableToArray(iter) {
 
 /***/ }),
 
-/***/ "4fRq":
-/***/ (function(module, exports) {
-
-// Unique ID creation requires a high quality random # generator.  In the
-// browser this is a little complicated due to unknown quality of Math.random()
-// and inconsistent support for the `crypto` API.  We do the best we can via
-// feature-detection
-
-// getRandomValues needs to be invoked in a context where "this" is a Crypto
-// implementation. Also, find the complete implementation of crypto on IE11.
-var getRandomValues = (typeof(crypto) != 'undefined' && crypto.getRandomValues && crypto.getRandomValues.bind(crypto)) ||
-                      (typeof(msCrypto) != 'undefined' && typeof window.msCrypto.getRandomValues == 'function' && msCrypto.getRandomValues.bind(msCrypto));
-
-if (getRandomValues) {
-  // WHATWG crypto RNG - http://wiki.whatwg.org/wiki/Crypto
-  var rnds8 = new Uint8Array(16); // eslint-disable-line no-undef
-
-  module.exports = function whatwgRNG() {
-    getRandomValues(rnds8);
-    return rnds8;
-  };
-} else {
-  // Math.random()-based (RNG)
-  //
-  // If all else fails, use Math.random().  It's fast, but is of unspecified
-  // quality.
-  var rnds = new Array(16);
-
-  module.exports = function mathRNG() {
-    for (var i = 0, r; i < 16; i++) {
-      if ((i & 0x03) === 0) r = Math.random() * 0x100000000;
-      rnds[i] = r >>> ((i & 0x03) << 3) & 0xff;
-    }
-
-    return rnds;
-  };
-}
-
-
-/***/ }),
-
 /***/ "BsWD":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -758,7 +793,7 @@ function _unsupportedIterableToArray(o, minLen) {
   if (typeof o === "string") return Object(_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(o, minLen);
   var n = Object.prototype.toString.call(o).slice(8, -1);
   if (n === "Object" && o.constructor) n = o.constructor.name;
-  if (n === "Map" || n === "Set") return Array.from(n);
+  if (n === "Map" || n === "Set") return Array.from(o);
   if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Object(_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(o, minLen);
 }
 
@@ -789,37 +824,6 @@ function _objectWithoutProperties(source, excluded) {
 
   return target;
 }
-
-/***/ }),
-
-/***/ "I2ZF":
-/***/ (function(module, exports) {
-
-/**
- * Convert array of 16 byte values to UUID string format of the form:
- * XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
- */
-var byteToHex = [];
-for (var i = 0; i < 256; ++i) {
-  byteToHex[i] = (i + 0x100).toString(16).substr(1);
-}
-
-function bytesToUuid(buf, offset) {
-  var i = offset || 0;
-  var bth = byteToHex;
-  // join used to fix memory issue caused by concatenation: https://bugs.chromium.org/p/v8/issues/detail?id=3175#c4
-  return ([bth[buf[i++]], bth[buf[i++]], 
-	bth[buf[i++]], bth[buf[i++]], '-',
-	bth[buf[i++]], bth[buf[i++]], '-',
-	bth[buf[i++]], bth[buf[i++]], '-',
-	bth[buf[i++]], bth[buf[i++]], '-',
-	bth[buf[i++]], bth[buf[i++]],
-	bth[buf[i++]], bth[buf[i++]],
-	bth[buf[i++]], bth[buf[i++]]]).join('');
-}
-
-module.exports = bytesToUuid;
-
 
 /***/ }),
 
@@ -1206,42 +1210,6 @@ function _defineProperty(obj, key, value) {
 
   return obj;
 }
-
-/***/ }),
-
-/***/ "xk4V":
-/***/ (function(module, exports, __webpack_require__) {
-
-var rng = __webpack_require__("4fRq");
-var bytesToUuid = __webpack_require__("I2ZF");
-
-function v4(options, buf, offset) {
-  var i = buf && offset || 0;
-
-  if (typeof(options) == 'string') {
-    buf = options === 'binary' ? new Array(16) : null;
-    options = null;
-  }
-  options = options || {};
-
-  var rnds = options.random || (options.rng || rng)();
-
-  // Per 4.4, set bits for version and `clock_seq_hi_and_reserved`
-  rnds[6] = (rnds[6] & 0x0f) | 0x40;
-  rnds[8] = (rnds[8] & 0x3f) | 0x80;
-
-  // Copy bytes to buffer, if provided
-  if (buf) {
-    for (var ii = 0; ii < 16; ++ii) {
-      buf[i + ii] = rnds[ii];
-    }
-  }
-
-  return buf || bytesToUuid(rnds);
-}
-
-module.exports = v4;
-
 
 /***/ }),
 

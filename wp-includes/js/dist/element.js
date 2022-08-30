@@ -110,7 +110,7 @@ function _unsupportedIterableToArray(o, minLen) {
   if (typeof o === "string") return Object(_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(o, minLen);
   var n = Object.prototype.toString.call(o).slice(8, -1);
   if (n === "Object" && o.constructor) n = o.constructor.name;
-  if (n === "Map" || n === "Set") return Array.from(n);
+  if (n === "Map" || n === "Set") return Array.from(o);
   if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Object(_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(o, minLen);
 }
 
@@ -334,7 +334,7 @@ function _arrayLikeToArray(arr, len) {
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
-__webpack_require__.d(__webpack_exports__, "__experimentalCreateInterpolateElement", function() { return /* reexport */ create_interpolate_element; });
+__webpack_require__.d(__webpack_exports__, "createInterpolateElement", function() { return /* reexport */ create_interpolate_element; });
 __webpack_require__.d(__webpack_exports__, "Children", function() { return /* reexport */ external_this_React_["Children"]; });
 __webpack_require__.d(__webpack_exports__, "cloneElement", function() { return /* reexport */ external_this_React_["cloneElement"]; });
 __webpack_require__.d(__webpack_exports__, "Component", function() { return /* reexport */ external_this_React_["Component"]; });
@@ -390,6 +390,8 @@ var external_this_React_ = __webpack_require__("cDcd");
  * External dependencies
  */
 
+/** @typedef {import('./react').WPElement} WPElement */
+
 var indoc, offset, output, stack;
 /**
  * Matches tags in the localized string
@@ -409,28 +411,46 @@ var indoc, offset, output, stack;
 
 var tokenizer = /<(\/)?(\w+)\s*(\/)?>/g;
 /**
+ * The stack frame tracking parse progress.
+ *
+ * @typedef Frame
+ *
+ * @property {WPElement} element            A parent element which may still have
+ * @property {number}    tokenStart         Offset at which parent element first
+ *                                          appears.
+ * @property {number}    tokenLength        Length of string marking start of parent
+ *                                          element.
+ * @property {number}    [prevOffset]       Running offset at which parsing should
+ *                                          continue.
+ * @property {number}    [leadingTextStart] Offset at which last closing element
+ *                                          finished, used for finding text between
+ *                                          elements.
+ * @property {WPElement[]} children         Children.
+ */
+
+/**
  * Tracks recursive-descent parse state.
  *
  * This is a Stack frame holding parent elements until all children have been
  * parsed.
  *
  * @private
- * @param {WPElement} element          A parent element which may still have
- *                                     nested children not yet parsed.
- * @param {number}    tokenStart       Offset at which parent element first
- *                                     appears.
- * @param {number}    tokenLength      Length of string marking start of parent
- *                                     element.
- * @param {number}    prevOffset       Running offset at which parsing should
- *                                     continue.
- * @param {number}    leadingTextStart Offset at which last closing element
- *                                     finished, used for finding text between
- *                                     elements
+ * @param {WPElement} element            A parent element which may still have
+ *                                       nested children not yet parsed.
+ * @param {number}    tokenStart         Offset at which parent element first
+ *                                       appears.
+ * @param {number}    tokenLength        Length of string marking start of parent
+ *                                       element.
+ * @param {number}    [prevOffset]       Running offset at which parsing should
+ *                                       continue.
+ * @param {number}    [leadingTextStart] Offset at which last closing element
+ *                                       finished, used for finding text between
+ *                                       elements.
  *
  * @return {Frame} The stack frame tracking parse progress.
  */
 
-function Frame(element, tokenStart, tokenLength, prevOffset, leadingTextStart) {
+function createFrame(element, tokenStart, tokenLength, prevOffset, leadingTextStart) {
   return {
     element: element,
     tokenStart: tokenStart,
@@ -559,12 +579,12 @@ function proceed(conversionMap) {
       } // otherwise we found an inner element
 
 
-      addChild(new Frame(conversionMap[name], startOffset, tokenLength));
+      addChild(createFrame(conversionMap[name], startOffset, tokenLength));
       offset = startOffset + tokenLength;
       return true;
 
     case 'opener':
-      stack.push(new Frame(conversionMap[name], startOffset, tokenLength, startOffset + tokenLength, leadingTextStart));
+      stack.push(createFrame(conversionMap[name], startOffset, tokenLength, startOffset + tokenLength, leadingTextStart));
       offset = startOffset + tokenLength;
       return true;
 
@@ -582,7 +602,7 @@ function proceed(conversionMap) {
       var text = indoc.substr(stackTop.prevOffset, startOffset - stackTop.prevOffset);
       stackTop.children.push(text);
       stackTop.prevOffset = startOffset + tokenLength;
-      var frame = new Frame(stackTop.element, stackTop.tokenStart, stackTop.tokenLength, startOffset + tokenLength);
+      var frame = createFrame(stackTop.element, stackTop.tokenStart, stackTop.tokenLength, startOffset + tokenLength);
       frame.children = stackTop.children;
       addChild(frame);
       offset = startOffset + tokenLength;
@@ -742,7 +762,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 /**
  * Object containing a React component.
  *
- * @typedef {import('react').Component} WPComponent
+ * @typedef {import('react').ComponentType} WPComponent
  */
 
 /**
@@ -966,7 +986,7 @@ var external_this_ReactDOM_ = __webpack_require__("faye");
  *
  * @see https://github.com/facebook/react/issues/10309#issuecomment-318433235
  *
- * @param {WPElement}   child     Any renderable child, such as an element,
+ * @param {import('./react').WPElement}   child     Any renderable child, such as an element,
  *                                string, or fragment.
  * @param {HTMLElement} container DOM node into which element should be rendered.
  */
@@ -975,14 +995,14 @@ var external_this_ReactDOM_ = __webpack_require__("faye");
 /**
  * Finds the dom node of a React component.
  *
- * @param {WPComponent} component Component's instance.
+ * @param {import('./react').WPComponent} component Component's instance.
  */
 
 
 /**
  * Renders a given element into the target DOM node.
  *
- * @param {WPElement}   element Element to render.
+ * @param {import('./react').WPElement}   element Element to render.
  * @param {HTMLElement} target  DOM node into which element should be rendered.
  */
 
@@ -1070,6 +1090,13 @@ function raw_html_objectSpread(target) { for (var i = 1; i < arguments.length; i
 /**
  * Internal dependencies
  */
+ // Disable reason: JSDoc linter doesn't seem to parse the union (`&`) correctly.
+
+/* eslint-disable jsdoc/valid-types */
+
+/** @typedef {{children: string} & import('react').ComponentPropsWithoutRef<'div'>} RawHTMLProps */
+
+/* eslint-enable jsdoc/valid-types */
 
 /**
  * Component used as equivalent of Fragment with unescaped HTML, in cases where
@@ -1077,11 +1104,10 @@ function raw_html_objectSpread(target) { for (var i = 1; i < arguments.length; i
  * To preserve additional props, a `div` wrapper _will_ be created if any props
  * aside from `children` are passed.
  *
- * @param {Object} props
- * @param {string} props.children HTML to render.
- * @param {Object} props.props    Any additonal props to be set on the containing div.
+ * @param {RawHTMLProps} props Children should be a string of HTML. Other props
+ *                             will be passed through to div wrapper.
  *
- * @return {WPComponent} Dangerously-rendering component.
+ * @return {JSX.Element} Dangerously-rendering component.
  */
 
 function RawHTML(_ref) {
@@ -1148,8 +1174,9 @@ function serialize_objectSpread(target) { for (var i = 1; i < arguments.length; 
 
 
 
+/** @typedef {import('./react').WPElement} WPElement */
 
-var _createContext = Object(external_this_React_["createContext"])(),
+var _createContext = Object(external_this_React_["createContext"])(undefined),
     Provider = _createContext.Provider,
     Consumer = _createContext.Consumer;
 
@@ -1159,14 +1186,14 @@ var ForwardRef = Object(external_this_React_["forwardRef"])(function () {
 /**
  * Valid attribute types.
  *
- * @type {Set}
+ * @type {Set<string>}
  */
 
 var ATTRIBUTES_TYPES = new Set(['string', 'boolean', 'number']);
 /**
  * Element tags which can be self-closing.
  *
- * @type {Set}
+ * @type {Set<string>}
  */
 
 var SELF_CLOSING_TAGS = new Set(['area', 'base', 'br', 'col', 'command', 'embed', 'hr', 'img', 'input', 'keygen', 'link', 'meta', 'param', 'source', 'track', 'wbr']);
@@ -1183,7 +1210,7 @@ var SELF_CLOSING_TAGS = new Set(['area', 'base', 'br', 'col', 'command', 'embed'
  *         [ tr.firstChild.textContent.trim() ]: true
  *     } ), {} ) ).sort();
  *
- * @type {Set}
+ * @type {Set<string>}
  */
 
 var BOOLEAN_ATTRIBUTES = new Set(['allowfullscreen', 'allowpaymentrequest', 'allowusermedia', 'async', 'autofocus', 'autoplay', 'checked', 'controls', 'default', 'defer', 'disabled', 'download', 'formnovalidate', 'hidden', 'ismap', 'itemscope', 'loop', 'multiple', 'muted', 'nomodule', 'novalidate', 'open', 'playsinline', 'readonly', 'required', 'reversed', 'selected', 'typemustmatch']);
@@ -1205,7 +1232,7 @@ var BOOLEAN_ATTRIBUTES = new Set(['allowfullscreen', 'allowpaymentrequest', 'all
  *
  *  - `alt`: https://blog.whatwg.org/omit-alt
  *
- * @type {Set}
+ * @type {Set<string>}
  */
 
 var ENUMERATED_ATTRIBUTES = new Set(['autocapitalize', 'autocomplete', 'charset', 'contenteditable', 'crossorigin', 'decoding', 'dir', 'draggable', 'enctype', 'formenctype', 'formmethod', 'http-equiv', 'inputmode', 'kind', 'method', 'preload', 'scope', 'shape', 'spellcheck', 'translate', 'type', 'wrap']);
@@ -1225,7 +1252,7 @@ var ENUMERATED_ATTRIBUTES = new Set(['autocapitalize', 'autocomplete', 'charset'
  *     .map( ( [ key ] ) => key )
  *     .sort();
  *
- * @type {Set}
+ * @type {Set<string>}
  */
 
 var CSS_PROPERTIES_SUPPORTS_UNITLESS = new Set(['animation', 'animationIterationCount', 'baselineShift', 'borderImageOutset', 'borderImageSlice', 'borderImageWidth', 'columnCount', 'cx', 'cy', 'fillOpacity', 'flexGrow', 'flexShrink', 'floodOpacity', 'fontWeight', 'gridColumnEnd', 'gridColumnStart', 'gridRowEnd', 'gridRowStart', 'lineHeight', 'opacity', 'order', 'orphans', 'r', 'rx', 'ry', 'shapeImageThreshold', 'stopOpacity', 'strokeDasharray', 'strokeDashoffset', 'strokeMiterlimit', 'strokeOpacity', 'strokeWidth', 'tabSize', 'widows', 'x', 'y', 'zIndex', 'zoom']);
@@ -1262,7 +1289,7 @@ function isInternalAttribute(attribute) {
  * @param {string} attribute Attribute name.
  * @param {*}      value     Non-normalized attribute value.
  *
- * @return {string} Normalized attribute value.
+ * @return {*} Normalized attribute value.
  */
 
 
@@ -1339,9 +1366,9 @@ function getNormalStylePropertyValue(property, value) {
 /**
  * Serializes a React element to string.
  *
- * @param {WPElement} element       Element to serialize.
- * @param {?Object}   context       Context object.
- * @param {?Object}   legacyContext Legacy context object.
+ * @param {import('react').ReactNode} element         Element to serialize.
+ * @param {Object}                    [context]       Context object.
+ * @param {Object}                    [legacyContext] Legacy context object.
  *
  * @return {string} Serialized element.
  */
@@ -1366,7 +1393,9 @@ function renderElement(element, context) {
       return element.toString();
   }
 
-  var type = element.type,
+  var type =
+  /** @type {{type?: any, props?: any}} */
+  element.type,
       props = element.props;
 
   switch (type) {
@@ -1413,11 +1442,11 @@ function renderElement(element, context) {
 /**
  * Serializes a native component type to string.
  *
- * @param {?string} type          Native component type to serialize, or null if
- *                                rendering as fragment of children content.
- * @param {Object}  props         Props object.
- * @param {?Object} context       Context object.
- * @param {?Object} legacyContext Legacy context object.
+ * @param {?string} type            Native component type to serialize, or null if
+ *                                  rendering as fragment of children content.
+ * @param {Object}  props           Props object.
+ * @param {Object}  [context]       Context object.
+ * @param {Object}  [legacyContext] Legacy context object.
  *
  * @return {string} Serialized element.
  */
@@ -1451,23 +1480,33 @@ function renderNativeComponent(type, props, context) {
 
   return '<' + type + attributes + '>' + content + '</' + type + '>';
 }
+/** @typedef {import('./react').WPComponent} WPComponent */
+
 /**
  * Serializes a non-native component type to string.
  *
- * @param {Function} Component     Component type to serialize.
- * @param {Object}   props         Props object.
- * @param {?Object}  context       Context object.
- * @param {?Object}  legacyContext Legacy context object.
+ * @param {WPComponent} Component       Component type to serialize.
+ * @param {Object}      props           Props object.
+ * @param {Object}      [context]       Context object.
+ * @param {Object}      [legacyContext] Legacy context object.
  *
  * @return {string} Serialized element
  */
 
 function renderComponent(Component, props, context) {
   var legacyContext = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
-  var instance = new Component(props, legacyContext);
+  var instance = new
+  /** @type {import('react').ComponentClass} */
+  Component(props, legacyContext);
 
-  if (typeof instance.getChildContext === 'function') {
-    Object.assign(legacyContext, instance.getChildContext());
+  if (typeof // Ignore reason: Current prettier reformats parens and mangles type assertion
+  // prettier-ignore
+
+  /** @type {{getChildContext?: () => unknown}} */
+  instance.getChildContext === 'function') {
+    Object.assign(legacyContext,
+    /** @type {{getChildContext?: () => unknown}} */
+    instance.getChildContext());
   }
 
   var html = renderElement(instance.render(), context, legacyContext);
@@ -1476,9 +1515,9 @@ function renderComponent(Component, props, context) {
 /**
  * Serializes an array of children to string.
  *
- * @param {Array}   children      Children to serialize.
- * @param {?Object} context       Context object.
- * @param {?Object} legacyContext Legacy context object.
+ * @param {import('react').ReactNodeArray} children        Children to serialize.
+ * @param {Object}                         [context]       Context object.
+ * @param {Object}                         [legacyContext] Legacy context object.
  *
  * @return {string} Serialized children.
  */
