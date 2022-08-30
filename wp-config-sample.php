@@ -8,7 +8,7 @@
  *
  * Denna fil innehåller följande konfigurationer:
  *
- * * Inställningar för MySQL
+ * * Inställningar för databas
  * * Säkerhetsnycklar
  * * Tabellprefix för databas
  * * ABSPATH
@@ -18,17 +18,17 @@
  * @package WordPress
  */
 
-// ** MySQL-inställningar - MySQL-uppgifter får du från ditt webbhotell ** //
+// ** Databasinställningar - åtkomstuppgifter för databasen får du från ditt webbhotell ** //
 /** Namnet på databasen du vill använda för WordPress */
 define('DB_NAME', 'Ange databasnamn här');
 
-/** MySQL-databasens användarnamn */
+/** Databasens användarnamn */
 define('DB_USER', 'Ange databasanvändare här');
 
-/** MySQL-databasens lösenord */
+/** Databasens lösenord */
 define('DB_PASSWORD', 'Ange databaslösenord här');
 
-/** MySQL-server */
+/** Databasserver */
 define('DB_HOST', 'localhost');
 
 /** Teckenkodning för tabellerna i databasen. */
