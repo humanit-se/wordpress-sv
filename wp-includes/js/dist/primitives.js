@@ -91,12 +91,30 @@ this["wp"] = this["wp"] || {}; this["wp"]["primitives"] =
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _objectWithoutProperties; });
-/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("zLVn");
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ _objectWithoutProperties; });
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js
 
 function _objectWithoutProperties(source, excluded) {
   if (source == null) return {};
-  var target = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(source, excluded);
+  var target = _objectWithoutPropertiesLoose(source, excluded);
   var key, i;
 
   if (Object.getOwnPropertySymbols) {
@@ -140,15 +158,15 @@ __webpack_require__.d(__webpack_exports__, "View", function() { return /* reexpo
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
 var defineProperty = __webpack_require__("rePB");
 
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js + 1 modules
 var objectWithoutProperties = __webpack_require__("Ff2n");
 
 // EXTERNAL MODULE: ./node_modules/classnames/index.js
 var classnames = __webpack_require__("TSYQ");
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
-// EXTERNAL MODULE: external {"this":["wp","element"]}
-var external_this_wp_element_ = __webpack_require__("GRId");
+// EXTERNAL MODULE: external ["wp","element"]
+var external_wp_element_ = __webpack_require__("GRId");
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/primitives/build-module/svg/index.js
 
@@ -176,7 +194,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
  */
 
 var svg_Circle = function Circle(props) {
-  return Object(external_this_wp_element_["createElement"])('circle', props);
+  return Object(external_wp_element_["createElement"])('circle', props);
 };
 /**
  * @param {import('react').ComponentPropsWithoutRef<'g'>} props
@@ -185,7 +203,7 @@ var svg_Circle = function Circle(props) {
  */
 
 var svg_G = function G(props) {
-  return Object(external_this_wp_element_["createElement"])('g', props);
+  return Object(external_wp_element_["createElement"])('g', props);
 };
 /**
  * @param {import('react').ComponentPropsWithoutRef<'path'>} props
@@ -194,7 +212,7 @@ var svg_G = function G(props) {
  */
 
 var svg_Path = function Path(props) {
-  return Object(external_this_wp_element_["createElement"])('path', props);
+  return Object(external_wp_element_["createElement"])('path', props);
 };
 /**
  * @param {import('react').ComponentPropsWithoutRef<'polygon'>} props
@@ -203,7 +221,7 @@ var svg_Path = function Path(props) {
  */
 
 var svg_Polygon = function Polygon(props) {
-  return Object(external_this_wp_element_["createElement"])('polygon', props);
+  return Object(external_wp_element_["createElement"])('polygon', props);
 };
 /**
  * @param {import('react').ComponentPropsWithoutRef<'rect'>} props
@@ -212,7 +230,7 @@ var svg_Polygon = function Polygon(props) {
  */
 
 var svg_Rect = function Rect(props) {
-  return Object(external_this_wp_element_["createElement"])('rect', props);
+  return Object(external_wp_element_["createElement"])('rect', props);
 };
 /**
  * @param {import('react').ComponentPropsWithoutRef<'defs'>} props
@@ -221,7 +239,7 @@ var svg_Rect = function Rect(props) {
  */
 
 var svg_Defs = function Defs(props) {
-  return Object(external_this_wp_element_["createElement"])('defs', props);
+  return Object(external_wp_element_["createElement"])('defs', props);
 };
 /**
  * @param {import('react').ComponentPropsWithoutRef<'radialGradient'>} props
@@ -230,7 +248,7 @@ var svg_Defs = function Defs(props) {
  */
 
 var svg_RadialGradient = function RadialGradient(props) {
-  return Object(external_this_wp_element_["createElement"])('radialGradient', props);
+  return Object(external_wp_element_["createElement"])('radialGradient', props);
 };
 /**
  * @param {import('react').ComponentPropsWithoutRef<'linearGradient'>} props
@@ -239,7 +257,7 @@ var svg_RadialGradient = function RadialGradient(props) {
  */
 
 var svg_LinearGradient = function LinearGradient(props) {
-  return Object(external_this_wp_element_["createElement"])('linearGradient', props);
+  return Object(external_wp_element_["createElement"])('linearGradient', props);
 };
 /**
  * @param {import('react').ComponentPropsWithoutRef<'stop'>} props
@@ -248,7 +266,7 @@ var svg_LinearGradient = function LinearGradient(props) {
  */
 
 var svg_Stop = function Stop(props) {
-  return Object(external_this_wp_element_["createElement"])('stop', props);
+  return Object(external_wp_element_["createElement"])('stop', props);
 };
 /**
  *
@@ -274,7 +292,7 @@ var svg_SVG = function SVG(_ref) {
   // eslint-disable-next-line react/forbid-elements
 
 
-  return Object(external_this_wp_element_["createElement"])("svg", appliedProps);
+  return Object(external_wp_element_["createElement"])("svg", appliedProps);
 };
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/primitives/build-module/horizontal-rule/index.js
@@ -298,7 +316,7 @@ var View = 'div';
 /***/ "GRId":
 /***/ (function(module, exports) {
 
-(function() { module.exports = this["wp"]["element"]; }());
+(function() { module.exports = window["wp"]["element"]; }());
 
 /***/ }),
 
@@ -378,28 +396,6 @@ function _defineProperty(obj, key, value) {
   }
 
   return obj;
-}
-
-/***/ }),
-
-/***/ "zLVn":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _objectWithoutPropertiesLoose; });
-function _objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null) return {};
-  var target = {};
-  var sourceKeys = Object.keys(source);
-  var key, i;
-
-  for (i = 0; i < sourceKeys.length; i++) {
-    key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0) continue;
-    target[key] = source[key];
-  }
-
-  return target;
 }
 
 /***/ })
