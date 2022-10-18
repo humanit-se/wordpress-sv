@@ -65,7 +65,7 @@ class WP_REST_Terms_Controller extends WP_REST_Controller {
 	}
 
 	/**
-	 * Registers the routes for the objects of the controller.
+	 * Registers the routes for terms.
 	 *
 	 * @since 4.7.0
 	 *
@@ -169,7 +169,7 @@ class WP_REST_Terms_Controller extends WP_REST_Controller {
 	 * @since 4.7.0
 	 *
 	 * @param WP_REST_Request $request Full details about the request.
-	 * @return bool|WP_Error True if the request has read access, otherwise false or WP_Error object.
+	 * @return true|WP_Error True if the request has read access, otherwise false or WP_Error object.
 	 */
 	public function get_items_permissions_check( $request ) {
 		$tax_obj = get_taxonomy( $this->taxonomy );
@@ -286,9 +286,14 @@ class WP_REST_Terms_Controller extends WP_REST_Controller {
 		}
 
 		/**
-		 * Filters the query arguments before passing them to get_terms().
+		 * Filters get_terms() arguments when querying terms via the REST API.
 		 *
 		 * The dynamic portion of the hook name, `$this->taxonomy`, refers to the taxonomy slug.
+		 *
+		 * Possible hook names include:
+		 *
+		 *  - `rest_category_query`
+		 *  - `rest_post_tag_query`
 		 *
 		 * Enables adding extra arguments or setting defaults for a terms
 		 * collection request.
@@ -297,9 +302,8 @@ class WP_REST_Terms_Controller extends WP_REST_Controller {
 		 *
 		 * @link https://developer.wordpress.org/reference/functions/get_terms/
 		 *
-		 * @param array           $prepared_args Array of arguments to be
-		 *                                       passed to get_terms().
-		 * @param WP_REST_Request $request       The current request.
+		 * @param array           $prepared_args Array of arguments for get_terms().
+		 * @param WP_REST_Request $request       The REST API request.
 		 */
 		$prepared_args = apply_filters( "rest_{$this->taxonomy}_query", $prepared_args, $request );
 
@@ -316,7 +320,7 @@ class WP_REST_Terms_Controller extends WP_REST_Controller {
 
 		unset( $count_args['number'], $count_args['offset'] );
 
-		$total_terms = wp_count_terms( $this->taxonomy, $count_args );
+		$total_terms = wp_count_terms( $count_args );
 
 		// wp_count_terms() can return a falsey value when the term has no children.
 		if ( ! $total_terms ) {
@@ -400,7 +404,7 @@ class WP_REST_Terms_Controller extends WP_REST_Controller {
 	 * @since 4.7.0
 	 *
 	 * @param WP_REST_Request $request Full details about the request.
-	 * @return bool|WP_Error True if the request has read access for the item, otherwise false or WP_Error object.
+	 * @return true|WP_Error True if the request has read access for the item, otherwise false or WP_Error object.
 	 */
 	public function get_item_permissions_check( $request ) {
 		$term = $this->get_term( $request['id'] );
@@ -445,7 +449,7 @@ class WP_REST_Terms_Controller extends WP_REST_Controller {
 	 * @since 4.7.0
 	 *
 	 * @param WP_REST_Request $request Full details about the request.
-	 * @return bool|WP_Error True if the request has access to create items, false or WP_Error object otherwise.
+	 * @return true|WP_Error True if the request has access to create items, false or WP_Error object otherwise.
 	 */
 	public function create_item_permissions_check( $request ) {
 
@@ -528,6 +532,11 @@ class WP_REST_Terms_Controller extends WP_REST_Controller {
 		 *
 		 * The dynamic portion of the hook name, `$this->taxonomy`, refers to the taxonomy slug.
 		 *
+		 * Possible hook names include:
+		 *
+		 *  - `rest_insert_category`
+		 *  - `rest_insert_post_tag`
+		 *
 		 * @since 4.7.0
 		 *
 		 * @param WP_Term         $term     Inserted or updated term object.
@@ -558,6 +567,11 @@ class WP_REST_Terms_Controller extends WP_REST_Controller {
 		 *
 		 * The dynamic portion of the hook name, `$this->taxonomy`, refers to the taxonomy slug.
 		 *
+		 * Possible hook names include:
+		 *
+		 *  - `rest_after_insert_category`
+		 *  - `rest_after_insert_post_tag`
+		 *
 		 * @since 5.0.0
 		 *
 		 * @param WP_Term         $term     Inserted or updated term object.
@@ -581,7 +595,7 @@ class WP_REST_Terms_Controller extends WP_REST_Controller {
 	 * @since 4.7.0
 	 *
 	 * @param WP_REST_Request $request Full details about the request.
-	 * @return bool|WP_Error True if the request has access to update the item, false or WP_Error object otherwise.
+	 * @return true|WP_Error True if the request has access to update the item, false or WP_Error object otherwise.
 	 */
 	public function update_item_permissions_check( $request ) {
 		$term = $this->get_term( $request['id'] );
@@ -682,7 +696,7 @@ class WP_REST_Terms_Controller extends WP_REST_Controller {
 	 * @since 4.7.0
 	 *
 	 * @param WP_REST_Request $request Full details about the request.
-	 * @return bool|WP_Error True if the request has access to delete the item, otherwise false or WP_Error object.
+	 * @return true|WP_Error True if the request has access to delete the item, otherwise false or WP_Error object.
 	 */
 	public function delete_item_permissions_check( $request ) {
 		$term = $this->get_term( $request['id'] );
@@ -755,6 +769,11 @@ class WP_REST_Terms_Controller extends WP_REST_Controller {
 		 *
 		 * The dynamic portion of the hook name, `$this->taxonomy`, refers to the taxonomy slug.
 		 *
+		 * Possible hook names include:
+		 *
+		 *  - `rest_delete_category`
+		 *  - `rest_delete_post_tag`
+		 *
 		 * @since 4.7.0
 		 *
 		 * @param WP_Term          $term     The deleted term.
@@ -813,6 +832,11 @@ class WP_REST_Terms_Controller extends WP_REST_Controller {
 		 * Filters term data before inserting term via the REST API.
 		 *
 		 * The dynamic portion of the hook name, `$this->taxonomy`, refers to the taxonomy slug.
+		 *
+		 * Possible hook names include:
+		 *
+		 *  - `rest_pre_insert_category`
+		 *  - `rest_pre_insert_post_tag`
 		 *
 		 * @since 4.7.0
 		 *
@@ -881,9 +905,14 @@ class WP_REST_Terms_Controller extends WP_REST_Controller {
 		$response->add_links( $this->prepare_links( $item ) );
 
 		/**
-		 * Filters a term item returned from the API.
+		 * Filters the term data for a REST API response.
 		 *
 		 * The dynamic portion of the hook name, `$this->taxonomy`, refers to the taxonomy slug.
+		 *
+		 * Possible hook names include:
+		 *
+		 *  - `rest_prepare_category`
+		 *  - `rest_prepare_post_tag`
 		 *
 		 * Allows modification of the term data right before it is returned.
 		 *
@@ -1018,7 +1047,7 @@ class WP_REST_Terms_Controller extends WP_REST_Controller {
 				'taxonomy'    => array(
 					'description' => __( 'Type attribution for the term.' ),
 					'type'        => 'string',
-					'enum'        => array_keys( get_taxonomies() ),
+					'enum'        => array( $this->taxonomy ),
 					'context'     => array( 'view', 'embed', 'edit' ),
 					'readonly'    => true,
 				),
@@ -1134,7 +1163,7 @@ class WP_REST_Terms_Controller extends WP_REST_Controller {
 		);
 
 		/**
-		 * Filter collection parameters for the terms controller.
+		 * Filters collection parameters for the terms controller.
 		 *
 		 * The dynamic part of the filter `$this->taxonomy` refers to the taxonomy
 		 * slug for the controller.
