@@ -621,48 +621,44 @@ module.exports = {
 
 /***/ }),
 
+/***/ "YLtl":
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["lodash"]; }());
+
+/***/ }),
+
 /***/ "lbya":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isURL", function() { return isURL; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isEmail", function() { return isEmail; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getProtocol", function() { return getProtocol; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isValidProtocol", function() { return isValidProtocol; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getAuthority", function() { return getAuthority; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isValidAuthority", function() { return isValidAuthority; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPath", function() { return getPath; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isValidPath", function() { return isValidPath; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getQueryString", function() { return getQueryString; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isValidQueryString", function() { return isValidQueryString; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getFragment", function() { return getFragment; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isValidFragment", function() { return isValidFragment; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addQueryArgs", function() { return addQueryArgs; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getQueryArg", function() { return getQueryArg; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hasQueryArg", function() { return hasQueryArg; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeQueryArgs", function() { return removeQueryArgs; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "prependHTTP", function() { return prependHTTP; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "safeDecodeURI", function() { return safeDecodeURI; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "filterURLForDisplay", function() { return filterURLForDisplay; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "safeDecodeURIComponent", function() { return safeDecodeURIComponent; });
-/* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("Qyje");
-/* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(qs__WEBPACK_IMPORTED_MODULE_0__);
-/**
- * External dependencies
- */
 
-var URL_REGEXP = /^(?:https?:)?\/\/\S+$/i;
-var EMAIL_REGEXP = /^(mailto:)?[a-z0-9._%+-]+@[a-z0-9][a-z0-9.-]*\.[a-z]{2,63}$/i;
-var USABLE_HREF_REGEXP = /^(?:[a-z]+:|#|\?|\.|\/)/i;
-/**
- * @typedef {{[key: string]: QueryArgParsed}} QueryArgObject
- */
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "isURL", function() { return /* reexport */ isURL; });
+__webpack_require__.d(__webpack_exports__, "isEmail", function() { return /* reexport */ isEmail; });
+__webpack_require__.d(__webpack_exports__, "getProtocol", function() { return /* reexport */ getProtocol; });
+__webpack_require__.d(__webpack_exports__, "isValidProtocol", function() { return /* reexport */ isValidProtocol; });
+__webpack_require__.d(__webpack_exports__, "getAuthority", function() { return /* reexport */ getAuthority; });
+__webpack_require__.d(__webpack_exports__, "isValidAuthority", function() { return /* reexport */ isValidAuthority; });
+__webpack_require__.d(__webpack_exports__, "getPath", function() { return /* reexport */ getPath; });
+__webpack_require__.d(__webpack_exports__, "isValidPath", function() { return /* reexport */ isValidPath; });
+__webpack_require__.d(__webpack_exports__, "getQueryString", function() { return /* reexport */ getQueryString; });
+__webpack_require__.d(__webpack_exports__, "isValidQueryString", function() { return /* reexport */ isValidQueryString; });
+__webpack_require__.d(__webpack_exports__, "getFragment", function() { return /* reexport */ getFragment; });
+__webpack_require__.d(__webpack_exports__, "isValidFragment", function() { return /* reexport */ isValidFragment; });
+__webpack_require__.d(__webpack_exports__, "addQueryArgs", function() { return /* reexport */ addQueryArgs; });
+__webpack_require__.d(__webpack_exports__, "getQueryArg", function() { return /* reexport */ getQueryArg; });
+__webpack_require__.d(__webpack_exports__, "hasQueryArg", function() { return /* reexport */ hasQueryArg; });
+__webpack_require__.d(__webpack_exports__, "removeQueryArgs", function() { return /* reexport */ removeQueryArgs; });
+__webpack_require__.d(__webpack_exports__, "prependHTTP", function() { return /* reexport */ prependHTTP; });
+__webpack_require__.d(__webpack_exports__, "safeDecodeURI", function() { return /* reexport */ safeDecodeURI; });
+__webpack_require__.d(__webpack_exports__, "safeDecodeURIComponent", function() { return /* reexport */ safeDecodeURIComponent; });
+__webpack_require__.d(__webpack_exports__, "filterURLForDisplay", function() { return /* reexport */ filterURLForDisplay; });
+__webpack_require__.d(__webpack_exports__, "cleanForSlug", function() { return /* reexport */ cleanForSlug; });
 
-/**
- * @typedef {string|string[]|QueryArgObject} QueryArgParsed
- */
-
+// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/is-url.js
 /**
  * Determines whether the given string looks like a URL.
  *
@@ -673,12 +669,24 @@ var USABLE_HREF_REGEXP = /^(?:[a-z]+:|#|\?|\.|\/)/i;
  * const isURL = isURL( 'https://wordpress.org' ); // true
  * ```
  *
+ * @see https://url.spec.whatwg.org/
+ * @see https://url.spec.whatwg.org/#valid-url-string
+ *
  * @return {boolean} Whether or not it looks like a URL.
  */
-
 function isURL(url) {
-  return URL_REGEXP.test(url);
+  // A URL can be considered value if the `URL` constructor is able to parse
+  // it. The constructor throws an error for an invalid URL.
+  try {
+    new URL(url);
+    return true;
+  } catch (error) {
+    return false;
+  }
 }
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/is-email.js
+var EMAIL_REGEXP = /^(mailto:)?[a-z0-9._%+-]+@[a-z0-9][a-z0-9.-]*\.[a-z]{2,63}$/i;
 /**
  * Determines whether the given string looks like an email.
  *
@@ -695,6 +703,8 @@ function isURL(url) {
 function isEmail(email) {
   return EMAIL_REGEXP.test(email);
 }
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/get-protocol.js
 /**
  * Returns the protocol part of the URL.
  *
@@ -708,7 +718,6 @@ function isEmail(email) {
  *
  * @return {string|void} The protocol part of the URL.
  */
-
 function getProtocol(url) {
   var matches = /^([^\s:]+:)/.exec(url);
 
@@ -716,6 +725,8 @@ function getProtocol(url) {
     return matches[1];
   }
 }
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/is-valid-protocol.js
 /**
  * Tests if a url protocol is valid.
  *
@@ -729,7 +740,6 @@ function getProtocol(url) {
  *
  * @return {boolean} True if the argument is a valid protocol (e.g. http:, tel:).
  */
-
 function isValidProtocol(protocol) {
   if (!protocol) {
     return false;
@@ -737,6 +747,8 @@ function isValidProtocol(protocol) {
 
   return /^[a-z\-.\+]+[0-9]*:$/i.test(protocol);
 }
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/get-authority.js
 /**
  * Returns the authority part of the URL.
  *
@@ -750,7 +762,6 @@ function isValidProtocol(protocol) {
  *
  * @return {string|void} The authority part of the URL.
  */
-
 function getAuthority(url) {
   var matches = /^[^\/\s:]+:(?:\/\/)?\/?([^\/\s#?]+)[\/#?]{0,1}\S*$/.exec(url);
 
@@ -758,6 +769,8 @@ function getAuthority(url) {
     return matches[1];
   }
 }
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/is-valid-authority.js
 /**
  * Checks for invalid characters within the provided authority.
  *
@@ -771,7 +784,6 @@ function getAuthority(url) {
  *
  * @return {boolean} True if the argument contains a valid authority.
  */
-
 function isValidAuthority(authority) {
   if (!authority) {
     return false;
@@ -779,6 +791,8 @@ function isValidAuthority(authority) {
 
   return /^[^\s#?]+$/.test(authority);
 }
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/get-path.js
 /**
  * Returns the path part of the URL.
  *
@@ -792,7 +806,6 @@ function isValidAuthority(authority) {
  *
  * @return {string|void} The path part of the URL.
  */
-
 function getPath(url) {
   var matches = /^[^\/\s:]+:(?:\/\/)?[^\/\s#?]+[\/]([^\s#?]+)[#?]{0,1}\S*$/.exec(url);
 
@@ -800,6 +813,8 @@ function getPath(url) {
     return matches[1];
   }
 }
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/is-valid-path.js
 /**
  * Checks for invalid characters within the provided path.
  *
@@ -813,7 +828,6 @@ function getPath(url) {
  *
  * @return {boolean} True if the argument contains a valid path
  */
-
 function isValidPath(path) {
   if (!path) {
     return false;
@@ -821,6 +835,8 @@ function isValidPath(path) {
 
   return /^[^\s#?]+$/.test(path);
 }
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/get-query-string.js
 /**
  * Returns the query string part of the URL.
  *
@@ -834,7 +850,6 @@ function isValidPath(path) {
  *
  * @return {string|void} The query string part of the URL.
  */
-
 function getQueryString(url) {
   var matches = /^\S+?\?([^\s#]+)/.exec(url);
 
@@ -842,6 +857,8 @@ function getQueryString(url) {
     return matches[1];
   }
 }
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/is-valid-query-string.js
 /**
  * Checks for invalid characters within the provided query string.
  *
@@ -855,7 +872,6 @@ function getQueryString(url) {
  *
  * @return {boolean} True if the argument contains a valid query string.
  */
-
 function isValidQueryString(queryString) {
   if (!queryString) {
     return false;
@@ -863,6 +879,8 @@ function isValidQueryString(queryString) {
 
   return /^[^\s#?\/]+$/.test(queryString);
 }
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/get-fragment.js
 /**
  * Returns the fragment part of the URL.
  *
@@ -876,7 +894,6 @@ function isValidQueryString(queryString) {
  *
  * @return {string|void} The fragment part of the URL.
  */
-
 function getFragment(url) {
   var matches = /^\S+?(#[^\s\?]*)/.exec(url);
 
@@ -884,6 +901,8 @@ function getFragment(url) {
     return matches[1];
   }
 }
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/is-valid-fragment.js
 /**
  * Checks for invalid characters within the provided fragment.
  *
@@ -897,7 +916,6 @@ function getFragment(url) {
  *
  * @return {boolean} True if the argument contains a valid fragment.
  */
-
 function isValidFragment(fragment) {
   if (!fragment) {
     return false;
@@ -905,6 +923,15 @@ function isValidFragment(fragment) {
 
   return /^#[^\s#?\/]*$/.test(fragment);
 }
+
+// EXTERNAL MODULE: ./node_modules/qs/lib/index.js
+var lib = __webpack_require__("Qyje");
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/add-query-args.js
+/**
+ * External dependencies
+ */
+
 /**
  * Appends arguments as querystring to the provided URL. If the URL already
  * includes query arguments, the arguments are merged with (and take precedent
@@ -937,13 +964,27 @@ function addQueryArgs() {
 
   if (queryStringIndex !== -1) {
     // Merge into existing query arguments.
-    args = Object.assign(Object(qs__WEBPACK_IMPORTED_MODULE_0__["parse"])(url.substr(queryStringIndex + 1)), args); // Change working base URL to omit previous query arguments.
+    args = Object.assign(Object(lib["parse"])(url.substr(queryStringIndex + 1)), args); // Change working base URL to omit previous query arguments.
 
     baseUrl = baseUrl.substr(0, queryStringIndex);
   }
 
-  return baseUrl + '?' + Object(qs__WEBPACK_IMPORTED_MODULE_0__["stringify"])(args);
+  return baseUrl + '?' + Object(lib["stringify"])(args);
 }
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/get-query-arg.js
+/**
+ * External dependencies
+ */
+
+/**
+ * @typedef {{[key: string]: QueryArgParsed}} QueryArgObject
+ */
+
+/**
+ * @typedef {string|string[]|QueryArgObject} QueryArgParsed
+ */
+
 /**
  * Returns a single query argument of the url
  *
@@ -960,9 +1001,15 @@ function addQueryArgs() {
 
 function getQueryArg(url, arg) {
   var queryStringIndex = url.indexOf('?');
-  var query = queryStringIndex !== -1 ? Object(qs__WEBPACK_IMPORTED_MODULE_0__["parse"])(url.substr(queryStringIndex + 1)) : {};
+  var query = queryStringIndex !== -1 ? Object(lib["parse"])(url.substr(queryStringIndex + 1)) : {};
   return query[arg];
 }
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/has-query-arg.js
+/**
+ * Internal dependencies
+ */
+
 /**
  * Determines whether the URL contains a given query arg.
  *
@@ -980,6 +1027,12 @@ function getQueryArg(url, arg) {
 function hasQueryArg(url, arg) {
   return getQueryArg(url, arg) !== undefined;
 }
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/remove-query-args.js
+/**
+ * External dependencies
+ */
+
 /**
  * Removes arguments from the query string of the url
  *
@@ -996,7 +1049,7 @@ function hasQueryArg(url, arg) {
 
 function removeQueryArgs(url) {
   var queryStringIndex = url.indexOf('?');
-  var query = queryStringIndex !== -1 ? Object(qs__WEBPACK_IMPORTED_MODULE_0__["parse"])(url.substr(queryStringIndex + 1)) : {};
+  var query = queryStringIndex !== -1 ? Object(lib["parse"])(url.substr(queryStringIndex + 1)) : {};
   var baseUrl = queryStringIndex !== -1 ? url.substr(0, queryStringIndex) : url;
 
   for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
@@ -1006,8 +1059,15 @@ function removeQueryArgs(url) {
   args.forEach(function (arg) {
     return delete query[arg];
   });
-  return baseUrl + '?' + Object(qs__WEBPACK_IMPORTED_MODULE_0__["stringify"])(query);
+  return baseUrl + '?' + Object(lib["stringify"])(query);
 }
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/prepend-http.js
+/**
+ * Internal dependencies
+ */
+
+var USABLE_HREF_REGEXP = /^(?:[a-z]+:|#|\?|\.|\/)/i;
 /**
  * Prepends "http://" to a url, if it looks like something that is meant to be a TLD.
  *
@@ -1028,12 +1088,14 @@ function prependHTTP(url) {
 
   url = url.trim();
 
-  if (!USABLE_HREF_REGEXP.test(url) && !EMAIL_REGEXP.test(url)) {
+  if (!USABLE_HREF_REGEXP.test(url) && !isEmail(url)) {
     return 'http://' + url;
   }
 
   return url;
 }
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/safe-decode-uri.js
 /**
  * Safely decodes a URI with `decodeURI`. Returns the URI unmodified if
  * `decodeURI` throws an error.
@@ -1047,7 +1109,6 @@ function prependHTTP(url) {
  *
  * @return {string} Decoded URI if possible.
  */
-
 function safeDecodeURI(uri) {
   try {
     return decodeURI(uri);
@@ -1055,6 +1116,25 @@ function safeDecodeURI(uri) {
     return uri;
   }
 }
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/safe-decode-uri-component.js
+/**
+ * Safely decodes a URI component with `decodeURIComponent`. Returns the URI component unmodified if
+ * `decodeURIComponent` throws an error.
+ *
+ * @param {string} uriComponent URI component to decode.
+ *
+ * @return {string} Decoded URI component if possible.
+ */
+function safeDecodeURIComponent(uriComponent) {
+  try {
+    return decodeURIComponent(uriComponent);
+  } catch (uriComponentError) {
+    return uriComponent;
+  }
+}
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/filter-url-for-display.js
 /**
  * Returns a URL for display.
  *
@@ -1067,7 +1147,6 @@ function safeDecodeURI(uri) {
  *
  * @return {string} Displayed URL.
  */
-
 function filterURLForDisplay(url) {
   // Remove protocol and www prefixes.
   var filteredURL = url.replace(/^(?:https?:)\/\/(?:www\.)?/, ''); // Ends with / and only has that single slash, strip it.
@@ -1078,22 +1157,62 @@ function filterURLForDisplay(url) {
 
   return filteredURL;
 }
+
+// EXTERNAL MODULE: external {"this":"lodash"}
+var external_this_lodash_ = __webpack_require__("YLtl");
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/clean-for-slug.js
 /**
- * Safely decodes a URI component with `decodeURIComponent`. Returns the URI component unmodified if
- * `decodeURIComponent` throws an error.
- *
- * @param {string} uriComponent URI component to decode.
- *
- * @return {string} Decoded URI component if possible.
+ * External dependencies
  */
 
-function safeDecodeURIComponent(uriComponent) {
-  try {
-    return decodeURIComponent(uriComponent);
-  } catch (uriComponentError) {
-    return uriComponent;
+/**
+ * Performs some basic cleanup of a string for use as a post slug.
+ *
+ * This replicates some of what `sanitize_title()` does in WordPress core, but
+ * is only designed to approximate what the slug will be.
+ *
+ * Converts whitespace, periods, forward slashes and underscores to hyphens.
+ * Converts Latin-1 Supplement and Latin Extended-A letters to basic Latin
+ * letters. Removes combining diacritical marks. Converts remaining string
+ * to lowercase. It does not touch octets, HTML entities, or other encoded
+ * characters.
+ *
+ * @param {string} string Title or slug to be processed.
+ *
+ * @return {string} Processed string.
+ */
+
+function cleanForSlug(string) {
+  if (!string) {
+    return '';
   }
+
+  return Object(external_this_lodash_["toLower"])(Object(external_this_lodash_["deburr"])(Object(external_this_lodash_["trim"])(string.replace(/[\s\./_]+/g, '-'), '-')));
 }
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/url/build-module/index.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /***/ }),
