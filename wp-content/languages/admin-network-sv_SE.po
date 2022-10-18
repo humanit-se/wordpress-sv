@@ -1,15 +1,15 @@
-# Translation of WordPress - 5.9.x - Administration - Network Admin in Swedish
-# This file is distributed under the same license as the WordPress - 5.9.x - Administration - Network Admin package.
+# Translation of WordPress - 6.0.x - Administration - Network Admin in Swedish
+# This file is distributed under the same license as the WordPress - 6.0.x - Administration - Network Admin package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-04-04 13:36:02+0000\n"
+"PO-Revision-Date: 2022-09-29 09:23:35+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: GlotPress/4.0.0-alpha.3\n"
 "Language: sv_SE\n"
-"Project-Id-Version: WordPress - 5.9.x - Administration - Network Admin\n"
+"Project-Id-Version: WordPress - 6.0.x - Administration - Network Admin\n"
 
 #: wp-admin/network/users.php:271
 msgid "Users deleted."
@@ -73,16 +73,16 @@ msgid "Add User will set up a new user account on the network and send that pers
 msgstr "När en användare läggs till kommer ett nytt användarkonto att skapas i nätverket och ett e-postmeddelande med användarnamn och lösenord skickas till denna person."
 
 #: wp-admin/network/upgrade.php:141
-msgid "WordPress has been updated! Before we send you on your way, we need to individually upgrade the sites in your network."
-msgstr "WordPress har uppdaterats! Innan vi låter dig fortsätta så behöver vi uppdatera webbplatserna i nätverket individuellt."
+msgid "WordPress has been updated! Next and final step is to individually upgrade the sites in your network."
+msgstr "WordPress har uppdaterats! Nästa och sista steget är att individuellt uppgradera webbplatserna i ditt nätverk."
 
 #: wp-admin/network/upgrade.php:125
 msgid "Next Sites"
 msgstr "Nästkommande webbplatser"
 
 #: wp-admin/network/upgrade.php:125
-msgid "If your browser doesn&#8217;t start loading the next page automatically, click this link:"
-msgstr "Om du inte skickas vidare automatiskt, klicka på följande knapp:"
+msgid "If your browser does not start loading the next page automatically, click this link:"
+msgstr "Om din webbläsare inte börjar ladda nästa sida automatiskt, klicka på denna länk:"
 
 #. translators: 1: Site URL, 2: Server error message.
 #: wp-admin/network/upgrade.php:99
@@ -102,8 +102,8 @@ msgid "If this process fails for any reason, users logging in to their sites wil
 msgstr "Om denna process av någon anledning misslyckas kommer samma uppdatering att genomföras automatiskt när användare loggar in på sina webbplatser."
 
 #: wp-admin/network/upgrade.php:25
-msgid "If a version update to core has not happened, clicking this button won&#8217;t affect anything."
-msgstr "Om ingen uppdatering av WordPress skett så kommer inte denna knapp att påverka någonting."
+msgid "If a version update to core has not happened, clicking this button will not affect anything."
+msgstr "Om ingen uppdatering av WordPress-kärnan har skett påverkas ingenting om man trycker på denna knapp."
 
 #: wp-admin/network/upgrade.php:24
 msgid "Only use this screen once you have updated to a new version of WordPress through Updates/Available Updates (via the Network Administration navigation menu or the Toolbar). Clicking the Upgrade Network button will step through each site in the network, five at a time, and make sure any database updates are applied."
@@ -156,7 +156,7 @@ msgstr "Den här sidan ger dig möjligheten att aktivera eller inaktivera teman 
 
 #: wp-admin/network/themes.php:226
 msgid "Sorry, you are not allowed to change themes automatic update settings."
-msgstr "Du saknar behörighet att ändra inställningarna för automatisk uppdateringar av teman."
+msgstr "Du har inte behörighet att ändra inställningarna för automatiska uppdateringar av teman."
 
 #: wp-admin/network/themes.php:183
 msgid "No, return me to the theme list"
@@ -168,7 +168,7 @@ msgstr "Ja, radera dessa teman"
 
 #: wp-admin/network/themes.php:174
 msgid "Yes, delete this theme"
-msgstr "Ja, radera detta tema"
+msgstr "Ja, ta bort detta tema"
 
 #: wp-admin/network/themes.php:160
 msgid "Are you sure you want to delete these themes?"
@@ -202,15 +202,15 @@ msgstr "Detta tema kan vara aktivt på andra webbplatser i nätverket."
 
 #: wp-admin/network/themes.php:137
 msgid "Delete Theme"
-msgstr "Radera tema"
+msgstr "Ta bort tema"
 
 #: wp-admin/network/themes.php:102
 msgid "Sorry, you are not allowed to delete themes for this site."
-msgstr "Du saknar behörighet för att radera teman för den här webbplatsen."
+msgstr "Du har inte behörighet att ta bort teman för denna webbplats."
 
 #: wp-admin/network/themes.php:14
 msgid "Sorry, you are not allowed to manage network themes."
-msgstr "Du saknar behörighet att hantera teman i nätverket."
+msgstr "Du har inte behörighet att hantera teman i nätverket."
 
 #: wp-admin/network/sites.php:339
 msgid "Site marked as spam."
@@ -238,15 +238,15 @@ msgstr "Webbplats arkiverad."
 
 #: wp-admin/network/sites.php:321
 msgid "Sorry, you are not allowed to delete that site."
-msgstr "Du saknar behörighet för att radera den webbplatsen."
+msgstr "Du har inte behörighet för att ta bort den webbplatsen."
 
 #: wp-admin/network/sites.php:318
 msgid "Site deleted."
-msgstr "Webbplats raderad."
+msgstr "Webbplats borttagen."
 
 #: wp-admin/network/sites.php:315
 msgid "Sites deleted."
-msgstr "Webbplatser raderade."
+msgstr "Webbplatser borttagna."
 
 #: wp-admin/network/sites.php:312
 msgid "Sites marked as spam."
@@ -263,7 +263,7 @@ msgstr "Du är på väg att ta bort följande webbplatser:"
 #. translators: %s: Site URL.
 #: wp-admin/network/sites.php:168
 msgid "Sorry, you are not allowed to delete the site %s."
-msgstr "Du saknar behörighet att radera webbplatsen %s."
+msgstr "Du har inte behörighet att ta bort webbplatsen %s."
 
 #: wp-admin/network/sites.php:115 wp-admin/network/sites.php:191
 msgid "Confirm your action"
@@ -332,7 +332,7 @@ msgstr "Navigation för webbplatslista"
 
 #: wp-admin/network/sites.php:40
 msgid "Clicking on bold headings can re-sort this table."
-msgstr "Genom att klicka på rubrikerna i fetstil så kan denna tabell omsorteras."
+msgstr "Klicka på rubrikerna i fetstil för att sortera om denna tabell."
 
 #: wp-admin/network/sites.php:39
 msgid "The site ID is used internally, and is not shown on the front end of the site or to users/viewers."
@@ -466,7 +466,7 @@ msgstr "Filtrera lista med webbplatsteman"
 
 #: wp-admin/network/site-themes.php:14
 msgid "Sorry, you are not allowed to manage themes for this site."
-msgstr "Du saknar behörighet för att hantera teman för den här webbplatsen."
+msgstr "Du har inte behörighet att hantera teman för denna webbplats."
 
 #: wp-admin/network/site-settings.php:78
 msgid "Site options updated."
@@ -490,7 +490,7 @@ msgstr "E-postadress för administration"
 
 #: wp-admin/network/site-new.php:220
 msgid "Only lowercase letters (a-z), numbers, and hyphens are allowed."
-msgstr "Endast små bokstäver (a-z), siffror och bindestreck är tillåtna."
+msgstr "Endast gemener (a-z), siffror och bindestreck är tillåtna."
 
 #: wp-admin/network/site-new.php:178 wp-admin/network/site-new.php:188
 msgid "Add New Site"
@@ -523,7 +523,7 @@ msgid "The following words are reserved for use by WordPress functions and canno
 msgstr "Följande ord är reserverade för användning av funktioner i WordPress och kan inte användas som webbplatsnamn: %s"
 
 #: wp-admin/network/site-new.php:40
-msgid "Can&#8217;t create an empty site."
+msgid "Cannot create an empty site."
 msgstr "Kan inte skapa en tom webbplats."
 
 #: wp-admin/network/site-new.php:26
@@ -536,7 +536,7 @@ msgstr "Denna vy används av superadministratörer för att lägga till nya webb
 
 #: wp-admin/network/site-new.php:17
 msgid "Sorry, you are not allowed to add sites to this network."
-msgstr "Du saknar behörighet för att lägga till webbplatser i det här nätverket."
+msgstr "Du har inte behörighet att lägga till webbplatser i detta nätverk."
 
 #: wp-admin/network/site-info.php:197
 msgid "Set site attributes"
@@ -574,7 +574,7 @@ msgstr "Ogiltigt webbplats-ID."
 #: wp-admin/network/site-info.php:14 wp-admin/network/site-settings.php:14
 #: wp-admin/network/site-users.php:14
 msgid "Sorry, you are not allowed to edit this site."
-msgstr "Du saknar behörighet för att redigera den här webbplatsen."
+msgstr "Du har inte behörighet att redigera denna webbplats."
 
 #: wp-admin/network/settings.php:497
 msgid "Enable menus"
@@ -603,7 +603,7 @@ msgstr "%s KB"
 
 #: wp-admin/network/settings.php:420
 msgid "Max upload file size"
-msgstr "Maximal storlek för filuppladdning"
+msgstr "Maximal filstorlek för uppladdning"
 
 #: wp-admin/network/settings.php:414
 msgid "Allowed file types. Separate types by spaces."
@@ -704,11 +704,11 @@ msgstr "Om du vill begränsa webbplatsregistreringar till vissa domäner. En dom
 
 #: wp-admin/network/settings.php:263
 msgid "Limited Email Registrations"
-msgstr "Begränsad e-postregistrering"
+msgstr "Begränsade e-postregistreringar"
 
 #: wp-admin/network/settings.php:257
 msgid "Users are not allowed to register these sites. Separate names by spaces."
-msgstr "Användare kan ej registrera dessa webbplatser. Separera namn med mellanslag."
+msgstr "Användare får inte registrera dessa webbplatser. Separera namn med mellanslag."
 
 #: wp-admin/network/settings.php:244
 msgid "Banned Names"
@@ -766,7 +766,7 @@ msgstr "Registreringsinställningar"
 #. translators: %s: New network admin email.
 #: wp-admin/network/settings.php:176
 msgid "There is a pending change of the network admin email to %s."
-msgstr "En ändring av e-postadressen för nätverksadministratören till %s inväntar bekräftelse."
+msgstr "En ändring av e-postadressen för nätverksadministration till %s inväntar bekräftelse."
 
 #: wp-admin/network/settings.php:151
 msgid "Operational Settings"
@@ -1304,7 +1304,7 @@ msgstr "Inte skräp"
 #: wp-admin/includes/class-wp-ms-sites-list-table.php:719
 msgctxt "verb; site"
 msgid "Archive"
-msgstr "Arkiv"
+msgstr "Arkivera"
 
 #: wp-admin/includes/class-wp-ms-sites-list-table.php:717
 msgid "Unarchive"
@@ -1418,4 +1418,4 @@ msgstr "Skräppost"
 #: wp-admin/includes/class-wp-ms-sites-list-table.php:39
 #: wp-admin/network/site-info.php:187
 msgid "Archived"
-msgstr "Arkiverat"
+msgstr "Arkiverad"
